@@ -1,3 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="8 6 482 159" width="482pt" height="159pt" xmlns:dc="http://purl.org/dc/elements/1.1/"><metadata> Produced by OmniGraffle 6.4.1 <dc:date>2016-01-16 21:03:32 +0000</dc:date></metadata><defs><font-face font-family="Helvetica Neue" font-size="14" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.99585" descent="-212.99744" font-weight="500"><font-face-src><font-face-name name="HelveticaNeue"/></font-face-src></font-face><font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.99585" descent="-212.99744" font-weight="500"><font-face-src><font-face-name name="HelveticaNeue"/></font-face-src></font-face></defs><g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1"><title>Canvas 1</title><rect fill="white" width="559" height="444"/><g><title>Layer 1</title><rect x="54" y="36" width="180" height="126" fill="white"/><rect x="54" y="36" width="180" height="126" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/><rect x="54" y="99" width="180" height="27" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="171" y="36" width="27" height="126" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(175.5 103.5)" fill="black"><tspan font-family="Helvetica Neue" font-size="14" font-weight="500" x=".27" y="13" textLength="19.46">2.3</tspan></text><text transform="translate(68 42)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".184" y="15" textLength="9.184">T</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="7.592" y="15" textLength="30.224">able</tspan></text><text transform="translate(13.5625 102)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".324" y="15" textLength="5.328">r</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="5.364" y="15" textLength="21.312">ow</tspan></text><text transform="translate(163 12)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".116" y="15" textLength="52.768">column</tspan></text><rect x="306.4375" y="36" width="180" height="126" fill="white"/><rect x="306.4375" y="36" width="180" height="126" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/><rect x="306.4375" y="99" width="180" height="27" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="423.4375" y="36" width="27" height="126" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(427.9375 103.5)" fill="black"><tspan font-family="Helvetica Neue" font-size="14" font-weight="500" x=".27" y="13" textLength="19.46">2.3</tspan></text><text transform="translate(309.9375 42)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="6.84725" y="15" textLength="58.368">Relation</tspan></text><text transform="translate(261.5 102)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".216" y="15" textLength="35.568">tuple</tspan></text><text transform="translate(411.9375 12)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".216" y="15" textLength="59.568">attribute</tspan></text></g></g></svg>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 652 210.66667"
+   height="210.66667"
+   width="652"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6" /><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,210.66667)"
+     id="g10"><g
+       transform="scale(0.1)"
+       id="g12"><path
+         id="path14"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 0,0 H 4890 V 1580 H 0 Z" /><path
+         id="path16"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 10,0 H 5610 V 1640 H 10 Z" /><path
+         id="path18"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 550,20 H 2350 V 1280 H 550 Z" /><path
+         id="path20"
+         style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 550,20 H 2350 V 1280 H 550 Z" /><path
+         id="path22"
+         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 550,380 H 2350 V 650 H 550 Z" /><path
+         id="path24"
+         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1720,20 h 270 v 1260 h -270 z" /><g
+         transform="scale(10)"
+         id="g26"><text
+           id="text30"
+           style="font-variant:normal;font-weight:normal;font-size:14px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,176.77,48)"><tspan
+             id="tspan28"
+             y="0"
+             x="0 7.7839999 11.676">2.3</tspan></text>
+<text
+           id="text38"
+           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,64.888,108)"><tspan
+             id="tspan32"
+             y="0"
+             x="0 7.408 16 25.488001 34.080002 37.632">Tabela</tspan><tspan
+             id="tspan34"
+             y="60"
+             x="-59.465199 -47.3372 -43.785198 -35.193199 -29.8652 -21.8652">wiersz</tspan><tspan
+             id="tspan36"
+             y="-30"
+             x="95.075798 103.3798 112.5638 116.1158 125.0118 138.65981 147.5558">kolumna</tspan></text>
+</g><path
+         id="path40"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 3074.38,20 h 1800 v 1260 h -1800 z" /><path
+         id="path42"
+         style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 3074.38,20 h 1800 v 1260 h -1800 z" /><path
+         id="path44"
+         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 3074.38,380 h 1800 v 270 h -1800 z" /><path
+         id="path46"
+         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 4244.38,20 h 270 v 1260 h -270 z" /><g
+         transform="scale(10)"
+         id="g48"><text
+           id="text52"
+           style="font-variant:normal;font-weight:normal;font-size:14px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,429.207,48)"><tspan
+             id="tspan50"
+             y="0"
+             x="0 7.7839999 11.676">2.3</tspan></text>
+<text
+           id="text60"
+           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,320.752,108)"><tspan
+             id="tspan54"
+             y="0"
+             x="0 10.96 19.552 23.104 31.695999 40.271999 43.84">Relacja</tspan><tspan
+             id="tspan56"
+             y="60"
+             x="-62.484798 -54.180801 -49.1408 -39.956799 -34.916801 -26.612801">krotka</tspan><tspan
+             id="tspan58"
+             y="-30"
+             x="96.993202 105.5852 110.6252 115.9532 123.9532 133.44119 142.3372">atrybut</tspan></text>
+</g></g></g></svg>

@@ -25,7 +25,7 @@ Polish translation progress
     * [ ] `A0-preface.mkd`
     * [ ] `AA-contrib.mkd`
     * [ ] `AB-copyright.mkd`
-  * [ ] `figures`
+  * [x] `figures` and `images`
   * [ ] `code3`
 * [ ] website:
   * [ ] `lectures3`

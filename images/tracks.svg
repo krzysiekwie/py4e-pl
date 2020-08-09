@@ -1,3 +1,127 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="16 12 194 98" width="194pt" height="98pt" xmlns:dc="http://purl.org/dc/elements/1.1/"><metadata> Produced by OmniGraffle 6.4.1 <dc:date>2016-01-16 21:08:45 +0000</dc:date></metadata><defs><linearGradient x1="0" x2="1" id="Gradient" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="white"/><stop offset=".3975768" stop-color="#f9f9f9"/><stop offset="1" stop-color="silver"/></linearGradient><linearGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(76.592563 46.125) rotate(90) scale(20.625)"/><font-face font-family="Helvetica Neue" font-size="12" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.99585" descent="-212.99744" font-weight="500"><font-face-src><font-face-name name="HelveticaNeue"/></font-face-src></font-face><linearGradient id="Obj_Gradient_2" xl:href="#Gradient" gradientTransform="translate(169.40506 46.125) rotate(90) scale(20.625)"/><font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.99585" descent="-212.99744" font-weight="500"><font-face-src><font-face-name name="HelveticaNeue"/></font-face-src></font-face></defs><g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1"><title>Canvas 1</title><rect fill="white" width="562" height="388"/><g><title>Layer 1</title><rect x="21.375" y="46.125" width="110.435127" height="20.625" fill="url(#Obj_Gradient)"/><rect x="21.375" y="46.125" width="110.435127" height="20.625" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5625"/><text transform="translate(26.375 49.4375)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" x="0" y="11" textLength="19.332">title</tspan></text><rect x="131.81013" y="46.125" width="75.189873" height="20.625" fill="url(#Obj_Gradient_2)"/><rect x="131.81013" y="46.125" width="75.189873" height="20.625" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5625"/><text transform="translate(136.81013 49.4375)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" x="0" y="11" textLength="28.224">plays</tspan></text><rect x="21.375" y="87.375" width="110.435127" height="20.625" fill="#f0f0f0"/><rect x="21.375" y="87.375" width="110.435127" height="20.625" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5625"/><text transform="translate(26.375 90.6875)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" x="0" y="11" textLength="30.9">My W</tspan><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" x="30.456" y="11" textLength="12.444">ay</tspan></text><rect x="21.375" y="66.75" width="110.435127" height="20.625" fill="white"/><rect x="21.375" y="66.75" width="110.435127" height="20.625" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5625"/><text transform="translate(26.375 70.0625)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" x="0" y="11" textLength="77.58">Thunderstruck</tspan></text><rect x="131.81013" y="87.375" width="75.189873" height="20.625" fill="#f0f0f0"/><rect x="131.81013" y="87.375" width="75.189873" height="20.625" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5625"/><text transform="translate(136.81013 90.6875)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" x="0" y="11" textLength="13.344">15</tspan></text><rect x="131.81013" y="66.75" width="75.189873" height="20.625" fill="white"/><rect x="131.81013" y="66.75" width="75.189873" height="20.625" stroke="#6f6f6f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5625"/><text transform="translate(136.81013 70.0625)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" x="0" y="11" textLength="13.344">20</tspan></text><text transform="translate(21.5625 18)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".236" y="15" textLength="9.184">T</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="7.948" y="15" textLength="38.816">racks</tspan></text></g></g></svg>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 0 270.66666 129.33333"
+   height="129.33333"
+   width="270.66666"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6" /><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,129.33333)"
+     id="g10"><g
+       transform="scale(0.1)"
+       id="g12"><path
+         id="path14"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 0,0 H 2030 V 970 H 0 Z" /><path
+         id="path16"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 0,0 H 2750 V 1090 H 0 Z" /><path
+         id="path18"
+         style="fill:none;stroke:#828282;stroke-width:5.625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 73.75,422.5 H 1231.64 V 628.75 H 73.75 Z" /><g
+         transform="scale(10)"
+         id="g20"><text
+           id="text24"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,12.375,48.7305)"><tspan
+             id="tspan22"
+             y="0"
+             x="0 3.78 9.7799997 13.56 20.232">tytuł</tspan></text>
+</g><g
+         transform="matrix(1950,0,0,210,70,420)"
+         id="g26"><image
+           id="image28"
+           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkkAAAA/CAYAAAD0ZFzBAAAABHNCSVQICAgIfAhkiAAACZdJREFUeJzt3VtoVNcex/HfTG7GmJsX1Ghpg/EWDZIqiHOsqDVtQ30QDSZaHWsKrfiWHumjoIIoBBGKBSkUCqJoiYUQSFpDL/gU1JeYCKlVJ+CtQRPbNMZJMjPnIWeWM2YnmcSZ2Znx+3naa8/K/v8TyGbN+u+1tqOuri7Q3t4uAEBsLV26VOXl5crOzrY7FQARSO3v75fT6ZTb7bY7FwBIWnfv3pXD4dCMGTMUCATsTgdABFIlyeFwaOHChXbnAgBJ69mzZ+rp6bE7DQATkBo84JsNAESfw+Ewx4FAgHstkECcdicAAAAwFTFIAgAAsJA6fhcAwGRRXgMSFzNJAAAAFhgkAQAAWGB1GwDEUOjqNol7LZBImEkCAACwwCAJAADAAuU2AIiD4EaS3GuBqS20RM5MEgAAgAUGSQAAABbYTBIAAOD/QkviDJImqaurS/39/ZKkadOmae7cuTZnBAAAooly2yS53W4VFRWpqKhIu3btsjsdAAAQZVFd3fb111/r5s2bkqQlS5bo0KFDr33NqRjzVaxYATCe4D2CewUwtYWubotqua2pqUlXrlyRJLlcrrgMWOyICQAAkh/lNgAAAAsx3UzSjmllu6aymUIHMB5K80BiYSYJAADAwms/kzQwMGC+Gfn9fnPe5/PJ6/W+DJQ6HGpoaMicy8jIiCjG4OBg2LUdDkfEMVNSUsxnwdgpKSkmn9EMDQ3J5/NNOFcAAJAczEghdPAyEUuWLNGjR49GnG9paVFOTo5pHzlyRA0NDbp27Zo519raqkWLFo15fZ/Pp6KiInV1dUmS3nmnUF7vi4hjBh/kLi0t1R9//CFJ+uKLL3Tq1Kkx43711Vc6c+aMJGn27Nnq7OwM+zx0yjwQCOjp06eqrq7WwYMH9f777495bQBvDqdzeMLe7/fL7/dP+l4LID6C/7NSnMttH3/8cVj7woUL4/7M1atXzQBJknbvntyeRM+e/T2pn4tER0eHXK7/qKmpKWYxAABAfL32ICk7Ozvivnv37g0rc50/f37cn/nhhx/MscPhkNvtnlDMeHjy5Ik8nnt2pwEAAKLIjFhCn7+ZiN9//13Pnz+XJFVWVur69euSpHfffTdsgJOVlaXp06fro48+UkNDgySps7NTLS0tWrNmjeW1BwcHVV9fb9obN25UQUHBhGK+/L3Cy2Pj/b6vltNe7W+1QmXfvn1yuVyT/lsCSD6hz09Gcu8BYK+ovrstKytLWVlZkqTc3FxzPi0tTXPmzBnRv7q62gySJOnixYujDpJ++eUXdXd3m7bb7Z5UzGjr7u7WvXse005PT1dtba0+/fTTmMcGAADxEfctADZv3qwFCxaYdl1d3ajfrOrq6szxzJkztXXr1pjnN55bt25p/fr1YeW1NWvWMEACACDJvPbqtlCvlqhGu+a+fft0/PhxScPP81y5ckVbtmwJ6/PixQs1Njaa9vbt25WSkjLimpHGDBXJCpPQrQWk4b+Px+NRWVmZent7R+TAihUAVoLbkLC6DUgMtq1uC/rkk0/CHuC+ePHiiD7Nzc36+++XK9L27t0bl9zG0t3dPWKABAAAkpMtg6T58+errKzMtH/66Sf19fWF9QkttRUXF6ukpCRu+Y0lPT1dp0+f1saNG+1OBQAAxFCqFL1y0URKX26325TT/v33XzU0NGjHjh2SpL6+PjU3N5u+e/bsGfVakym3RdLPqtxWWFioxsZGlZSU6McffwzryxQ6gLFQbgMSQ7BELtn47rZNmzapoKDAtC9dumSOf/75ZzOzNG3aNFVUVMQ9P6sbWXZ29pSZ0QIAALFl2yDJ6XRqz549pn316lU9efJEknT58mVz/sMPP1ReXl7c83v1NSQAAODNEtXVbVYlqrFUVlaqtrbWTEFfvnxZFRUV+u2330yfqqqqMa8TeUyHORoYGBg3t46OjjGvO5kyH4A3j8MxfO+h3AYkHttmkqThB7hDXwZ76dIlNTU1yev1ms/fe++9qMSaNWumOR5vlujXX3/V/fv3oxIXAAAkppgNkvr7+yPqF7q0v7W1VbW1taZdVVUVtl/B68QM3cDyxo0bevDggWW/3t5eHT58OOKYAAAgOUW13JaTk2OOb9++rfr6ehUXFystLU05OTmWL6bdsGGD5s2bp8ePH0tS2AxORUXFuHlFGnPZsmVmxVxfX5/279+vM2fOqLCwUNLwVHhLS4tqamr08OHDsBhW5TTKbQAiEfyiR7kNSAzBErkU5ZmkhQsXmmOv16sDBw5ow4YNWrdunb7//nvLn3E6naqqqhpx3uVy6a233opazOrqamVmZpp2W1ubtmzZos2bN6u8vFwrVqxQZWXliAESAAB4M0V1kLRt27awnbQjtWvXrhFlNauB0+vEnD17tr788r9h5wYHB/Xnn3+qvb09bDPLlStX6ujRoxHFBwAAySmq5bbFixfr7NmzOnv2rDo6OvTPP/+YslRmZuaoMebMmaPS0lLduHFDkpSbm6uysrKIcppIzM8+q1Zx8XIdOnRIjx49GnGt/Px87dy5UzU1Naqvrw/77NVcQlfVTZ8+nSl0AJZ4dxuQWELLbY5z584FPB6Pdu/ebVtCXq9XLpdLPT09kobf7Xbs2LGYxnzw4IHa29vV3d2tnJwczZs3TytXrlR6enpM4wJ4s2RkZEiS7ty5o56eHjakBaa4tLQ0czzx2lgMNDY2mgGSJO3cuTPmMRcsWBC24g0AACBUVMttkxEIBPTdd9+Z9tKlS7V8+XKmpAEkheAzk5TbgMQQ+ox03DeT9Pl8ev78uWl/8803amtrM+3PP/883ikBAACMEPdy219//aUPPvhAy5Yt0+PHj9XV1WU+KygoUHl5ebxTAgAAGCHu5bahoSENDAyotbU1PJHUVJ08eTKuuQBArPl8PkmU24BEEVyRKtlQbgvdqTooPz9fJ06c0OrVq+OdDgAAgKW4l9vmzp2rb7/9Vh5Pp/x+n95++22tWrVKubm58U4FAABgVLasblu7dq3Wrl0bdo4paADJKHhv8/l8lNuABBD6Fo+4l9sAAAASAYMkAAAAC7ZvJgkAyYzVbUBiCf0fZSYJAADAAoMkAAAAC6bcFpwSBgBET/DeGggE5Pf7udcCU1zo/ygzSQAAABYYJAEAAFgw5bZZs2bZmQcAJKWMjAxJ0tOnT+XxeOR0OpWfn29zVgBGk56ebo5TpeFaeUtLi20JAUCycjqHJ+x7e3ttzgTARKUWFRXp7t27un37tt25AEBSy83NVUFBgfLy8uxOBcAoHA6HOf4fdjsof5Toy0sAAAAASUVORK5CYII="
+           transform="matrix(1,0,0,-1,0,1)"
+           preserveAspectRatio="none"
+           height="1"
+           width="1" /></g><path
+         id="path30"
+         style="fill:none;stroke:#828282;stroke-width:5.625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1231.64,422.5 h 788.355 V 628.75 H 1231.64 Z" /><g
+         transform="scale(10)"
+         id="g32"><text
+           id="text36"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,128.164,48.7305)"><tspan
+             id="tspan34"
+             y="0"
+             x="0 6.888 14.004 17.784 26.879999 33.768002 37.764 43.523998 49.967999 56.639999 59.304001">odtworzenia</tspan></text>
+</g><path
+         id="path38"
+         style="fill:#f3f3f3;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 73.75,10 H 1231.64 V 216.25 H 73.75 Z" /><path
+         id="path40"
+         style="fill:none;stroke:#828282;stroke-width:5.625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 73.75,10 H 1231.64 V 216.25 H 73.75 Z" /><g
+         transform="scale(10)"
+         id="g42"><text
+           id="text46"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,12.375,7.48047)"><tspan
+             id="tspan44"
+             y="0"
+             x="0 10.452 16.452 19.788 30.455999 36.900002">My Way</tspan></text>
+</g><path
+         id="path48"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 73.75,216.25 H 1231.64 V 422.5 H 73.75 Z" /><path
+         id="path50"
+         style="fill:none;stroke:#828282;stroke-width:5.625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 73.75,216.25 H 1231.64 V 422.5 H 73.75 Z" /><g
+         transform="scale(10)"
+         id="g52"><text
+           id="text56"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,12.375,28.1055)"><tspan
+             id="tspan54"
+             y="0"
+             x="0 6.888 13.56 20.232 26.903999 34.02 40.464001 44.459999 50.459999 54.240002 58.236 64.907997 71.351997">Thunderstruck</tspan></text>
+</g><path
+         id="path58"
+         style="fill:#f3f3f3;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 1231.64,10 h 788.355 V 216.25 H 1231.64 Z" /><path
+         id="path60"
+         style="fill:none;stroke:#828282;stroke-width:5.625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1231.64,10 h 788.355 V 216.25 H 1231.64 Z" /><g
+         transform="scale(10)"
+         id="g62"><text
+           id="text66"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,128.164,7.48047)"><tspan
+             id="tspan64"
+             y="0"
+             x="0 6.6719999">15</tspan></text>
+</g><path
+         id="path68"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 1231.64,216.25 h 788.355 V 422.5 H 1231.64 Z" /><path
+         id="path70"
+         style="fill:none;stroke:#828282;stroke-width:5.625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1231.64,216.25 h 788.355 V 422.5 H 1231.64 Z" /><g
+         transform="scale(10)"
+         id="g72"><text
+           id="text76"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,128.164,28.1055)"><tspan
+             id="tspan74"
+             y="0"
+             x="0 6.6719999">20</tspan></text>
+<text
+           id="text80"
+           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,5.446,77)"><tspan
+             id="tspan78"
+             y="0"
+             x="0 11.552 16.591999 28.719999 37.903999 43.231998">Utwory</tspan></text>
+</g></g></g></svg>
