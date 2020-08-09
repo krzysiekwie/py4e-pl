@@ -2,6 +2,38 @@
 Python for Everybody (PY4E)
 ===========================
 
+Polish translation progress
+
+* [ ] book:
+  * [ ] `book3`:
+    * [ ] `01-intro.mkd`
+    * [ ] `02-variables.mkd`
+    * [ ] `03-conditional.mkd`
+    * [ ] `04-functions.mkd`
+    * [ ] `05-iterations.mkd`
+    * [ ] `06-strings.mkd`
+    * [ ] `07-files.mkd`
+    * [ ] `08-lists.mkd`
+    * [ ] `09-dictionaries.mkd`
+    * [ ] `10-tuples.mkd`
+    * [ ] `11-regex.mkd`
+    * [ ] `12-network.mkd`
+    * [ ] `13-web.mkd`
+    * [ ] `14-objects.mkd`
+    * [ ] `15-database.mkd`
+    * [ ] `16-viz.mkd`
+    * [ ] `A0-preface.mkd`
+    * [ ] `AA-contrib.mkd`
+    * [ ] `AB-copyright.mkd`
+  * [ ] `figures`
+  * [ ] `code3`
+* [ ] website:
+  * [ ] `lectures3`
+  * [ ] `autograder`
+* [ ] YouTube captions
+
+----
+
 Course materials for www.py4e.com
 
 The Python3 versions of the code is all in code3
