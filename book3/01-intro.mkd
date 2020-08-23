@@ -1,88 +1,88 @@
-% Python for Everybody 
-% Exploring Data Using Python 3
-% Dr. Charles R. Severance
+% Python dla wszystkich 
+% Eksploracja danych z Python 3
+% Dr Charles R. Severance
 
-Why should you learn to write programs?
-=======================================
+Dlaczego powinieneś nauczyć się pisać programy?
+===============================================
 
-Writing programs (or programming) is a very creative and rewarding
-activity. You can write programs for many reasons, ranging from making
-your living to solving a difficult data analysis problem to having fun
-to helping someone else solve a problem. This book assumes that
-*everyone* needs to know how to program, and that once you know how to
-program you will figure out what you want to do with your newfound
-skills.
+Pisanie programów (lub programowanie) jest bardzo twórczą i satysfakcjonującą 
+aktywnością. Możesz pisać programy z wielu powodów, od zarabiania na życie,
+przez rozwiązywanie trudnych problemów analizy danych, po zabawę i pomaganie
+komuś w rozwiązaniu problemu. Poniższa książka zakłada, że *każdy* powienien
+wiedzieć jak programować oraz że gdy już dowiesz się jak programować, to 
+zorientujesz się co chcesz zrobić ze swoimi nowo odkrytymi umiejętnościami.
 
-We are surrounded in our daily lives with computers ranging from laptops
-to cell phones. We can think of these computers as our "personal
-assistants" who can take care of many things on our behalf. The hardware
-in our current-day computers is essentially built to continuously ask us
-the question, "What would you like me to do next?"
+W codziennym życiu jesteśmy otoczeniu przez komputery, począwszy od laptopów,
+po smartfony. Możemy myśleć o tych komputerach jako o naszych
+"osobistych asystentach", którzy w naszym imieniu mogą zająć się wieloma
+rzeczami. Sprzęt we współczesnych komputerach jest zasadniczo
+zbudowany tak, aby nieustannie zadawać nam pytanie "Co mam teraz zrobić?".
 
-![Personal Digital Assistant](height=1.0in@../images/pda)
+![Osobisty asystent cyfrowy](height=1.0in@../images/pda)
 
-Programmers add an operating system and a set of applications to the
-hardware and we end up with a Personal Digital Assistant that is quite
-helpful and capable of helping us do many different things.
+Programiści dodają do sprzętu system operacyjny oraz zbiór aplikacji,
+dzięki czemu w ten sposób otrzymujemy osobistego asystenta cyfrowego, który
+okazuje się całkiem pomocny i zdolny do wsparcia nas w wielu różnych sprawach.
 
-Our computers are fast and have vast amounts of memory and could be very
-helpful to us if we only knew the language to speak to explain to the
-computer what we would like it to "do next". If we knew this language,
-we could tell the computer to do tasks on our behalf that were
-repetitive. Interestingly, the kinds of things computers can do best are
-often the kinds of things that we humans find boring and mind-numbing.
+Nasze komputery są szybkie i mają ogromne zasoby pamięci -- ten fakt mógłby
+być dla nas bardzo pomocny gdybyśmy tylko znali język do porozumiewania się
+i wyjaśniania komputerowi co chcemy aby dla nas "teraz zrobił". Gdybyśmy
+znali taki język, to moglibyśmy powiedzieć komputerowi by wykonał za nas
+pewne powtarzające się czynności. Co ciekawe, to, co komputery potrafią 
+najlepiej, to często rzeczy, które my, ludzie, uważamy za nudne i otępiające.
 
-For example, look at the first three paragraphs of this chapter and tell
-me the most commonly used word and how many times the word is used.
-While you were able to read and understand the words in a few seconds,
-counting them is almost painful because it is not the kind of problem
-that human minds are designed to solve. For a computer, the opposite is
-true, reading and understanding text from a piece of paper is hard for a
-computer to do but counting the words and telling you how many times the
-most used word was used is very easy for the computer:
+Na przykład, spójrz na pierwsze trzy akapity tego rozdziału i powiedz mi
+które słowo było najczęście użyte oraz ile razy to słowo zostało użyte.
+Podczas gdy byłeś w stanie przeczytać i zrozumieć słowa w ciągu kilku sekund,
+zliczanie ich jest niemalże bolesne, ponieważ nie jest to tego rodzaju problem,
+dla którego zostały zaprojektowane ludzkie umysły. W przypadku komputera jest
+na odwrót -- czytanie i rozumienie tekstu z kartki papieru jest trudne
+do wykonania, ale zliczenie słów i wskazanie Tobie ile razy
+zostało użyte najczęściej występujące słowo jest bardzo łatwe:
 
 ~~~~ {.python}
 python words.py
-Enter file:words.txt
-to 16
+Wprowadź plik: words.txt
+w 5
 ~~~~
 
-Our "personal information analysis assistant" quickly told us that the
-word "to" was used sixteen times in the first three paragraphs of this
-chapter.
+Nasz "osobisty asystent analizy informacji" szybko powiedział nam, że słowo
+"w" został użyty pięć razy w pierwszych trzech akapitach tego rozdziału.
 
-This very fact that computers are good at things that humans are not is
-why you need to become skilled at talking "computer language". Once you
-learn this new language, you can delegate mundane tasks to your partner
-(the computer), leaving more time for you to do the things that you are
-uniquely suited for. You bring creativity, intuition, and inventiveness
-to this partnership.
+Właśnie ten fakt, że komputery są dobre w rzeczach, w których ludzie dobrzy 
+nie są, jest powodem, dla którego musisz nauczyć się mówić "językiem
+komputerowym". Gdy nauczysz się tego nowego języka, możesz przekazywać 
+nieciekawe zadania swojemu partnerowi (komputerowi), pozostawiając sobie więcej
+czasu na robienie rzeczy, do których jesteś wyjątkowo przystosowany. Wnosisz
+kreatywność, intuicję i pomysłowość do tego duetu.
 
-Creativity and motivation
--------------------------
+Kreatywność i motywacja
+-----------------------
 
-While this book is not intended for professional programmers,
-professional programming can be a very rewarding job both financially
-and personally. Building useful, elegant, and clever programs for others
-to use is a very creative activity. Your computer or Personal Digital
-Assistant (PDA) usually contains many different programs from many
-different groups of programmers, each competing for your attention and
-interest. They try their best to meet your needs and give you a great
-user experience in the process. In some situations, when you choose a
-piece of software, the programmers are directly compensated because of
-your choice.
+Chociaż ta książka nie jest przeznaczona dla profesjonalnych programistów, 
+profesjonalne programowanie może być bardzo satysfakcjonującą pracą,
+zarówno po kątem finansowym, jak i osobistym. Tworzenie przydatnych, eleganckich
+i sprytnych programów, z których mogą korzystać inni, to bardzo kreatywne
+zajęcie. Twój komputer lub smartfon zwykle zawiera wiele różnych programów od 
+wielu różnych grup programistów, które konkurują o Twoją uwagę i 
+zainteresowanie. Robią wszystko, co w ich mocy, aby spełnić Twoje potrzeby i 
+zapewnić podczas ich używania najlepsze *user experience* (z ang. *doświadczenie
+użytkownika*). W niektórych sytuacjach, gdy wybierasz oprogramowanie, 
+programiści są bezpośrednio wynagradzani z powodu twojego wyboru.
 
-If we think of programs as the creative output of groups of programmers,
-perhaps the following figure is a more sensible version of our PDA:
+Jeśli myślimy o programach jako o twórczym wyniku pracy grup programistów, 
+to być może poniższy rysunek przedstawia bardziej racjonalną wersję naszego
+smartfona:
 
-![Programmers Talking to You](height=1.0in@../images/pda2)
+![Programiści mówią do Ciebie](height=1.0in@../images/pda2)
 
-For now, our primary motivation is not to make money or please end
-users, but instead for us to be more productive in handling the data and
-information that we will encounter in our lives. When you first start,
-you will be both the programmer and the end user of your programs. As
-you gain skill as a programmer and programming feels more creative to
-you, your thoughts may turn toward developing programs for others.
+Na razie naszą główną motywacją nie jest zarabianie pieniędzy ani zadowolenie 
+użytkowników końcowych, ale raczej bardziej produktywne przetwarzanie danych i 
+informacji, które napotkamy w naszym życiu. Na początku będziesz zarówno 
+programistą, jak i końcowym użytkownikiem swoich programów. Gdy zdobędziesz 
+umiejętności programisty, a programowanie stanie się dla ciebie bardziej
+twórcze, twoje myśli mogą skierować się w stronę tworzenia programów dla innych
+osób.
 
 Computer hardware architecture
 ------------------------------
