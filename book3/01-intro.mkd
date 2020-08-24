@@ -192,32 +192,33 @@ Zaczniemy od słownictwa i struktury programów w języku Python. Bądź cierpli
 ponieważ proste przykłady przypomną ci moment w życiu gdy pierwszy raz zacząłeś
 czytać.
 
-Words and sentences
+Słowa i zdania
 -------------------
 
 \index{programming language}
 \index{language!programming}
 
-Unlike human languages, the Python vocabulary is actually pretty small.
-We call this "vocabulary" the "reserved words". These are words that
-have very special meaning to Python. When Python sees these words in a
-Python program, they have one and only one meaning to Python. Later as
-you write programs you will make up your own words that have meaning to
-you called *variables*. You will have great latitude in
-choosing your names for your variables, but you cannot use any of
-Python's reserved words as a name for a variable.
+W przeciwieństwie do ludzkich języków, słownictwo Pythona jest w rzeczywistości
+dość skromne. To "słownictwo" nazywamy "słowami zastrzeżonymi". Są to słowa, 
+które mają dla Pythona szczególne znaczenie. Gdy Python widzi te słowa w 
+programie napisanym w języku Python, to mają one jedno i tylko jedno znaczenie
+dla Pythona. Później, podczas pisania programów, stworzysz własne słowa, które
+dla ciebie mają jakieś znaczenie - będą to *zmienne*. Będziesz mieć dużą swobodę
+w wyborze nazw dla swoich zmiennych, ale nie możesz używać żadnych zastrzeżonych
+słów Pythona jako nazwy zmiennej.
 
-When we train a dog, we use special words like "sit", "stay", and
-"fetch". When you talk to a dog and don't use any of the reserved words,
-they just look at you with a quizzical look on their face until you say
-a reserved word. For example, if you say, "I wish more people would walk
-to improve their overall health", what most dogs likely hear is, "blah
-blah blah *walk* blah blah blah blah." That is because
-"walk" is a reserved word in dog language. Many might suggest that the
-language between humans and cats has no reserved words^[<http://xkcd.com/231/>].
+Gdy trenujemy psa, używamy specjalnych słów, takich jak "siad", "zostań" i 
+"aport". Kiedy rozmawiasz z psem i nie używasz żadnych zastrzeżonych słów,
+to po prostu patrzy na ciebie z pytającym wyrazem twarzy, dopóki nie powiesz
+zastrzeżonego słowa. Na przykład, jeśli powiesz: "chciałbym aby więcej ludzi
+chodziło na spacer po to by poprawić ich ogólny stan zdrowia", większość psów 
+prawdopodobnie usłyszy: "bla bla bla *spacer* bla bla bla bla". Dzieje się tak,
+ponieważ "spacer" jest zarezerwowanym słowem w języku komunikacji z psami. 
+Natomiast wiele wskazuje na to, że język komunikacji między ludźmi a kotami 
+nie ma zastrzeżonych słów^[<http://xkcd.com/231/>].
 
-The reserved words in the language where humans talk to Python include
-the following:
+Lista zastrzeżonych słów języka, w którym ludzie komunikują się z Pythonem,
+zawiera następujące wyrazy:
 
     and       del       global      not       with
     as        elif      if          or        yield
@@ -227,42 +228,43 @@ the following:
     continue  for       lambda      try
     def       from      nonlocal    while    
 
-That is it, and unlike a dog, Python is already completely trained. When
-you say "try", Python will try every time you say it without fail.
+To tyle, a dodatkowo w przeciwieństwie do psa, Python jest już w pełni 
+wyszkolony. Kiedy powiesz "try", Python wykona polecenie "try" bezbłędnie 
+za każdym razem gdy je wypowiesz.
 
-We will learn these reserved words and how they are used in good time,
-but for now we will focus on the Python equivalent of "speak" (in
-human-to-dog language). The nice thing about telling Python to speak is
-that we can even tell it what to say by giving it a message in quotes:
+W odpowiednim czasie poznamy powyższe zastrzeżone słówa oraz to kiedy ich 
+używać, ale na razie skupimy się na odpowiedniku słowa "daj głos" w Pythonie
+(w języku człowiek-pies). Dobrą rzeczą we wskazywaniu Pythonowi, że ma "dać
+głos", jest to, że możemy mu nawet powiedzieć co ma powiedzieć, przekazując mu
+wiadomość w cudzysłowie:
 
 ~~~~ {.python}
-print('Hello world!')
+print('Witaj świecie!')
 ~~~~
 
-And we have even written our first syntactically correct Python
-sentence. Our sentence starts with the function *print* 
-followed by a string of text of our choosing enclosed in single quotes.
-The strings in the print statements are enclosed in quotes. Single
-quotes and double quotes do the same thing; most people use single
-quotes except in cases like this where a single quote (which is also an
-apostrophe) appears in the string.
+I oto napisaliśmy w Pythonie nasze pierwsze poprawne składniowo zdanie. Nasze
+zdanie zaczyna się od funkcji *print*, po której następuje ujęty w apostrofy 
+ciąg wybranego przez nas tekstu. Ciągi tekstu w instrukcjach *print* są ujęte w
+apostrofy lub cudzysłowy. Apostrofy i cudzysłowy robią to samo; większość ludzi
+używa apostrofów z wyjątkiem przypadków, w których apostrof pojawia się w ciągu
+tekstu.
 
-Conversing with Python
+Rozmawianie z Pythonem
 ----------------------
 
-Now that we have a word and a simple sentence that we know in Python, we
-need to know how to start a conversation with Python to test our new
-language skills.
+Teraz, gdy mamy już słowo i proste zdanie, które znamy w Pythonie, musimy 
+wiedzieć w jaki sposób rozpocząć rozmowę z Pythonem, tak aby przetestować nasze
+nowe umiejętności językowe.
 
-Before you can converse with Python, you must first install the Python
-software on your computer and learn how to start Python on your
-computer. That is too much detail for this chapter so I suggest that you
-consult [www.py4e.com](http://www.py4e.com) where I have detailed
-instructions and screencasts of setting up and starting Python on
-Macintosh and Windows systems. At some point, you will be in a terminal
-or command window and you will type *python* and the
-Python interpreter will start executing in interactive mode and appear
-somewhat as follows:
+Zanim będziesz mógł rozmawiać z Pythonem, musisz najpierw zainstalować na swoim
+komputerze oprogramowanie Pythona oraz nauczyć się jak uruchomić Pythona na 
+swoim komputerze. Jest to zbyt wiele szczegółów jak na ten rozdział, więc
+sugeruję zajrzeć na stronę [www.py4e.com](http://www.py4e.com), gdzie umieściłem
+szczegółowe instrukcje i zrzuty ekranu dotyczące konfiguracji i uruchamiania
+Pythona w systemach komputerów Macintosh i Windows. W pewnym momencie znajdziesz
+się w terminalu lub oknie wiersza poleceń i wpiszesz *python*, a interpreter
+Pythona rozpocznie pracę w trybie interaktywnym i pojawi się mniej więcej
+w następujący sposób:
 
 \index{interactive mode}
 
@@ -274,97 +276,91 @@ information.
 >>>
 ~~~~
 
-The `>>>` prompt is the Python interpreter's way of asking
-you, "What do you want me to do next?" Python is ready to have a
-conversation with you. All you have to know is how to speak the Python
-language.
+Znak zachęty `>>>` jest sposobem zadawania Tobie pytań przez interpreter języka
+Python "Co mam teraz zrobić?". Python jest teraz gotowy do rozmowy z tobą.
+Wszystko co musisz teraz wiedzieć, to jak mówić w języku Pythona.
 
-Let's say for example that you did not know even the simplest Python
-language words or sentences. You might want to use the standard line
-that astronauts use when they land on a faraway planet and try to speak
-with the inhabitants of the planet:
+Powiedzmy na przykład, że nie znałeś nawet najprostszych słów lub zdań w języku
+Pythona. Możesz użyć standardowego zwrotu, z którego korzystają astronauci gdy
+lądują na odległej planecie i próbują rozmawiać z jej mieszkańcami:
 
 ~~~~ {.python}
->>> I come in peace, please take me to your leader
+>>> Przybywam w pokoju, zabierz mnie proszę do swojego przywódcy
 File "<stdin>", line 1
-  I come in peace, please take me to your leader
-       ^
+    Przybywam w pokoju, zabierz mnie proszę do swojego przywódcy
+              ^
 SyntaxError: invalid syntax
 >>>
 ~~~~
 
-This is not going so well. Unless you think of something quickly, the
-inhabitants of the planet are likely to stab you with their spears, put
-you on a spit, roast you over a fire, and eat you for dinner.
+Nie idzie nam za dobrze. Jeśli nie wymyślisz czegoś szybko, mieszkańcy planety
+prawdopodobnie dźgną cię włóczniami, rzucą na rożen, upieczą na ogniu i zjedzą
+na obiad.
 
-Luckily you brought a copy of this book on your travels, and you thumb
-to this very page and try again:
+Na szczęście na czas podróży zabrałeś kopię tej książki, a następnie 
+przewróciłeś kartki na tę stronę i spróbowałeś jeszcze raz:
 
 ~~~~ {.python}
->>> print('Hello world!')
-Hello world!
+>>> print('Witaj świecie!')
+Witaj świecie!
 ~~~~
 
-This is looking much better, so you try to communicate some more:
+Wygląda to o wiele lepiej, więc spróbuj przekazać trochę więcej komunikatów:
 
 ~~~~ {.python}
->>> print('You must be the legendary god that comes from the sky')
-You must be the legendary god that comes from the sky
->>> print('We have been waiting for you for a long time')
-We have been waiting for you for a long time
->>> print('Our legend says you will be very tasty with mustard')
-Our legend says you will be very tasty with mustard
->>> print 'We will have a feast tonight unless you say
-File "<stdin>", line 1
-  print 'We will have a feast tonight unless you say
-                                                   ^
+>>> print('Musisz być legendarnym bogiem, który pochodzi z nieba')
+Musisz być legendarnym bogiem, który pochodzi z nieba
+>>> print('Czekaliśmy na Ciebie od dawna')
+Czekaliśmy na Ciebie od dawna
+>>> print('Nasza legenda mówi, że z musztardą będziesz bardzo smaczny')
+Nasza legenda mówi, że z musztardą będziesz bardzo smaczny
+>>> print 'Będziemy ucztować wieczorem, o ile nie powiesz
+  File "<stdin>", line 1
+    print 'Będziemy ucztować wieczorem, o ile nie powiesz
+                                                         ^
 SyntaxError: Missing parentheses in call to 'print'
 >>>
 ~~~~
 
-The conversation was going so well for a while and then you made the
-tiniest mistake using the Python language and Python brought the spears
-back out.
+Przez jakiś czas rozmowa szła całkiem dobrze, ale potem popełniłeś malutki błąd
+używając języka Python, a Python ponownie pokazał swoje pazury.
 
-At this point, you should also realize that while Python is amazingly
-complex and powerful and very picky about the syntax you use to
-communicate with it, Python is *not* intelligent. You are
-really just having a conversation with yourself, but using proper
-syntax.
+W tym miejscu powinieneś również zdać sobie sprawę, że podczas gdy Python jest
+niesamowicie złożony i potężny oraz bardzo wybredny pod względem składni 
+używanej do komunikacji z nim, Python *nie* jest inteligentny. Tak naprawdę po
+prostu rozmawiasz ze sobą, ale używając odpowiedniej składni.
 
-In a sense, when you use a program written by someone else the
-conversation is between you and those other programmers with Python
-acting as an intermediary. Python is a way for the creators of programs
-to express how the conversation is supposed to proceed. And in just a
-few more chapters, you will be one of those programmers using Python to
-talk to the users of your program.
+W pewnym sensie, kiedy używasz programu napisanego przez kogoś innego, to
+rozmowa odbywa się między tobą a innymi programistami, gdzie Python działa jako
+pośrednik. Python to sposób, dzięki któremu twórcy programów mogą wyrazić jak ma
+przebiegać taka rozmowa. W kilku kolejnych rozdziałach będziesz jednym z tych
+programistów używających Pythona do rozmów z użytkownikami twojego programu.
 
-Before we leave our first conversation with the Python interpreter, you
-should probably know the proper way to say "good-bye" when interacting
-with the inhabitants of Planet Python:
+Zanim opuścimy naszą pierwszą rozmowę z interpreterem Pythona, prawdopodobnie
+powinieneś znać właściwy sposób na "pożegnanie się" podczas interakcji z
+mieszkańcami planety Python:
 
 ~~~~ {.python}
->>> good-bye
+>>> do-zobaczenia
 Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
-NameError: name 'good' is not defined
+  File "<stdin>", line 1, in <module>
+NameError: name 'do' is not defined
 >>> if you don't mind, I need to leave
-File "<stdin>", line 1
-  if you don't mind, I need to leave
+  File "<stdin>", line 1
+    if you don't mind, I need to leave
            ^
 SyntaxError: invalid syntax
 >>> quit()
 ~~~~
 
-You will notice that the error is different for the first two incorrect
-attempts. The second error is different because *if* is a
-reserved word and Python saw the reserved word and thought we were
-trying to say something but got the syntax of the sentence wrong.
+Możesz zauważyć, że błąd jest różny dla pierwszych dwóch niepoprawnych prób.
+Drugi błąd jest inny, ponieważ *if* jest słowem zastrzeżonym, a Python zobaczył
+to słowo i pomyślał, że próbujemy coś powiedzieć, ale składnia zdania była
+błędna.
 
-The proper way to say "good-bye" to Python is to enter
-*quit()* at the interactive chevron `>>>`
-prompt. It would have probably taken you quite a while to guess that
-one, so having a book handy probably will turn out to be helpful.
+Właściwym sposobem "pożegnania się" z Pythonem jest wpisanie *quit()* za
+interaktywnym znakiem zachęty `>>>`. Odgadnięcie tego pewnie zajęłoby ci trochę
+czasu, więc posiadanie książki pod ręką prawdopodobnie okaże się pomocne.
 
 Terminology: Interpreter and compiler
 -------------------------------------
