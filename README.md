@@ -27,6 +27,7 @@ Polish translation progress
     * [ ] `AB-copyright.mkd`
   * [x] `figures` and `images`
   * [ ] `code3`
+  * [ ] index
 * [ ] website:
   * [ ] `lectures3`
   * [ ] `autograder`
