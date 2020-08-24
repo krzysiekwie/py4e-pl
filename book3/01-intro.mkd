@@ -84,115 +84,113 @@ umiejętności programisty, a programowanie stanie się dla ciebie bardziej
 twórcze, twoje myśli mogą skierować się w stronę tworzenia programów dla innych
 osób.
 
-Computer hardware architecture
-------------------------------
+Architektura sprzętu kommputerowego
+-----------------------------------
 
 \index{hardware}
 \index{hardware!architecture}
 
-Before we start learning the language we speak to give instructions to
-computers to develop software, we need to learn a small amount about how
-computers are built. If you were to take apart your computer or cell
-phone and look deep inside, you would find the following parts:
+Zanim zaczniemy uczyć się języka, którym będziemy wydawać polecenia komputerom
+aby tworzyły dla nas oprogramowanie, musimy doszkolić się trochę o tym jak 
+budowane są komputery. Gdybyś rozebrał komputer lub smartfon i zajrzał głęboko
+mu się przyjał, to znalazłbyś następujące części:
 
-![Hardware Architecture](height=1.75in@../images/arch)
+![Architektura sprzętowa](height=1.75in@../images/arch)
 
-The high-level definitions of these parts are as follows:
+Ogólne definicje tych części są następujące:
 
--   The *Central Processing Unit* (or CPU) is the part of
-    the computer that is built to be obsessed with "what is next?" If
-    your computer is rated at 3.0 Gigahertz, it means that the CPU will
-    ask "What next?" three billion times per second. You are going to
-    have to learn how to talk fast to keep up with the CPU.
+-   *Procesor* (ang. *central processing unit*, CPU) to część komputera, która 
+     została zbudowana tak, aby dosłownie mieć obsesję na punkcie pytania 
+     "Co dalej?". Jeśli komputer ma moc 3,0 gigaherców, to oznacza to, że 
+     procesor zapyta "Co dalej?" trzy miliardy razy na sekundę. Będziesz musiał 
+     nauczyć się w jaki sposób szybko porozumiewać się, tak by nadążać 
+     za procesorem.
 
--   The *Main Memory* is used to store information that
-    the CPU needs in a hurry. The main memory is nearly as fast as the
-    CPU. But the information stored in the main memory vanishes when the
-    computer is turned off.
+-   *Pamięć główna* jest używana do przechowywania informacji, których procesor
+    potrzebuje w pośpiechu. Pamięć główna jest prawie tak szybka jak procesor. 
+    Jednakże informacje przechowywane w pamięci głównej znikają po wyłączeniu 
+    komputera.
 
--   The *Secondary Memory* is also used to store
-    information, but it is much slower than the main memory. The
-    advantage of the secondary memory is that it can store information
-    even when there is no power to the computer. Examples of secondary
-    memory are disk drives or flash memory (typically found in USB
-    sticks and portable music players).
+-   *Pamięć pomocnicza* jest również używana do przechowywania informacji, ale
+    jest znacznie wolniejsza niż pamięć główna. Zaletą pamięci dodatkowej jest 
+    to, że może przechowywać informacje nawet wtedy, gdy komputer nie jest 
+    zasilany. Przykładami pamięci dodatkowej są dyski twarde lub pamięć flash
+    (zwykle znajdująca się w pamięciach USB/pendrive i przenośnych odtwarzaczach
+    muzycznych).
 
--   The *Input and Output Devices* are simply our screen,
-    keyboard, mouse, microphone, speaker, touchpad, etc. They are all of
-    the ways we interact with the computer.
+-   *Urządzenia wejścia i wyjścia* to po prostu nasz ekran, klawiatura, mysz, 
+    mikrofon, głośnik, panel dotykowy itp. Są to wszystkie sposoby interakcji z 
+    komputerem.
 
--   These days, most computers also have a *Network
-    Connection* to retrieve information over a network. We can
-    think of the network as a very slow place to store and retrieve data
-    that might not always be "up". So in a sense, the network is a
-    slower and at times unreliable form of *Secondary
-    Memory*.
+-   Obecnie większość komputerów ma również *połączenie sieciowe*, które 
+    umożliwia pobieranie informacji przez sieć. Możemy myśleć o sieci jako o
+    bardzo powolnym miejscu do przechowywania i pobierania danych, które nie 
+    zawsze są dostępne. W pewnym sensie sieć jest wolniejszą i czasami zawodną 
+    formą *pamięci pomocniczej*.
 
-While most of the detail of how these components work is best left to
-computer builders, it helps to have some terminology so we can talk
-about these different parts as we write our programs.
+Chociaż większość szczegółów dotyczących działania tych komponentów najlepiej
+pozostawić konstruktorom komputerów, dobrze jest mieć pewną terminologię, tak 
+abyśmy mogli rozmawiać o tych różnych częściach komputera podczas pisania 
+naszych programów.
 
-As a programmer, your job is to use and orchestrate each of these
-resources to solve the problem that you need to solve and analyze the
-data you get from the solution. As a programmer you will mostly be
-"talking" to the CPU and telling it what to do next. Sometimes you will
-tell the CPU to use the main memory, secondary memory, network, or the
-input/output devices.
+Twoim zadaniem jako programisty jest wykorzystywanie i zarządzanie każdym z tych
+zasobów w celu rozwiązania problemu i przeanalizowania danych uzyskanych podczas
+rozwiązynia tego probelmu. Jako programista będziesz głównie "rozmawiać" z 
+procesorem i mówić mu, co ma robić dalej. Czasami powiesz procesorowi aby 
+użył pamięci głównej, pamięci pomocniczej, sieci lub urządzeń wejścia/wyjścia.
 
-![Where Are You?](height=1.75in@../images/arch2)
+![Gdzie jesteś?](height=1.75in@../images/arch2)
 
-You need to be the person who answers the CPU's "What next?" question.
-But it would be very uncomfortable to shrink you down to 5mm tall and
-insert you into the computer just so you could issue a command three
-billion times per second. So instead, you must write down your
-instructions in advance. We call these stored instructions a
-*program* and the act of writing these instructions down
-and getting the instructions to be correct *programming*.
+Musisz być osobą, która odpowiada na pytanie procesora "Co dalej?". Jednakże 
+byłoby bardzo niewygodne zmniejszenie Ciebie do 5 mm wysokości i włożenie do 
+komputera tylko po to, abyś mógł wydawać polecenia trzy miliardy razy na 
+sekundę. Zamiast tego musisz wcześniej zapisać swoje instrukcje. Zapisane 
+instrukcje nazywamy *programem*, a czynność zapisywania tych instrukcji i 
+doprowadzania ich do poprawnej formy nazywamy *programowaniem*.
 
-Understanding programming
--------------------------
 
-In the rest of this book, we will try to turn you into a person who is
-skilled in the art of programming. In the end you will be a
-*programmer* - perhaps not a professional programmer, but
-at least you will have the skills to look at a data/information analysis
-problem and develop a program to solve the problem.
+Zrozumieć programowanie
+-----------------------
+
+W dalszej części książki postaramy się zmienić Cię w osobę biegłą w sztuce
+programowania. Na końcu zostaniesz *programistą* - być może nie profesjonalnym 
+programistą, ale przynajmniej będziesz posiadał umiejętności spojrzenia na
+problem analizy danych/informacji oraz opracowania programu do rozwiązania
+takiego problemu.
 
 \index{problem solving}
 
-In a sense, you need two skills to be a programmer:
+W pewnym sensie, aby być programistą potrzebujesz dwóch umiejętności:
 
--   First, you need to know the programming language (Python) - you need
-    to know the vocabulary and the grammar. You need to be able to spell
-    the words in this new language properly and know how to construct
-    well-formed "sentences" in this new language.
+-   Po pierwsze, musisz znać język programowania (Python) - musisz znać 
+    jego słownictwo i gramatykę. Musisz umieć poprawnie pisać słowa w tym nowym
+    języku i umieć konstruować dobrze sformułowane "zdania".
 
--   Second, you need to "tell a story". In writing a story, you combine
-    words and sentences to convey an idea to the reader. There is a
-    skill and art in constructing the story, and skill in story writing
-    is improved by doing some writing and getting some feedback. In
-    programming, our program is the "story" and the problem you are
-    trying to solve is the "idea".
+-   Po drugie, musisz umieć "opowiadać historię". Pisząc opowiadanie, łączysz
+    słowa i zdania, tak aby przekazać czytelnikowi jakąś ideę lub myśl. 
+    Konstruowanie historii wymaga pewnej sztuki, ale umiejętność pisania 
+    historii poprawia się poprzez pisanie i uzyskiwanie informacji zwrotnych. 
+    W programowaniu nasz program jest "historią", a problem, który próbujesz 
+    rozwiązać, to "idea/myśl".
 
-Once you learn one programming language such as Python, you will find it
-much easier to learn a second programming language such as JavaScript or
-C++. The new programming language has very different vocabulary and
-grammar but the problem-solving skills will be the same across all
-programming languages.
+Gdy nauczysz się jednego języka programowania (w tym przypadku Pythona), 
+znacznie łatwiej będzie Ci nauczyć się drugiego języka programowania, takiego 
+jak JavaScript lub C++. Nowy język programowania ma bardzo różne słownictwo i
+gramatykę, ale umiejętności rozwiązywania problemów będą takie same we 
+wszystkich językach programowania.
 
-You will learn the "vocabulary" and "sentences" of Python pretty
-quickly. It will take longer for you to be able to write a coherent
-program to solve a brand-new problem. We teach programming much like we
-teach writing. We start reading and explaining programs, then we write
-simple programs, and then we write increasingly complex programs over
-time. At some point you "get your muse" and see the patterns on your own
-and can see more naturally how to take a problem and write a program
-that solves that problem. And once you get to that point, programming
-becomes a very pleasant and creative process.
+Dość szybko nauczysz się "słownictwa" i "zdań" w Pythonie. Napisanie spójnego
+programu rozwiązującego zupełnie nowy problem zajmie trochę więcej czasu.
+Uczymy programowania podobnie jak pisania. Zaczynamy czytać i objaśniać 
+programy, potem piszemy proste programy, a potem z czasem piszemy coraz bardziej
+złożone programy. W pewnym momencie "znajdziesz swoją muzę", sam zobaczysz 
+pewne wzorce i w bardziej naturalny sposób zauważysz w jaki sposób podchodzić
+do danego problemu i jak napisać program, który go rozwiązuje. A gdy już do tego
+dojdziesz, programowanie stanie się bardzo przyjemną i twórczą czynnością.
 
-We start with the vocabulary and structure of Python programs. Be
-patient as the simple examples remind you of when you started reading
-for the first time.
+Zaczniemy od słownictwa i struktury programów w języku Python. Bądź cierpliwy,
+ponieważ proste przykłady przypomną ci moment w życiu gdy pierwszy raz zacząłeś
+czytać.
 
 Words and sentences
 -------------------
