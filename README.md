@@ -4,34 +4,32 @@ Python for Everybody (PY4E)
 
 Polish translation progress
 
-* [ ] book:
-  * [ ] `book3`:
-    * [ ] `01-intro.mkd`
-    * [ ] `02-variables.mkd`
-    * [ ] `03-conditional.mkd`
-    * [ ] `04-functions.mkd`
-    * [ ] `05-iterations.mkd`
-    * [ ] `06-strings.mkd`
-    * [ ] `07-files.mkd`
-    * [ ] `08-lists.mkd`
-    * [ ] `09-dictionaries.mkd`
-    * [ ] `10-tuples.mkd`
-    * [ ] `11-regex.mkd`
-    * [ ] `12-network.mkd`
-    * [ ] `13-web.mkd`
-    * [ ] `14-objects.mkd`
-    * [ ] `15-database.mkd`
-    * [ ] `16-viz.mkd`
-    * [ ] `A0-preface.mkd`
-    * [ ] `AA-contrib.mkd`
-    * [ ] `AB-copyright.mkd`
-  * [x] `figures` and `images`
-  * [ ] `code3`
-  * [ ] index
-* [ ] website:
-  * [ ] `lectures3`
-  * [ ] `autograder`
-* [ ] YouTube captions
+| Element                | Text | Code | Index | Figures | Lectures | YouTube | Autograder | Review |
+|------------------------|------|------|-------|---------|----------|---------|------------|--------|
+| `A0-preface.mkd`       | [ ]  |      |       |         |          |         |            | [ ]    |
+| `AA-contrib.mkd`       | [ ]  |      |       |         |          |         |            | [ ]    |
+| `AB-copyright.mkd`     | [ ]  |      |       |         |          |         |            | [ ]    |
+| `install.php`          | [ ]  |      |       |         |          |         |            | [ ]    |
+| `software-pyaw.php`    | [ ]  |      |       |         |          | [ ]     |            | [ ]    |
+| `software-win.php`     | [ ]  |      |       |         |          | [ ]     |            | [ ]    |
+| `software-mac.php`     | [ ]  |      |       |         |          | [ ]     |            | [ ]    |
+| `01-intro.mkd`         | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `02-variables.mkd`     | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `03-conditional.mkd`   | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `04-functions.mkd`     | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `05-iterations.mkd`    | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `06-strings.mkd`       | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `07-files.mkd`         | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `08-lists.mkd`         | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `09-dictionaries.mkd`  | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `10-tuples.mkd`        | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `11-regex.mkd`         | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `12-network.mkd`       | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `13-web.mkd`           | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `14-objects.mkd`       | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `15-database.mkd`      | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| `16-viz.mkd`           | [ ]  | [ ]  | [ ]   | [x]     | [ ]      | [ ]     | [ ]        | [ ]    |
+| remaining website...   |      |      |       |         |          |         |            |        |
 
 ----
 
