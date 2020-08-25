@@ -362,19 +362,18 @@ Właściwym sposobem "pożegnania się" z Pythonem jest wpisanie *quit()* za
 interaktywnym znakiem zachęty `>>>`. Odgadnięcie tego pewnie zajęłoby ci trochę
 czasu, więc posiadanie książki pod ręką prawdopodobnie okaże się pomocne.
 
-Terminology: Interpreter and compiler
+Terminologia: interpreter i kompilator
 -------------------------------------
 
-Python is a *high-level* language intended to be
-relatively straightforward for humans to read and write and for
-computers to read and process. Other high-level languages include Java,
-C++, PHP, Ruby, Basic, Perl, JavaScript, and many more. The actual
-hardware inside the Central Processing Unit (CPU) does not understand
-any of these high-level languages.
+Python jest językiem *wysokiego poziomu*, który w założeniu ma być dla ludzi
+stosunkowo prosty do czytania i pisania oraz do odczytywania i przetwarzania
+przez komputery. Inne języki wysokiego poziomu to Java, C++, PHP, Ruby, Basic,
+Perl, JavaScript i wiele innych. Sprzęt wewnątrz procesora nie rozumie żadnego
+z tych języków wysokiego poziomu.
 
-The CPU understands a language we call *machine
-language*. Machine language is very simple and frankly very
-tiresome to write because it is represented all in zeros and ones:
+Procesor rozumie język, który nazywamy *językiem maszynowym*. Język maszynowy
+jest bardzo prosty i, szczerze mówiąc, bardzo męczący w pisaniu, ponieważ jest
+przedstawiony w postaci zer i jedynek:
 
 ~~~~
 001010001110100100101010000001111
@@ -382,36 +381,34 @@ tiresome to write because it is represented all in zeros and ones:
 ...
 ~~~~
 
-Machine language seems quite simple on the surface, given that there are
-only zeros and ones, but its syntax is even more complex and far more
-intricate than Python. So very few programmers ever write machine
-language. Instead we build various translators to allow programmers to
-write in high-level languages like Python or JavaScript and these
-translators convert the programs to machine language for actual
-execution by the CPU.
+Język maszynowy wydaje się z pozoru dość prosty, biorąc pod uwagę, że istnieją
+tylko zera i jedynki, ale jego składnia jest jeszcze bardziej złożona i znacznie
+bardziej skomplikowana niż Python. Tak więc bardzo niewielu programistów
+kiedykolwiek pisze w języku maszynowym. Zamiast tego tworzymy różne translatory,
+tak aby umożliwić programistom pisanie w językach wysokiego poziomu takich jak
+Python lub JavaScript, a te translatory konwertują programy na język maszynowy
+w celu ich wykonania przez procesor.
 
-Since machine language is tied to the computer hardware, machine
-language is not *portable* across different types of
-hardware. Programs written in high-level languages can be moved between
-different computers by using a different interpreter on the new machine
-or recompiling the code to create a machine language version of the
-program for the new machine.
+Ponieważ język maszynowy jest powiązany ze sprzętem komputerowym, język 
+maszynowy nie jest *przenośny* w przypadku różnych typów sprzętu. Programy
+napisane w językach wysokiego poziomu można przenosić między różnymi
+komputerami, używając innego interpretera na nowej maszynie lub rekompilując kod
+w celu utworzenia wersji językowej programu dla nowej maszyny.
 
-These programming language translators fall into two general categories:
-(1) interpreters and (2) compilers.
+Translatory języków programowania dzielą się na dwie ogólne kategorie: 
+(1) interpretery i (2) kompilatory.
 
-An *interpreter* reads the source code of the program as
-written by the programmer, parses the source code, and interprets the
-instructions on the fly. Python is an interpreter and when we are
-running Python interactively, we can type a line of Python (a sentence)
-and Python processes it immediately and is ready for us to type another
-line of Python.
+*Interpreter* odczytuje kod źródłowy programu w postaci napisanej przez
+programistę, analizuje kod źródłowy i w locie interpretuje instrukcje. Python to
+interpreter i kiedy uruchamiamy Pythona interaktywnie, to możemy wpisać wiersz 
+(zdanie) w języku Pythona, a Python natychmiast to przetworzy i jest gotowy
+do wpisania kolejnego wiersza w języku Pythona.
 
-Some of the lines of Python tell Python that you want it to remember
-some value for later. We need to pick a name for that value to be
-remembered and we can use that symbolic name to retrieve the value
-later. We use the term *variable* to refer to the labels
-we use to refer to this stored data.
+Niektóre wiersze w języku Pythona mówią Pythonowi, że chcesz aby zapamiętał on 
+jakąś wartość na później. Musimy wybrać nazwę dla tej wartości do zapamiętania
+i możemy użyć tej symbolicznej nazwy do późniejszego pobrania tej wartości.
+Używamy terminu *zmienna* w odniesieniu do etykiet, których używamy odnosząc się
+do tych przechowywanych danych.
 
 ~~~~ {.python}
 >>> x = 6
@@ -423,34 +420,31 @@ we use to refer to this stored data.
 >>>
 ~~~~
 
-In this example, we ask Python to remember the value six and use the
-label *x* so we can retrieve the value later. We verify
-that Python has actually remembered the value using
-*print*. Then we ask Python to retrieve
-*x* and multiply it by seven and put the newly computed
-value in *y*. Then we ask Python to print out the value
-currently in *y*.
+W tym przykładzie prosimy Pythona, aby zapamiętał wartość sześć i użył etykiety
+*x* abyśmy mogli później pobrać tę wartość. Sprawdzamy za pomocą *print* czy 
+Python faktycznie zapamiętał wartość. Następnie prosimy Pythona o pobranie *x*,
+pomnożenie przez siedem i umieszczenie nowo obliczonej wartości w *y*. Następnie
+prosimy Pythona o wyświetlenie aktualnej wartości znajdującej się w *y*.
 
-Even though we are typing these commands into Python one line at a time,
-Python is treating them as an ordered sequence of statements with later
-statements able to retrieve data created in earlier statements. We are
-writing our first simple paragraph with four sentences in a logical and
-meaningful order.
+Mimo że wpisujemy te polecenia w Pythonie po jednym wierszu na raz, Python
+traktuje je jako uporządkowaną sekwencję instrukcji, przez co późniejsze
+instrukcje mogą pobierać dane utworzone we wcześniejszych instrukcjach.
+Napisaliśmy nasz pierwszy prosty akapit z czterema zdaniami w logicznej i
+zrozumiałej kolejności.
 
-It is the nature of an *interpreter* to be able to have
-an interactive conversation as shown above. A *compiler*
-needs to be handed the entire program in a file, and then it runs a
-process to translate the high-level source code into machine language
-and then the compiler puts the resulting machine language into a file
-for later execution.
+Naturą *interpretera* jest możliwość prowadzenia interaktywnej rozmowy, tak jak
+pokazano powyżej. *Kompilator* musi otrzymać w pliku cały program, potem
+uruchamia proces tłumaczenia kodu źródłowego wysokiego poziomu na język
+maszynowy, a następnie kompilator umieszcza wynikowy język maszynowy w pliku
+w celu jego późniejszego wykonania.
 
-If you have a Windows system, often these executable machine language
-programs have a suffix of ".exe" or ".dll" which stand for "executable"
-and "dynamic link library" respectively. In Linux and Macintosh, there
-is no suffix that uniquely marks a file as executable.
+Jeśli masz system Windows, często te wykonywalne programy maszynowe mają
+przyrostek ".exe" lub ".dll", które oznaczają odpowiednio "plik wykonywalny" i 
+"bibliotekę łączoną dynamicznie". W systemach Linux i Macintosh nie ma
+przyrostka, który jednoznacznie określałby plik jako wykonywalny.
 
-If you were to open an executable file in a text editor, it would look
-completely crazy and be unreadable:
+Gdybyś miał otworzyć plik wykonywalny w edytorze tekstu, to wyglądałby on 
+jak pisany przez szaleńca i byłby nieczytelny:
 
 ~~~~
 ^?ELF^A^A^A^@^@^@^@^@^@^@^@^@^B^@^C^@^A^@^@^@\xa0\x82
@@ -461,31 +455,30 @@ completely crazy and be unreadable:
 ....
 ~~~~
 
-It is not easy to read or write machine language, so it is nice that we
-have *interpreters* and *compilers* that
-allow us to write in high-level languages like Python or C.
+Nie jest łatwo czytać ani pisać w języku maszynowym, więc dobrze, że mamy
+*interpretery* i *kompilatory*, które pozwalają nam pisać w językach wysokiego
+poziomu takich jak Python czy C.
 
-Now at this point in our discussion of compilers and interpreters, you
-should be wondering a bit about the Python interpreter itself. What
-language is it written in? Is it written in a compiled language? When we
-type "python", what exactly is happening?
+W tym miejscu w naszej dyskusji o kompilatorach i interpreterach powinieneś
+trochę się zastanowić nad samym interpreterem Pythona. W jakim języku jest on
+napisany? Czy jest napisany w języku kompilowanym? Gdy wpiszemy "python", to co 
+właściwie się dzieje?
 
-The Python interpreter is written in a high-level language called "C".
-You can look at the actual source code for the Python interpreter by
-going to [www.python.org](http://www.python.org) and working your way to their
-source code. So Python is a program itself and it is compiled into
-machine code. When you installed Python on your computer (or the vendor
-installed it), you copied a machine-code copy of the translated Python
-program onto your system. In Windows, the executable machine code for
-Python itself is likely in a file with a name like:
+Interpreter Pythona jest napisany w języku wysokiego poziomu o nazwie "C".
+Możesz spojrzeć na rzeczywisty kod źródłowy interpretera Pythona, przechodząc na
+stronę [www.python.org](http://www.python.org) i sprawdzając kod źródłowy. Tak 
+więc Python sam w sobie jest programem i jest skompilowany do kodu maszynowego.
+Gdy zainstalowałeś język Python na swoim komputerze (lub zainstalował go
+sprzedawca), to skopiowałeś do systemu kopię programu Python przetłumaczonego do
+kodu maszynowego. W systemie Windows wykonywalny kod maszynowy samego Pythona
+prawdopodobnie znajduje się w pliku o nazwie takiej jak:
 
 ~~~~
 C:\Python35\python.exe
 ~~~~
 
-That is more than you really need to know to be a Python programmer, but
-sometimes it pays to answer those little nagging questions right at the
-beginning.
+Jest to więcej niż faktycznie musisz wiedzieć by zostać programistą Pythona, ale
+czasami warto już na początku odpowiedzieć sobie na te dręczące pytania.
 
 Writing a program
 -----------------
