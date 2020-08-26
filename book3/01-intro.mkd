@@ -712,76 +712,80 @@ Błędy semantyczne
 We wszystkich trzech typach błędów Python po prostu stara się zrobić dokładnie
 to, o co prosiłeś.
 
-Debugging
+Debugowanie
 ---------
 
 \index{debugging}
 
-When Python spits out an error or even when it gives you a result that is different from what you had intended, then begins the hunt for the cause of the error. Debugging is the process of finding the cause of the error in your code. When you are debugging a program, and especially if you are working on a hard bug, there are four things to try:
+Gdy Python zwraca błąd, a nawet gdy daje wynik inny niż zamierzony, to 
+rozpoczyna poszukiwanie przyczyny błędu. Debugowanie to proces znajdowania w
+kodzie przyczyny błędu. Podczas debugowania programu, a zwłaszcza podczas pracy
+nad poważnym błędem, należy spróbować czterech rzeczy:
 
-reading
-:   Examine your code, read it back to yourself, and check that it says
-    what you meant to say.
+czytanie
+:   Sprawdź swój kod, przeczytaj go i sprawdź czy zawiera to, co chciałeś
+    przekazać.
 
-running
-:   Experiment by making changes and running different versions. Often
-    if you display the right thing at the right place in the program,
-    the problem becomes obvious, but sometimes you have to spend some
-    time to build scaffolding.
+uruchamianie
+:   Poeksperymentuj wprowadzając zmiany i uruchamiając różne wersje. Często gdy
+    wyświetlasz w programie właściwą rzecz we właściwym miejscu, to problem 
+    staje się oczywisty, ale czasami trzeba poświęcić na to trochę czasu.
 
-ruminating
-:   Take some time to think! What kind of error is it: syntax, runtime,
-    semantic? What information can you get from the error messages, or
-    from the output of the program? What kind of error could cause the
-    problem you're seeing? What did you change last, before the problem
-    appeared?
+rozmyślanie
+:   Poświęć trochę czasu na przemyślenia! Jaki to rodzaj błędu: składniowy,
+    wykonania, semantyczny? Jakie informacje można uzyskać z komunikatów o
+    błędach lub z danych wyjściowych programu? Jaki rodzaj błędu może spowodować
+    napotkany problem? Co ostatnio zmieniałeś zanim pojawił się problem?
 
-retreating
-:   At some point, the best thing to do is back off, undoing recent
-    changes, until you get back to a program that works and that you
-    understand. Then you can start rebuilding.
+wycofanie się
+:   W pewnym momencie najlepszą rzeczą, którą można zrobić, jest wycofanie się,
+    tj. cofnięcie ostatnich zmian aż wrócisz do programu, który działa i który
+    rozumiesz. Następnie możesz rozpocząć rekonstrukcję programu.
 
-Beginning programmers sometimes get stuck on one of these activities and
-forget the others.  Finding a hard bug requires reading, running, ruminating, and sometimes retreating. If you get stuck on one of these activities, try the others. Each activity comes with its own failure mode.
+Początkujący programiści czasami grzęzną przy jednej z tych czynności i
+zapominają o innych. Znalezienie trudnego błędu wymaga czytania, uruchamiania,
+rozmyślania, a czasem wycofania się. Jeśli ugrzęźniesz w jednej z tych
+czynności, to wypróbuj inne. Każda czynność ma swój własny tryb wyszukiwania
+błędów.
 
 \index{typographical error}
 
-For example, reading your code might help if the problem is a
-typographical error, but not if the problem is a conceptual
-misunderstanding. If you don't understand what your program does, you
-can read it 100 times and never see the error, because the error is in
-your head.
+Na przykład przeczytanie kodu może pomóc gdy problem jest błędem
+typograficznym, ale nie pomoże gdy problem dotyczy niezrozumienia pewnych
+konceptów i pojęć. Jeśli nie rozumiesz co robi Twój program, to możesz go 
+przeczytać i ze 100 razy, a i tak nigdy nie zobaczysz błędu, ponieważ błąd tkwi
+w Twojej głowie.
 
 \index{experimental debugging}
 
-Running experiments can help, especially if you run small, simple tests.
-But if you run experiments without thinking or reading your code, you
-might fall into a pattern I call "random walk programming", which is the
-process of making random changes until the program does the right thing.
-Needless to say, random walk programming can take a long time.
+Przeprowadzanie eksperymentów może pomóc, zwłaszcza jeśli przeprowadzasz małe,
+proste testy. Ale jeśli przeprowadzasz eksperymenty bez myślenia lub czytania
+kodu, możesz wpaść w schemat, który nazywam "programowaniem losowym", który
+jest procesem dokonywania przypadkowych zmian, dopóki program nie zrobi
+właściwej rzeczy. Nie trzeba dodawać, że programowanie losowe może zająć dużo
+czasu.
 
 \index{random walk programming}
 \index{development plan!random walk programming}
 
-You have to take time to think. Debugging is like an experimental
-science. You should have at least one hypothesis about what the problem
-is. If there are two or more possibilities, try to think of a test that
-would eliminate one of them.
+Musisz trochę pomyśleć. Debugowanie jest jak nauki eksperymentalne. Powinieneś
+mieć przynajmniej jedną hipotezę na temat tego, na czym polega problem. Jeśli
+są dwie lub więcej możliwości, to spróbuj pomyśleć o teście, który
+wyeliminowałby jedną z nich.
 
-Taking a break helps with the thinking. So does talking. If you explain
-the problem to someone else (or even to yourself), you will sometimes
-find the answer before you finish asking the question.
+Przerwa pomaga w myśleniu. Tak samo działa mówienie. Jeśli wyjaśnisz problem
+komuś innemu (lub nawet sobie), to czasami znajdziesz odpowiedź, zanim
+skończysz zadawać pytanie.
 
-But even the best debugging techniques will fail if there are too many
-errors, or if the code you are trying to fix is too big and complicated.
-Sometimes the best option is to retreat, simplifying the program until
-you get to something that works and that you understand.
+Ale nawet najlepsze techniki debugowania zawiodą jeśli jest zbyt wiele błędów
+lub jeśli kod, który próbujesz naprawić, jest zbyt duży i skomplikowany. Czasami
+najlepszą opcją jest wycofanie się i uproszczanie programu tak długo, aż
+dojdziesz do czegoś, co działa i co rozumiesz.
 
-Beginning programmers are often reluctant to retreat because they can't
-stand to delete a line of code (even if it's wrong). If it makes you
-feel better, copy your program into another file before you start
-stripping it down. Then you can paste the pieces back in a little bit at
-a time.
+Początkujący programiści często niechętnie się wycofują, ponieważ nie mogą
+znieść usunięcia linii kodu (nawet jeśli jest błędny). Jeśli sprawi to, że
+poczujesz się lepiej, to skopiuj kod programu do innego pliku zanim zaczniesz go
+demontować. Następnie możesz wklejać po trochu z powrotem kawałki kod.
 
 The learning journey
 --------------------
