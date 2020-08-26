@@ -787,44 +787,43 @@ znieść usunięcia linii kodu (nawet jeśli jest błędny). Jeśli sprawi to, �
 poczujesz się lepiej, to skopiuj kod programu do innego pliku zanim zaczniesz go
 demontować. Następnie możesz wklejać po trochu z powrotem kawałki kod.
 
-The learning journey
---------------------
+Podróż do krainy rozwoju
+------------------------
 
-As you progress through the rest of the book, don't be afraid if the
-concepts don't seem to fit together well the first time. When you were
-learning to speak, it was not a problem for your first few years that
-you just made cute gurgling noises. And it was OK if it took six months
-for you to move from simple vocabulary to simple sentences and took 5-6
-more years to move from sentences to paragraphs, and a few more years to
-be able to write an interesting complete short story on your own.
+W miarę postępów przez kolejne części książki nie bój się jeśli za pierwszym
+razem przedstawiane koncepcje nie będą wydawały się do siebie pasować. Kiedy
+uczyłeś się mówić, to przez kilka pierwszych lat nie stanowiło problemu, że po
+prostu wydawałeś słodkie bulgotanie. I nie był to problem, że przejście od
+prostego słownictwa do prostych zdań zajęło ci sześć miesięcy, a przejście od
+zdań do akapitów zajęło ci jeszcze 5-6 lat, a kilka lat więcej by móc napisać
+interesujące, kompletne, samodzielne opowiadanie.
 
-We want you to learn Python much more rapidly, so we teach it all at the
-same time over the next few chapters. But it is like learning a new
-language that takes time to absorb and understand before it feels
-natural. That leads to some confusion as we visit and revisit topics to
-try to get you to see the big picture while we are defining the tiny
-fragments that make up that big picture. While the book is written
-linearly, and if you are taking a course it will progress in a linear
-fashion, don't hesitate to be very nonlinear in how you approach the
-material. Look forwards and backwards and read with a light touch. By
-skimming more advanced material without fully understanding the details,
-you can get a better understanding of the "why?" of programming. By
-reviewing previous material and even redoing earlier exercises, you will
-realize that you actually learned a lot of material even if the material
-you are currently staring at seems a bit impenetrable.
+Chcemy abyś nauczył się języka Python znacznie szybciej, więc w następnych
+kilku rozdziałach uczymy wszystkiego po trochu w tym samym czasie. No ale to jest
+tak jakby uczyć się nowego języka, którego przyswojenie i zrozumienie wymaga
+czasu zanim posługiwanie się nim stanie się naturalne. Prowadzi to do pewnego
+zamieszania, gdy odkrywamy i powracamy do tematów, tak abyś mógł zobaczyć
+pełny obraz, podczas gdy jednocześnie definiujemy małe fragmenty składające się
+na ten pełny obraz. Podczas gdy książka jest napisana w sposób liniowy, a jeśli
+bierzesz udział w kursie, to będzie on przebiegał w sposób liniowy, nie wahaj
+się być bardzo nieliniowym w stosunku do materiału. Spójrz do kolejnych i
+poprzednich rozdziałow i czytaj je bez stresu. Przeglądając bardziej
+zaawansowany materiał bez pełnego zrozumienia szczegółów, możesz lepiej
+zrozumieć pytanie "dlaczego?" pojawiające się w programowaniu. Przeglądając
+wcześniejszy materiał, a nawet powtarzając poprzednie ćwiczenia, zdasz sobie
+sprawę, że faktycznie nauczyłeś się bardzo wielu rzeczy, nawet jeśli materiał,
+na który się właśnie patrzysz, wydaje się nieco nieprzystępny.
 
-Usually when you are learning your first programming language, there are
-a few wonderful "Ah Hah!" moments where you can look up from pounding
-away at some rock with a hammer and chisel and step away and see that
-you are indeed building a beautiful sculpture.
+Zwykle gdy uczysz się swojego pierwszego języka programowania, to jest kilka
+wspaniałych chwil typu "a-ha!", w których możesz spojrzeć zza uderzeń młota i
+dłuta w jakąś skałę, odejść i zobaczyć, że rzeczywiście budujesz piękną rzeźbę.
 
-If something seems particularly hard, there is usually no value in
-staying up all night and staring at it. Take a break, take a nap, have a
-snack, explain what you are having a problem with to someone (or perhaps
-your dog), and then come back to it with fresh eyes. I assure you that
-once you learn the programming concepts in the book you will look back
-and see that it was all really easy and elegant and it simply took you a
-bit of time to absorb it.
+Jeśli coś wydaje się szczególnie trudne, to zazwyczaj nie ma sensu zarywać
+całej nocy i wpatrywać się w ten problem. Zrób sobie przerwę, zdrzemnij się,
+zjedz przekąskę, wyjaśnij komuś (lub swojemu psu) z czym masz problem, a potem
+wróć do tego ze świeżym umysłem. Zapewniam Cię, że kiedy już nauczysz się z tej 
+książki koncepcji programowania, to spojrzysz wstecz i zobaczysz, że wszystko
+było naprawdę łatwe i eleganckie, a przyswojenie tego zajęło Ci troszkę czasu.
 
 Glossary
 --------
