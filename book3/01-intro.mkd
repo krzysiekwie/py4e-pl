@@ -619,100 +619,98 @@ jednej stopy przed drugą". "Sztuka" pisania programu polega na wielokrotnym
 komponowaniu i splataniu ze sobą powyższych podstawowych elementów, a wszystko
 to w celu wytworzenia czegoś, co jest przydatne dla użytkowników tego programu.
 
-Powyższy program do liczenia słów bezpośrednio używa wszystkich tych wzorców z wyjątkiem jednego.
+Powyższy program do liczenia słów bezpośrednio używa wszystkich tych wzorców z
+wyjątkiem jednego.
 
-What could possibly go wrong?
+Co może pójść nie tak?
 -----------------------------
 
-As we saw in our earliest conversations with Python, we must communicate
-very precisely when we write Python code. The smallest deviation or
-mistake will cause Python to give up looking at your program.
+Jak widzieliśmy w naszych pierwszych rozmowach z Pythonem, musimy bardzo 
+precyzyjnie komunikować się gdy piszemy kod w Pythonie. Najmniejsze odchylenie 
+lub błąd spowoduje, że Python przestanie patrzeć na Twój program.
 
-Beginning programmers often take the fact that Python leaves no room for
-errors as evidence that Python is mean, hateful, and cruel. While Python
-seems to like everyone else, Python knows them personally and holds a
-grudge against them. Because of this grudge, Python takes our perfectly
-written programs and rejects them as "unfit" just to torment us.
+Początkujący programiści często przyjmują fakt, że Python nie pozostawia miejsca
+na błędy, jako dowód na to, że Python jest podły, nienawistny i okrutny. Podczas
+gdy Python wydaje się lubić wszystkie pozostałe osoby, Python zna programistów
+osobiście i żywi do nich urazę. Z powodu tej urazy Python bierze nasze doskonale
+napisane programy i odrzuca je jako "nieodpowiednie" tylko po to by nas drażnić.
 
 ~~~~ {.python}
->>> primt 'Hello world!'
-File "<stdin>", line 1
-  primt 'Hello world!'
-                     ^
+>>> primt 'Witaj świecie!'
+  File "<stdin>", line 1
+    primt 'Witaj świecie!'
+          ^
 SyntaxError: invalid syntax
->>> primt ('Hello world')
+>>> primt ('Witaj świecie!')
 Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
+  File "<stdin>", line 1, in <module>
 NameError: name 'primt' is not defined
 
->>> I hate you Python!
-File "<stdin>", line 1
-  I hate you Python!
-       ^
+>>> Nienawidzę Cię Pythonie!
+  File "<stdin>", line 1
+    Nienawidzę Cię Pythonie!
+               ^
 SyntaxError: invalid syntax
->>> if you come out of there, I would teach you a lesson
-File "<stdin>", line 1
-  if you come out of there, I would teach you a lesson
-            ^
+>>> gdybyś tylko stamtąd wyszedł, to dałbym ci nauczkę
+  File "<stdin>", line 1
+    gdybyś tylko stamtąd wyszedł, to dałbym ci nauczkę
+           ^
 SyntaxError: invalid syntax
 >>>
 ~~~~
 
-There is little to be gained by arguing with Python. It is just a tool.
-It has no emotions and it is happy and ready to serve you whenever you
-need it. Its error messages sound harsh, but they are just Python's call
-for help. It has looked at what you typed, and it simply cannot
-understand what you have entered.
+Niewiele można zyskać kłócąc się z Pythonem. To tylko narzędzie. Nie ma emocji
+i jest szczęśliwy oraz gotowy by Ci służyć kiedy tylko tego potrzebujesz.
+Komunikaty o błędach brzmią ostro, ale są one po prostu wezwaniem pomocy
+przez Pythona. Sprawdził co wpisałeś i po prostu nie może tego zrozumieć.
 
-Python is much more like a dog, loving you unconditionally, having a few
-key words that it understands, looking you with a sweet look on its face
-(`>>>`), and waiting for you to say something it
-understands. When Python says "SyntaxError: invalid syntax", it is
-simply wagging its tail and saying, "You seemed to say something but I
-just don't understand what you meant, but please keep talking to me
-(`>>>`)."
+Python jest bardziej podobny do psa, który kocha Cię bezwarunkowo, zna kilka
+kluczowych słów, które rozumie, patrzy na Ciebie ze słodkim wyrazem twarzy
+(`>>>`) i czeka aż powiesz coś, co zrozumie. Gdy Python mówi "SyntaxError:
+invalid syntax", to po prostu macha ogonem i mówi: "Wydawało mi się, że coś
+powiedziałeś, ale po prostu nie rozumiem co miałeś na myśli, ale proszę mów
+dalej (`>>>`)".
 
-As your programs become increasingly sophisticated, you will encounter
-three general types of errors:
+W miarę jak Twoje programy będą coraz bardziej wyrafinowane, napotkasz trzy
+ogólne typy błędów:
 
-Syntax errors
-:   These are the first errors you will make and the easiest to fix. A
-    syntax error means that you have violated the "grammar" rules of
-    Python. Python does its best to point right at the line and
-    character where it noticed it was confused. The only tricky bit of
-    syntax errors is that sometimes the mistake that needs fixing is
-    actually earlier in the program than where Python
-    *noticed* it was confused. So the line and character
-    that Python indicates in a syntax error may just be a starting point
-    for your investigation.
+Błędy składniowe
+:   Błędy składniowe (ang. *syntax errors*) to pierwsze błędy, które popełnisz,
+    i zarazem najłatwiejsze do naprawienia. Błąd składniowy oznacza, że
+    naruszyłeś "gramatyczne" zasady Pythona. Python robi wszystko co w jego mocy
+    by wskazać wiersz i znak, w którym zauważył, że jest zdezorientowany.
+    Jedynym trudnym problemem błędów składniowych jest to, że czasami błąd,
+    który wymaga naprawy, występuje w programie w rzeczywistości wcześniej 
+    niż w miescu, w którym Python *zauważył*, że został zdezorientowany. Tak
+    więc linia i znak, które Python wskazuje w błędzie składniowym, mogą być
+    tylko punktem wyjścia dla Twojego śledztwa.
 
-Logic errors
-:   A logic error is when your program has good syntax but there is a
-    mistake in the order of the statements or perhaps a mistake in how
-    the statements relate to one another. A good example of a logic
-    error might be, "take a drink from your water bottle, put it in your
-    backpack, walk to the library, and then put the top back on the
-    bottle."
+Błędy logiczne
+:   Błąd logiczny (ang. *logic error*) występuje wtedy, gdy Twój program ma
+    poprawną składnię, ale występuje błąd w kolejności instrukcji lub być może 
+    w tym jak instrukcje odnoszą się do siebie. Dobrym przykładem błędu 
+    logicznego może być: "napij się z butelki z wodą, włóż ją do plecaka,
+    idź do biblioteki, a następnie zakręć butelkę".
 
-Semantic errors
-:   A semantic error is when your description of the steps to take is
-    syntactically perfect and in the right order, but there is simply a
-    mistake in the program. The program is perfectly correct but it does
-    not do what you *intended* for it to do. A simple
-    example would be if you were giving a person directions to a
-    restaurant and said, "...when you reach the intersection with the
-    gas station, turn left and go one mile and the restaurant is a red
-    building on your left." Your friend is very late and calls you to
-    tell you that they are on a farm and walking around behind a barn,
-    with no sign of a restaurant. Then you say "did you turn left or
-    right at the gas station?" and they say, "I followed your directions
-    perfectly, I have them written down, it says turn left and go one
-    mile at the gas station." Then you say, "I am very sorry, because
-    while my instructions were syntactically correct, they sadly
-    contained a small but undetected semantic error.".
+Błędy semantyczne
+:   Błąd semantyczny (ang. *semantic error*) występuje gdy opis kroków, które
+    należy wykonać, jest idealny pod względem składniowym i podany we właściwej
+    kolejności, ale w programie jest po prostu pomyłka. Program jest całkowicie
+    poprawny, ale nie robi tego co *zamierzałeś* by zrobił. Prostym przykładem
+    może być podanie osobie wskazówek dojazdu do restauracji i powiedzenie: 
+    "...kiedy dojdziesz do skrzyżowania ze stacją benzynową, skręć w lewo i
+    przejedź jeden kilometr, a restauracja to czerwony budynek po lewej
+    stronie". Twój znajomy jest bardzo spóźniony i dzwoni do Ciebie, aby
+    powiedzieć, że są na farmie i chodzą za stodołą, ale nie ma tu śladu
+    restauracji. Następnie pytasz: "Skręciłeś w lewo czy w prawo na stacji
+    benzynowej?". A oni mówią: "Postępowałem dokładnie zgodnie z twoimi 
+    wskazówkami, mam je zapisane, jest napisane, żeby skręcić w lewo i jechać
+    jeden kilometr do stacji benzynowej". Następnie mówisz: "Bardzo mi przykro,
+    bo chociaż moje instrukcje były poprawne składniowo, to niestety zawierały
+    mały, ale niewykryty błąd semantyczny". 
 
-Again in all three types of errors, Python is merely trying its hardest
-to do exactly what you have asked.
+We wszystkich trzech typach błędów Python po prostu stara się zrobić dokładnie
+to, o co prosiłeś.
 
 Debugging
 ---------
