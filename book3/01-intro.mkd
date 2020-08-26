@@ -825,101 +825,102 @@ wróć do tego ze świeżym umysłem. Zapewniam Cię, że kiedy już nauczysz si
 książki koncepcji programowania, to spojrzysz wstecz i zobaczysz, że wszystko
 było naprawdę łatwe i eleganckie, a przyswojenie tego zajęło Ci troszkę czasu.
 
-Glossary
---------
+Słowniczek
+----------
 
-bug
-:   An error in a program.
+błąd
+:   Pomyłka w programie.
 \index{bug}
 
-central processing unit
-:   The heart of any computer. It is what runs the software that we
-    write; also called "CPU" or "the processor".
-\index{central processing unit}
-\index{CPU}
+błąd semantyczny
+:   Błąd w programie, który zmusza go do zrobienia czegoś zupełnie innego niż
+    zakładał programista.
+\index{semantic error}
 
-compile
-:   To translate a program written in a high-level language into a
-    low-level language all at once, in preparation for later execution.
-\index{compile}
-
-high-level language
-:   A programming language like Python that is designed to be easy for
-    humans to read and write.
-\index{high-level language}
-
-interactive mode
-:   A way of using the Python interpreter by typing commands and
-    expressions at the prompt.
-\index{interactive mode}
-
-interpret
-:   To execute a program in a high-level language by translating it one
-    line at a time.
-\index{interpret}
-
-low-level language
-:   A programming language that is designed to be easy for a computer to
-    execute; also called "machine code" or "assembly language".
-\index{low-level language}
-
-machine code
-:   The lowest-level language for software, which is the language that
-    is directly executed by the central processing unit (CPU).
-\index{machine code}
-
-main memory
-:   Stores programs and data. Main memory loses its information when the
-    power is turned off.
-\index{main memory}
-
-parse
-:   To examine a program and analyze the syntactic structure.
-\index{parse}
-
-portability
-:   A property of a program that can run on more than one kind of
-    computer.
-\index{portability}
-
-print function
-:   An instruction that causes the Python interpreter to display a value
-    on the screen.
+funkcja print
+:   Instrukcja, która powoduje, że interpreter Pythona wyświetla daną wartość
+    na ekranie.
 \index{print function}
 \index{function!print}
 
-problem solving
-:   The process of formulating a problem, finding a solution, and
-    expressing the solution.
-\index{problem solving}
+interpretowanie
+:   Uruchomienie programu napisanego w języku wysokiego poziomy poprzez
+    translację w danym momencie jednej linii kodu.
+\index{interpret}
 
-program
-:   A set of instructions that specifies a computation.
-\index{program}
+język niskiego poziomu
+:   Język programowania, który jest zaprojektowany by komputer mógł go łatwo
+    uruchomić; czasem nazywany "kodem maszynowym" lub "językiem asemblera".
+\index{low-level language}
 
-prompt
-:   When a program displays a message and pauses for the user to type
-    some input to the program.
-\index{prompt}
+język wysokiego poziomu
+:   Język programowania taki jak Python, który jest zaprojektowany aby był łatwy
+    do czytania i pisania przez ludzi.
+\index{high-level language}
 
-secondary memory
-:   Stores programs and data and retains its information even when the
-    power is turned off. Generally slower than main memory. Examples of
-    secondary memory include disk drives and flash memory in USB sticks.
+kod maszynowy
+:   Język najniższego poziomu dla oprogramowania, który jest językiem
+    bezpośrednio uruchamianym przez procesor (CPU).
+\index{machine code}
+
+kod źródłowy
+:   Program napisany w języku wysokiego poziomu.
+\index{source code}
+
+kompilacja
+:   Tłumaczenie za jednym zamachem programu napisanego w języku wysokiego
+    poziomu do języka niskiego poziomu w celu jego późniejszego uruchomienia.
+\index{compile}
+
+pamięć główna
+:   Przechowuje programy i dane. Pamięć główna traci wszystkie swoje informacje
+    gdy komputer zostanie wyłączony.
+\index{main memory}
+
+pamięć pomocnicza
+:   Przechowuje programy i dane oraz zachowuje ich informacje nawet gdy
+    komputer zostanie wyłączony. Zasadniczo wolniejsza od pamięci głównej.
+    Przykładami pamięci pomocniczej mogą być dyski twarde oraz pamięć flash
+    w pamięciach USB/pendrive.
 \index{secondary memory}
 
-semantics
-:   The meaning of a program.
+parsowanie
+:   Sprawdzanie programu i analizowanie jego struktury składniowej.
+\index{parse}
+
+procesor
+:   Serce każdego komputera. Jest to to, co uruchamia oprogramowanie, które
+    piszemy; czasem występuje pod nazwą "CPU".
+\index{central processing unit}
+\index{CPU}
+
+program
+:   Zbiór instrukcji, które określają obliczenia.
+\index{program}
+
+przenoszalność
+:   Cecha programu, która pozawala na jego uruchomienia na więcej niż jednym
+    komputerze.
+\index{portability}
+
+rozwiązywanie problemów
+:   Proces formułowania problemu, znajdywania rozwiązania i wyrażania tego
+    rozwiązania.
+\index{problem solving}
+
+semantyka
+:   Znaczenie programu.
 \index{semantics}
 
-semantic error
-:   An error in a program that makes it do something other than what the
-    programmer intended.
-\index{semantic error}
+tryb interaktywny
+:   Sposób używania interpretera Pythona poprzez pisanie komend i wyrażeń w
+    wierszu poleceń za znakiem zachęty.
+\index{interactive mode}
 
-source code
-:   A program in a high-level language.
-\index{source code}
+znak zachęty
+:   Pojawia się gdy program wyświetla wiadomość i wstrzymuje swoje działanie
+    by użytkownik mógł wprowadzić dane wejściowe do programu.
+\index{prompt}
 
 Exercises
 ---------
