@@ -3,30 +3,40 @@
 <div class="hide-for-large" id="mobile-support"></div>
 <div id="first-row" class="row">
     <div class="small-12 columns">
-        <h2>Setting up your Python Development Environment</h2>
+        <h2>Konfigurowanie Twojego środowiska programistycznego Python</h2>
         <p>
-            We have separate pages for each of the commonly used Operating Systems:
+            Mamy osobne strony dla każdego z powszechnie używanych systemów
+            operacyjnych:
         </p>
         <ul>
             <li>
-                <a href="software-pyaw.php">Using Python on PythonAnywhere</a> 
-                    (Cloud / browser based - no installation required)
+                <a href="software-pyaw.php">
+                    Używanie Pythona na PythonAnywher
+                </a> 
+                (Chmura / przeglądarka - nie wymaga instalacji)
             </li>
             <li>
-                <a href="software-win.php">Setting up the Python Environment in Microsoft Windows</a>
+                <a href="software-win.php">
+                    Konfigurowanie środowiska Python w systemie Microsoft Window
+                </a>
             </li>
             <li>
-                <a href="software-mac.php">Setting up the Python Environment on a Macintosh</a>
+                <a href="software-mac.php">
+                    Konfigurowanie środowiska Python na Macintoshu
+                </a>
             </li>
             <li>
-                You can also set up Python under Windows-10 using the Windows Subsystem for Linux (WSL)
-                if you prefer a Linux-like experience on your windows computer.
+                Możesz także skonfigurować Pythona w systemie Windows 10
+                używając <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">
+                Windows Subsystem for Linux (WSL)</a> jeśli na Twoim
+                komputerze z Windowsem wolisz pracę zbliżoną do takiej jak
+                na Linuxie.
             </li>
         </ul>
         <p>
-            Other cloud-provided Python environments include
+        Inne chmurowe środowiska Pythona obejmują:
             <a href="http://trinket.io">Trinket</a>,
-            <a href="http://c9.io">Cloud9</a>, or
+            <a href="http://c9.io">Cloud9</a>, lub
             <a href="http://codeanywhere.com">CodeAnywhere</a>.
         </p>
 

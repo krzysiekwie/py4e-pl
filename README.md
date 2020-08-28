@@ -9,8 +9,8 @@ Polish translation progress
 | `A0-preface.mkd`       | ☐    |      |       |         |          |         |            | ☐    |
 | `AA-contrib.mkd`       | ☐    |      |       |         |          |         |            | ☐    |
 | `AB-copyright.mkd`     | ☐    |      |       |         |          |         |            | ☐    |
-| `install.php`          | ☐    |      |       |         |          |         |            | ☐    |
-| `software-pyaw.php`    | ☐    |      |       |         |          | ☐      |            | ☐    |
+| `install.php`          | ☒    |      |       |         |          |         |            | ☐    |
+| `software-pyaw.php`    | ☒    |      |       |         |          | ☐      |            | ☐    |
 | `software-win.php`     | ☐    |      |       |         |          | ☐      |            | ☐    |
 | `software-mac.php`     | ☐    |      |       |         |          | ☐      |            | ☐    |
 | `01-intro.mkd`         | ☒    | ☒   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |

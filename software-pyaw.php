@@ -1,64 +1,73 @@
 <?php include("top.php"); ?>
 <?php include("nav.php"); ?>
 <h1>
-Using Python on PythonAnywhere
+Używanie Pythona w usłudze PythonAnywhere
 </h1>
 <p>
 PythonAnywhere</a>
 (<a href="https://www.pythonanywhere.com" target="_blank">www.pythonanywhere.com</a>)
-is a free online service that gives you a way to develop and run Python programs
-inside a browser.   This is a full-featured Linux environment with a browser-based text
-editor with syntax highlighting.  To use Pythonanywhere for this class - all you need
-to write and run Python code is a web browser. There is nothing to install at all.
+to bezpłatna usługa online, która umożliwia tworzenie i uruchamianie w
+przeglądarce internetowej programów w języku Python. Jest to w pełni
+funkcjonalne środowisko Linuxa z opartym na przeglądarce internetowej edytorem
+tekstu z podświetlaniem składni. Aby używać PythonAnywhere podczas tego kursu, 
+wszystko, czego potrzebujesz do napisania i uruchomienia kodu Pythona, to
+przeglądarka internetowa. W ogóle nic nie musisz instalować.
 </p>
 <p>
-This means that you can do this course on a "locked-down" environment on systems
-like Apple's iPad, iPhone, Android, ChromeBooks, or Windows 10 Home S.  You can
-also use PythonAnywhere if you are using a work or school computer that does not
-allow any software into be installed.
+Oznacza to, że możesz ukończyć ten kurs w "zamkniętym" środowisku na systemach
+i urządzeniach np. takich jak iPad, iPhone, Android, ChromeBook lub Windows 10. 
+Możesz także użyć PythonAnywhere jeśli używasz komputera w pracy lub w szkole,
+gdzie nie pozwalają Tobie na instalację żadnego oprogramowania.
 </p>
-<h2>Sign up for an account</h2>
+<h2>Rejestracja w celu utworzenia konta</h2>
 <p>
-You will need to sign up for an account to use PythonAnywhere.   They have a free
-level that will cover all of your needs for this course through Chapter 15.
+Aby korzystać z PythonAnywhere, musisz założyć konto. Mają bezpłatnę ofertę,
+która pokryje wszystkie Twoje potrzeby związane z tym kursem aż do rozdziału 15.
 </p>
 <p>
-PythonAnywhere is committed to letting you have a free account forever as long as you
-keep logging in and extending it.  They have low cost paid plans if you want more disk
-space or compute power for your own projects or more flexibility or features.  But
-rest assured that their free plan is sufficient for this course.
+PythonAnywhere zobowiązuje się do umożliwienia Ci posiadania bezpłatnego konta
+na zawsze, o ile będziesz się logować i je używać. Mają tanie, płatne ofety, 
+które sprawdzą się jeśli będziesz potrzebować więcej miejsca na dysku, większej
+mocy obliczeniowej dla swoich projektów, większej elastyczności lub dodatkowych
+funkcji. Zapewniamy jednak, że ich darmowa oferta wystarczy by ukończyć ten
+kurs.
 </p>
-<h2>Writing Your First Program on PythonAnywhere</h2>
+<h2>Pisanie pierwszego programu na PythonAnywhere</h2>
 <p>
-Once you can log in to PythonAnywhere, go into the files tab and create a new file called <b>hello.py</b>
-in your home folder (should be something like <b>/home/drchuck</b>.  Put the following line in the file:
+Po zalogowaniu się do PythonAnywhere, przejdź do zakładki plików i utwórz nowy
+plik o nazwie <b>hello.py</b> w swoim katalogu domowym (powinno to być coś w
+rodzaju <b>/home/drchuck</b>. Umieść w pliku następujący wiersz:
+
 <pre>
-print('Hello world')
+print('Witaj świecie')
 </pre>
-Save the file and press <b>Run</b> and you should see:
+Zapisz plik, wybierz <b>Run</b>, a następnie powinieneś zobaczyć:
 <pre>
-Hello world
+Witaj świecie
 &gt;&gt;&gt;
 </pre>
-Then change the text to 'Hello PY4E world', press <b>Save</b> and press <b>Run</b> and it should run your modified
-program.
-</pre>
+Następnie zamień tekst na 'Witaj PY4E świecie', wybierz <b>Save</b>, a potem
+<b>Run</b>, co powinno uruchomić Twój zmodyfikowany program.
 </p>
 <p>
-While the <b>Run</b> button works for programs that are a few lines, once you start working on more complex
-programs you will need to use a Linux shell (command line).  It might feel a little strange at the beginning
-but learning a little bit of Linux is a great idea as it is the dominant system that is used for servers.
+O ile przycisk <b>Run</b> działa w przypadku programów składających się z kilku
+linijek, po rozpoczęciu pracy nad bardziej złożonymi programami konieczne będzie
+użycie powłoki systemu Linux (wiersza poleceń). Na początku może się to wydawać
+trochę dziwne, ale nauczenie się trochę Linuxa to świetny pomysł, ponieważ jest
+to system, który dominuje na serwerach.
 </p>
-<h2>Using the Linux Shell on PythonAnywhere</h2>
+<h2>Używanie powłoki systemu Linux na PythonAnywhere</h2>
 <p>
-This works best if you can have two tabs open at the same time in the browser.  One tab should be navigated to
-the <b>Files</b> screen and another should be nagivated to the <b>Consoles</b> screen.  If you already have a 
-bash console running you can go back to it - otherwise start a new <b>Bash</b> console.  After it starts up, 
-you should see something like:
+Działa to najlepiej gdy w przeglądarce internetowej w tym samym czasie masz
+otwarte dwie karty. W jedną karcie należy mieć otwarty ekran <b>Files</b>, a w 
+drugiej <b>Consoles</b>. Jeśli masz już uruchomioną konsolę Bash, to możesz do
+niej teraz wrócić - w przeciwnym razie uruchom nową konsolę <b>Bash</b>. Po
+uruchomieniu powinieneś zobaczyć mniej więcej coś takiego:
 <pre>
 14:12 ~ $
 </pre>
-This is the Linux command prompt.  Lets run your 'hello.py' program from the command line:
+Jest to wiersz poleceń systemu Linux. Uruchommy program "hello.py" z poziomu
+wiersza poleceń:
 <pre>
 14:12 ~ $ cd
 14:14 ~ $ pwd
@@ -66,62 +75,76 @@ This is the Linux command prompt.  Lets run your 'hello.py' program from the com
 14:15 ~ $ ls -l
 -rw-rw-r--  1 drchuck registered_users   27 Mar 29 14:15 hello.py
 14:16 ~ $ python3 hello.py
-Hello PY4E world
+Witaj PY4E świecie
 14:16 ~ $
 </pre>
-Here is what the commands are doing:
+Oto, co robią te polecenia:
 <ul>
-<li><b>cd</b> - Change directory into my home folder - we do this just to make sure we are starting in the 
-right place in the folder hierarchy.</li>
-<li><b>pwd</b> - Print Working Directory - this command tells you where you are at in the folder
-hierarchy.  We are in our home folder.  Linux is a multi-user system and each user has their own 'home'
-directory.  You can build a folder hirearchy from your home folder on down.</li>
-<li><b>ls -l</b> list the files and subfolders in the current folder.  The <b>-l</b> option
-shows details like permissions, modification date and file size.</li>
-<li><b>python3 hello.py</b> runs Python on your file</li>
+<li><b>cd</b> - zmień katalog na mój katalog domowy - robimy to, aby upewnić
+się, że zaczynamy w odpowiednim miejscu w hierarchii katalogów.</li>
+<li><b>pwd</b> - wyświetl katalog roboczy - to polecenie informuje gdzie
+znajdujesz się w hierarchii katalogów. Jesteśmy obecnie w naszym katalogu
+domowym. Linux to system dla wielu użytkowników, a każdy użytkownik ma swój
+własny katalog "domowy". Możesz zbudować własną hierarchię folderów idąc w głąb
+od swojego katalogu domowego. 
+</li>
+<li><b>ls -l</b> - pokaż pliki i podkatalogi w bieżącym katalogu. Opcja
+<b>-l</b> pokazuje dodatkowe szczegóły takie jak uprawnienia, data modyfikacji
+i rozmiar pliku.</li>
+<li><b>python3 hello.py</b> - uruchom Pythona na pliku "hello.py".</li>
 </ul>
-We recommend that you start using the Linux bash shell to run your code from the very beginning
-because eventually you will need to use bash to run more complex programs.
+Zalecamy rozpoczęcie od samego początku używania powłoki Bash w Linuxie do
+uruchamiania kodu, ponieważ ostatecznie będziesz musiał używać Basha do
+uruchamiania bardziej złożonych programów.
 </p>
 <p>
-<h2>Some Cool Hints on the bash console</h2>
+<h2>Kilka fajnych wskazówek dotyczących konsoli Basha</h2>
 <p>
-You can scroll back through previous commands by pressing the up and down arrows and re-execute 
-commands using the enter key.  This can save a lot of typing.
-If you like keeping your screen uncluttered, you can clear the scroll 
-back buffer by pressing the <b>Command key</b> and the <b>K</b> key at the same time.
+Możesz przewijać poprzednie polecenia poprzez naciśnięcie na klawiaturze 
+klawiszów strzałki w górę i w dół, a potem ponownie wykonywać polecenia za
+pomocą klawisza Enter. Może Ci to zaoszczędzić wiele pisania. Jeśli chcesz
+zachować porządek na ekranie, możesz wyczyścić bufor przewijania wstecz,
+naciskając jednocześnie klawisz <b>Command</b>/<b>Ctrl</b> i klawisz <b>K</b>.
 
-<h2>Editing Files on PythonAnywhere</h2>
+<h2>Edycja plików na PythonAnywhere</h2>
 <p>
-There are three ways to edit files in your PythonAnywhere environment, ranging from the easiest
-to the coolest.  You only have to edit the file one of these ways.
+Istnieją trzy sposoby edytowania plików w środowisku PythonAnywhere,
+od najłatwiejszego do najfajniejszych. Wystarczy, że będziesz umiał edytować
+plik jednym z poniższych sposobów.
 <ol>
 <li>
-Go to the main PythonAnywhere dashboard, browse files, navigate to the correct folder and edit the file.
+Przejdź do kokpitu głównego PythonAnywhere, przejdź do plików, przejdź do 
+właściwego katalogu i edytuj plik.
 </li><li>
-Or in the command line:
+Lub w wierszu linii poleceń wykonaj:
 <pre>
 cd ~
 nano hello.py
 </pre>
-Save the File by pressing <b>CTRL-X</b>, <b>Y</b>, and Enter.
+Zapisz plik poprzez kombinację klawiszy <b>Ctrl+X</b>, <b>Y</b>, a potem
+<b>Enter</b>.
 </li><li>
-Don't try this most difficult and most cool way to edit files on Linux without a helper
-if it is your first time with the <b>vi</b> text editor.
+Jeśli po raz pierwszy korzystasz z edytora tekstu <b>vi</b>, to bez pomocy
+lepiej nie próbuj tego najtrudniejszego i zarazem najfajniejszego sposobu edycji
+plików w systemie Linux. 
 <pre>
 cd ~
 vi hello.py
 </pre>
-Once you have opened <b>vi</b>, cursor down where you want to make a change, and press the
-<b>i</b> key to go into 'INSERT' mode, then type your new text and press
-the <b>esc</b> key when you are done.  To save the file, you type <b>:wq</b>
-followed by <b>enter</b>.  If you get lost press <b>esc</b> <b>:q!</b>
-<b>enter</b> to get out of the file without saving.
+Po otwarciu <b>vi</b> przesuń kursor w dół w miejsce, w którym chcesz dokonać
+zmiany, i naciśnij klawisz <b>i</b> aby przejść do trybu 'INSERT' (jest to tryb
+wstawiania), następnie wpisz nowy tekst, a gdy skończysz, to naciśnij klawisz
+<b>Esc</b>. Aby zapisać plik wpisz <b>:wq</b>, a następnie wciśnij <b>Enter</b>.
+Jeśli się pogubisz, naciśnij <b>Esc</b>, wpisz <b>:q!</b> i wciśnij <b>Enter</b>
+aby wyjść z pliku bez zapisywania.
 </li>
 </ol>
-If you aleady know some _other_ command line text editor in Linux, you can use it to edit files.  In general,
-you will find that it often quicker and easier to make small edits to files in the command line
-rather than a full screen UI.  And once you start deploying real applications in production
-environments like Google, Amazon, Microsoft, etc.. all you will have is command line.
+Jeśli znasz jakiś <i>inny</i> edytor tekstu wiersza poleceń w Linuxie, to możesz
+go używać do edycji plików. Ogólnie przekonasz się, że często szybsze i
+łatwiejsze jest wprowadzanie niewielkich zmian w plikach z poziomu wiersza
+poleceń, a nie w pełnoekranowym interfejsie użytkownika. A kiedy zaczniesz już
+wdrażać rzeczywiste aplikacje w środowiskach produkcyjnych takich jak Google,
+Amazon, Microsoft itp., to wszystko i jedyne co będziesz mieć do dyspozycji to
+wiersz poleceń.
 
 <?php include('footer.php');?>
