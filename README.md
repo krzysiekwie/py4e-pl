@@ -13,7 +13,7 @@ Polish translation progress
 | `software-pyaw.php`    | ☐    |      |       |         |          | ☐      |            | ☐    |
 | `software-win.php`     | ☐    |      |       |         |          | ☐      |            | ☐    |
 | `software-mac.php`     | ☐    |      |       |         |          | ☐      |            | ☐    |
-| `01-intro.mkd`         | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `01-intro.mkd`         | ☒    | ☒   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `02-variables.mkd`     | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `03-conditional.mkd`   | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `04-functions.mkd`     | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
