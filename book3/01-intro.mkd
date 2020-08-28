@@ -922,53 +922,52 @@ znak zachęty
     by użytkownik mógł wprowadzić dane wejściowe do programu.
 \index{prompt}
 
-Exercises
+Ćwiczenia
 ---------
 
-**Exercise 1: What is the function of the secondary memory in a computer?**
+**Ćwiczenie 1: Jaką rolę pełni w komputerze pamięć pomocnicza?**
 
-a\) Execute all of the computation and logic of the program\
-b) Retrieve web pages over the Internet\
-c) Store information for the long term, even beyond a power cycle\
-d) Take input from the user
+a\) Wykonuje wszystkie obliczenia i logikę programu\
+b) Pobiera strony z internetu\
+c) Przechowuje informacje przez dłuższy czas, nawet po wyłączeniu sprzętu\
+d) Pobiera dane wejściowe od użytkownika
 
-**Exercise 2: What is a program?**
+**Ćwiczenie 2: What is a program?**
 
-**Exercise 3: What is the difference between a compiler and an
-interpreter?**
+**Ćwiczenie 3: Jaka jest różnica między kompilatorem a intepreterem?**
 
-**Exercise 4: Which of the following contains "machine code"?**
+**Ćwiczenie 4: Który z poniższych zawiera "kod maszynowy"?**
 
-a\) The Python interpreter\
-b) The keyboard\
-c) Python source file\
-d) A word processing document
+a\) Interpreter Pythona\
+b) Klawiatura\
+c) Kod źródłowy Pythona\
+d) Dokument edytora tekstu
 
-**Exercise 5: What is wrong with the following code:**
+**Ćwiczenie 5: Co jest nie tak w poniższym kodzie:**
 
 ~~~~ {.python}
->>> primt 'Hello world!'
+>>> primt 'Witaj świecie!'
 File "<stdin>", line 1
-  primt 'Hello world!'
-                     ^
+  primt 'Witaj świecie!'
+                       ^
 SyntaxError: invalid syntax
 >>>
 ~~~~
 
-**Exercise 6: Where in the computer is a variable such as "x" stored after
-the following Python line finishes?**
+**Ćwiczenie 6: Gdzie w komputerze będzie przechowywana zmienna "x" po wykonaniu
+poniższej linijki kodu Pythona?**
 
 ~~~~ {.python}
 x = 123
 ~~~~
 
-a\) Central processing unit\
-b) Main Memory\
-c) Secondary Memory\
-d) Input Devices\
-e) Output Devices
+a\) W procesorze\
+b) W pamięci głównej\
+c) W pamięci pomocnicznej\
+d) W urządzeniach wejścia\
+e) W urządzeniach wyjścia
 
-**Exercise 7: What will the following program print out:**
+**Ćwiczenie 7: Co wyświetli poniższy program:**
 
 ~~~~ {.python}
 x = 43
@@ -979,12 +978,12 @@ print(x)
 a\) 43\
 b) 44\
 c) x + 1\
-d) Error because x = x + 1 is not possible mathematically
+d) Błąd, ponieważ x = x + 1 łamie reguły matematyki
 
-**Exercise 8: Explain each of the following using an example of a human
-capability: (1) Central processing unit, (2) Main Memory, (3) Secondary
-Memory, (4) Input Device, and (5) Output Device. For example, "What is
-the human equivalent to a Central Processing Unit"?**
+**Ćwiczenie 8: Wyjaśnij każdy z poniższych elementów na przykładzie ludzkich
+możliwości: (1) procesor, (2) pamięć główna, (3) pamięć pomocnicza,
+(4) Urządzenie wejścia, oraz (5) urządzenie wyjścia. Np. "Czym mógłby być
+procesor w kontekście człowieka?"?**
 
-**Exercise 9: How do you fix a "Syntax Error"?**
+**Ćwiczenie 9: W jaki sposób naprawiasz "Syntax Error" (błąd składniowy)?**
 
