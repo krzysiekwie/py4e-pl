@@ -11,7 +11,7 @@ Polish translation progress
 | `AB-copyright.mkd`     | ☐    |      |       |         |          |         |            | ☐    |
 | `install.php`          | ☒    |      |       |         |          |         |            | ☐    |
 | `software-pyaw.php`    | ☒    |      |       |         |          |         |            | ☐    |
-| `software-win.php`     | ☒    |      |       |         |          | ☐      |            | ☐    |
+| `software-win.php`     | ☒    |      |       |         |          | ☒      |            | ☐    |
 | `software-mac.php`     | ☒    |      |       |         |          | ☐      |            | ☐    |
 | `01-intro.mkd`         | ☒    | ☒   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `02-variables.mkd`     | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
