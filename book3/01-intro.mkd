@@ -109,7 +109,8 @@ Ogólne definicje tych części są następujące:
 -   *Pamięć główna* jest używana do przechowywania informacji, których procesor
     potrzebuje w pośpiechu. Pamięć główna jest prawie tak szybka jak procesor. 
     Jednakże informacje przechowywane w pamięci głównej znikają po wyłączeniu 
-    komputera.
+    komputera.^[Chodzi tutaj o pamięć o dostępie swobodnym, czyli RAM (z ang. 
+    *random-access memory*) - przyp. tłum.]
 
 -   *Pamięć pomocnicza* jest również używana do przechowywania informacji, ale
     jest znacznie wolniejsza niż pamięć główna. Zaletą pamięci dodatkowej jest 
@@ -793,8 +794,8 @@ Podróż do krainy rozwoju
 W miarę postępów przez kolejne części książki nie bój się jeśli za pierwszym
 razem przedstawiane koncepcje nie będą wydawały się do siebie pasować. Kiedy
 uczyłeś się mówić, to przez kilka pierwszych lat nie stanowiło problemu, że po
-prostu wydawałeś słodkie bulgotanie. I nie był to problem, że przejście od
-prostego słownictwa do prostych zdań zajęło ci sześć miesięcy, a przejście od
+prostu wydawałeś słodkie odgłosy chichotania. I nie był to problem, że przejście
+od prostego słownictwa do prostych zdań zajęło ci sześć miesięcy, a przejście od
 zdań do akapitów zajęło ci jeszcze 5-6 lat, a kilka lat więcej by móc napisać
 interesujące, kompletne, samodzielne opowiadanie.
 
