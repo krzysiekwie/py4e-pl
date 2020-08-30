@@ -1,56 +1,57 @@
 <?php include("top.php"); ?>
 <?php include("nav.php"); ?>
-<h1>
-Getting started with Python on a Macintosh
-</h1>
-<p>Python 2 and Python 3 are already installed on Macintosh OS/X operating system so all you need to add
-is a programmer text editor.
-</p>
-<b>Installing the Atom Text Editor</b>
-<p>Please download and install Atom from this site:
-</p>
-<p><a href="http://atom.io" target="_blank">http://atom.io</a>
 
-<h1>Writing a Python 3 program with Atom on Macintosh</h1>
-<p>
-We have a short
-<a href="https://www.youtube.com/watch?v=aIcLCww_kQM" target="_blank">
-step-by-step video</a> showing how to use Atom and write your first Python 3 program.
-<p>
-<h1>Starting Terminal on Macintosh OS/X</h1>
-<p>
-The Terminal program on Macintosh is kind of buried under <b>Macintosh HD -> Applications -> Utilities -> Terminal</b>
-<p>
-There are several shortcuts that you might find helpful.   You can go into the upper-right of 
-your screen and click on the Spotlight search button and type 
-<b>terminal</b> and you can execute Terminal from the pop-up 
-list of items.
-<p>
-You can get Terminal to stay in your dock once terminal is launched by clicking and 
-holding on the Terminal icon in the dock and then selecting "Keep in Dock".  
-Then you can quickly launch Terminal by clicking on the icon in the dock.
+<h1>Rozpoczęcie pracy z Pythonem na Macintoshu</h1>
 
-<h1>Where Are You?</h1>
-<p>
-When the command line starts up, you are in your "home" directory.   
-In each of these examples, your logged in account should be used instead of csev.
+<p>Python 2 i Python 3 są już zainstalowane na systemie operacyjnym macOS, więc
+jedyne co musisz dodać to edytor programistycznych kodów źródłowych.</p>
+
+<h2>Instalacja edytora tekstu Atom</h2>
+
+<p>Pobierz i zainstaluj program Atom z poniższej strony:</p>
+<p><a href="http://atom.io" target="_blank">http://atom.io</a></p>
+
+<h1>Pisanie programu Python 3 z Atomem na Macintoshu</h1>
+
+<p>Mamy krótki <a href="https://www.youtube.com/watch?v=aIcLCww_kQM" target="_blank">
+film pokazujący krok po kroku</a> jak używać edytora Atom i jak napisać swój
+pierwszy program Python 3.</p>
+
+<h1>Uruchomienie terminala na macOS</h1>
+
+<p>Program Terminal jest jakby zakopany w <b>Finder -> Aplikacje -> Narzędzia ->
+Terminal</b>.</p>
+<p>Istnieje kilka skrótów, które mogą okazać się pomocne. Możesz w prawej górnej
+części ekranu kliknąć na przycisk wyszukiwania Spotlight i wpisać
+<b>terminal</b>, a następnie uruchomić Terminal, który pojawi się na liście.</p>
+<p>Możesz sprawić, że Terminal po uruchomieniu pozostanie zadokowany - kliknij i
+przytrzymują ikonę Terminala w Docku, a następnie wybierz opcję "Zatrzymaj w
+Docku". Następnie możesz szybko uruchomić Terminal, klikając na jego ikonę w
+Docku.</p>
+
+<h1>Gdzie się znajdujesz?</h1>
+
+<p>Po uruchomieniu wiersza poleceń domyślnie znajdujesz się w swoim
+katalogu "domowym". W poniższym przykładzie, zamiast "csev" powinna być nazwa
+Twojego aktualnie zalogowanego konta.</p>
 <pre>
-    Macintosh Home Directory: 		/Users/csev
+    Katalog domowy na Macu: 		/Users/csev
 </pre>
-The command line prompt usually includes some clue as to where you are at 
-in the folder structure on your hard drive.  If you want to really figure out 
-where you are, on Macintosh use the <b>pwd</b> command.
+<p>W wierszu poleceń zazwyczaj znajduje się wskazówka, gdzie się znajdujesz w 
+strukturze katalogów na dysku twardym. Jeśli naprawdę chcesz się dowiedzieć 
+gdzie się w tej hierarchii znajdujesz, użyj polecenia <b>pwd</b>.</p>
 <pre>
     udhcp-macvpn-624:~ csev$ pwd
     /Users/csev
     udhcp-macvpn-624:~ csev$ 
 </pre>
 
-<h1>Where can you go?</h1>
-<p>
-Generally the first thing you want to do when you open a command line 
-interface is to navigate to the right folder.  Say you wanted to run a file from your desktop.   The command is 
-<b>cd Desktop </b>
+<h1>Gdzie możesz pójść?</h1>
+
+<p>Generalnie pierwszą rzeczą, którą chcesz zrobić po otwarciu interfejsu
+wiersza poleceń, jest przejście do właściwego folderu. Powiedzmy, że chcesz
+uruchomić plik znajdujący się na Biurku. Polecenie <b>cd Desktop</b> pozwoli Ci
+dostać się do katalogu, który jest Twoim Biurkiem.</p>
 <pre>
     udhcp-macvpn-624:~ csev$ pwd
     /Users/csev
@@ -59,14 +60,16 @@ interface is to navigate to the right folder.  Say you wanted to run a file from
     /Users/csev/Desktop
     udhcp-macvpn-624:Desktop csev$
 </pre>
-Nifty Trick:  On the cd command, you can partially type a folder name like Desktop 
-and then press the TAB key and the system will auto-complete the folder name 
-if you have typed enough that the system can accurately guess what you mean to type.
-<p>
-Going Backwards (or Upwards)
-<p>
-You can change directory to the parent folder (the folder "above" the folder you 
-are in using the <b>cd ..</b> command.   It just says "go up one".
+<p><b>Sprytna sztuczka:</b> w poleceniu cd możesz częściowo wpisać nazwę katalogu,
+np. Des zamiast Desktop, a następnie nacisnąć klawisz TAB i system automatycznie
+uzupełni nazwę katalogu, jeśli wpisałeś ją na tyle, że system będzie mógł 
+dokładnie odgadnąć co masz na myśli.</p>
+
+<h2>Przechodzenie w dół (lub do góry)</h2>
+
+<p>Używając polecenia <b>cd ..</b> możesz zmienić bieżący katalog na katalog
+nadrzędny (tj. katalog "powyżej" tego katalogu, w którym się aktualnie
+znajdujesz). Komenda ta oznacza "idź do góry o jeden poziom".</p>
 <pre>
     udhcp-macvpn-624:Desktop csev$ pwd
     /Users/csev/Desktop
@@ -75,15 +78,18 @@ are in using the <b>cd ..</b> command.   It just says "go up one".
     /Users/csev
     udhcp-macvpn-624:~ csev$ 
 </pre>
-If you get Lost...
-<p>
-If you can't figure out what folder you are in and/or cannot figure 
-out how to get to the folder you want to get to "home" simply close and 
-re-open the Command Line / Terminal window.  
-<p>
-What Files/Folders are Here?
-<p>
-You can list the contents of the current directory using the <b>ls -l</b>  command.
+
+<h2>Jeśli się zgubisz...</h2>
+
+<p>Jeżeli nie wiesz w którym katalogu się znajdujesz i/lub nie wiesz jak dostać
+się do danego katalogu - po prostu zamknij i ponownie otwórz okno Terminala /
+wiersza linii poleceń. Powrócisz wtedy do swojego katalogu "domowego" - możesz
+więc ponownie zacząć nawigację zaczynając od znanej Ci lokalizacji.</p>
+
+<h2>Jakie pliki i foldery się tutaj znajdują?</h2>
+
+<p>Za pomocą polecenia <b>ls -l</b> możesz wyświetlić zawartość aktualnego
+katalogu.</p>
 <pre>
     udhcp-macvpn-624:Desktop csev$ pwd
     /Users/csev/Desktop
@@ -92,19 +98,25 @@ You can list the contents of the current directory using the <b>ls -l</b>  comma
     -rw-r--r--  1 csev  staff   15 Sep 16 15:17 hello.py
     udhcp-macvpn-624:Desktop csev$ 
 </pre>
-Running Your Python Program in the Terminal
-<p>
-Start the Terminal program, navigate to the proper directory and type the following command:
+
+<h2>Uruchamianie Twojego programu Python w Terminalu</h2>
+
+<p>Uruchom program Terminal, przejdź do odpowiedniego katalogu i wpisz poniższe
+polecenie:</p>
 <pre>
-    python3 hello.py
+    python3 mojprogram.py
 </pre>
-This loads the Python 3 interpreter and runs <b>firstprog.py</b>, showing the program output 
-and/or errors in the Terminal window.
-<p>
-Some Cool Hints on The Macintosh Terminal Program
-<p>
-You can scroll back through previous commands by pressing the up and down arrows and re-execute 
-commands using the enter key.  This can save a lot of typing.
-If you like keeping your screen uncluttered, you can clear the scroll 
-back buffer by pressing the Command key and the K key at the same time.
+<p>Polecenie to uruchamia interpreter Pythona 3 i uruchamia
+<b>mojprogram.py</b>, pokazując w oknie Terminala wyjście programu i/lub
+ewentualne błędy.</p>
+
+<h2>Kilka ciekawych wskazówek dotyczących programu Terminal</h2>
+
+<p>Możesz przewijać poprzednie komendy, naciskając na klawiaturze strzałki w
+górę i w dół, a potem możesz ponownie wykonywać wyświetlone komendy za pomocą
+klawisza Enter. Dzięki temu możesz zaoszczędzić sporo czasu podczas pisania
+komend. Jeśli lubisz mieć porządek na ekranie, możesz wyczyścić bufor
+poprzednich komend oraz ekran, naciskając jednocześnie klawisz Command i klawisz
+K.</p>
+
 <?php include('footer.php');?>

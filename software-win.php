@@ -1,30 +1,40 @@
 <?php include("top.php"); ?>
 <?php include("nav.php"); ?>
-<h1>Installing Python 3 On Windows 10</h1>
-<p><b>Note:</b> Any reasonably recent version of Python is acceptable for this course.
-If you have a version of Python 3.x on your computer already you should be able to use it for this class.
-</p>
-<p>Please download and install Python 3.x from:</p>
-<p><a href="http://www.python.org/download/" target="_blank">http://www.python.org/download/</a></p>
-<p>As you install Python, make sure to check the "Add Python 3.5 to PATH" so that you can 
-type <b>python</b> at the command line prompt to run Python.
-</p>
-<b>Installing the Atom Text Editor</b>
-<p>Please download and install Atom from this site:
-</p>
-<p><a href="http://atom.io" target="_blank">http://atom.io</a>
 
-<h1>Writing a Python 3 program with Atom on Windows-10</h1>
-<p>
-We have a short 
-<a href="https://www.youtube.com/watch?v=uZbaYeYGYRQ&index=1&list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p" target="_blank">
-step-by-step video</a> showing how to install Python 3 and Atom and write your first program.
-<p>
-<h1>Windows Command Line Notes</h1>
-<p>
-When the command line starts <b style="color:black;background-color:#a0ffff">up</b>, you are in your "home" directory.  Your home directory 
-is different for each of the operating systems.  
-In each of these examples, your logged in account should be used instead of csev.
+<h1>Instalacja Pythona 3 na Windows 10</h1>
+
+<p><b>Uwaga:</b> Każda stosunkowo aktualna wersja Pythona jest akceptowana 
+podczas tego kursu. Jeżeli posiadasz już na swoim komputerze Pythona w wersji
+3.x, to powinieneś mieć możliwość korzystania z niego w tym kursie.</p>
+<p>Pobierz i zainstaluj Pythona 3.x z:</p>
+<p><a href="http://www.python.org/download/" target="_blank">
+http://www.python.org/download/</a></p>
+<p>Podczas instalacji Pythona, upewnij się, że zaznaczyłeś opcję "Add Python 3.x
+to PATH", tak abyś mógł wpisać <b>python</b> w wierszu poleceń w celu 
+uruchomienia Pythona.</p>
+<p>Ewentualnie można zainstalować Pythona przez Sklep (Microsoft Store).</p>
+
+<h2>Instalacja edytora tekstu Atom</h2>
+
+<p>Pobierz i zainstaluj program Atom z poniższej strony:</p>
+<p><a href="http://atom.io" target="_blank">http://atom.io</a></p>
+
+<h1>Pisanie programu Python 3 z Atomem na Windows 10</h1>
+<p>Mamy krótki <a href="https://www.youtube.com/watch?v=uZbaYeYGYRQ" target="_blank">
+film pokazujący krok po kroku</a> jak zainstalować Pythona 3 i Atom oraz jak 
+swój napisać pierwszy program.</p>
+
+<h1>Uwagi dotyczące wiersza poleceń Windows</h1>
+
+<p>Klasyczny wiersz poleceń cmd.exe możemy uruchomić poprzez wciśnięcie klawisza
+Windows, wpisania "cmd.exe" i wybrania aplikacji. Ewentualnie można wybrać 
+kombinację klawiszy Windows+R, wpisać "cmd.exe" i wybrać "OK". Nowszą wersją
+klasycznego wiersza poleceń cmd.exe jest PowerShell, jednak na potrzeby kursu
+w zupełności wystarczy nam cmd.exe.</p>
+<p>Po uruchomieniu interpretera poleceń cmd.exe domyślnie znajdujesz się w swoim
+katalogu "domowym". Twój katalog domowy jest różny dla każdej z wersji systemu
+Windows. W każdym z poniższych przykładów, zamiast "csev" powinno być nazwa
+Twojego aktualnie zalogowanego konta.</p>
 <pre>
     Windows XP:             C:\Documents and Settings\csev
     Windows Vista:          C:\Users\csev
@@ -32,62 +42,63 @@ In each of these examples, your logged in account should be used instead of csev
     Windows 10:             C:\Users\csev
     Windows 10 OneDrive:    C:\Users\csev\OneDrive
 </pre>
-The command line prompt usually includes some clue as to 
-where you are in the folder structure on your hard drive.
-<p>
-If you want to really figure out where you are, use the cd command with no parameters
+<p>W wierszu poleceń zazwyczaj znajduje się wskazówka, gdzie znajdujesz się w
+hierarchii katalogów na dysku twardym.</p>
+<p>Jeśli naprawdę chcesz się dowiedzieć gdzie się w tej hierarchii znajdujesz,
+użyj polecenia "cd" bez parametrów:</p>
 <pre>
     C:\Users\csev> cd
     C:\Users\csev
 </pre>
-<p>
-Where can you go?
+
+<h1>Gdzie możesz pójść?</h1>
+
+<p>Generalnie pierwszą rzeczą, którą chcesz zrobić po otwarciu interfejsu wiersza
+poleceń, jest przejście do właściwego katalogu. Powiedzmy, że chcesz uruchomić
+plik z pulpitu. Polecenie <b>cd Pulpit</b> lub <b>cd OneDrive\Pulpit</b>
+(ewentualnie <b>cd Desktop</b> lub <b>cd OneDrive\Desktop</b> w przypadku
+angielskiej wersji językowej systemu) pozwoli Ci dostać się do katalogu, który
+jest Twoim pulpitem. Możesz użyć polecenia <b>dir</b> aby zobaczyć pliki 
+znajdujące się w aktualnym katalogu, oraz polecenie <b>cd ..</b> aby przejść
+"<b style="color:black;background-color:#a0ffff">w górę</b>" katalogu.</p>
+<p><b>Sprytna sztuczka:</b> W poleceniu cd możesz częściowo wpisać nazwę katalogu, 
+np. Pul zamiast Pulpit, a następnie nacisnąć klawisz TAB i system automatycznie
+uzupełni nazwę katalogu jeśli wpisałeś ją na tyle, że system będzie mógł 
+dokładnie odgadnąć co masz na myśli.
 </p>
-<p>
-Generally the first thing you want to do when you open a command line 
-interface is to navigate to the right folder.  Say you wanted to run a 
-file from your desktop.   The command is <b>cd Desktop</b> (or <b>cd OneDrive\Desktop</b>) 
-to get into the 
-folder that is your Desktop.  You can use the <b>dir</b> command to see 
-which files are in the current directory and the 
-<b>cd ..</b> command to go "<b style="color:black;background-color:#a0ffff">up</b>" a directory
-</p>
-<p> 
-<b>Nifty Trick:</b>  On the cd command, you can partially type a folder name like
-Desktop and then press the TAB key and the system will auto-complete the folder name 
-if you have typed enough that the system can accurately guess what you mean to type.
-<p>
-If you get Lost...
-<p>
-If you can't figure out what folder you are in and/or cannot figure out how 
-to get to the folder you want to get to - simply close and re-open 
-the Command Line / Terminal window.  You will be back to 
-your "home" directory - so you can start from a known location.
-<p>
-Some Cool Hints on the Windows Command Line Interface
-<p>
-If you click on the little icon in the upper-left of the command prompt window 
-and select Preferences - you can set many things about the command line - probably 
-the most important is to set the Command History Buffer Size to be 999.
-<p>
-<h1>Running Your Python Program in the Command Line</h1>
-<p>
-To run your program in the command line you type at the command line prompt.
-Windows knows that files that end with a ".py" suffix are Python programs.
+
+<h2>Jeśli się zgubisz...</h2>
+
+<p>Jeżeli nie wiesz w którym katalogu się znajdujesz i/lub nie wiesz jak dostać się
+do danego katalogu - po prostu zamknij i ponownie otwórz okno terminala / wiersza
+linii poleceń. Powrócisz wtedy do swojego katalogu "domowego" - możesz więc
+ponownie zacząć nawigację zaczynając od znanej Ci lokalizacji.</p>
+
+<h2>Kilka ciekawych wskazówek dotyczących interfejsu wiersza poleceń Windows</h2>
+
+<p>Jeśli klikniesz na małą ikonkę w lewym górnym rogu okna wiersza poleceń i
+wybierzesz Preferencje/Ustawienia - możesz ustawić wiele rzeczy dotyczących wiersza poleceń
+- prawdopodobnie najważniejsze jest ustawienie rozmiaru bufora historii poleceń
+na 999.</p>
+
+<h1>Uruchamianie Twojego programu Python w wierszu poleceń</h1>
+
+<p>Aby uruchomić swój program w wierszu poleceń, wpiszesz go w wierszu poleceń.
+Windows wie, że pliki zakończone końcówką ".py" są programami Pythona.</p>
 <pre>
-    python firstprog.py
+    python mojprogram.py
 </pre>
-or
+<p>lub</p>
 <pre>
-    firstprog.py
+    mojprogram.py
 </pre>
-Where firstprog.py is the name of the file containing your Python program.  
-Make sure to use the cd command to be in the correct directory that contains your program file(s).
-</p>
-<p> 
-You can run your program over and over again in the command window.  
-Hint:  You can use the <b style="color:black;background-color:#a0ffff">up</b>-arrow key to scroll back through previous 
-commands and re-execute them by pressing enter.  This allows you to quickly 
-edit and rerun your program to make and test changes.
-</p>
+<p>gdzie mojprogram.py jest nazwą pliku zawierającego Twój program Python. Upewnij
+się by przy pomocy polecenia cd znaleźć się w odpowiednim katalogu, w którym
+znajduje się Twój plik programu.</p>
+<p>W oknie wiersza poleceń możesz uruchamiać swój program w kółko. Wskazówka: 
+możesz użyć klawisza strzałki <b style="color:black;background-color:#a0ffff">w
+górę</b> aby przewinąć poprzednie polecenia, a potem nacisnąć Enter by ponownie
+je wykonać. Pozwala to na szybką edycję i ponowne uruchomienie programu w celu
+dokonania i przetestowania zmian.</p>
+
 <?php include('footer.php');?>
