@@ -32,6 +32,8 @@ Polish translation progress
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | links to code repo...  |      |      |       |      |         |          |         |            |       |
 
+URLs to translated trinkets are in `trinket3-pl-urls.md`.
+
 ----
 
 Course materials for www.py4e.com
