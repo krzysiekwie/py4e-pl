@@ -31,7 +31,7 @@ Jeśli nie jesteś pewien jaki typ ma dana wartość, interpreter może Ci to
 powiedzieć.
 
 ~~~~ {.python .trinket height="160"}
->>> type('Hello, World!')
+>>> type('Witaj świecie!')
 <class 'str'>
 >>> type(17)
 <class 'int'>
