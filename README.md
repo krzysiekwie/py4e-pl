@@ -4,33 +4,33 @@ Python for Everybody (PY4E)
 
 Polish translation progress
 
-| Element                | Text | Code | Index | Figures | Lectures | YouTube | Autograder | Review |
-|------------------------|------|------|-------|---------|----------|---------|------------|--------|
-| `A0-preface.mkd`       | ☐    |      |       |         |          |         |            | ☐    |
-| `AA-contrib.mkd`       | ☐    |      |       |         |          |         |            | ☐    |
-| `AB-copyright.mkd`     | ☐    |      |       |         |          |         |            | ☐    |
-| `install.php`          | ☒    |      |       |         |          |         |            | ☐    |
-| `software-pyaw.php`    | ☒    |      |       |         |          |         |            | ☐    |
-| `software-win.php`     | ☒    |      |       |         |          | ☒      |            | ☐    |
-| `software-mac.php`     | ☒    |      |       |         |          | ☒      |            | ☐    |
-| `01-intro.mkd`         | ☒    | ☒   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `02-variables.mkd`     | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `03-conditional.mkd`   | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `04-functions.mkd`     | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `05-iterations.mkd`    | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `06-strings.mkd`       | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `07-files.mkd`         | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `08-lists.mkd`         | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `09-dictionaries.mkd`  | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `10-tuples.mkd`        | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `11-regex.mkd`         | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `12-network.mkd`       | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `13-web.mkd`           | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `14-objects.mkd`       | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `15-database.mkd`      | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `16-viz.mkd`           | ☐    | ☐   | ☐     | ☒      | ☐        | ☐     | ☐          | ☐    |
-| remaining website...   |      |      |       |         |          |         |            |       |
-| links to code repo...  |      |      |       |         |          |         |            |       |
+| Element                | Text | Code | Trinket | Index | Figures | Lectures | YouTube | Autograder | Review |
+|------------------------|------|------|-------|-------|---------|----------|---------|------------|--------|
+| `A0-preface.mkd`       | ☐    |      |      |       |         |          |         |            | ☐    |
+| `AA-contrib.mkd`       | ☐    |      |      |       |         |          |         |            | ☐    |
+| `AB-copyright.mkd`     | ☐    |      |      |       |         |          |         |            | ☐    |
+| `install.php`          | ☒    |      |      |       |         |          |         |            | ☐    |
+| `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☐    |
+| `software-win.php`     | ☒    |      |      |       |         |          | ☒      |            | ☐    |
+| `software-mac.php`     | ☒    |      |      |       |         |          | ☒      |            | ☐    |
+| `01-intro.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `02-variables.mkd`     | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `03-conditional.mkd`   | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `04-functions.mkd`     | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `05-iterations.mkd`    | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `06-strings.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `07-files.mkd`         | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `08-lists.mkd`         | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `09-dictionaries.mkd`  | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `10-tuples.mkd`        | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `11-regex.mkd`         | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `12-network.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `13-web.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `14-objects.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `16-viz.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| remaining website...   |      |      |       |      |         |          |         |            |       |
+| links to code repo...  |      |      |       |      |         |          |         |            |       |
 
 ----
 
