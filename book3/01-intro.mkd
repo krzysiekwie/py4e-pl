@@ -327,7 +327,7 @@ Przez jakiś czas rozmowa szła całkiem dobrze, ale potem popełniłeś malutki
 używając języka Python, a Python ponownie pokazał swoje pazury.
 
 W tym miejscu powinieneś również zdać sobie sprawę, że podczas gdy Python jest
-niesamowicie złożony i potężny oraz bardzo wybredny pod względem składni 
+niesamowicie złożony i wydajny oraz bardzo wybredny pod względem składni 
 używanej do komunikacji z nim, Python *nie* jest inteligentny. Tak naprawdę po
 prostu rozmawiasz ze sobą, ale używając odpowiedniej składni.
 
@@ -580,8 +580,9 @@ Elementy składowe programów
 ---------------------------
 
 W następnych kilku rozdziałach dowiemy się więcej o słownictwie, strukturze
-zdań, akapitów i opowieści w Pythonie. Dowiemy się o potężnych możliwościach
-Pythona oraz o tym jak łączyć te możliwości, tak aby tworzyć przydatne programy.
+zdań, akapitów i opowieści w Pythonie. Dowiemy się o zaawansowanych
+możliwościach Pythona oraz o tym jak łączyć te możliwości, tak aby tworzyć 
+przydatne programy.
 
 Istnieje kilka schematów pojęciowych niskiego poziomu, których używamy do
 tworzenia programów. Konstrukcje te nie są przeznaczone tylko dla programów
