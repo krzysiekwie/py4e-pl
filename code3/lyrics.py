@@ -1,6 +1,6 @@
 def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print('I sleep all night and I work all day.')
+    print("Jestem sobie drwal i równy chłop.")
+    print('Pracuję w dzień i śpię całą noc.')
 
 
 def repeat_lyrics():

@@ -23,8 +23,8 @@
 
 ## Chapter 04
 
-* [`...`](#)
-
+* [04-01 - `lyrics.py`](https://trinket.io/python/27fda2487e)
+* [04-02 - `addtwo.py`](https://trinket.io/python/b36ebaffe1)
 
 ## Chapter 05
 

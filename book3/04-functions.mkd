@@ -1,47 +1,44 @@
-
-Functions
+Funkcje
 =========
 
-Function calls
---------------
+Wywoływanie funkcji
+-------------------
 
 \index{function call}
 
-In the context of programming, a *function* is a named
-sequence of statements that performs a computation. When you define a
-function, you specify the name and the sequence of statements. Later,
-you can "call" the function by name. We have already seen one example of
-a *function call*:
+W kontekście programowania, *funkcja* to nazwana sekwencja instrukcji, która
+wykonuje pewne obliczenia. Kiedy definiujesz funkcję, określasz jej nazwę i
+kolejność instrukcji. Później możesz "wywołać" funkcję po jej nazwie. 
+Widzieliśmy już jeden przykład *wywołania funkcji*:
 
 ~~~~ {.python}
 >>> type(32)
 <class 'int'>
 ~~~~
 
-The name of the function is `type`. The expression in
-parentheses is called the *argument* of the function. The
-argument is a value or variable that we are passing into the function as
-input to the function. The result, for the `type` function,
-is the type of the argument.
+Nazwa funkcji to `type`. Wyrażenie w nawiasach nazywane jest *argumentem* 
+funkcji. Argument jest wartością lub zmienną, którą przekazujemy do funkcji jako 
+dane wejściowe funkcji. Wynikiem, dla funkcji `type`, jest typ przekazanego 
+argumentu. 
 
 \index{parentheses!argument in}
 
-It is common to say that a function "takes" an argument and "returns" a
-result. The result is called the *return value*.
+Zwykle mówi się, że funkcja "przyjmuje" argument i "zwraca" wynik. Wynik jest 
+nazywany *wartością zwracaną*. 
 
 \index{argument}
 \index{return value}
 
-Built-in functions
-------------------
+Funkcje wbudowane
+-----------------
 
-Python provides a number of important built-in functions that we can use
-without needing to provide the function definition. The creators of
-Python wrote a set of functions to solve common problems and included
-them in Python for us to use.
+Python zapewnia szereg ważnych funkcji wbudowanych, z których możemy korzystać 
+bez konieczności podawania definicji tych funkcji. Twórcy Pythona napisali 
+zestaw funkcji do rozwiązywania popularnych problemów i włączyli je do Pythona, 
+tak abyśmy mogli z nich korzystać. 
 
-The `max` and `min` functions give us the largest
-and smallest values in a list, respectively:
+Funkcje `max` i `min` dają nam odpowiednio największe i najmniejsze wartości 
+występujące w liście: 
 
 ~~~~ {.python}
 >>> max('Hello world')
@@ -51,15 +48,13 @@ and smallest values in a list, respectively:
 >>>
 ~~~~
 
-The `max` function tells us the "largest character" in the
-string (which turns out to be the letter "w") and the `min`
-function shows us the smallest character (which turns out to be a
-space).
+Funkcja `max` mówi nam o "największym znaku" w ciągu znaków (który okazuje się 
+być literą "w"), a funkcja `min` pokazuje nam najmniejszy znak (który okazuje 
+się być spacją). 
 
-Another very common built-in function is the `len` function
-which tells us how many items are in its argument. If the argument to
-`len` is a string, it returns the number of characters in the
-string.
+Inną bardzo często używaną funkcją jest funkcja `len`, która mówi nam, ile 
+elementów znajduje się w przekazanym argumencie. Jeśli argument `len` jest 
+ciągiem znaków, to zwraca liczbę znaków w tym ciągu. 
 
 ~~~~ {.python}
 >>> len('Hello world')
@@ -67,21 +62,22 @@ string.
 >>>
 ~~~~
 
-These functions are not limited to looking at strings. They can operate
-on any set of values, as we will see in later chapters.
+Funkcje te nie ograniczają się do analizowania wyłącznie łańcuchów znaków. Mogą 
+one działać na dowolnym zestawie wartości, jak zobaczymy w późniejszych 
+rozdziałach.
 
-You should treat the names of built-in functions as reserved words
-(i.e., avoid using "max" as a variable name).
+Nazwy wbudowanych funkcji należy traktować jako słowa zastrzeżone (tzn. unikać 
+używania "max" jako nazwy zmiennej). 
 
-Type conversion functions
--------------------------
+Funkcje konwersji typu
+----------------------
 
 \index{conversion!type}
 \index{type conversion}
 
-Python also provides built-in functions that convert values from one
-type to another. The `int` function takes any value and
-converts it to an integer, if it can, or complains otherwise:
+Python oferuje również funkcje wbudowane, które konwertują wartości z jednego 
+typu na drugi. Funkcja `int` przyjmuje dowolną wartość i konwertuje ją na liczbę 
+całkowitą, jeśli może, lub awanturuje się przeciwnym przypadku:
 
 \index{int function}
 \index{function!int}
@@ -89,12 +85,12 @@ converts it to an integer, if it can, or complains otherwise:
 ~~~~ {.python}
 >>> int('32')
 32
->>> int('Hello')
-ValueError: invalid literal for int() with base 10: 'Hello'
+>>> int('Halo')
+ValueError: invalid literal for int() with base 10: 'Halo'
 ~~~~
 
-`int` can convert floating-point values to integers, but it
-doesn't round off; it chops off the fraction part:
+`int` może zamieniać wartości zmiennoprzecinkowe na liczby całkowite, ale nie 
+zaokrągla ich (ucina część ułamkową): 
 
 ~~~~ {.python}
 >>> int(3.99999)
@@ -103,8 +99,7 @@ doesn't round off; it chops off the fraction part:
 -2
 ~~~~
 
-`float` converts integers and strings to floating-point
-numbers:
+`float` konwertuje liczby całkowite i ciągi znaków na liczby zmiennoprzecinkowe:
 
 \index{float function}
 \index{function!float}
@@ -116,7 +111,7 @@ numbers:
 3.14159
 ~~~~
 
-Finally, `str` converts its argument to a string:
+Natomiast `str` konwertuje swój argument na ciąg znaków:
 
 \index{str function}
 \index{function!str}
@@ -128,34 +123,33 @@ Finally, `str` converts its argument to a string:
 '3.14159'
 ~~~~
 
-Math functions
---------------
+Funkcje matematyczne
+--------------------
 
 \index{math function}
 \index{function, math}
 \index{module}
 \index{module object}
 
-Python has a `math` module that provides most of the familiar
-mathematical functions. Before we can use the module, we have to import
-it:
+Python posiada moduł `math`, który dostarcza większość znanych funkcji 
+matematycznych. Zanim będziemy mogli skorzystać z tego modułu, musimy go 
+zaimportować: 
 
 ~~~~ {.python}
 >>> import math
 ~~~~
 
-This statement creates a *module object* named math. If
-you print the module object, you get some information about it:
+Powyższa instrukcja tworzy *obiekt modułu* o nazwie math. Jeśli spróbujesz 
+wydrukować na ekranie obiekt modułu, otrzymasz kilka informacji na jego temat: 
 
 ~~~~ {.python}
 >>> print(math)
 <module 'math' (built-in)>
 ~~~~
 
-The module object contains the functions and variables defined in the
-module. To access one of the functions, you have to specify the name of
-the module and the name of the function, separated by a dot (also known
-as a period). This format is called *dot notation*.
+Obiekt modułu zawiera funkcje i zmienne zdefiniowane w tym module. Aby uzyskać 
+dostęp do jednej z tych funkcji, musisz podać nazwę modułu i nazwę funkcji, 
+oddzielone kropką. Format ten nazywa się *notacją kropkową*. 
 
 \index{dot notation}
 
@@ -167,9 +161,10 @@ as a period). This format is called *dot notation*.
 >>> height = math.sin(radians)
 ~~~~
 
-The first example computes the logarithm base 10 of the signal-to-noise
-ratio. The math module also provides a function called `log`
-that computes logarithms base e.
+Pierwszy przykład oblicza logarytm przy podstawie 10 ze stosunku sygnału 
+(`signal_power`) do szumu (`noise_power`) przemnożony przez 10. Moduł 
+matematyczny udostępnia również funkcję o nazwie `log`, która oblicza logarytm 
+naturalny. 
 
 \index{log function}
 \index{function!log}
@@ -178,12 +173,10 @@ that computes logarithms base e.
 \index{trigonometric function}
 \index{function, trigonometric}
 
-The second example finds the sine of `radians`. The name of
-the variable is a hint that `sin` and the other trigonometric
-functions (`cos`, `tan`, etc.) take arguments in
-radians. To convert from degrees to radians, divide by 360 and multiply
-by $2
-\pi$:
+Drugi przykład znajduje sinus z wartości w zmiennej `radians`. Nazwa zmiennej 
+jest podpowiedzią, że `sin` i inne funkcje trygonometryczne (`cos`, `tan`, itp.) 
+przyjmują argumenty w radianach. Aby przeliczyć wartość ze stopni na radiany, 
+należy ją podzielić przez 360 i pomnożyć przez $2 \pi$:
 
 ~~~~ {.python}
 >>> degrees = 45
@@ -192,14 +185,13 @@ by $2
 0.7071067811865476
 ~~~~
 
-The expression `math.pi` gets the variable `pi`
-from the math module. The value of this variable is an approximation of
-$\pi$, accurate to about 15 digits.
+ Wyrażenie `math.pi` pobiera zmienną `pi` z modułu matematycznego. Wartość tej 
+ zmiennej jest przybliżeniem $\pi$ z dokładnością do około 15 cyfr. 
 
 \index{pi}
 
-If you know your trigonometry, you can check the previous result by
-comparing it to the square root of two divided by two:
+Jeśli znasz trygonometrię, to możesz sprawdzić poprzedni wynik, porównując go z 
+pierwiastkiem kwadratowym z dwóch podzielonym przez dwa: 
 
 \index{sqrt function}
 \index{function!sqrt}
@@ -209,7 +201,7 @@ comparing it to the square root of two divided by two:
 0.7071067811865476
 ~~~~
 
-Random numbers
+Liczby losowe
 --------------
 
 \index{random number}
@@ -217,34 +209,32 @@ Random numbers
 \index{deterministic}
 \index{pseudorandom}
 
-Given the same inputs, most computer programs generate the same outputs
-every time, so they are said to be *deterministic*.
-Determinism is usually a good thing, since we expect the same
-calculation to yield the same result. For some applications, though, we
-want the computer to be unpredictable. Games are an obvious example, but
-there are more.
+Biorąc pod uwagę te same dane wejściowe, większość programów komputerowych 
+generuje za każdym razem te same dane wyjściowe, więc w takich przypadkach mówi 
+się, że te programy są *deterministyczne*. Determinizm jest zazwyczaj dobrą 
+rzeczą, ponieważ oczekujemy, że to samo obliczenie da ten sam wynik. W przypadku 
+niektórych aplikacji chcemy jednak, by komputer był nieprzewidywalny. Gry są 
+oczywistym przykładem, ale jest ich więcej. 
 
-Making a program truly nondeterministic turns out to be not so easy, but
-there are ways to make it at least seem nondeterministic. One of them is
-to use *algorithms* that generate
-*pseudorandom* numbers. Pseudorandom numbers are not
-truly random because they are generated by a deterministic computation,
-but just by looking at the numbers it is all but impossible to
-distinguish them from random.
+Uczynienie programu prawdziwie niedeterministycznym okazuje się wcale nie takie 
+proste, ale są sposoby, by przynajmniej wydawał się niedeterministycznym. Jednym 
+z nich jest użycie *algorytmów*, które generują liczby *pseudolosowe*. Liczby 
+pseudolosowe nie są tak naprawdę losowe, ponieważ są generowane przez 
+deterministyczne obliczenia, ale po prostu patrząc na te liczby, nie da się ich 
+odróżnić od losowych. 
 
 \index{random module}
 \index{module!random}
 
-The `random` module provides functions that generate
-pseudorandom numbers (which I will simply call "random" from here on).
+Moduł `random` oferuje funkcje, które generują liczby pseudolosowe (które od tej 
+chwili będę po prostu nazywał "losowymi"). 
 
 \index{random function}
 \index{function!random}
 
-The function `random` returns a random float between 0.0 and
-1.0 (including 0.0 but not 1.0). Each time you call `random`,
-you get the next number in a long series. To see a sample, run this
-loop:
+Funkcja `random` zwraca losową liczbę pomiędzy 0.0 a 1.0 (włączając w to 0.0, 
+ale nie 1.0). Za każdym razem, gdy wywołujesz `random`, otrzymujesz następną 
+liczbę. Aby zobaczyć krótki przykład, uruchom poniższą pętlę: 
 
 ~~~~ {.python}
 import random
@@ -254,8 +244,8 @@ for i in range(10):
     print(x)
 ~~~~
 
-This program produces the following list of 10 random numbers between
-0.0 and up to but not including 1.0.
+Powyższy program tworzy następującą listę 10 losowych liczb z zakresu od 0.0 do 
+1.0 (z wyłączeniem 1.0). 
 
 ~~~~
 0.11132867921152356
@@ -270,13 +260,13 @@ This program produces the following list of 10 random numbers between
 0.028511805472785867
 ~~~~
 
-**Exercise 1: Run the program on your system and see what numbers you get.
-Run the program more than once and see what numbers you get.**
+**Ćwiczenie 1: Uruchom program na swoim systemie i zobacz jakie dostajesz 
+liczby. Uruchom program więcej niż raz i zobacz jakie tym razem dostajesz 
+liczby.**
 
-The `random` function is only one of many functions that
-handle random numbers. The function `randint` takes the
-parameters `low` and `high`, and returns an
-integer between `low` and `high` (including both).
+Funkcja `random` jest tylko jedną z wielu funkcji, które obsługują liczby 
+losowe. Funkcja `randint` pobiera parametry `low` oraz `high` i zwraca liczbę 
+całkowitą pomiędzy `low` i `high` (włączając w to obydwie te liczby). 
 
 \index{randint function}
 \index{function!randint}
@@ -288,8 +278,7 @@ integer between `low` and `high` (including both).
 9
 ~~~~
 
-To choose an element from a sequence at random, you can use
-`choice`:
+Aby wybrać losowo element z jakiejś sekwencji, możesz użyć `choice`: 
 
 \index{choice function}
 \index{function!choice}
@@ -302,46 +291,43 @@ To choose an element from a sequence at random, you can use
 3
 ~~~~
 
-The `random` module also provides functions to generate
-random values from continuous distributions including Gaussian,
-exponential, gamma, and a few more.
+Moduł `random` zapewnia również funkcje do generowania wartości losowych z 
+rozkładów ciągłych, w tym rozkładu Gaussa, wykładniczego, gamma i kilku innych. 
 
-Adding new functions
---------------------
+Dodawanie nowych funkcji
+------------------------
 
-So far, we have only been using the functions that come with Python, but
-it is also possible to add new functions. A *function
-definition* specifies the name of a new function and the
-sequence of statements that execute when the function is called. Once we
-define a function, we can reuse the function over and over throughout
-our program.
+Do tej pory korzystaliśmy tylko z funkcji dostarczanych wraz z Pythonem, ale 
+możliwe jest również dodawanie nowych funkcji. *Definicja funkcji* określa 
+nazwę nowej funkcji i kolejność poleceń, które wykonują się podczas jej 
+wywołania. Kiedy już zdefiniujemy jakąś funkcję, będziemy mogli używać jej 
+ile wlezie w całym programie.
 
 \index{function}
 \index{function definition}
 \index{definition!function}
 
-Here is an example:
+Oto krótki przykład:
 
 ~~~~ {.python}
 def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print('I sleep all night and I work all day.')
+    print("Jestem sobie drwal i równy chłop.")
+    print('Pracuję w dzień i śpię całą noc.')
 ~~~~
 
-`def` is a keyword that indicates that this is a function
-definition. The name of the function is `print_lyrics`. The rules for
-function names are the same as for variable names: letters, numbers and
-some punctuation marks are legal, but the first character can't be a
-number. You can't use a keyword as the name of a function, and you
-should avoid having a variable and a function with the same name.
+`def` to słowo kluczowe, które wskazuje, że jest to definicja funkcji. Nazwa 
+funkcji to `print_lyrics`. Zasady dotyczące nazw funkcji są takie same jak dla 
+nazw zmiennych: litery, cyfry i niektóre znaki interpunkcyjne są dozwolone, ale 
+pierwszy znak nie może być liczbą. Nie możesz używać słowa kluczowego jako nazwy 
+funkcji i powinieneś unikać posiadania zmiennej i funkcji o tej samej nazwie. 
 
 \index{def keyword}
 \index{keyword!def}
 \index{argument}
 
-The empty parentheses after the name indicate that this function doesn't
-take any arguments. Later we will build functions that take arguments as
-their inputs.
+Puste nawiasy po nazwie oznaczają, że ta funkcja nie przyjmuje żadnych 
+argumentów. Później zbudujemy funkcje, które przyjmują argumenty jako swoje 
+dane wejściowe.
 
 \index{parentheses!empty}
 \index{header}
@@ -349,29 +335,27 @@ their inputs.
 \index{indentation}
 \index{colon}
 
-The first line of the function definition is called the
-*header*; the rest is called the *body*.
-The header has to end with a colon and the body has to be indented. By
-convention, the indentation is always four spaces. The body can contain
-any number of statements.
+Pierwszy wiersz definicji funkcji nazywa się *nagłówkiem* funkcji; reszta nazywa 
+się *ciałem* funkcji. Nagłówek musi się kończyć dwukropkiem, a ciało musi być 
+wcięte. Zgodnie z konwencją, wcięcie jest zawsze czterema spacjami. Ciało może 
+zawierać dowolną liczbę instrukcji.
 
 \index{ellipses}
 
-If you type a function definition in interactive mode, the interpreter
-prints ellipses (*...*) to let you know that the definition isn't
-complete:
+Jeżeli wpiszesz definicję funkcji w trybie interaktywnym, interpreter wypisze 
+trzy kropki (*...*) aby dać Ci znać, że definicja nie jest kompletna:
 
 ~~~~ {.python}
 >>> def print_lyrics():
-...     print("I'm a lumberjack, and I'm okay.")
-...     print('I sleep all night and I work all day.')
+...     print("Jestem sobie drwal i równy chłop.")
+...     print('Pracuję w dzień i śpię całą noc.')
 ...
 ~~~~
 
-To end the function, you have to enter an empty line (this is not
-necessary in a script).
+Aby zakończyć funkcję, musisz wpisać pustą linię (w skrypcie nie jest to 
+konieczne).
 
-Defining a function creates a variable with the same name.
+Zdefiniowanie funkcji tworzy zmienną o tej samej nazwie.
 
 ~~~~ {.python}
 >>> print(print_lyrics)
@@ -380,24 +364,22 @@ Defining a function creates a variable with the same name.
 <class 'function'>
 ~~~~
 
-The value of `print_lyrics` is a *function object*, which
-has type "function".
+Wartość `print_lyrics` to *obiekt funkcji* o typie "function".
 
 \index{function object}
 \index{object!function}
 
-The syntax for calling the new function is the same as for built-in
-functions:
+Składnia wywoływania nowej funkcji jest taka sama jak dla funkcji wbudowanych:
 
 ~~~~ {.python}
 >>> print_lyrics()
-I'm a lumberjack, and I'm okay.
-I sleep all night and I work all day.
+Jestem sobie drwal i równy chłop.
+Pracuję w dzień i śpię całą noc.
 ~~~~
 
-Once you have defined a function, you can use it inside another
-function. For example, to repeat the previous refrain, we could write a
-function called `repeat_lyrics`:
+Po zdefiniowaniu funkcji, możemy jej używać wewnątrz innej funkcji. Na przykład, 
+aby powtórzyć poprzednią zwrotkę, możemy napisać funkcję o nazwie 
+`repeat_lyrics`:
 
 ~~~~ {.python}
 def repeat_lyrics():
@@ -405,99 +387,97 @@ def repeat_lyrics():
     print_lyrics()
 ~~~~
 
-And then call `repeat_lyrics`:
+Następnie wywołujemy `repeat_lyrics`:
 
 ~~~~ {.python}
 >>> repeat_lyrics()
-I'm a lumberjack, and I'm okay.
-I sleep all night and I work all day.
-I'm a lumberjack, and I'm okay.
-I sleep all night and I work all day.
+Jestem sobie drwal i równy chłop.
+Pracuję w dzień i śpię całą noc.
+Jestem sobie drwal i równy chłop.
+Pracuję w dzień i śpię całą noc.
 ~~~~
 
-But that's not really how the song goes.
+No ale tak naprawdę to nie tak idzie ta piosenka.
 
-Definitions and uses
---------------------
+Definiowanie i używanie
+-----------------------
 
 \index{function definition}
 
-Pulling together the code fragments from the previous section, the whole
-program looks like this:
+Składając razem fragmenty kodu z poprzedniej sekcji, cały program wygląda 
+następująco:
 
 \VerbatimInput{../code3/lyrics.py}
 
-This program contains two function definitions: `print_lyrics` and
-`repeat_lyrics`. Function definitions get executed just like other
-statements, but the effect is to create function objects. The statements
-inside the function do not get executed until the function is called,
-and the function definition generates no output.
+Program ten zawiera dwie definicje funkcji: `print_lyrics` i `repeat_lyrics`. 
+Definicje funkcji wykonywane są tak samo jak inne polecenia, ale efektem jest 
+tworzenie obiektów funkcji. Polecenia wewnątrz funkcji są wykonywane dopiero po 
+jej wywołaniu, a definicja funkcji nie generuje danych wyjściowych.
 
 \index{use before def}
 
-As you might expect, you have to create a function before you can
-execute it. In other words, the function definition has to be executed
-before the first time it is called.
+Jak pewnie się spodziewasz, musisz stworzyć funkcję, zanim będziesz mógł ją 
+wykonać. Innymi słowy, definicja funkcji musi zostać wykonana przed jej 
+pierwszym wywołaniem.
 
-**Exercise 2: Move the last line of this program to the top, so the
-function call appears before the definitions. Run the program and see
-what error message you get.**
+**Ćwiczenie 2: Przesuń ostatnią linię programu na samą górę, tak aby wywołanie 
+funkcji pojawiło się przed definicjami. Uruchom program i zobacz jaki otrzymasz 
+komunikat o błędzie.**
 
-**Exercise 3: Move the function call back to the bottom and move the
-definition of `print_lyrics` after the definition of `repeat_lyrics`.
-What happens when you run this program?**
+**Ćwiczenie 3: Przesuń wywołanie funkcji na sam dół i przenieś definicję 
+`print_lyrics` po definicji `repeat_lyrics`. Co się stanie, gdy uruchomisz
+taki program?**
 
-Flow of execution
------------------
+Przepływ sterowania
+-------------------
 
 \index{flow of execution}
 
-In order to ensure that a function is defined before its first use, you
-have to know the order in which statements are executed, which is called
-the *flow of execution*.
+Aby zapewnić, że funkcja zostanie zdefiniowana przed jej pierwszym użyciem, 
+musisz znać kolejność, w jakiej wykonywane są instrukcje - tę kolejność nazywa 
+się *przepływem sterowania*.
 
-Execution always begins at the first statement of the program.
-Statements are executed one at a time, in order from top to bottom.
+Wykonanie poleceń rozpoczyna się zawsze od pierwszej instrukcji programu. 
+Instrukcje są wykonywane pojedynczo, w kolejności od góry do dołu.
 
-Function *definitions* do not alter the flow of execution of the
-program, but remember that statements inside the function are not
-executed until the function is called.
+*Definicje* funkcji nie zmieniają przepływu sterowania programu, ale pamiętaj, 
+że instrukcje wewnątrz funkcji nie są wykonywane, dopóki funkcja nie zostanie 
+wywołana.
 
-A function call is like a detour in the flow of execution. Instead of
-going to the next statement, the flow jumps to the body of the function,
-executes all the statements there, and then comes back to pick up where
-it left off.
+Wywołanie funkcji można traktować w przepływie sterowania jak objazd. Zamiast 
+przejść do następnego polecenia, przepływ sterowania przeskakuje do ciała 
+funkcji, wykonuje tam wszystkie polecenia, a następnie wraca do miejsca, w 
+którym zostało on przerwany.
 
-That sounds simple enough, until you remember that one function can call
-another. While in the middle of one function, the program might have to
-execute the statements in another function. But while executing that new
-function, the program might have to execute yet another function!
+Brzmi to wystarczająco prosto, dopóki nie przypomnisz sobie, że jedna funkcja 
+może wywołać inną. Będąc w środku jednej funkcji, program może być zmuszony do 
+wykonania poleceń w innej funkcji. Ale podczas wykonywania tej nowej funkcji, 
+program może być zmuszony do wykonania jeszcze jednej funkcji!
 
-Fortunately, Python is good at keeping track of where it is, so each
-time a function completes, the program picks up where it left off in the
-function that called it. When it gets to the end of the program, it
-terminates.
+Na szczęście Python jest dobry w śledzeniu gdzie się znajduje, więc za każdym 
+razem, gdy funkcja się kończy, program wznawia działanie tam gdzie przerwał 
+działanie w funkcji, która ją wywołała. Kiedy dociera do końca programu, to 
+program się kończy.
 
-What's the moral of this sordid tale? When you read a program, you don't
-always want to read from top to bottom. Sometimes it makes more sense if
-you follow the flow of execution.
+Jaki jest morał tej strasznej opowieści? Kiedy czytasz kod programu, nie 
+zawsze chcesz go czytać od góry do dołu. Czasami większy sens ma podążanie 
+za jego przepływem sterowania.
 
-Parameters and arguments
-------------------------
+Parametry i argumenty
+---------------------
 
 \index{parameter}
 \index{function parameter}
 \index{argument}
 \index{function argument}
 
-Some of the built-in functions we have seen require arguments. For
-example, when you call `math.sin` you pass a number as an
-argument. Some functions take more than one argument:
-`math.pow` takes two, the base and the exponent.
+Niektóre z wbudowanych funkcji, które widzieliśmy, wymagają argumentów. Na 
+przykład, gdy wywołujesz `math.sin`, podajesz liczbę jako argument. Niektóre 
+funkcje przyjmują więcej niż jeden argument: `math.pow` przyjmuje dwa, tj. 
+podstawę i wykładnik.
 
-Inside the function, the arguments are assigned to variables called
-*parameters*. Here is an example of a user-defined
-function that takes an argument:
+Wewnątrz funkcji argumenty są przypisane do zmiennych nazywanych *parametrami*. 
+Oto przykład zdefiniowanej przez użytkownika funkcji, która przyjmuje argument:
 
 \index{parentheses!parameters in}
 
@@ -507,11 +487,10 @@ def print_twice(bruce):
     print(bruce)
 ~~~~
 
-This function assigns the argument to a parameter named
-`bruce`. When the function is called, it prints the value of
-the parameter (whatever it is) twice.
+Funkcja ta przypisuje argument do parametru o nazwie `bruce`. Gdy funkcja 
+zostanie wywołana, wypisuje wartość parametru (czymkolwiek on jest) dwukrotnie.
 
-This function works with any value that can be printed.
+Funkcja ta działa z dowolną wartością, która może być wypisana.
 
 ~~~~ {.python}
 >>> print_twice('Spam')
@@ -526,9 +505,9 @@ Spam
 3.141592653589793
 ~~~~
 
-The same rules of composition that apply to built-in functions also
-apply to user-defined functions, so we can use any kind of expression as
-an argument for `print_twice`:
+Te same zasady składania wyrażeń lub instrukcji, które odnoszą się do funkcji 
+wbudowanych, dotyczą także funkcji zdefiniowanych przez użytkownika, więc 
+możemy użyć dowolnego rodzaju wyrażenia jako argumentu w `print_twice`:
 
 \index{composition}
 
@@ -541,273 +520,276 @@ Spam Spam Spam Spam
 -1.0
 ~~~~
 
-The argument is evaluated before the function is called, so in the
-examples the expressions `'Spam '*4` and `math.cos(math.pi)`
-are only evaluated once.
+Argument jest ewaluowany przed wywołaniem funkcji, więc w powyższych przykładach 
+wyrażenia `'Spam '*4` i `math.cos(math.pi)` są ewaluowane tylko raz.
 
 \index{argument}
 
-You can also use a variable as an argument:
+Możesz również użyć zmiennej jako argumentu:
 
 ~~~~ {.python}
->>> michael = 'Eric, the half a bee.'
+>>> michael = 'Eryk Pół-Ćma.'
 >>> print_twice(michael)
-Eric, the half a bee.
-Eric, the half a bee.
+Eryk Pół-Ćma.
+Eryk Pół-Ćma.
 ~~~~
 
-The name of the variable we pass as an argument (`michael`)
-has nothing to do with the name of the parameter (`bruce`).
-It doesn't matter what the value was called back home (in the caller);
-here in `print_twice`, we call everybody `bruce`.
+Nazwa zmiennej, którą przekazujemy jako argument (`michael`) nie ma nic 
+wspólnego z nazwą parametru (`bruce`). Nie ma znaczenia jak na tę wartość 
+wołano w domu (w miejscu wywoływania); tutaj w `print_twice` wszystkich 
+nazywamy `bruce`.
 
-Fruitful functions and void functions
--------------------------------------
+Funkcje owocne i funkcje puste
+------------------------------
 
 \index{fruitful function}
 \index{void function}
 \index{function, fruitful}
 \index{function, void}
 
-Some of the functions we are using, such as the math functions, yield
-results; for lack of a better name, I call them *fruitful
-functions*. Other functions, like `print_twice`, perform an
-action but don't return a value. They are called *void
-functions*.
+Niektóre z używanych przez nas funkcji to np. funkcje matematyczne, które 
+zwracają wyniki; z braku lepszej nazwy, nazywam je *funkcjami owocnymi* 
+(ang. *fruitful functions*). Inne funkcje, takie jak `print_twice`, wykonują 
+jakąś akcję, ale nie zwracają wartości. Nazywa się je *funkcjami 
+niezwracającymi wartości*^[W niektórych językach programowania tego typu 
+funkcje nazywa się procedurami - przyp. tłum.] (ang. *void functions*).
 
-When you call a fruitful function, you almost always want to do
-something with the result; for example, you might assign it to a
-variable or use it as part of an expression:
+Kiedy wołasz owocną funkcję, prawie zawsze chcesz zrobić coś ze zwróconym 
+wynikiem. Na przykład, możesz przypisać go do zmiennej lub użyć go jako części 
+wyrażenia:
 
 ~~~~ {.python}
 x = math.cos(radians)
 golden = (math.sqrt(5) + 1) / 2
 ~~~~
 
-When you call a function in interactive mode, Python displays the
-result:
+Kiedy wywołujesz funkcję w trybie interaktywnym, Python wyświetla wynik:
 
 ~~~~ {.python}
 >>> math.sqrt(5)
 2.23606797749979
 ~~~~
 
-But in a script, if you call a fruitful function and do not store the
-result of the function in a variable, the return value vanishes into the
-mist!
+Ale w skrypcie, jeśli wywołasz owocną funkcję i nie zapiszesz wyniku funkcji 
+w zmiennej, to zwracana wartość zniknie we mgle!
 
 ~~~~ {.python}
 math.sqrt(5)
 ~~~~
 
-This script computes the square root of 5, but since it doesn't store
-the result in a variable or display the result, it is not very useful.
+Powyższy skrypt oblicza pierwiastek kwadratowy z 5, ale ponieważ nie zapisuje 
+wyniku w zmiennej ani nie wyświetla zwróconego wyniku, nie jest on zbyt 
+użyteczny.
 
 \index{interactive mode}
 \index{script mode}
 
-Void functions might display something on the screen or have some other
-effect, but they don't have a return value. If you try to assign the
-result to a variable, you get a special value called `None`.
+Funkcje niezwracające wartości mogą wyświetlać coś na ekranie lub mieć jakiś 
+inny efekt. W związku z tym, że nie zwracają żadnej wartości, jeśli spróbujesz 
+przypisać wynik takiej funkcji do zmiennej, otrzymasz specjalną wartość 
+o nazwie `None`.
 
 \index{None special value}
 \index{special value!None}
 
 ~~~~ {.python}
->>> result = print_twice('Bing')
-Bing
-Bing
+>>> result = print_twice('Ping')
+Ping
+Ping
 >>> print(result)
 None
 ~~~~
 
-The value `None` is not the same as the string "None". It
-is a special value that has its own type:
+Wartość `None` nie jest taka sama jak ciąg znaków "None". Jest to specjalna 
+wartość, która ma swój własny typ:
 
 ~~~~ {.python}
 >>> print(type(None))
 <class 'NoneType'>
 ~~~~
 
-To return a result from a function, we use the `return`
-statement in our function. For example, we could make a very simple
-function called `addtwo` that adds two numbers together and
-returns a result.
+Aby zwrócić wynik z funkcji, używamy w niej instrukcji `return`. Na przykład, 
+możemy napisać bardzo prostą funkcję o nazwie `addtwo`, która dodaje dwie 
+liczby i zwraca wynik dodawania.
 
 \VerbatimInput{../code3/addtwo.py}
 
-When this script executes, the `print` statement will print
-out "8" because the `addtwo` function was called with 3 and 5
-as arguments. Within the function, the parameters `a` and
-`b` were 3 and 5 respectively. The function computed the sum
-of the two numbers and placed it in the local function variable named
-`added`. Then it used the `return` statement to
-send the computed value back to the calling code as the function result,
-which was assigned to the variable `x` and printed out.
+Gdy powyższy skrypt zostanie wykonany, instrukcja `print` wypisze "8", 
+ponieważ funkcja `addtwo` została wywołana z argumentami 3 i 5. Wewnątrz 
+funkcji, parametry `a` i `b` miały wartości odpowiednio 3 i 5. Funkcja 
+obliczyła sumę tych dwóch liczb i umieściła ją w zmiennej lokalnej o nazwie 
+`added`. Następnie użyła instrukcji `return`, by wysłać wyliczoną wartość z 
+powrotem do kodu wywołującego funkcję, gdzie zwrócona wartość została 
+przypisana do zmiennej `x` i wypisany.
 
-Why functions?
---------------
+Dlaczego potrzebujemy funkcji?
+------------------------------
 
 \index{function, reasons for}
 
-It may not be clear why it is worth the trouble to divide a program into
-functions. There are several reasons:
+Na początku może nie być jasne dlaczego warto podzielić program na funkcje. 
+Jest kilka powodów:
 
--   Creating a new function gives you an opportunity to name a group of
-    statements, which makes your program easier to read, understand, and
-    debug.
+-   Stworzenie nowej funkcji daje Ci możliwość nazwania grupy poleceń, co czyni
+    Twój program łatwiejszym do odczytania, zrozumienia i debugowania.
 
--   Functions can make a program smaller by eliminating repetitive code.
-    Later, if you make a change, you only have to make it in one place.
+-   Funkcje mogą sprawić, że program będzie mniejszy poprzez wyeliminowanie
+    powtarzającego się kodu. Później, jeśli dokonasz zmiany kodu, będziesz
+    musiał zrobić to tylko w jednym miejscu.
 
--   Dividing a long program into functions allows you to debug the parts
-    one at a time and then assemble them into a working whole.
+-   Dzielenie długiego programu na funkcje pozwala na debugowanie po kolei jego
+    części, a następnie złożenie ich w działającą całość.
 
--   Well-designed functions are often useful for many programs. Once you
-    write and debug one, you can reuse it.
+-   Dobrze zaprojektowane funkcje są często przydatne w wielu programach. Kiedy
+    już napiszesz i zdebugujesz jedną z nich, możesz ją ponownie użyć w innym
+    programie.
 
-Throughout the rest of the book, often we will use a function definition
-to explain a concept. Part of the skill of creating and using functions
-is to have a function properly capture an idea such as "find the
-smallest value in a list of values". Later we will show you code that
-finds the smallest in a list of values and we will present it to you as
-a function named `min` which takes a list of values as its
-argument and returns the smallest value in the list.
+W pozostałej części książki często będziemy używać definicji funkcji, tak by
+wyjaśnić pewne pojęcie. Częścią umiejętności tworzenia i korzystania z funkcji
+jest posiadanie funkcji, która właściwie uchwyci cel taki jak "znajdź
+najmniejszą wartość na liście wartości". Później pokażemy Ci kod, który znajduje
+najmniejszą wartość na liście wartości i przedstawimy go jako funkcję o nazwie
+`min`, która przyjmuje listę wartości jako swój argument i zwraca najmniejszą
+wartość występującą na tej liście.
 
-Debugging
+Debugowanie
 ---------
 
 \index{debugging}
 
-If you are using a text editor to write your scripts, you might run into
-problems with spaces and tabs. The best way to avoid these problems is
-to use spaces exclusively (no tabs). Most text editors that know about
-Python do this by default, but some don't.
+Jeśli używasz edytora tekstu do pisania swoich skryptów, możesz mieć problemy
+ze spacjami i tabulacjami. Najlepszym sposobem na uniknięcie tych problemów
+jest użycie wyłącznie spacji (bez tabulacji). Większość edytorów tekstowych,
+które znają specyfikę Pythona, robi to domyślnie, ale niektóre nie.
 
 \index{whitespace}
 
-Tabs and spaces are usually invisible, which makes them hard to debug,
-so try to find an editor that manages indentation for you.
+Tabulacje i spacje są zazwyczaj niewidoczne, co utrudnia ich debugowanie, więc
+postaraj się znaleźć edytor, który zarządza wcięciami dla Ciebie.
 
-Also, don't forget to save your program before you run it. Some
-development environments do this automatically, but some don't. In that
-case, the program you are looking at in the text editor is not the same
-as the program you are running.
+Nie zapomnij również zapisać swojego programu, zanim go uruchomisz. Niektóre
+środowiska programistyczne robią to automatycznie, ale niektóre nie. W takim
+przypadku program, który oglądasz w edytorze tekstu, nie jest taki sam, jak
+program, który uruchamiasz.
+
+Debugowanie może trwać bardzo długo jeśli będziesz ciągle uruchamiać ten sam
+nieprawidłowy program!
 
 Debugging can take a long time if you keep running the same incorrect
 program over and over!
 
-Make sure that the code you are looking at is the code you are running.
-If you're not sure, put something like `print("hello")` at the beginning
-of the program and run it again. If you don't see `hello`, you're not
-running the right program!
+Upewnij się, że kod, na który patrzysz, jest tym samym kodem, który uruchamiasz.
+Jeśli nie jesteś pewien, umieść coś w rodzaju `print("hello")` na początku
+programu i uruchom go ponownie. Jeśli nie widzisz `hello`, to nie uruchamiasz
+właściwego programu!^[Ta technika debugowania nosi nazwę *caveman debugging*
+(z ang. debugowanie metodą jaskiniowca) lub *print debugging* i nie jest
+zalecana podczas profesjonalnego programowania, jednak dobrze sprawdza się
+podczas pierwszych kroków w nauce programowania - przyp. tłum.]
 
-Glossary
---------
+Słowniczek
+----------
 
-algorithm
-:   A general process for solving a category of problems.
+algorytm
+:   Ogólny proces rozwiązywania pewnej kategorii problemów.
 \index{algorithm}
 
 argument
-:   A value provided to a function when the function is called. This
-    value is assigned to the corresponding parameter in the function.
+:   Wartość przekazywana do funkcji w momencie jej wywołania. Wartość ta jest
+    przypisana do odpowiadającego jej parametru w funkcji.
 \index{argument}
 
-body
-:   The sequence of statements inside a function definition.
+ciało funkcji
+:   Sekwencja instrukcji wewnątrz definicji funkcji.
 \index{body}
 
-composition
-:   Using an expression as part of a larger expression, or a statement
-    as part of a larger statement.
+składanie
+:   Użycie wyrażenia jako części większego wyrażenia lub instrukcji jako części
+    większej instrukcji.
 \index{composition}
 
-deterministic
-:   Pertaining to a program that does the same thing each time it runs,
-    given the same inputs.
+deterministyczny
+:   Dotyczy programu, który robi to samo za każdym razem, gdy dostarczy mu się
+    te same dane wejściowe.
 \index{deterministic}
 
-dot notation
-:   The syntax for calling a function in another module by specifying
-    the module name followed by a dot (period) and the function name.
+notacja kropkowa
+:   Składnia do wywołania funkcji w innym module poprzez określenie nazwy
+    modułu, po której następuje kropka i nazwa funkcji.
 \index{dot notation}
 
-flow of execution
-:   The order in which statements are executed during a program run.
+przepływ sterowania
+:   Kolejność, w której polecenia są wykonywane podczas uruchamiania programu.
 \index{flow of execution}
 
-fruitful function
-:   A function that returns a value.
+funkcja owocna
+:   Funkcja zwracająca wartość.
 \index{fruitful function}
 
-function
-:   A named sequence of statements that performs some useful operation.
-    Functions may or may not take arguments and may or may not produce a
-    result.
+funkcja
+:   Nazwany ciąg instrukcji wykonujący jakąś użyteczną operację. Funkcje mogą,
+    ale nie muszą, przyjmować argumenty i mogą, ale nie muszą, zwracać wyniki.
 \index{function}
 
-function call
-:   A statement that executes a function. It consists of the function
-    name followed by an argument list.
+wywołanie funkcji
+:   Polecenie, które uruchamia funkcję. Składa się z nazwy funkcji, po której
+    następuje lista argumentów.
 \index{function call}
 
-function definition
-:   A statement that creates a new function, specifying its name,
-    parameters, and the statements it executes.
+definicja funkcji
+:   Instrukcja, która tworzy nową funkcję, określająca jej nazwę, parametry i
+    polecenia, które wykonuje.
 \index{function definition}
 
-function object
-:   A value created by a function definition. The name of the function
-    is a variable that refers to a function object.
+obiekt funkcji
+:   Wartość utworzona przez definicję funkcji. Nazwa funkcji jest zmienną, która
+    odnosi się do obiektu funkcji.
 \index{function definition}
 
-header
-:   The first line of a function definition.
+nagłówek funkcji
+:   Pierwszy wiersz definicji funkcji.
 \index{header}
 
-import statement
-:   A statement that reads a module file and creates a module object.
+instrukcja import
+:   Instrukcja, która wczytuje plik modułu i tworzy obiekt modułu.
 \index{import statement}
 \index{statement!import}
 
-module object
-:   A value created by an `import` statement that provides
-    access to the data and code defined in a module.
+mobiekt modułu
+:   Wartość utworzona przez instrukcję `import`, która zapewnia dostęp do danych
+    i kodu zdefiniowanego w module.
 \index{module}
 
-parameter
-:   A name used inside a function to refer to the value passed as an
-    argument.
+parametr
+:   Nazwa używana wewnątrz funkcji do odwoływania się do wartości przekazanej
+    jako argument.
 \index{parameter}
 
-pseudorandom
-:   Pertaining to a sequence of numbers that appear to be random, but
-    are generated by a deterministic program.
+pseudolosowy
+:   Odnosi się do ciągu liczb, które wydają się być losowe, ale są generowane
+    przez deterministyczny program.
 \index{pseudorandom}
 
-return value
-:   The result of a function. If a function call is used as an
-    expression, the return value is the value of the expression.
+wartość zwracana
+:   Wynik działania funkcji. Jeżeli wywołanie funkcji zostanie użyte jako
+    wyrażenie, to wartość zwracana jest wartością tego wyrażenia.
 \index{return value}
 
-void function
-:   A function that does not return a value.
+funkcja niezwracająca wartości
+:   Funkcja, które nie posiada zwracanej wartości.
 \index{void function}
 
-Exercises
+Ćwiczenia
 ---------
 
-**Exercise 4: What is the purpose of the "def" keyword in Python?**
+**Ćwiczenie 4: Jaki jest cel słowa kluczowego "def" w Pythonie?**
 
-a\) It is slang that means "the following code is really cool"\
-b) It indicates the start of a function\
-c) It indicates that the following indented section of code is to be
-stored for later\
-d) b and c are both true\
-e) None of the above
+a\) Jest to slang, który oznacza, że "następujący kod jest naprawdę fajny"\
+b) Oznacza początek funkcji\
+c) Oznacza, że następujące wcięcie sekcji kodu ma być przechowywane na później\
+d) Odpowiedzi b) i c) są poprawne\
+e) Żadne z powyższych
 
-**Exercise 5: What will the following Python program print out?**
+**Ćwiczenie 5: Co wypisze następujący program Pythona?**
 
 ~~~~ {.python}
 def fred():
@@ -827,53 +809,62 @@ c) ABC Zap jane\
 d) ABC Zap ABC\
 e) Zap Zap Zap
 
-**Exercise 6: Rewrite your pay computation with time-and-a-half for
-overtime and create a function called `computepay` which
-takes two parameters (`hours` and `rate`).**
+**Ćwiczenie 6: Przepisz ponownie swoje obliczenie wynagrodzenia z dodatkiem za
+nadgodziny i stwórz funkcję o nazwie `computepay`, która przyjmuje dwa
+parametry (`hours` i `rate`).**
 
 ~~~~
-Enter Hours: 45
-Enter Rate: 10
-Pay: 475.0
+Podaj liczbę godzin: 45
+Podaj stawkę godzinową: 10
+Wynagrodzenie: 475.0
 ~~~~
+
+**Ćwiczenie 7: Napisz ponownie program z poprzedniego rozdziału do wyliczania
+ocen za pomocą funkcji o nazwie `computegrade`, która przyjmuje jako parametr
+wartość i zwraca ocenę jako ciąg znaków.**
 
 **Exercise 7: Rewrite the grade program from the previous chapter using a
 function called `computegrade` that takes a score as its
 parameter and returns a grade as a string.**
 
 ~~~~
- Score   Grade
->= 0.9     A
->= 0.8     B
->= 0.7     C
->= 0.6     D
- < 0.6     F
+Wartość   Ocena
+>= 0.9     5,0
+>= 0.8     4,5
+>= 0.7     4,0
+>= 0.6     3,5
+>= 0.5     3,0
+ < 0.5     2,0
 ~~~~
 
 ~~~~
-Enter score: 0.95
-A
+Podaj wartość: 0.95
+5,0
 ~~~~
 
 ~~~~
-Enter score: perfect
-Bad score
+Podaj wartość: doskonała
+Niepoprawna wartość
 ~~~~
 
 ~~~~
-Enter score: 10.0
-Bad score
+Podaj wartość: 10.0
+Niepoprawna wartość
 ~~~~
 
 ~~~~
-Enter score: 0.75
-C
+Podaj wartość: 0.75
+4,0
 ~~~~
 
 ~~~~
-Enter score: 0.5
-F
+Podaj wartość: 0.5
+3,0
 ~~~~
 
-Run the program repeatedly to test the various different values for
-input.
+~~~~
+Podaj wartość: 0.46
+2,0
+~~~~
+
+Uruchom program kilkukrotnie, tak aby przetestować różne wartości.

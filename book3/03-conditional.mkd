@@ -608,7 +608,7 @@ Błąd, podaj wartość numeryczną
 ~~~~
 
 **Ćwiczenie 3: Napisz program, który poprosi użytkownika o wartość pomiędzy 0.0
-a 1.0. Jeśli wynik jest poza zakresem, wypisz komunikat o błędzie. Jeśli wynik
+a 1.0. Jeśli wartość jest poza zakresem, wypisz komunikat o błędzie. Jeśli wartość
 jest między 0.0 a 1.0, wypisz ocenę, korzystając z poniższej tabeli:**
 
 ~~~~
@@ -652,4 +652,4 @@ Podaj wartość: 0.46
 ~~~~
 
 Uruchom program wielokrotnie, jak pokazano powyżej, tak aby przetestować różne
-wartości dla wejścia.
+wartości.
