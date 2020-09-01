@@ -1,4 +1,4 @@
-name = input('Wprowadź plik: ')
+name = input('Podaj nazwę pliku: ')
 handle = open(name, 'r')
 counts = dict()
 

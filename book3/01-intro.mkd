@@ -42,7 +42,7 @@ zostało użyte najczęściej występujące słowo jest bardzo łatwe:
 
 ~~~~ {.python}
 python words.py
-Wprowadź plik: words.txt
+Podaj nazwę pliku: words.txt
 w 5
 ~~~~
 

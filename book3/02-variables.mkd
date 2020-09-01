@@ -40,7 +40,9 @@ powiedzieć.
 Nic dziwnego, że ciągi znaków należą do typu `str`, a liczby całkowite (ang.
 *integers*) należą do typu `int`. Mniej oczywiste jest, że liczby z kropką
 dziesiętną należą do typu `float`, ponieważ liczby te są reprezentowane w
-formacie nazywanym *liczbą zmiennoprzecinkową* (ang. *floating point*).
+formacie nazywanym *liczbą zmiennoprzecinkową*^[Mimo że nazwa wskazuje na
+używanie przecinka i tak też robimy na co dzień w polskim zapisie, podczas
+programowania używamy kropki - przyp. tłum.] (ang. *floating point*).
 
 \index{type}
 \index{string type}
@@ -641,7 +643,12 @@ są tutaj pogrubione, a zmienne wybrane przez programistę (`word` i `words`) ni
 są pogrubione. Wiele edytorów tekstu jest świadomych składni Pythona i inaczej
 pokoloruje zastrzeżone słowa, tak aby dać ci wskazówki jak oddzielić zmienne od
 zastrzeżonych słów. Po pewnym czasie zaczniesz biegle czytać kod Pythona i
-będziesz szybko określać co jest zmienną, a co słowem zastrzeżonym.
+będziesz szybko określać co jest zmienną, a co słowem zastrzeżonym.^[Dodatkowo
+warto zwrócić uwagę, że zgodnie z przyjętą konwencją programistyczną nazwy
+zmiennych oraz komentarze powinny być w języku angielskim. Podczas realizacji
+tego kursu nie ma to większego znaczenia, gdyż tutaj programy piszemy dla siebie,
+jednak warto o tym pamiętać w przyszłości podczas tworzenia bardziej
+zaawansowanych programów - przyp. tłum.]
 
 Debugowanie
 ---------
@@ -722,53 +729,47 @@ odpowiedź.
 Słowniczek
 ----------
 
-przypisanie
-:   Instrukcja, która przypisuje wartość zmiennej.
-\index{assignment}
-
-konkatencja
-:   Połączenie dwóch ciągów znaków.
-\index{concatenation}
-
-komentarz
-:   Informacja w programie, która jest przeznaczona dla innych programistów (lub
-    osób czytających kod źródłowy) i nie ma wpływu na wykonanie programu.
-\index{comment}
+ciąg znaków
+:   Typ danych `str`, który reprezentuje sekwencje znaków.
+\index{string}
 
 ewaluacja
 :   Uproszczenie wyrażenia poprzez wykonanie operacji w celu uzyskania
     pojedynczej wartości.
 \index{evaluate}
 
-wyrażenie
-:   Kombinacja zmiennych, operatorów i wartości, która reprezentuje pojedynczą
-    wartość wyniku. 
-\index{expression}
+instrukcja
+:   Część kodu, która reprezentuje polecenie lub akcję. Jak dotąd, polecenia,
+    które widzieliśmy, to przypisania i wyrażenie print.
+\index{statement}
 
-liczba zmiennoprzecinkowa
-:   Typ danych `float`, który reprezentuje liczby z częściami ułamkowymi.
-\index{floating-point}
+kolejność wykonywania działań
+:   Zbiór zasad regulujących kolejność ewaluacji wyrażeń obejmujących wiele
+    operatorów i operandów.
+\index{rules of precedence}
+\index{precedence}
+
+komentarz
+:   Informacja w programie, która jest przeznaczona dla innych programistów (lub
+    osób czytających kod źródłowy) i nie ma wpływu na wykonanie programu.
+\index{comment}
+
+konkatencja
+:   Połączenie dwóch ciągów znaków.
+\index{concatenation}
 
 liczba całkowita
 :   Typ danych `int`, który reprezentuje liczby całkowite.
 \index{integer}
 
-słowo kluczowe
-:   Zastrzeżone słowo, które jest używane przez kompilator/interpreter do
-    przetwarzania programu; nie można używać słów kluczowych np. takich jak `if`,
-    `def` i `while` jako nazw zmiennych. 
-\index{keyword}
+liczba zmiennoprzecinkowa
+:   Typ danych `float`, który reprezentuje liczby z częściami ułamkowymi.
+\index{floating-point}
 
 mnemonika
 :   Pomoc pamięciowa. Często nadajemy zmiennym nazwy mnemoniczne, tak aby pomóc
     nam zapamiętać co jest przechowywane w zmiennej. 
 \index{mnemonic}
-
-operator modulo
-:   Operator oznaczony znakiem procentu (`%`), który działa na liczbach
-    całkowitych i zwraca resztę gdy jedna liczba jest dzielona przez drugą. 
-\index{modulus operator}
-\index{operator!modulus}
 
 operand
 :   Jedna z wartości, na której działa operator.
@@ -779,20 +780,21 @@ operator
     dodawanie, mnożenie lub konkatenację ciągów.
 \index{operator}
 
-kolejność wykonywania działań
-:   Zbiór zasad regulujących kolejność ewaluacji wyrażeń obejmujących wiele
-    operatorów i operandów.
-\index{rules of precedence}
-\index{precedence}
+operator modulo
+:   Operator oznaczony znakiem procentu (`%`), który działa na liczbach
+    całkowitych i zwraca resztę gdy jedna liczba jest dzielona przez drugą. 
+\index{modulus operator}
+\index{operator!modulus}
 
-instrukcja
-:   Część kodu, która reprezentuje polecenie lub akcję. Jak dotąd, polecenia,
-    które widzieliśmy, to przypisania i wyrażenie print.
-\index{statement}
+przypisanie
+:   Instrukcja, która przypisuje wartość zmiennej.
+\index{assignment}
 
-ciąg znaków
-:   Typ danych `str`, który reprezentuje sekwencje znaków.
-\index{string}
+słowo kluczowe
+:   Zastrzeżone słowo, które jest używane przez kompilator/interpreter do
+    przetwarzania programu; nie można używać słów kluczowych np. takich jak `if`,
+    `def` i `while` jako nazw zmiennych. 
+\index{keyword}
 
 typ
 :   Kategoria wartości. Typy, które widzieliśmy do tej pory, to liczby całkowite
@@ -804,6 +806,11 @@ wartość
 :   Jedna z podstawowych jednostek danych, takich jak liczba lub ciąg znaków,
     którą operuje program.
 \index{value}
+
+wyrażenie
+:   Kombinacja zmiennych, operatorów i wartości, która reprezentuje pojedynczą
+    wartość wyniku. 
+\index{expression}
 
 zmienna
 :   Nazwa, która odnosi się do wartości.

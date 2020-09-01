@@ -15,7 +15,7 @@ Polish translation progress
 | `software-mac.php`     | ☒    |      |      |       |         |          | ☒      |            | ☐    |
 | `01-intro.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `02-variables.mkd`     | ☒    |      | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `03-conditional.mkd`   | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `04-functions.mkd`     | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `05-iterations.mkd`    | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `06-strings.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
