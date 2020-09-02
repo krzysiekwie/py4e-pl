@@ -702,52 +702,28 @@ ciało funkcji
 :   Sekwencja instrukcji wewnątrz definicji funkcji.
 \index{body}
 
-składanie
-:   Użycie wyrażenia jako części większego wyrażenia lub instrukcji jako części
-    większej instrukcji.
-\index{composition}
+definicja funkcji
+:   Instrukcja, która tworzy nową funkcję, określająca jej nazwę, parametry i
+    polecenia, które wykonuje.
+\index{function definition}
 
 deterministyczny
 :   Dotyczy programu, który robi to samo za każdym razem, gdy dostarczy mu się
     te same dane wejściowe.
 \index{deterministic}
 
-notacja kropkowa
-:   Składnia do wywołania funkcji w innym module poprzez określenie nazwy
-    modułu, po której następuje kropka i nazwa funkcji.
-\index{dot notation}
-
-przepływ sterowania
-:   Kolejność, w której polecenia są wykonywane podczas uruchamiania programu.
-\index{flow of execution}
-
-funkcja owocna
-:   Funkcja zwracająca wartość.
-\index{fruitful function}
-
 funkcja
 :   Nazwany ciąg instrukcji wykonujący jakąś użyteczną operację. Funkcje mogą,
     ale nie muszą, przyjmować argumenty i mogą, ale nie muszą, zwracać wyniki.
 \index{function}
 
-wywołanie funkcji
-:   Polecenie, które uruchamia funkcję. Składa się z nazwy funkcji, po której
-    następuje lista argumentów.
-\index{function call}
+funkcja niezwracająca wartości
+:   Funkcja, które nie posiada zwracanej wartości.
+\index{void function}
 
-definicja funkcji
-:   Instrukcja, która tworzy nową funkcję, określająca jej nazwę, parametry i
-    polecenia, które wykonuje.
-\index{function definition}
-
-obiekt funkcji
-:   Wartość utworzona przez definicję funkcji. Nazwa funkcji jest zmienną, która
-    odnosi się do obiektu funkcji.
-\index{function definition}
-
-nagłówek funkcji
-:   Pierwszy wiersz definicji funkcji.
-\index{header}
+funkcja owocna
+:   Funkcja zwracająca wartość.
+\index{fruitful function}
 
 instrukcja import
 :   Instrukcja, która wczytuje plik modułu i tworzy obiekt modułu.
@@ -759,24 +735,48 @@ mobiekt modułu
     i kodu zdefiniowanego w module.
 \index{module}
 
+nagłówek funkcji
+:   Pierwszy wiersz definicji funkcji.
+\index{header}
+
+notacja kropkowa
+:   Składnia do wywołania funkcji w innym module poprzez określenie nazwy
+    modułu, po której następuje kropka i nazwa funkcji.
+\index{dot notation}
+
+obiekt funkcji
+:   Wartość utworzona przez definicję funkcji. Nazwa funkcji jest zmienną, która
+    odnosi się do obiektu funkcji.
+\index{function definition}
+
 parametr
 :   Nazwa używana wewnątrz funkcji do odwoływania się do wartości przekazanej
     jako argument.
 \index{parameter}
+
+przepływ sterowania
+:   Kolejność, w której polecenia są wykonywane podczas uruchamiania programu.
+\index{flow of execution}
 
 pseudolosowy
 :   Odnosi się do ciągu liczb, które wydają się być losowe, ale są generowane
     przez deterministyczny program.
 \index{pseudorandom}
 
+składanie
+:   Użycie wyrażenia jako części większego wyrażenia lub instrukcji jako części
+    większej instrukcji.
+\index{composition}
+
 wartość zwracana
 :   Wynik działania funkcji. Jeżeli wywołanie funkcji zostanie użyte jako
     wyrażenie, to wartość zwracana jest wartością tego wyrażenia.
 \index{return value}
 
-funkcja niezwracająca wartości
-:   Funkcja, które nie posiada zwracanej wartości.
-\index{void function}
+wywołanie funkcji
+:   Polecenie, które uruchamia funkcję. Składa się z nazwy funkcji, po której
+    następuje lista argumentów.
+\index{function call}
 
 Ćwiczenia
 ---------
