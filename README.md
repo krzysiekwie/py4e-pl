@@ -18,7 +18,7 @@ Polish translation progress
 | `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `04-functions.mkd`     | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `05-iterations.mkd`    | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `06-strings.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `06-strings.mkd`       | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `07-files.mkd`         | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `08-lists.mkd`         | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `09-dictionaries.mkd`  | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |

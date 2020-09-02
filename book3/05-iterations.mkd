@@ -212,6 +212,7 @@ for itervar in [3, 41, 12, 9, 74, 15]:
 print('Ile:', count)
 ~~~~
 
+Powyższy program demonstruje inny schemat obliczeń zwany *licznikiem*.
 Przed rozpoczęciem pętli ustawiamy zmienną `count` na zero, a następnie piszemy pętlę `for`, tak aby przebiegała przez listę liczb. Nasza *zmienna sterująca* ma nazwę `itervar` i choć nie używamy `itervar` w pętli, to kontroluje ona pętlę i powoduje, że ciało pętli jest wykonywane raz dla każdej z wartości występującej na liście.
 
 W ciele pętli dodajemy 1 do bieżącej wartości `count` dla każdej z wartości z listy. Podczas wykonywania pętli, wartość `count` jest liczbą elementów, które widzieliśmy "do tej pory".

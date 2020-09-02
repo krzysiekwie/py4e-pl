@@ -33,8 +33,7 @@
 
 ## Chapter 06
 
-* [`...`](#)
-
+* [05-02 - `copytildone2.py`](https://trinket.io/python/5542e4b850)
 
 ## Chapter 07
 
