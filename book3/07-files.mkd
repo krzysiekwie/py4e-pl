@@ -1,55 +1,33 @@
-Files
+Pliki
 =====
 
 \index{file}
 \index{type!file}
 
-Persistence
------------
+Pamięć nieulotna
+----------------
 
 \index{persistence}
 \index{secondary memory}
 
-So far, we have learned how to write programs and communicate our
-intentions to the *Central Processing Unit* using
-conditional execution, functions, and iterations. We have learned how to
-create and use data structures in the *Main Memory*. The
-CPU and memory are where our software works and runs. It is where all of
-the "thinking" happens.
+Do tej pory uczyliśmy się pisać programy i komunikować *procesorowi* nasze zamiary za pomocą instrukcji warunkowych, funkcji i iteracji. Nauczyliśmy się jak tworzyć i wykorzystywać struktury danych w *pamięci głównej*. Procesor i pamięć główna są miejscem, w którym działa i uruchamia się nasze oprogramowanie. To właśnie tam odbywa się całe "myślenie".
 
-But if you recall from our hardware architecture discussions, once the
-power is turned off, anything stored in either the CPU or main memory is
-erased. So up to now, our programs have just been transient fun
-exercises to learn Python.
+Ale jeśli przypomnisz sobie naszą dyskusję na temat architektury sprzętowej, to po wyłączeniu zasilania, wszystko, co jest zapisane na procesorze lub w pamięci głównej, zostanie usunięte. Tak więc do tej pory nasze programy były tylko przejściowymi, zabawowymi ćwiczeniami do nauki Pythona.
 
-![Secondary Memory](height=2.5in@../images/arch)
+![Pamięć pomocnicza](height=2.5in@../images/arch)
 
-In this chapter, we start to work with *Secondary Memory*
-(or files). Secondary memory is not erased when the power is turned
-off. Or in the case of a USB flash drive, the data we write from our
-programs can be removed from the system and transported to another
-system.
+W tym rozdziale rozpoczynamy pracę z *pamięcią pomocniczą* (lub plikami). Pamięć pomocnicza nie jest czyszczona po wyłączeniu zasilania. W przypadku pendrive'a, dane, które zapisujemy z naszych programów, mogą zostać usunięte z systemu i przeniesione do innego systemu.
 
-We will primarily focus on reading and writing text files such as those
-we create in a text editor. Later we will see how to work with database
-files which are binary files, specifically designed to be read and
-written through database software.
+Skupimy się przede wszystkim na odczycie i zapisie plików tekstowych, takich jak te, które tworzymy w edytorze tekstu. Później zobaczymy jak pracować z plikami bazodanowymi, które są plikami binarnymi, przeznaczonymi specjalnie do odczytu i zapisu przez oprogramowanie bazodanowe.
 
-Opening files
+Otwieranie plików
 -------------
 
 \index{file!open}
 \index{open function}
 \index{function!open}
 
-When we want to read or write a file (say on your hard drive), we first
-must *open* the file. Opening the file communicates with
-your operating system, which knows where the data for each file is
-stored. When you open a file, you are asking the operating system to
-find the file by name and make sure the file exists. In this example, we
-open the file *mbox.txt*, which should be stored in the same
-folder that you are in when you start Python. You can download this file
-from [www.py4e.com/code3/mbox.txt](http://www.py4e.com/code3/mbox.txt)
+Kiedy chcemy odczytać lub zapisać plik (np. na dysku twardym), musimy najpierw *otworzyć* plik. Otwarcie pliku komunikuje się z Twoim systemem operacyjnym, który wie, gdzie przechowywane są dane dla każdego pliku. Gdy otwierasz plik, prosisz system operacyjny o znalezienie go po nazwie i o upewnienie się, że ten plik istnieje. W poniższym przykładzie otwieramy plik *mbox.txt*, który powinien być przechowywany w tym samym katalogu, w którym znajdujesz się po uruchomieniu Pythona. Możesz pobrać ten plik z [pl.py4e.com/code3/mbox.txt](https://pl.py4e.com/code3/mbox.txt).
 
 ~~~~ {.python}
 >>> fhand = open('mbox.txt')
@@ -59,16 +37,11 @@ from [www.py4e.com/code3/mbox.txt](http://www.py4e.com/code3/mbox.txt)
 
 \index{file handle}
 
-If the `open` is successful, the operating system returns us
-a *file handle*. The file handle is not the actual data
-contained in the file, but instead it is a "handle" that we can use to
-read the data. You are given a handle if the requested file exists and
-you have the proper permissions to read the file.
+Jeśli funkcja `open` się powiedzie, system operacyjny zwróci nam  *uchwyt pliku*. Uchwyt pliku nie jest rzeczywistymi danymi zawartymi w tym pliku, lecz "uchwytem", który możemy użyć do odczytania danych. Otrzymujesz uchwyt, jeśli żądany plik istnieje i masz odpowiednie uprawnienia do jego odczytania.
 
 ![A File Handle](height=2.0in@../images/handle)
 
-If the file does not exist, `open` will fail with a traceback
-and you will not get a handle to access the contents of the file:
+Jeśli plik nie istnieje, `open` się nie powiedzie, a Ty nie będziesz mógł uzyskać dostępu do jego zawartości:
 
 ~~~~ {.python}
 >>> fhand = open('stuff.txt')
@@ -77,17 +50,12 @@ File "<stdin>", line 1, in <module>
 FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
 ~~~~
 
-Later we will use `try` and `except` to deal more
-gracefully with the situation where we attempt to open a file that does
-not exist.
+Później użyjemy `try` i `except`, tak aby zgrabniej poradzić sobie z sytuacją, w której próbujemy otworzyć nieistniejący plik.
 
-Text files and lines
---------------------
+Pliki tekstowe i linie
+----------------------
 
-A text file can be thought of as a sequence of lines, much like a Python
-string can be thought of as a sequence of characters. For example, this
-is a sample of a text file which records mail activity from various
-individuals in an open source project development team:
+Plik tekstowy może być uważany za sekwencję linii, podobnie jak ciąg znaków w Pythona może być uważany za sekwencję liter, liczb i symboli. Na przykład, poniżej znajduje się fragment pliku tekstowego, który rejestruje aktywność pocztową różnych osób w zespole rozwijającym projekt otwartego oprogramowania:
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
@@ -99,40 +67,30 @@ Subject: [sakai] svn commit: r39772 - content/branches/
 Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
 ...
 ~~~~
-The entire file of mail interactions is available from
 
-[www.py4e.com/code3/mbox.txt](http://www.py4e.com/code3/mbox.txt)
+Cały plik interakcji mailowych jest dostępny pod adresem:
 
-and a shortened version of the file is available from
+[pl.py4e.com/code3/mbox.txt](https://pl.py4e.com/code3/mbox.txt)
 
-[www.py4e.com/code3/mbox-short.txt](http://www.py4e.com/code3/mbox-short.txt)
+a skrócona wersja pliku jest dostępna pod adresem:
 
-These files are in a standard format for a file containing multiple mail
-messages. The lines which start with "From " separate the messages and
-the lines which start with "From:" are part of the messages. For more
-information about the mbox format, see
-<https://en.wikipedia.org/wiki/Mbox>.
+[pl.py4e.com/code3/mbox-short.txt](https://pl.py4e.com/code3/mbox-short.txt)
 
-To break the file into lines, there is a special character that
-represents the "end of the line" called the *newline*
-character.
+Pliki te są w standardowym formacie pliku zawierającego wiele wiadomości pocztowych. Wiersze rozpoczynające się od "From " oddzielają wiadomości, a wiersze rozpoczynające się od "From:" są częścią wiadomości. Więcej informacji na temat formatu mbox można znaleźć na stronie <https://pl.wikipedia.org/wiki/Mbox>.
+
+Aby podzielić plik na linie, istnieje specjalny znak, który reprezentuje "koniec linii", zwany nomen omen znakiem *końca linii*.
 
 \index{newline}
 
-In Python, we represent the *newline* character as a
-backslash-n in string constants. Even though this looks like two
-characters, it is actually a single character. When we look at the
-variable by entering "stuff" in the interpreter, it shows us the `\n` in
-the string, but when we use `print` to show the string, we
-see the string broken into two lines by the newline character.
+W ciągach znaków Pythona znak *końca linii* reprezentujemy jako lewy ukośnik-n. Nawet jeśli wygląda to jak dwa znaki, to w rzeczywistości jest to pojedynczy znak. W poniższym przykładzie, gdy patrzymy na zmienną "stuff", wpisując ją w interpreterze, pokazuje nam ona `\n` w ciągu znaków, ale gdy używamy `print` do wyświetlenia ciągu znaków, widzimy go rozbitego na dwie linie przez znak końca linii.
 
 ~~~~ {.python}
->>> stuff = 'Hello\nWorld!'
+>>> stuff = 'Witaj\nświecie!'
 >>> stuff
-'Hello\nWorld!'
+'Witaj\nświecie!'
 >>> print(stuff)
-Hello
-World!
+Witaj
+świecie!
 >>> stuff = 'X\nY'
 >>> print(stuff)
 X
@@ -141,58 +99,34 @@ Y
 3
 ~~~~
 
-You can also see that the length of the string `X\nY` is *three*
-characters because the newline character is a single character.
+Widzimy też, że długość ciągu znaków `X\nY` to *trzy* znaki, ponieważ znak końca linii jest pojedynczym znakiem.
 
-So when we look at the lines in a file, we need to *imagine* that there
-is a special invisible character called the newline at the end of each
-line that marks the end of the line.
+Kiedy więc patrzymy na linie w pliku, musimy sobie *wyobrazić*, że na końcu każdej linii znajduje się specjalny niewidoczny znak zwany znakiem końca linii.
 
-So the newline character separates the characters in the file into
-lines.
+Tak więc znak końca linii dzieli znaki w pliku na linie.
 
-Reading files
--------------
+Czytanie plików
+---------------
 
 \index{file!reading}
 \index{counter}
 
-While the *file handle* does not contain the data for the
-file, it is quite easy to construct a `for` loop to read
-through and count each of the lines in a file:
+Podczas gdy *uchwyt pliku* nie zawiera danych pliku, to całkiem łatwo jest skonstruować pętlę `for` do jego odczytu i zliczyć linie występujące w pliku:
 
 \VerbatimInput{../code3/open.py}
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-We can use the file handle as the sequence in our `for` loop.
-Our `for` loop simply counts the number of lines in the file
-and prints them out. The rough translation of the `for` loop
-into English is, "for each line in the file represented by the file
-handle, add one to the `count` variable."
+Możemy użyć uchwytu pliku jako sekwencji w naszej pętli `for`. Nasza pętla `for` po prostu zlicza linie w pliku i wyświetla tę wartość. Przetłumczanie treści pętli `for` na polski jest z grubsza następujące: "dla każdej linii w pliku reprezentowanej przez uchwyt pliku, dodaj jeden do zmiennej `count`".
 
-The reason that the `open` function does not read the entire
-file is that the file might be quite large with many gigabytes of data.
-The `open` statement takes the same amount of time regardless
-of the size of the file. The `for` loop actually causes the
-data to be read from the file.
+Powodem, dla którego funkcja `open` nie odczytuje całego pliku jest to, że plik może być dość duży i zawierać wiele gigabajtów danych. Instrukcja `open` zajmuje zawsze tyle samo czasu, niezależnie od wielkości pliku. Pętla `for` w rzeczywistości powoduje, że dane są odczytywane z pliku.
 
-When the file is read using a `for` loop in this manner,
-Python takes care of splitting the data in the file into separate lines
-using the newline character. Python reads each line through the newline
-and includes the newline as the last character in the `line`
-variable for each iteration of the `for` loop.
+Gdy plik jest w ten sposób odczytywany przy użyciu pętli `for`, Python zajmuje się podziałem danych z pliku na osobne linie przy użyciu znaku końca linii. Python w każdej iteracji pętli `for` czyta każdą linię od początku aż do wystąpienia znaku końca linii i dołącza go jako ostatni znak w zmiennej `line`.
 
-Because the `for` loop reads the data one line at a time, it
-can efficiently read and count the lines in very large files without
-running out of main memory to store the data. The above program can
-count the lines in any size file using very little memory since each
-line is read, counted, and then discarded.
+Ponieważ pętla `for` odczytuje z danych jeden wiersz na raz, może ona efektywnie odczytywać i zliczać wiersze w bardzo dużych plikach, bez obawy, że w pamięci głównej skończy się miejsce na dane. Powyższy program przy użyciu bardzo małej ilości pamięci może zliczać linie w plikach o dowolnym rozmiarze, ponieważ każda linia jest odczytywana, zliczana, a następnie porzucana.
 
-If you know the file is relatively small compared to the size of your
-main memory, you can read the whole file into one string using the
-`read` method on the file handle.
+Jeśli wiesz, że plik jest stosunkowo mały w porównaniu z rozmiarem Twojej pamięci głównej, możesz odczytać cały plik za jednym zamachem, używając metody `read` na uchwycie pliku.
 
 ~~~~ {.python}
 >>> fhand = open('mbox-short.txt')
@@ -203,16 +137,9 @@ main memory, you can read the whole file into one string using the
 From stephen.marquar
 ~~~~
 
-In this example, the entire contents (all 94,626 characters) of the file
-*mbox-short.txt* are read directly into the variable
-`inp`. We use string slicing to print out the first 20
-characters of the string data stored in `inp`.
+W powyższym przykładzie, cała zawartość (wszystkie 94 626 znaków) pliku *mbox-short.txt* jest wczytywana bezpośrednio do zmiennej `inp`. Do wyświetlenia pierwszych 20 znaków danych z ciągu znaków przechowywanych w `inp` używamy operacji wycinana podciągów.
 
-
-When the file is read in this manner, all the characters including all
-of the lines and newline characters are one big string in the variable
-`inp`. It is a good idea to store the output of `read` as a variable
-because each call to `read` exhausts the resource:
+Gdy plik zostanie odczytany w ten sposób, to wszystkie znaki, łącznie ze wszystkimi liniami i znakami końca linii, są jednym dużym ciągiem znaków znajdującym się w zmiennej `inp`. Dobrym pomysłem jest przechowywanie wyniku funkcji `read` jako zmiennej, ponieważ każde wywołanie `read` wyczerpuje zasób:
 
 ~~~~ {.python}
 >>> fhand = open('mbox-short.txt')
@@ -222,13 +149,10 @@ because each call to `read` exhausts the resource:
 0
 ~~~~
 
-Remember that this form of the `open` function should only be used
-if the file data will fit comfortably in the main memory of your computer.
-If the file is too large to fit in main memory, you should write your
-program to read the file in chunks using a `for` or `while` loop.
+Pamiętaj, że ta forma funkcji `open` powinna być używana tylko wtedy, gdy dane pliku zmieszczą się spokojnie w pamięci głównej komputera. Jeśli plik jest zbyt duży, by zmieścić się w pamięci głównej, powinieneś napisać swój program tak, aby odczytać plik w kawałkach używając pętli `for` lub `while`.
 
-Searching through a file
-------------------------
+Przeszukiwanie pliku
+--------------------
 
 When you are searching through data in a file, it is a very common
 pattern to read through a file, ignoring most of the lines and only
