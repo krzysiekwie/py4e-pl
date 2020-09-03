@@ -37,8 +37,13 @@
 
 ## Chapter 07
 
-* [`...`](#)
-
+* [07-01 - `open.py`](https://trinket.io/python/b8ee1dd29e)
+* [07-02 - `search1.py`](https://trinket.io/python/0622e89f8a)
+* [07-03 - `search2.py`](https://trinket.io/python/4b0494bf3b)
+* [07-04 - `search3.py`](https://trinket.io/python/58e4123133)
+* [07-05 - `search4.py`](https://trinket.io/python/c355db2974)
+* [07-06 - `search6.py`](https://trinket.io/python/27dbf3f70a)
+* [07-07 - `search7.py`](https://trinket.io/python/26d342cc0e)
 
 ## Chapter 08
 
