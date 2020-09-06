@@ -1,9 +1,9 @@
 numlist = list()
 while (True):
-    inp = input('Enter a number: ')
-    if inp == 'done': break
+    inp = input('Wprowadź liczbę: ')
+    if inp == 'gotowe': break
     value = float(inp)
     numlist.append(value)
 
 average = sum(numlist) / len(numlist)
-print('Average:', average)
+print('Średnia:', average)
