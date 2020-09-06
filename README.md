@@ -30,6 +30,7 @@ Polish translation progress
 | `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `16-viz.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
+| "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | links to code repo...  |      |      |       |      |         |          |         |            |       |
 
 URLs to translated trinkets are in `trinket3-pl-urls.md`.

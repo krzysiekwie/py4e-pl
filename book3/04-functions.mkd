@@ -539,8 +539,8 @@ wspólnego z nazwą parametru (`bruce`). Nie ma znaczenia jak na tę wartość
 wołano w domu (w miejscu wywoływania); tutaj w `print_twice` wszystkich 
 nazywamy `bruce`.
 
-Funkcje owocne i funkcje puste
-------------------------------
+Funkcje owocne i funkcje niezwracające wartości
+-----------------------------------------------
 
 \index{fruitful function}
 \index{void function}
