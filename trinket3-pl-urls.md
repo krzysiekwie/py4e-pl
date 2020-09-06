@@ -47,8 +47,34 @@
 
 ## Chapter 08
 
-* [`...`](#)
-
+* [08-01 - print cheeses](https://trinket.io/python/13fff05553?outputOnly=true&runOption=console)
+* [08-02 - print numbers](https://trinket.io/python/19aecac610?outputOnly=true&runOption=console)
+* [08-03 - in operator](https://trinket.io/python/fdb93c6bfb?outputOnly=true&runOption=console)
+* [08-04 - plus operator](https://trinket.io/python/ba6c88dba7?outputOnly=true&runOption=console)
+* [08-05 - asterisk operator](https://trinket.io/python/f597601fb6?outputOnly=true&runOption=console)
+* [08-06 - list slicing](https://trinket.io/python/b2014a32f1?outputOnly=true&runOption=console)
+* [08-07 - update slice](https://trinket.io/python/62da1bae2f?outputOnly=true&runOption=console)
+* [08-08 - append](https://trinket.io/python/834a920963?outputOnly=true&runOption=console)
+* [08-09 - extend](https://trinket.io/python/494aa70742?outputOnly=true&runOption=console)
+* [08-10 - sort](https://trinket.io/python/6a83d20802?outputOnly=true&runOption=console)
+* [08-11 - pop](https://trinket.io/python/260fdd9eb3?outputOnly=true&runOption=console)
+* [08-12 - del](https://trinket.io/python/5bcc18eb36?outputOnly=true&runOption=console)
+* [08-13 - remove](https://trinket.io/python/9ce7754066?outputOnly=true&runOption=console)
+* [08-14 - del slicing](https://trinket.io/python/5ff23697af?outputOnly=true&runOption=console)
+* [08-15 - list functions](https://trinket.io/python/217299cdaa?outputOnly=true&runOption=console)
+* [08-16 - `avenum.py`](https://trinket.io/python/6da9f4a37b)
+* [08-17 - `avelist.py`](https://trinket.io/python/bcb3dde90f)
+* [08-18 - string to list](https://trinket.io/python/d47de33a81?outputOnly=true&runOption=console)
+* [08-19 - split](https://trinket.io/python/07ba123ca9?outputOnly=true&runOption=console)
+* [08-20 - delimiter](https://trinket.io/python/7491bd5e3d?outputOnly=true&runOption=console)
+* [08-21 - join](https://trinket.io/python/d8331a7311?outputOnly=true&runOption=console)
+* [08-22 - `search5.py`](https://trinket.io/python/6c073bf3f9)
+* [08-23 - strings with is operator](https://trinket.io/python/7bef2caf3c?outputOnly=true&runOption=console)
+* [08-24 - lists with is operator](https://trinket.io/python/0ce9fb72ea?outputOnly=true&runOption=console)
+* [08-25 - aliasing](https://trinket.io/python/c3e44b1dc5?outputOnly=true&runOption=console)
+* [08-26 - del in function](https://trinket.io/python/9bb794a62f?outputOnly=true&runOption=console)
+* [08-27 - append and plus operator](https://trinket.io/python/559728b6f6?outputOnly=true&runOption=console)
+* [08-28 - tail](https://trinket.io/python/167e430d8d?outputOnly=true&runOption=console)
 
 ## Chapter 09
 
