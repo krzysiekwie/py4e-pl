@@ -78,8 +78,11 @@
 
 ## Chapter 09
 
-* [`...`](#)
-
+* [09-01 - dict](https://trinket.io/python/219fb64569?outputOnly=true&runOption=console)
+* [09-02 - dict looping](https://trinket.io/python/b1f9a43092?outputOnly=true&runOption=console)
+* [09-03 - dict get](https://trinket.io/python/f3d85d201a?outputOnly=true&runOption=console)
+* [09-04 - `count1.py`](https://trinket.io/python/990c131728)
+* [09-05 - `count2.py`](https://trinket.io/python/3d36f9c5c0)
 
 ## Chapter 10
 

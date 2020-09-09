@@ -1,8 +1,8 @@
-fname = input('Enter the file name: ')
+fname = input('Podaj nazwę pliku: ')
 try:
     fhand = open(fname)
 except:
-    print('File cannot be opened:', fname)
+    print('Nie można otworzyć pliku:', fname)
     exit()
 
 counts = dict()
