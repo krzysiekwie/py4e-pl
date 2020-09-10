@@ -82,7 +82,7 @@
 * [09-02 - dict looping](https://trinket.io/python/b1f9a43092?outputOnly=true&runOption=console)
 * [09-03 - dict get](https://trinket.io/python/f3d85d201a?outputOnly=true&runOption=console)
 * [09-04 - `count1.py`](https://trinket.io/python/990c131728)
-* [09-05 - `count2.py`](https://trinket.io/python/3d36f9c5c0)
+* [09-05 - `count2.py` (English, real Python 3)](https://trinket.io/python3/f2908054b2) [not working JS](https://trinket.io/python/3d36f9c5c0)
 
 ## Chapter 10
 
@@ -95,7 +95,7 @@
 * [10-07 - tuple assignment](https://trinket.io/python/d4844faa15?outputOnly=true&runOption=console)
 * [10-08 - alt tuple assignment](https://trinket.io/python/2a2f2cb70c?outputOnly=true&runOption=console)
 * [10-09 - items](https://trinket.io/python/a6e4a261d7?outputOnly=true&runOption=console)
-* [10-10 - `count3.py`](https://trinket.io/python/9f7d845be4)
+* [10-10 - `count3.py` (English, real Python 3)](https://trinket.io/python3/f499632382) [not working JS](https://trinket.io/python/9f7d845be4)
 
 ## Chapter 11
 
