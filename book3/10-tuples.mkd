@@ -1,37 +1,27 @@
-
-Tuples
+Krotki
 ======
 
-Tuples are immutable
+Krotki są niezmienne
 --------------------
 
 \index{tuple}
 \index{type!tuple}
 \index{sequence}
 
-A tuple^[Fun fact: The word "tuple" comes from the names given to sequences
-of numbers of varying lengths: single, double, triple, quadruple,
-quintuple, sextuple, septuple, etc.] is a sequence of values much like a list. The values stored
-in a tuple can be any type, and they are indexed by integers. The
-important difference is that tuples are *immutable*.
-Tuples are also *comparable* and
-*hashable* so we can sort lists of them and use tuples as
-key values in Python dictionaries.
+Krotka^[Ciekawostka: Angielskie tłumaczenie słowa "krotka", czyli *tuple*, pochodzi od nazw nadawanych sekwencjom liczb o różnej długości: *single, double, triple, quadruple, quintuple, sextuple, septuple* itd.] jest sekwencją wartości, podobnie jak lista. Wartości zapisane w krotce mogą być dowolnego typu i są indeksowane liczbami całkowitymi. Ważną różnicą jest to, że krotki są *niezmienne*. Krotki są również *porównywalne* i *haszowalne*, więc możemy sortować ich listy i używać krotek jako kluczy w słownikach.
 
 \index{mutability}
 \index{hashable}
 \index{comparable}
 \index{immutability}
 
-Syntactically, a tuple is a comma-separated list of values:
+Składniowo, krotka jest oddzieloną przecinkami listą wartości:
 
 ~~~~ {.python}
 >>> t = 'a', 'b', 'c', 'd', 'e'
 ~~~~
 
-Although it is not necessary, it is common to enclose tuples in
-parentheses to help us quickly identify tuples when we look at Python
-code:
+Chociaż nie jest to konieczne, krotki często ogranicza się nawiasami, tak aby pomóc nam szybko zidentyfikować krotki podczas przeglądania kodu Pythona:
 
 \index{parentheses!tuples in}
 
@@ -39,8 +29,7 @@ code:
 >>> t = ('a', 'b', 'c', 'd', 'e')
 ~~~~
 
-To create a tuple with a single element, you have to include the final
-comma:
+Aby utworzyć krotkę z pojedynczym elementem, należy na końcu dołączyć przecinek:
 
 \index{singleton}
 \index{tuple!singleton}
@@ -51,8 +40,7 @@ comma:
 <type 'tuple'>
 ~~~~
 
-Without the comma Python treats `('a')` as an expression with a string
-in parentheses that evaluates to a string:
+Bez przecinka Python traktuje `('a')` jako wyrażenie z ciągiem znaków w nawiasach, które ewaluuje się do ciągu znaków:
 
 ~~~~ {.python}
 >>> t2 = ('a')
@@ -60,8 +48,7 @@ in parentheses that evaluates to a string:
 <type 'str'>
 ~~~~
 
-Another way to construct a tuple is the built-in function
-`tuple`. With no argument, it creates an empty tuple:
+Innym sposobem na skonstruowanie krotki jest wbudowana funkcja `tuple`. Bez żadnego argumentu, tworzy ona pustą krotkę:
 
 \index{tuple function}
 \index{function!tuple}
@@ -72,9 +59,7 @@ Another way to construct a tuple is the built-in function
 ()
 ~~~~
 
-If the argument is a sequence (string, list, or tuple), the result of
-the call to `tuple` is a tuple with the elements of the
-sequence:
+Jeśli argumentem jest sekwencja (ciąg znaków, lista lub krotka), to wynikiem wywołania funkcji `tuple` jest krotka z elementami podanej sekwencji:
 
 ~~~~ {.python .trinket}
 >>> t = tuple('lupins')
@@ -82,11 +67,9 @@ sequence:
 ('l', 'u', 'p', 'i', 'n', 's')
 ~~~~
 
-Because `tuple` is the name of a constructor, you should
-avoid using it as a variable name.
+Ponieważ słowo `tuple` jest nazwą konstruktora, powinieneś unikać używania go jako nazwy zmiennej.
 
-Most list operators also work on tuples. The bracket operator indexes an
-element:
+Większość operatorów związanych z listami działa również na krotkach. Operator nawiasów kwadratowych służy do podawania indeksu (pozycji) elementu:
 
 \index{bracket operator}
 \index{operator!bracket}
@@ -97,7 +80,7 @@ element:
 'a'
 ~~~~
 
-And the slice operator selects a range of elements.
+Operator wycinania wybiera szereg elementów.
 
 \index{slice operator}
 \index{operator!slice}
@@ -109,8 +92,7 @@ And the slice operator selects a range of elements.
 ('b', 'c')
 ~~~~
 
-But if you try to modify one of the elements of the tuple, you get an
-error:
+Ale jeśli spróbujesz zmodyfikować jeden z elementów krotki, to otrzymasz błąd:
 
 \index{exception!TypeError}
 \index{TypeError}
@@ -122,8 +104,7 @@ error:
 TypeError: object doesn't support item assignment
 ~~~~
 
-You can't modify the elements of a tuple, but you can replace one tuple
-with another:
+Nie możesz modyfikować elementów krotki, ale możesz zastąpić jedną krotkę drugą krotką:
 
 ~~~~ {.python .trinket}
 >>> t = ('A',) + t[1:]
@@ -131,19 +112,15 @@ with another:
 ('A', 'b', 'c', 'd', 'e')
 ~~~~
 
-Comparing tuples
-----------------
+Porównywanie krotek
+-------------------
 
 \index{comparison!tuple}
 \index{tuple!comparison}
 \index{sort method}
 \index{method!sort}
 
-The comparison operators work with tuples and other sequences. Python
-starts by comparing the first element from each sequence. If they are
-equal, it goes on to the next element, and so on, until it finds
-elements that differ. Subsequent elements are not considered (even if
-they are really big).
+Operatory porównania działają z krotkami i innymi sekwencjami. Python zaczyna od porównania pierwszego elementu z każdej sekwencji. Jeśli są one równe, przechodzi do następnego elementu itd., aż znajdzie takie elementy, które się różnią. Kolejne elementy nie są już brane pod uwagę (nawet jeśli ich wartość jest bardzo duża).
 
 ~~~~ {.python .trinket}
 >>> (0, 1, 2) < (0, 3, 4)
@@ -152,21 +129,18 @@ True
 True
 ~~~~
 
-The `sort` function works the same way. It sorts primarily by
-first element, but in the case of a tie, it sorts by second element, and
-so on.
+Funkcja `sort` działa w ten sam sposób. Sortuje przede wszystkim według pierwszego elementu, ale w przypadku takich samych wartości, sortuje według drugiego elementu itd.
 
-This feature lends itself to a pattern called *DSU* for
+Powyższa własność prowadzi do schematu zwanego *DSU* oznaczającego
 
-Decorate
-:   a sequence by building a list of tuples with one or more sort keys
-    preceding the elements from the sequence,
+Dekorowanie
+:   sekwencji poprzez zbudowanie listy krotek z jednym lub więcej kluczami sortowania, które poprzedzają elementy sekwencji,
 
-Sort
-:   the list of tuples using the Python built-in `sort`, and
+Sortowanie
+:   listy krotek przy pomocy funkcji wbudowanej `sort`,
 
-Undecorate
-:   by extracting the sorted elements of the sequence.
+Usunięcie dekorowania
+:   poprzez wyodrębnienie posortowanych elementów sekwencji.
 
 \index{DSU pattern}
 \index{pattern!DSU}
@@ -174,54 +148,40 @@ Undecorate
 \index{pattern!decorate-sort-undecorate}
 \index{Romeo and Juliet}
 
-For example, suppose you have a list of words and you want to sort them
-from longest to shortest:
+Na przykład, załóżmy, że posiadasz listę wyrazów i chcesz je posortować od najdłuższego do najkrótszego:
 
-\VerbatimInput{../code3/soft.py} 
+\VerbatimInput{../code3/soft.py}
 
-The first loop builds a list of tuples, where each tuple is a word
-preceded by its length.
+Pierwsza pętla buduje listę krotek, gdzie każda krotka jest wyrazem poprzedzonym jego długością.
 
-`sort` compares the first element, length, first, and only
-considers the second element to break ties. The keyword argument
-`reverse=True` tells `sort` to go in decreasing
-order.
+Funkcja `sort` porównuje najpierw pierwsze elementy krotek, czyli długości wyrazów, a drugie elementy rozpatruje tylko w przypadku takich samych długości wyrazów. Argument z podaną nazwą `reverse=True` wskazuje funkcji `sort` by sortować w kolejności malejącej.
 
 \index{keyword argument}
 \index{argument!keyword}
 \index{traversal}
 
-The second loop traverses the list of tuples and builds a list of words
-in descending order of length. The four-character words are sorted in
-*reverse* alphabetical order, so "what" appears before
-"soft" in the following list.
+Druga pętla przechodzi przez listę krotek i tworzy listę wyrazów według ich malejącej długości. Czteroznakowe wyrazy są posortowane w odwrotnej kolejności alfabetycznej, więc słowo "what" pojawia się przed słowem "soft".
 
-The output of the program is as follows:
+Wynik działania programu jest następujący:
 
 ~~~~
 ['yonder', 'window', 'breaks', 'light', 'what',
 'soft', 'but', 'in']
 ~~~~
 
-Of course the line loses much of its poetic impact when turned into a
-Python list and sorted in descending word length order.
+Oczywiście linia ta, gdy zostanie przekształcona w listę Pythona i posortowana w porządku malejącym według długości słów, traci swój poetycki urok.
 
-Tuple assignment
-----------------
+Krotki i operacja przypisania
+-----------------------------
 
 \index{tuple!assignment}
 \index{assignment!tuple}
 \index{swap pattern}
 \index{pattern!swap}
 
-One of the unique syntactic features of the Python language is the
-ability to have a tuple on the left side of an assignment statement.
-This allows you to assign more than one variable at a time when the left
-side is a sequence.
+Jedną z unikalnych cech syntaktycznych języka Python jest możliwość posiadania krotki po lewej stronie instrukcji przypisania. Pozwala to na przypisanie w tym samym czasie więcej niż jednej zmiennej, w momencie gdy lewa strona jest sekwencją.
 
-In this example we have a two-element list (which is a sequence) and
-assign the first and second elements of the sequence to the variables
-`x` and `y` in a single statement.
+W poniższym przykładzie mamy dwuelementową listę (która jest sekwencją) i w jednej instrukcji przypisujemy pierwszy i drugi element sekwencji do zmiennych `x` i `y`.
 
 ~~~~ {.python .trinket}
 >>> m = [ 'have', 'fun' ]
@@ -233,9 +193,7 @@ assign the first and second elements of the sequence to the variables
 >>>
 ~~~~
 
-It is not magic, Python *roughly* translates the tuple assignment syntax
-to be the following:^[Python does not translate the syntax literally. For example, if
-you try this with a dictionary, it will not work as you might expect.]
+To nie jest magia, Python *z grubsza* tłumaczy składnię przypisania krotek na następującą:^[Python nie tłumaczy składni dosłownie. Na przykład, jeśli spróbujesz takiej operacji na słownikach, to nie będzie to działać tak, jak można by się tego spodziewać].
 
 ~~~~ {.python .trinket}
 >>> m = [ 'have', 'fun' ]
@@ -248,9 +206,7 @@ you try this with a dictionary, it will not work as you might expect.]
 >>>
 ~~~~
 
-Stylistically when we use a tuple on the left side of the assignment
-statement, we omit the parentheses, but the following is an equally
-valid syntax:
+Stylistycznie rzecz ujmując, gdy używamy krotki po lewej stronie instrukcji przypisania, pomijamy nawiasy, ale poniższa składnia jest równie poprawna:
 
 ~~~~ {.python}
 >>> m = [ 'have', 'fun' ]
@@ -262,21 +218,15 @@ valid syntax:
 >>>
 ~~~~
 
-A particularly clever application of tuple assignment allows us to
-*swap* the values of two variables in a single statement:
+Sprytne zastosowanie operacji przypisania krotki pozwala nam na *zamianę* wartości dwóch zmiennych przy pomocy jednej instrukcji:
 
 ~~~~ {.python}
 >>> a, b = b, a
 ~~~~
 
-Both sides of this statement are tuples, but the left side is a tuple of
-variables; the right side is a tuple of expressions. Each value on the
-right side is assigned to its respective variable on the left side. All
-the expressions on the right side are evaluated before any of the
-assignments.
+Obie strony tego wyrażenia są krotkami, ale lewa strona jest krotką zmiennych; prawa strona jest krotką wyrażeń. Każda wartość po prawej stronie jest przypisana do odpowiadającej jej zmiennej po lewej stronie. Wszystkie wyrażenia po prawej stronie są ewaluowane przed każdym z przypisań.
 
-The number of variables on the left and the number of values on the
-right must be the same:
+Liczba zmiennych po lewej stronie i liczba wartości po prawej stronie musi być taka sama:
 
 \index{exception!ValueError}
 \index{ValueError}
@@ -286,9 +236,7 @@ right must be the same:
 ValueError: too many values to unpack
 ~~~~
 
-More generally, the right side can be any kind of sequence (string,
-list, or tuple). For example, to split an email address into a user name
-and a domain, you could write:
+Ogólnie rzecz biorąc, prawa strona może być dowolną sekwencją (ciągiem, listą lub krotką). Na przykład, aby podzielić adres e-mail na nazwę użytkownika i domenę, można napisać poniższy kod:
 
 \index{split method}
 \index{method!split}
@@ -299,9 +247,7 @@ and a domain, you could write:
 >>> uname, domain = addr.split('@')
 ~~~~
 
-The return value from `split` is a list with two elements;
-the first element is assigned to `uname`, the second to
-`domain`.
+Wartość zwracana przez `split` jest listą z dwoma elementami; pierwszy element jest przypisany do `uname`, a drugi do `domain`.
 
 ~~~~ {.python}
 >>> print(uname)
@@ -310,16 +256,15 @@ monty
 python.org
 ~~~~
 
-Dictionaries and tuples
------------------------
+Słowniki i krotki
+-----------------
 
 \index{dictionary}
 \index{items method}
 \index{method!items}
 \index{key-value pair}
 
-Dictionaries have a method called `items` that returns a list
-of tuples, where each tuple is a key-value pair:
+Słowniki posiadają metodę zwaną `items`, która zwraca listę krotek, gdzie każda krotka jest parą klucz-wartość:
 
 ~~~~ {.python .trinket}
 >>> d = {'a':10, 'b':1, 'c':22}
@@ -328,13 +273,9 @@ of tuples, where each tuple is a key-value pair:
 [('b', 1), ('a', 10), ('c', 22)]
 ~~~~
 
-As you should expect from a dictionary, the items are in no particular
-order.
+Jak mogłeś się spodziewać po słowniku, powyższe pary nie są w żadnej konkretnej kolejności.
 
-However, since the list of tuples is a list, and tuples are comparable,
-we can now sort the list of tuples. Converting a dictionary to a list of
-tuples is a way for us to output the contents of a dictionary sorted by
-key:
+Ponieważ jednak lista krotek jest listą, a krotki są porównywalne, to możemy teraz posortować listę krotek. Konwertowanie słownika na listę krotek jest dla nas sposobem na wyciągnięcie zawartości słownika posortowanego po kluczach:
 
 ~~~~ {.python}
 >>> d = {'a':10, 'b':1, 'c':22}
@@ -346,33 +287,26 @@ key:
 [('a', 10), ('b', 1), ('c', 22)]
 ~~~~
 
-The new list is sorted in ascending alphabetical order by the key value.
+Nowa lista jest posortowana rosnąco w porządku alfabetycznym według kluczy.
 
-Multiple assignment with dictionaries
--------------------------------------
+Wielokrotne przypisanie w słownikach
+------------------------------------
 
 \index{traverse!dictionary}
 \index{dictionary!traversal}
 
-Combining `items`, tuple assignment, and `for`,
-you can see a nice code pattern for traversing the keys and values of a
-dictionary in a single loop:
+Łącząc `items`, przypisanie krotki oraz `for`, możesz zobaczyć ciekawy schemat kodu do przechodzenia po kluczach i wartościach słownika w jednej pętli:
 
 ~~~~ {.python}
 for key, val in list(d.items()):
     print(val, key)
 ~~~~
 
-This loop has two *iteration variables* because
-`items` returns a list of tuples and `key, val` is
-a tuple assignment that successively iterates through each of the
-key-value pairs in the dictionary.
+Powyższa pętla ma dwie *zmienne iteracyjne*, ponieważ `items` zwraca listę krotek i `key, val` jest przypisaniem krotki, które kolejno iteruje przez każdą z par klucz-wartość w słowniku.
 
-For each iteration through the loop, both `key` and
-`value` are advanced to the next key-value pair in the
-dictionary (still in hash order).
+W każdej kolejnej iteracji pętli, zarówno `key`, jak i `val` posuwają się naprzód do kolejnej pary klucz-wartość w słowniku (nadal w kolejności haszach).
 
-The output of this loop is:
+Wynik tej pętli jest następujący:
 
 ~~~~
 10 a
@@ -380,17 +314,11 @@ The output of this loop is:
 1 b
 ~~~~
 
-Again, it is in hash key order (i.e., no particular order).
+I ponownie, mamy tutaj kolejności kluczy po haszach (tzn. bez konkretnej kolejności).
 
-If we combine these two techniques, we can print out the contents of a
-dictionary sorted by the *value* stored in each key-value pair.
+Jeżeli połączymy te dwie techniki, możemy wypisać zawartość słownika posortowaną po *wartościach* zapisanych w każdej parze klucz-wartość.
 
-To do this, we first make a list of tuples where each tuple is
-`(value, key)`. The `items` method would give us a
-list of `(key, value)` tuples, but this time we want to sort
-by value, not key. Once we have constructed the list with the value-key
-tuples, it is a simple matter to sort the list in reverse order and
-print out the new, sorted list.
+Aby to zrobić, najpierw sporządzamy listę krotek, gdzie każda krotka to `(value, key)`. Metoda `items` zwróci nam listę `(key, value)` krotek, ale tym razem chcemy sortować według wartości, a nie klucza. Po skonstruowaniu listy z parami klucz-wartość, możemy łatwo posortować listę w odwrotnej kolejności i wypisać nową, posortowaną listę.
 
 ~~~~ {.python}
 >>> d = {'a':10, 'b':1, 'c':22}
@@ -406,41 +334,27 @@ print out the new, sorted list.
 >>>
 ~~~~
 
-By carefully constructing the list of tuples to have the value as the
-first element of each tuple, we can sort the list of tuples and get our
-dictionary contents sorted by value.
+Ostrożnie konstruując listę krotek tak, aby w każdej z nich wartość była pierwszym elementem, możemy posortować listę krotek i uzyskać zawartość słownika posortowaną po wartościach.
 
-The most common words
----------------------
+Najczęściej występujące słowa
+-----------------------------
 
 \index{Romeo and Juliet}
 
-Coming back to our running example of the text from *Romeo and Juliet*
-Act 2, Scene 2, we can augment our program to use this technique to
-print the ten most common words in the text as follows:
+Wracając do naszego przykładu z tekstem z *Romeo i Julia* (Akt II, Scena II), możemy rozszerzyć nasz program po to by użyć opisanej wyżej techniki do wypisania dziesięciu najczęściej używanych słów w tekście:
 
 \VerbatimInput{../code3/count3.py} 
 \begin{trinketfiles}
 ../code3/romeo-full.txt
 \end{trinketfiles}
 
-The first part of the program which reads the file and computes the
-dictionary that maps each word to the count of words in the document is
-unchanged. But instead of simply printing out `counts` and
-ending the program, we construct a list of `(val, key)`
-tuples and then sort the list in reverse order.
+Pierwsza część programu, która odczytuje plik i tworzy słownik, który mapuje każde słowo do liczbę jego wystąpień w dokumencie, pozostaje niezmieniona. Ale zamiast po prostu wypisać `counts` i zakończyć program, konstruujemy listę krotek `(val, key)`, a następnie sortujemy tę listę w odwrotnej kolejności.
 
-Since the value is first, it will be used for the comparisons. If there
-is more than one tuple with the same value, it will look at the second
-element (the key), so tuples where the value is the same will be further
-sorted by the alphabetical order of the key.
+Ponieważ wartość jest pierwsza, będzie ona użyta do porównań. Jeśli jest więcej niż jedna krotka o tej samej wartości, to operacja sortowania spojrzy na drugi element (klucz), więc krotki, w których wartość jest taka sama, będą posortowane w kolejności alfabetycznej po kluczu.
 
-At the end we write a nice `for` loop which does a multiple
-assignment iteration and prints out the ten most common words by
-iterating through a slice of the list (`lst[:10]`).
+Na koniec piszemy ładną pętlę `for`, która podczas iteracji wykonuje operację przypisania z fragmentu listy (`lst[:10]`) i wypisuje dziesięć najczęściej występujących słów.
 
-So now the output finally looks like what we want for our word frequency
-analysis.
+Tak więc teraz wynik programu w końcu wygląda tak jak tego oczekujemy od naszej analizy częstości słów.
 
 ~~~~
 61 i
@@ -455,32 +369,24 @@ analysis.
 24 thee
 ~~~~
 
-The fact that this complex data parsing and analysis can be done with an
-easy-to-understand 19-line Python program is one reason why Python is a
-good choice as a language for exploring information.
+Fakt, że takie skomplikowane parsowanie i analiza danych może być wykonana za pomocą łatwego do zrozumienia 19-wierszowego programu Pythona, jest jednym z powodów, dla których Python jest dobrym wyborem jako język do eksploracji informacji.
 
-Using tuples as keys in dictionaries
-------------------------------------
+
+Używanie krotek jako kluczy w słownikach
+----------------------------------------
 
 \index{tuple!as key in dictionary}
 \index{hashable}
 
-Because tuples are *hashable* and lists are not, if we
-want to create a *composite* key to use in a dictionary
-we must use a tuple as the key.
+Ponieważ krotki są *haszowalne*, a listy nie są, to jeśli chcemy utworzyć *złożony* klucz do użycia w słowniku, to musimy użyć krotki jako klucza.
 
-We would encounter a composite key if we wanted to create a telephone
-directory that maps from last-name, first-name pairs to telephone
-numbers. Assuming that we have defined the variables `last`,
-`first`, and `number`, we could write a dictionary
-assignment statement as follows:
+Napotkalibyśmy klucz złożony, gdybyśmy chcieli stworzyć książkę telefoniczną, która mapuje z nazwisko-imię do numerów telefonów. Zakładając, że zdefiniowaliśmy zmienne `last`, `first` i `number`, moglibyśmy napisać instrukcję przypisania do słownika w następujący sposób:
 
 ~~~~ {.python}
 directory[last,first] = number
 ~~~~
 
-The expression in brackets is a tuple. We could use tuple assignment in
-a `for` loop to traverse this dictionary.
+Wyrażenie w nawiasach jest krotką. Moglibyśmy użyć przypisania krotki w pętli `for`, tak aby przejść po takim słownik.
 
 \index{tuple!in brackets}
 
@@ -489,24 +395,16 @@ for last, first in directory:
     print(first, last, directory[last,first])
 ~~~~
 
-This loop traverses the keys in `directory`, which are
-tuples. It assigns the elements of each tuple to `last` and
-`first`, then prints the name and corresponding telephone
-number.
+Powyższa pętla przechodzi przez klucze w `directory`, które są krotkami. Przypisuje elementy każdej krotki do `last` i `first`, a następnie wypisuje nazwę i odpowiadający jej numer telefonu.
 
-Sequences: strings, lists, and tuples - Oh My!
---------------------------------------------
+Sekwencje: ciągi znaków, listy i krotki - O rany!
+-------------------------------------------------
 
 \index{sequence}
 
-I have focused on lists of tuples, but almost all of the examples in
-this chapter also work with lists of lists, tuples of tuples, and tuples
-of lists. To avoid enumerating the possible combinations, it is
-sometimes easier to talk about sequences of sequences.
+Skupiłem się na listach krotek, ale prawie wszystkie przykłady w tym rozdziale działają również z listami list, krotkami krotek i krotkami list. Aby uniknąć wyliczania możliwych kombinacji, czasem łatwiej jest mówić o sekwencjach sekwencji.
 
-In many contexts, the different kinds of sequences (strings, lists, and
-tuples) can be used interchangeably. So how and why do you choose one
-over the others?
+W wielu kontekstach różne rodzaje sekwencji (ciągów znaków, list i krotek) mogą być używane zamiennie. Więc jak i dlaczego wybierasz jedną z nich zamiast innych?
 
 \index{string}
 \index{list}
@@ -514,139 +412,88 @@ over the others?
 \index{mutability}
 \index{immutability}
 
-To start with the obvious, strings are more limited than other sequences
-because the elements have to be characters. They are also immutable. If
-you need the ability to change the characters in a string (as opposed to
-creating a new string), you might want to use a list of characters
-instead.
+Zaczynając od tego, co oczywiste, ciągi znaków są bardziej ograniczone niż inne sekwencje, ponieważ ich elementy muszą być znakami. Są one również niezmienne. Jeśli potrzebujesz możliwości zmiany znaków w takim ciągu (w przeciwieństwie do tworzenia nowego ciągu), możesz w zamian użyć listy znaków.
 
-Lists are more common than tuples, mostly because they are mutable. But
-there are a few cases where you might prefer tuples:
+Listy są popularniejsze w użyciu niż krotki, głównie dlatego, że są zmienne. Jednak jest kilka przypadków, w których możesz preferować krotki:
 
-1.  In some contexts, like a `return` statement, it is
-    syntactically simpler to create a tuple than a list. In other
-    contexts, you might prefer a list.
+1.  W niektórych kontekstach, jak np. instrukcja `return`, stworzenie krotki jest składniowo prostsze od stworzenia listy. W innych przepadkach możesz preferować listę.
 
-2.  If you want to use a sequence as a dictionary key, you have to use
-    an immutable type like a tuple or string.
+2.  Jeśli chcesz użyć sekwencji jako klucza w słowniku, musisz użyć typu niezmiennego takiego jak krotka lub ciąg znaków.
 
-3.  If you are passing a sequence as an argument to a function, using
-    tuples reduces the potential for unexpected behavior due to
-    aliasing.
+3.  Jeżeli przekazujesz sekwencję jako argument do funkcji, używanie krotek zmniejsza możliwość nieoczekiwanego działania kodu spowodowanego aliasowaniem.
 
-Because tuples are immutable, they don't provide methods like
-`sort` and `reverse`, which modify existing lists.
-However Python provides the built-in functions `sorted` and
-`reversed`, which take any sequence as a parameter and return
-a new sequence with the same elements in a different order.
+Ponieważ krotki są niezmienne, nie dostarczają one metod takich jak `sort` i `reverse`, które modyfikują istniejące listy. Jednakże Python dostarcza wbudowane funkcje `sorted` i `reversed`, które przyjmują każdą sekwencję jako parametr i zwracają nową sekwencję z tymi samymi elementami w innej kolejności.
 
 \index{sorted function}
 \index{function!sorted}
 \index{reversed function}
 \index{function!reversed}
 
-Debugging
----------
+Debugowanie
+-----------
 
 \index{debugging}
 \index{data structure}
 \index{shape error}
 \index{error!shape}
 
-Lists, dictionaries and tuples are known generically as *data
-structures*; in this chapter we are starting to see compound
-data structures, like lists of tuples, and dictionaries that contain
-tuples as keys and lists as values. Compound data structures are useful,
-but they are prone to what I call *shape errors*; that
-is, errors caused when a data structure has the wrong type, size, or
-composition, or perhaps you write some code and forget the shape of your
-data and introduce an error. For example, if you are expecting a list with one integer and I give you a plain old integer (not in a list), it won't work.
+Listy, słowniki i krotki są ogólnie znane jako *struktury danych*; w tym rozdziale zaczęliśmy zauważać złożone struktury danych, takie jak listy krotek oraz słowniki, które zawierają krotki jako klucze i listy jako wartości. Złożone struktury danych są użyteczne, ale są podatne na to, co nazywam *błędami kształtu*, tzn. błędy spowodowane niewłaściwym typem, rozmiarem lub zawartością struktury danych; być może piszesz też jakiś kod i zapominasz o kształcie swoich danych, przez co nieświadomie umieszczasz błąd w swoim programie. Na przykład, jeśli oczekujesz listy składającej się z jednej liczby całkowitej, a ja daję Ci po prostu zwykłą liczbę całkowitą (która nie jest opakowana listą), to Twój kod nie będzie działać.
 
-Glossary
---------
-
-comparable
-:   A type where one value can be checked to see if it is greater than,
-    less than, or equal to another value of the same type. Types which
-    are comparable can be put in a list and sorted.
-\index{comparable}
-
-data structure
-:   A collection of related values, often organized in lists,
-    dictionaries, tuples, etc.
-\index{data structure}
+Słowniczek
+----------
 
 DSU
-:   Abbreviation of "decorate-sort-undecorate", a pattern that involves
-    building a list of tuples, sorting, and extracting part of the
-    result.
+:   Skrót od "dekorowanie-sortowanie-usunięcie dekorowania"; schemat, który polega na budowaniu listy krotek, sortowaniu i wyodrębnianiu części wyniku.
 \index{DSU pattern}
 
-gather
-:   The operation of assembling a variable-length argument tuple.
-\index{gather}
-
-hashable
-:   A type that has a hash function. Immutable types like integers,
-    floats, and strings are hashable; mutable types like lists and
-    dictionaries are not.
+haszowalny
+:   Typ, który posiada funkcję haszowania. Typy niezmienne, takie jak liczby całkowite, zmiennoprzecinkowe i ciągi znaków, są haszowalne; typy zmienne, takie jak listy i słowniki, nie są haszowalne.
 \index{hashable}
 
-scatter
-:   The operation of treating a sequence as a list of arguments.
-\index{scatter}
-
-shape (of a data structure)
-:   A summary of the type, size, and composition of a data structure.
-\index{shape}
-
-singleton
-:   A list (or other sequence) with a single element.
-\index{singleton}
-
-tuple
-:   An immutable sequence of elements.
+krotka
+:   Niezmienna sekwencja elementów.
 \index{tuple}
 
-tuple assignment
-:   An assignment with a sequence on the right side and a tuple of
-    variables on the left. The right side is evaluated and then its
-    elements are assigned to the variables on the left.
+kształt (struktury danych)
+:   Podsumowanie typu, rozmiaru i zawartości struktury danych.
+\index{shape}
+
+porównywalny
+:   Typ, w którym można sprawdzić, czy jedna wartość jest większa, mniejsza lub równa innej wartości tego samego typu. Typy, które są porównywalne, można umieścić na liście i posortować.
+\index{comparable}
+
+przypisanie do krotki
+:   Przypisanie z sekwencją po prawej stronie i krotką zmiennych po lewej. Prawa strona jest ewaluowana, a następnie jej elementy są przypisywane do zmiennych po lewej stronie.
 \index{tuple assignment}
 \index{assignment!tuple}
 
-Exercises
+struktura danych
+:   Kolekcja powiązanych ze sobą wartości, często zorganizowanych w listy, słowniki, krotki itp.
+\index{data structure}
+
+Ćwiczenia
 ---------
 
-**Exercise 1: Revise a previous program as follows: Read and parse the
-"From" lines and pull out the addresses from the line. Count the number
-of messages from each person using a dictionary.**
+**Ćwiczenie 1: Zrewiduj swój poprzedni program w następujący sposób: Wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy. Policz liczbę wiadomości od każdej osoby za pomocą słownika.**
 
-**After all the data has been read, print the person with the most commits
-by creating a list of (count, email) tuples from the dictionary. Then
-sort the list in reverse order and print out the person who has the most
-commits.**
+**Po przeczytaniu wszystkich danych wypisz osobę, która zrobiła najwięcej rewizji, tworząc ze słownika listę krotek (liczba, email). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej rewizji.**
 
 ~~~~
-Sample Line:
+Przykładowa linia:
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 
-Enter a file name: mbox-short.txt
+Podaj nazwę pliku: mbox-short.txt
 cwen@iupui.edu 5
 
-Enter a file name: mbox.txt
+Podaj nazwę pliku: mbox.txt
 zqian@umich.edu 195
 ~~~~
 
-**Exercise 2: This program counts the distribution of the hour of the day
-for each of the messages. You can pull the hour from the "From" line by
-finding the time string and then splitting that string into parts using
-the colon character. Once you have accumulated the counts for each hour,
-print out the counts, one per line, sorted by hour as shown below.**
+**Ćwiczenie 2: Napisz program, który dla każdej wiadomości zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z wiersza "From", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten ciąg na części za pomocą znaku dwukropka. Kiedy już zgromadzisz wartości dla każdej godziny, wypisz zliczenia, po jednym na wiersz, posortowane według godzin, tak jak pokazano poniżej.**
 
 ~~~~
 python timeofday.py
-Enter a file name: mbox-short.txt
+Podaj nazwę pliku: mbox-short.txt
 04 3
 06 1
 07 1
@@ -661,15 +508,7 @@ Enter a file name: mbox-short.txt
 19 1
 ~~~~
 
-**Exercise 3: Write a program that reads a file and prints the
-*letters* in decreasing order of frequency. Your program
-should convert all the input to lower case and only count the letters
-a-z. Your program should not count spaces, digits, punctuation, or
-anything other than the letters a-z. Find text samples from several
-different languages and see how letter frequency varies between
-languages. Compare your results with the tables at
-<https://wikipedia.org/wiki/Letter_frequencies>.**
+**Ćwiczenie 3: Napisz program, który wczytuje plik i wypisuje *litery* malejąco po częstości ich występowania. Twój program powinien przekonwertować wszystkie dane wejściowe na małe litery i zliczać tylko litery a-z. Program nie powinien uwzględniać spacji, cyfr, interpunkcji ani niczego innego poza literami a-z. Znajdź próbki tekstów z kilku różnych języków i sprawdź, jak bardzo częstość liter różni się w zależności od języka. Porównaj swoje wyniki z tabelami pod adresem <https://en.wikipedia.org/wiki/Letter_frequency>.**
 
 \index{letter frequency}
 \index{frequency!letter}
-

@@ -11,7 +11,7 @@ for line in fhand:
         else:
             counts[word] += 1
 
-# Sort the dictionary by value
+# Posortuj słownik po wartościach
 lst = list()
 for key, val in list(counts.items()):
     lst.append((val, key))

@@ -86,8 +86,16 @@
 
 ## Chapter 10
 
-* [`...`](#)
-
+* [10-01 - tuple type](https://trinket.io/python/228c4e885f?outputOnly=true&runOption=console)
+* [10-02 - empty tuple](https://trinket.io/python/f085ce9508?outputOnly=true&runOption=console)
+* [10-03 - string to tuple](https://trinket.io/python/757963d573?outputOnly=true&runOption=console)
+* [10-04 - letters tuple](https://trinket.io/python/8b028883ae?outputOnly=true&runOption=console)
+* [10-05 - tuple extension](https://trinket.io/python/11b6b921ea?outputOnly=true&runOption=console)
+* [10-06 - tuple cmp](https://trinket.io/python/26daf2d923?outputOnly=true&runOption=console)
+* [10-07 - tuple assignment](https://trinket.io/python/d4844faa15?outputOnly=true&runOption=console)
+* [10-08 - alt tuple assignment](https://trinket.io/python/2a2f2cb70c?outputOnly=true&runOption=console)
+* [10-09 - items](https://trinket.io/python/a6e4a261d7?outputOnly=true&runOption=console)
+* [10-10 - `count3.py`](https://trinket.io/python/9f7d845be4)
 
 ## Chapter 11
 
