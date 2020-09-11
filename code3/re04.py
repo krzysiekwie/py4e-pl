@@ -1,4 +1,4 @@
-# Search for lines that start with From and have an at sign
+# Szukaj linii, które zaczynają się od 'From:' i zawierają symbol małpy
 import re
 hand = open('mbox-short.txt')
 for line in hand:

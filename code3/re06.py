@@ -1,4 +1,4 @@
-# Search for lines that have an at sign between characters
+# Szukaj linii, które zawierają znak małpy pomiędzy innymi znakami
 import re
 hand = open('mbox-short.txt')
 for line in hand:

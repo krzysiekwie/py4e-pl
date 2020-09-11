@@ -32,6 +32,7 @@ Polish translation progress
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | links to code repo...  |      |      |       |      |         |          |         |            |       |
+| English translation of keywords |         |            |       |
 
 URLs to translated trinkets are in `trinket3-pl-urls.md`.
 

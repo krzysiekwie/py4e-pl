@@ -1,37 +1,21 @@
-Regular expressions
+Wyrażenia regularne
 ===================
 
-So far we have been reading through files, looking for patterns and
-extracting various bits of lines that we find interesting. We have been
-
-using string methods like `split` and `find` and
-using lists and string slicing to extract portions of the lines.
+Do tej pory odczytywaliśmy dane poprzez pliki, szukaliśmy wzorców i wyodrębnialiśmy różne fragmenty linii, które wydawały nam się interesujące. Używaliśmy metod związanych z ciągami znaków, takich jak `split` i `find`, a także używaliśmy list i wycinania fragmentów napisów do wyodrębnienia części linii.
 
 \index{regular expressions}
 \index{regex}
 \index{re module}
 
-This task of searching and extracting is so common that Python has a
-very powerful library called *regular expressions* that
-handles many of these tasks quite elegantly. The reason we have not
-introduced regular expressions earlier in the book is because while they
-are very powerful, they are a little complicated and their syntax takes
-some getting used to.
+Zadanie wyszukiwania i wyodrębniania jest tak często wykonywane, że Python ma bardzo wszechstronną i wydajną bibliotekę o nazwie *wyrażenia regularne*, która dość elegancko radzi sobie z tymi zadaniami. Powodem, dla którego nie wprowadziliśmy wcześniej w książce wyrażeń regularnych jest to, że choć mają dużo możliwości i są bardzo przydatne, to niestety są trochę skomplikowane, a przyzwyczajenie się do ich składnia wymaga trochę czasu.
 
-Regular expressions are almost their own little programming language for
-searching and parsing strings. As a matter of fact, entire books have
-been written on the topic of regular expressions. In this chapter, we
-will only cover the basics of regular expressions. For more detail on
-regular expressions, see:
+Wyrażenia regularne są prawie własnym, małym językiem programowania do wyszukiwania i parsowania ciągów znaków. W rzeczywistości, o wyrażeniach regularnych napisano już wiele książek. W tym rozdziale zajmiemy się tylko podstawami wyrażeń regularnych. Więcej szczegółów na temat wyrażeń regularnych znajdziesz na stronie:
 
-<https://en.wikipedia.org/wiki/Regular_expression>
+<https://pl.wikipedia.org/wiki/Wyrażenie_regularne>
 
 <https://docs.python.org/library/re.html>
 
-The regular expression library `re` must be imported into
-your program before you can use it. The simplest use of the regular
-expression library is the `search()` function. The following
-program demonstrates a trivial use of the search function.
+Biblioteka wyrażeń regularnych `re` musi być zaimportowana w Twoim programie, zanim będziesz mógł z niej korzystać. Najprostszym wykorzystaniem biblioteki wyrażeń regularnych jest funkcja `search()`. Poniższy program demonstruje jej proste użycie.
 
 \index{regex!search}
 
@@ -40,110 +24,73 @@ program demonstrates a trivial use of the search function.
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-We open the file, loop through each line, and use the regular expression
-`search()` to only print out lines that contain the string
-"From:". This program does not use the real power of regular
-expressions, since we could have just as easily used
-`line.find()` to accomplish the same result.
+Otwieramy plik, przechodzimy przez każdą linię i używamy wyrażenia regularnego w `search()` do wypisania tylko tych linii, które zawierają napis "From:". Powyższy program nie wykorzystuje prawdziwej mocy wyrażeń regularnych, ponieważ równie łatwo mogliśmy użyć `line.find()` do uzyskania tego samego wyniku.
 
 \index{string!find}
 
-The power of the regular expressions comes when we add special
-characters to the search string that allow us to more precisely control
-which lines match the string. Adding these special characters to our
-regular expression allow us to do sophisticated matching and extraction
-while writing very little code.
+Moc wyrażeń regularnych ujawnia się wtedy, gdy dodajemy do ciągu znaków wyszukiwania specjalne znaki, które pozwalają nam dokładniej kontrolować to, które linie pasują do tego napisu. Dodanie tych specjalnych znaków do naszego wyrażenia regularnego pozwala nam na wyrafinowane dopasowanie i ekstrakcję danych przy jednoczesnym zachowaniu bardzo małej ilości kodu.
 
-For example, the caret character is used in regular expressions to match
-"the beginning" of a line. We could change our program to only match
-lines where "From:" was at the beginning of the line as follows:
+Na przykład, znak karety (tzw. daszek) jest używany w wyrażeniach regularnych by dopasować "początek" linii. Moglibyśmy w następujący sposób zmienić nasz program na dopasowywanie tylko tych linii, w których "From:" było na początku linii:
 
 \VerbatimInput{../code3/re02.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-Now we will only match lines that *start with* the string
-"From:". This is still a very simple example that we could have done
-equivalently with the `startswith()` method from the string
-library. But it serves to introduce the notion that regular expressions
-contain special action characters that give us more control as to what
-will match the regular expression.
+Teraz będziemy dopasowywać tylko te linie, które *zaczynają się od* ciągu znaków "From:". Jest to wciąż bardzo prosty przykład, który mogliśmy zrealizować równoważnie przy pomocy metody `startswith()` dla ciągów znaków. Jednak wspomniany wyżej symbol służy tylko do zwrócenia uwagi, że wyrażenia regularne zawierają specjalne znaki akcji, które dają nam większą kontrolę nad tym, co będzie pasować do wyrażenia regularnego.
 
 \index{string!startswith}
 
-Character matching in regular expressions
------------------------------------------
+Dopasowywanie znaków w wyrażeniach regularnych
+----------------------------------------------
 
-There are a number of other special characters that let us build even
-more powerful regular expressions. The most commonly used special
-character is the period or full stop, which matches any character.
+Istnieje wiele innych specjalnych znaków, które pozwalają nam budować jeszcze bardziej wyrafinowane wyrażenia regularne. Najczęściej używanym znakiem specjalnym jest kropka, która dopasowuje każdy znak.
 
 \index{wild card}
 \index{regex!wild card}
 
-In the following example, the regular expression `F..m:` would match any
-of the strings "From:", "Fxxm:", "F12m:", or "F!@m:" since the period
-characters in the regular expression match any character.
+W poniższym przykładzie, wyrażenie regularne `F...m:` pasuje do któregokolwiek z ciągów znaków "From:", "Fxxm:", "F12m:" lub "F!@m:", ponieważ kropka w wyrażeniu regularnym oznacza dopasowanie dowolnego znaku.
 
 \VerbatimInput{../code3/re03.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-This is particularly powerful when combined with the ability to indicate
-that a character can be repeated any number of times using the `*` or
-`+` characters in your regular expression. These special characters mean
-that instead of matching a single character in the search string, they
-match zero-or-more characters (in the case of the asterisk) or
-one-or-more of the characters (in the case of the plus sign).
+Takie wyrażenie regularne ma szczególnie dużą moc, gdy przy pomocy `*` lub `+` poszerzy się je o możliwością wskazania, że dany znak może być powtórzony dowolną liczbę razy. Te znaki specjalne oznaczają, że zamiast dopasowywać pojedynczy znak we wzorcu wyszukiwania, dopasowują zero lub więcej znaków (w przypadku asteryksa/gwiazdki) lub jeden lub więcej znaków (w przypadku plusa).
 
-We can further narrow down the lines that we match using a repeated
-*wild card* character in the following example:
+W poniższym przykładzie możemy jeszcze bardziej zawęzić linie, które dopasowujemy, używając powtarzającego się *wieloznacznika* (symbolu wieloznacznego, symbolu maski):
 
 \VerbatimInput{../code3/re04.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-The search string `^From:.+@` will successfully match lines that start
-with "From:", followed by one or more characters (`.+`), followed by an
-at-sign. So this will match the following line:
+Wzorzec wyszukiwania `^From:.+@` pomyślnie dopasuje te linie, które zaczynają się od "From:", po których następuje jeden lub więcej znaków (`.+`) i po których następuje znak małpy `@`. Zatem będzie on pasował do następującej linii:
 
 ~~~~
 From: stephen.marquard@uct.ac.za
 ~~~~
 
-You can think of the `.+` wildcard as expanding to match all the
-characters between the colon character and the at-sign.
+Możesz myśleć o symbolu wieloznacznym `.+` jako o rozszerzeniu, które dopasowuje wszystkie znaki między znakiem dwukropka a znakiem mapły.
 
 ~~~~
 From:.+@
 ~~~~
 
-It is good to think of the plus and asterisk characters as "pushy". For
-example, the following string would match the last at-sign in the string
-as the `.+` pushes outwards, as shown below:
+Dobrze jest też myśleć o plusie i gwiazdce jako o znakach "ekspansywnych". Na przykład, następujący wzorzec dopasowuje tekst aż do ostatniego znaku mapły w napisie, jako że `.+` wypycha na zewnątrz:
 
 ~~~~
 From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
 ~~~~
 
-It is possible to tell an asterisk or plus sign not to be so "greedy" by
-adding another character. See the detailed documentation for information
-on turning off the greedy behavior.
+Poprzez dodanie kolejnego znaku można też wskazać, że znak gwiazdki lub plusa nie ma być aż tak "chciwy". Więcej informacji na temat wyłączania chciwego zachowania tych znaków znajduje się w dokumentacji.
 
 \index{greedy}
 
-Extracting data using regular expressions
------------------------------------------
+Wyciąganie danych przy użyciu wyrażeń regularnych
+-------------------------------------------------
 
-If we want to extract data from a string in Python we can use the
-`findall()` method to extract all of the substrings which
-match a regular expression. Let's use the example of wanting to extract
-anything that looks like an email address from any line regardless of
-format. For example, we want to pull the email addresses from each of
-the following lines:
+Jeśli w Pythonie chcemy wyodrębnić dane z ciągu znaków, to możemy użyć metody `findall()` do wyciągnięcia wszystkich podciągów, które pasują do wyrażenia regularnego. Użyjemy przykładu, w którym w dowolnej linii chcemy wyodrębnić wszystko to, co wygląda jak adres email, niezależnie od jej formatu. Na przykład, chcemy wyodrębnić adresy email z każdej z poniższych linii:
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
@@ -153,10 +100,7 @@ Received: (from apache@localhost)
 Author: stephen.marquard@uct.ac.za
 ~~~~
 
-We don't want to write code for each of the types of lines, splitting
-and slicing differently for each line. This following program uses
-`findall()` to find the lines with email addresses in them
-and extract one or more addresses from each of those lines.
+Nie chcemy pisać specjalnego kodu dla każdego z typów linii oraz różnego dzielenia i wycinania napisów dla przeczególnych typów linii. Następujący program używa `findall()` do znalenia linii z adresami mailowymi i do wyciągnięcia jednego lub więcej adresów mailowych z tych linii.
 
 \index{findall}
 \index{regex!findall}
@@ -166,42 +110,26 @@ and extract one or more addresses from each of those lines.
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-The `findall()` method searches the string in the second
-argument and returns a list of all of the strings that look like email
-addresses. We are using a two-character sequence that matches a
-non-whitespace character (`\S`).
+Metoda `findall()` przeszukuje napis podany w drugim argumencie i zwraca listę wszystkich ciągnów znaków, które wyglądają jak adresy e-mail. Używamy sekwencji dwuznakowej, która oznacza dopasowanie dowolnego znaku, który nie jest tzw. biały znakiem^[Przypomnijmy, że jest to zbiorcze określenie takich znaków jak spacja, znak tabulacji, znak końca linii lub dowolny inny znak niemający kształtu na ekranie.] (`\S`).
 
-The output of the program would be:
+Wynik programu jest następujący:
 
 ~~~~
 ['csev@umich.edu', 'cwen@iupui.edu']
 ~~~~
 
-Translating the regular expression, we are looking for substrings that
-have at least one non-whitespace character, followed by an at-sign,
-followed by at least one more non-whitespace character. The
-`\S+` matches as many non-whitespace characters as
-possible.
+Tłumacząc wyrażenie regularne na ludzki język, szukamy podciągów, które zawierają co najmniej jeden *niebiały* znak, po którym następuje znak małpy, po którym następuje co najmniej jeszcze jeden niebiały znak. `\S+` dopasowuje tyle niebiałych znaków, ile to możliwe.
 
-The regular expression would match twice (csev@umich.edu and
-cwen@iupui.edu), but it would not match the string "@2PM" because there
-are no non-blank characters *before* the at-sign. We can
-use this regular expression in a program to read all the lines in a file
-and print out anything that looks like an email address as follows:
+Wyrażenie regularne pasuje dwukrotnie (csev@umich.edu i cwen@iupui.edu), ale nie pasuje do napisuje "@2PM", ponieważ nie ma w nim żadnych niebiałych znaków *przed* znakiem małpy. Możemy w następujący sposób użyć tego wyrażenia regularnego by odczytać wszystkie linie w pliku i wypisać wszystko to, co wygląda jak adres e-mail:
 
 \VerbatimInput{../code3/re06.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-We read each line and then extract all the substrings that match our
-regular expression. Since `findall()` returns a list, we
-simply check if the number of elements in our returned list is more than
-zero to print only lines where we found at least one substring that
-looks like an email address.
+Czytamy każdą linie, a następnie wyodrębniamy wszystkie podciągi, które pasują do naszego wyrażenia regularnego. Ponieważ `findall()` zwraca listę, po prostu sprawdzamy czy liczba elementów na tej liście jest większa od zera, tak by wypisać tylko te linie, w których znaleźliśmy przynajmniej jeden podciąg wyglądający jak adres e-mail.
 
-If we run the program on *mbox.txt* we get the following
-output:
+Jeśli uruchomimy program na pliku *mbox.txt*, otrzymamy następujący wynik:
 
 ~~~~
 ['wagnermr@iupui.edu']
@@ -215,38 +143,21 @@ output:
 ['source@collab.sakaiproject.org;']
 ~~~~
 
-Some of our email addresses have incorrect characters like "<" or ";"
-at the beginning or end. Let's declare that we are only interested in
-the portion of the string that starts and ends with a letter or a
-number.
+Niektóre z naszych adresów e-mail mają nieprawidłowe znaki, takie jak "<" lub ";" na początku lub na końcu. Zaznaczmy w programie, że interesuje nas tylko ta część napisu, która zaczyna i kończy się literą lub cyfrą.
 
-To do this, we use another feature of regular expressions. Square
-brackets are used to indicate a set of multiple acceptable characters we
-are willing to consider matching. In a sense, the `\S` is
-asking to match the set of "non-whitespace characters". Now we will be a
-little more explicit in terms of the characters we will match.
+Aby to zrobić, używamy innej cechy wyrażeń regularnych. Kwadratowe nawiasy są używane do wskazania zbioru akceptowalnych znaków, które jesteśmy skłonni rozważyć jako pasujące. W pewnym sensie, `\S` prosi o dopasowanie zestawu "niebiałych znaków". Teraz będziemy nieco dokładniejsi, jeśli chodzi o znaki, które będziemy dopasowywać.
 
-Here is our new regular expression:
+Oto nasze nowe wyrażenie regularne:
 
 ~~~~
 [a-zA-Z0-9]\S*@\S*[a-zA-Z]
 ~~~~
 
-This is getting a little complicated and you can begin to see why
-regular expressions are their own little language unto themselves.
-Translating this regular expression, we are looking for substrings that
-start with a *single* lowercase letter, uppercase letter,
-or number "[a-zA-Z0-9]", followed by zero or more non-blank characters
-(`\S*`), followed by an at-sign, followed by zero or more
-non-blank characters (`\S*`), followed by an uppercase or
-lowercase letter. Note that we switched from `+` to `*` to indicate
-zero or more non-blank characters since `[a-zA-Z0-9]` is already one
-non-blank character. Remember that the `*` or `+` applies to the single
-character immediately to the left of the plus or asterisk.
+Robi się to trochę skomplikowane i możesz zacząć widzieć, dlaczego wyrażenia regularne są własnym, małym językiem. Tłumacząc to wyrażenie regularne na ludzki język, szukamy podciągów, które rozpoczynają się *pojedynczą* małą literą, dużą literą lub liczbą "[a-zA-Z0-9]", po których następuje zero lub więcej niebiałych znaków (`\S*`), po których następuje znak małpy, po których następuje zero lub więcej niebiałych znaków (`\S*`), po których następuje duża lub mała litera. Zauważ, że zmieniliśmy znak `+` na `*`, tak by wskazać zero lub więcej niebiałych znaków, ponieważ `[a-zA-Z0-9]` jest już jednym niebiałym znakiem. Pamiętaj, że `*` lub `+` odnosi się do pojedynczego znaku znajdującego się bezpośrednio po lewej stronie plusa lub gwiazdki.
 
 \index{regex!character sets(brackets)}
 
-If we use this expression in our program, our data is much cleaner:
+Jeśli użyjemy tego wyrażenia regularnego w naszym programie, nasze dane są bardziej przyzwoite:
 
 \VerbatimInput{../code3/re07.py} 
 \begin{trinketfiles}
@@ -265,16 +176,11 @@ If we use this expression in our program, our data is much cleaner:
 ['apache@localhost']
 ~~~~
 
-Notice that on the `source@collab.sakaiproject.org` lines, our regular
-expression eliminated two letters at the end of the string (">;").
-This is because when we append `[a-zA-Z]` to the end of our regular
-expression, we are demanding that whatever string the regular expression
-parser finds must end with a letter. So when it sees the ">" at the end of
-"sakaiproject.org>;" it simply stops at the last "matching" letter it
-found (i.e., the "g" was the last good match).
+Zauważ, że w liniach `source@collab.sakaiproject.org`, nasze wyrażenie regularne wyeliminowało dwa znaki na końcu napisu (">;"). Dzieje się tak dlatego, że kiedy dołączamy `[a-zA-Z]` na końcu naszego wyrażenia regularnego, wymagamy by jakikolwiek ciąg znaków, który znajdzie parser wyrażenia regularnego, musiał kończyć się literą. Więc kiedy parser widzi ">" na końcówce "sakaiproject.org>;", to po prostu zatrzymuje się na ostatniej znalezionej "pasującej" literze (w tym przypadku "g" było ostatnim dobrym dopasowaniem).
 
-Also note that the output of the program is a Python list that has a
-string as the single element in the list.
+Zauważ również, że wynik programu jest listą Pythona, która ma ciąg znaków jako pojedynczy element listy.
+
+
 
 Combining searching and extracting
 ----------------------------------
