@@ -1,7 +1,8 @@
-# Search for lines that start with 'X' followed by any
-# non whitespace characters and ':' followed by a space
-# and any number. The number can include a decimal.
-# Then print the number if it is greater than zero.
+# Szukaj linii, które zaczynają się od 'X',
+# po których występują dowolne niebiałe znaki oraz ':',
+# po których występuje spacja i dowolna liczba.
+# Liczba może być całkowita.
+# Wypisz liczbę jeśli jest ona większa niż zero.
 import re
 hand = open('mbox-short.txt')
 for line in hand:

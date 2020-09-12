@@ -23,7 +23,7 @@ Polish translation progress
 | `08-lists.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `09-dictionaries.mkd`  | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `10-tuples.mkd`        | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `11-regex.mkd`         | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `11-regex.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `12-network.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `13-web.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `14-objects.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
@@ -32,7 +32,7 @@ Polish translation progress
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | links to code repo...  |      |      |       |      |         |          |         |            |       |
-| English translation of keywords |         |            |       |
+| English translation of index keywords |         |            |       |
 
 URLs to translated trinkets are in `trinket3-pl-urls.md`.
 

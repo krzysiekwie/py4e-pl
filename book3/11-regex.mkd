@@ -182,43 +182,34 @@ Zauważ również, że wynik programu jest listą Pythona, która ma ciąg znak�
 
 
 
-Combining searching and extracting
-----------------------------------
+Łączenie wyszukiwania i wyodrębniania tekstu
+--------------------------------------------
 
-If we want to find numbers on lines that start with the string "X-" such
-as:
+Jeśli chcemy znaleźć liczby w liniach, które zaczynają się od ciągu znaków "X-", np.:
 
 ~~~~
 X-DSPAM-Confidence: 0.8475
 X-DSPAM-Probability: 0.0000
 ~~~~
 
-we don't just want any floating-point numbers from any lines. We only
-want to extract numbers from lines that have the above syntax.
+nie chcemy dowolnych liczb zmiennoprzecinkowych z jakichkolwiek linii. Chcemy wyciągnąć z tekstu tylko te liczby z linii, które mają powyższą składnię, czyli zaczynają się od "X-".
 
-We can construct the following regular expression to select the lines:
+Możemy skonstruować następujące wyrażenie regularne, tak aby wybrać interesujące nas linie:
 
 ~~~~
 ^X-.*: [0-9.]+
 ~~~~
 
-Translating this, we are saying, we want lines that start with `X-`,
-followed by zero or more characters (`.*`), followed by a colon (`:`)
-and then a space. After the space we are looking for one or more
-characters that are either a digit (0-9) or a period `[0-9.]+`. Note
-that inside the square brackets, the period matches an actual period
-(i.e., it is not a wildcard between the square brackets).
+Tłumacząc to na ludzki, mówimy, że chcemy te linie, które zaczynają się od `X-`, po których następuje zero lub więcej znaków (`.*`), po których następuje dwukropek (`:`), a następnie spacja. Po spacji szukamy jednego lub więcej znaków, które są albo cyfrą (0-9), albo kropką `[0-9.]+`. Zauważ, że wewnątrz nawiasów kwadratowych, kropka odpowiada rzeczywistej kropce (tzn. pomiędzy nawiasami kwadratowymi nie jest ona traktowana jako wieloznacznik).
 
-This is a very tight expression that will pretty much match only the
-lines we are interested in as follows:
+Jest to bardzo zwięzłe wyrażenie, które będzie pasowało tylko do interesujących nas linii, tak jak to widać poniżej:
 
 \VerbatimInput{../code3/re10.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-When we run the program, we see the data nicely filtered to show only
-the lines we are looking for.
+Kiedy uruchamimy program, widzimy ładnie przefiltrowane dane, które zawierją tylko szukane przez nas linie.
 
 ~~~~
 X-DSPAM-Confidence: 0.8475
@@ -227,36 +218,25 @@ X-DSPAM-Confidence: 0.6178
 X-DSPAM-Probability: 0.0000
 ~~~~
 
-But now we have to solve the problem of extracting the numbers. While it
-would be simple enough to use `split`, we can use another
-feature of regular expressions to both search and parse the line at the
-same time.
+Teraz musimy rozwiązać problem wyodrębniania liczb. Chociaż byłoby to wystarczająco proste zrobić to przy użyciu `split`, to jednak możemy użyć kolejnej cechy wyrażeń regularnych, tak by w tym samym czasie zarówno wyszukać jak i przetworzyć linię.
 
 \index{string!split}
 
-Parentheses are another special character in regular expressions. When
-you add parentheses to a regular expression, they are ignored when
-matching the string. But when you are using `findall()`,
-parentheses indicate that while you want the whole expression to match,
-you only are interested in extracting a portion of the substring that
-matches the regular expression.
+Nawiasy okrągłe są kolejną szczególną cechą wyrażeń regularnych. Kiedy dodajemy nawiasy do wyrażenia regularnego, są one ignorowane podczas dopasowywania ciągu znaków. Ale kiedy używasz `findall()`, nawiasy wskazują, że podczas gdy chcesz by całe wyrażenie pasowało, to jesteś zainteresowany tylko wyciągnięciem części podciągu, który pasuje do wyrażenia regularnego.
 
 \index{regex!parentheses}
 \index{parentheses!regular expression}
 
-So we make the following change to our program:
+Tak więc dokonujemy następującej zmiany w naszym programie:
 
 \VerbatimInput{../code3/re11.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-Instead of calling `search()`, we add parentheses around the
-part of the regular expression that represents the floating-point number
-to indicate we only want `findall()` to give us back the
-floating-point number portion of the matching string.
+Zamiast wywołania `search()`, dodajemy nawiasy wokół części wyrażenia regularnego, która reprezentuje liczbę zmiennoprzecinkową, tak by wskazać `findall()`, że chcemy tylko pozyskać część liczby zmiennoprzecinkowej z pasującego napisu.
 
-The output from this program is as follows:
+Wynik programu jest następujący:
 
 ~~~~
 ['0.8475']
@@ -268,33 +248,24 @@ The output from this program is as follows:
 ..
 ~~~~
 
-The numbers are still in a list and need to be converted from strings to
-floating point, but we have used the power of regular expressions to
-both search and extract the information we found interesting.
+Liczby wciąż są elementami list i muszą zostać przekonwertowane z ciągów znaków na typ zmiennoprzecinkowy. Niemniej, użyliśmy wachlarza możliwości wyrażeń regularnych zarówno do wyszukiwania, jak i wydobywania informacji, które uznaliśmy za interesujące.
 
-As another example of this technique, if you look at the file there are
-a number of lines of the form:
+Kolejny przykład użycia powyższje techniki jest to następujący. Jeśli spojrzymy na zawartość pliku, to znajdziemy tam wiele linii w następującej postaci:
 
 ~~~~
 Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
 ~~~~
 
-If we wanted to extract all of the revision numbers (the integer number
-at the end of these lines) using the same technique as above, we could
-write the following program:
+Gdybyśmy chcieli wyciągnąć wszystkie numery rewizji (liczba całkowita na końcu tego typu wierszy) przy użyciu tej samej techniki, co chwilę wcześniej, moglibyśmy napisać następujący program:
 
 \VerbatimInput{../code3/re12.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-Translating our regular expression, we are looking for lines that start
-with `Details:`, followed by any number of characters (`.*`), followed
-by `rev=`, and then by one or more digits. We want to find lines that
-match the entire expression but we only want to extract the integer
-number at the end of the line, so we surround `[0-9]+` with parentheses.
+Tłumacząc nasze wyrażenie regularne po ludzku, szukamy linii, które rozpoczynają się od `Details:`, po których następuje dowolna liczba znaków (`.*`), po których następuje `rev=`, a następnie jedna lub więcej cyfr. Chcemy znaleźć te wiersze, które pasują do całego wyrażenia, ale chcemy z takiej linii wyciągnąć tylko liczbę całkowitą znajdującą się na końcu wiersza, więc otaczamy `[0-9]+` nawiasami okrągłymi.
 
-When we run the program, we get the following output:
+Kiedy uruchamiamy program, otrzymujemy następujący wynik:
 
 ~~~~
 ['39772']
@@ -304,60 +275,40 @@ When we run the program, we get the following output:
 ...
 ~~~~
 
-Remember that the `[0-9]+` is "greedy" and it tries to make as large a
-string of digits as possible before extracting those digits. This
-"greedy" behavior is why we get all five digits for each number. The
-regular expression library expands in both directions until it
-encounters a non-digit, or the beginning or the end of a line.
+Pamiętaj, że `[0-9]+` jest "chciwy", więc zanim wydobędziemy te cyfry, to stara się on uzyskać jak największy ciąg cyfr. To "chciwe" zachowanie jest powodem, dla którego otrzymujemy wszystkie pięć cyfr dla każdej liczby. Biblioteka wyrażeń regularnych przeszukuje w obu kierunkach tak długo aż napotka na coś innego niż cyfra albo na początek lub koniec wiersza.
 
-Now we can use regular expressions to redo an exercise from earlier in
-the book where we were interested in the time of day of each mail
-message. We looked for lines of the form:
+Teraz możemy użyć wyrażeń regularnych, aby powtórzyć ćwiczenie z wcześniejszej części książki, w której byliśmy zainteresowani porą dnia każdej wiadomości. Szukaliśmy linii w postaci:
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 ~~~~
 
-and wanted to extract the hour of the day for each line. Previously we
-did this with two calls to `split`. First the line was split
-into words and then we pulled out the fifth word and split it again on
-the colon character to pull out the two characters we were interested
-in.
+i dla każdej linii chcieliśmy wyodrębnić godzinę. Wcześniej robiliśmy to za pomocą dwóch wywołań `split`. Najpierw linia była dzielona na słowa, a następnie wyciągaliśmy piąte słowo i ponownie dzieliliśmy je po znaku dwukropka, tak aby wyciągnąć pierwsze dwa znaki, które nas interesowały.
 
-While this worked, it actually results in pretty brittle code that is
-assuming the lines are nicely formatted. If you were to add enough error
-checking (or a big try/except block) to insure that your program never
-failed when presented with incorrectly formatted lines, the code would
-balloon to 10-15 lines of code that was pretty hard to read.
+Pomimo działania, w rzeczywistości skutkowało to dość *kruchym kodem*, który zakłada, że linie są ładnie sformatowane. Jeśli dodałbyś wystarczająco dużo sekcji sprawdzających błędy (lub duży blok try/except) by upewnić się, że Twój program nigdy nie zawiedzie podczas analizy źle sformatowanych linii, kod rozrósłby się do 10-15 linii kodu, które byłyby dość ciężkie do odczytania.
 
-We can do this in a far simpler way with the following regular
-expression:
+Na szczęście możemy to osiągnąć w znacznie prostszy sposób, używając następującego wyrażenia regularnego:
 
 ~~~~
 ^From .* [0-9][0-9]:
 ~~~~
 
-The translation of this regular expression is that we are looking for
-lines that start with `From ` (note the space), followed by any number
-of characters (`.*`), followed by a space, followed by two digits
-`[0-9][0-9]`, followed by a colon character. This is the definition of
-the kinds of lines we are looking for.
+Tłumaczenie tego wyrażenia regularnego jest takie, że szukamy linii, które zaczynają się od `From ` (zwróć uwagę na spację), po których następuje dowolna liczba znaków (`.*`), po których następuje spacja, po której następują dwie cyfry `[0-9][0-9]`, po których następuje znak dwukropka. Jest definicja typów linii, których szukamy.
 
-In order to pull out only the hour using `findall()`, we add
-parentheses around the two digits as follows:
+Aby wyciągnąć tylko godzinę przy użyciu `findall()`, dodajemy nawiasy okrągłe wokół dwóch cyfr w następujący sposób:
 
 ~~~~
 ^From .* ([0-9][0-9]):
 ~~~~
 
-This results in the following program:
+W ten sposób powstaje następujący program:
 
 \VerbatimInput{../code3/re13.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-When the program runs, it produces the following output:
+Gdy uruchomimy program, uzyskamy następujący wynik:
 
 ~~~~
 ['09']
@@ -367,110 +318,72 @@ When the program runs, it produces the following output:
 ...
 ~~~~
 
-Escape character
-----------------
+Znak ucieczki
+-------------
 
-Since we use special characters in regular expressions to match the
-beginning or end of a line or specify wild cards, we need a way to
-indicate that these characters are "normal" and we want to match the
-actual character such as a dollar sign or caret.
+Ponieważ w wyrażeniach regularnych używamy znaków specjalnych, tak aby dopasować początek lub koniec wiersza lub określić wieloznaczniki, potrzebujemy jakiegoś sposobu na wskazanie, że te znaki są "normalne" i chcemy dopasować rzeczywisty znak, taki jak znak dolara lub daszka.
 
-We can indicate that we want to simply match a character by prefixing
-that character with a backslash. For example, we can find money amounts
-with the following regular expression.
+Możemy wskazać, że chcemy po prostu dopasować znak, poprzedzając go odwrotnym ukośnikiem `\` (jest to tzw. znak ucieczki; inne nazwy to znak modyfikacji lub znak uwalniania). Na przykład, przy pomocy poniższego wyrażenia regularnego możemy znaleźć kwoty pieniędzy.
 
 ~~~~ {.python}
 import re
-x = 'We just received $10.00 for cookies.'
+x = 'Uzyskaliśmy $10.00 za ciasteczka.'
 y = re.findall('\$[0-9.]+',x)
 ~~~~
 
-Since we prefix the dollar sign with a backslash, it actually matches
-the dollar sign in the input string instead of matching the "end of
-line", and the rest of the regular expression matches one or more digits
-or the period character. *Note:* Inside square brackets,
-characters are not "special". So when we say `[0-9.]`, it really means
-digits or a period. Outside of square brackets, a period is the
-"wild-card" character and matches any character. Inside square brackets,
-the period is a period.
+Ponieważ poprzedzamy znak dolara odwrotnym ukośnikiem, w rzeczywistości odpowiada on znakowi dolara w wejściowym napisie, zamiast oznaczać "koniec linii", a reszta wyrażenia regularnego odpowiada jednej lub kilku cyfrom lub znakowi kropki. *Uwaga:* w nawiasach kwadratowych znaki nie są traktowane jako "specjalne". Jeśli napiszemy `[0-9.]`, to w rzeczywistości oznacza to cyfry lub kropkę. Poza nawiasami kwadratowymi, kropka jest znakiem symbolu wieloznacznego i dopasowuje każdy znak. W nawiasach kwadratowych, kropka jest kropką.
 
-Summary
--------
+Podsumowanie
+------------
 
-While this only scratched the surface of regular expressions, we have
-learned a bit about the language of regular expressions. They are search
-strings with special characters in them that communicate your wishes to
-the regular expression system as to what defines "matching" and what is
-extracted from the matched strings. Here are some of those special
-characters and character sequences:
+Podczas gdy to tylko zarysowaliśmy niewielki zakres wyrażeń regularnych, to jednak nauczyliśmy się trochę o ich języku. Są to ciągi specjalnych znaków przeznaczone do wyszukiwania, które przekazują Twoje życzenia do systemu wyrażeń regularnych, który z kolei definiuje "dopasowanie" i wydobywa tekst z dopasowanych ciągów. Oto niektóre z tych specjalnych znaków i sekwencji znaków:
 
-`^` Matches the beginning of the line.
+`^` Dopasowuje początek linii.
 
-`$` Matches the end of the line.
+`$` Dopasowuje koniec linii.
 
-`.` Matches any character (a wildcard).
+`.` Dopasowuje dowolny znak (wieloznacznik).
 
-`\s` Matches a whitespace character.
+`\s` Dopasowuje biały znak.
 
-`\S` Matches a non-whitespace character (opposite of \\s).
+`\S` Dopasowuje niebiały znak (przeciwieństwo \\s).
 
-`*` Applies to the immediately preceding character(s) and indicates to match
-zero or more times.
+`*` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje, by dopasować go/je zero lub więcej razy.
 
-`*?` Applies to the immediately preceding character(s) and indicates to
-match zero or more times in "non-greedy mode".
+`*?` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje, by dopasować go/je zero lub więcej razy "wyłączając tryb chciwy".
 
-`+` Applies to the immediately preceding character(s) and indicates to match
-one or more times.
+`+` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je jeden lub więcej razy.
 
-`+?` Applies to the immediately preceding character(s) and indicates to
-match one or more times in "non-greedy mode".
+`+?`Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je jeden lub więcej razy "wyłączając tryb chciwy".
 
-`?` Applies to the immediately preceding character(s) and indicates to match
-zero or one time.
+`?` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je zero lub jeden raz.
 
-`??` Applies to the immediately preceding character(s) and indicates to
-match zero or one time in "non-greedy mode".
+`??` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je zero lub jeden raz "wyłączając tryb chciwy".
 
-`[aeiou]` Matches a single character as long as that character is in the
-specified set. In this example, it would match "a", "e", "i", "o", or
-"u", but no other characters.
+`[aeiou]` Dopasowuje pojedynczy znak o ile ten znak jest w określonym zestawie. W tym przykładzie dopasowanie dotyczy "a", "e", "i", "o" lub "u", ale nie dopasowuje żadnych innych znaków.
 
-`[a-z0-9]` You can specify ranges of characters using the minus sign. This
-example is a single character that must be a lowercase letter or a
-digit.
+`[a-z0-9]` Możesz określić zakresy znaków, używając znaku minus. Ten przykład to pojedynczy znak, który musi być małą literą lub cyfrą.
 
-`[^A-Za-z]` When the first character in the set notation is a caret, it
-inverts the logic. This example matches a single character that is
-anything *other than* an uppercase or lowercase letter.
+`[^A-Za-z]` Gdy pierwszym znakiem w zapisie zestawu znaków jest kareta (daszek), to oznacza on zaprzeczenie. Ten przykład odpowiada pojedynczemu znakowi, który jest *czymś innym* niż duże lub małe litery.
 
-`( )` When parentheses are added to a regular expression, they are ignored
-for the purpose of matching, but allow you to extract a particular
-subset of the matched string rather than the whole string when using
-`findall()`.
+`( )` Gdy nawiasy okrągłe są dodawane do wyrażenia regularnego, to są one ignorowane podczas dopasowania, ale pozwalają na wyodrębnienie konkretnego podzbioru dopasowanego napisu, a nie całego ciągu znaków,  podczas użycia `findall()`.
 
-`\b` Matches the empty string, but only at the start or end of a word.
+`\b` Dopasowuje pusty ciąg znaków, ale tylko na początku lub na końcu wyrazu.
 
-`\B` Matches the empty string, but not at the start or end of a word.
+`\B` Dopasowuje pusty ciąg znaków, ale ani na początku ani na końcu słowa.
 
-`\d` Matches any decimal digit; equivalent to the set [0-9].
+`\d` Dopasowuje dowolną cyfrę dziesiętną; odpowiednik [0-9].
 
-`\D` Matches any non-digit character; equivalent to the set [^0-9].
+`\D` Dopasowuje dowolny znak niebędący cyfrą; odpowiednik zestawu [^0-9].
 
-Bonus section for Unix / Linux users
-------------------------------------
+Dodatek dla użytkowników systemu Unix / Linux
+---------------------------------------------
 
-Support for searching files using regular expressions was built into the
-Unix operating system since the 1960s and it is available in nearly all
-programming languages in one form or another.
+Wsparcie wyszukiwania plików za pomocą wyrażeń regularnych zostało wbudowane w system operacyjny Unix w latach 60. i jest dostępne w prawie wszystkich językach programowania w takiej czy innej formie.
 
 \index{grep}
 
-As a matter of fact, there is a command-line program built into Unix
-called *grep* (Generalized Regular Expression Parser)
-that does pretty much the same as the `search()` examples in
-this chapter. So if you have a Macintosh or Linux system, you can try
-the following commands in your command-line window.
+W rzeczywistości Unix posiada wbudowany program wiersza poleceń o nazwie *grep* (Generalized Regular Expression Parser, czyli uogólniony parser wyrażeń regularnych), który robi prawie to samo, co przykłady z `search()` umieszczone w tym rozdziale. Więc jeśli masz system Macintosh lub Linux, możesz spróbować następujących komend w oknie linii poleceń.
 
 ~~~~ {.bash}
 $ grep '^From:' mbox-short.txt
@@ -480,26 +393,14 @@ From: zqian@umich.edu
 From: rjlowe@iupui.edu
 ~~~~
 
-This tells `grep` to show you lines that start with the
-string "From:" in the file *mbox-short.txt*. If you
-experiment with the `grep` command a bit and read the
-documentation for `grep`, you will find some subtle
-differences between the regular expression support in Python and the
-regular expression support in `grep`. As an example,
-`grep` does not support the non-blank character
-`\S` so you will need to use the slightly more complex set
-notation `[^ ]`, which simply means match a character that is anything
-other than a space.
+Powyższa linia mówi programowi `grep` żeby pokazał Ci linie, które zaczynają się od ciągu znaków "From:" w pliku *mbox-short.txt*. Jeśli trochę poeksperymentujesz z komendą `grep` i przeczytasz dokumentację tego programu, znajdziesz kilka subtelnych różnic między obsługą wyrażeń regularnych w Pythonie a obsługą wyrażeń regularnych w `grep`. Dla przykładu, `grep` nie obsługuje `\S` oznaczającego niebiały znak, więc będziesz musiał użyć nieco bardziej złożonego zapisu (w uproszczeniu) `[^ \n\r\t]`, co po prostu oznacza dopasowanie znaku, który jest czymś innym niż spacja, znaki końca linii lub tabulacja.
 
-Debugging
----------
+Debugowanie
+-----------
 
-Python has some simple and rudimentary built-in documentation that can
-be quite helpful if you need a quick refresher to trigger your memory
-about the exact name of a particular method. This documentation can be
-viewed in the Python interpreter in interactive mode.
+Python ma wbudowaną prostą i podstawową dokumentację, która może być bardzo pomocna, jeśli musisz szybko przypomnieć sobie nazwę danej metody. Dokumentacja ta może być przeglądana w trybie interaktywnym w interpreterze Pythona.
 
-You can bring up an interactive help system using `help()`.
+Możesz wywołać interaktywny system pomocy używając `help()`.
 
 ~~~~ {.python}
 >>> help()
@@ -507,8 +408,9 @@ You can bring up an interactive help system using `help()`.
 help> modules
 ~~~~
 
-If you know what module you want to use, you can use the
-`dir()` command to find the methods in the module as follows:
+Aby wyjść z systemu pomocy wpisz `quit`.
+
+Jeśli wiesz, jakiego modułu chcesz użyć, możesz użyć polecenia `dir()`  w następujący sposób, tak aby znaleźć dostępne metody w tym module:
 
 ~~~~ {.python .trinket}
 >>> import re
@@ -518,11 +420,10 @@ If you know what module you want to use, you can use the
 'sre_parse', 'sub', 'subn', 'sys', 'template']
 ~~~~
 
-You can also get a small amount of documentation on a particular method
-using the dir command.
+Możesz również uzyskać niewielką część dokumentacji na temat określonej metody za pomocą polecenia `help`.
 
-~~~~ {.python .trinket}
->>> help (re.search)
+~~~~ {.python}
+>>> help(re.search)
 Help on function search in module re:
 
 search(pattern, string, flags=0)
@@ -531,77 +432,61 @@ search(pattern, string, flags=0)
 >>>
 ~~~~
 
-The built-in documentation is not very extensive, but it can be helpful
-when you are in a hurry or don't have access to a web browser or search
-engine.
+Wbudowana dokumentacja nie jest zbyt obszerna, ale może być pomocna, gdy potrzebujesz coś szybko znaleźć lub nie masz dostępu do przeglądarki internetowej lub wyszukiwarki.
 
-Glossary
---------
+Słowniczek
+----------
 
-brittle code
-:   Code that works when the input data is in a particular format but is
-    prone to breakage if there is some deviation from the correct
-    format. We call this "brittle code" because it is easily broken.
+kruchy kod
+:   Kod programu, który działa tylko wtedy, gdy dane wejściowe są w określonym formacie, ale jest podatny na wysypanie całego programu, jeśli wystąpią jakieś odchylenia od właściwego formatu. Nazywamy to "kruchym kodem", ponieważ można go łatwo złamać.
 
-greedy matching
-:   The notion that the `+` and `*` characters in a regular expression
-    expand outward to match the largest possible string.
+chciwe dopasowanie
+:   Pojęcie oznaczające, że znaki `+` i `*` w wyrażeniu regularnym rozszerzają się na zewnątrz, tak aby dopasować jak największy możliwy ciąg znaków.
 \index{greedy}
 \index{greedy matching}
 
 grep
-:   A command available in most Unix systems that searches through text
-    files looking for lines that match regular expressions. The command
-    name stands for "Generalized Regular Expression Parser".
+:   Polecenie dostępne w większości systemów unixowych, które przeszukuje pliki tekstowe w poszukiwaniu linii pasujących do wyrażeń regularnych. Nazwa komendy oznacza "Generalized Regular Expression Parser", czyli uogólniony parser wyrażeń regularnych.
 \index{grep}
 
-regular expression
-:   A language for expressing more complex search strings. A regular
-    expression may contain special characters that indicate that a
-    search only matches at the beginning or end of a line or many other
-    similar capabilities.
+wyrażenie regularne
+:   Język służący do tworzenia bardziej złożonych ciągów wyszukiwania. Wyrażenie regularne może zawierać znaki specjalne, które wskazują, że szukane wyrażenie pasuje tylko do początku lub końca wiersza lub wielu innych podobnych możliwości.
 
-wild card
-:   A special character that matches any character. In regular
-    expressions the wild-card character is the period.
+wieloznacznik
+:   Znak specjalny, który pasuje do dowolnego znaku. W wyrażeniach regularnych znakiem wieloznacznika jest kropka.
 \index{wild card}
 
-Exercises
+Ćwiczenia
 ---------
 
-**Exercise 1: Write a simple program to simulate the operation of the
-`grep` command on Unix. Ask the user to enter a regular
-expression and count the number of lines that matched the regular
-expression:**
+**Ćwiczenie 1: Napisz prosty program symulujący działanie unixowej komendy `grep`. Poproś użytkownika o wpisanie wyrażenia regularnego i zliczenie linii, które pasowały do wyrażenia regularnego:**
 
 ~~~~
 $ python grep.py
-Enter a regular expression: ^Author
-mbox.txt had 1798 lines that matched ^Author
+Podaj wyrażenie regularne: ^Author
+mbox.txt ma 1798 linii, które pasują do ^Author
 
 $ python grep.py
-Enter a regular expression: ^X-
-mbox.txt had 14368 lines that matched ^X-
+Podaj wyrażenie regularne: ^X-
+mbox.txt ma 14368 linii, które pasują do ^X-
 
 $ python grep.py
-Enter a regular expression: java$
-mbox.txt had 4175 lines that matched java$
+Podaj wyrażenie regularne: java$
+mbox.txt ma 4175 linii, które pasują do java$
 ~~~~
 
-**Exercise 2: Write a program to look for lines of the form:**
+**Ćwiczenie 2: Napisz program zajdujący linie w postaci:**
 
 ~~~~
 New Revision: 39772
 ~~~~
 
-**Extract the number from each of the lines using a regular expression
-and the `findall()` method. Compute the average of the
-numbers and print out the average as an integer.**
+**Wyodrębnij liczbę z każdej pasującej linii za pomocą wyrażenia regularnego i metody `findall()`. Oblicz średnią z tych liczb i wypisz ją w postaci liczby całkowitej.**
 
 ~~~~
-Enter file:mbox.txt
+Podaj nazwę pliku: mbox.txt
 38549
 
-Enter file:mbox-short.txt
+Podaj nazwę pliku: mbox-short.txt
 39756
 ~~~~

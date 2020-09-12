@@ -1,6 +1,6 @@
-# Search for lines that start with 'Details: rev='
-# followed by numbers and '.'
-# Then print the number if it is greater than zero
+# Szukaj linii, które mają postać 'Details:...rev='
+# i są zakończone liczbą
+# Jeśli liczba jest większa niż zero, to wypisz jej wartość
 import re
 hand = open('mbox-short.txt')
 for line in hand:
