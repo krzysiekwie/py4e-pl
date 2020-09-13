@@ -24,7 +24,7 @@ Polish translation progress
 | `09-dictionaries.mkd`  | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `10-tuples.mkd`        | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `11-regex.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `12-network.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `12-network.mkd`       | ☒    | ☒   |       | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `13-web.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `14-objects.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
@@ -33,6 +33,8 @@ Polish translation progress
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | links to code repo...  |      |      |       |      |         |          |         |            |       |
 | English translation of index keywords |         |            |       |
+| Functions and methods with `()` |         |            |       |
+| Inline code within grave accents |         |            |       |
 
 URLs to translated trinkets are in `trinket3-pl-urls.md`.
 

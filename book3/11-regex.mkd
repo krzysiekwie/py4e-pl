@@ -83,7 +83,7 @@ Dobrze jest też myśleć o plusie i gwiazdce jako o znakach "ekspansywnych". Na
 From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
 ~~~~
 
-Poprzez dodanie kolejnego znaku można też wskazać, że znak gwiazdki lub plusa nie ma być aż tak "chciwy". Więcej informacji na temat wyłączania chciwego zachowania tych znaków znajduje się w dokumentacji.
+Poprzez dodanie kolejnego znaku można też wskazać, że znak gwiazdki lub plusa nie ma być aż tak "zachłanny". Więcej informacji na temat wyłączania zachłannego zachowania tych znaków znajduje się w dokumentacji.
 
 \index{greedy}
 
@@ -275,7 +275,7 @@ Kiedy uruchamiamy program, otrzymujemy następujący wynik:
 ...
 ~~~~
 
-Pamiętaj, że `[0-9]+` jest "chciwy", więc zanim wydobędziemy te cyfry, to stara się on uzyskać jak największy ciąg cyfr. To "chciwe" zachowanie jest powodem, dla którego otrzymujemy wszystkie pięć cyfr dla każdej liczby. Biblioteka wyrażeń regularnych przeszukuje w obu kierunkach tak długo aż napotka na coś innego niż cyfra albo na początek lub koniec wiersza.
+Pamiętaj, że `[0-9]+` jest "zachłanne", więc zanim wydobędziemy te cyfry, to stara się on uzyskać jak największy ciąg cyfr. To "zachłanne" zachowanie jest powodem dla którego otrzymujemy wszystkie pięć cyfr dla każdej liczby. Biblioteka wyrażeń regularnych przeszukuje w obu kierunkach tak długo aż napotka na coś innego niż cyfra albo na początek lub koniec wiersza.
 
 Teraz możemy użyć wyrażeń regularnych, aby powtórzyć ćwiczenie z wcześniejszej części książki, w której byliśmy zainteresowani porą dnia każdej wiadomości. Szukaliśmy linii w postaci:
 
@@ -350,15 +350,15 @@ Podczas gdy to tylko zarysowaliśmy niewielki zakres wyrażeń regularnych, to j
 
 `*` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje, by dopasować go/je zero lub więcej razy.
 
-`*?` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje, by dopasować go/je zero lub więcej razy "wyłączając tryb chciwy".
+`*?` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje, by dopasować go/je zero lub więcej razy "wyłączając tryb zachłanny".
 
 `+` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je jeden lub więcej razy.
 
-`+?`Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je jeden lub więcej razy "wyłączając tryb chciwy".
+`+?`Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je jeden lub więcej razy "wyłączając tryb zachłanny".
 
 `?` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je zero lub jeden raz.
 
-`??` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je zero lub jeden raz "wyłączając tryb chciwy".
+`??` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je zero lub jeden raz "wyłączając tryb zachłanny".
 
 `[aeiou]` Dopasowuje pojedynczy znak o ile ten znak jest w określonym zestawie. W tym przykładzie dopasowanie dotyczy "a", "e", "i", "o" lub "u", ale nie dopasowuje żadnych innych znaków.
 
@@ -437,10 +437,7 @@ Wbudowana dokumentacja nie jest zbyt obszerna, ale może być pomocna, gdy potrz
 Słowniczek
 ----------
 
-kruchy kod
-:   Kod programu, który działa tylko wtedy, gdy dane wejściowe są w określonym formacie, ale jest podatny na wysypanie całego programu, jeśli wystąpią jakieś odchylenia od właściwego formatu. Nazywamy to "kruchym kodem", ponieważ można go łatwo złamać.
-
-chciwe dopasowanie
+dopasowanie zachłanne
 :   Pojęcie oznaczające, że znaki `+` i `*` w wyrażeniu regularnym rozszerzają się na zewnątrz, tak aby dopasować jak największy możliwy ciąg znaków.
 \index{greedy}
 \index{greedy matching}
@@ -449,12 +446,15 @@ grep
 :   Polecenie dostępne w większości systemów unixowych, które przeszukuje pliki tekstowe w poszukiwaniu linii pasujących do wyrażeń regularnych. Nazwa komendy oznacza "Generalized Regular Expression Parser", czyli uogólniony parser wyrażeń regularnych.
 \index{grep}
 
-wyrażenie regularne
-:   Język służący do tworzenia bardziej złożonych ciągów wyszukiwania. Wyrażenie regularne może zawierać znaki specjalne, które wskazują, że szukane wyrażenie pasuje tylko do początku lub końca wiersza lub wielu innych podobnych możliwości.
+kruchy kod
+:   Kod programu, który działa tylko wtedy, gdy dane wejściowe są w określonym formacie, ale jest podatny na wysypanie całego programu, jeśli wystąpią jakieś odchylenia od właściwego formatu. Nazywamy to "kruchym kodem", ponieważ można go łatwo złamać.
 
 wieloznacznik
 :   Znak specjalny, który pasuje do dowolnego znaku. W wyrażeniach regularnych znakiem wieloznacznika jest kropka.
 \index{wild card}
+
+wyrażenie regularne
+:   Język służący do tworzenia bardziej złożonych ciągów wyszukiwania. Wyrażenie regularne może zawierać znaki specjalne, które wskazują, że szukane wyrażenie pasuje tylko do początku lub końca wiersza lub wielu innych podobnych możliwości.
 
 Ćwiczenia
 ---------

@@ -19,12 +19,12 @@ while True:
 
 mysock.close()
 
-# Look for the end of the header (2 CRLF)
+# Znajdź koniec nagłówka (2 CRLF)
 pos = picture.find(b"\r\n\r\n")
 print('Header length', pos)
 print(picture[:pos].decode())
 
-# Skip past the header and save the picture data
+# Pomiń nagłówek i zapisz dane obrazu
 picture = picture[pos+4:]
 fhand = open("stuff.jpg", "wb")
 fhand.write(picture)

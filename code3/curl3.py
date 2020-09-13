@@ -1,20 +1,20 @@
 import os
 import urllib.request, urllib.parse, urllib.error
 
-print('Please enter a URL like http://data.pr4e.org/cover3.jpg')
+print('Podaj adres URL podobny do http://data.pr4e.org/cover3.jpg')
 urlstr = input().strip()
 img = urllib.request.urlopen(urlstr)
 
-# Get the last "word"
+# Pobierz ostatnie "słowo"
 words = urlstr.split('/')
 fname = words[-1]
 
-# Don't overwrite the file
+# Nie nadpisuj pliku
 if os.path.exists(fname):
-    if input('Replace ' + fname + ' (Y/n)?') != 'Y':
-        print('Data not copied')
+    if input('Nadpisać ' + fname + ' (T/n)?') != 'T':
+        print('Dane nie zostały skopiowane')
         exit()
-    print('Replacing', fname)
+    print('Nadpisywanie', fname)
 
 fhand = open(fname, 'wb')
 size = 0
@@ -24,5 +24,5 @@ while True:
     size = size + len(info)
     fhand.write(info)
 
-print(size, 'characters copied to', fname)
+print('Skopiowano', size, 'znaków do', fname)
 fhand.close()
