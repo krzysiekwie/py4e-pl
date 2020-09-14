@@ -13,7 +13,7 @@ data = '''
 ]'''
 
 info = json.loads(data)
-print('User count:', len(info))
+print('Liczba użytkowników:', len(info))
 
 for item in info:
     print('Name', item['name'])

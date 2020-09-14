@@ -1,100 +1,67 @@
-Using Web Services
-==================
+Korzystanie z usług sieciowych
+==============================
 
-Once it became easy to retrieve documents and parse documents over HTTP
-using programs, it did not take long to develop an approach where we
-started producing documents that were specifically designed to be
-consumed by other programs (i.e., not HTML to be displayed in a
-browser).
+Kiedy już pozyskiwanie dokumentów przez HTTP i ich przetwarzenie stało się łatwe, ludziom nie zajęło dużo czasu opracowanie podejścia, w którym zaczęli tworzyć dokumenty specjalnie zaprojektowane do użytku przez inne programy (tj. coś innego niż HTML, który ma być wyświetlany w przeglądarce).
 
-There are two common formats that we use when exchanging data across the
-web. eXtensible Markup Language (XML) has been in use for a very
-long time and is best suited for exchanging document-style data. When
-programs just want to exchange dictionaries, lists, or other internal
-information with each other, they use JavaScript Object Notation (JSON)
-(see [www.json.org](http://www.json.org)). We will look at both formats.
+Istnieją dwa popularne formaty, których używamy przy wymianie danych w sieci. eXtensible Markup Language (XML, z ang. rozszerzalny język znaczników) jest używany od bardzo dawna i najlepiej nadaje się do wymiany danych w formie dokumentów. Gdy programy chcą tylko wymieniać ze sobą słowniki, listy lub inne wewnętrzne informacje, używają JavaScript Object Notation (JSON, z ang. notacja obiektowa JavaScript, patrz [www.json.org](https://www.json.org)). Przyjrzymy się obu formatom.
 
-eXtensible Markup Language - XML
---------------------------------
+XML
+---
 
-XML looks very similar to HTML, but XML is more structured than HTML.
-Here is a sample of an XML document:
+XML wygląda bardzo podobnie do HTMLa, ale XML jest bardziej uporządkowany. Oto fragment dokumentu XML:
 
 ~~~~ {.xml}
-<person>
-  <name>Chuck</name>
-  <phone type="intl">
+<osoba>
+  <imie>Chuck</imie>
+  <telefon typ="miedzynar">
     +1 734 303 4456
-  </phone>
-  <email hide="yes" />
-</person>
+  </telefon>
+  <email ukryty="tak" />
+</osoba>
 ~~~~
 
-Each pair of opening (e.g., `<person>`) and closing tags
-(e.g., `</person>`) represents a *element* or *node* with the same
-name as the tag (e.g., `person`). Each element can have some text,
-some attributes (e.g., `hide`), and other nested elements. If an XML
-element is empty (i.e., has no content), then it may be depicted by
-a self-closing tag (e.g., `<email />`).
+Każda para otwierająca (np. `<osoba>`) i zamykająca tagi (np. `</osoba>`) reprezentuje *element* lub *węzeł* (ang. node) o tej samej nazwie co znacznik (np. `osoba`). Każdy element może mieć jakiś tekst, pewne atrybuty (np. `ukryty`) i inne zagnieżdżone elementy. Jeśli element XML jest pusty (tzn. nie ma treści), to może być przedstawiony za pomocą samozamykającego się tagu (np. `<email />`).
 
-Often it is helpful to think of an XML document as a tree structure
-where there is a top element (here: `person`), and other tags (e.g.,
-`phone`) are drawn as *children* of their *parent* elements.
+Często pomocne jest myślenie o dokumencie XML jako o strukturze drzewa, w którym znajduje się najwyższy element (tutaj: `osoba`), a inne znaczniki (np. `telefon`) są oznaczane jako *dzieci* elmenetów będących ich *rodzicami*.
 
-![A Tree Representation of XML](height=2.0in@../images/xml-tree)
+![Drzewiasta reprezentacja XMLa](height=2.0in@../images/xml-tree)
 
-Parsing XML
------------
+Parsowanie XML
+--------------
 
 \index{ElementTree}
 \index{ElementTree!fromstring}
 \index{ElementTree!find}
 
-Here is a simple application that parses some XML and extracts some data
-elements from the XML:
+Oto prosta aplikacja, która przetwarza część XMLa i wyodrębnia z niego niektóre elementy danych:
 
-\VerbatimInput{../code3/xml1.py} 
+\VerbatimInput{../code3/xml1.py}
 
-The triple single quote (`'''`), as well as the triple double quote (`"""`), allow for the creation of strings that span multiple lines.
+Potrójny apostrof (`'''`), jak również potrójny cudzysłów (`"""`), pozwalają na tworzenie napisów, które obejmują wiele linii.
 
-Calling `fromstring` converts the string representation of
-the XML into a "tree" of XML elements. When the XML is in a tree,
-we have a series of methods we can call to extract portions
-of data from the XML string.  The `find` function searches
-through the XML tree and retrieves the element that matches
-the specified tag.
+Wywołanie `fromstring` zamienia reprezentację XMLa z ciągu znaków na "drzewo" elementów XML. Gdy element XML znajduje się w drzewie, posiadamy szereg metod, które możemy wywołać by wyodrębnić interesujące nas dane z ciągu znaków będącego XMLem. Funkcja `find` przeszukuje drzewo XML i wyciąga element, który pasuje do określonego znacznika.
 
 ~~~~
-Name: Chuck
-Attr: yes
+Imię: Chuck
+Attr: tak
 ~~~~
 
-Using an XML parser such as `ElementTree` has the advantage
-that while the XML in this example is quite simple, it turns out there
-are many rules regarding valid XML, and using `ElementTree`
-allows us to extract data from XML without worrying about the rules of
-XML syntax.
+Użycie parsera XML takiego jak `ElementTree` ma tę zaletę, że choć XML w tym przykładzie jest dość prosty, to okazuje się, że istnieje wiele reguł dotyczących poprawności składni XML, a użycie `ElementTree` pozwala nam na wydobycie danych z XML bez martwienia się o te reguły.
 
-Looping through nodes
----------------------
+Przechodzenie w pętli po węzłach
+--------------------------------
 
 \index{ElementTree!findall}
 \index{ElementTree!get}
 
-Often the XML has multiple nodes and we need to write a loop to process
-all of the nodes. In the following program, we loop through all of the
-`user` nodes:
+Często XML ma wiele węzłów i musimy napisać pętlę, tak by je wszystkie przetworzyć. Przyjmijmy, że mamy do przeanalizowania prostą bazę użytkowników, która jest zapisana w postaci XMLa. W poniższym programie przechodzimy w pętli przez wszystkie elementy o nazwie `user`:
 
-\VerbatimInput{../code3/xml2.py} 
+\VerbatimInput{../code3/xml2.py}
 
-The `findall` method retrieves a Python list of subtrees that
-represent the `user` structures in the XML tree. Then we can
-write a `for` loop that looks at each of the user nodes, and
-prints the `name` and `id` text elements as well
-as the `x` attribute from the `user` node.
+Metoda `findall` zwraca Pythonową listę poddrzew, które reprezentują struktury `user` w drzewie XML. Następnie możemy napisać pętlę `for`, która analizuje każdy węzeł o nazwie `user` i wypisuje jego elementy tekstowe `name` i `id` oraz atrybut `x`.
 
 ~~~~
-User count: 2
+Liczba użytkowników: 2
 Name Chuck
 Id 001
 Attribute 2
@@ -103,9 +70,7 @@ Id 009
 Attribute 7
 ~~~~
 
-It is important to include all parent level elements in the `findall`
-statement except for the top level element (e.g., `users/user`).
-Otherwise, Python will not find any desired nodes.
+Ważne jest, by uwzględnić wszystkie elementy poziomu nadrzędnego w instrukcji `findall` z wyjątkiem elementu najwyższego poziomu (np. `users/user`). W przeciwnym razie, Python nie znajdzie żadnych szukanych przez nas węzłów.
 
 ~~~~ {.python}
 import xml.etree.ElementTree as ET
@@ -127,95 +92,63 @@ input = '''
 stuff = ET.fromstring(input)
 
 lst = stuff.findall('users/user')
-print('User count:', len(lst))
+print('Liczba użytkowników:', len(lst))
 
 lst2 = stuff.findall('user')
-print('User count:', len(lst2))
+print('Liczba użytkowników:', len(lst2))
 ~~~~
 
-`lst` stores all `user` elements that are nested within their `users`
-parent. `lst2` looks for `user` elements that are not nested within
-the top level `stuff` element where there are none.
+Zmienna `lst` przechowuje wszystkie elementy `user`, które są zagnieżdżone w ich rodzicu, tj. w `users`. Zmienna `lst2` szuka elementów `user`, które miałyby być zagnieżdżone w obrębie najwyższego poziomu, czyli `staff`, ale tam nie ma żadnego takiego węzła.
 
 ~~~~
-User count: 2
-User count: 0
+Liczba użytkowników: 2
+Liczba użytkowników: 0
 ~~~~
 
-JavaScript Object Notation - JSON
----------------------------------
+JSON
+----
 
 \index{JSON}
 \index{JavaScript Object Notation}
 
-The JSON format was inspired by the object and array format used in the
-JavaScript language. But since Python was invented before JavaScript,
-Python's syntax for dictionaries and lists influenced the syntax of
-JSON. So the format of JSON is nearly identical to a combination of
-Python lists and dictionaries.
+Format JSON został zainspirowany obiektowym i tablicowym formatem używanym w języku JavaScript. Ponieważ Python został wymyślony przed JavaScriptem, składnia Pythona dla słowników i list wpłynęła na składnię JSON. Format JSON jest więc prawie identyczny z połączeniem list i słowników Pythona.
 
-Here is a JSON encoding that is roughly equivalent to the simple XML
-from above:
+Oto kodowanie JSON, które w przybliżeniu odpowiada prostemu XMLowi, który widzieliśmy wcześniej:
 
 ~~~~ {.json}
 {
-  "name" : "Chuck",
-  "phone" : {
-    "type" : "intl",
-    "number" : "+1 734 303 4456"
+  "imie" : "Chuck",
+  "telefon" : {
+    "typ" : "miedzynar",
+    "numer" : "+1 734 303 4456"
    },
    "email" : {
-     "hide" : "yes"
+     "ukryty" : "tak"
    }
 }
 ~~~~
 
-You will notice some differences. First, in XML, we can add attributes
-like "intl" to the "phone" tag. In JSON, we simply have key-value pairs.
-Also the XML "person" tag is gone, replaced by a set of outer curly
-braces.
+Zapewne zauważysz pewne różnice. Po pierwsze, w XMLu możemy dodać do znacznika "telefon" atrybuty takie jak "miedzynar". W JSON mamy po prostu pary klucz-wartość. Również znacznik XML "osoba" zniknął i został zastąpiony zestawem zewnętrznych nawiasów klamrowych.
 
-In general, JSON structures are simpler than XML because JSON has fewer
-capabilities than XML. But JSON has the advantage that it maps
-*directly* to some combination of dictionaries and lists.
-And since nearly all programming languages have something equivalent to
-Python's dictionaries and lists, JSON is a very natural format to have
-two cooperating programs exchange data.
+Ogólnie rzecz biorąc, struktury JSON są prostsze niż XML, ponieważ JSON ma mniej możliwości niż XML. Ale JSON ma tę zaletę, że mapuje *bezpośrednio* do jakiegoś połączenia słowników i list. A ponieważ prawie wszystkie języki programowania mają coś w rodzaju słowników i list Pythona, JSON jest bardzo naturalnym formatem wymiany danych pomiędzy dwoma współpracującymi ze sobą programami.
 
-JSON is quickly becoming the format of choice for nearly all data
-exchange between applications because of its relative simplicity
-compared to XML.
+JSON szybko staje się najczęściej wybieranym formatem dla prawie całej wymiany danych pomiędzy aplikacjami, właśnie ze względu na swoją relatywną prostotę w porównaniu do XMLa.
 
-Parsing JSON
-------------
+Parsowanie JSONa
+----------------
 
-We construct our JSON by nesting dictionaries and lists as
-needed. In this example, we represent a list of users where each user is
-a set of key-value pairs (i.e., a dictionary). So we have a list of
-dictionaries.
+Budujemy nasz JSON poprzez zagnieżdżanie słowników i list w zależności od naszych potrzeb. W poniższym przykładzie przedstawiamy listę użytkowników, gdzie każdy użytkownik jest zestawem par klucz-wartość (czyli słownikiem). Mamy więc listę słowników.
 
-In the following program, we use the built-in `json`
-library to parse the JSON and read through the data. Compare this
-closely to the equivalent XML data and code above. The JSON has less
-detail, so we must know in advance that we are getting a list and that
-the list is of users and each user is a set of key-value pairs. The JSON
-is more succinct (an advantage) but also is less self-describing (a
-disadvantage).
+W poniższym programie wykorzystujemy wbudowaną bibliotekę `json` do parsowania JSONa i odczytywania z niego danych. Porównaj kod z wcześniejszym przykładem pracującym na XMLu. JSON ma mniej detali, więc musimy z góry wiedzieć, że otrzymujemy listę i że lista ta składa się z użytkowników, a każdy użytkownik jest zestawem par klucz-wartość. JSON jest bardziej zwięzły (zaleta), ale również mniej samoopisujący się (wada).
 
 \VerbatimInput{../code3/json2.py}
 
-If you compare the code to extract data from the parsed JSON and XML you
-will see that what we get from `json.loads()` is a Python
-list which we traverse with a `for` loop, and each item
-within that list is a Python dictionary. Once the JSON has been parsed,
-we can use the Python index operator to extract the various bits of data
-for each user. We don't have to use the JSON library to dig through the
-parsed JSON, since the returned data is simply native Python structures.
+Jeśli porównasz kod wyodrębniający dane z JSONa i XMLa, to zauważysz w tym przykładzie, że to, co otrzymujemy z `json.loads()`, jest listą Pythona, po której przechodzimy pętlą `for`, a każda pozycja na tej liście jest słownikiem Pythona. Kiedy już JSON zostanie przeparsowany, możemy użyć operatora indeksu, tak by wyodrębnić różne fragmenty danych związane z użytkownikiem. Nie musimy korzystać z biblioteki JSON by przekopać się przez parsowanego JSONa, ponieważ zwracane dane są po prostu natywnymi strukturami Pythona.
 
-The output of this program is exactly the same as the XML version above.
+Wynik powyższego programu jest dokładnie taki sam jak wersji z XMLem.
 
 ~~~~
-User count: 2
+Liczba użytkowników: 2
 Name Chuck
 Id 001
 Attribute 2
@@ -224,279 +157,147 @@ Id 009
 Attribute 7
 ~~~~
 
-In general, there is an industry trend away from XML and towards JSON
-for web services. Because the JSON is simpler and more directly maps to
-native data structures we already have in programming languages, the
-parsing and data extraction code is usually simpler and more direct when
-using JSON. But XML is more self-descriptive than JSON and so there are
-some applications where XML retains an advantage. For example, most word
-processors store documents internally using XML rather than JSON.
+Ogólnie rzecz biorąc, w obrębie usług sieciowych istnieje branżowy trend polegający na odchodzeniu od XMLa i zmierzaniu w kierunku JSONa. JSON jest prostszy i bardziej bezpośrednio mapuje do natywnych struktur danych, które mamy już w językach programowania, więc kod parsujący JSON i wyodrębniający dane jest w takim przypadku zazwyczaj prostszy i bardziej czytelny. Z drugiej strony, XML jest bardziej samoopisujący się niż JSON, a więc są pewne zastosowania, w których XML zachowuje przewagę. Na przykład większość edytorów tekstu przechowuje dokumenty wewnętrznie przy użyciu XMLa, a nie JSONa.
 
-Application Programming Interfaces
+API – Interfejsy programowania aplikacji
+----------------------------------------
+
+Posiadamy teraz możliwość wymiany danych pomiędzy aplikacjami przy użyciu protokołu HTTP oraz sposób na reprezentowanie skomplikowanych danych, które wysyłamy tam i z powrotem pomiędzy aplikacjami, przy użyciu XMLa lub JSONa.
+
+Następnym krokiem jest rozpoczęcie definiowania i dokumentowania "umów" pomiędzy aplikacjami wykorzystującymi powyższe techniki. Ogólna nazwa takiej umowy pomiędzy aplikacjami to *interfejsy programowania aplikacji* (ang. Application Program Interfaces, API). Kiedy używamy API, zazwyczaj jeden z programów udostępnia zestaw *usług* do wykorzystania przez inne aplikacje i publikuje API (tzn. "zasady"), których należy przestrzegać, by uzyskać dostęp do usług świadczonych przez ten program.
+
+Gdy zaczynamy budować nasze programy, w których działanie obejmuje dostęp do usług świadczonych przez inne programy, nazywamy to podejście *architekturą zorientowaną na usługi* (ang, Service-Oriented Architecture, SOA). Podejście SOA to takie, w którym cała nasza aplikacja korzysta z usług innych aplikacji. Podejście inne niż SOA to takie, w którym aplikacja jest pojedynczą, samodzielną aplikacją, która zawiera cały kod niezbędny do jej implementacji i wdrożenia.
+
+Podczas korzystania z sieci widzimy wiele przykładów SOA. Możemy wejść na stronę internetową i zarezerwować podróże lotnicze, hotele i wypożyczyć samochody, a wszystko to z poziomu jednej strony. Dane dotyczące hoteli nie są przechowywane na serwerach linii lotniczych. Zamiast tego, serwery linii lotniczych kontaktują się z usługami znajdującymi się na serwerach rezerwacji hotelowychm pobierają dane dotyczące hoteli i przedstawiają je użytkownikowi. Kiedy użytkownik wyraża zgodę na dokonanie rezerwacji hotelowej za pomocą strony internetowej linii lotniczych, strona ta korzysta z innej usługi internetowej w systemach rezerwacji hotelowych, tak aby faktycznie dokonać tej rezerwacji. A gdy przychodzi czas, by obciążyć Twoją kartę płatniczą za całą transakcję, w proces ten włączają się jeszcze inne serwery.
+
+![SOA – architektura zorientowana na usługi](height=3.0in@../images/soa)
+
+Architektura zorientowana na usługi ma wiele zalet, w tym: (1) zawsze przechowujemy tylko jedną kopię danych (jest to szczególnie ważne w przypadku rezerwacji hotelowych, w których nie chcemy wykonywać nadmiernych i niewykonalnych zobowiązań) oraz (2) właściciele danych mogą ustalić zasady korzystania z ich danych. Dzięki tym zaletom, system SOA musi być starannie zaprojektowany, tak aby działał wydajnie i spełniał potrzeby użytkownika.
+
+Kiedy aplikacja udostępnia przez internet zestaw usług w swoim API, nazywamy to *usługą sieciową* (ang. web service).
+
+Bezpieczeństwo i korzystanie z API
 ----------------------------------
-
-We now have the ability to exchange data between applications using
-HyperText Transport Protocol (HTTP) and a way to represent complex data
-that we are sending back and forth between these applications using
-eXtensible Markup Language (XML) or JavaScript Object Notation (JSON).
-
-The next step is to begin to define and document "contracts" between
-applications using these techniques. The general name for these
-application-to-application contracts is *Application Program
-Interfaces* (APIs). When we use an API, generally one program
-makes a set of *services* available for use by other
-applications and publishes the APIs (i.e., the "rules") that must be
-followed to access the services provided by the program.
-
-When we begin to build our programs where the functionality of our
-program includes access to services provided by other programs, we call
-the approach a *Service-oriented architecture* (SOA). A
-SOA approach is one where our overall application makes use of the
-services of other applications. A non-SOA approach is where the
-application is a single standalone application which contains all of the
-code necessary to implement the application.
-
-We see many examples of SOA when we use the web. We can go to a single
-web site and book air travel, hotels, and automobiles all from a single
-site. The data for hotels is not stored on the airline computers.
-Instead, the airline computers contact the services on the hotel
-computers and retrieve the hotel data and present it to the user. When
-the user agrees to make a hotel reservation using the airline site, the
-airline site uses another web service on the hotel systems to actually
-make the reservation. And when it comes time to charge your credit card
-for the whole transaction, still other computers become involved in the
-process.
-
-![Service-oriented architecture](height=3.0in@../images/soa)
-
-A Service-oriented architecture has many advantages, including: (1) we
-always maintain only one copy of data (this is particularly important
-for things like hotel reservations where we do not want to over-commit)
-and (2) the owners of the data can set the rules about the use of their
-data. With these advantages, an SOA system must be carefully designed to
-have good performance and meet the user's needs.
-
-When an application makes a set of services in its API available over
-the web, we call these *web services*.
-
-Security and API usage
-----------------------
 
 \index{OAuth}
 \index{API!key}
 
-It is quite common that you need an API key to make use of a
-vendor's API. The general idea is that they want to know who is using
-their services and how much each user is using. Perhaps they have free
-and pay tiers of their services or have a policy that limits the number
-of requests that a single individual can make during a particular time
-period.
+Dość często zdarza się, że chcąc skorzystać z API jakiegoś dostawcy, musisz posiadać tzw. klucz API. Ogólna idea jest taka, że dostawcy usług chcą wiedzieć, kto korzysta z ich usług i w jakim stopniu ich używa. Być może mają oni darmowe i płatne wersje swoich usług lub mają politykę ograniczającą liczbę zapytań, które pojedyncza osoba może wysłać w danym odcinku czasu.
 
-Sometimes once you get your API key, you simply include the key as part
-of POST data or perhaps as a parameter on the URL when calling the API.
+Czasami jest tak, że po otrzymaniu klucza API po prostu dołączasz go jako część danych w zapytaniu POST lub jako parametr w adresie URL podczas wywoływania API.
 
-Other times, the vendor wants increased assurance of the source of the
-requests and so they expect you to send cryptographically signed
-messages using shared keys and secrets. A very common technology that is
-used to sign requests over the Internet is called
-*OAuth*. You can read more about the OAuth protocol at
-[www.oauth.net](http://www.oauth.net).
+Innym razem dostawca usług chce mieć większą pewność co do źródła zapytań i z tego powodu oczekuje, że będziesz wysyłał kryptograficznie podpisane wiadomości z wykorzystaniem tzw. współdzielonego klucza i sekretu. Bardzo popularną technologią, która jest używana do podpisywania tego rodzaju zapytań, jest *OAuth*. Więcej o tym protokole możesz przeczytać na stronie [www.oauth.net](https://www.oauth.net).
 
-Thankfully there are a number of convenient
-and free OAuth libraries so you can avoid writing an OAuth
-implementation from scratch by reading the specification. These
-libraries are of varying complexity and have varying degrees of
-richness. The OAuth web site has information about various OAuth
-libraries.
+Na szczęście istnieje wiele wygodnych i darmowych bibliotek OAuth, dzięki czemu możesz uniknąć implementowania OAuth od zera. Biblioteki mają różny stopień skomplikowania i możliwości, a informacje o nich znajdują się na stronie internetowej OAuth.
 
-Glossary
---------
+Słowniczek
+----------
 
 API
-:   Application Program Interface - A contract between applications that
-    defines the patterns of interaction between two application
-    components.
+:   Interfejs programowania aplikacji. Umowa pomiędzy aplikacjami, która określa schematy interakcji pomiędzy dwoma komponentami tych aplikacji.
 \index{API}
 
 ElementTree
-:   A built-in Python library used to parse XML data.
+:   Wbudowana biblioteka Pythona służąca do parsowania danych XML.
 \index{ElementTree}
 
 JSON
-:   JavaScript Object Notation - A format that allows for the markup of
-    structured data based on the syntax of JavaScript Objects.
+:   Notacja obiektowa JavaScript. Format, który pozwala na oznakowanie ustrukturyzowanych danych w oparciu o składnię obiektów JavaScript.
 \index{JSON}
 \index{JavaScript Object Notation}
 
 SOA
-:   Service-Oriented Architecture - When an application is made of
-    components connected across a network.
+:   Architektura zorientowana na usługi. Sytuacja, w której aplikacja składa się z połączonych w sieci komponentów.
 \index{SOA}
 \index{Service Oriented Architecture}
 
 XML
-:   eXtensible Markup Language - A format that allows for the markup of
-    structured data.
+:   Rozszerzalny język znaczników. Format, który pozwala na oznakowanie danych strukturalnych.
 \index{XML}
 \index{eXtensible Markup Language}
 
-Application 1: Google geocoding web service
-----------------------------
+Aplikacja nr 1: usługa sieciowa OpenStreetMap do geokodowania
+-------------------------------------------------------------
 
-\index{Google}
+\index{OpenStreetMap}
 \index{geocoding}
 \index{web service}
 
-Google has an excellent web service that allows us to make use of their
-large database of geographic information. We can submit a geographical
-search string like "Ann Arbor, MI" to their geocoding API and have
-Google return its best guess as to where on a map we might find our
-search string and tell us about the landmarks nearby.
+OpenStreetMap posiada usługę internetową Nominatim, który pozwala nam korzystać z ich dużej bazy danych geograficznych. Możemy przesłać do ich geokodującego API ciąg znaków geograficznych, takich jak "Ann Arbor, MI", i sprawić, że OpenStreetMap zwróci swoje najbardziej prawdopodobne przypuszczenie dotyczące tego, gdzie na mapie możemy odnaleźć nasz ciąg znaków.
 
-The geocoding service is free but rate limited so you cannot make
-unlimited use of the API in a commercial application. But if you have
-some survey data where an end user has entered a location in a
-free-format input box, you can use this API to clean up your data quite
-nicely.
+Usługa geokodowania jest bezpłatna, ale ograniczona ilościowo, więc w aplikacji komercyjnej nie możesz korzystać z API w sposób nieograniczony. Ale jeśli np. masz jakieś dane z ankiety, w której użytkownicy wprowadzili w polu danych jakąś lokalizację w dowolnym formacie, to możesz użyć tego API, tak by całkiem dobrze oczyścić swoje dane.
 
-*When you are using a free API like Google's geocoding API, you
-need to be respectful in your use of these resources. If too many people
-abuse the service, Google might drop or significantly curtail its free
-service.*
+*Używając bezpłatnego API, takiego jak API geokodowania OpenStreetMap, korzystanie z zasobów odbywa się z poszanowaniem pewnych zasad. Jeśli zbyt wiele osób będzie nadużywać danej usługi, to np. OpenStreetMap może zrezygnować z udostępniania bezpłatnej wersji lub znacznie ją ograniczyć.*
 
 \index{rate limiting}
 
-You can read the online documentation for this service, but it is quite
-simple and you can even test it using a browser by typing the following
-URL into your browser:
+Możesz zapoznać się z dokumentacją online dotyczącą tej usługi^[<https://nominatim.org/release-docs/develop/api/Search/>], ale jest ona na tyle prosta, że możesz ją nawet przetestować za pomocą przeglądarki, wpisując w niej następujący adres URL:
 
-[http://maps.googleapis.com/maps/api/geocode/json?address=Ann+Arbor%2C+MI](http://maps.googleapis.com/maps/api/geocode/json?address=Ann+Arbor%2C+MI)
+[`https://nominatim.openstreetmap.org/search.php?q=Ann%20Arbor%2C%20MI&format=geojson&limit=1`](https://nominatim.openstreetmap.org/search.php?q=Ann%20Arbor%2C%20MI&format=geojson&limit=1)
 
-Make sure to unwrap the URL and remove any spaces from the URL before
-pasting it into your browser.
-
-The following is a simple application to prompt the user for a search
-string, call the Google geocoding API, and extract information from the
-returned JSON.
+Poniżej znajduje się prosta aplikacja zachęcająca użytkownika do wyszukania informacji geograficznych o wprowadzonej nazwie miejsca. Aplikacja wywołuje API geokodowania OpenStreetMap i pobiera informacje ze zwróconego JSONa.
 
 \VerbatimInput{../code3/geojson.py} 
 
-The program takes the search string and constructs a URL with the search
-string as a properly encoded parameter and then uses
-`urllib` to retrieve the text from the Google geocoding
-API. Unlike a fixed web page, the data we get depends on the parameters
-we send and the geographical data stored in Google's servers.
+Program pobiera ciąg znaków i konstruuje adres URL zawierający wprowadzony ciąg wyszukiwania jako prawidłowo zakodowany parametr adresu URL, a następnie używa `urllib` do pobrania tekstu z API geokodowania OpenStreetMap. W przeciwieństwie do stałej/niezmiennej strony internetowej, otrzymywane dane zależą od parametrów, które wysyłamy, oraz od danych geograficznych przechowywanych na serwerach OpenStreetMap.
 
-Once we retrieve the JSON data, we parse it with the
-`json` library and do a few checks to make sure that we
-received good data, then extract the information that we are looking
-for.
+Kiedy pobierzemy dane JSON, parsujemy je za pomocą biblioteki `json` i sprawdzamy kilka rzeczy, tak aby upewnić się, że otrzymaliśmy dobre dane, a następnie pobieramy informacje, których szukamy.
 
-The output of the program is as follows (some of the returned JSON has
-been removed):
+Wynik działania programu jest następujący (część zwróconych danych JSON została usunięta):
 
 ~~~~
 $ python3 geojson.py 
-Enter location: Ann Arbor, MI
-Retrieving http://py4e-data.dr-chuck.net/json?address=Ann+Arbor%2C+MI&key=42
-Retrieved 1736 characters
+Podaj nazwę miejsca: Ann Arbor, MI
+Pobieranie https://nominatim.openstreetmap.org/search.php?q=Ann+Arbor%2C+MI&format=geojson&limit=1
+Pobrano 587 znaków
 ~~~~
 
 ~~~~ {.json}
 {
-    "results": [
+    "type": "FeatureCollection",
+    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "features": [
         {
-            "address_components": [
-                {
-                    "long_name": "Ann Arbor",
-                    "short_name": "Ann Arbor",
-                    "types": [
-                        "locality",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Washtenaw County",
-                    "short_name": "Washtenaw County",
-                    "types": [
-                        "administrative_area_level_2",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "Michigan",
-                    "short_name": "MI",
-                    "types": [
-                        "administrative_area_level_1",
-                        "political"
-                    ]
-                },
-                {
-                    "long_name": "United States",
-                    "short_name": "US",
-                    "types": [
-                        "country",
-                        "political"
-                    ]
-                }
-            ],
-            "formatted_address": "Ann Arbor, MI, USA",
-            "geometry": {
-                "bounds": {
-                    "northeast": {
-                        "lat": 42.3239728,
-                        "lng": -83.6758069
-                    },
-                    "southwest": {
-                        "lat": 42.222668,
-                        "lng": -83.799572
-                    }
-                },
-                "location": {
-                    "lat": 42.2808256,
-                    "lng": -83.7430378
-                },
-                "location_type": "APPROXIMATE",
-                "viewport": {
-                    "northeast": {
-                        "lat": 42.3239728,
-                        "lng": -83.6758069
-                    },
-                    "southwest": {
-                        "lat": 42.222668,
-                        "lng": -83.799572
-                    }
-                }
+            "type": "Feature",
+            "properties": {
+                "place_id": 146750,
+                "osm_type": "node",
+                "osm_id": 27023455,
+                "display_name": "Ann Arbor, Washtenaw County, Michigan, 48104, United States of America",
+                "place_rank": 16,
+                "category": "place",
+                "type": "city",
+                "importance": 0.837069344370284,
+                "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
             },
-            "place_id": "ChIJMx9D1A2wPIgR4rXIhkb5Cds",
-            "types": [
-                "locality",
-                "political"
-            ]
+            "bbox": [
+                -83.8912291,
+                42.1081569,
+                -83.5712291,
+                42.4281569
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.7312291,
+                    42.2681569
+                ]
+            }
         }
-    ],
-    "status": "OK"
+    ]
 }
-lat 42.2808256 lng -83.7430378
-Ann Arbor, MI, USA
+szer. geogr. 42.2681569 dł. geogr. -83.7312291
+Ann Arbor, Washtenaw County, Michigan, 48104, United States of America
 ~~~~
 
 ~~~~
-Enter location:
+Podaj nazwę miejsca:
 ~~~~
 
-You can download
-[www.py4e.com/code3/geoxml.py](http://www.py4e.com/code3/geoxml.py) to
-explore the XML variant of the Google geocoding API.
+Możesz pobrać [pl.py4e.com/code3/geoxml.py](https://pl.py4e.com/code3/geoxml.py), aby sprawdzić wariant XML w API geokodowania OpenStreetMap.
 
-**Exercise 1: Change either**
-[**geojson.py**](http://www.py4e.com/code3/geojson.py) **or**
-[**geoxml.py**](http://www.py4e.com/code3/geoxml.py)
-**to print out the two-character country code from the retrieved data.
-Add error checking so your program does not traceback if the country
-code is not there. Once you have it working, search for
-"Atlantic Ocean" and make sure it can handle locations
-that are not in any country.**
+**Część 1: Zmień** [`geojson.py`**`](https://pl.py4e.com/code3/geojson.py) **lub** [`geoxml.py`](https://pl.py4e.com/code3/geoxml.py) **w celu wypisania nazwy stanu z pobranych danych (jeżeli podane miejsce jest w USA). Dodaj sprawdzanie błędów, tak aby Twój program nie wyświetlał danych z mechanizmu traceback w momencie gdy w danych nie ma nazwy stanu. Gdy kod już zacznie działać, wyszukaj "Atlantic Ocean" i upewnij się, że obsługuje on lokalizacje, które nie znajdują się w żadnym kraju.**
+
 
 Application 2: Twitter
 ----------------------

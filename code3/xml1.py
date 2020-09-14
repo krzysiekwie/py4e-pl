@@ -1,14 +1,14 @@
 import xml.etree.ElementTree as ET
 
 data = '''
-<person>
-  <name>Chuck</name>
-  <phone type="intl">
+<osoba>
+  <imie>Chuck</imie>
+  <telefon typ="intl">
     +1 734 303 4456
-  </phone>
-  <email hide="yes" />
-</person>'''
+  </telefon>
+  <email ukryty="tak" />
+</osoba>'''
 
 tree = ET.fromstring(data)
-print('Name:', tree.find('name').text)
-print('Attr:', tree.find('email').get('hide'))
+print('Imię:', tree.find('imie').text)
+print('Attr:', tree.find('email').get('ukryty'))

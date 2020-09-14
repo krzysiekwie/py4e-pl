@@ -16,7 +16,7 @@ input = '''
 
 stuff = ET.fromstring(input)
 lst = stuff.findall('users/user')
-print('User count:', len(lst))
+print('Liczba użytkowników:', len(lst))
 
 for item in lst:
     print('Name', item.find('name').text)
