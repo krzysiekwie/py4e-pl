@@ -4,7 +4,7 @@ import ssl
 
 serviceurl = 'https://nominatim.openstreetmap.org/search.php?'
 
-# Ignore SSL certificate errors
+# Ignoruj błędy związane z certyfikatami SSL
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE

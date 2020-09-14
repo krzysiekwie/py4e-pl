@@ -2,8 +2,8 @@ import urllib.request, urllib.parse, urllib.error
 import oauth
 import hidden
 
-# https://apps.twitter.com/
-# Create App and get the four strings, put them in hidden.py
+# https://developer.twitter.com/en/apps
+# Utwórz aplikację i wstaw w hidden.py cztery ciągi znaków dotyczące OAuth
 
 def augment(url, parameters):
     secrets = hidden.oauth()
@@ -20,7 +20,7 @@ def augment(url, parameters):
 
 
 def test_me():
-    print('* Calling Twitter...')
+    print('* Wywoływanie Twittera...')
     url = augment('https://api.twitter.com/1.1/statuses/user_timeline.json',
                   {'screen_name': 'drchuck', 'count': '2'})
     print(url)
