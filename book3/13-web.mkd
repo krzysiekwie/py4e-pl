@@ -303,7 +303,7 @@ Aplikacja nr 2: Twitter
 
 O czasu gdy API Twittera stało się coraz bardziej wartościowe, Twitter przeszedł z otwartego i publicznego API do takiego, które przy każdym 
 
-Nasz poniższy przykład opiera się na plikach *twurl.py*, *hidden.py*, *oauth.py* i *twitter1.py*, które możesz pobrać z [pl.py4e.com/code3](https://pl.py4e.com/code3); po pobraniu plików, umieść je wszystkie w jednym katalogu.
+Nasze poniższe dwa przykłady opierają się na plikach *twurl.py*, *hidden.py*, *oauth.py*, *twitter1.py* i *twitter2.py*, które możesz pobrać z [pl.py4e.com/code3](https://pl.py4e.com/code3); po pobraniu plików, umieść je wszystkie w jednym katalogu.
 
 Aby móc korzystać z tych programów, musisz mieć konto na Twitterze i autoryzować swój kod Pythona jako aplikację, ustawić klucz, sekret, token i sekret tokena. Wyedytuj plik *hidden.py* i umieść w nim cztery ciągi znaków w odpowiednich miejscach:
 

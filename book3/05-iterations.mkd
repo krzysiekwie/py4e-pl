@@ -125,6 +125,23 @@ Zrobione!
 
 Taki sposób pisania pętli `while` jest dość częsty, ponieważ można sprawdzić warunek w dowolnym miejscu pętli (nie tylko na górze) i można wyrazić warunek stopu w sposób twierdzący ("stop, gdy to się stanie"), a nie w sposób zaprzeczający ("nie przestawaj, dopóki to się nie stanie.").
 
+Jeżeli chcemy natychmiast przerwać taką pętlę, to możemy wysłać sygnał do naszego
+programu poprzez kombinację klawiszy `Ctrl+C`.
+
+~~~~
+$ python3 copytildone1.py
+> halo
+halo
+> nie wiem jak wyjść
+nie wiem jak wyjść
+> ^CTraceback (most recent call last):            # tutaj wciśnięto Ctrl+C
+  File "copytildone1.py", line 2, in <module>
+    line = input('> ')
+KeyboardInterrupt
+
+$ 
+~~~~
+
 Kończenie iteracji przy pomocy `continue`
 -----------------------------------------
 
