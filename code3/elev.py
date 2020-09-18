@@ -1,3 +1,3 @@
-usf = input('Enter the US Floor Number: ')
+usf = input('Wprowadź numer piętra w zapisie amerykańskim: ')
 wf = int(usf) - 1
-print('Non-US Floor Number is',wf)
+print('Numer piętra w zapisinie nie amerykańskim to', wf)

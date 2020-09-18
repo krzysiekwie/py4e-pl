@@ -35,6 +35,7 @@ Polish translation progress
 | English translation of index keywords |         |            |       |
 | Functions and methods with `()` |         |            |       |
 | Inline code within grave accents |         |            |       |
+| `pip install...` -> `pip3 install...` |         |            |       |
 
 URLs to translated trinkets are in `trinket3-pl-urls.md`.
 

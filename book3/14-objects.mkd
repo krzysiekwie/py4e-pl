@@ -1,97 +1,63 @@
+Programowanie obiektowe
+=======================
 
-Object-oriented programming
-===========================
-
-Managing larger programs
-------------------------
+Zarządzanie większymi programami
+--------------------------------
 
 \index{object-oriented}
 
-At the beginning of this book, we came up with four basic programming
-patterns which we use to construct programs:
+Na początku książki omówiliśmy cztery podstawowe wzorce programowania, których używamy do tworzenia programów:
 
-* Sequential code
-* Conditional code (if statements)
-* Repetitive code (loops)
-* Store and reuse (functions)
+* Kod sekwencyjny
+* Kod warunkowy (instrukcje `if`)
+* Kod powtarzalny (pętle)
+* Zapisanie i ponowne użycie (funkcje)
 
-In later chapters, we explored simple variables as well as collection
-data structures like lists, tuples, and dictionaries.
+W późniejszych rozdziałach analizowaliśmy proste zmienne, jak również struktury danych, takie jak listy, krotki i słowniki.
 
-As we build programs, we design data structures and write code
-to manipulate those data structures.   There are many ways to write programs
-and by now, you probably have written some programs that are "not so elegant"
-and other programs that are "more elegant". Even though your programs
-may be small, you are starting to see how there is a bit of art and
-aesthetic to writing code.
+Podczas tworzenia programów, projektujemy struktury danych i piszemy kod służący do operowania tymi strukturami danych. Istnieje wiele sposobów pisania programów i prawdopodobnie do tej pory napisałeś już kilka programów, które nie są "zbyt eleganckie", oraz kilka innych programów, które są "bardziej eleganckie". Mimo to, że Twoje programy mogą być małe, to zapewne zaczynasz dostrzegać, że pisanie kodu wymaga odrobiny sztuki i estetyki.
 
-As programs get to be millions of lines long, it becomes increasingly important
-to write code that is easy to understand.  If you are working on a million-line
-program, you can never keep the entire program in your mind at the same time.
-We need ways to break large programs into multiple smaller pieces so that
-we have less to look at when solving a problem, fix a bug, or add a new feature.
+W miarę jak programy stają się długie na miliony wierszy, coraz ważniejsze staje się pisanie kodu, który jest łatwy do zrozumienia. Jeśli pracujesz nad programem o długości miliona linii, nigdy nie możesz mieć w tym samym czasie w głowie całego programu. Potrzebujemy sposobów, aby rozbić duże programy na wiele mniejszych kawałków, tak abyśmy mieli mniej kodu do przeglądania podczas rozwiązywania jakiegoś problemu, naprawiania błędów lub dodawania nowych funkcji.
 
-In a way, object oriented programming is a way to arrange your code
-so that you can zoom into 50 lines of the code and understand it
-while ignoring the other 999,950 lines of code for the moment.
+W pewnym sensie, programowanie obiektowe jest sposobem na uporządkowanie kodu tak, abyś mógł skupić się na jego 50 liniach i go zrozumieć, ignorując na chwilę pozostałe 999 950 linii kodu.
 
-Getting started
----------------
+Rozpoczęcie pracy
+-----------------
 
-Like many aspects of programming, it is necessary to learn the concepts of
-object oriented programming before you can use them effectively.
-You should approach this chapter as a way to learn some terms and concepts and work
-through a few simple examples to lay a foundation for future learning.
+Podobnie jak w przypadku wielu innych aspektów programowania, konieczne jest poznanie koncepcji programowania obiektowego, zanim będzie można je skutecznie wykorzystać. Powinieneś podejść do tego rozdziału jako do sposobu na poznanie niektórych terminów i pojęć oraz powinieneś popracować z kilkoma prostymi przykładami, aby stworzyć podstawy do dalszej nauki.
 
-The key outcome of this chapter is to have a basic understanding of how
-objects are constructed and how they function and most importantly how
-we make use of the capabilities of objects that are provided to us by Python
-and Python libraries.
+Kluczowym rezultatem tego rozdziału jest podstawowe zrozumienie, jak konstruowane są obiekty i jak one funkcjonują, a co najważniejsze, jak wykorzystujemy możliwości obiektów, które są nam dostarczane przez Pythona i jego biblioteki.
 
-Using objects
--------------
+Korzystanie z obiektów
+----------------------
 
-As it turns out, we have been using objects all along in this book. Python
-provides us with many built-in objects. Here is some simple code
-where the first few lines should feel very simple and natural to you.
+Jak się okazuje, w tej książce przez cały czas używaliśmy obiektów. Python dostarcza nam wiele wbudowanych obiektów. Oto prosty kod, w którym kilka pierwszych linii powinno być dla Ciebie w pewien sposób naturalnych i bardzo łatwych do zrozumienia.
 
 \index{list object}
 
 \VerbatimInput{../code3/party1.py}
 
-Instead of focusing on what these lines accomplish, let's look at what is
-really happening from the point of view of object-oriented programming.
-Don't worry if the following paragraphs don't make any sense the
-first time you read them because we have not yet defined all of these terms.
+Zamiast skupiać się na tym, co te linie ostatecznie realizują, spójrzmy na to, co *naprawdę* dzieje się w tym kodzie z punktu widzenia programowania obiektowego. Nie martw się, jeśli poniższe akapity nie mają dla Ciebie żadnego sensu gdy pierwszy raz je czytasz, ponieważ nie zdefiniowaliśmy jeszcze wszystkich tych terminów.
 
-The first line *constructs* an object of type `list`, the second and third
-lines *call* the `append()` *method*, the fourth line calls
-the `sort()` method, and the fifth line *retrieves* the item at position 0.
+Pierwsza linia *konstruuje* obiekt typu `list`, druga i trzecia *wywołuje metodę* `append()`, czwarta linia wywołuje metodę `sort()`, a piąta linia *pobiera* (*wyszukuje*) element z pozycji 0.
 
-The sixth line calls the `__getitem__()` method in the `stuff` list
-with a parameter of zero.
+Szósta linia wywołuje metodę `__getitem__()` na liście `stuff` z parametrem zero.
 
 ~~~~ {.python}
 print (stuff.__getitem__(0))
 ~~~~
 
-The seventh line is an even more verbose way of retrieving the 0th item
-in the list.
+Siódma linia jest jeszcze bardziej rozwlekłym sposobem na odzyskanie elementu z zerowej pozycji listy `stuff`.
 
 ~~~~ {.python}
 print (list.__getitem__(stuff,0))
 ~~~~
 
-In this code, we call the `__getitem__` method in the `list` class
-and *pass* the list and the item we want retrieved from the list
-as parameters.
+W powyższym fragmencie kodu wywołujemy metodę `__getitem__` w klasie `list` i *przekazujemy* jako parametry listę oraz pozycję elementu, który chcemy pobrać z tej listy.
 
-The last three lines of the program are equivalent, but it is more
-convenient to simply use the square bracket syntax to look up an item at
-a particular position in a list.
+Ostatnie trzy wiersze programu są równoważne, ale wygodniej jest po prostu użyć składni używającej nawiasów kwadratowych, tak aby wyszukać element znajdujący się na konkretnym miejscu listy.
 
-We can take a look at the capabilities of an object by
-looking at the output of the `dir()` function:
+Możemy przyjrzeć się możliwościom danego obiektu, patrząc na wynik funkcji `dir()`:
 
     >>> stuff = list()
     >>> dir(stuff)
@@ -107,34 +73,22 @@ looking at the output of the `dir()` function:
     'insert', 'pop', 'remove', 'reverse', 'sort']
     >>>
 
-The rest of this chapter will define all of the above terms so make sure to
-come back after you finish the chapter and re-read the above paragraphs to
-check your understanding.
+Pozostała część tego rozdziału zdefiniuje wszystkie powyższe terminy, więc pamiętaj by po jego zakończeniu wrócić do tej sekcji i ponownie przeczytać powyższe akapity, tak aby sprawdzić czy je rozumiesz.
 
-Starting with programs
-----------------------
+Zaczynając od programów...
+--------------------------
 
-A program in its most basic form takes some input, does some processing, and
-produces some output.  Our elevator conversion program demonstrates a very
-short but complete program showing all three of these steps.
+Program w swojej najbardziej podstawowej formie pobiera pewną ilość danych wejściowych, przetwarza je i wytwarza pewną ilość danych wyjściowych. Nasz program do konwersji numerów pięter pokazuje bardzo krótki, ale kompletny program pokazujący wszystkie te trzy kroki.
 
 \VerbatimInput{../code3/elev.py}
 
-If we think a bit more about this program, there is the "outside world" and
-the program. The input and output aspects are where the program interacts
-with the outside world.  Within the program we have code and data to accomplish
-the task the program is designed to solve.
+Jeśli zastanowimy trochę dłużej nad tym programem, to zauważymy, że istnieje "świat zewnętrzny" oraz nasz program. Aspekty wejściowe i wyjściowe są tymi miejcami, w których program wchodzi w interakcję ze światem zewnętrznym. Wewnątrz programu mamy kod i dane do wykonania zadania, do którego jest przeznaczony ten program.
 
-![A Program](height=1.20in@../images/program)
+![Program](height=1.20in@../images/program)
 
-One way to think about object-oriented programming is that it separates
-our program into multiple "zones." Each zone contains some code and data
-(like a program) and has well defined interactions with the outside world
-and the other zones within the program.
+Jednym ze sposobów na myślenie o programowaniu obiektowym jest rozdzielenie naszego programu na wiele "stref". Każda strefa zawiera pewien kod i dane (jak program) oraz ma dobrze zdefiniowane interakcje ze światem zewnętrznym i innymi strefami w programie.
 
-If we look back at the link extraction application where we used the
-BeautifulSoup library, we can see a program that is constructed by connecting
-different objects together to accomplish a task:
+Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której korzystaliśmy z biblioteki BeautifulSoup, to możemy zobaczyć program, który jest skonstruowany poprzez złączenie różnych obiektów w celu wykonania tego zadania:
 
 \index{BeautifulSoup}
 \index{HTML}
@@ -142,27 +96,13 @@ different objects together to accomplish a task:
 
 \VerbatimInput{../code3/urllinks.py}
 
-We read the URL into a string and then pass that into `urllib` to retrieve
-the data from the web.  The `urllib` library uses the `socket` library to
-make the actual network connection to retrieve the data. We take the string
-that `urllib` returns and hand it to BeautifulSoup for parsing.
-BeautifulSoup makes use of the object
-`html.parser`^[https://docs.python.org/3/library/html.parser.html] and returns an object.
-We call the `tags()` method on the returned object that returns a dictionary of tag
-objects. We loop through the tags and call the `get()` method for each tag
-to print out the `href` attribute.
+Wczytujemy adres URL do zmiennej przchowującej ciąg znaków, a następnie przekazujemy ją do `urllib`, tak aby pobrać dane z sieci. Biblioteka `urllib` wykorzystuje w rzeczywistości bibliotekę `socket` do nawiązania połączenia z siecią w celu pobrania danych. Bierzemy ciąg znaków, który zwraca `urllib`, i przekazujemy go do BeautifulSoup do dalszej analizy. BeautifulSoup korzysta z obiektu `html.parser`^[https://docs.python.org/3/library/html.parser.html] i w wyniku też zwraca nam obiekt. Na zwróconym obiekcie wywołujemy metodę `tags()`, która zwraca słownik obiektów będących znacznikami. Przechodzimy w pętli po znacznikach i dla każdego znacznika wywołujemy metodę `get()`, tak aby wypisać jego atrybut `href`.
 
-We can draw a picture of this program and how the objects work together.
+Możemy narysować dla tego programu diagram z oznaczeniem jak te obiekty ze sobą współpracują.
 
-![A Program as Network of Objects](height=1.50in@../images/program-oo)
+![Program jako sieć obiektów](height=1.50in@../images/program-oo)
 
-The key here is not to understand perfectly how this program works but to see
-how we build a network of interacting objects and orchestrate the movement
-of information between the objects to create a program.  It is also important
-to note that when you looked at that program several chapters back, you could
-fully understand what was going on in the program without even realizing
-that the program was "orchestrating the movement of data between objects."
-It was just lines of code that got the job done.
+W tym przypadku kluczowe nie jest idealne zrozumienie jak ten program działa, ale zobaczenie jak w celu stworzenia programu budujemy sieć współdziałających ze sobą obiektów i zarządzamy pomiędzy nimi przepływem informacji. Ważne jest również zauważenie, że gdy kilka rozdziałów temu natrafiłeś na ten program, to mogłeś w pełni zrozumieć co się w nim dzieje, nawet nie zdając sobie sprawy z tego, że program "zarządzał przepływem danych pomiędzy obiektami". To były po prostu tylko linie kodu, które wykonały dane zadanie.
 
 Subdividing a problem
 ---------------------
