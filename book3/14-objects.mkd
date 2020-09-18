@@ -104,66 +104,38 @@ Możemy narysować dla tego programu diagram z oznaczeniem jak te obiekty ze sob
 
 W tym przypadku kluczowe nie jest idealne zrozumienie jak ten program działa, ale zobaczenie jak w celu stworzenia programu budujemy sieć współdziałających ze sobą obiektów i zarządzamy pomiędzy nimi przepływem informacji. Ważne jest również zauważenie, że gdy kilka rozdziałów temu natrafiłeś na ten program, to mogłeś w pełni zrozumieć co się w nim dzieje, nawet nie zdając sobie sprawy z tego, że program "zarządzał przepływem danych pomiędzy obiektami". To były po prostu tylko linie kodu, które wykonały dane zadanie.
 
-Subdividing a problem
----------------------
+Dzielenie problemu na mniejsze podproblemy
+------------------------------------------
 
-One of the advantages of the object-oriented approach is that it can
-hide complexity. For example, while we need to know how to use the
-`urllib` and BeautifulSoup code, we do not need to know how those libraries
-work internally. This allows us to focus on the part of the problem we need to
-solve and ignore the other parts of the program.
+Jedną z zalet podejścia obiektowego jest to, że może ono ukryć złożoność jakiegoś problemu. Na przykład, podczas gdy my musimy wiedzieć jak używać biblioteki `urllib` i BeautifulSoup, nie musimy wiedzieć jak w środku one działają. Pozwala nam to skupić się na tej części problemu, którą musimy rozwiązać, i pominąć pozostałe części programu.
 
-![Ignoring Detail When Using an Object](height=1.50in@../images/program-oo-code)
+![Pomijanie szczegółów podczas używania obiektu](height=1.50in@../images/program-oo-code)
 
-This ability to focus exclusively on the part of a program that we care about
-and ignore the rest is also helpful to the developers of the objects that we use.
-For example, the programmers developing BeautifulSoup do not need to
-know or care about how we retrieve our HTML page, what parts we want to
-read, or what we plan to do with the data we extract from the web page.
+Możliwość skupienia się wyłącznie na tej części programu, na której nam zależy, i pomijanie reszty, jest również pomocna dla twórców używanych przez nas obiektów. Na przykład, programiści tworzący BeautifulSoup nie muszą wiedzieć ani dbać o to, w jaki sposób pobieramy naszą stronę HTML, jakie części chcemy przeczytać lub co planujemy zrobić z danymi, które pobieramy ze strony.
 
-![Ignoring Detail When Building an Object](height=1.50in@../images/program-oo-bs4)
+![Pomijanie szczegółów podczas budowania obiektu](height=1.50in@../images/program-oo-bs4)
 
-Our first Python object
------------------------
+Nasz pierwszy obiekt w Pythonie
+-------------------------------
 
-At a basic level, an object is simply some code plus data structures that are
-smaller than a whole program. Defining a function allows us to store
-a bit of code and give it a name and then later invoke that code using the
-name of the function.
+W podstawowym zakresie, obiektem to po prostu jakiś kod plus struktury danych, które są mniejsze niż cały program. Zdefiniowanie funkcji pozwala nam na zapisanie trochę kodu i nadanie mu nazwy, a następnie wywołanie tego kodu za pomocą nazwy funkcji.
 
-An object can contain a number of functions (which we call *methods*) as
-well as data that is used by those functions.  We call data items that are
-part of the object *attributes*.
+Obiekt może zawierać szereg funkcji (które nazywamy *metodami*), jak również dane, które są wykorzystywane przez te funkcje. Dane będące częścią obiektu nazywamy *atrybutami*.
 
 \index{class keyword}
 
-We use the `class` keyword to define the data and code that will make up each
-of the objects. The class keyword includes the name of the class and begins
-an indented block of code where we include the attributes (data)
-and methods (code).
+Używamy słowa kluczowego `class` do zdefiniowania danych i kodu, które będą składały się na każdy z tych obiektów. Słowo kluczowe `class` zawiera nazwę klasy i rozpoczyna wcięty blok kodu, w którym umieszczamy atrybuty (dane) i metody (kod).
 
 \VerbatimInput{../code3/party2.py}
 
-Each method looks like a function, starting with the `def` keyword and
-consisting of an indented block of code.  This object has one attribute (`x`)
-and one method (`party`).  The methods have a special first parameter that
-we name by convention `self`.
+Każda metoda wygląda jak funkcja, zaczynająca się od słowa kluczowego `def` i składająca się z wciętego bloku kodu. Nasz obiekt ma jeden atrybut (`x`) i jedną metodę (`party`). Metody te mają specjalny pierwszy parametr, który nazywamy umownie `self`.
 
-Just as the `def` keyword does not cause function code to be executed, the
-`class` keyword does not create an object.  Instead, the `class`
-keyword defines a template indicating what data and code will be contained
-in each object of type `PartyAnimal`.  The class is like a cookie cutter
-and the objects created using the class are the
-cookies^[Cookie image copyright CC-BY
-https://www.flickr.com/photos/dinnerseries/23570475099].
-You don't put frosting on the cookie cutter;
-you put frosting on the cookies, and you can put different frosting
-on each cookie.
+Tak jak słowo kluczowe `def` nie powoduje wykonania kodu funkcji, tak samo słowo kluczowe `class` nie tworzy obiektu. Zamiast tego, słowo kluczowe `class` definiuje szablon mówiący o tym jakie dane i kod będą zawarte w każdym obiekcie typu `PartyAnimal`. Klasa jest jak foremka do wykrawania ciastek, a obiekty tworzone przy jej użyciu to ciasteczka^[Prawa autorskie do obrazu ciasteczka: CC-BY
+<https://www.flickr.com/photos/dinnerseries/23570475099>]. Nie umieszczasz lukru na foremce do wykrawania ciastek; lukier umieszczasz na ciasteczkach, a na każdym ciasteczku możesz umieścić inny lukier.
 
-![A Class and Two Objects](height=2.0in@../photos/cookie_cutter_flickr_Didriks)
+![Klasa i dwa obiekty](height=2.0in@../photos/cookie_cutter_flickr_Didriks)
 
-If we continue through this sample program, we see the first executable line of
-code:
+Kontynuując analizę naszego przykładowego program, widzimy pierwszą wykonywalną linię kodu:
 
 ~~~~ {.python}
 an = PartyAnimal()
@@ -174,79 +146,60 @@ an = PartyAnimal()
 \index{instance}
 \index{class}
 
-This is where we instruct Python to construct (i.e., create) an *object* or
-*instance* of the class `PartyAnimal`. It looks like a function call to the
-class itself. Python constructs the object with the right data and methods
-and returns the object which is then assigned to the variable `an`.
-In a way this is quite similar to the following line which we have
-been using all along:
+Tutaj instruujemy Pythona, by skonstruował (tzn. stworzył) *obiekt* lub *instancję* klasy `PartyAnimal`. Wygląda to jak wywołanie funkcji o nazwie klasy. Python konstruuje obiekt z odpowiednimi danymi i metodami i zwraca obiekt, który jest następnie przypisany do zmiennej `an`. W pewnym sensie jest to dość podobne do poniższej linii, której używaliśmy już wcześniej:
 
 ~~~~ {.python}
 counts = dict()
 ~~~~
 
-Here we instruct Python to construct an object using the `dict` template
-(already present in Python), return the instance of dictionary,
-and assign it to the variable `counts`.
+Tutaj instruujemy Pythona, by skonstruował obiekt przy użyciu szablonu `dict` (obecnego już w Pythonie), zwrócił instancję słownika i przypisał ją do zmiennej `counts`.
 
-When the `PartyAnimal` class is used to construct an object, the variable `an`
-is used to point to that object.  We use `an` to access the code and data for that
-particular instance of the `PartyAnimal` class.
+Klasa `PartyAnimal` jest używana do konstruowania obiektu, natomiast zmienna `an` jest używana do wskazywania na ten obiekt. Używamy `an` do dostępu do kodu i danych dla tej konkretnej instancji klasy `PartyAnimal`.
 
-Each Partyanimal object/instance contains within it a variable `x`
-and a method/function named `party`. We call the `party` method in this line:
+Każdy obiekt/instancja `PartyAnimal` zawiera w sobie zmienną `x` oraz metodę/funkcję o nazwie `party`. W tej linii wywołujemy metodę `party`:
 
 ~~~~ {.python}
 an.party()
 ~~~~
 
-When the `party` method is called, the first parameter (which we call by convention `self`)
-points to the particular instance of the PartyAnimal object that `party` is called from.
-Within the `party` method, we see the line:
+Kiedy metoda `party` jest wywoływana, pierwszy parametr (który nazywamy umownie `self`) wskazuje na konkretną instancję obiektu `PartyAnimal`, z której wywoływana jest metoda `party`. W obrębie metody `party` widzimy linię:
 
 ~~~~ {.python}
 self.x = self.x + 1
 ~~~~
 
-This syntax using the *dot* operator is saying 'the x within self.' Each time `party()` is
-called, the internal `x` value is incremented by 1 and the value is printed out.
+Składnia ta, używająca operatora *kropki*, mówi '`x` wewnątrz `self`'. Przy każdym wywołaniu `party()`, wewnętrzna wartość `x` jest zwiększana o 1 (a później wartość ta jest wypisywana na ekran przy pomocy `print()`).
 
-The following line is another way to call the `party` method within the `an`
-object:
+Poniższa linia przedstawia kolejny sposób wywołania metody `party` wewnątrz obiektu `an`:
 
 ~~~~ {.python}
 PartyAnimal.party(an)
 ~~~~
 
-In this variation, we access the code from within the class and explicitly
-pass the object pointer `an` as the first parameter (i.e., `self` within the method).
-You can think of `an.party()` as shorthand for the above line.
+W tym wariancie uzyskujemy dostęp do kodu bezpośrednio poprzez klasę i jawnie przekazujemy wskaźnik obiektu `an` jako pierwszy parametr metody (tj. `self`). Możesz myśleć o `an.party()` jako o skróconym zapisie powyższej linii.
 
-When the program executes, it produces the following output:
+Po uruchomieniu programu uzyskujemy następujący wynik:
 
 ~~~~
-So far 1
-So far 2
-So far 3
-So far 4
+Jak na razie 1
+Jak na razie 2
+Jak na razie 3
+Jak na razie 4
 ~~~~
 
-The object is constructed, and the `party` method is called four times, both
-incrementing and printing the value for `x` within the `an` object.
+Konstruujemy obiekt i czterokrotnie wywołujemy metodę `party`, zarówno zwiększając, jak i wypisując wartość `x` będącą wewnątrz obiektu `an`.
 
-Classes as types
-----------------
+Klasy i typy
+------------
 
 \index{dir}
 \index{type}
 
-As we have seen, in Python all variables have a type.  We can use the built-in
-`dir` function to examine the capabilities of a variable.  We can also use `type` and
-`dir` with the classes that we create.
+Jak już widzieliśmy, w Pythonie wszystkie zmienne mają określony typ. Możemy użyć wbudowanej funkcji `dir` do zbadania możliwości danej zmiennej. Możemy również użyć `type` i `dir` z tworzonymi klasami.
 
 \VerbatimInput{../code3/party3.py}
 
-When this program executes, it produces the following output:
+Po uruchomieniu programu zobaczymy następujący wynik:
 
 ~~~~
 Type <class '__main__.PartyAnimal'>
@@ -257,60 +210,43 @@ Type <class 'int'>
 Type <class 'method'>
 ~~~~
 
-You can see that using the `class` keyword, we have created a new type.
-From the `dir` output, you can see both the `x` integer attribute and the `party`
-method are available in the object.
+Możesz zauważyć, że przy użyciu słowa kluczowego `class` stworzyliśmy nowy typ. W wyniku `dir` możesz zobaczyć, że w obiekcie jest dostępny zarówno atrybut całkowitoliczbowy `x`, jak i metoda `party`.
 
-Object lifecycle
-----------------
+Cykl życia obiektu
+------------------
 
 \index{constructor}
 \index{destructor}
 \index{object lifecycle}
 
-In the previous examples, we define a class (template), use that class
-to create an instance of that class (object), and then use the instance.  When
-the program finishes, all of the variables are discarded.  Usually, we don't think
-much about the creation and destruction of variables, but often as our objects
-become more complex, we need to take some action within the object to set things
-up as the object is constructed and possibly clean things up as the object is
-discarded.
+W poprzednich przykładach definiowaliśmy klasę (szablon), używaliśmy jej do stworzenia instancji (obiektu) tej klasy, a następnie korzystaliśmy z instancji. Kiedy program zakończy pracę, wszystkie zmienne są porzucane. Zazwyczaj nie zastanawiamy się zbytnio nad tworzeniem i usuwaniem zmiennych. Jednak gdy nasze obiekty stają się coraz bardziej złożone, często musimy podjąć wewnątrz obiektu pewne działania, tak aby ustawić niektóre rzeczy w momencie gdy obiekt jest konstruowany i ewentualnie usunąć pewne rzeczy gdy obiekt jest porzucany.
 
-If we want our object to be aware of these moments of construction and destruction,
-we add specially named methods to our object:
+Jeśli chcemy by nasz obiekt był świadomy momentów konstruowania i niszczenia, dodajemy do niego specjalnie nazwane metody:
 
 \VerbatimInput{../code3/party4.py}
 
-When this program executes, it produces the following output:
+Po uruchomieniu programu zobaczymy następujący wynik:
 
 ~~~~
-I am constructed
-So far 1
-So far 2
-I am destructed 2
-an contains 42
+Jestem tworzony
+Jak na razie 1
+Jak na razie 2
+Jestem niszczony 2
+an zawiera 42
 ~~~~
 
-As Python constructs our object, it calls our `__init__` method to
-give us a chance to set up some default or initial values for the object.
-When Python encounters the line:
+Gdy Python tworzy nasz obiekt, to wywołuje naszą metodę `__init__`, tak aby dać nam szansę na ustawienie pewnych domyślnych lub początkowych wartości dla tego obiektu. Kiedy Python natrafi się na linię:
 
 ~~~~
 an = 42
 ~~~~
 
-It actually "thows our object away" so it can reuse the `an` variable
-to store the value `42`.  Just at the moment when our `an` object is
-being "destroyed" our destructor code (`__del__`) is called.  We cannot
-stop our variable from being destroyed, but we can do any necessary
-cleanup right before our object no longer exists.
+to w rzeczywistości "odrzuca nasz obiekt", więc może ponownie użyć zmiennej `an` do przechowywania wartości `42`. Właśnie w tym momencie, w którym nasz obiekt `an` jest "niszczony", wywoływany jest nasz kod destruktora (`__del__`). Nie możemy powstrzymać naszej zmiennej przed zniszczeniem, ale możemy dokonać niezbędnego czyszczenia tuż przed tym, gdy nasz obiekt już nie będzie istniał.
 
-When developing objects, it is quite common to add a constructor to an object
-to set up initial values for the object. It is relatively rare to need a
-destructor for an object.
+Często podczas prac nad kodem obiektu zapada decyzja by dodać do niego konstruktor, tak aby ustawić jego początkowe wartości. Natomiast stosunkowo rzadko się zdarzy byśmy potrzebowali destruktora dla danego obiektu.
 
-Multiple instances
-------------------
+Wiele instancji
+---------------
 
 So far, we have defined a class, constructed a single object, used
 that object, and then thrown the object away. However, the real power
