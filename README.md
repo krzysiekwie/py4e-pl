@@ -26,7 +26,7 @@ Polish translation progress
 | `11-regex.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `12-network.mkd`       | ☒    | ☒   |       | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `13-web.mkd`           | ☒    | ☒   |       | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `14-objects.mkd`       | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `14-objects.mkd`       | ☒    | ☒   |       | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `16-viz.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | remaining website...   |      |      |       |      |         |          |         |            |       |

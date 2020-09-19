@@ -3,11 +3,11 @@ class PartyAnimal:
    name = ''
    def __init__(self, nam):
      self.name = nam
-     print(self.name,'constructed')
+     print(self.name, '- utworzenie')
 
    def party(self) :
      self.x = self.x + 1
-     print(self.name,'party count',self.x)
+     print(self.name, '- zliczenie imprezek -', self.x)
 
 s = PartyAnimal('Sally')
 j = PartyAnimal('Jim')

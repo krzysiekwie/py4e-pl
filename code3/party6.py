@@ -5,7 +5,7 @@ class CricketFan(PartyAnimal):
    def six(self):
       self.points = self.points + 6
       self.party()
-      print(self.name,"points",self.points)
+      print(self.name, "- punkty -", self.points)
 
 s = PartyAnimal("Sally")
 s.party()

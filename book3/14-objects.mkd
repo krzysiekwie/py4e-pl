@@ -248,184 +248,113 @@ Często podczas prac nad kodem obiektu zapada decyzja by dodać do niego konstru
 Wiele instancji
 ---------------
 
-So far, we have defined a class, constructed a single object, used
-that object, and then thrown the object away. However, the real power
-in object-oriented programming happens when we construct multiple instances
-of our class.
+Jak do tej pory zdefiniowaliśmy klasę, stworzyliśmy pojedynczy obiekt, użyliśmy go, a następnie porzuciliśmy. Jednak prawdziwa moc w programowaniu obiektowym leży w tworzeniu wielu instancji naszej klasy.
 
-When we construct multiple objects from our class, we might want to set
-up different initial values for each of the objects. We can
-pass data to the constructors to give each object a different initial
-value:
+Gdy tworzymy wiele obiektów na podstawie naszej klasy, możemy mieć potrzebę ustawienia dla każdego z nich różnych wartości początkowych. Dnae te możemy przekazać do konstruktorów, tak aby nadać każdemu z obiektów inną wartość początkową:
 
 \VerbatimInput{../code3/party5.py}
 
-The constructor has both a `self` parameter that points to the object instance
-and additional parameters that are passed into the constructor as the
-object is constructed:
+Konstruktor posiada zarówno parametr `self`, który wskazuje na instancję obiektu, jak i dodatkowe parametry, które są przekazywane do konstruktora w trakcie tworzenia obiektu:
 
 ~~~~
 s = PartyAnimal('Sally')
 ~~~~
 
-Within the constructor, the second line copies the parameter (`nam`) that is
-passed into the `name` attribute within the object instance.
+Wewnątrz konstruktora, druga linia kopiuje parametr (`nam`), który jest przekazywany do atrybutu `name` będącego już w instancji obiektu.
 
 ~~~~
 self.name = nam
 ~~~~
 
-The output of the program shows that each of the objects (`s` and `j`) contain their own
-independent copies of `x` and `nam`:
+Wynik programu pokazuje, że każdy z obiektów (`s` i `j`) zawiera swoje własne, niezależne kopie `x` oraz `nam`:
 
 ~~~~
-Sally constructed
-Jim constructed
-Sally party count 1
-Jim party count 1
-Sally party count 2
+Sally - utworzenie
+Jim - utworzenie
+Sally - zliczenie imprezek - 1
+Jim - zliczenie imprezek - 1
+Sally - zliczenie imprezek - 2
 ~~~~
 
-Inheritance
------------
+Dziedziczenie
+-------------
 
-Another powerful feature of object-oriented programming is the ability to
-create a new class by extending an existing class.  When extending a class,
-we call the original class the *parent class* and the new class the
-*child class*.
+Inną przydatną cechą programowania obiektowego jest możliwość stworzenia nowej klasy poprzez rozszerzenie już istniejącej. Podczas tej operacji klasę źródłową nazywamy *klasą bazową*, a nową klasę nazywamy *klasą pochodną* lub *klasą potomną*.
 
-For this example, we move our `PartyAnimal` class into its own file.
-Then, we can 'import' the `PartyAnimal` class in a new file and extend it, as follows:
+Kontynuując poprzedni przykład, przeniesiemy naszą klasę `PartyAnimal` do osobnego pliku `party.py`. Następnie, w nowym pliku możemy "zaimportować" klasę `PartyAnimal` i ją rozszerzyć ją, tak jak pokazano poniżej:
 
 \VerbatimInput{../code3/party6.py}
 
-When we define the `CricketFan` class, we indicate that we are extending
-the `PartyAnimal` class.  This means that all of the variables (`x`) and methods
-(`party`) from the `PartyAnimal` class are *inherited* by the `CricketFan` class.
-For example, within the `six` method in the `CricketFan` class, we 
-call the `party` method from the `PartyAnimal` class.
+Kiedy definiujemy klasę `CricketFan`, wskazujemy, że rozszerzamy klasę `PartyAnimal`. Oznacza to, że wszystkie zmienne (`x`) i metody (`party`) z klasy `PartyAnimal` są *dziedziczone* przez klasę `CricketFan`. Na przykład, w ramach metody `six` klasy `CricketFan` wywołujemy metodę `party` z klasy `PartyAnimal`.
 
-As the program executes, we create `s` and `j` as independent instances
-of `PartyAnimal` and `CricketFan`. The `j` object has additional capabilities beyond
-the `s` object.
+Podczas uruchomienia programu tworzymy zmienne `s` i `j` jako niezależne instancje `PartyAnimal` i `CricketFan`. Obiekt `j` ma dodatkowe możliwości w porównaniu do obiektu `s`.
 
 ~~~~
-Sally constructed
-Sally party count 1
-Jim constructed
-Jim party count 1
-Jim party count 2
-Jim points 6
+Sally - utworzenie
+Sally - zliczenie imprezek - 1
+Jim - utworzenie
+Jim - zliczenie imprezek - 1
+Jim - zliczenie imprezek - 2
+Jim - punkty - 6
 ['__class__', '__delattr__', ... '__weakref__',
 'name', 'party', 'points', 'six', 'x']
 ~~~~
 
-In the `dir` output for the `j` object (instance of the `CricketFan` class), we see
-that it has the attributes and methods of the parent class, as well as the attributes
-and methods that were added when the class was extended to create the `CricketFan` class.
+W wyniku funkcji `dir` na obiekcie `j` (instancja klasy `CricketFan`) widzimy, że obiekt ten ma atrybuty i metody klasy nadrzędnej, a ponadto atrybuty i metody, które zostały dodane poprzez rozszerzoną klasę `CricketFan`.
 
-Summary
--------
+Podsumowanie
+------------
 
-This is a very quick introduction to object-oriented programming that focuses mainly
-on terminology and the syntax of defining and using objects.
-Let's quickly review the code that we looked at in the beginning of the chapter.
-At this point you should fully understand what is going on.
+Powyższy rozdział jest bardzo szybkim wprowadzeniem do programowania obiektowego, które skupia się głównie na terminologii i składni używanej podczas definiowania i używania obiektów. Przejrzyjmy szybko kod, który widzieliśmy na początku rozdziału. W tym momencie powinieneś w pełni rozumieć, co się w nim dzieje.
 
 \VerbatimInput{../code3/party1.py}
 
-The first line constructs a `list` *object*.  When Python creates the `list` object,
-it calls the *constructor* method (named `__init__`) to set up the internal
-data attributes that will be used to store the list data. We have not passed any
-parameters to the *constructor*. When the constructor returns, we use the variable
-`stuff` to point to the returned instance of the `list` class.
+Pierwsza linia tworzy *obiekt* typu `list`. Gdy Python tworzy obiekt tpypu `list`, to wywołuje metodę *konstruktora* (o nazwie `__init__`), tak by ustawić wewnętrzne atrybuty, które będą używane do przechowywania danych listy. Nie przekazaliśmy żadnych parametrów do *konstruktora*. Gdy konstruktor zakończy działanie, używamy zmiennej `stuff` tak, by móc wskazywać na zwróconą instancję klasy `list`.
 
-The second and third lines call the `append` method
-with one parameter to add a new item at the end of the list by updating the
-attributes within `stuff`.  Then in the fourth line,
-we call the `sort` method with no parameters to sort the data within the `stuff`
-object.
+Druga i trzecia linia wywołują metodę `append` z jednym parametrem, tak aby dodać nową pozycję na końcu listy, aktualizując atrybuty w ramach obiektu `stuff`. Następnie w czwartej linii wywołujemy metodę `sort` bez parametrów, po to by posortować dane wewnątrz obiektu `stuff`.
 
-We then print out the first item in the list using the square brackets which are
-a shortcut to calling the `__getitem__` method within the `stuff`.  This
-is equivalent to calling the `__getitem__` method in the `list` *class*
-and passing the `stuff` object as the first parameter and the position
-we are looking for as the second parameter.
+Następnie wypisujemy pierwszą pozycję z listy za pomocą nawiasów kwadratowych, które są skrótem do wywołania metody `__getitem__` w ramach `stuff`. Jest to równoważne z wywołaniem metody `__getitem__` w ramach *klasy* `list` oraz przekazaniem obiektu `stuff` jako pierwszego parametru i szukanej pozycji jako drugiego parametru.
 
-At the end of the program, the `stuff` object is discarded but not before
-calling the *destructor* (named `__del__`) so that the object can clean up any
-loose ends as necessary.
+Na końcu programu obiekt `stuff` jest porzucany, ale nie przed wywołaniem *destruktora* (o nazwie `__del__`), tak aby obiekt mógł pod koniec swego istnienia wyczyścić wszystkie niezbędne elementy, o ile jest to konieczne.
 
-Those are the basics of object-oriented programming. There are many additional details
-as to how to best use object-oriented approaches when developing large applications
-and libraries that are beyond the scope of this chapter.^[If
-you are curious about where the `list` class is defined, take a look
-at (hopefully the URL won't change)
-https://github.com/python/cpython/blob/master/Objects/listobject.c -
-the list class is written in a language
-called "C". If you take a look at that source code and find it curious
-you might want to explore a few Computer Science courses.]
+Omówiliśmy tutaj podstawy programowania obiektowego. Jest wiele innych dodatkowych tematów, np. jak najlepiej używać podejścia obiektowego podczas tworzenia dużych aplikacji i bibliotek, jednak są one poza zakresem tego rozdziału.^[Jeśli jesteś ciekaw, gdzie jest zdefiniowana klasa `list`, to zajrzyj pod adres (miejmy nadzieję, że adres URL się nie zmieni) <https://github.com/python/cpython/blob/master/Objects/listobject.c> - klasa listy jest napisana w języku "C". Jeśli przejrzysz wspomniany kod źródłowy i okaże się on dla Ciebie interesujący, to być może powinieneś zrobić dodatkowo kilka kursów z dziedziny informatyki.].
 
-Glossary
---------
+Słowniczek
+----------
 
-attribute
-:   A variable that is part of a class.
+atrybut
+:   Zmienna, która jest częścią klasy.
 \index{attribute}
 
-class
-:   A template that can be used to construct an object.  Defines
-    the attributes and methods that will make up the object.
+klasa
+:   Szablon, który może być użyty do stworzenia obiektu. Definiuje atrybuty i metody, które będą składały się na obiekt.
 \index{class}
 
-child class
-:   A new class created when a parent class is extended.  The child class
-    inherits all of the attributes and methods of the parent class.
+klasa pochodna
+:   Nowa klasa utworzona w momencie rozszerzenia klasy bazowej. Klasa pochodna dziedziczy wszystkie atrybuty i metody klasy bazowej.
 \index{child class}
 
-constructor
-:   An optional specially named method (`__init__`) that is called at the
-    moment when a class is being used to construct an object.
-    Usually this is used to set up initial values for the object.
+konstruktor
+:   Opcjonalna, specjalnie nazwana metoda (`__init__`), która jest wywoływana w momencie, gdy klasa jest używana do tworzenia obiektu. Zazwyczaj jest ona używana do ustawienia początkowych wartości obiektu.
 \index{constructor}
 
-destructor
-:   An optional specially named method (`__del__`) that is called at the
-    moment just before an object is destroyed.  Destructors are rarely
-    used.
+destruktor
+:   Opcjonalna, specjalnie nazwana metoda (`__del__`), która jest wywoływana w momencie, gdy obiekt jest niszczony. Destruktory są rzadko używane.
 \index{destructor}
 
-inheritance
-:   When we create a new class (child) by extending an
-    existing class (parent).  The child class has all the attributes
-    and methods of the parent class plus additional attributes and
-    methods defined by the child class.
+dziedziczenie
+:   Kiedy tworzymy nową klasę poprzez rozszerzenie istniejącej już klasy. Klasa pochodna posiada wszystkie atrybuty i metody klasy bazowej oraz dodatkowe atrybuty i metody zdefiniowane przez klasę pochodną.
 \index{inheritance}
 
-method
-:   A function that is contained within a class and the objects
-    that are constructed from the class.  Some object-oriented
-    patterns use 'message' instead of 'method' to describe this concept.
+metoda
+:   Funkcja, która jest zawarta w klasie i obiektach, które są z niej utworzone. Niektóre wzorce obiektowe używają do opisu tego pojęcia "wiadomość" (ang. message) zamiast "metoda".
 \index{method}
 \index{message}
 
-object
-:   A constructed instance of a class.  An object contains all of
-    the attributes and methods that were defined by the class.
-    Some object-oriented documentation uses the term 'instance'
-    interchangeably with 'object'.
+obiekt
+:   Utworzona instancja klasy. Obiekt zawiera wszystkie atrybuty i metody, które zostały zdefiniowane przez klasę. Niektóre dokumentacje obiektowe używają terminu "instancja" zamiennie z terminem "obiekt".
 \index{method}
 
-parent class
-:   The class which is being extended to create a new child class.
-    The parent class contributes all of its methods and attributes
-    to the new child class.
+klasa bazowa
+:   Klasa, która jest rozszerzana by utworzyć nową klasę pochodną. Klasa bazowa udostępnia klasie pochodnej wszystkie swoje metody i atrybuty.
 \index{parent class}
-
-
-
-
-
-
-
-
