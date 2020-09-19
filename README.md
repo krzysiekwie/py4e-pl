@@ -36,6 +36,7 @@ Polish translation progress
 | Functions and methods with `()` |         |            |       |
 | Inline code within grave accents |         |            |       |
 | `pip install...` -> `pip3 install...` |         |            |       |
+| `unit.sh` check |         |            |       |
 
 URLs to translated trinkets are in `trinket3-pl-urls.md`.
 

@@ -82,7 +82,7 @@
 * [09-02 - dict looping](https://trinket.io/python/b1f9a43092?outputOnly=true&runOption=console)
 * [09-03 - dict get](https://trinket.io/python/f3d85d201a?outputOnly=true&runOption=console)
 * [09-04 - `count1.py`](https://trinket.io/python/990c131728)
-* [09-05 - `count2.py` (English, real Python 3)](https://trinket.io/python3/f2908054b2); [not working JS](https://trinket.io/python/3d36f9c5c0)
+* [09-05 - `count2.py` (English, real Python 3)](https://trinket.io/python3/f2908054b2)
 
 ## Chapter 10
 
@@ -95,7 +95,7 @@
 * [10-07 - tuple assignment](https://trinket.io/python/d4844faa15?outputOnly=true&runOption=console)
 * [10-08 - alt tuple assignment](https://trinket.io/python/2a2f2cb70c?outputOnly=true&runOption=console)
 * [10-09 - items](https://trinket.io/python/a6e4a261d7?outputOnly=true&runOption=console)
-* [10-10 - `count3.py` (English, real Python 3)](https://trinket.io/python3/f499632382); [not working JS](https://trinket.io/python/9f7d845be4)
+* [10-10 - `count3.py` (English, real Python 3)](https://trinket.io/python3/f499632382)
 
 ## Chapter 11
 
@@ -114,15 +114,38 @@
 
 ## Chapter 12
 
-* no links
+* [12-01 - `socket.py` (English, real Python 3)](https://trinket.io/python3/794176775a)
+* [12-02 - `urljpeg.py` (English, real Python 3)](https://trinket.io/python3/9edf18e999)
+* [12-03 - `urllib1.py` (English, real Python 3)](https://trinket.io/python3/10f246016c)
+* [12-04 - `urlwords.py` (English, real Python 3)](https://trinket.io/python3/031b4f2edb)
+* [12-05 - `urlregex.py` (English, real Python 3)](https://trinket.io/python3/3fd67a5985)
+* [12-06 - `urllinks.py` (English, real Python 3)](https://trinket.io/python3/085c63799a)
+* [12-07 - `urllink2.py` (English, real Python 3)](https://trinket.io/python3/7ddd670f94)
+* [12-08 - `curl1.py` (English, real Python 3)](https://trinket.io/python3/16dfd147f0)
+* [12-09 - `curl2.py` (English, real Python 3)](https://trinket.io/python3/b17b20b366)
 
 ## Chapter 13
 
-* no links
+* [13-01 - `xml1.py` (English, real Python 3)](https://trinket.io/python3/69b75969e3)
+* [13-02 - `xml2.py` (English, real Python 3)](https://trinket.io/python3/242321c00e)
+* [13-03 - `json2.py` (English, real Python 3)](https://trinket.io/python3/81ff3aabff)
+* [13-04 - `geojson.py` (English, real Python 3)](https://trinket.io/python3/370b79fbdb) (not working)
+* [13-05 - `hidden.py` (English, real Python 3)](https://trinket.io/python3/c6e02835c7) (useless)
+* [13-06 - `twitter1.py` (English, real Python 3)](https://trinket.io/python3/f73d25cb4c) (not working; manual edit needed by adding `oauth.py` and customized `hidden.py`)
+* [13-07 - `twitter2.py` (English, real Python 3)](https://trinket.io/python3/3c5833ec0c) (not working; manual edit needed by adding `oauth.py` and customized `hidden.py`)
 
 ## Chapter 14
 
-* [`...`](#)
+* [14-01 - `party1.py` (English, real Python 3)](https://trinket.io/python3/cb4236a13a)
+* [14-02 - `elev.py` (English, real Python 3)](https://trinket.io/python3/3df02bb443)
+* [14-03 - `urllinks.py` (English, real Python 3)](https://trinket.io/python3/29cd37e3f1)
+* [14-04 - `party2.py` (English, real Python 3)](https://trinket.io/python3/aa5df10c08)
+* [14-05 - `party3.py` (English, real Python 3)](https://trinket.io/python3/8730ea438e)
+* [14-06 - `party4.py` (English, real Python 3)](https://trinket.io/python3/7fb745daa2)
+* [14-07 - `party5.py` (English, real Python 3)](https://trinket.io/python3/aaeaca72ca)
+* [14-08 - `party.py` (English, real Python 3)](https://trinket.io/python3/95fc67379a)
+* [14-09 - `party6.py` (English, real Python 3)](https://trinket.io/python3/4313f27a20)
+* [14-10 - `party1.py` (English, real Python 3)](https://trinket.io/python3/c9f7c0e1b5)
 
 ## Chapter 15
 
