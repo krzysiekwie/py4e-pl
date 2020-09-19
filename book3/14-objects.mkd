@@ -281,7 +281,11 @@ Dziedziczenie
 
 Inną przydatną cechą programowania obiektowego jest możliwość stworzenia nowej klasy poprzez rozszerzenie już istniejącej. Podczas tej operacji klasę źródłową nazywamy *klasą bazową*, a nową klasę nazywamy *klasą pochodną* lub *klasą potomną*.
 
-Kontynuując poprzedni przykład, przeniesiemy naszą klasę `PartyAnimal` do osobnego pliku `party.py`. Następnie, w nowym pliku możemy "zaimportować" klasę `PartyAnimal` i ją rozszerzyć ją, tak jak pokazano poniżej:
+Kontynuując poprzedni przykład, przeniesiemy naszą klasę `PartyAnimal` do osobnego pliku `party.py`.
+
+\VerbatimInput{../code3/party.py}
+
+Następnie, w nowym pliku możemy "zaimportować" klasę `PartyAnimal` i ją rozszerzyć ją, tak jak pokazano poniżej:
 
 \VerbatimInput{../code3/party6.py}
 
