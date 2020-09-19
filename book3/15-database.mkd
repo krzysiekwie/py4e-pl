@@ -1,105 +1,57 @@
-Using Databases and SQL
-=======================
+Korzystanie z baz danych i języka SQL
+=====================================
 
-What is a database?
--------------------
+Czym jest baza danych?
+----------------------
 
 \index{database}
 
-A *database* is a file that is organized for storing
-data. Most databases are organized like a dictionary in the sense that
-they map from keys to values. The biggest difference is that the
-database is on disk (or other permanent storage), so it persists after
-the program ends. Because a database is stored on permanent storage, it
-can store far more data than a dictionary, which is limited to the size
-of the memory in the computer.
+*Baza danych* to plik, który jest zorganizowany w specjalny sposób by mógł przechowywać dane. Większość baz danych jest zorganizowana tak jak słownik w tym sensie, że mapują one klucze na wartości. Największa różnica polega na tym, że baza danych znajduje się na dysku (lub innym trwałym nośniku danych), a więc zachowuje swoje dane po zakończeniu programu. Ponieważ baza danych przechowywana jest na trwałym nośniku, może ona przechowywać znacznie więcej danych niż słownik, co jest ograniczone wielkością pamięci w komputerze.
 
 \index{database!indexes}
 
-Like a dictionary, database software is designed to keep the inserting
-and accessing of data very fast, even for large amounts of data.
-Database software maintains its performance by building
-*indexes* as data is added to the database to allow the
-computer to jump quickly to a particular entry.
+Podobnie jak słownik, oprogramowanie bazodanowe jest zaprojektowane tak, aby dodawania i dostęp do danych był bardzo szybki, nawet dla dużych ilości danych. Oprogramowanie bazodanowe utrzymuje swoją wydajność poprzez budowanie *indeksów*, dzięki czemu dane są dodawane do bazy w taki sposób by umożliwić komputerowi szybkie przejście do konkretnego wpisu.
 
-There are many different database systems which are used for a wide
-variety of purposes including: Oracle, MySQL, Microsoft SQL Server,
-PostgreSQL, and SQLite. We focus on SQLite in this book because it is a
-very common database and is already built into Python. SQLite is
-designed to be *embedded* into other applications to provide database
-support within the application. For example, the Firefox browser also
-uses the SQLite database internally as do many other products.
+Istnieje wiele różnych systemów bazodanowych, które są wykorzystywane do wielu różnych celów, w tym: Oracle, MySQL, Microsoft SQL Server, PostgreSQL i SQLite. W tej książce skupimy się na SQLite, ponieważ jest to bardzo popularna baza danych i jest już wbudowana w Pythona. SQLite jest przeznaczony do bycia *wbudowanym* (*osadzonym*) w innych aplikacjach, tak aby zapewnić obsługę bazy danych w obrębie tych aplikacji. Na przykład, przeglądarka Firefox również korzysta wewnętrznie z bazy danych SQLite, podobnie jak wiele innych aplikacji.
 
 <http://sqlite.org/>
 
-SQLite is well suited to some of the data manipulation problems that we
-see in Informatics such as the Twitter spidering application that we
-describe in this chapter.
+SQLite doskonale nadaje się do rozwiązywania niektórych informatycznych problemów z zarządzaniem danymi, takich jak robot internetowy do zbierania danych z Twittera, który opiszemy w tym rozdziale.
 
-Database concepts
------------------
+Pojęcia związane z bazami danych
+--------------------------------
 
-When you first look at a database it looks like a spreadsheet with
-multiple sheets. The primary data structures in a database are:
-*tables*, *rows*, and
-*columns*.
+Kiedy pierwszy raz spojrzysz na bazę danych, to będzie ona wyglądała jak plik arkusza kalkulacyjnego, który posiada wiele arkuszy. Podstawowe struktury danych w bazie danych to: *tabele*, *wiersze*, i *kolumny*.
 
-![Relational Databases](height=2.0in@../images/relational)
+![Relacyjne bazy danych](height=2.0in@../images/relational)
 
-In technical descriptions of relational databases the concepts of table,
-row, and column are more formally referred to as
-*relation*, *tuple*, and
-*attribute*, respectively. We will use the less formal
-terms in this chapter.
+W technicznych opisach relacyjnych baz danych pojęcia tabeli, wiersza i kolumny są bardziej formalnie nazywane odpowiednio *relacją*, *krotką* i *atrybutem*. W tym rozdziale użyjemy mniej formalnych pojęć.
 
-Database Browser for SQLite
----------------------------
+Przeglądarka baz SQLite
+-----------------------
 
-While this chapter will focus on using Python to work with data in
-SQLite database files, many operations can be done more conveniently
-using software called the *Database Browser for SQLite* which is freely available from:
+Co prawda w tym rozdziale skoncentrujemy się na używaniu Pythona do pracy z danymi zawartymi w plikach bazy SQLite, jednak wiele operacji można wykonać wygodniej przy użyciu darmowego oprogramowania *Database Browser for SQLite*:
 
-<http://sqlitebrowser.org/>
+<https://sqlitebrowser.org/>
 
-Using the browser you can easily create tables, insert data, edit data,
-or run simple SQL queries on the data in the database.
+Za pomocą tej aplikacji można łatwo tworzyć tabele, wstawiać i edytować dane oraz uruchamiać proste zapytania SQL dotyczące danych zawartych w bazie.
 
-In a sense, the database browser is similar to a text editor when
-working with text files. When you want to do one or very few operations
-on a text file, you can just open it in a text editor and make the
-changes you want. When you have many changes that you need to do to a
-text file, often you will write a simple Python program. You will find
-the same pattern when working with databases. You will do simple
-operations in the database manager and more complex operations will be
-most conveniently done in Python.
+W pewnym sensie przeglądarka bazy danych jest podobna do edytora tekstowego używanego podczas pracy z plikami tekstowymi. Kiedy chcesz wykonać jedną lub kilka operacji na pliku tekstowym, możesz po prostu otworzyć go w edytorze tekstowym i dokonać żądanych zmian. Kiedy musisz wykonać wiele zmian w pliku tekstowym, to często szybciej i wygodniej będzie Ci napisać prosty program Pythona. Ten sam schemat postępowania możesz zastosować podczas pracy z bazami danych. Proste operacje będziesz wykonywał w menedżerze baz danych, a bardziej złożone operacje wygodniej będzi Ci wykonywać w Pythonie.
 
-Creating a database table
--------------------------
+Tworzenie tabeli w bazie danych
+-------------------------------
 
-Databases require more defined structure than Python lists or
-dictionaries^[SQLite actually does allow some flexibility in the type of data
-stored in a column, but we will keep our data types strict in this
-chapter so the concepts apply equally to other database systems such
-as MySQL.].
+Bazy danych wymagają bardziej szczegółowo zdefiniowanej struktury niż listy czy słowniki w Pythonie^[SQLite faktycznie pozwala na pewną elastyczność w typie danych przechowywanych w kolumnie, ale w tym rozdziale nasze typy danych będą ściśle określone, dzięki czemu pokazane tutaj idee będą miały zastosowanie również w innych systemach baz danych, np. w MySQL.].
 
-When we create a database *table* we must tell the
-database in advance the names of each of the *columns* in
-the table and the type of data which we are planning to store in each
-*column*. When the database software knows the type of
-data in each column, it can choose the most efficient way to store and
-look up the data based on the type of data.
+Kiedy w bazie danych tworzymy *tabelę*, to musimy z wyprzedzeniem podać nazwę każdej *kolumny* występującej w tabeli oraz typ danych, który zamierzamy przechowywać w każdej z *kolumn*. Kiedy oprogramowanie bazy danych wie jaki typ danych będzie użyty w każdej kolumnie, może dzięki temu wybrać najbardziej efektywny sposób przechowywania i wyszukiwania danych w oparciu o ich typ.
 
-You can look at the various data types supported by SQLite at the
-following url:
+Możesz zapoznać się z różnymi typami danych obsługiwanymi przez SQLite pod następującym adresem URL:
 
 <http://www.sqlite.org/datatypes.html>
 
-Defining structure for your data up front may seem inconvenient at the
-beginning, but the payoff is fast access to your data even when the
-database contains a large amount of data.
+Zdefiniowanie z góry struktury dla Twoich danych może się początkowo wydawać niewygodne, ale zyskiem z tego jest szybkie uzyskiwanie dostępu do Twoich danych, nawet jeśli baza danych zawiera ich dużą ilość.
 
-The code to create a database file and a table named `Tracks`
-with two columns in the database is as follows:
+Kod tworzący plik bazy danych i tabelę o nazwie `Utwory` z dwiema kolumnami jest następujący:
 
 \index{sqlite3 module}
 \index{module!sqlite3}
@@ -111,340 +63,186 @@ with two columns in the database is as follows:
 \index{cursor function}
 \index{function!cursor}
 
-The `connect` operation makes a "connection" to the database
-stored in the file `music.sqlite` in the current directory.
-If the file does not exist, it will be created. The reason this is
-called a "connection" is that sometimes the database is stored on a
-separate "database server" from the server on which we are running our
-application. In our simple examples the database will just be a local
-file in the same directory as the Python code we are running.
+Operacja `connect` nawiązuje "połączenie" z bazą danych przechowywaną w pliku `muzyka.sqlite`, który znajduje się w bieżącym katalogu. Jeśli plik ten nie istnieje, to zostanie utworzony. Powodem, dla którego nazywa się to "połączeniem" jest to, że czasami baza danych przechowywana jest na "serwerze baz danych", który jest innym komputerem niż ten, na którym uruchamiamy naszą aplikację. W naszych prostych przykładach baza danych będzie po prostu plikiem lokalnym w tym samym katalogu co uruchamiany przez nas kod Pythona.
 
-A *cursor* is like a file handle that we can use to
-perform operations on the data stored in the database. Calling
-`cursor()` is very similar conceptually to calling
-`open()` when dealing with text files.
+*Kursor* jest podobny uchwytu pliku i używamy go do wykonania operacji na danych przechowywanych w bazie. Wywołanie `cursor()` jest koncepcyjnie bardzo podobne do wywołania `open()` podczas pracy z plikami tekstowymi.
 
-![A Database Cursor](height=2.0in@../images/cursor)
+![Kursor bazodanowy](height=2.0in@../images/cursor)
 
-Once we have the cursor, we can begin to execute commands on the
-contents of the database using the `execute()` method.
+Posiadając kursor, przy użyciu metody `execute()` możemy rozpocząć wykonywanie poleceń działających na zawartości bazy danych.
 
-Database commands are expressed in a special language that has been
-standardized across many different database vendors to allow us to learn
-a single database language. The database language is called
-*Structured Query Language* or *SQL* for
-short.
+Komendy bazy danych są wyrażone w specjalnym języku, który został ustandaryzowany u wielu różnych dostawców baz danych, tak aby umożliwić nam naukę jednego języka bazy danych. Język ten nazywa się *Structured Query Language* (z ang. strukturalny język zapytań) lub w skrócie *SQL*.
 
-<http://en.wikipedia.org/wiki/SQL>
+<https://pl.wikipedia.org/wiki/SQL>
 
-In our example, we are executing two SQL commands in our database. As a
-convention, we will show the SQL keywords in uppercase and the parts of
-the command that we are adding (such as the table and column names) will
-be shown in lowercase.
+W powyższym przykładzie na naszej bazie danych wykonujemy dwa polecenia SQL. Przyjmuje się, że słowa kluczowe SQL pisze się dużymi literami, a części polecenia, które my dodajemy (takie jak nazwy tabel i kolumn) pisze się małymi literami lub z dużej litery.
 
-The first SQL command removes the `Tracks` table from the
-database if it exists. This pattern is simply to allow us to run the
-same program to create the `Tracks` table over and over again
-without causing an error. Note that the `DROP TABLE` command
-deletes the table and all of its contents from the database (i.e., there
-is no "undo").
+Pierwsze polecenie SQL usuwa  z bazy danych tabelę `Utwory`, jeśli ta tabela istnieje. Taki wzorzec postępowania ma po prostu pozwolić nam na wielokrotne uruchamianie tego samego programu do tworzenia tabeli `Utwory`, bez generowania błędu. Zauważ, że polecenie `DROP TABLE` usuwa z bazy danych tabelę i całą jej zawartość (tzn. nie ma tutaj żadnej operacji typu "cofnij").
 
 ~~~~ {.python}
-cur.execute('DROP TABLE IF EXISTS Tracks ')
+cur.execute('DROP TABLE IF EXISTS Utwory')
 ~~~~
 
-The second command creates a table named `Tracks` with a text
-column named `title` and an integer column named
-`plays`.
+Druga komenda tworzy tabelę o nazwie `Utwory` z kolumną tekstową o nazwie `tytuł` i kolumną całkowitoliczbową o nazwie `odtworzenia`.
 
 ~~~~ {.python}
-cur.execute('CREATE TABLE Tracks (title TEXT, plays INTEGER)')
+cur.execute('CREATE TABLE Utwory (tytuł TEXT, odtworzenia INTEGER)')
 ~~~~
 
-Now that we have created a table named `Tracks`, we can put
-some data into that table using the SQL `INSERT` operation.
-Again, we begin by making a connection to the database and obtaining the
-`cursor`. We can then execute SQL commands using the cursor.
+Teraz, gdy stworzyliśmy tabelę o nazwie `Utwory`, możemy umieścić w niej pewne dane używając operacji SQL `INSERT`. Ponownie, zaczynamy od nawiązania połączenia z bazą danych i uzyskania kursora. Następnie możemy wykonać polecenia SQL za pomocą tego kursora.
 
-The SQL `INSERT` command indicates which table we are using
-and then defines a new row by listing the fields we want to include
-`(title, plays)` followed by the `VALUES` we want
-placed in the new row. We specify the values as question marks `(?,
-?)` to indicate that the actual values are passed in as a tuple
-`( 'My Way', 15 ) ` as the second parameter to the
-`execute()` call.
+Polecenie SQL `INSERT` wskazuje na to jakiej używamy tabeli, a następnie definiuje nowy wiersz, wymieniając pola, które chcemy umieścić w nowym wierszu `(tytuł, odtworzenia)`, a następnie w `VALUES` wartości, które chcemy umieścić w nowym wierszu. Wartości określone jako znaki zapytania `(?, ?)` wskazują, że rzeczywiste wartości do wstawienia są przekazywane jako krotka `( 'My Way', 15 ) ` będąca drugim parametrem wywołania `execute()`.
 
 \VerbatimInput{../code3/db2.py}
 
-First we `INSERT` two rows into our table and use
-`commit()` to force the data to be written to the database
-file.
+Najpierw wstawiamy poprzez `INSERT` dwa wiersze do naszej tabeli i używamy `commit()` aby wymusić zapis danych do pliku bazy danych.
 
-![Rows in a Table](height=1.5in@../images/tracks)
+![Wiersze w tabeli](height=1.5in@../images/tracks)
 
-Then we use the `SELECT` command to retrieve the rows we just
-inserted from the table. On the `SELECT` command, we indicate
-which columns we would like `(title, plays)` and indicate
-which table we want to retrieve the data from. After we execute the
-`SELECT` statement, the cursor is something we can loop
-through in a `for` statement. For efficiency, the cursor does
-not read all of the data from the database when we execute the
-`SELECT` statement. Instead, the data is read on demand as we
-loop through the rows in the `for` statement.
+Następnie używamy polecenia `SELECT` do pobrania wierszy, które właśnie wstawiliśmy w tabeli. W poleceniu `SELECT` wskazujemy, z których kolumn chcielibyśmy pobrać dane `(tytuł, odtworzenia)`, oraz wskazujemy, z której tabeli chcemy pobrać dane. Po wykonaniu polecenia `SELECT`, kursor jest czymś, po czym możemy przejść w pętli `for`. W celu zachowania wydajności, kursor po wykonaniu instrukcji `SELECT` nie odczytuje odrazu wszystkich danych z bazy danych. Zamiast tego, dane są odczytywane na żądanie, tj. w tym wypadku gdy idziemy kolejno przez wiersze w instrukcji `for`.
 
-The output of the program is as follows:
+Wynik działania programu jest następujący:
 
 ~~~~
-Tracks:
+Utwory:
 ('Thunderstruck', 20)
 ('My Way', 15)
 ~~~~
 
 \index{Unicode}
 
-Our `for` loop finds two rows, and each row is a Python tuple
-with the first value as the `title` and the second value as
-the number of `plays`. 
+Nasza pętla `for` znajduje dwa wiersze, a każdy z nich jest krotką Pythona, w której pierwsza wartość to `tytuł`, a drugą to `odtworzenia`.
 
-*Note: You may see strings starting with `u'` in other books or on the Internet. 
-This was an indication in Python 2 that the strings are *Unicode* strings that are capable
-of storing non-Latin character sets. In Python 3, all strings are unicode
-strings by default.*
+*Uwaga: W innych książkach lub w internecie możesz zobaczyć ciągi znaków rozpoczynające się od `u'`. W Pythonie 2 była to wskazówka, że ciągi znaków są napisami z zestawem znaków Unicode, które są w stanie przechowywać niełacińskie znaki. W Pythonie 3, wszystkie ciągi znaków są domyślnie napisami z zestawem znaków Unicode.*
 
-At the very end of the program, we execute an SQL command to
-`DELETE` the rows we have just created so we can run the
-program over and over. The `DELETE` command shows the use of
-a `WHERE` clause that allows us to express a selection
-criterion so that we can ask the database to apply the command to only
-the rows that match the criterion. In this example the criterion happens
-to apply to all the rows so we empty the table out so we can run the
-program repeatedly. After the `DELETE` is performed, we also
-call `commit()` to force the data to be removed from the
-database.
+Na samym końcu programu wykonujemy polecenie SQL `DELETE` aby usunąć wiersze, które właśnie utworzyliśmy, dzięki czemu możemy nasz program uruchamiać wielokrotnie bez wystąpienia błędu. Polecenie `DELETE` pokazuje użycie klauzuli `WHERE`, która pozwala nam wyrazić kryterium wyboru, dzięki czemu możemy poprosić bazę danych o zastosowanie polecenia tylko do tych wierszy, które odpowiadają temu kryterium. W tym przykładzie kryterium to stosuje się do wszystkich wierszy, więc czyścimy tabelę, tak by móc wielokrotnie uruchamiać nasz program. Po wykonaniu operacji `DELETE` wywołujemy również `commit()` aby wymusić usunięcie danych z bazy.
 
-Structured Query Language summary
----------------------------------
+Podsumowanie języka SQL
+-----------------------
 
-So far, we have been using the Structured Query Language in our Python
-examples and have covered many of the basics of the SQL commands. In
-this section, we look at the SQL language in particular and give an
-overview of SQL syntax.
+W powyższych przykładach użyliśmy języka SQL i omówiliśmy jego kilka podstawowych poleceń. W tej sekcji przyjrzymy się bliżej językowi SQL i przedstawimy przegląd składni tego języka.
 
-Since there are so many different database vendors, the Structured Query
-Language (SQL) was standardized so we could communicate in a portable
-manner to database systems from multiple vendors.
+Ponieważ istnieje wielu różnych dostawców baz danych, SQL został ustandaryzowany po to byśmy mogli komunikować się w podobny sposób z bazami danych działających na różnych silnikach.
 
-A relational database is made up of tables, rows, and columns. The
-columns generally have a type such as text, numeric, or date data. When
-we create a table, we indicate the names and types of the columns:
+Relacyjna baza danych składa się z tabel, wierszy i kolumn. Typ danych w kolumnie zazwyczaj jest tekstem, liczbą lub datą. Kiedy tworzymy tabelę, wskazujemy nazwy i typy kolumn:
 
 ~~~~ {.sql}
-CREATE TABLE Tracks (title TEXT, plays INTEGER)
+CREATE TABLE Utwory (tytuł TEXT, odtworzenia INTEGER)
 ~~~~
 
-To insert a row into a table, we use the SQL `INSERT`
-command:
+Aby wstawić wiersz do tabeli, używamy polecenia SQL `INSERT`:
 
 ~~~~ {.sql}
-INSERT INTO Tracks (title, plays) VALUES ('My Way', 15)
+INSERT INTO Utwory (tytuł, odtworzenia) VALUES ('My Way', 15)
 ~~~~
 
-The `INSERT` statement specifies the table name, then a list
-of the fields/columns that you would like to set in the new row, and
-then the keyword `VALUES` and a list of corresponding values
-for each of the fields.
+Polecenie `INSERT` określa nazwę tabeli, następnie listę pól/kolumn, które chcesz ustawić w nowym wierszu, a następnie słowo kluczowe `VALUES` i listę odpowiednich wartości dla każdego pola.
 
-The SQL `SELECT` command is used to retrieve rows and columns
-from a database. The `SELECT` statement lets you specify
-which columns you would like to retrieve as well as a `WHERE`
-clause to select which rows you would like to see. It also allows an
-optional `ORDER BY` clause to control the sorting of the
-returned rows.
+Polecenie SQL `SELECT` jest używane do pobierania wierszy i kolumn z bazy danych. Polecenie `SELECT` pozwala określić, które kolumny chcesz pobrać, a także klauzulę `WHERE` by wybrać tylko te wiersze, które chcesz zobaczyć. Polecenie to pozwala także na opcjonalną klauzulę `ORDER BY` kontrolującą sortowanie zwracanych wierszy.
 
 ~~~~ {.sql}
-SELECT * FROM Tracks WHERE title = 'My Way'
+SELECT * FROM Utwory WHERE tytuł = 'My Way'
 ~~~~
 
-Using `*` indicates that you want the database to return all of the
-columns for each row that matches the `WHERE` clause.
+Użycie `*` między `SELECT` a `FROM` wskazuje, że chcesz aby baza danych zwróciła wszystkie kolumny dla każdego wiersza, który pasuje do klauzuli `WHERE`.
 
-Note, unlike in Python, in a SQL `WHERE` clause we use a
-single equal sign to indicate a test for equality rather than a double
-equal sign. Other logical operations allowed in a `WHERE`
-clause include `<`, `>`, `<=`, `>=`, `!=`, as well as `AND`
-and `OR` and parentheses to build your logical expressions.
+Zauważ, że w przeciwieństwie do Pythona, w klauzuli SQL `WHERE` używamy pojedynczego znaku równości do wskazania testu na równość, a nie znaku podwójnej równości. Inne operacje logiczne dozwolone w klauzuli `WHERE` obejmują `<`, `>`, `<=`, `>=`, `!=`, jak również `AND` i `OR` oraz nawiasy okrągłe do tworzenia wyrażeń logicznych.
 
-You can request that the returned rows be sorted by one of the fields as
-follows:
+Możesz zażądać, aby zwrócone wiersze były posortowane według którejś z kolumn:
 
 ~~~~ {.sql}
-SELECT title,plays FROM Tracks ORDER BY title
+SELECT tytuł, odtworzenia FROM Utwory ORDER BY tytuł
 ~~~~
 
-To remove a row, you need a `WHERE` clause on an SQL
-`DELETE` statement. The `WHERE` clause determines
-which rows are to be deleted:
+Aby usunąć wiersz, potrzebna jest klauzula `WHERE` na instrukcji SQL `DELETE`. Klauzula `WHERE` określa, które wiersze mają zostać usunięte:
 
 ~~~~ {.sql}
-DELETE FROM Tracks WHERE title = 'My Way'
+DELETE FROM Utwory WHERE tytuł = 'My Way'
 ~~~~
 
-It is possible to `UPDATE` a column or columns within one or
-more rows in a table using the SQL `UPDATE` statement as
-follows:
+Przy użyciu polecenia SQL `UPDATE` możliwa jest aktualiza kolumn w obrębie jednego lub więcej wierszy w tabeli:
 
 ~~~~ {.sql}
-UPDATE Tracks SET plays = 16 WHERE title = 'My Way'
+UPDATE Utwory SET odtworzenia = 16 WHERE tytuł = 'My Way'
 ~~~~
 
-The `UPDATE` statement specifies a table and then a list of
-fields and values to change after the `SET` keyword and then
-an optional `WHERE` clause to select the rows that are to be
-updated. A single `UPDATE` statement will change all of the
-rows that match the `WHERE` clause. If a `WHERE`
-clause is not specified, it performs the `UPDATE` on all of
-the rows in the table.
+Polecenie `UPDATE` określa tabelę, a następnie po słowie kluczowym `SET` wskazuje listę pól i wartości, które mają zostać zmienione, a następnie mamy opcjonalną klauzulę `WHERE` do wyboru wierszy, które mają zostać zaktualizowane. Pojedyncze wyrażenie `UPDATE` zmienia wszystkie wiersze odpowiadające klauzuli `WHERE`. Jeśli klauzula `WHERE` nie jest określona, to wykonuje ona aktualizację dla wszystkich wierszy znajdujących się w tabeli.
 
-These four basic SQL commands (INSERT, SELECT, UPDATE, and DELETE) allow
-the four basic operations needed to create and maintain data.
+Opisane wyżej cztery podstawowe polecenia SQL (`INSERT`, `SELECT`, `UPDATE` i `DELETE`) pozwalają na wykonanie podstawowych operacji potrzebnych do utworzenia i utrzymania danych.
 
-Spidering Twitter using a database
-----------------------------------
+Zbieranie informacji z Twittera przy użyciu baz danych
+------------------------------------------------------
 
-In this section, we will create a simple spidering program that will go
-through Twitter accounts and build a database of them. *Note: Be very
-careful when running this program. You do not want to pull too much data
-or run the program for too long and end up having your Twitter access
-shut off.*
+W poniżej sekcji stworzymy prostego robota internetowego, który przejdzie przez kilka kont na Twitterze i na podstawie zebranych informacji zbudujemy bazę danych. *Uwaga: Bądź bardzo ostrożny podczas uruchamiania poniższych programów. Nie chcesz pobierać zbyt dużo danych lub uruchamiać programów zbyt długo, ponieważ Twittera wyłączy Ci dostęp do swojego API.*
 
-One of the problems of any kind of spidering program is that it needs to
-be able to be stopped and restarted many times and you do not want to
-lose the data that you have retrieved so far. You don't want to always
-restart your data retrieval at the very beginning so we want to store
-data as we retrieve it so our program can start back up and pick up
-where it left off.
+Jednym z problemów związanych z każdym rodzajem robota internetowego jest to, że czasami trzeba go wielokrotnie zatrzymywać i uruchamiać ponownie i jednocześnie nie chcemy utracić danych, które do tej pory pobraliśmy. Nie chcemy by ponowne uruchomienie procesu zbierania danych zaczynało się w tym samym punkcie startowym, więc podczas pobierania danych musimy je przechowywać tak, aby nasz program mógł rozpocząć działanie w tym miejscu, w którym ostatnio zakończył pracę.
 
-We will start by retrieving one person's Twitter friends and their
-statuses, looping through the list of friends, and adding each of the
-friends to a database to be retrieved in the future. After we process
-one person's Twitter friends, we check in our database and retrieve one
-of the friends of the friend. We do this over and over, picking an
-"unvisited" person, retrieving their friend list, and adding friends we
-have not seen to our list for a future visit.
+Zaczniemy od pobrania z Twittera listy znajomych jakiegoś użytkownika i ich statusów, przejrzenia tej listy i dodania każdego ze znajomych do bazy danych, która zostanie użyta w przyszłości do dalszego pobierania danych. Po przetworzeniu znajomych jednej osoby, sprawdzamy naszą bazę danych i bierzemy jednego ze znajomych tego użytkownika. Robimy tak w kółko, wybierając "nieprzetworzną" osobę, pobierając jej listę znajomych i dodając tych znajomych, których jeszcze nie widzieliśmy, do naszej listy do odwiedzenia w przyszłości.
 
-We also track how many times we have seen a particular friend in the
-database to get some sense of their "popularity".
+Śledzimy również, ile razy widzieliśmy danego znajomego w bazie danych, aby uzyskać jakiś wskaźnik jego "popularności".
 
-By storing our list of known accounts and whether we have retrieved the
-account or not, and how popular the account is in a database on the disk
-of the computer, we can stop and restart our program as many times as we
-like.
+Przechowując na dysku komputera bazę dotyczącą znanych nam kont Twittera, informacji czy już to kontro odwiedziliśmy oraz jak dane konto jest popularne, możemy zatrzymać i uruchomić ponownie nasz program tyle razy, ile chcemy.
 
-This program is a bit complex. It is based on the code from the exercise
-earlier in the book that uses the Twitter API.
+Poniższy program jest nieco skomplikowany. Opiera się na kodzie z ćwiczenia z wcześniejszej części książki, która korzysta z API Twittera.
 
-Here is the source code for our Twitter spidering application:
+Oto kod źródłowy naszej aplikacji zbierającej informacje z Twittera:
 
 \VerbatimInput{../code3/twspider.py}
 
-Our database is stored in the file `spider.sqlite` and it
-has one table named `Twitter`. Each row in the
-`Twitter` table has a column for the account name, whether we
-have retrieved the friends of this account, and how many times this
-account has been "friended".
+Nasza baza danych jest przechowywana w pliku `spider.sqlite` i ma jedną tabelę o nazwie `Twitter`. Każdy wiersz w tabeli `Twitter` ma osobną kolumnę dla nazwy konta, informacji czy pobraliśmy listę znajomych tego konta oraz tego ile razy konto wystąpiło na listach znajomych.
 
-In the main loop of the program, we prompt the user for a Twitter
-account name or "quit" to exit the program. If the user enters a Twitter
-account, we retrieve the list of friends and statuses for that user and
-add each friend to the database if not already in the database. If the
-friend is already in the list, we add 1 to the `friends`
-field in the row in the database.
+W głównej pętli programu prosimy o podanie nazwy konta Twittera lub "koniec", aby wyjść z programu. Jeżeli użytkownik poda nazwę konta na Twitterze, pobierzemy listę jego znajomych (i jego statusy) oraz dodamy każdego znajomego do bazy danych, o ile jeszcze go tam nie ma. Jeśli znajomy jest już na liście, to w bazie danych dodajemy 1 do pola `znajomi` w danym wierszu tabeli.
 
-If the user presses enter, we look in the database for the next Twitter
-account that we have not yet retrieved, retrieve the friends and
-statuses for that account, add them to the database or update them, and
-increase their `friends` count.
+Jeśli użytkownik naciśnie przycisk `<Enter>`, to szukamy w bazie danych kolejnego konta na Twitterze, którego jeszcze nie odwiedziliśmy, pobieramy jego znajomych i statusy tego konta, dodajemy znajomych do bazy danych lub aktualizujemy je, zwiększając ich liczbę w `friends`.
 
-Once we retrieve the list of friends and statuses, we loop through all
-of the `user` items in the returned JSON and retrieve the
-`screen_name` for each user. Then we use the `SELECT`
-statement to see if we already have stored this particular `screen_name`
-in the database and retrieve the friend count (`friends`) if
-the record exists.
+Kiedy pozyskamy już listę znajomych i statusy, idziemy w pętli przez wszystkie elementy `user` będące w zwróconym JSONie i dla każdego użytkownika pobieramy `screen_name`. Następnie używamy instrukcji `SELECT` by sprawdzić, czy ten konkretna wartość `screen_name` została już zapisana w bazie danych i pobieramy liczbę znajomych (`friends`), jeśli dany rekord istnieje.
 
 ~~~~ {.python}
 countnew = 0
 countold = 0
-for u in js['users'] :
+for u in js['users']:
     friend = u['screen_name']
     print(friend)
-    cur.execute('SELECT friends FROM Twitter WHERE name = ? LIMIT 1',
-        (friend, ) )
+    cur.execute('SELECT znajomi FROM Twitter WHERE nazwa = ? LIMIT 1',
+                (friend, ))
     try:
         count = cur.fetchone()[0]
-        cur.execute('UPDATE Twitter SET friends = ? WHERE name = ?',
-            (count+1, friend) )
+        cur.execute('UPDATE Twitter SET znajomi = ? WHERE nazwa = ?',
+                    (count+1, friend))
         countold = countold + 1
     except:
-        cur.execute('''INSERT INTO Twitter (name, retrieved, friends)
-            VALUES ( ?, 0, 1 )''', ( friend, ) )
+        cur.execute('''INSERT INTO Twitter (nazwa, pobrany, znajomi)
+                    VALUES (?, 0, 1)''', (friend, ))
         countnew = countnew + 1
-print('New accounts=',countnew,' revisited=',countold)
+print('Nowe konta=', countnew, ' widziane ponownie=', countold)
 conn.commit()
 ~~~~
 
-Once the cursor executes the `SELECT` statement, we must
-retrieve the rows. We could do this with a `for` statement,
-but since we are only retrieving one row (`LIMIT 1`), we can
-use the `fetchone()` method to fetch the first (and only) row
-that is the result of the `SELECT` operation. Since
-`fetchone()` returns the row as a *tuple*
-(even though there is only one field), we take the first value from the
-tuple using to get the current friend count into the variable
-`count`.
+Gdy kursor wykona instrukcję `SELECT`, musimy pobrać wiersze. Możemy to zrobić za pomocą pętli `for`, ale ponieważ pobieramy tylko jeden wiersz (`LIMIT 1`), możemy użyć metody `fetchone()` do pobrania pierwszego (i jedynego) wiersza, który jest wynikiem operacji `SELECT`. Ponieważ metoda `fetchone()` zwraca wiersz jako *krotkę* (nawet jeśli jest tylko jedno pole), bierzemy pierwszą wartość z krotki by uzyskać bieżące zliczenie znajomych i wstawić tę wartość do zmiennej `count`.
 
-If this retrieval is successful, we use the SQL `UPDATE`
-statement with a `WHERE` clause to add 1 to the
-`friends` column for the row that matches the friend's
-account. Notice that there are two placeholders (i.e., question marks)
-in the SQL, and the second parameter to the `execute()` is a
-two-element tuple that holds the values to be substituted into the SQL
-in place of the question marks.
+Jeśli to pobranie się powiedzie, używamy polecenia SQL `UPDATE` z klauzulą `WHERE`, tak aby dodać 1 do kolumny `friends` w wierszu, który pasuje do konta analizowanego znajomego. Zauważ, że w SQL są dwa symbole zastępcze (tzn. znaki zapytania), a drugi parametr `execute()` jest dwuelementową krotką, która przechowuje wartości, które mają być zastąpione w zapytaniu SQL zamiast znaków zapytania.
 
-If the code in the `try` block fails, it is probably because
-no record matched the `WHERE name = ?` clause on the SELECT
-statement. So in the `except` block, we use the SQL
-`INSERT` statement to add the friend's `screen_name` to the
-table with an indication that we have not yet retrieved the
-`screen_name` and set the friend count to one.
+Jeśli kod w bloku `try` się nie powiedzie, to prawdopodobnie dlatego, że w instrukcji `SELECT` żaden rekord nie pasuje do klauzuli `WHERE name = ?`. Tak więc w bloku `except` używamy polecenia `INSERT` aby dodać do tabeli atrybut znajomego opisujący jego nazwę ekranową, tj. `screen_name`m ze wskazaniem, że nie pobraliśmy jeszcze `screen_name` i ustawiliśmy liczbę znajomych na jeden.
 
-So the first time the program runs and we enter a Twitter account, the
-program runs as follows:
+Podsumowując, przy pierwszym uruchomieniu programu i podaniu konta Twittera, program działa w następujący sposób:
 
 ~~~~
-Enter a Twitter account, or quit: drchuck
-Retrieving http://api.twitter.com/1.1/friends ...
-New accounts= 20  revisited= 0
-Enter a Twitter account, or quit: quit
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec': drchuck
+Pobieranie http://api.twitter.com/1.1/friends ...
+(...)
+Nowe konta= 20  widziane ponownie= 0
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec': koniec
 ~~~~
 
-Since this is the first time we have run the program, the database is
-empty and we create the database in the file `spider.sqlite`
-and add a table named `Twitter` to the database. Then we
-retrieve some friends and add them all to the database since the
-database is empty.
+Ponieważ jest to pierwsze uruchomienie programu, baza danych jest pusta (a w zasadzie jej nie ma), więc tworzymy bazę danych w pliku `spider.sqlite` i dodajemy do niej tabelę o nazwie `Twitter`. Następnie pobieramy kilku znajomych i dodajemy ich wszystkich do pustej bazy danych.
 
-At this point, we might want to write a simple database dumper to take a
-look at what is in our `spider.sqlite` file:
+W tym momencie moglibyśmy napisać prosty program do wykonywania zrzutu bazy danych, tak aby przyjrzeć się temu, co znajduje się w naszym pliku `spider.sqlite`:
 
 \VerbatimInput{../code3/twdump.py}
 
-This program simply opens the database and selects all of the columns of
-all of the rows in the table `Twitter`, then loops through
-the rows and prints out each row.
+Program ten po prostu otwiera bazę danych i pobiera wszystkie kolumny ze wszystkich wierszy znajdujących się w tabeli `Twitter`, a następnie w pętli przechodzi przez przez wszystkie wiersze i wypisuje każdy z nich.
 
-If we run this program after the first execution of our Twitter spider
-above, its output will be as follows:
+Jeśli uruchomimy powyższy program po pierwszym uruchomieniu naszego robota internetowego, jego wyjście będzie wyglądało następująco:
 
 ~~~~
 ('opencontent', 0, 1)
@@ -453,69 +251,56 @@ above, its output will be as follows:
 ('davidkocher', 0, 1)
 ('hrheingold', 0, 1)
 ...
-20 rows.
+20 wierszy.
 ~~~~
 
-We see one row for each `screen_name`, that we have not retrieved the
-data for that `screen_name`, and everyone in the database has one
-friend.
+W każdym wierszu widzimy nazwę ekranową `screen_name` użytkownika, informację, że jeszcze nie pobraliśmy danych dla tego użytkownika, oraz że każdy w bazie danych ma jednego znajomego.
 
-Now our database reflects the retrieval of the friends of our first
-Twitter account (*drchuck*). We can run the program again
-and tell it to retrieve the friends of the next "unprocessed" account by
-simply pressing enter instead of a Twitter account as follows:
+W tym momencie nasza baza danych odzwierciedla pobieranie danych o znajomych z naszego pierwszego konta na Twitterze (*drchuck*). Możemy uruchomić program ponownie i wskazać mu, by pobrał znajomych z kolejnego "nieprzetworzonego" jeszcze konta, naciskając po prostu `<Enter>` (zamiast podawać nazwę konta na Twitterze). Wynik może być mniej więcej taki (uwaga: możliwe jest, że będziesz musiał kilkukrotnie wcisnąć `<Enter>` by natrafić na sytuację gdy pojawią się konta, które już były widziane wcześniej):
 
 ~~~~
-Enter a Twitter account, or quit:
-Retrieving http://api.twitter.com/1.1/friends ...
-New accounts= 18  revisited= 2
-Enter a Twitter account, or quit:
-Retrieving http://api.twitter.com/1.1/friends ...
-New accounts= 17  revisited= 3
-Enter a Twitter account, or quit: quit
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec':
+Pobieranie http://api.twitter.com/1.1/friends ...
+(...)
+Nowe konta= 18  widziane ponownie= 2
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec':
+Pobieranie http://api.twitter.com/1.1/friends ...
+(...)
+Nowe konta= 17  widziane ponownie= 3
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec': koniec
 ~~~~
 
-Since we pressed enter (i.e., we did not specify a Twitter account), the
-following code is executed:
+Ponieważ wcisnęliśmy `<Enter>` (tzn. nie określiliśmy nazwy konta na Twitterze), wykonywany jest następujący kod:
+
 
 ~~~~ {.python}
-if ( len(acct) < 1 ) :
-    cur.execute('SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1')
+if (len(acct) < 1):
+    cur.execute('SELECT nazwa FROM Twitter WHERE pobrany = 0 LIMIT 1')
     try:
         acct = cur.fetchone()[0]
     except:
-        print('No unretrieved twitter accounts found')
+        print('Nie znaleziono niepobranych kont Twittera')
         continue
 ~~~~
 
-We use the SQL `SELECT` statement to retrieve the name of the
-first (`LIMIT 1`) user who still has their "have we retrieved
-this user" value set to zero. We also use the `fetchone()[0]`
-pattern within a try/except block to either extract a `screen_name` from
-the retrieved data or put out an error message and loop back up.
+Używamy polecenia SQL `SELECT`, aby pobrać nazwę pierwszego (`LIMIT 1`) użytkownika, który nadal ma ustawioną wartość "czy przetworzyliśmy już tego użytkownika?" na zero. Używamy także formuły `fetchone()[0]` w obrębie bloku `try`/`except` albo by wydobyć z pobranych danych `screen_name`, albo by wyświetlić informację o błędzie i wykonać ponownie pętlę.
 
-If we successfully retrieved an unprocessed `screen_name`, we retrieve
-their data as follows:
+Jeśli udało nam się uzyskać z `screen_name` nieprzetworzone jeszcze konto, to pobieramy dane z tego konta w następujący sposób:
 
 ~~~~ {.python}
-url=twurl.augment(TWITTER_URL,{'screen_name': acct,'count': '20'})
-print('Retrieving', url)
-connection = urllib.urlopen(url)
-data = connection.read()
+url = twurl.augment(TWITTER_URL, {'screen_name': acct, 'count': '20'})
+print('Pobieranie', url)
+connection = urlopen(url, context=ctx)
+data = connection.read().decode()
+# ...
 js = json.loads(data)
-
-cur.execute('UPDATE Twitter SET retrieved=1 WHERE name = ?',(acct, ))
+# ...
+cur.execute('UPDATE Twitter SET pobrany=1 WHERE nazwa = ?', (acct, ))
 ~~~~
 
-Once we retrieve the data successfully, we use the `UPDATE`
-statement to set the `retrieved` column to 1 to indicate that
-we have completed the retrieval of the friends of this account. This
-keeps us from retrieving the same data over and over and keeps us
-progressing forward through the network of Twitter friends.
+Po pomyślnym pobraniu danych, używamy instrukcji `UPDATE`, aby ustawić kolumnę `retrieved` na 1, po to by wskazać, że zakończyliśmy pobieranie listy znajomych tego konta. Dzięki temu chroni nas to przed wielokrotnym pobieraniem tych samych danych i sprawia, że robimy postępy w budowie sieci znajomych kont Twittera.
 
-If we run the friend program and press enter twice to retrieve the next
-unvisited friend's friends, then run the dumping program, it will give
-us the following output:
+Jeśli uruchomimy pierwszy program do pobierania listy znajomych, naciśniemy kilka razy `<Enter>`, aby uzyskać kolejnych nieprzetworzonych jeszcze znajomych jakiegoś znajomego, a następnie uruchomimy program do zrzucania danych z bazy, to uzyskamy mniej więcej podobny po poniższego wynik (tutaj wciśnięto `<Enter>` dwa razy, ale rzeczywisty aktualny wynik może się różnić):
 
 ~~~~
 ('opencontent', 1, 1)
@@ -529,25 +314,14 @@ us the following output:
 ('kthanos', 0, 2)
 ('LectureTools', 0, 1)
 ...
-55 rows.
+55 wierszy.
 ~~~~
 
-We can see that we have properly recorded that we have visited
-`lhawthorn` and `opencontent`. Also the accounts
-`cnxorg` and `kthanos` already have two followers.
-Since we now have retrieved the friends of three people
-(`drchuck`, `opencontent`, and
-`lhawthorn`) our table has 55 rows of friends to retrieve.
+Widzimy, że poprawnie zapisaliśmy informację, że odwiedziliśmy konta `lhawthorn` i `opencontent`. Również konta `cnxorg` i `kthanos` mają już dwie osoby śledzące. Odkąd pozyskaliśmy znajomych trzech osób (`drchuck`, `opencontent` i `lhawthorn`), nasza tabela ma 55 wierszy dotyczących pobranych użytkowników.
 
-Each time we run the program and press enter it will pick the next
-unvisited account (e.g., the next account will be `steve_coppin`),
-retrieve their friends, mark them as retrieved, and for each of the
-friends of `steve_coppin` either add them to the end of the database or
-update their friend count if they are already in the database.
+Za każdym razem, gdy uruchomimy program i wciśniemy przycisk `<Enter>`, wybierze on następne nieprzetworzone konto (np. następnym kontem będzie `steve_coppin`), pobierze jego znajomych, oznaczy go jako pobranego, a dla każdego znajomego użytkownika `steve_coppin` albo doda go na końcu tabeli, albo zaktualizuje jego liczbę `znajomi` jeśli już jest w bazie.
 
-Since the program's data is all stored on disk in a database, the
-spidering activity can be suspended and resumed as many times as you
-like with no loss of data.
+Ponieważ wszystkie dane programu są przechowywane na dysku w bazie danych, aktywność robota internetowego może być zawieszana i wznawiana tyle razy, ile chcesz, bez utraty danych.
 
 Basic data modeling
 -------------------
