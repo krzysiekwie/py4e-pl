@@ -376,12 +376,10 @@ W istocie, tworząc tabelę `Obserwuje` modelujemy "związek", w którym jedna o
 
 ![Związki między tabelami](height=3.5in@../images/twitter)
 
-Programming with multiple tables
---------------------------------
+Programowanie z użyciem wielu tabel
+-----------------------------------
 
-We will now redo the Twitter spider program using two tables, the
-primary keys, and the key references as described above. Here is the
-code for the new version of the program:
+Napiszemy jeszcze raz kod robota internetowego do chodzenia po kontach użytkowników Twittera, ale tym razem używając dwóch tabel, kluczy głównych i kluczy obcych. Poniżej znajduje się nowa wersja programu:
 
 \VerbatimInput{../code3/twfriends.py}
 

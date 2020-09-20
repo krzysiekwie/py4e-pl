@@ -29,6 +29,7 @@ Polish translation progress
 | `14-objects.mkd`       | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒(*)   | ☐        | ☐     | ☐          | ☐    |
 | `16-viz.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | links to code repo...  |      |      |       |      |         |          |         |            |       |
