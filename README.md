@@ -27,7 +27,7 @@ Polish translation progress
 | `12-network.mkd`       | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `13-web.mkd`           | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `14-objects.mkd`       | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒ + `figs2` ☐ | ☐        | ☐     | ☐          | ☐    |
+| `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒(*)   | ☐        | ☐     | ☐          | ☐    |
 | `16-viz.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
@@ -37,6 +37,8 @@ Polish translation progress
 | Inline code within grave accents |         |            |       |
 | `pip install...` -> `pip3 install...` |         |            |       |
 | `unit.sh` check |         |            |       |
+
+(*) moved `book3/figs2` to `images`.
 
 URLs to translated trinkets are in `trinket3-pl-urls.md`.
 
