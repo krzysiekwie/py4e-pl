@@ -149,7 +149,12 @@
 
 ## Chapter 15
 
-* [`...`](#)
+* [15-01 - `db1.py` (English, real Python 3)](https://trinket.io/python3/70f3ef6c8d)
+* [15-02 - `db2.py` (English, real Python 3)](https://trinket.io/python3/f9e4f679ea)
+* [15-03 - `twspider.py` (English, real Python 3)](https://trinket.io/python3/b5832486ff) (not working; manual edit needed by adding `oauth.py`, `twurl.py` and customized `hidden.py`)
+* [15-04 - `twdump.py` (English, real Python 3)](https://trinket.io/python3/25c8bd569e) (works only with previous example)
+* [15-05 - `twfriends.py` (English, real Python 3)](https://trinket.io/python3/d04e576976) (not working; manual edit needed by adding `oauth.py`, `twurl.py` and customized `hidden.py`)
+* [15-06 - `twjoin.py` (English, real Python 3)](https://trinket.io/python3/107ffe053e) (works only with previous example)
 
 ## Chapter 16
 

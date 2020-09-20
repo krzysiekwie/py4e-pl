@@ -3,30 +3,30 @@ import sqlite3
 conn = sqlite3.connect('friends.sqlite')
 cur = conn.cursor()
 
-cur.execute('SELECT * FROM People')
+cur.execute('SELECT * FROM Osoby')
 count = 0
-print('People:')
+print('Osoby:')
 for row in cur:
     if count < 5: print(row)
     count = count + 1
-print(count, 'rows.')
+print(count, 'wierszy.')
 
-cur.execute('SELECT * FROM Follows')
+cur.execute('SELECT * FROM Obserwuje')
 count = 0
-print('Follows:')
+print('\nObserwuje:')
 for row in cur:
     if count < 5: print(row)
     count = count + 1
-print(count, 'rows.')
+print(count, 'wierszy.')
 
-cur.execute('''SELECT * FROM Follows JOIN People
-            ON Follows.to_id = People.id
-            WHERE Follows.from_id = 2''')
+cur.execute('''SELECT * FROM Obserwuje JOIN Osoby
+            ON Obserwuje.id_do = Osoby.id
+            WHERE Obserwuje.id_od = 2''')
 count = 0
-print('Connections for id=2:')
+print('\nPołączenia dla id=2:')
 for row in cur:
     if count < 5: print(row)
     count = count + 1
-print(count, 'rows.')
+print(count, 'wierszy.')
 
 cur.close()
