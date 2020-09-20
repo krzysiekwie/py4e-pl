@@ -298,7 +298,9 @@ js = json.loads(data)
 cur.execute('UPDATE Twitter SET pobrany=1 WHERE nazwa = ?', (acct, ))
 ~~~~
 
-Po pomyślnym pobraniu danych, używamy instrukcji `UPDATE`, aby ustawić kolumnę `retrieved` na 1, po to by wskazać, że zakończyliśmy pobieranie listy znajomych tego konta. Dzięki temu chroni nas to przed wielokrotnym pobieraniem tych samych danych i sprawia, że robimy postępy w budowie sieci znajomych kont Twittera.
+Aby nie przetwarzać wszystkich znajomych danego użytkownika i zachować pewną czytelność w wynikach, zastosujemy pewne uproszczenie, tj. ograniczymy się tylko do pierwszych 20 osób (`'count': '20'`) i zignorujemy pozostałych znajomych.
+
+Po pomyślnym pobraniu danych, używamy instrukcji `UPDATE`, aby ustawić kolumnę `pobrany` na 1, po to by wskazać, że zakończyliśmy pobieranie listy znajomych tego konta. Dzięki temu chroni nas to przed wielokrotnym pobieraniem tych samych danych i sprawia, że robimy postępy w budowie sieci znajomych kont Twittera.
 
 Jeśli uruchomimy pierwszy program do pobierania listy znajomych, naciśniemy kilka razy `<Enter>`, aby uzyskać kolejnych nieprzetworzonych jeszcze znajomych jakiegoś znajomego, a następnie uruchomimy program do zrzucania danych z bazy, to uzyskamy mniej więcej podobny po poniższego wynik (tutaj wciśnięto `<Enter>` dwa razy, ale rzeczywisty aktualny wynik może się różnić):
 
@@ -358,7 +360,7 @@ Możemy utworzyć tabelę `Osoby` z dodatkową kolumną `id` w następujący spo
 
 ~~~~ {.sql}
 CREATE TABLE Osoby
-    (id INTEGER PRIMARY KEY, nazwa TEXT UNIQUE, pobrany INTEGER)
+    (id INTEGER PRIMARY KEY, nazwa TEXT UNIQUE, pobrana INTEGER)
 ~~~~
 
 Zauważ, że w każdym wierszu tabeli `Osoby` nie zapisujemy już liczby znajomych. Kiedy jako typ naszej kolumny `id` wybierzemy `INTEGER PRIMARY KEY`, to wskazujemy, że chcielibyśmy by SQLite zarządzał tą kolumną i automatycznie przypisywał unikalny klucz numeryczny każdemu wstawianemu wierszowi. Dodajemy również słowo kluczowe `UNIQUE`, aby wskazać, że nie pozwolimy SQLite na wstawienie dwóch wierszy o tej samej wartości dla kolumny `nazwa`.
@@ -379,234 +381,161 @@ W istocie, tworząc tabelę `Obserwuje` modelujemy "związek", w którym jedna o
 Programowanie z użyciem wielu tabel
 -----------------------------------
 
-Napiszemy jeszcze raz kod robota internetowego do chodzenia po kontach użytkowników Twittera, ale tym razem używając dwóch tabel, kluczy głównych i kluczy obcych. Poniżej znajduje się nowa wersja programu:
+Napiszemy jeszcze raz kod robota internetowego do chodzenia po kontach użytkowników Twittera, ale tym razem używając dwóch tabel i kluczy głównych i odniesień między tabelami. Dodatkowo w tej wersji programu zwiększymy liczbę pobieranych znajomych z 20 do 100. Poniżej znajduje się nowa wersja programu:
 
 \VerbatimInput{../code3/twfriends.py}
 
-This program is starting to get a bit complicated, but it illustrates
-the patterns that we need to use when we are using integer keys to link
-tables. The basic patterns are:
+Nasz program zaczyna się komplikować, ale ilustruje schematy programowania, których musimy użyć podczas korzystania z kluczy całkowitoliczbowych do łączenia tabel. Podstawowymi schematami są:
 
-1.  Create tables with primary keys and constraints.
+1.  Tworzenie tabel z kluczami głównymi i ograniczeniami.
 
-2.  When we have a logical key for a person (i.e., account name) and we
-    need the `id` value for the person, depending on whether
-    or not the person is already in the `People` table we
-    either need to: (1) look up the person in the `People`
-    table and retrieve the `id` value for the person or (2)
-    add the person to the `People` table and get the
-    `id` value for the newly added row.
+2.  Gdy dla danej osoby mamy klucz logiczny (tj. nazwę konta) i potrzebujemy wartości `id` dla tej osoby, to w zależności od tego czy osoba ta znajduje się już w tabeli `Osoby` czy też jej tam nie ma: (1) szukamy osoby w tabeli `Osoby` i pobieramy dla niej wartość `id` lub (2) dodajemy osobę do tabeli `Osoby` i pobieramy wartość `id` dla nowo dodanego wiersza.
 
-3.  Insert the row that captures the "follows" relationship.
+3.  Wstawienie wiersza, który jest w stanie uchwycić związek "obserwuje".
 
-We will cover each of these in turn.
+Po kolei zajmiemy się każdym z tych schematów.
 
-### Constraints in database tables
+### Ograniczenia w tabelach bazy danych
 
-As we design our table structures, we can tell the database system that
-we would like it to enforce a few rules on us. These rules help us from
-making mistakes and introducing incorrect data into out tables. When we
-create our tables:
+Projektując struktury naszych tabel możemy powiedzieć systemowi bazy danych, że chcielibyśmy aby egzekwował on od nas kilka zasad. Reguły te pomagają nam uniknąć popełniania błędów i wprowadzania do naszych tabel błędnych danych. Kiedy tworzymy nasze tabele:
 
 ~~~~ {.python}
-cur.execute('''CREATE TABLE IF NOT EXISTS People
-    (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)''')
-cur.execute('''CREATE TABLE IF NOT EXISTS Follows
-    (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id))''')
+cur.execute('''CREATE TABLE IF NOT EXISTS Osoby
+    (id INTEGER PRIMARY KEY, nazwa TEXT UNIQUE, pobrana INTEGER)''')
+cur.execute('''CREATE TABLE IF NOT EXISTS Obserwuje
+    (id_od INTEGER, id_do INTEGER, UNIQUE(id_od, id_do))''')
 ~~~~
 
-We indicate that the `name` column in the `People`
-table must be `UNIQUE`. We also indicate that the combination
-of the two numbers in each row of the `Follows` table must be
-unique. These constraints keep us from making mistakes such as adding
-the same relationship more than once.
+wskazujemy, że kolumna `nazwa` w tabeli `Osoby` musi być unikalna (`UNIQUE`). Wskazujemy również, że kombinacja dwóch liczb w każdym wierszu tabeli `Obserwuje` musi być unikalna. Te ograniczenia powstrzymują nas przed popełnianiem błędów, takich jak dodawanie tego samego związku więcej niż jeden raz.
 
-We can take advantage of these constraints in the following code:
+Możemy skorzystać z tych ograniczeń w poniższym kodzie:
 
 ~~~~ {.python}
-cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
+cur.execute('''INSERT OR IGNORE INTO Osoby (nazwa, pobrana)
     VALUES ( ?, 0)''', ( friend, ) )
 ~~~~
 
-We add the `OR IGNORE` clause to our `INSERT`
-statement to indicate that if this particular `INSERT` would
-cause a violation of the "`name` must be unique" rule, the
-database system is allowed to ignore the `INSERT`. We are
-using the database constraint as a safety net to make sure we don't
-inadvertently do something incorrect.
+Dodajemy klauzulę `OR IGNORE` do naszej instrukcji `INSERT`, tak aby wskazać, że jeśli ten konkretny `INSERT` spowodowałby naruszenie zasady mówiącej, że "`nazwa` musi być unikalna", to system bazy danych może zignorować to polecenie `INSERT`. Używamy ograniczenia bazy danych jako siatki asekuracyjnej po to by upewnić się, że nie zrobimy przez przypadek czegoś nieprawidłowego.
 
-Similarly, the following code ensures that we don't add the exact same
-`Follows` relationship twice.
+Podobnie, poniższy kod zapewnia, że nie dodamy dw razy dokładnie tego samego związku w `Obserwuje`.
 
 ~~~~ {.python}
-cur.execute('''INSERT OR IGNORE INTO Follows
-    (from_id, to_id) VALUES (?, ?)''', (id, friend_id) )
+cur.execute('''INSERT OR IGNORE INTO Obserwuje
+    (id_od, id_Do) VALUES (?, ?)''', (id, friend_id) )
 ~~~~
 
-Again, we simply tell the database to ignore our attempted
-`INSERT` if it would violate the uniqueness constraint that
-we specified for the `Follows` rows.
+Po prostu mówimy naszej bazie danych, by zignorowała naszą próbę wstawienia danych (`INSERT`), jeśli naruszałaby ona ograniczenie unikalności, które określiliśmy dla wierszy w `Obserwuje`.
 
-### Retrieve and/or insert a record
+### Pobieranie i/lub wstawianie wiersza
 
-When we prompt the user for a Twitter account, if the account exists, we
-must look up its `id` value. If the account does not yet
-exist in the `People` table, we must insert the record and
-get the `id` value from the inserted row.
+Kiedy zachęcamy użytkownika do podania nazwy konta na Twitterze i jeśli podane przez niego konto istnieje, to musimy sprawdzić jego wartość `id`. Jeśli konto jeszcze nie istnieje w tabeli `Osoby`, to musimy wstawić rekord i uzyskać wartość `id` z wstawionego wiersza.
 
-This is a very common pattern and is done twice in the program above.
-This code shows how we look up the `id` for a friend's
-account when we have extracted a `screen_name` from a `user`
-node in the retrieved Twitter JSON.
+Jest to bardzo powszechny schemat postępowania i jest używany dwa razy w naszym programie. Kod ten pokazuje sposób w jaki szukamy `id` dla konta znajomego, gdy wyciągnęliśmy nazwę ekranową `screen_name` z węzła `user`.
 
-Since over time it will be increasingly likely that the account will
-already be in the database, we first check to see if the
-`People` record exists using a `SELECT` statement.
+Ponieważ z czasem będzie coraz bardziej prawdopodobne, że konto znajduje się już w naszej bazie danych, najpierw sprawdzamy, czy istnieje wpis w `Osoby` pomocą polecenia `SELECT`.
 
-If all goes well^[In general, when a sentence starts with "if all goes well" you
-will find that the code needs to use try/except.] inside 
-the `try` section, we retrieve
-the record using `fetchone()` and then retrieve the first
-(and only) element of the returned tuple and store it in `friend_id`.
+Jeśli wszystko pójdzie dobrze^[Ogólnie rzecz biorąc, gdy zdanie zaczyna się od "jeśli wszystko idzie dobrze", to zauważysz, że kod musi używać `try`/`except`.] w sekcji `try`, to pobieramy z tabeli wiersz za pomocą funkcji `fetchone()`, a następnie pobieramy pierwszy (i jedyny) element zwróconej krotki i zapisujemy go w zmiennej `friend_id`.
 
-If the `SELECT` fails, the `fetchone()[0]` code
-will fail and control will transfer into the `except`
-section.
+Jeśli `SELECT` się nie powiedzie, to kod `fetchone()[0]` też się nie powiedzie i działanie programu zostanie przeniesione do sekcji `except`.
 
 ~~~~ {.python}
     friend = u['screen_name']
-    cur.execute('SELECT id FROM People WHERE name = ? LIMIT 1',
-        (friend, ) )
+    print(friend)
+    cur.execute('SELECT id FROM Osoby WHERE nazwa = ? LIMIT 1',
+                (friend, ))
     try:
         friend_id = cur.fetchone()[0]
         countold = countold + 1
     except:
-        cur.execute('''INSERT OR IGNORE INTO People (name, retrieved)
-            VALUES ( ?, 0)''', ( friend, ) )
+        cur.execute('''INSERT OR IGNORE INTO Osoby (nazwa, pobrana)
+                    VALUES (?, 0)''', (friend, ))
         conn.commit()
-        if cur.rowcount != 1 :
-            print('Error inserting account:',friend)
+        if cur.rowcount != 1:
+            print('Błąd podczas wstawiania konta:', friend)
             continue
         friend_id = cur.lastrowid
         countnew = countnew + 1
 ~~~~
 
-If we end up in the `except` code, it simply means that the
-row was not found, so we must insert the row. We use `INSERT OR
-IGNORE` just to avoid errors and then call `commit()`
-to force the database to really be updated. After the write is done, we
-can check the `cur.rowcount` to see how many rows were
-affected. Since we are attempting to insert a single row, if the number
-of affected rows is something other than 1, it is an error.
+Jeśli znajdziemy się w kodzie sekcji `except`, to oznacza to po prostu, że wiersz nie został znaleziony w tabeli, więc musimy go tam wstawić. Używamy `INSERT OR IGNORE` tylko po to, by uniknąć błędów, a następnie wywołujemy `commit()`, by zmusić bazę danych do faktycznej aktualizacji danych. Po zakończeniu zapisywania danych, możemy sprawdzić zmienną `cur.rowcount` by sprawdzić ile wierszy zostało zmienionych. Staramy się wstawić pojedynczy wiersz, więc jeśli liczba zmienionych wierszy jest inna niż 1, to mamy do czynienia z błędem.
 
-If the `INSERT` is successful, we can look at
-`cur.lastrowid` to find out what value the database assigned
-to the `id` column in our newly created row.
+Jeśli polecenie `INSERT` się powiedzie, to możemy spojrzeć na zmienną `cur.lastrowid` aby dowiedzieć się jaką wartość baza danych przypisała do kolumny `id` w naszym nowo utworzonym wierszu.
 
-### Storing the friend relationship
+### Przechowywanie związku dotyczącego znajomości
 
-Once we know the key value for both the Twitter user and the friend in
-the JSON, it is a simple matter to insert the two numbers into the
-`Follows` table with the following code:
+Kiedy już poznamy wartość klucza zarówno dla danego użytkownika Twittera, jak i jego znajomego, to łatwo będzie nam wpisać dwie liczby całkowite do tabeli `Obserwuje`:
 
 ~~~~ {.python}
-cur.execute('INSERT OR IGNORE INTO Follows (from_id, to_id) VALUES (?, ?)',
+cur.execute('INSERT OR IGNORE INTO Obserwuje (id_od, id_do) VALUES (?, ?)',
     (id, friend_id) )
 ~~~~
 
-Notice that we let the database take care of keeping us from
-"double-inserting" a relationship by creating the table with a
-uniqueness constraint and then adding `OR IGNORE` to our
-`INSERT` statement.
+Zauważ, że pozwalamy bazie danych zadbać o to, by nie dopuścić do "podwójnego wstawiania" związku, tworząc tabelę z ograniczeniem unikalności, a następnie dodając `OR IGNORE` do naszej instrukcji `INSERT`.
 
-Here is a sample execution of this program:
+Poniżej znajduje się przykładowe wynik naszego programu:
 
 ~~~~
-Enter a Twitter account, or quit:
-No unretrieved Twitter accounts found
-Enter a Twitter account, or quit: drchuck
-Retrieving http://api.twitter.com/1.1/friends ...
-New accounts= 20  revisited= 0
-Enter a Twitter account, or quit:
-Retrieving http://api.twitter.com/1.1/friends ...
-New accounts= 17  revisited= 3
-Enter a Twitter account, or quit:
-Retrieving http://api.twitter.com/1.1/friends ...
-New accounts= 17  revisited= 3
-Enter a Twitter account, or quit: quit
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec':
+Nie znaleziono niepobranych kont Twittera
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec': drchuck
+Pobieranie konta drchuck
+(...)
+Nowe konta= 100  widziane ponownie= 0
+Pozostało 13
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec':
+Pobieranie konta jimcollins
+(...)
+Nowe konta= 99  widziane ponownie= 1
+Pozostało 12
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec':
+Pobieranie konta jczetta
+(...)
+Nowe konta= 97  widziane ponownie= 3
+Pozostało 11
+Podaj nazwę konta na Twitterze lub wprowadź 'koniec': koniec
 ~~~~
 
-We started with the `drchuck` account and then let the
-program automatically pick the next two accounts to retrieve and add to
-our database.
+Zaczęliśmy od konta `drchuck`, a następnie pozwoliliśmy programowi automatycznie wybrać dwa następne konta do pobrania i dodania do naszej bazy danych.
 
-The following is the first few rows in the `People` and
-`Follows` tables after this run is completed:
+Poniżej znajduje się wynik `twdump2.py`, który wyświetla wiersze tabel `Osoby` i `Obserwuje`:
 
 ~~~~
-People:
+Osoby:
 (1, 'drchuck', 1)
-(2, 'opencontent', 1)
-(3, 'lhawthorn', 1)
-(4, 'steve_coppin', 0)
-(5, 'davidkocher', 0)
-55 rows.
-Follows:
+(2, 'jimcollins', 1)
+(3, 'jczetta', 1)
+(4, 'fsf', 0)
+(5, 'ubuntourist', 0)
+...
+297 wierszy.
+
+Obserwuje:
 (1, 2)
 (1, 3)
 (1, 4)
-(1, 5)
-(1, 6)
-60 rows.
+...
+(2, 121)
+(2, 122)
+(2, 1)
+(2, 123)
+...
+300 wierszy.
 ~~~~
 
-You can see the `id`, `name`, and
-`visited` fields in the `People` table and you see
-the numbers of both ends of the relationship in the `Follows`
-table. In the `People` table, we can see that the first three
-people have been visited and their data has been retrieved. The data in
-the `Follows` table indicates that `drchuck` (user
-1) is a friend to all of the people shown in the first five rows. This
-makes sense because the first data we retrieved and stored was the
-Twitter friends of `drchuck`. If you were to print more rows
-from the `Follows` table, you would see the friends of users
-2 and 3 as well.
+Możesz zauważyć pola `id`, `nazwa` i `pobrana` z tabeli `Osoby` oraz  numery opisujące związki z tabeli `Obserwuje`. W tabeli `Osoby` widzimy, że pierwsze trzy osoby zostały już odwiedzone i ich dane zostały pobrane. Dane w tabeli `Obserwuje` wskazują, że `drchuck` (użytkownik 1) jest znajomym wszystkich osób pokazanych w pierwszych trzech wierszach. Ma to sens, ponieważ pierwszymi danymi, które pobraliśmy i przechowywaliśmy byli znajomi użytkownika `drchuck`. Jeśli wyświetlisz u siebie wszystkie wiersze tabeli `Obserwuje`, to zobaczysz również znajomych użytkowników o `id` równych 2 i 3.
 
-Three kinds of keys
+Trzy rodzaje kluczy
 -------------------
 
-Now that we have started building a data model putting our data into
-multiple linked tables and linking the rows in those tables using
-*keys*, we need to look at some terminology around keys.
-There are generally three kinds of keys used in a database model.
+Teraz, gdy zaczęliśmy budować model danych umieszczając nasze dane w wielu połączonych ze sobą tabelach i łącząc wiersze w tych tabelach za pomocą *kluczy*, musimy przyjrzeć się trochę terminologii dotyczącej kluczy. Ogólnie rzecz biorąc, istnieją trzy rodzaje kluczy używanych w modelu bazy danych.
 
--   A *logical key* is a key that the "real world" might
-    use to look up a row. In our example data model, the
-    `name` field is a logical key. It is the screen name for
-    the user and we indeed look up a user's row several times in the
-    program using the `name` field. You will often find that
-    it makes sense to add a `UNIQUE` constraint to a logical
-    key. Since the logical key is how we look up a row from the outside
-    world, it makes little sense to allow multiple rows with the same
-    value in the table.
+-   *Klucz logiczny* to klucz, którego "rzeczywisty świat" może użyć do wyszukiwania wierszy. W naszym przykładowym modelu danych, pole `nazwa` jest kluczem logicznym. Jest to nazwa ekranowa użytkownika i rzeczywiście szukamy wiersza użytkownika kilka razy w programie używając pola `nazwa`. Często okazuje się, że sensowne jest dodanie ograniczenia `UNIQUE` do klucza logicznego. Ponieważ klucz logiczny jest tym, w jaki sposób z zewnętrznego świata szukamy danego wiersza, nie ma sensu zezwalać w tabeli na wiele wierszy o tej samej wartości.
 
--   A *primary key* is usually a number that is assigned
-    automatically by the database. It generally has no meaning outside
-    the program and is only used to link rows from different tables
-    together. When we want to look up a row in a table, usually
-    searching for the row using the primary key is the fastest way to
-    find the row. Since primary keys are integer numbers, they take up
-    very little storage and can be compared or sorted very quickly. In
-    our data model, the `id` field is an example of a primary
-    key.
+-   *Klucz główny* jest zazwyczaj liczbą, która jest przypisywana automatycznie przez bazę danych. Na ogół nie ma on żadnego znaczenia poza programem i jest używany tylko do łączenia razem wierszy z różnych tabel. Gdy chcemy odnaleźć wiersz w tabeli, zazwyczaj najszybszym sposobem na odnalezienie wiersza jest wyszukiwanie go za pomocą klucza głównego. Ponieważ klucze główne są liczbami całkowitymi, zajmują bardzo mało miejsca w pamięci i mogą być bardzo szybko porównywane lub sortowane. W naszym modelu danych, pole `id` jest przykładem klucza głównego.
 
--   A *foreign key* is usually a number that points to
-    the primary key of an associated row in a different table. An
-    example of a foreign key in our data model is the `from_id`.
+-   *Klucz obcy* jest zazwyczaj liczbą, która wskazuje na klucz główny powiązanego wiersza w innej tabeli. Przykładem klucza obcego w naszym modelu danych jest `id_od`.
 
-We are using a naming convention of always calling the primary key field
-name `id` and appending the suffix `_id` to any field name
-that is a foreign key.
+Używamy konwencji nazewniczej polegającej na nazywaniu nazwy pola klucza głównego `id` i dodawaniu przedrostka `id_` do każdej nazwy pola, które jest kluczem obcym.
 
 Using JOIN to retrieve data
 ---------------------------
