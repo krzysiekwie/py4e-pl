@@ -323,110 +323,58 @@ Za każdym razem, gdy uruchomimy program i wciśniemy przycisk `<Enter>`, wybier
 
 Ponieważ wszystkie dane programu są przechowywane na dysku w bazie danych, aktywność robota internetowego może być zawieszana i wznawiana tyle razy, ile chcesz, bez utraty danych.
 
-Basic data modeling
--------------------
+Podstawy modelowania danych
+---------------------------
 
-The real power of a relational database is when we create multiple
-tables and make links between those tables. The act of deciding how to
-break up your application data into multiple tables and establishing the
-relationships between the tables is called *data
-modeling*. The design document that shows the tables and their
-relationships is called a *data model*.
+Prawdziwa siła relacyjnej bazy danych ujawnia się w momencie utworzenia wielu tabel i połączeń pomiędzy nimi. Czynność decydująca o tym jak rozbić dane aplikacji na wiele tabel i ustalić związki między nimi nazywamy *modelowaniem danych*. Dokument projektowy, który pokazuje tabele i ich związki, nazywa się *modelem danych*.
 
-Data modeling is a relatively sophisticated skill and we will only
-introduce the most basic concepts of relational data modeling in this
-section. For more detail on data modeling you can start with:
+Modelowanie danych jest stosunkowo wyrafinowaną umiejętnością i w tej części wprowadzimy tylko najbardziej podstawowe pojęcia z zakresu modelowania danych relacyjnych. Aby uzyskać więcej szczegółów na temat modelowania danych, możesz zacząć od poniższej strony:
 
-<http://en.wikipedia.org/wiki/Relational_model>
+<https://pl.wikipedia.org/wiki/Model_relacyjny>
 
-Let's say for our Twitter spider application, instead of just counting a
-person's friends, we wanted to keep a list of all of the incoming
-relationships so we could find a list of everyone who is following a
-particular account.
+Powiedzmy, że w aplikacji naszego robota internetowego chodzącego po Twitterze, zamiast po prostu zliczać znajomych danej osoby, chcielibyśmy prowadzić listę wszystkich związków "przychodzących", tak abyśmy mogli znaleźć listę wszystkich osób, które śledzą dane konto.
 
-Since everyone will potentially have many accounts that follow them, we
-cannot simply add a single column to our `Twitter` table. So
-we create a new table that keeps track of pairs of friends. The
-following is a simple way of making such a table:
+Ponieważ każdy użytkownik potencjalnie będzie miał wiele kont, które go śledzą, nie możemy po prostu dodać jednej kolumny do naszej tabeli `Twitter`. Tworzymy więc nową tabelę, która śledzi pary znajomych. Poniżej znajduje się prosty sposób na utworzenie takiej tabeli:
 
 ~~~~ {.sql}
-CREATE TABLE Pals (from_friend TEXT, to_friend TEXT)
+CREATE TABLE Znajomości (znajomy_od TEXT, znajomy_do TEXT)
 ~~~~
 
-Each time we encounter a person who `drchuck` is following,
-we would insert a row of the form:
+Za każdym razem, gdy napotykamy osobę, którą śledzi użytkownik `drchuck`, wstawiamy do tabeli wiersz w postaci:
 
 ~~~~ {.sql}
-INSERT INTO Pals (from_friend,to_friend) VALUES ('drchuck', 'lhawthorn')
+INSERT INTO Znajomości (znajomy_od, znajomy_do) VALUES ('drchuck', 'lhawthorn')
 ~~~~
 
-As we are processing the 20 friends from the `drchuck`
-Twitter feed, we will insert 20 records with "drchuck" as the first
-parameter so we will end up duplicating the string many times in the
-database.
+Ponieważ przetwarzamy na Twitterze 20 znajomych z kanału użytkownika `drchuck`, wstawimy 20 rekordów z "drchuckiem" jako pierwszym parametrem, przez co będziemy wielokrotnie duplikować ciąg w bazie danych.
 
-This duplication of string data violates one of the best practices for
-*database normalization* which basically states that we
-should never put the same string data in the database more than once. If
-we need the data more than once, we create a numeric
-*key* for the data and reference the actual data using
-this key.
+Tego typu powielanie danych ciągów znaków narusza jedną z najlepszych praktyk *normalizacji baz danych*, która w zasadzie stwierdza, że nigdy nie powinniśmy umieszczać w bazie danych więcej niż jeden raz tych samych danych ciągów znaków. Jeżeli potrzebujemy tych danych więcej niż jeden raz, tworzymy dla tych danych numeryczny *klucz* i odwołujemy się do rzeczywistych danych za pomocą tego klucza.
 
-In practical terms, a string takes up a lot more space than an integer
-on the disk and in the memory of our computer, and takes more processor
-time to compare and sort. If we only have a few hundred entries, the
-storage and processor time hardly matters. But if we have a million
-people in our database and a possibility of 100 million friend links, it
-is important to be able to scan data as quickly as possible.
+W praktyce ciąg znaków zajmuje na dysku i w pamięci naszego komputera dużo więcej miejsca niż liczba całkowita, a porównywanie i sortowanie zajmuje więcej czasu procesora w przypadku ciągów znaków. Jeśli mamy tylko kilkaset wpisów, to czas związany z dostępem i przetwarzaniem danych nie ma większego znaczenia. Ale jeśli mamy milion osób w naszej bazie danych i możliwość 100 milionów powiązań pomiędzy znajomymi, to ważne jest, aby móc jak najszybciej przetworzyć tego typu dane.
 
-We will store our Twitter accounts in a table named `People`
-instead of the `Twitter` table used in the previous example.
-The `People` table has an additional column to store the
-numeric key associated with the row for this Twitter user. SQLite has a
-feature that automatically adds the key value for any row we insert into
-a table using a special type of data column (`INTEGER PRIMARY
-KEY`).
+Będziemy przechowywać nasze konta na Twitterze w tabeli o nazwie `Ludzie` zamiast używanej w poprzednim przykładzie tabeli `Twitter`. Tabela `Ludzie` posiada dodatkową kolumnę do przechowywania klucza numerycznego powiązanego z wierszem dla tego użytkownika Twittera. SQLite posiada możliwość automatycznego dodawania wartości klucza do każdego wiersza, który wstawiamy do tabeli, osiąganą za pomocą specjalnego typu danych kolumny (`INTEGER PRIMARY KEY`).
 
-We can create the `People` table with this additional
-`id` column as follows:
+Możemy utworzyć tabelę `Ludzie` z dodatkową kolumną `id` w następujący sposób:
 
 ~~~~ {.sql}
-CREATE TABLE People
-    (id INTEGER PRIMARY KEY, name TEXT UNIQUE, retrieved INTEGER)
+CREATE TABLE Ludzie
+    (id INTEGER PRIMARY KEY, nazwa TEXT UNIQUE, pobrany INTEGER)
 ~~~~
 
-Notice that we are no longer maintaining a friend count in each row of
-the `People` table. When we select `INTEGER PRIMARY
-KEY` as the type of our `id` column, we are indicating
-that we would like SQLite to manage this column and assign a unique
-numeric key to each row we insert automatically. We also add the keyword
-`UNIQUE` to indicate that we will not allow SQLite to insert
-two rows with the same value for `name`.
+Zauważ, że w każdym wierszu tabeli `Ludzie` nie zapisujemy już liczby znajomych. Kiedy jako typ naszej kolumny `id` wybierzemy `INTEGER PRIMARY KEY`, to wskazujemy, że chcielibyśmy by SQLite zarządzał tą kolumną i automatycznie przypisywał unikalny klucz numeryczny każdemu wstawianemu wierszowi. Dodajemy również słowo kluczowe `UNIQUE`, aby wskazać, że nie pozwolimy SQLite na wstawienie dwóch wierszy o tej samej wartości dla kolumny `nazwa`.
 
-Now instead of creating the table `Pals` above, we create a
-table called `Follows` with two integer columns `from_id` and
-`to_id` and a constraint on the table that the *combination* of
-`from_id` and `to_id` must be unique in this table (i.e., we cannot
-insert duplicate rows) in our database.
+Teraz zamiast tworzyć wspomnianą wyżej tabelę `Znajomości`, utworzymy tabelę o nazwie `Obserwuje` z dwiema kolumnami całkowitoliczbowymi `id_od` i `id_do` oraz ograniczeniem, że w tej tabeli *kombinacja*/*złożenie* `id_od` i `id_do` musi być unikalna (tzn. nie możemy wstawiać duplikatów wierszy).
 
 ~~~~ {.sql}
-CREATE TABLE Follows
-    (from_id INTEGER, to_id INTEGER, UNIQUE(from_id, to_id) )
+CREATE TABLE Obserwuje
+    (id_od INTEGER, id_do INTEGER, UNIQUE(id_od, id_do) )
 ~~~~
 
-When we add `UNIQUE` clauses to our tables, we are
-communicating a set of rules that we are asking the database to enforce
-when we attempt to insert records. We are creating these rules as a
-convenience in our programs, as we will see in a moment. The rules both
-keep us from making mistakes and make it simpler to write some of our
-code.
+Kiedy dodajemy do naszych tabel klauzule `UNIQUE`, w rzeczywistości przekazujemy zestaw reguł, o których egzekwowanie prosimy bazę danych przy próbie wstawiania nowych rekordów. Reguły te tworzymy jako pewne udogodnienie w naszych programach, co zobaczymy za chwilę. Reguły te powstrzymują nas przed popełnianiem błędów i ułatwiają napisanie niektórych części naszego kodu.
 
-In essence, in creating this `Follows` table, we are
-modelling a "relationship" where one person "follows" someone else and
-representing it with a pair of numbers indicating that (a) the people
-are connected and (b) the direction of the relationship.
+W istocie, tworząc tabelę `Obserwuje` modelujemy "związek", w którym jedna osoba "obserwuje" drugą, i reprezentujemy ten związek parą liczb (a) wskazując, że jakaś para ludzi jest w jakiś sposób powiązana i (b) wskazując na kierunek tego związku.
 
-![Relationships Between Tables](height=3.5in@figs2/twitter)
+![Związki między tabelami](height=3.5in@../images/twitter)
 
 Programming with multiple tables
 --------------------------------
@@ -689,7 +637,7 @@ Take the rows from `Follows` and append the row from
 `People` where the field `from_id` in `Follows` is
 the same the `id` value in the `People` table.
 
-![Connecting Tables Using JOIN](height=3.5in@figs2/join)
+![Connecting Tables Using JOIN](height=3.5in@../images/join)
 
 The result of the JOIN is to create extra-long "metarows" which have
 both the fields from `People` and the matching fields from

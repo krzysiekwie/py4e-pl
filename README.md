@@ -27,7 +27,7 @@ Polish translation progress
 | `12-network.mkd`       | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `13-web.mkd`           | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `14-objects.mkd`       | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `15-database.mkd`      | ☐    | ☐   | ☐    | ☐    | ☒ + `figs2` ☐ | ☐        | ☐     | ☐          | ☐    |
 | `16-viz.mkd`           | ☐    | ☐   | ☐    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |

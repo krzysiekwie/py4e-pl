@@ -1,3 +1,6 @@
+Edit: twitter.svg/eps and join.svg/eps moved to /images since figs2 is not handled
+by the html version and these two images are not shown.
+
 These are the old figures - they are being redone in OmniGraffle and
 stored in ../../figures - then expported as SVG and EPS into ../../images
 
