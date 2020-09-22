@@ -87,9 +87,6 @@ Akademia Sztuk Pięknych, Krakowskie Przedmieście, Śródmieście Północne,
 Śródmieście, Warszawa, województwo mazowieckie, 00-046, Polska 52.2397515
 21.015564130658333
 ...
-St. Anthony of Padua Church, 154, Sullivan Street, Greenwich Village, Manhattan
-Community Board 2, Manhattan, New York County, Nowy Jork, 10012, Stany
-Zjednoczone Ameryki 40.7272282 -74.001322619863
 260 wierszy zapisano do where.js
 Otwórz w przeglądarce internetowej plik where.html aby obejrzeć dane.
 

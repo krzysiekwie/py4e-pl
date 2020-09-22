@@ -8,12 +8,12 @@ W poniższym rozdziale przyjrzymy się trzem kompletnym aplikacjom, które łąc
 Każda z tych aplikacji jest plikiem ZIP, który możesz pobrać na swój komputer, rozpakować i uruchomić.
 
 Budowanie mapy OpenStreetMap z geokodowanych danych
-----------------------------------------------------
+---------------------------------------------------
 
-\index{Google!map}
+\index{OpenStreetMap!map}
 \index{Visualization!map}
 
-W tym projekcie wykorzystamy API geokodowania OpenStreetMap (usługa Nominatim), po to by zamienić wpisane przez użytkowników nazwy uczelni na lokalizacje geograficzne, a następnie umieścimy przetworzone dane na mapie OpenStreetMap. 
+W tym projekcie wykorzystamy API geokodowania OpenStreetMap (usługa Nominatim), po to by zamienić wpisane przez użytkowników nazwy uczelni na lokalizacje geograficzne^[Należy mieć na uwadze, że taka zamiana tekstu na dane geolokalizacyjne nie zawsze daje precyzyjne i poprawne wyniki, co będzie można też zauważyć w części wyników tej aplikacji.], a następnie umieścimy przetworzone dane na mapie OpenStreetMap. 
 
 ![Mapa OpenStreetMap](../images/osm-map)
 
@@ -21,110 +21,67 @@ Aby rozpocząć, pobierz aplikację z poniższego adresu:
 
 [pl.py4e.com/code3/geodata.zip](https://pl.py4e.com/code3/geodata.zip)
 
-The first problem to solve is that the free Google geocoding API is
-rate-limited to a certain number of requests per day. If you have a lot
-of data, you might need to stop and restart the lookup process several
-times. So we break the problem into two phases.
+W warunkach korzystania z usługi Nominatim jest wskazanie by ogarniczyć się do maksymalnie jednego zapytania na sekundę (usługa jest darmowa, stąd też gdybyśmy generowali bardzo dużą liczbę zapytań w krótkim czasie, to prawdopodobnie szybko zablokowano by nam dostęp do API). Nasze zadanie dzielimy na dwie fazy.
 
 \index{cache}
 
-In the first phase we take our input "survey" data in the file
-*where.data* and read it one line at a time, and retrieve
-the geocoded information from Google and store it in a database
-*geodata.sqlite*. Before we use the geocoding API for
-each user-entered location, we simply check to see if we already have
-the data for that particular line of input. The database is functioning
-as a local "cache" of our geocoding data to make sure we never ask
-Google for the same data twice.
+W pierwszej fazie bierzemy nasze dane wejściowe z pliku *where.data* i odczytujemy je wiersz po wierszu, odczytując przy tym zgeokodowaną odpowiedź serwera Nominatim i przechowujemy ją w bazie danych (plik *geodata.sqlite*). Zanim użyjemy API geokodowania, po prostu sprawdzamy, czy w naszej bazie ("pamięci podręcznej") mamy już dane dla tego konkretnego wiersza, dzięki czemu w przypadku ponownego uruchomienia programu nie będziemy musieli drugi razy wysyłać zapytania do API.
 
-You can restart the process at any time by removing the file
-*geodata.sqlite*.
+W dowolnym momencie możesz uruchomić cały proces od początku, po prostu usuwając wygenerowany plik *geodata.sqlite*.
 
-Run the *geoload.py* program. This program will read the
-input lines in *where.data* and for each line check to
-see if it is already in the database. If we don't have the data for the
-location, it will call the geocoding API to retrieve the data and store
-it in the database.
+Uruchom program *geoload.py*. Program ten odczyta wiersze wejściowe z pliku *where.data* i dla każdego wiersza sprawdzi, czy jest on już w bazie danych, a jeśli nie mamy danych dla przetwarzanej lokalizacji, to wywoła on zapytanie API geokodowania aby pobrać dane i przechowywać je w bazie SQLite.
 
-Here is a sample run after there is already some data in the database:
+Oto przykładowe uruchomienie po tym, jak w bazie danych znajdują się już jakieś dane:
 
 ~~~~
-Found in database  Northeastern University
-Found in database  University of Hong Kong, ...
-Found in database  Technion
-Found in database  Viswakarma Institute, Pune, India
-Found in database  UMD
-Found in database  Tufts University
+Znaleziono w bazie  AGH University of Science and Technology
 
-Resolving Monash University
-Retrieving http://maps.googleapis.com/maps/api/
-    geocode/json?address=Monash+University
-Retrieved 2063 characters {    "results" : [
-{'status': 'OK', 'results': ... }
+Znaleziono w bazie  Academy of Fine Arts Warsaw Poland
 
-Resolving Kokshetau Institute of Economics and Management
-Retrieving http://maps.googleapis.com/maps/api/
-    geocode/json?address=Kokshetau+Inst ...
-Retrieved 1749 characters {    "results" : [
-{'status': 'OK', 'results': ... }
+Znaleziono w bazie  American University in Cairo
+
+Znaleziono w bazie  Arizona State University
+
+Znaleziono w bazie  Athens Information Technology
+
+Pobieranie https://nominatim.openstreetmap.org/search.php?q=University+of+Pretoria&format=geojson&limit=1&addressdetails=1&accept-language=pl
+Pobrano 954 znaków {"type":"FeatureColl
+
+Pobieranie https://nominatim.openstreetmap.org/search.php?q=University+of+Salamanca&format=geojson&limit=1&addressdetails=1&accept-language=pl
+Pobrano 822 znaków {"type":"FeatureColl
+
 ...
 ~~~~
 
-The first five locations are already in the database and so they are
-skipped. The program scans to the point where it finds new locations and
-starts retrieving them.
+Pierwsze pięć lokalizacji znajduje się już w bazie danych, a więc są one pomijane. Program przetwarza dane do momentu, w którym znajdzie niezapisane lokalizacje i zaczyna o nie odpytywać API.
 
-The *geoload.py* program can be stopped at any time, and
-there is a counter that you can use to limit the number of calls to the
-geocoding API for each run. Given that the *where.data*
-only has a few hundred data items, you should not run into the daily
-rate limit, but if you had more data it might take several runs over
-several days to get your database to have all of the geocoded data for
-your input.
+Plik *geoload.py* może zostać zatrzymany w dowolnym momencie, a ponadto kod zawiera licznik (zmienna *count*), którego można użyć do ograniczenia liczby połączeń do API geokodowania w danym uruchomieniu programu.
 
-Once you have some data loaded into *geodata.sqlite*, you
-can visualize the data using the *geodump.py* program.
-This program reads the database and writes the file
-*where.js* with the location, latitude, and longitude in
-the form of executable JavaScript code.
+Po załadowaniu danych do *geodata.sqlite*, możesz je zwizualizować za pomocą programu *geodump.py*. Program ten odczytuje bazę danych i zapisuje plik *where.js* zawierający lokalizacje, szerokości i długości geograficzne w postaci wykonywalnego kodu JavaScript. Pobrany przez Ciebie plik ZIP zawiera już wygenerowany *where.js*, ale możesz go wygenerować jeszcze raz aby sprawdzić działanie programu *geodump.py*.
 
-A run of the *geodump.py* program is as follows:
+Uruchomienie programu *geodump.py* odbywa się w następujący sposób:
 
 ~~~~
-Northeastern University, ... Boston, MA 02115, USA 42.3396998 -71.08975
-Bradley University, 1501 ... Peoria, IL 61625, USA 40.6963857 -89.6160811
+Akademia Górniczo-Hutnicza ... Polska 50.065703299999996 19.918958667058632
+Akademia Sztuk Pięknych ... Polska 52.2397515 21.015564130658333
 ...
-Technion, Viazman 87, Kesalsaba, 32000, Israel 32.7775 35.0216667
-Monash University Clayton ... VIC 3800, Australia -37.9152113 145.134682
-Kokshetau, Kazakhstan 53.2833333 69.3833333
-...
-12 records written to where.js
-Open where.html to view the data in a browser
+260 wierszy zapisano do where.js
+Otwórz w przeglądarce internetowej plik where.html aby obejrzeć dane.
 ~~~~
 
-The file *where.html* consists of HTML and JavaScript to
-visualize a Google map. It reads the most recent data in
-*where.js* to get the data to be visualized. Here is the
-format of the *where.js* file:
+Plik *where.html* składa się z kodu HTML i JavaScript, które służą do wizualizacji mapy OpenStreetMap przy pomocy biblioteki OpenLayers. Strona odczytuje najświeższe dane z pliku *where.js* po to by uzyskać dane niezbędne do wizualizacji. Oto format pliku *where.js*:
 
 ~~~~ {.js}
 myData = [
-[42.3396998,-71.08975, 'Northeastern Uni ... Boston, MA 02115'],
-[40.6963857,-89.6160811, 'Bradley University, ... Peoria, IL 61625, USA'],
-[32.7775,35.0216667, 'Technion, Viazman 87, Kesalsaba, 32000, Israel'],
+[50.065703299999996,19.918958667058632, 'Akademia Górniczo-Hutnicza, ... , Polska'],
+[52.2397515,21.015564130658333, 'Akademia Sztuk Pięknych, ... , Polska'],
    ...
 ];
 ~~~~
 
-This is a JavaScript variable that contains a list of lists. The syntax
-for JavaScript list constants is very similar to Python, so the syntax
-should be familiar to you.
+Jest to lista list zapisana w języku JavaScript. Składnia listy w języku JavaScript jest bardzo podobna do składni Pythona.
 
-Simply open *where.html* in a browser to see the
-locations. You can hover over each map pin to find the location that the
-geocoding API returned for the user-entered input. If you cannot see any
-data when you open the *where.html* file, you might want
-to check the JavaScript or developer console for your browser.
+By zobaczyć lokalizacje na mapie, otwórz plik *where.html* w przeglądarce internetowej. Możesz najechać kursorem na każdą pinezkę mapy i na nią kliknąć, tak aby znaleźć lokalizację, którą zwróciło API kodowania dla danych wejściowych wprowadzonych przez użytkownika. Jeżeli po otwarciu pliku *where.html* nie widzisz żadnych danych, sprawdź czy w przeglądarce jest włączony JavaScript lub w konsoli deweloperskiej swojej przeglądarki sprawdź czy są jakieś błędy. 
 
 Visualizing networks and interconnections
 -----------------------------------------
