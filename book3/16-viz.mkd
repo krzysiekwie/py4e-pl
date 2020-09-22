@@ -1,32 +1,25 @@
-Visualizing data
-================
+Wizualizacja danych
+===================
 
-So far we have been learning the Python language and then learning how
-to use Python, the network, and databases to manipulate data.
+Nauczyliśmy się pewnych aspektów Pythona, sprawdzaliśmy jak go używać Pythona oraz jak korzystać z sieci i baz danych w celu zarządzania danymi.
 
-In this chapter, we take a look at three complete applications that
-bring all of these things together to manage and visualize data. You
-might use these applications as sample code to help get you started in
-solving a real-world problem.
+W poniższym rozdziale przyjrzymy się trzem kompletnym aplikacjom, które łączą wszystkie te rzeczy razem, tak aby zarządzać danymi i je wizualizować. Możesz później użyć tych aplikacji jako przykładowego kodu, który pomoże Ci rozpocząć rozwiązywanie Twojego problemu.
 
-Each of the applications is a ZIP file that you can download and extract
-onto your computer and execute.
+Każda z tych aplikacji jest plikiem ZIP, który możesz pobrać na swój komputer, rozpakować i uruchomić.
 
-Building a Google map from geocoded data
-----------------------------------------
+Budowanie mapy OpenStreetMap z geokodowanych danych
+----------------------------------------------------
 
 \index{Google!map}
 \index{Visualization!map}
 
-In this project, we are using the Google geocoding API to clean up some
-user-entered geographic locations of university names and then placing
-the data on a Google map.
+W tym projekcie wykorzystamy API geokodowania OpenStreetMap (usługa Nominatim), po to by zamienić wpisane przez użytkowników nazwy uczelni na lokalizacje geograficzne, a następnie umieścimy przetworzone dane na mapie OpenStreetMap. 
 
-![A Google Map](../images/google-map)
+![Mapa OpenStreetMap](../images/osm-map)
 
-To get started, download the application from:
+Aby rozpocząć, pobierz aplikację z poniższego adresu:
 
-[www.py4e.com/code3/geodata.zip](http://www.py4e.com/code3/geodata.zip)
+[pl.py4e.com/code3/geodata.zip](https://pl.py4e.com/code3/geodata.zip)
 
 The first problem to solve is that the free Google geocoding API is
 rate-limited to a certain number of requests per day. If you have a lot

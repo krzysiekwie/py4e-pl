@@ -1,144 +1,124 @@
-Using the Google Places API with a Database and
-Visualizing Data on Google Map
+Korzystanie z API OpenStreetMap z bazą danych i wizualizacja danych
+na OpenStreetMap.
 
-In this project, we are using the Google geocoding API
-to clean up some user-entered geographic locations of
-university names and then placing the data on a Google
-Map.
+W tym projekcie korzystamy z darmowego API OpenStreetMap (usługa Nominatim) aby 
+zamienić wpisane przez użytkowników nazwy uczelni na lokalizacje geograficzne,
+a następnie umieszczamy przetworzone dane na mapie OpenStreetMap.
 
-Note: Windows has difficulty in displaying UTF-8 characters
-in the console so for each command window you open, you may need
-to type the following command before running this code:
+Uwaga: Po Windowsem zalecamy korzystać z terminala PowerShell, tak aby nie było 
+problemów z wyświetlaniem znaków UTF-8.
 
-    chcp 65001
+Aby móc przeglądać i modyfikować bazę danych, należy zainstalować program
+DB Browser for SQLite:
 
-http://stackoverflow.com/questions/388490/unicode-characters-in-windows-command-line-how
+https://sqlitebrowser.org/
+
+W warunkach korzystania z usługi Nominatim jest wskazanie by ogarniczyć się do 
+maksymalnie jednego zapytania na sekundę (usługa jest darmowa, stąd też gdybyśmy
+generowali bardzo dużą liczbę zapytań w krótkim czasie, to prawdopodobnie szybko
+zablokowano by nam dostęp do API). Nasze zadanie dzielimy na dwie fazy.
+
+W pierwszej fazie bierzemy nasze dane wejściowe z pliku where.data i odczytujemy
+je wiersz po wierszu, odczytując przy tym zgeokodowaną odpowiedź serwera
+Nominatim i przechowujemy ją w bazie danych (plik geodata.sqlite). Zanim użyjemy
+API geokodowania, po prostu sprawdzamy, czy mamy już dane dla tego konkretnego
+wiersza, dzięki czemu w przypadku ponownego uruchomienia programu nie będziemy
+musieli drugi razy wysyłać zapytania do API.
+
+W dowolnym momencie możesz uruchomić cały proces od początku, po prostu usuwając
+wygenerowany plik geodata.sqlite.
+
+Uruchom program geoload.py. Program ten odczyta wiersze wejściowe z pliku
+where.data i dla każdego wiersza sprawdzi, czy jest on już w bazie danych, a
+jeśli nie mamy danych dla przetwarzanej lokalizacji, to wywoła on zapytanie API
+geokodowania aby pobrać dane i przechowywać je w bazie SQLite.
+
+Oto przykładowe uruchomienie po tym, jak w bazie danych znajdują się już jakieś
+dane:
 
 
-You should install the SQLite browser to view and modify
-the databases from:
 
-http://sqlitebrowser.org/
+python3 geoload.py
 
-The first problem to solve is that the Google geocoding
-API is rate limited to a fixed number of requests per day.
-So if you have a lot of data you might need to stop and
-restart the lookup process several times.  So we break
-the problem into two phases.
+Znaleziono w bazie  AGH University of Science and Technology
 
-In the first phase we take our input data in the file
-(where.data) and read it one line at a time, and retrieve the
-geocoded response and store it in a database (geodata.sqlite).
-Before we use the geocoding API, we simply check to see if
-we already have the data for that particular line of input.
+Znaleziono w bazie  Academy of Fine Arts Warsaw Poland
 
-You can re-start the process at any time by removing the file
-geodata.sqlite
+Znaleziono w bazie  American University in Cairo
 
-Run the geoload.py program.   This program will read the input
-lines in where.data and for each line check to see if it is already
-in the database and if we don't have the data for the location,
-call the geocoding API to retrieve the data and store it in
-the database.
+Znaleziono w bazie  Arizona State University
 
-As of December 2016, the Google Geocoding APIs changed dramatically.
-They moved some functionality that we use from the Geocoding API
-into the Places API.  Also all the Google Geo-related APIs require an
-API key. To complete this assignment without a Google account,
-without an API key, or from a country that blocks
-access to Google, you can use a subset of that data which is
-available at:
+Znaleziono w bazie  Athens Information Technology
 
-http://py4e-data.dr-chuck.net/json
+Pobieranie https://nominatim.openstreetmap.org/search.php?q=University+of+Pretor
+ia&format=geojson&limit=1&addressdetails=1&accept-language=pl
+Pobrano 954 znaków {"type":"FeatureColl
 
-To use this, simply leave the api_key set to False in 
-geoload.py.
+Pobieranie https://nominatim.openstreetmap.org/search.php?q=University+of+Salama
+nca&format=geojson&limit=1&addressdetails=1&accept-language=pl
+Pobrano 822 znaków {"type":"FeatureColl
 
-This URL only has a subset of the data but it has no rate limit so
-it is good for testing.
 
-If you want to try this with the API key, follow the
-instructions at:
 
-https://developers.google.com/maps/documentation/geocoding/intro
+Pierwsze pięć lokalizacji znajduje się już w bazie danych, a więc są one
+pomijane. Program przetwarza dane do momentu, w którym znajdzie niezapisane
+lokalizacje i zaczyna o nie odpytywać API.
 
-and put the API key in the code.
+Plik geoload.py może zostać zatrzymany w dowolnym momencie, a ponadto kod
+zawiera licznik (zmienna 'count'), którego można użyć do ograniczenia liczby
+połączeń do API geokodowania w danym uruchomieniu programu.
 
-Here is a sample run after there is already some data in the
-database:
+Po załadowaniu danych do geodata.sqlite, możesz je zwizualizować za pomocą
+programu geodump.py. Program ten odczytuje bazę danych i zapisuje plik where.js
+zawierający lokalizacje, szerokości i długości geograficzne w postaci
+wykonywalnego kodu JavaScript. Pobrany przez Ciebie plik ZIP zawiera już
+wygenerowany where.js, ale możesz go wygenerować jeszcze raz aby sprawdzić
+działanie programu geodump.py.
 
-Mac: python3 geoload.py
-Win: geoload.py
+Uruchomienie programu geodump.py odbywa się w następujący sposób:
 
-Found in database  Northeastern University
 
-Found in database  University of Hong Kong, Illinois Institute of Technology, Bradley University
 
-Found in database  Technion
+python3 geodump.py
 
-Found in database  Viswakarma Institute, Pune, India
-
-Found in database  UMD
-
-Found in database  Tufts University
-
-Resolving Monash University
-Retrieving http://py4e-data.dr-chuck.net/json?key=42&address=Monash+University
-Retrieved 2063 characters {    "results" : [
-{u'status': u'OK', u'results': ... }
-
-Resolving Kokshetau Institute of Economics and Management
-Retrieving http://py4e-data.dr-chuck.net/json?key=42&address=Kokshetau+Institute+of+Economics+and+Management
-Retrieved 1749 characters {    "results" : [
-{u'status': u'OK', u'results': ... }
-
-The first five locations are already in the database and so they
-are skipped.  The program scans to the point where it finds un-retrieved
-locations and starts retrieving them.
-
-The geoload.py can be stopped at any time, and there is a counter
-that you can use to limit the number of calls to the geocoding
-API for each run.
-
-Once you have some data loaded into geodata.sqlite, you can
-visualize the data using the (geodump.py) program.  This
-program reads the database and writes tile file (where.js)
-with the location, latitude, and longitude in the form of
-executable JavaScript code.
-
-A run of the geodump.py program is as follows:
-
-Mac: python3 geodump.py
-Win: geodump.py
-
-Northeastern University, 360 Huntington Avenue, Boston, MA 02115, USA 42.3396998 -71.08975
-Bradley University, 1501 West Bradley Avenue, Peoria, IL 61625, USA 40.6963857 -89.6160811
+Akademia Górniczo-Hutnicza, Czarnowiejska, Czarna Wieś, Krowodrza, Kraków,
+województwo małopolskie, 31-126, Polska 50.065703299999996 19.918958667058632
+Akademia Sztuk Pięknych, Krakowskie Przedmieście, Śródmieście Północne,
+Śródmieście, Warszawa, województwo mazowieckie, 00-046, Polska 52.2397515
+21.015564130658333
 ...
-Technion, Viazman 87, Kesalsaba, 32000, Israel 32.7775 35.0216667
-Monash University Clayton Campus, Wellington Road, Clayton VIC 3800, Australia -37.9152113 145.134682
-Kokshetau, Kazakhstan 53.2833333 69.3833333
-...
-12 records written to where.js
-Open where.html to view the data in a browser
+St. Anthony of Padua Church, 154, Sullivan Street, Greenwich Village, Manhattan
+Community Board 2, Manhattan, New York County, Nowy Jork, 10012, Stany
+Zjednoczone Ameryki 40.7272282 -74.001322619863
+260 wierszy zapisano do where.js
+Otwórz w przeglądarce internetowej plik where.html aby obejrzeć dane.
 
-The file (where.html) consists of HTML and JavaScript to visualize
-a Google Map.  It reads the most recent data in where.js to get
-the data to be visualized.  Here is the format of the where.js file:
+
+
+Plik where.html składa się z kodu HTML i JavaScript, które służą do wizualizacji
+mapy OpenStreetMap przy pomocy biblioteki OpenLayers. Strona odczytuje
+najświeższe dane z pliku where.js po to by uzyskać dane niezbędne do
+wizualizacji. Oto format pliku where.js:
+
+
 
 myData = [
-[42.3396998,-71.08975, 'Northeastern University, 360 Huntington Avenue, Boston, MA 02115, USA'],
-[40.6963857,-89.6160811, 'Bradley University, 1501 West Bradley Avenue, Peoria, IL 61625, USA'],
-[32.7775,35.0216667, 'Technion, Viazman 87, Kesalsaba, 32000, Israel'],
+[50.065703299999996,19.918958667058632, 'Akademia Górniczo-Hutnicza, Czarnowiejs
+ka, Czarna Wieś, Krowodrza, Kraków, województwo małopolskie, 31-126, Polska'],
+[52.2397515,21.015564130658333, 'Akademia Sztuk Pięknych, Krakowskie Przedmieści
+e, Śródmieście Północne, Śródmieście, Warszawa, województwo mazowieckie, 00-046,
+Polska'],
    ...
 ];
 
-This is a JavaScript list of lists.  The syntax for JavaScript
-list constants is very similar to Python so the syntax should
-be familiar to you.
 
-Simply open where.html in a browser to see the locations.  You
-can hover over each map pin to find the location that the
-gecoding API returned for the user-entered input.  If you
-cannot see any data when you open the where.html file, you might
-want to check the JavaScript or developer console for your browser.
 
+Jest to lista list zapisana w języku JavaScript. Składnia listy w języku
+JavaScript jest bardzo podobna do składni Pythona.
+
+By zobaczyć lokalizacje na mapie, otwórz plik where.html w przeglądarce
+internetowej. Możesz najechać kursorem na każdą pinezkę mapy i na nią kliknąć,
+tak aby znaleźć lokalizację, którą zwróciło API kodowania dla danych wejściowych
+wprowadzonych przez użytkownika. Jeżeli po otwarciu pliku where.html nie widzisz
+żadnych danych, sprawdź czy w przeglądarce jest włączony JavaScript lub w
+konsoli deweloperskiej swojej przeglądarki sprawdź czy są jakieś błędy.
