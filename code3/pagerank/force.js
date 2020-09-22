@@ -47,7 +47,7 @@ function loadData(json) {
       .attr("r", function(d) { return getrank(d.rank); } )
       .style("fill", function(d) { return getcolor(d.rank); })
       .on("dblclick",function(d) { 
-            if ( confirm('Do you want to open '+d.url) ) 
+            if ( confirm('Czy chcesz otworzyć '+d.url) ) 
                 window.open(d.url,'_new',''); 
             d3.event.stopPropagation();
         })

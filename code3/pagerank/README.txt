@@ -1,161 +1,188 @@
-Simple Python Search Spider, Page Ranker, and Visualizer
+Prosty robot internetowy w Pythonie, PageRank stron i wizualizacja
 
-This is a set of programs that emulate some of the functions of a 
-search engine.  They store their data in a SQLITE3 database named
-'spider.sqlite'.  This file can be removed at any time to restart the
-process.   
+Jest to zestaw programów, które naśladują niektóre z funkcji wyszukiwarki 
+internetowej. Programu przechowują swoje dane w bazie danych SQLite o nazwie
+'spider.sqlite'. Plik ten może zostać usunięty w dowolnym momencie w celu
+ponownego uruchomienia całego procesu budowania rankingu stron.   
 
-You should install the SQLite browser to view and modify 
-the databases from:
+Aby móc przeglądać i modyfikować bazę danych, należy zainstalować program
+DB Browser for SQLite:
 
-http://sqlitebrowser.org/
+https://sqlitebrowser.org/
 
-This program crawls a web site and pulls a series of pages into the
-database, recording the links between pages.
+Pierwszy program wczytuje stronę internetową i umieszcza serię
+stron do bazy danych "spider.sqlite", rejestrując przy tym odnośniki (linki)
+pomiędzy stronami. 
 
-Note: Windows has difficulty in displaying UTF-8 characters
-in the console so for each console window you open, you may need
-to type the following command before running this code:
+Uwaga: Po Windowsem zalecamy korzystać z terminala PowerShell, tak aby nie było 
+problemów z wyświetlaniem znaków UTF-8.
 
-    chcp 65001
 
-http://stackoverflow.com/questions/388490/unicode-characters-in-windows-command-line-how
 
-Mac: rm spider.sqlite
-Mac: python3 spider.py
+python3 spider.py
 
-Win: del spider.sqlite
-Win: spider.py
-
-Enter web url or enter: http://www.dr-chuck.com/
-['http://www.dr-chuck.com']
-How many pages:2
-1 http://www.dr-chuck.com/ 12
-2 http://www.dr-chuck.com/csev-blog/ 57
-How many pages:
-
-In this sample run, we told it to crawl a website and retrieve two 
-pages.  If you restart the program again and tell it to crawl more
-pages, it will not re-crawl any pages already in the database.  Upon 
-restart it goes to a random non-crawled page and starts there.  So 
-each successive run of spider.py is additive.
-
-Mac: python3 spider.py 
-Win: spider.py
-
-Enter web url or enter: http://www.dr-chuck.com/
-['http://www.dr-chuck.com']
-How many pages:3
-3 http://www.dr-chuck.com/csev-blog 57
-4 http://www.dr-chuck.com/dr-chuck/resume/speaking.htm 1
-5 http://www.dr-chuck.com/dr-chuck/resume/index.htm 13
-How many pages:
-
-You can have multiple starting points in the same database - 
-within the program these are called "webs".   The spider
-chooses randomly amongst all non-visited links across all
-the webs.
-
-If you want to dump the contents of the spider.sqlite file, you can 
-run spdump.py as follows:
-
-Mac: python3 spdump.py 
-Win: spdump.py
-
-(5, None, 1.0, 3, u'http://www.dr-chuck.com/csev-blog')
-(3, None, 1.0, 4, u'http://www.dr-chuck.com/dr-chuck/resume/speaking.htm')
-(1, None, 1.0, 2, u'http://www.dr-chuck.com/csev-blog/')
-(1, None, 1.0, 5, u'http://www.dr-chuck.com/dr-chuck/resume/index.htm')
-4 rows.
-
-This shows the number of incoming links, the old page rank, the new page
-rank, the id of the page, and the url of the page.  The spdump.py program
-only shows pages that have at least one incoming link to them.
-
-Once you have a few pages in the database, you can run Page Rank on the
-pages using the sprank.py program.  You simply tell it how many Page
-Rank iterations to run.
-
-Mac: python3 sprank.py 
-Win: sprank.py 
-
-How many iterations:2
-1 0.546848992536
-2 0.226714939664
-[(1, 0.559), (2, 0.659), (3, 0.985), (4, 2.135), (5, 0.659)]
-
-You can dump the database again to see that page rank has been updated:
-
-Mac: python3 spdump.py 
-Win: spdump.py 
-
-(5, 1.0, 0.985, 3, u'http://www.dr-chuck.com/csev-blog')
-(3, 1.0, 2.135, 4, u'http://www.dr-chuck.com/dr-chuck/resume/speaking.htm')
-(1, 1.0, 0.659, 2, u'http://www.dr-chuck.com/csev-blog/')
-(1, 1.0, 0.659, 5, u'http://www.dr-chuck.com/dr-chuck/resume/index.htm')
-4 rows.
-
-You can run sprank.py as many times as you like and it will simply refine
-the page rank the more times you run it.  You can even run sprank.py a few times
-and then go spider a few more pages sith spider.py and then run sprank.py
-to converge the page ranks.
-
-If you want to restart the Page Rank calculations without re-spidering the 
-web pages, you can use spreset.py
-
-Mac: python3 spreset.py 
-Win: spreset.py 
-
-All pages set to a rank of 1.0
-
-Mac: python3 sprank.py 
-Win: sprank.py 
-
-How many iterations:50
-1 0.546848992536
-2 0.226714939664
-3 0.0659516187242
-4 0.0244199333
-5 0.0102096489546
-6 0.00610244329379
+Wpisz adres internetowy lub wciśnij Enter:   
+['https://www.dr-chuck.com']
+Ile stron: 25
+1 https://www.dr-chuck.com (8386) 4
+4 https://www.dr-chuck.com/dr-chuck/resume/index.htm (1855) 9
+12 https://www.dr-chuck.com/dr-chuck/resume/pictures/index.htm (1827) 5
 ...
-42 0.000109076928206
-43 9.91987599002e-05
-44 9.02151706798e-05
-45 8.20451504471e-05
-46 7.46150183837e-05
-47 6.7857770908e-05
-48 6.17124694224e-05
-49 5.61236959327e-05
-50 5.10410499467e-05
-[(512, 0.02963718031139026), (1, 12.790786721866658), (2, 28.939418898678284), (3, 6.808468390725946), (4, 13.469889092397006)]
+Ile stron: 
 
-For each iteration of the page rank algorithm it prints the average
-change per page of the page rank.   The network initially is quite 
-unbalanced and so the individual page ranks are changing wildly.
-But in a few short iterations, the page rank converges.  You 
-should run prank.py long enough that the page ranks converge.
 
-If you want to visualize the current top pages in terms of page rank,
-run spjson.py to write the pages out in JSON format to be viewed in a
-web browser.
 
-Mac: python3 spjson.py 
-Win: spjson.py 
+W powyższym przykładowym uruchomieniu wskazaliśmy naszemu robotowi, by sprawdził
+domyślną stronę i pobrał 25 stron. Jeśli zrestartujesz program i wskażesz by
+przeszukał więcej stron, to nie będzie on ponownie przeszukiwał stron już
+znajdujących się w bazie danych. Po ponownym uruchomieniu robot przechodzi do
+losowej, niesprawdzonej jeszcze strony i zaczyna tam swoją pracę. Tak więc
+każde kolejne uruchomienie "spider.py" jest dodaje tylko nowe strony. 
 
-Creating JSON output on spider.js...
-How many nodes? 30
-Open force.html in a browser to view the visualization
 
-You can view this data by opening the file force.html in your web browser.  
-This shows an automatic layout of the nodes and links.  You can click and 
-drag any node and you can also double click on a node to find the URL
-that is represented by the node.
+python3 spider.py
 
-This visualization is provided using the force layout from:
+Wpisz adres internetowy lub wciśnij Enter: 
+Kontynuowanie istniejącego indeksowania stron. Usuń spider.sqlite, aby rozpocząć nowe indeksowanie.
+['https://www.dr-chuck.com']
+Ile stron: 3
+22 https://www.dr-chuck.com/csev-blog/category/uncategorized (91096) 61
+27 https://www.dr-chuck.com/csev-blog/2014/09/how-to-achieve-vendor-lock-in-with-a-legit-open-source-license-affero-gpl (59001) 20
+30 https://www.dr-chuck.com/csev-blog/2020/08/styling-tsugi-koseu-lessons (33522) 21
+Ile stron:
+
+
+
+Możesz mieć wiele punktów startowych w tej samej bazie danych - w programie
+nazywane są one "witrynami". Robot internetowy jako następną stronę do
+sprawdzenia wybiera losową stronę spośród wszystkich nieodwiedzonych linków na
+wszystkich witrynach.
+
+Jeżeli chcesz wyświetlić zawartość bazy, możesz uruchomić "spdump.py": 
+
+
+
+python3 spdump.py 
+
+(16, None, 1.0, 2, 'https://www.dr-chuck.com/csev-blog')
+(15, None, 1.0, 30, 'https://www.dr-chuck.com/csev-blog/2020/08/styling-tsugi-koseu-lessons')
+(15, None, 1.0, 22, 'https://www.dr-chuck.com/csev-blog/category/uncategorized')
+...
+22 wierszy.
+
+
+
+Program dla danej strony pokazuje liczbę przychodzących linków, stary
+współczynnik PageRank, nowy współczynnik PageRank, id strony oraz adres URL.
+Program "spdump.py" pokazuje tylko te strony, które mają co najmniej jedno
+odniesienie z innych stron.
+
+Gdy będziesz już miał kilka stron w swojej bazie danych, to za pomocą programu
+"sprank.py" możesz uruchomić algorytm obliczania współczynnika PageRank. Musisz
+tylko podać ile iteracji algorytmu program ma wykonać. 
+
+
+
+python3 sprank.py 
+
+Ile iteracji: 2
+1 0.720326643053916
+2 0.34992366601870745
+[(1, 0.6196280991735535), (2, 2.4944679374657728), (3, 0.6923553719008263), (4, 1.1014462809917351), (5, 0.2696280991735535)]
+
+
+
+Możesz ponownie wyświetlić zawartość bazy aby zobaczyć, że współczynnik
+PageRank dla stron został zaktualizowany: 
+
+
+
+python3 spdump.py 
+
+(16, 1.0, 2.4944679374657728, 2, 'https://www.dr-chuck.com/csev-blog')
+(15, 1.0, 2.1360764832409846, 30, 'https://www.dr-chuck.com/csev-blog/2020/08/styling-tsugi-koseu-lessons')
+(15, 1.0, 2.449518442516278, 22, 'https://www.dr-chuck.com/csev-blog/category/uncategorized')
+...
+22 wierszy.
+
+
+
+Możesz uruchamiać "sprank.py" tyle razy, ile chcesz, a program po prostu poprawi
+obliczenie współczynnika PageRank za każdym razem, gdy go uruchomisz. Możesz
+nawet uruchomić "sprank.py" kilka razy, a następnie dodać kilka kolejnych stron
+poprzez "spider.py", a następnie znów uruchomić "sprank.py", by dalej przeliczyć
+wartości PageRank. Wyszukiwarka internetowa zazwyczaj przez cały czas uruchamia
+zarówno programy do indeksowania stron, jak i do tworzenia rankingu.
+
+Jeżeli chcesz uruchomić obliczenia PageRank od początku bez ponownego przejścia
+robotem po stronach, to możesz użyć programu "spreset.py", a następnie możesz
+uruchomić ponownie "sprank.py".
+
+Wynik uruchomienia "spreset.py":
+
+
+
+python3 spreset.py 
+
+Wszystkie strony mają ustawiony współczynnik PageRank na 1.0
+
+
+
+Ponowne uruchomienie "sprank.py":
+
+
+
+python3 sprank.py 
+
+Ile iteracji: 50
+1 0.720326643053916
+2 0.34992366601870745
+3 0.17895552923503424
+4 0.11665048143652895
+...
+46 3.579258334100184e-05
+47 3.0035450290624035e-05
+48 2.520367345856324e-05
+49 2.114963873141301e-05
+50 1.7747381915049988e-05
+[(1, 9.945248881666563e-05), (2, 3.205252622657907), (3, 0.00012907931109952867), (4, 0.0003719906004627465), (5, 9.966636303771006e-05)]
+
+
+
+Dla każdej iteracji algorytmu PageRank program wypisuje średnią zmianę
+współczynnika na stronę. Początkowo sieć jest dość niezbalansowana, więc
+poszczególne wartości rankingu bardzo się zmieniają pomiędzy kolejnymi
+iteracjami. Jednak w kilku kolejnych iteracjach algorytm zbiega szybko do
+końcowego wyniku. Powinieneś uruchomić "sprank.py" na tyle długo, by kolejne
+wartości generowane przez aglorytm nie miały już zbyt dużych różnic.
+
+Jeśli chcesz zwizualizować strony, które aktualnie najwyżej znajdują się w
+rankingu, uruchom program "spjson.py". Odczytuje on bazę danych i zapisuje dane
+dotyczące najbardziej linkowanych stron w formacie JSON, który może być
+obejrzany w przeglądarce internetowej. 
+
+
+
+python3 spjson.py 
+
+Tworzenie JSONa w pliku spider.js...
+Ile węzłów? 30
+Otwórz force.html w przeglądarce internetowej by zobaczyć wizualizację
+
+
+
+Możesz obejrzeć wynik otwierając plik "force.html" w swojej przeglądarce
+internetowej. Pokazuje on automatyczny układ węzłów (stron) i połączeń między
+nimi. Możesz kliknąć i przeciągnąć dowolny węzeł, a także dwukrotnie kliknąć na
+węzeł, by wyświetlić adres URL, który jest reprezentowany przez ten węzeł.
+Wielkość węzła reprezentuje jego istotność, tzn. że wiele innych stron do
+linkuje do tej strony.
+
+Ta wizualizacja jest wykonana przy pomocy układu algorytmu symulacji fizycznej
+dostępnego na stronie:
 
 http://mbostock.github.com/d3/
 
-If you rerun the other utilities and then re-run spjson.py - you merely
-have to press refresh in the browser to get the new data from spider.js.
-
+Jeżeli uruchomisz ponownie inne narzędzia tej aplikacji, uruchom ponownie
+"spjson.py" i ośwież stronę "force.html" w przeglądarce, tak aby uzyskać nowe
+dane umieszczone w "spider.json".

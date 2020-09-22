@@ -3,13 +3,13 @@ import sqlite3
 conn = sqlite3.connect('spider.sqlite')
 cur = conn.cursor()
 
-print("Creating JSON output on spider.js...")
-howmany = int(input("How many nodes? "))
+print("Tworzenie JSONa w pliku spider.js...")
+howmany = int(input("Ile węzłów? "))
 
-cur.execute('''SELECT COUNT(from_id) AS inbound, old_rank, new_rank, id, url 
-    FROM Pages JOIN Links ON Pages.id = Links.to_id
-    WHERE html IS NOT NULL AND ERROR IS NULL
-    GROUP BY id ORDER BY id,inbound''')
+cur.execute('''SELECT COUNT(id_od) AS linki_przychodzace, wsp_stary, wsp_nowy, id, url 
+    FROM Strony JOIN Linki ON Strony.id = Linki.id_do
+    WHERE html IS NOT NULL AND blad IS NULL
+    GROUP BY id ORDER BY id, linki_przychodzace''')
 
 fhand = open('spider.js','w')
 nodes = list()
@@ -23,7 +23,7 @@ for row in cur :
     if len(nodes) > howmany : break
 
 if maxrank == minrank or maxrank is None or minrank is None:
-    print("Error - please run sprank.py to compute page rank")
+    print("Błąd - uruchom sprank.py aby obliczyć współczynnik PageRank")
     quit()
 
 fhand.write('spiderJson = {"nodes":[\n')
@@ -42,7 +42,7 @@ for row in nodes :
     count = count + 1
 fhand.write('],\n')
 
-cur.execute('''SELECT DISTINCT from_id, to_id FROM Links''')
+cur.execute('''SELECT DISTINCT id_od, id_do FROM Linki''')
 fhand.write('"links":[\n')
 
 count = 0
@@ -58,4 +58,4 @@ fhand.write(']};')
 fhand.close()
 cur.close()
 
-print("Open force.html in a browser to view the visualization")
+print("Otwórz force.html w przeglądarce internetowej by zobaczyć wizualizację")
