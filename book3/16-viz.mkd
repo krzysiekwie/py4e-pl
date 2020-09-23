@@ -241,7 +241,7 @@ Program skanuje zawartość *content.sqlite* w poszukiwaniu numeru pierwszej nie
 
 Czasami może brakować pewnych wiadomości. Być może administratorzy Gmane mogli usuwać wiadomości, a może się te wiadomości gdzieś przepadły. Jeżeli Twój robot się zatrzyma, a wydaje się, że trafił na właśnie taką brakującą wiadomość, to przejdź do przeglądarki bazy SQLite i dodaj wiersz z brakującym id, pozostawiając wszystkie pozostałe pola puste, a następnie uruchom ponownie *gmane.py*. Dzięki temu robot będzie mógł kontynuować pracę. Wstawione ręcznie puste wiadomości będą ignorowane w następnej fazie procesu.
 
-Jedną z przyjemnych rzeczy jest to, że gdy już pobierzesz wszystkie wiadomości i będziesz je miał w *content.sqlite*, to po jakimś czasie będziesz mógł ponownie uruchomić *gmane.py*, po to by uzyskać tylko nowe wiadomości, które zostały ostatnio wysłane na listę mailingową.
+Jedną z przyjemnych w tym wszystkim rzeczy jest to, że gdy już pobierzesz wszystkie wiadomości i będziesz je miał w *content.sqlite*, to po jakimś czasie będziesz mógł ponownie uruchomić *gmane.py*, po to by uzyskać tylko nowe wiadomości, które zostały ostatnio wysłane na listę mailingową.
 
 Dane zawarte w bazie *content.sqlite* są dość surowe, z niewydajnym modelem danych, a ponadto nie są skompresowane. Jest to celowe, ponieważ pozwala Ci oberzeć plik *content.sqlite* w przeglądarce bazy SQLite by usunąć problemy związane procesem pobierania danych. Generalnie byłby to zły pomysł aby uruchomić jakiekolwiek zapytanie SQL na tej bazie danych, ponieważ jego wykonanie byłyby dość powolne.
 
