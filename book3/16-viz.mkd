@@ -198,126 +198,59 @@ Możesz obejrzeć wynik otwierając plik *force.html* w swojej przeglądarce int
 
 Jeżeli uruchomisz ponownie inne narzędzia tej aplikacji, uruchom ponownie *spjson.py* i ośwież stronę *force.html* w przeglądarce, tak aby uzyskać nowe dane umieszczone w *spider.json*.
 
-Visualizing mail data
----------------------
+Wizualizacja danych z e-maili
+-----------------------------
 
-Up to this point in the book, you have become quite familiar with our
-*mbox-short.txt* and *mbox.txt* data
-files. Now it is time to take our analysis of email data to the next
-level.
+W niektórych rozdziałach książki i ćwiczeniach pojawiały się pliki *mbox-short.txt* i *mbox.txt*, które zawierały wiadomości mailowe. Nadszedł czas by naszą analizę danych dotyczącą poczty elektronicznej na przenieść kolejny poziom.
 
-In the real world, sometimes you have to pull down mail data from
-servers. That might take quite some time and the data might be
-inconsistent, error-filled, and need a lot of cleanup or adjustment. In
-this section, we work with an application that is the most complex so
-far and pull down nearly a gigabyte of data and visualize it.
+Zdarza się, że trzeba pobrać z serwerów dane dotyczące poczty e-mail. Może to zająć sporo czasu, a dane mogą być niespójne, pełne błędów i wymagać wielu poprawek lub czyszczenia. W tej sekcji będziemy pracować z najbardziej złożoną jak dotąd aplikacją, pobierzemy prawie gigabajt danych i zwizualizujemy te dane.
 
-![A Word Cloud from the Sakai Developer List](height=3.5in@../images/wordcloud)
+![Chmura wyrazów z listy mailingowej deweloperów projektu Sakai](height=3.5in@../images/wordcloud)
 
-You can download this application from:
+Możesz pobrać aplikację z:
 
-[www.py4e.com/code3/gmane.zip](http://www.py4e.com/code3/gmane.zip)
+[pl.py4e.com/code3/gmane.zip](https://pl.py4e.com/code3/gmane.zip)
 
-We will be using data from a free email list archiving service called
-[www.gmane.org](http://www.gmane.org). This service is very popular with open
-source projects because it provides a nice searchable archive of their
-email activity. They also have a very liberal policy regarding accessing
-their data through their API. They have no rate limits, but ask that you
-don't overload their service and take only the data you need. You can
-read gmane's terms and conditions at this page:
+Będziemy korzystać z danych umieszczonych na bezpłatnej usłudze archiwizacji listy mailingowej o nazwie [Gmane](https://en.wikipedia.org/wiki/Gmane). Usługa była bardzo popularna wśród projektów open source, ponieważ zapewniała ładne i łatwe do przeszukiwania archiwum ich aktywności emailowej. Usługa posiadała również bardzo liberalną politykę dostępu do swoich danych poprzez swoje API.
 
-<http://gmane.org/export.php>
+Aby nie obciążać innych serwerów, moja własna kopia wiadomości dostępna jest pod adresem:
 
-*It is very important that you make use of the gmane.org data
-responsibly by adding delays to your access of their services and
-spreading long-running jobs over a longer period of time. Do not abuse
-this free service and ruin it for the rest of us.*
+<https://mbox.dr-chuck.net/>
 
-When the Sakai email data was spidered using this software, it produced
-nearly a Gigabyte of data and took a number of runs on several days. The
-file *README.txt* in the above ZIP may have instructions
-as to how you can download a pre-spidered copy of the
-*content.sqlite* file for a majority of the Sakai email
-corpus so you don't have to spider for five days just to run the
-programs. If you download the pre-spidered content, you should still run
-the spidering process to catch up with more recent messages.
+Gdy dane poczty elektronicznej Sakai były pobierane za pomocą tej aplikacji, to wytworzyło to prawie gigabajt danych i cały proces pobierania trwał kilka dni. Plik *README.txt* w powyższym pliku ZIP zawiera instrukcje opisujące pobranie archiwalnej kopii *content.sqlite*, która zawiera większość korpusu tekstowego poczty elektronicznej projektu Sakai (do marca 2015 r.). W związku z tym nie musisz przy pomocy robota internetowego ściągać danych przez pięć dni. Jeśli pobierzesz ww. archiwalną wersję bazy SQLite, to możesz dodatkowo uruchomić robota internetowego by uzupełnić dane o najnowsze wiadomości mailowe.
 
-The first step is to spider the gmane repository. The base URL is
-hard-coded in the *gmane.py* and is hard-coded to the
-Sakai developer list. You can spider another repository by changing that
-base url. Make sure to delete the *content.sqlite* file
-if you switch the base url.
+Pierwszym krokiem jest przeskanowanie repozytorium Gmane. Główny adres URL jest zapisany w *gmane.py* wzmiennej *baseurl* i wskauzje na listę mailingową deweloperów projektu Sakai. Twój robot może skanować inne repozytorium - wystarczy, że zmienisz wspomniany adres adres URL. Jeśli zmienisz adres URL, to skasuj również plik *content.sqlite*.
 
-The *gmane.py* file operates as a responsible caching
-spider in that it runs slowly and retrieves one mail message per second
-so as to avoid getting throttled by gmane. It stores all of its data in
-a database and can be interrupted and restarted as often as needed. It
-may take many hours to pull all the data down. So you may need to
-restart several times.
+Plik *gmane.py* działa jako odpowiedzialny robot internetowy, zapisujący w pamięci pobrane dane i odczekujący sekundę po pobraniu stu wiadomości. Program przechowuje wszystkie swoje dane w bazie, może być przerywany i uruchamiany ponownie tak często, jak to konieczne. Pobranie wszystkich danych może potrwać wiele godzin. Może być więc konieczne kilkukrotne ponowne uruchomienie tego programu.
 
-Here is a run of *gmane.py* retrieving the last five
-messages of the Sakai developer list:
+Oto wynik uruchomienia *gmane.py*, który pobiera dziesięć ostatnich wiadomości z listy deweloperów projektu Sakai: 
 
 ~~~~
-How many messages:10
-http://download.gmane.org/gmane.comp.cms.sakai.devel/51410/51411 9460
-    nealcaidin@sakaifoundation.org 2013-04-05 re: [building ...
-http://download.gmane.org/gmane.comp.cms.sakai.devel/51411/51412 3379
-    samuelgutierrezjimenez@gmail.com 2013-04-06 re: [building ...
-http://download.gmane.org/gmane.comp.cms.sakai.devel/51412/51413 9903
-    da1@vt.edu 2013-04-05 [building sakai] melete 2.9 oracle ...
-http://download.gmane.org/gmane.comp.cms.sakai.devel/51413/51414 349265
-    m.shedid@elraed-it.com 2013-04-07 [building sakai] ...
-http://download.gmane.org/gmane.comp.cms.sakai.devel/51414/51415 3481
-    samuelgutierrezjimenez@gmail.com 2013-04-07 re: ...
-http://download.gmane.org/gmane.comp.cms.sakai.devel/51415/51416 0
-
-Does not start with From
+Ile wiadomości: 10
+http://mbox.dr-chuck.net/sakai.devel/59643/59644 17553
+    matthew@longsight.com 2015-03-20T16:27:12-04:00 re: [building sakai] sakai 10 bulding error
+http://mbox.dr-chuck.net/sakai.devel/59644/59645 13128
+    alberto.olivamolina@gmail.com 2015-03-20T16:36:12+01:00 re: [building sakai] sakai 10 bulding error
+http://mbox.dr-chuck.net/sakai.devel/59645/59646 7557
+    eric.duquenoy@univ-littoral.fr 2015-03-20T16:52:24+01:00 [building sakai] lti and sakai groups (or sections)
+http://mbox.dr-chuck.net/sakai.devel/59646/59647 1
+...
 ~~~~
 
-The program scans *content.sqlite* from one up to the
-first message number not already spidered and starts spidering at that
-message. It continues spidering until it has spidered the desired number
-of messages or it reaches a page that does not appear to be a properly
-formatted message.
+Program skanuje zawartość *content.sqlite* w poszukiwaniu numeru pierwszej niepobranej jeszcze wiadomości. Robot ściąga dane tak długo aż nie pobierze pożądanej liczby wiadomości lub gdy dotrze do strony, która nie wydaje się być odpowiednio sformatowaną wiadomością.
 
-Sometimes [gmane.org](gmane.org) is missing a message. Perhaps
-administrators can delete messages or perhaps they get lost. If your
-spider stops, and it seems it has hit a missing message, go into the
-SQLite Manager and add a row with the missing id leaving all the other
-fields blank and restart *gmane.py*. This will unstick
-the spidering process and allow it to continue. These empty messages
-will be ignored in the next phase of the process.
+Czasami może brakować pewnych wiadomości. Być może administratorzy Gmane mogli usuwać wiadomości, a może się te wiadomości gdzieś przepadły. Jeżeli Twój robot się zatrzyma, a wydaje się, że trafił na właśnie taką brakującą wiadomość, to przejdź do przeglądarki bazy SQLite i dodaj wiersz z brakującym id, pozostawiając wszystkie pozostałe pola puste, a następnie uruchom ponownie *gmane.py*. Dzięki temu robot będzie mógł kontynuować pracę. Wstawione ręcznie puste wiadomości będą ignorowane w następnej fazie procesu.
 
-One nice thing is that once you have spidered all of the messages and
-have them in *content.sqlite*, you can run
-*gmane.py* again to get new messages as they are sent to
-the list.
+Jedną z przyjemnych rzeczy jest to, że gdy już pobierzesz wszystkie wiadomości i będziesz je miał w *content.sqlite*, to po jakimś czasie będziesz mógł ponownie uruchomić *gmane.py*, po to by uzyskać tylko nowe wiadomości, które zostały ostatnio wysłane na listę mailingową.
 
-The *content.sqlite* data is pretty raw, with an
-inefficient data model, and not compressed. This is intentional as it
-allows you to look at *content.sqlite* in the SQLite
-Manager to debug problems with the spidering process. It would be a bad
-idea to run any queries against this database, as they would be quite
-slow.
+Dane zawarte w bazie *content.sqlite* są dość surowe, z niewydajnym modelem danych, a ponadto nie są skompresowane. Jest to celowe, ponieważ pozwala Ci oberzeć plik *content.sqlite* w przeglądarce bazy SQLite by usunąć problemy związane procesem pobierania danych. Generalnie byłby to zły pomysł aby uruchomić jakiekolwiek zapytanie SQL na tej bazie danych, ponieważ jego wykonanie byłyby dość powolne.
 
-The second process is to run the program *gmodel.py*.
-This program reads the raw data from *content.sqlite* and
-produces a cleaned-up and well-modeled version of the data in the file
-*index.sqlite*. This file will be much smaller (often 10X
-smaller) than *content.sqlite* because it also compresses
-the header and body text.
+Druga faza polega na uruchomieniu programu *gmodel.py*. Program ten odczytuje surowe dane z *content.sqlite* i tworzy w pliku *index.sqlite* oczyszczoną i dobrze zamodelowaną wersję danych. Plik ten będzie znacznie mniejszy (często ok. 10 razy mniejszy) niż *content.sqlite*, ponieważ kompresuje on również nagłówek i treść wiadomości.
 
-Each time *gmodel.py* runs it deletes and rebuilds
-*index.sqlite*, allowing you to adjust its parameters and
-edit the mapping tables in *content.sqlite* to tweak the
-data cleaning process. This is a sample run of
-*gmodel.py*. It prints a line out each time 250 mail
-messages are processed so you can see some progress happening, as this
-program may run for a while processing nearly a Gigabyte of mail data.
+Za każdym razem gdy uruchomimy *gmodel.py*, program usuwa i przebudowuje plik *index.sqlite*, pozwalając Ci dostosować jego parametry i edytować tabele mapowania w *content.sqlite*, tak aby dopasować odpowiednio proces czyszczenia danych. Poniżej mamy przykładowe uruchomienie *gmodel.py*. Wypisuje on linię za każdym razem, gdy przetwarzanych jest 250 wiadomości mailowych, dzięki czemu widzisz postęp pracy. Jest to o tyle istotne, ponieważ program ten może działać przez pewien dłuższy czas przetwarzając prawie gigabajt danych wejściowych. 
 
 ~~~~
-Loaded allsenders 1588 and mapping 28 dns mapping 1
+Załadowano nadawców: 1588 , mapowania: 29 , mapowania dns: 1
 1 2005-12-08T23:34:30-06:00 ggolden22@mac.com
 251 2005-12-22T10:03:20-08:00 tpamsler@ucdavis.edu
 501 2006-01-12T11:17:34-05:00 lance@indiana.edu
@@ -325,26 +258,17 @@ Loaded allsenders 1588 and mapping 28 dns mapping 1
 ...
 ~~~~
 
-The *gmodel.py* program handles a number of data cleaning
-tasks.
+Program *gmodel.py* realizuje szereg zadań związanych z czyszczeniem danych.
 
-Domain names are truncated to two levels for .com, .org, .edu, and .net.
-Other domain names are truncated to three levels. So si.umich.edu
-becomes umich.edu and caret.cam.ac.uk becomes cam.ac.uk. Email addresses
-are also forced to lower case, and some of the @gmane.org address like
-the following
+Nazwy domen są obcięte do dwóch poziomów dla domen *.com*, *.org*, *.edu* i *.net*. Inne nazwy domen są obcięte do trzech poziomów. Tak więc *si.umich.edu* staje się *umich.edu*, a *caret.cam.ac.uk* staje się *cam.ac.uk*. Adresy e-mail są również wymuszone na zapis małymi literami, a niektóre z adresów *@gmane.org* jak np.
 
 ~~~~
 arwhyte-63aXycvo3TyHXe+LvDLADg@public.gmane.org
 ~~~~
-are converted to the real address whenever there is a matching real
-email address elsewhere in the message corpus.
 
-In the *mapping.sqlite* database there are two tables
-that allow you to map both domain names and individual email addresses
-that change over the lifetime of the email list. For example, Steve
-Githens used the following email addresses as he changed jobs over the
-life of the Sakai developer list:
+są konwertowane na rzeczywisty adres za każdym razem, gdy w korpusie wiadomości znajduje się odpowiadający mu rzeczywisty adres e-mail.
+
+W bazie danych *mapping.sqlite* znajdują się dwie tabele, które pozwalają na mapowanie zarówno nazw domen, jak i poszczególnych adresów e-mail, które zmieniają się w ciągu całego okresu życia listy mailingowej. Na przykład, Steve Githens użył następujących adresów e-mail, ponieważ zmieniał pracę w ciągu całego życia listy mailingowej deweloperów projektu Sakai: 
 
 ~~~~
 s-githens@northwestern.edu
@@ -352,48 +276,37 @@ sgithens@cam.ac.uk
 swgithen@mtu.edu
 ~~~~
 
-We can add two entries to the Mapping table in
-*mapping.sqlite* so *gmodel.py* will map
-all three to one address:
+Jeśli chcemy, to możemy w *mapping.sqlite* do tabeli mapowania nadawców *Mapping* dodać dwa wpisy, tak by *gmodel.py* mapował wszystkie trzy adresy na jeden adres: 
 
 ~~~~
-s-githens@northwestern.edu ->  swgithen@mtu.edu
+s-githens@northwestern.edu -> swgithen@mtu.edu
 sgithens@cam.ac.uk -> swgithen@mtu.edu
 ~~~~
 
-You can also make similar entries in the DNSMapping table if there are
-multiple DNS names you want mapped to a single DNS. The following
-mapping was added to the Sakai data:
+Jeżeli istnieje wiele nazw DNS, które chcesz zmapować na jeden DNS, to możesz również dokonać podobnych wpisów w tabeli *DNSMapping*. Przykładowo:
 
 ~~~~
 iupui.edu -> indiana.edu
 ~~~~
 
-so all the accounts from the various Indiana University campuses are
-tracked together.
+dzięki czemu wszystkie konta z różnych kampusów Uniwersytetu Indiany są śledzone razem.
 
-You can rerun the *gmodel.py* over and over as you look
-at the data, and add mappings to make the data cleaner and cleaner. When
-you are done, you will have a nicely indexed version of the email in
-*index.sqlite*. This is the file to use to do data
-analysis. With this file, data analysis will be really quick.
+Możesz uruchamiać *gmodel.py* wielokrotnie, za każdym razem gdy spojrzysz na dane i dodasz mapowania, tak by dane do analizy były czystsze i bardziej przejrzyste. Kiedy skończysz, w pliku *index.sqlite* będziesz miał ładnie zaindeksowaną wersję e-maili. Jest to plik, którego możesz użyć do dalszej analizy danych. Z tym plikiem analiza będzie naprawdę szybka.
 
-The first, simplest data analysis is to determine "who sent the most
-mail?" and "which organization sent the most mail"? This is done using
-*gbasic.py*:
+Pierwszą, najprostszą analizą jest określenie "kto wysłał najwięcej wiadomości?" i "która organizacja wysłała najwięcej listów"? Odpowiedzi na te pytania uzyskamy za pomocą progrmau *gbasic.py*: 
 
 ~~~~
-How many to dump? 5
-Loaded messages= 51330 subjects= 25033 senders= 1584
+Ile wyświetlić? 5
+Załadowanych wiadomości= 51330 tematów= 25033 nadawców= 1584
 
-Top 5 Email list participants
+Lista 5 najczęstszych użytkowników
 steve.swinsburg@gmail.com 2657
 azeckoski@unicon.net 1742
 ieb@tfd.co.uk 1591
 csev@umich.edu 1304
 david.horwitz@uct.ac.za 1184
 
-Top 5 Email list organizations
+Lista 5 najczęstszych organizacji
 gmail.com 7339
 umich.edu 6243
 uct.ac.za 2451
@@ -401,42 +314,32 @@ indiana.edu 2258
 unicon.net 2055
 ~~~~
 
-Note how much more quickly *gbasic.py* runs compared to
-*gmane.py* or even *gmodel.py*. They are
-all working on the same data, but *gbasic.py* is using
-the compressed and normalized data in *index.sqlite*. If
-you have a lot of data to manage, a multistep process like the one in
-this application may take a little longer to develop, but will save you
-a lot of time when you really start to explore and visualize your data.
+Zauważ jak szybko działa *gbasic.py* w porównaniu z *gmane.py* czy nawet *gmodel.py*. Wszystkie pracują na tych samych danych, ale *gbasic.py* używa skompresowanych i znormalizowanych danych znajdujących się w *index.sqlite*. Jeśli masz dużo danych do przetworzenia, to wieloetapowy proces tworzenia narzędzi do analizy (taki jak ten w tej aplikacji) może zająć Ci trochę więcej czasu, ale z drugiej strony zaoszczędzi Ci bardzo dużo czasu gdy naprawdę zaczniesz eksplorować i wizualizować swoje dane.
 
-You can produce a simple visualization of the word frequency in the
-subject lines in the file *gword.py*:
+Poprzez program *gword.py* możesz stworzyć prostą wizualizację częstości występowania słów w tematach wiadomości: 
 
 ~~~~
-Range of counts: 33229 129
-Output written to gword.js
+Zakres częstości: 33229 129
+Wynik zapisano w gword.js
+Otwórz gword.htm w przeglądarce internetowej by zobaczyć wizualizcję
 ~~~~
 
-This produces the file *gword.js* which you can visualize
-using *gword.htm* to produce a word cloud similar to the
-one at the beginning of this section.
+W ten sposób powstaje plik *gword.js*, który możesz zwizualizować za pomocą *gword.htm*. Mamy utworzoną chmurę wyrazów podobną do tej, która znajduje się w grafice z początku tej sekcji.
 
-A second visualization is produced by *gline.py*. It
-computes email participation by organizations over time.
+Druga wizualizacja jest tworzona przez program *gline.py*. Oblicza ona udział organizacji w wiadomościach mailowych w danym czasie. 
 
 ~~~~
 Loaded messages= 51330 subjects= 25033 senders= 1584
-Top 10 Oranizations
+Top 10 organizacji
 ['gmail.com', 'umich.edu', 'uct.ac.za', 'indiana.edu',
 'unicon.net', 'tfd.co.uk', 'berkeley.edu', 'longsight.com',
 'stanford.edu', 'ox.ac.uk']
-Output written to gline.js
+Wynik zapisano w gline.js
+Otwórz gline.htm by zwizualizować dane
 ~~~~
 
-Its output is written to *gline.js* which is visualized
-using *gline.htm*.
+Wynik jest zapisywany w pliku *gline.js*, który można zwizualizować przy użyciu strony *gline.htm*. 
 
-![Sakai Mail Activity by Organization](../images/mailorg)
+![Aktywność mailowa w projekcie Sakai z podziałem na organizacje](../images/mailorg)
 
-This is a relatively complex and sophisticated application and has
-features to do some real data retrieval, cleaning, and visualization.
+Podsumowując, jest to stosunkowo złożona i wyrafinowana aplikacja, posiadająca funkcje pozwalające na wyszukiwanie, czyszczenie i wizualizację prawdziwych danych. 

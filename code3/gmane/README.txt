@@ -1,137 +1,89 @@
-Analyzing an EMAIL Archive from gmane and vizualizing the data
-using the D3 JavaScript library
+Analiza archiwum mailowego Gmane i wizualizacja danych przy użyciu
+biblioteki JavaScript D3
 
-This is a set of tools that allow you to pull down an archive
-of a gmane repository using the instructions at:
+Poniższa aplikacja zawiera programy, które pozwalają na pobranie i 
+przetworzenie wiadomości umieszczonych na liście mailingowej projektu
+Sakai. Aby nie obciążać innych serwerów, kopia wiadomości dostępna
+jest pod adresem:
 
-http://gmane.org/export.php
+Aby móc przeglądać i modyfikować bazę danych, należy zainstalować program
+DB Browser for SQLite:
 
-In order not to overwhelm the gmane.org server, I have put up 
-my own copy of the messages at: 
+https://sqlitebrowser.org/
 
-http://mbox.dr-chuck.net/
+Pierwszym krokiem jest przeskanowanie repozytorium Gmane. Główny adres URL jest zapisany w gmane.py wzmiennej baseurl i wskauzje na listę mailingową deweloperów projektu Sakai. Twój robot może skanować inne repozytorium - wystarczy, że zmienisz wspomniany adres adres URL. Jeśli zmienisz adres URL, to skasuj również plik content.sqlite.
 
-This server will be faster and take a lot of load off the 
-gmane.org server.
-
-You should install the SQLite browser to view and modify the databases from:
-
-http://sqlitebrowser.org/
-
-The first step is to spider the gmane repository.  The base URL 
-is hard-coded in the gmane.py and is hard-coded to the Sakai
-developer list.  You can spider another repository by changing that
-base url.   Make sure to delete the content.sqlite file if you 
-switch the base url.  The gmane.py file operates as a spider in 
-that it runs slowly and retrieves one mail message per second so 
-as to avoid getting throttled by gmane.org.   It stores all of
-its data in a database and can be interrupted and re-started 
-as often as needed.   It may take many hours to pull all the data
-down.  So you may need to restart several times.
-
-To give you a head-start, I have put up 600MB of pre-spidered Sakai 
-email here:
+Na dobry początek, pod poniższym linkiem umieściłem 600MB pierwszych wiadomości mailowych:
 
 https://www.py4e.com/data_space/content.sqlite.zip
 
-If you download this, you can "catch up with the latest" by
-running gmane.py.
+Jeśli pobierzesz ten plik, to uruchamiając gmane.py będziesz musiał pobrać dodatkowo tylko najnowsze wiadomości.
 
-Navigate to the folder where you extracted the gmane.zip
+Przejdź do katalogu gdzie rozpakowałeś gmane.zip
 
-Note: Windows has difficulty in displaying UTF-8 characters
-in the console so for each console window you open, you may need
-to type the following command before running this code:
+Uwaga: Po Windowsem zalecamy korzystać z terminala PowerShell, tak aby nie było 
+problemów z wyświetlaniem znaków UTF-8.
 
-    chcp 65001
+Oto wynik uruchomienia gmane.py, który pobiera dziesięć ostatnich wiadomości z listy deweloperów projektu Sakai: 
 
-http://stackoverflow.com/questions/388490/unicode-characters-in-windows-command-line-how
 
-Here is a run of gmane.py getting the last five messages of the
-sakai developer list:
 
-Mac: python3 gmane.py 
-Win: gmane.py 
+python3 gmane.py 
 
-How many messages:10
-http://mbox.dr-chuck.net/sakai.devel/1/2 2662
-    ggolden@umich.edu 2005-12-08T23:34:30-06:00 call for participation: developers documentation
-http://mbox.dr-chuck.net/sakai.devel/2/3 2434
-    csev@umich.edu 2005-12-09T00:58:01-05:00 report from the austin conference:  sakai developers break into song
-http://mbox.dr-chuck.net/sakai.devel/3/4 3055
-    kevin.carpenter@rsmart.com 2005-12-09T09:01:49-07:00 cas and sakai 1.5
-http://mbox.dr-chuck.net/sakai.devel/4/5 11721
-    michael.feldstein@suny.edu 2005-12-09T09:43:12-05:00 re: lms/vle rants/comments
-http://mbox.dr-chuck.net/sakai.devel/5/6 9443
-    john@caret.cam.ac.uk 2005-12-09T13:32:29+00:00 re: lms/vle rants/comments
-Does not start with From 
+Ile wiadomości: 10
+http://mbox.dr-chuck.net/sakai.devel/59643/59644 17553
+    matthew@longsight.com 2015-03-20T16:27:12-04:00 re: [building sakai] sakai 10 bulding error
+http://mbox.dr-chuck.net/sakai.devel/59644/59645 13128
+    alberto.olivamolina@gmail.com 2015-03-20T16:36:12+01:00 re: [building sakai] sakai 10 bulding error
+http://mbox.dr-chuck.net/sakai.devel/59645/59646 7557
+    eric.duquenoy@univ-littoral.fr 2015-03-20T16:52:24+01:00 [building sakai] lti and sakai groups (or sections)
+http://mbox.dr-chuck.net/sakai.devel/59646/59647 1
+...
 
-The program scans content.sqlite from 1 up to the first message number not
-already spidered and starts spidering at that message.  It continues spidering
-until it has spidered the desired number of messages or it reaches a page
-that does not appear to be a properly formatted message.
 
-Sometimes gmane.org is missing a message.  Perhaps administrators can delete messages
-or perhaps they get lost - I don't know.   If your spider stops, and it seems it has hit
-a missing message, go into the SQLite Manager and add a row with the missing id - leave
-all the other fields blank - and then restart gmane.py.   This will unstick the 
-spidering process and allow it to continue.  These empty messages will be ignored in the next
-phase of the process.
 
-One nice thing is that once you have spidered all of the messages and have them in 
-content.sqlite, you can run gmane.py again to get new messages as they get sent to the
-list.  gmane.py will quickly scan to the end of the already-spidered pages and check 
-if there are new messages and then quickly retrieve those messages and add them 
-to content.sqlite.
+Program skanuje zawartość content.sqlite w poszukiwaniu numeru pierwszej niepobranej jeszcze wiadomości. Robot ściąga dane tak długo aż nie pobierze pożądanej liczby wiadomości lub gdy dotrze do strony, która nie wydaje się być odpowiednio sformatowaną wiadomością.
 
-The content.sqlite data is pretty raw, with an innefficient data model, and not compressed.
-This is intentional as it allows you to look at content.sqlite to debug the process.
-It would be a bad idea to run any queries against this database as they would be 
-slow.
+Czasami może brakować pewnych wiadomości. Być może administratorzy Gmane mogli usuwać wiadomości, a może się te wiadomości gdzieś przepadły. Jeżeli Twój robot się zatrzyma, a wydaje się, że trafił na właśnie taką brakującą wiadomość, to przejdź do przeglądarki bazy SQLite i dodaj wiersz z brakującym id, pozostawiając wszystkie pozostałe pola puste, a następnie uruchom ponownie gmane.py. Dzięki temu robot będzie mógł kontynuować pracę. Wstawione ręcznie puste wiadomości będą ignorowane w następnej fazie procesu.
 
-The second process is running the program gmodel.py.  gmodel.py reads the rough/raw 
-data from content.sqlite and produces a cleaned-up and well-modeled version of the 
-data in the file index.sqlite.  The file index.sqlite will be much smaller (often 10X
-smaller) than content.sqlite because it also compresses the header and body text.
+Jedną z przyjemnych w tym wszystkim rzeczy jest to, że gdy już pobierzesz wszystkie wiadomości i będziesz je miał w content.sqlite, to po jakimś czasie będziesz mógł ponownie uruchomić gmane.py, po to by uzyskać tylko nowe wiadomości, które zostały ostatnio wysłane na listę mailingową.
 
-Each time gmodel.py runs - it completely wipes out and re-builds index.sqlite, allowing
-you to adjust its parameters and edit the mapping tables in content.sqlite to tweak the 
-data cleaning process.
+Dane zawarte w bazie content.sqlite są dość surowe, z niewydajnym modelem danych, a ponadto nie są skompresowane. Jest to celowe, ponieważ pozwala Ci oberzeć plik content.sqlite w przeglądarce bazy SQLite by usunąć problemy związane procesem pobierania danych. Generalnie byłby to zły pomysł aby uruchomić jakiekolwiek zapytanie SQL na tej bazie danych, ponieważ jego wykonanie byłyby dość powolne.
 
-Running gmodel.py works as follows:
+Druga faza polega na uruchomieniu programu gmodel.py. Program ten odczytuje surowe dane z content.sqlite i tworzy w pliku index.sqlite oczyszczoną i dobrze zamodelowaną wersję danych. Plik ten będzie znacznie mniejszy (często ok. 10 razy mniejszy) niż content.sqlite, ponieważ kompresuje on również nagłówek i treść wiadomości.
 
-Mac: python3 gmodel.py
-Win: gmodel.py
+Za każdym razem gdy uruchomimy gmodel.py, program usuwa i przebudowuje plik index.sqlite, pozwalając Ci dostosować jego parametry i edytować tabele mapowania w content.sqlite, tak aby dopasować odpowiednio proces czyszczenia danych.
 
-Loaded allsenders 1588 and mapping 28 dns mapping 1
+Uruchomienie gmodel.py wygląda następująco:
+
+
+
+python3 gmodel.py
+
+Załadowano nadawców: 1588 , mapowania: 29 , mapowania dns: 1
 1 2005-12-08T23:34:30-06:00 ggolden22@mac.com
 251 2005-12-22T10:03:20-08:00 tpamsler@ucdavis.edu
 501 2006-01-12T11:17:34-05:00 lance@indiana.edu
 751 2006-01-24T11:13:28-08:00 vrajgopalan@ucmerced.edu
 ...
 
-The gmodel.py program does a number of data cleaing steps
 
-Domain names are truncated to two levels for .com, .org, .edu, and .net 
-other domain names are truncated to three levels.  So si.umich.edu becomes
-umich.edu and caret.cam.ac.uk becomes cam.ac.uk.   Also mail addresses are
-forced to lower case and some of the @gmane.org address like the following
+
+Program gmodel.py realizuje szereg zadań związanych z czyszczeniem danych.
+
+Nazwy domen są obcięte do dwóch poziomów dla domen .com, .org, .edu i .net. Inne nazwy domen są obcięte do trzech poziomów. Tak więc si.umich.edu staje się umich.edu, a caret.cam.ac.uk staje się cam.ac.uk. Adresy e-mail są również wymuszone na zapis małymi literami, a niektóre z adresów @gmane.org jak np.
 
    arwhyte-63aXycvo3TyHXe+LvDLADg@public.gmane.org
 
-are converted to the real address whenever there is a matching real email
-address elsewhere in the message corpus.
+są konwertowane na rzeczywisty adres za każdym razem, gdy w korpusie wiadomości znajduje się odpowiadający mu rzeczywisty adres e-mail.
 
-If you look in the content.sqlite database there are two tables that allow
-you to map both domain names and individual email addresses that change over 
-the lifetime of the email list.  For example, Steve Githens used the following
-email addresses over the life of the Sakai developer list:
+W bazie danych mapping.sqlite znajdują się dwie tabele, które pozwalają na mapowanie zarówno nazw domen, jak i poszczególnych adresów e-mail, które zmieniają się w ciągu całego okresu życia listy mailingowej. Na przykład, Steve Githens użył następujących adresów e-mail, ponieważ zmieniał pracę w ciągu całego życia listy mailingowej deweloperów projektu Sakai: 
 
 s-githens@northwestern.edu
 sgithens@cam.ac.uk
 swgithen@mtu.edu
 
-We can add two entries to the Mapping table
+Jeśli chcemy, to możemy w mapping.sqlite do tabeli mapowania nadawców Mapping dodać dwa wpisy, tak by gmodel.py mapował wszystkie trzy adresy na jeden adres: 
 
 s-githens@northwestern.edu ->  swgithen@mtu.edu
 sgithens@cam.ac.uk -> swgithen@mtu.edu
@@ -139,72 +91,74 @@ sgithens@cam.ac.uk -> swgithen@mtu.edu
 And so all the mail messages will be collected under one sender even if 
 they used several email addresses over the lifetime of the mailing list.
 
-You can also make similar entries in the DNSMapping table if there are multiple
-DNS names you want mapped to a single DNS.  In the Sakai data I add the following
-mapping:
+Jeżeli istnieje wiele nazw DNS, które chcesz zmapować na jeden DNS, to możesz również dokonać podobnych wpisów w tabeli DNSMapping. Przykładowo:
 
 iupui.edu -> indiana.edu
 
-So all the folks from the various Indiana University campuses are tracked together
+dzięki czemu wszystkie konta z różnych kampusów Uniwersytetu Indiany są śledzone razem.
 
-You can re-run the gmodel.py over and over as you look at the data, and add mappings
-to make the data cleaner and cleaner.   When you are done, you will have a nicely
-indexed version of the email in index.sqlite.   This is the file to use to do data
-analysis.   With this file, data analysis will be really quick.
+Możesz uruchamiać gmodel.py wielokrotnie, za każdym razem gdy spojrzysz na dane i dodasz mapowania, tak by dane do analizy były czystsze i bardziej przejrzyste. Kiedy skończysz, w pliku index.sqlite będziesz miał ładnie zaindeksowaną wersję e-maili. Jest to plik, którego możesz użyć do dalszej analizy danych. Z tym plikiem analiza będzie naprawdę szybka.
 
-The first, simplest data analysis is to do a "who does the most" and "which 
-organzation does the most"?  This is done using gbasic.py:
+Pierwszą, najprostszą analizą jest określenie "kto wysłał najwięcej wiadomości?" i "która organizacja wysłała najwięcej listów"? Odpowiedzi na te pytania uzyskamy za pomocą progrmau gbasic.py: 
 
-Mac: python3 gbasic.py 
-Win: gbasic.py 
 
-How many to dump? 5
-Loaded messages= 51330 subjects= 25033 senders= 1584
 
-Top 5 Email list participants
+python3 gbasic.py 
+
+Ile wyświetlić? 5
+Załadowanych wiadomości= 51330 tematów= 25033 nadawców= 1584
+
+Lista 5 najczęstszych użytkowników
 steve.swinsburg@gmail.com 2657
 azeckoski@unicon.net 1742
 ieb@tfd.co.uk 1591
 csev@umich.edu 1304
 david.horwitz@uct.ac.za 1184
 
-Top 5 Email list organizations
+Lista 5 najczęstszych organizacji
 gmail.com 7339
 umich.edu 6243
 uct.ac.za 2451
 indiana.edu 2258
 unicon.net 2055
 
-You can look at the data in index.sqlite and if you find a problem, you 
-can update the Mapping table and DNSMapping table in content.sqlite and
-re-run gmodel.py.
 
-There is a simple vizualization of the word frequence in the subject lines
-in the file gword.py:
 
-Mac: python3 gword.py
-Win: gword.py
+Możesz zajrzeć do danych w index.sqlite i jeśli znajdziesz tam jakiś problem, to możesz w mapping.sqlite zaktualizować tabelę Mapping oraz tabelę DNSMapping, a następnie ponownie uruchom gmodel.py
 
-Range of counts: 33229 129
-Output written to gword.js
+Poprzez program gword.py możesz stworzyć prostą wizualizację częstości występowania słów w tematach wiadomości: 
 
-This produces the file gword.js which you can visualize using the file 
-gword.htm.
 
-A second visualization is in gline.py.  It visualizes email participation by 
-organizations over time.
 
-Mac: python3 gline.py 
-Win: gline.py 
+python3 gword.py
+
+Zakres częstości: 33229 129
+Wynik zapisano w gword.js
+Otwórz gword.htm w przeglądarce internetowej by zobaczyć wizualizcję
+
+
+
+W ten sposób powstaje plik gword.js, który możesz zwizualizować za pomocą gword.htm. 
+
+Druga wizualizacja jest tworzona przez program gline.py. Oblicza ona udział organizacji w wiadomościach mailowych w danym czasie. 
+
+
+
+python3 gline.py
 
 Loaded messages= 51330 subjects= 25033 senders= 1584
-Top 10 Oranizations
-['gmail.com', 'umich.edu', 'uct.ac.za', 'indiana.edu', 'unicon.net', 'tfd.co.uk', 'berkeley.edu', 'longsight.com', 'stanford.edu', 'ox.ac.uk']
-Output written to gline.js
+Top 10 organizacji
+['gmail.com', 'umich.edu', 'uct.ac.za', 'indiana.edu',
+'unicon.net', 'tfd.co.uk', 'berkeley.edu', 'longsight.com',
+'stanford.edu', 'ox.ac.uk']
+Wynik zapisano w gline.js
+Otwórz gline.htm by zwizualizować dane
 
-Its output is written to gline.js which is visualized using gline.htm.
 
-Some URLs for visualization ideas:
+
+Wynik jest zapisywany w pliku gline.js, który można zwizualizować przy użyciu strony gline.htm.
+
+Poniżej znajduje się kilka adresów URL dotyczące pomysłów na wizualizacje:
 
 https://developers.google.com/chart/
 
@@ -220,7 +174,7 @@ http://mbostock.github.io/d3/talk/20111018/calendar.html
 
 http://nltk.org/install.html
 
-As always - comments welcome.
+Jak zawsze - komentarze mile widziane.
 
 -- Dr. Chuck
 Sun Sep 29 00:11:01 EDT 2013

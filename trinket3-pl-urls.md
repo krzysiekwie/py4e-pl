@@ -158,4 +158,4 @@
 
 ## Chapter 16
 
-* [`...`](#)
+* no trinkets

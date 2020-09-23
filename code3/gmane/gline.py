@@ -15,7 +15,7 @@ messages = dict()
 for message_row in cur :
     messages[message_row[0]] = (message_row[1],message_row[2],message_row[3],message_row[4])
 
-print("Loaded messages=",len(messages),"senders=",len(senders))
+print("Załadowano wiadomości=",len(messages),"nadawców=",len(senders))
 
 sendorgs = dict()
 for (message_id, message) in list(messages.items()):
@@ -25,10 +25,10 @@ for (message_id, message) in list(messages.items()):
     dns = pieces[1]
     sendorgs[dns] = sendorgs.get(dns,0) + 1
 
-# pick the top schools
+# wybierz najczęstsze organizacje
 orgs = sorted(sendorgs, key=sendorgs.get, reverse=True)
 orgs = orgs[:10]
-print("Top 10 Organizations")
+print("Top 10 organizacji")
 print(orgs)
 
 counts = dict()
@@ -46,8 +46,8 @@ for (message_id, message) in list(messages.items()):
     counts[key] = counts.get(key,0) + 1
 
 months.sort()
-# print counts
-# print months
+# print(counts)
+# print(months)
 
 fhand = open('gline.js','w')
 fhand.write("gline = [ ['Month'")
@@ -66,5 +66,5 @@ for month in months:
 fhand.write("\n];\n")
 fhand.close()
 
-print("Output written to gline.js")
-print("Open gline.htm to visualize the data")
+print("Wynik zapisano w gline.js")
+print("Otwórz gline.htm by zwizualizować dane")

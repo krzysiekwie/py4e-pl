@@ -7,14 +7,14 @@ from urllib.parse import urlparse
 import re
 from datetime import datetime, timedelta
 
-# Not all systems have this so conditionally define parser
+# Nie wszystkie systemy to mają, więc warunkowo zdefiniuj parser
 try:
     import dateutil.parser as parser
 except:
     pass
 
 def parsemaildate(md) :
-    # See if we have dateutil
+    # Sprawdź czy mamy dateutil
     try:
         pdate = parser.parse(tdate)
         test_at = pdate.isoformat()
@@ -22,12 +22,12 @@ def parsemaildate(md) :
     except:
         pass
 
-    # Non-dateutil version - we try our best
+    # Wersja bez dateutil - staramy się jak możemy
 
     pieces = md.split()
     notz = " ".join(pieces[:4]).strip()
 
-    # Try a bunch of format variations - strptime() is *lame*
+    # Sprawdź kilka wariantów formatu - strptime() jest *lamerskie*
     dnotz = None
     for form in [ '%d %b %Y %H:%M:%S', '%d %b %Y %H:%M:%S',
         '%d %b %Y %H:%M', '%d %b %Y %H:%M', '%d %b %y %H:%M:%S',
@@ -39,7 +39,7 @@ def parsemaildate(md) :
             continue
 
     if dnotz is None :
-        # print 'Bad Date:',md
+        # print('Bad Date:',md)
         return None
 
     iso = dnotz.isoformat()
@@ -47,7 +47,7 @@ def parsemaildate(md) :
     tz = "+0000"
     try:
         tz = pieces[4]
-        ival = int(tz) # Only want numeric timezone values
+        ival = int(tz) # Chcemy tylko numeryczne wartości strefy czasowej
         if tz == '-0000' : tz = '+0000'
         tzh = tz[:3]
         tzm = tz[3:]
@@ -57,7 +57,7 @@ def parsemaildate(md) :
 
     return iso+tz
 
-# Ignore SSL certificate errors
+# Ignoruj błędy związane z certyfikatami SSL
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
@@ -71,7 +71,7 @@ cur.execute('''CREATE TABLE IF NOT EXISTS Messages
     (id INTEGER UNIQUE, email TEXT, sent_at TEXT,
      subject TEXT, headers TEXT, body TEXT)''')
 
-# Pick up where we left off
+# Rozpocznij ponownie w miejscu, w którym skończyliśmy
 start = None
 cur.execute('SELECT max(id) FROM Messages' )
 try:
@@ -91,7 +91,7 @@ fail = 0
 while True:
     if ( many < 1 ) :
         conn.commit()
-        sval = input('How many messages:')
+        sval = input('Ile wiadomości: ')
         if ( len(sval) < 1 ) : break
         many = int(sval)
 
@@ -108,19 +108,19 @@ while True:
 
     text = "None"
     try:
-        # Open with a timeout of 30 seconds
+        # Otwórz z limitem czasu wynoszącym 30 sekund
         document = urllib.request.urlopen(url, None, 30, context=ctx)
         text = document.read().decode()
         if document.getcode() != 200 :
-            print("Error code=",document.getcode(), url)
+            print("Kod błędu=",document.getcode(), url)
             break
     except KeyboardInterrupt:
         print('')
-        print('Program interrupted by user...')
+        print('Program przerwany przez użytkownika...')
         break
     except Exception as e:
-        print("Unable to retrieve or parse page",url)
-        print("Error",e)
+        print("Nie można pobrać lub przeparsować strony",url)
+        print("Błąd",e)
         fail = fail + 1
         if fail > 5 : break
         continue
@@ -130,7 +130,7 @@ while True:
 
     if not text.startswith("From "):
         print(text)
-        print("Did not find From ")
+        print("Nie odnaleziono 'From '")
         fail = fail + 1
         if fail > 5 : break
         continue
@@ -141,7 +141,7 @@ while True:
         body = text[pos+2:]
     else:
         print(text)
-        print("Could not find break between headers and body")
+        print("Nie odnaleziono przerwy między nagłówkami a ciałem")
         fail = fail + 1
         if fail > 5 : break
         continue
@@ -168,7 +168,7 @@ while True:
             sent_at = parsemaildate(tdate)
         except:
             print(text)
-            print("Parse fail",tdate)
+            print("Błąd parsowania",tdate)
             fail = fail + 1
             if fail > 5 : break
             continue
@@ -177,7 +177,7 @@ while True:
     z = re.findall('\Subject: (.*)\n', hdr)
     if len(z) == 1 : subject = z[0].strip().lower();
 
-    # Reset the fail counter
+    # Resetuj licznik 'fail'
     fail = 0
     print("   ",email,sent_at,subject)
     cur.execute('''INSERT OR IGNORE INTO Messages (id, email, sent_at, subject, headers, body)

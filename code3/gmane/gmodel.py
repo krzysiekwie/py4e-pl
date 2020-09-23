@@ -4,7 +4,7 @@ import re
 import zlib
 from datetime import datetime, timedelta
 
-# Not all systems have this
+# Nie wszystkie systemy to mają
 try:
     import dateutil.parser as parser
 except:
@@ -20,7 +20,7 @@ def fixsender(sender,allsenders=None) :
     sender = sender.strip().lower()
     sender = sender.replace('<','').replace('>','')
 
-    # Check if we have a hacked gmane.org from address
+    # Sprawdź czy mamy shackowany adres nadawcy gmane.org
     if allsenders is not None and sender.endswith('gmane.org') :
         pieces = sender.split('-')
         realsender = None
@@ -54,7 +54,7 @@ def fixsender(sender,allsenders=None) :
     return mpieces[0] + '@' + dns
 
 def parsemaildate(md) :
-    # See if we have dateutil
+    # Sprawdź czy mamy dateutil
     try:
         pdate = parser.parse(md)
         test_at = pdate.isoformat()
@@ -62,12 +62,12 @@ def parsemaildate(md) :
     except:
         pass
 
-    # Non-dateutil version - we try our best
+    # Wersja bez dateutil - staramy się jak możemy
 
     pieces = md.split()
     notz = " ".join(pieces[:4]).strip()
 
-    # Try a bunch of format variations - strptime() is *lame*
+    # Sprawdź kilka wariantów formatu - strptime() jest *lamerskie*
     dnotz = None
     for form in [ '%d %b %Y %H:%M:%S', '%d %b %Y %H:%M:%S',
         '%d %b %Y %H:%M', '%d %b %Y %H:%M', '%d %b %y %H:%M:%S',
@@ -79,7 +79,7 @@ def parsemaildate(md) :
             continue
 
     if dnotz is None :
-        # print('Bad Date:',md)
+        # print('Zła data:',md)
         return None
 
     iso = dnotz.isoformat()
@@ -87,7 +87,7 @@ def parsemaildate(md) :
     tz = "+0000"
     try:
         tz = pieces[4]
-        ival = int(tz) # Only want numeric timezone values
+        ival = int(tz) # Chcemy tylko numeryczne wartości strefy czasowej
         if tz == '-0000' : tz = '+0000'
         tzh = tz[:3]
         tzm = tz[3:]
@@ -97,7 +97,7 @@ def parsemaildate(md) :
 
     return iso+tz
 
-# Parse out the info...
+# Przeparsuj nagłówki...
 def parseheader(hdr, allsenders=None):
     if hdr is None or len(hdr) < 1 : return None
     sender = None
@@ -109,7 +109,7 @@ def parseheader(hdr, allsenders=None):
         if len(x) >= 1 :
             sender = x[0]
 
-    # normalize the domain name of Email addresses
+    # znormalizuj nazwę domenową adresu e-mail
     sender = fixsender(sender, allsenders)
 
     date = None
@@ -121,7 +121,7 @@ def parseheader(hdr, allsenders=None):
         try:
             sent_at = parsemaildate(tdate)
         except Exception as e:
-            # print('Date ignored ',tdate, e)
+            # print('Data pominięta ',tdate, e)
             return None
 
     subject = None
@@ -169,10 +169,10 @@ for message_row in cur_1 :
     new = fixsender(message_row[1])
     mapping[old] = fixsender(new)
 
-# Done with mapping.sqlite
+# Koniec z mapping.sqlite
 conn_1.close()
 
-# Open the main content (Read only)
+# Otwórz główną zawartość (tylko do odczytu)
 conn_1 = sqlite3.connect('file:content.sqlite?mode=ro', uri=True)
 cur_1 = conn_1.cursor()
 
@@ -185,7 +185,7 @@ for message_row in cur_1 :
     if sender in allsenders: continue
     allsenders.append(sender)
 
-print("Loaded allsenders",len(allsenders),"and mapping",len(mapping),"dns mapping",len(dnsmapping))
+print("Załadowano nadawców:",len(allsenders),", mapowania:",len(mapping),", mapowania dns:",len(dnsmapping))
 
 cur_1.execute('''SELECT headers, body, sent_at
     FROM Messages ORDER BY sent_at''')
@@ -202,7 +202,7 @@ for message_row in cur_1 :
     if parsed is None: continue
     (guid, sender, subject, sent_at) = parsed
 
-    # Apply the sender mapping
+    # Zastosuj mapowanie nadawcy
     sender = mapping.get(sender,sender)
 
     count = count + 1
@@ -210,7 +210,7 @@ for message_row in cur_1 :
     # print(guid, sender, subject, sent_at)
 
     if 'gmane.org' in sender:
-        print("Error in sender ===", sender)
+        print("Błąd w nadawcy ===", sender)
 
     sender_id = senders.get(sender,None)
     subject_id = subjects.get(subject,None)
@@ -225,7 +225,7 @@ for message_row in cur_1 :
             sender_id = row[0]
             senders[sender] = sender_id
         except:
-            print('Could not retrieve sender id',sender)
+            print('Nie można pobrać id nadawcy',sender)
             break
     if subject_id is None :
         cur.execute('INSERT OR IGNORE INTO Subjects (subject) VALUES ( ? )', ( subject, ) )
@@ -236,7 +236,7 @@ for message_row in cur_1 :
             subject_id = row[0]
             subjects[subject] = subject_id
         except:
-            print('Could not retrieve subject id',subject)
+            print('Nie można pobrać id tematu',subject)
             break
     # print(sender_id, subject_id)
     cur.execute('INSERT OR IGNORE INTO Messages (guid,sender_id,subject_id,sent_at,headers,body) VALUES ( ?,?,?,datetime(?),?,? )',
@@ -249,7 +249,7 @@ for message_row in cur_1 :
         message_id = row[0]
         guids[guid] = message_id
     except:
-        print('Could not retrieve guid id',guid)
+        print('Nie można pobrać id GUID',guid)
         break
 
 cur.close()
