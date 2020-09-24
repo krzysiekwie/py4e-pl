@@ -1,9 +1,8 @@
+Wsparcie i współpraca nad książką
+=================================
 
-Contributions
-=============
-
-Contributor List for Python for Everybody 
--------------------------------------------
+Lista współtwórców "Python dla wszystkich"
+-----------------------------------------
 
 Elliott Hauser,
 Stephen Catto,
@@ -21,17 +20,17 @@ Alistair Walsh,
 Erica Brody,
 Jih-Sheng Huang,
 Louis Luangkesorn,
-and
+oraz
 Michael Fudge
 
-You can see contribution details at:
+Szczegóły dotyczące poszczególnego wkładu w tworzenie książki możesz znaleźć na stronie:
 
 https://github.com/csev/py4e/graphs/contributors
 
-Contributor List for Python for Informatics 
+Lista współtwórców "Python for Informatics" 
 -------------------------------------------
 
-Bruce Shields for copy editing early drafts, Sarah Hegge, Steven Cherry,
+Bruce Shields w zakresie pierwszy wersji roboczych, Sarah Hegge, Steven Cherry,
 Sarah Kathleen Barbarow, Andrea Parker, Radaphat Chongthammakun, Megan
 Hixon, Kirby Urner, Sarah Kathleen Barbrow, Katie Kujala, Noah Botimer,
 Emily Alinder, Mark Thompson-Kular, James Perry, Eric Hofer, Eytan Adar,
@@ -39,154 +38,108 @@ Peter Robinson, Deborah J. Nelson, Jonathan C. Anthony, Eden Rassette,
 Jeannette Schroeder, Justin Feezell, Chuanqi Li, Gerald Gordinier, Gavin
 Thomas Strassel, Ryan Clement, Alissa Talley, Caitlin Holman, Yong-Mi
 Kim, Karen Stover, Cherie Edmonds, Maria Seiferle, Romer Kristi D.
-Aranas (RK), Grant Boyer, Hedemarrie Dussan,
+Aranas (RK), Grant Boyer, Hedemarrie Dussan
 
-Preface for "Think Python"
+Przedmowa do "Myśl w języku Python!"
 --------------------------
 
-### The strange history of "Think Python"
+### Dziwna historia "Myśl w języku Python!"
 
 (Allen B. Downey)
 
-In January 1999 I was preparing to teach an introductory programming
-class in Java. I had taught it three times and I was getting frustrated.
-The failure rate in the class was too high and, even for students who
-succeeded, the overall level of achievement was too low.
+W styczniu 1999 roku przygotowywałem się do prowadzenia wstępnych zajęć z programowania w języku Java. Miałem te zajęcia trzy razy i byłem sfrustrowany. Wskaźnik braku zaliczenia przedmiotu był zbyt wysoki i nawet dla studentów, którym się udało zdać, ogólny poziom uzyskanych wyników był zbyt niski.
 
-One of the problems I saw was the books. They were too big, with too
-much unnecessary detail about Java, and not enough high-level guidance
-about how to program. And they all suffered from the trap door effect:
-they would start out easy, proceed gradually, and then somewhere around
-Chapter 5 the bottom would fall out. The students would get too much new
-material, too fast, and I would spend the rest of the semester picking
-up the pieces.
+Jednym z problemów, które widziałem, były książki. Były one zbyt grube, zawierały za dużo zbędnych szczegółów na temat Javy i nie zawierały wystarczająco dużo wskazówek na temat programowania wysokopoziomowego. Na dodatek wszystkie cierpiały z powodu efektu zapadni: zaczynały się łatwo, postępowały stopniowo, a potem gdzieś około rozdziału 5 wszyscy wpadali na dno. Studenci dostawaliby nowy materiał za szybko i w zbyt dużych ilościach, a ja spędziłbym resztę semestru zbierając pozostałości.
 
-Two weeks before the first day of classes, I decided to write my own
-book. My goals were:
+Dwa tygodnie przed pierwszym dniem zajęć postanowiłem napisać własną książkę. Moje cele były następujące:
 
--   Keep it short. It is better for students to read 10 pages than not
-    read 50 pages.
+-   Trzymać zwięzłość. Lepiej, żeby studenci przeczytali 10 stron, niż nie przeczytali 50.
 
--   Be careful with vocabulary. I tried to minimize the jargon and
-    define each term at first use.
+-   Uważać na słownictwo. Starałem się minimalizować specjalistyczny żargon i definiować każdy termin przy pierwszym użyciu.
 
--   Build gradually. To avoid trap doors, I took the most difficult
-    topics and split them into a series of small steps.
+-   Budować stopniowo. Aby uniknąć efektu zapadni, brałem najtrudniejsze tematy i dzieliłem je na serię małych kroków.
 
--   Focus on programming, not the programming language. I included the
-    minimum useful subset of Java and left out the rest.
+-   Skupić się na programowaniu, a nie na języku programowania. Włączyłem do książki minimalny użyteczny podzbiór języka Java i pominąłem resztę.
 
-I needed a title, so on a whim I chose *How to Think Like a Computer
-Scientist*.
+Potrzebowałem tytułu, więc kapryśnie wybrałem *How to Think Like a Computer Scientist*.
 
-My first version was rough, but it worked. Students did the reading, and
-they understood enough that I could spend class time on the hard topics,
-the interesting topics and (most important) letting the students
-practice.
+Moja pierwsza wersja książki była surowa, ale działała. Studenci czytali i zrozumieli temat na tyle, że podczas zajęć mogłem spędzać czas na analizie trudniejszych i ciekawych tematów oraz (co najważniejsze) pozwalając studentom ćwiczyć.
 
-I released the book under the GNU Free Documentation License, which
-allows users to copy, modify, and distribute the book.
+Wydałem tę książkę na licencji GNU Free Documentation License, która pozwala jej użytkownikom ją kopiować, modyfikować i rozpowszechniać.
 
 \index{GNU Free Documentation License}
 \index{Free Documentation License, GNU}
 
-What happened next is the cool part. Jeff Elkner, a high school teacher
-in Virginia, adopted my book and translated it into Python. He sent me a
-copy of his translation, and I had the unusual experience of learning
-Python by reading my own book.
+A teraz najfajniejsza część tej historii. Jeff Elkner, nauczyciel z liceum w Virginii, włączył moją książkę do swojego programu nauczania i przetłumaczył ją na Pythona. Wysłał mi kopię swojego tłumaczenia, a ja doznałem niezwykłego doświadczenia w nauce Pythona, czytając moją własną książkę.
 
-Jeff and I revised the book, incorporated a case study by Chris Meyers,
-and in 2001 we released *How to Think Like a Computer Scientist:
-Learning with Python*, also under the GNU Free Documentation License. As
-Green Tea Press, I published the book and started selling hard copies
-through Amazon.com and college book stores. Other books from Green Tea
-Press are available at [greenteapress.com](greenteapress.com).
+Zrewidowaliśmy z Jeffem książkę, włączyliśmy do niej studium przypadku Chrisa Meyersa, a w 2001 roku wydaliśmy *How to Think Like a Computer Scientist: Learning with Python*, także na licencji GNU Free Documentation License. Już jako wydawnictwo Green Tea Press opublikowałem książkę i zacząłem ją sprzedawać w formie papierowej za pośrednictwem Amazon.com i księgarni uniwersyteckich. Inne książki z Green Tea Press są dostępne na stronie [greenteapress.com](https://greenteapress.com).
 
-In 2003 I started teaching at Olin College and I got to teach Python for
-the first time. The contrast with Java was striking. Students struggled
-less, learned more, worked on more interesting projects, and generally
-had a lot more fun.
+W 2003 roku zacząłem uczyć w Olin College, gdzie po raz pierwszy musiałem uczyć Pythona. Kontrast w zestawieniu z Javą był uderzający. Studenci mieli mniej problemów, uczyli się więcej, pracowali nad bardziej interesującymi projektami i ogólnie mieli dużo więcej zabawy.
 
-Over the last five years I have continued to develop the book,
-correcting errors, improving some of the examples and adding material,
-especially exercises. In 2008 I started work on a major revision—at the
-same time, I was contacted by an editor at Cambridge University Press
-who was interested in publishing the next edition. Good timing!
+W ciągu ostatnich pięciu lat kontynuowałem rozwój książki, poprawiając przy tym błędy i niektóre przykłady oraz dodając nowe materiały, zwłaszcza w sekcji ćwiczeń. W 2008 roku rozpocząłem pracę nad dużą korektą - w tym samym czasie skontaktował się ze mną redaktor Cambridge University Press, który był zainteresowany wydaniem kolejnej edycji książki. Dobre wyczucie czasu!
 
-I hope you enjoy working with this book, and that it helps you learn to
-program and think, at least a little bit, like a computer scientist.
+Mam nadzieję, że praca z tą książką sprawi Ci przyjemność oraz pomoże Ci nauczyć się programować i myśleć, przynajmniej trochę, jak informatyk.
 
-### Acknowledgements for "Think Python"
+### Podziękowania za wkład w "Myśl w języku Python!"
 
 (Allen B. Downey)
 
-First and most importantly, I thank Jeff Elkner, who translated my Java
-book into Python, which got this project started and introduced me to
-what has turned out to be my favorite language.
+Po pierwsze i najważniejsze, dziękuję Jeffowi Elknerowi, który przetłumaczył moją książkę z Javy na Pythona, co zapoczątkowało ten projekt i wprowadziło mnie w to, co okazało się być moim ulubionym językiem.
 
-I also thank Chris Meyers, who contributed several sections to *How to
-Think Like a Computer Scientist*.
+Dziękuję również Chrisowi Meyersowi, który przyczynił się do powstania kilku sekcji w *How to Think Like a Computer Scientist*.
 
-And I thank the Free Software Foundation for developing the GNU Free
-Documentation License, which helped make my collaboration with Jeff and
-Chris possible.
+I dziękuję Fundacji Wolnego Oprogramowania za opracowanie GNU Free
+Documentation License, co pomogło mi w umożliwieniu współpracy z Jeffem i Chrisem.
 
 \index{GNU Free Documentation License}
 \index{Free Documentation License, GNU}
 
-I also thank the editors at Lulu who worked on *How to Think Like a
-Computer Scientist*.
+Dziękuję również redaktorom Lulu, którzy pracowali nad *How to Think Like a Computer Scientist*.
 
-I thank all the students who worked with earlier versions of this book
-and all the contributors (listed in an Appendix) who sent in corrections
-and suggestions.
+Dziękuję wszystkim studentom, którzy pracowali z wcześniejszymi wersjami tej książki oraz wszystkim współtwórcom (wymienionym w załączniku), którzy przesłali poprawki i sugestie.
 
-And I thank my wife, Lisa, for her work on this book, and Green Tea
-Press, and everything else, too.
+Dziękuję również mojej żonie, Lisie, za jej pracę nad tą książką, oraz Green Tea Press i wszystkim innym.
 
 Allen B. Downey\
 Needham MA\
 
-Allen Downey is an Associate Professor of Computer Science at the
+Allen Downey zajmuje stanowisko Associate Professor of Computer Science w
 Franklin W. Olin College of Engineering.
 
-Contributor List for "Think Python"
------------------------------------
+Lista współtwórców "Myśl w języku Python!"
+------------------------------------------
 
 \index{contributors}
 
 (Allen B. Downey)
 
-More than 100 sharp-eyed and thoughtful readers have sent in suggestions
-and corrections over the past few years. Their contributions, and
-enthusiasm for this project, have been a huge help.
+W ciągu ostatnich kilku lat ponad 100 uważnych i skupionych czytelników przesłało sugestie i poprawki. Ich wkład i entuzjazm dla tego projektu był ogromną pomocą.
 
-For the detail on the nature of each of the contributions from these
-individuals, see the "Think Python" text.
+Szczegółowe informacje na temat charakteru każdego wkładu w rozwój książki można znaleźć w tekście "Myśl w języku Python!".
 
 Lloyd Hugh Allen, Yvon Boulianne, Fred Bremmer, Jonah Cohen, Michael
-Conlon, Benoit Girard, Courtney Gleason and Katherine Smith, Lee Harr,
+Conlon, Benoit Girard, Courtney Gleason oraz Katherine Smith, Lee Harr,
 James Kaylin, David Kershaw, Eddie Lam, Man-Yong Lee, David Mayo, Chris
 McAloon, Matthew J. Moelter, Simon Dicon Montford, John Ouzts, Kevin
 Parks, David Pool, Michael Schmitt, Robin Shaw, Paul Sleigh, Craig T.
 Snydal, Ian Thomas, Keith Verheyden, Peter Winstanley, Chris Wrobel,
 Moshe Zadka, Christoph Zwerschke, James Mayer, Hayden McAfee, Angel
-Arnal, Tauhidul Hoque and Lex Berezhny, Dr. Michele Alzetta, Andy
+Arnal, Tauhidul Hoque oraz Lex Berezhny, Dr. Michele Alzetta, Andy
 Mitchell, Kalin Harvey, Christopher P. Smith, David Hutchins, Gregor
 Lingl, Julie Peters, Florin Oprina, D. J. Webre, Ken, Ivo Wever, Curtis
 Yanko, Ben Logan, Jason Armstrong, Louis Cordier, Brian Cain, Rob Black,
-Jean-Philippe Rey at Ecole Centrale Paris, Jason Mader at George
-Washington University made a number Jan Gundtofte-Bruun, Abel David and
+Jean-Philippe Rey z Ecole Centrale Paris, Jason Mader z George
+Washington University, Jan Gundtofte-Bruun, Abel David oraz
 Alexis Dinno, Charles Thayer, Roger Sperberg, Sam Bull, Andrew Cheung,
 C. Corey Capel, Alessandra, Wim Champagne, Douglas Wright, Jared
 Spindor, Lin Peiheng, Ray Hagtvedt, Torsten Hübsch, Inga Petuhhov, Arne
 Babenhauserheide, Mark E. Casida, Scott Tyler, Gordon Shephard, Andrew
-Turner, Adam Hobart, Daryl Hammond and Sarah Zimmerman, George Sass,
+Turner, Adam Hobart, Daryl Hammond oraz Sarah Zimmerman, George Sass,
 Brian Bingham, Leah Engelbert-Fenton, Joe Funke, Chao-chao Chen, Jeff
-Paine, Lubos Pintes, Gregg Lind and Abigail Heithoff, Max Hailperin,
+Paine, Lubos Pintes, Gregg Lind oraz Abigail Heithoff, Max Hailperin,
 Chotipat Pornavalai, Stanislaw Antol, Eric Pashman, Miguel Azevedo,
 Jianhua Liu, Nick King, Martin Zuther, Adam Zimmerman, Ratnakar Tiwari,
 Anurag Goel, Kelli Kratzer, Mark Griffiths, Roydan Ongie, Patryk
 Wolowiec, Mark Chonofsky, Russell Coleman, Wei Huang, Karen Barber, Nam
-Nguyen, Stéphane Morin, Fernando Tardio, and Paul Stoop.
+Nguyen, Stéphane Morin, Fernando Tardio oraz Paul Stoop.
 

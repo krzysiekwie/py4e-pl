@@ -1,53 +1,26 @@
-Copyright Detail
-================
+Szczegóły dotyczące praw autorskich
+===================================
 
-This work is licensed under a Creative Common
-Attribution-NonCommercial-ShareAlike 3.0 Unported License. This license
-is available at
+Ten utwór jest objęty licencją Creative Commons
+Uznanie autorstwa-Użycie niekomercyjne-Na tych samych warunkach 3.0 Unported.
+Licencja jest dostępna pod adresem
 
-[creativecommons.org/licenses/by-nc-sa/3.0/](creativecommons.org/licenses/by-nc-sa/3.0/).
+[creativecommons.org/licenses/by-nc-sa/3.0/](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-I would have preferred to license the book under the less restrictive
-CC-BY-SA license. But unfortunately there are a few unscrupulous
-organizations who search for and find freely licensed books, and then
-publish and sell virtually unchanged copies of the books on a print on
-demand service such as LuLu or KDP. KDP has (thankfully)
-added a policy that gives the wishes of the actual copyright holder
-preference over a non-copyright holder attempting to publish a freely
-licensed work. Unfortunately there are many print-on-demand services and
-very few have as well-considered a policy as KDP.
+Wolałbym udostępniać książkę na mniej restrykcyjnej licencji CC-BY-SA. Ale niestety istnieje kilka pozbawionych skrupułów organizacji, które szukają i znajdują książki z wolnymi licencjami, a następnie publikują i sprzedają praktycznie niezmienione egzemplarze książek w usłudze druku na żądanie takich jak LuLu czy KDP. KDP (na szczęście) dodało zasady, która daje pierwszeństwo woli rzeczywistego posiadacza praw autorskich przed podmiotami nie posiadającymi praw autorskich, które próbują opublikować wolny utwór objęty licencją. Niestety, istnieje wiele usług druku na żądanie i bardzo niewiele z nich rozważa takie zasady jak przyjęte przez KDP.
 
-Regretfully, I added the NC element to the license this book to give me
-recourse in case someone tries to clone this book and sell it
-commercially. Unfortunately, adding NC limits uses of this material that
-I would like to permit. So I have added this section of the document to
-describe specific situations where I am giving my permission in advance
-to use the material in this book in situations that some might consider
-commercial.
+Niestety, dodałem element NC (NonCommercial, z ang. użycie niekomercyjne) do licencji tej książki, tak by dać mi możliwość roszczeń regresowych w przypadku, gdy ktoś spróbuje skopiować tę książkę i będzie ją sprzedawać komercyjnie. Niestety, dodanie elementu NC ogranicza wykorzystanie tego materiału w zakresie jakim chciałbym zezwolić. Dodałem więc tę część dokumentu, aby opisać konkretne sytuacje, w których z góry wyrażam zgodę na wykorzystanie materiału zawartego w tej książce w sytuacjach, które niektórzy mogą uznać za komercyjne.
 
--   If you are printing a limited number of copies of all or part of
-    this book for use in a course (e.g., like a coursepack), then you
-    are granted CC-BY license to these materials for that purpose.
+-   Jeśli drukujesz ograniczoną liczbę egzemplarzy całości lub części tego podręcznika do wykorzystania podczas zajęć (np. w formie pakietu szkoleniowego), wówczas w tym celu na te materiały otrzymujesz licencję CC-BY.
 
--   If you are a teacher at a university and you translate this book
-    into a language other than English and teach using the translated
-    book, then you can contact me and I will grant you a CC-BY-SA
-    license to these materials with respect to the publication of your
-    translation. In particular, you will be permitted to sell the
-    resulting translated book commercially.
+-   Jeśli jesteś nauczycielem na uczelni i tłumaczysz tę książkę na język inny niż angielski i nauczasz za pomocą przetłumaczonej książki, możesz skontaktować się ze mną, a ja udzielę ci licencji CC-BY-SA na te materiały w odniesieniu do publikacji twojego tłumaczenia. W szczególności, będziesz mógł sprzedać przetłumaczoną książkę komercyjnie.
 
-If you are intending to translate the book, you may want to contact me
-so we can make sure that you have all of the related course materials so
-you can translate them as well.
+Jeśli zamierzasz przetłumaczyć książkę, możesz skontaktować się ze mną, abyśmy mogli się upewnić, że posiadasz wszystkie związane z nią materiały kursowe, dzięki czemu będziesz mógł je również przetłumaczyć.
 
-Of course, you are welcome to contact me and ask for permission if these
-clauses are not sufficient. In all cases, permission to reuse and remix
-this material will be granted as long as there is clear added value or
-benefit to students or teachers that will accrue as a result of the new
-work.
+Oczywiście, możesz również skontaktować się ze mną i poprosić o zgodę, jeśli powyższe zapisy nie są wystarczające. We wszystkich przypadkach zgoda na ponowne użycie i remiksowanie tego materiału zostanie udzielona pod warunkiem, że pojawi się wyraźna wartość dodana lub korzyść dla studentów lub nauczycieli, która powstanie w wyniku nowej pracy.
 
 Charles Severance\
 www.dr-chuck.com \
 Ann Arbor, MI, USA\
-September 9, 2013
+9 września 2013 r.
 
