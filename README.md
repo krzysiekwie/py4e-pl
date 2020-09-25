@@ -20,7 +20,7 @@ Polish translation progress
 | `05-iterations.mkd`    | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `06-strings.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `07-files.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `08-lists.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `08-lists.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `09-dictionaries.mkd`  | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `10-tuples.mkd`        | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `11-regex.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |

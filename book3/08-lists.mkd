@@ -1,8 +1,8 @@
 Listy
 =====
 
-\index{list}
-\index{type!list}
+\index{lista}
+\index{typ!list}
 
 Lista jest sekwencją
 --------------------
@@ -10,8 +10,7 @@ Lista jest sekwencją
 Podobnie jak ciąg znaków, *lista* jest sekwencją wartości. W ciągu znaku, wartości są znakami, natomiast w liście mogą być dowolnego typu. Wartości występujące w liście są nazywane *elementami*, z rzadka *pozycjami*.
 
 \index{element}
-\index{sequence}
-\index{item}
+\index{sekwencja}
 
 Istnieje kilka sposobów na stworzenie nowej listy; najprostszym jest umieszczenie elementów w nawiasach kwadratowych ("[" i "]"):
 
@@ -28,13 +27,13 @@ Pierwszym przykładem jest lista składająca się z czterech liczb całkowitych
 
 Gdy jedna lista znajduje się w innej liście, to mówimy, że jest *zagnieżdżona*.
 
-\index{nested list}
-\index{list!nested}
+\index{zagnieżdżona lista}
+\index{lista!zagnieżdżona}
 
 Lista, która nie zawiera żadnych elementów, nazywana jest listą pustą. Możesz utworzyć taką listę używając pustych nawiasów kwadratowych, tj. `[]`.
 
-\index{empty list}
-\index{list!empty}
+\index{pusta lista}
+\index{lista!pusta}
 
 Jak pewnie się spodziewałeś, możesz przypisać wartości listy do zmiennych:
 
@@ -46,17 +45,17 @@ Jak pewnie się spodziewałeś, możesz przypisać wartości listy do zmiennych:
 ['Cheddar', 'Edam', 'Gouda'] [17, 123] []
 ~~~~
 
-\index{assignment}
+\index{przypisanie}
 
 Listy są zmienne
 -----------------
 
-\index{list!element}
-\index{access}
-\index{index}
+\index{lista!element}
+\index{dostęp}
+\index{indeks}
 \index{}
-\index{bracket operator}
-\index{operator!bracket}
+\index{nawias kwadratowy, operator}
+\index{operator!nawias kwadratowy}
 
 Składnia dostępu do elementów listy jest taka sama jak w przypadku dostępu do znaków w napisach: używa się operatora nawiasów kwadratowych. Wyrażenie wewnątrz nawiasów określa indeks. Pamiętaj, że indeksy zaczynają się od 0:
 
@@ -67,7 +66,7 @@ Cheddar
 
 W odróżnieniu od ciągów znaków, listy są zmienne, ponieważ możesz zmienić kolejność elementów na liście lub ponownie przypisać jakiś element do listy. Kiedy operator nawiasów pojawia się po lewej stronie przypisania, identyfikuje on pozycję listy, do której zostanie coś przypisane.
 
-\index{mutability}
+\index{zmienność}
 
 ~~~~ {.python .trinket}
 >>> numbers = [17, 123]
@@ -78,13 +77,13 @@ W odróżnieniu od ciągów znaków, listy są zmienne, ponieważ możesz zmieni
 
 Pierwszym elementem `numbers`, który kiedyś wynosił 123, jest teraz 5.
 
-\index{index!starting at zero}
-\index{zero, index starting at}
+\index{indeks!numerowanie od zera}
+\index{zero, początek numerowania indeksów}
 
 Możesz myśleć o liście jako o relacji między indeksami i elementami. Ta relacja nazywana jest *mapowaniem*; każdy indeks "mapuje" do jednego z elementów.
 
-\index{item assignment}
-\index{assignment!item}
+\index{element, przypisanie}
+\index{przypisanie!element}
 
 Indeksy listy działają tak samo jak indeksy ciągów znaków:
 
@@ -92,15 +91,15 @@ Indeksy listy działają tak samo jak indeksy ciągów znaków:
 
 -   Jeśli spróbujesz odczytać lub zapisać pozycję, która nie istnieje, otrzymasz `IndexError`.
 
-\index{exception!IndexError}
+\index{wyjątek!IndexError}
 \index{IndexError}
 
 -   Jeśli indeks ma wartość ujemną, to oblicza się go wstecz od końca listy.
 
-\index{list!index}
-\index{list!membership}
-\index{membership!list}
-\index{in operator}
+\index{lista!indeks}
+\index{lista!przynależność}
+\index{przynależność!lista}
+\index{in, operator}
 \index{operator!in}
 
 Operator `in` działa również na listach.
@@ -116,11 +115,11 @@ False
 Poruszanie się po listach
 -------------------------
 
-\index{list!traversal}
-\index{traversal!list}
-\index{for loop}
-\index{loop!for}
-\index{statement!for}
+\index{lista!przejście}
+\index{przejście po liście}
+\index{for, pętla}
+\index{pętla!for}
+\index{instrukcja!for}
 
 Najczęstszym sposobem na przejście po elementach listy jest pętla `for`. Składnia jest taka sama jak dla ciągów znaków:
 
@@ -131,8 +130,8 @@ for cheese in cheeses:
 
 Jest to dobre rozwiązanie jeśli musisz tylko odczytać elementy z listy. Ale jeśli chcesz coś w niej dopisać lub zaktualizować, to potrzebujesz indeksów. W takiej sytuacji najczęściej wykorzystuje się połączenie funkcji `range` i `len`:
 
-\index{looping!with indices}
-\index{index!looping with}
+\index{przechodzenie w pętli!po indeksach}
+\index{indeks!przechodzenie w pętli}
 
 ~~~~ {.python}
 for i in range(len(numbers)):
@@ -141,8 +140,8 @@ for i in range(len(numbers)):
 
 Powyższa pętla przechodzi przez listę i aktualizuje każdy element. `len` zwraca liczbę elementów na liście. `range` zwraca listę indeksów od 0 do $n-1$, gdzie $n$ jest długością listy. Przy każdej iteracji pętli, `i` kolejno uzyskuje indeks elementu. Instrukcja przypisania w ciele pętli używa `i` do odczytania starej wartości elementu i przypisania nowej wartości.
 
-\index{item update}
-\index{update!item}
+\index{element, aktualizacja}
+\index{aktualizacja!element}
 
 Pętla `for` przechodząca przez pustą listę nigdy nie wykonuje ciała pętli:
 
@@ -154,8 +153,8 @@ for x in empty:
 
 Chociaż lista może zawierać inną listę, to zagnieżdżona lista nadal liczy się jako pojedynczy element. Długość poniższej listy wynosi cztery:
 
-\index{nested list}
-\index{list!nested}
+\index{zagnieżdżona lista}
+\index{lista!zagnieżdżona}
 
 ~~~~ {.python}
 ['spam', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]
@@ -164,12 +163,13 @@ Chociaż lista może zawierać inną listę, to zagnieżdżona lista nadal liczy
 Operacje na listach
 -------------------
 
-\index{list!operation}
+\index{lista!operacje}
 
 Operator `+` konkatenuje (łączy) listy:
 
-\index{concatenation!list}
-\index{list!concatenation}
+\index{konkatenacja list}
+\index{łączenie list}
+\index{lista!konkatenacja}
 
 ~~~~ {.python .trinket}
 >>> a = [1, 2, 3]
@@ -181,8 +181,8 @@ Operator `+` konkatenuje (łączy) listy:
 
 Z kolei operator `*` powtarza listę określoną liczbę razy:
 
-\index{repetition!list}
-\index{list!repetition}
+\index{powtórzenie listy}
+\index{lista!powtórzenie}
 
 ~~~~ {.python .trinket}
 >>> [0] * 4
@@ -196,11 +196,11 @@ W pierwszym przykładzie lista jest powtórzona cztery razy. Drugi przykład pow
 Wycinki list
 ------------
 
-\index{slice operator}
-\index{operator!slice}
-\index{index!slice}
-\index{list!slice}
-\index{slice!list}
+\index{wycinanie, operator}
+\index{operator!wycinanie}
+\index{indeks!wycinanie}
+\index{lista!wycinanie}
+\index{wycinanie!lista}
 
 Operator wycinania działa również na listach:
 
@@ -216,9 +216,9 @@ Operator wycinania działa również na listach:
 
 Jeśli pominiesz pierwszy indeks, wycinek zaczyna się od początku listy. Jeśli pominiesz drugi indeks, wycinek idzie aż do końca. Zatem jeśli pominiesz oba, wycinek jest kopią całej listy.
 
-\index{list!copy}
-\index{slice!copy}
-\index{copy!slice}
+\index{lista!kopia}
+\index{wycinanie!kopia}
+\index{kopiowanie!wycinek}
 
 ~~~~ {.python}
 >>> t[:]
@@ -227,12 +227,12 @@ Jeśli pominiesz pierwszy indeks, wycinek zaczyna się od początku listy. Jeśl
 
 Ponieważ listy są zmienne, często przydatne jest wykonanie kopii przed wykonaniem innych operacji, które wywracają ich zawartość do góry nogami.
 
-\index{mutability}
+\index{zmienność}
 
 Operator wycinania zastosowany po lewej stronie instrukcji przypisania może aktualizować wiele elementów:
 
-\index{slice!update}
-\index{update!slice}
+\index{wycinanie!aktualizacja}
+\index{aktualizacja!wycinek}
 
 ~~~~ {.python .trinket}
 >>> t = ['a', 'b', 'c', 'd', 'e', 'f']
@@ -244,13 +244,13 @@ Operator wycinania zastosowany po lewej stronie instrukcji przypisania może akt
 Metody obiektów będących listami
 --------------------------------
 
-\index{list!method}
-\index{method, list}
+\index{lista!metoda}
+\index{metoda listy}
 
 Python udostępnia metody, które działają na listach. Na przykład, `append` dodaje nowy element na końcu listy:
 
-\index{append method}
-\index{method!append}
+\index{append, metoda}
+\index{metoda!append}
 
 ~~~~ {.python .trinket}
 >>> t = ['a', 'b', 'c']
@@ -261,8 +261,8 @@ Python udostępnia metody, które działają na listach. Na przykład, `append` 
 
 `extend` działa podobnie, z tym że przyjmuje jako argument listę elementów do dopisania:
 
-\index{extend method}
-\index{method!extend}
+\index{extend, metoda}
+\index{metoda!extend}
 
 ~~~~ {.python .trinket}
 >>> t1 = ['a', 'b', 'c']
@@ -276,8 +276,8 @@ W powyższym przykładzie lsita `t2` pozostaje niezmieniona.
 
 `sort` układa elementy listy od najmniejszego do największego:
 
-\index{sort method}
-\index{method!sort}
+\index{sort, metoda}
+\index{metoda!sort}
 
 ~~~~ {.python .trinket}
 >>> t = ['d', 'c', 'e', 'b', 'a']
@@ -288,22 +288,22 @@ W powyższym przykładzie lsita `t2` pozostaje niezmieniona.
 
 Większość metod listowych nie zwraca żadnej konkretnej wartości; modyfikują one listę i zwracają `None`. Tego typu modyfikacja nazywana jest *modyfikacją w miejscu*. Jeśli przypadkowo napiszesz `t = t.sort()`, zapewne będziesz zawiedziony zwróconym wynikiem.
 
-\index{void method}
-\index{method!void}
-\index{inplace modification}
-\index{None special value}
-\index{special value!None}
+\index{niezwracająca wartości, metoda}
+\index{metoda!niezwracająca wartości}
+\index{modyfikacja w miejscu}
+\index{None, wartość specjalna}
+\index{wartość specjalna!None}
 
 Usuwanie elementów
 ------------------
 
-\index{element deletion}
-\index{deletion, element of list}
+\index{element, usuwanie}
+\index{usuwanie elementu}
 
 Istnieje kilka sposobów na usunięcie elementów z listy. Jeśli znasz indeks elementu, który chcesz usunąć, to możesz użyć metody `pop`:
 
-\index{pop method}
-\index{method!pop}
+\index{pop, metoda}
+\index{metoda!pop}
 
 ~~~~ {.python .trinket}
 >>> t = ['a', 'b', 'c']
@@ -318,7 +318,7 @@ b
 
 Jeśli nie potrzebujesz usuniętej wartości, możesz użyć operatora `del`:
 
-\index{del operator}
+\index{del, operator}
 \index{operator!del}
 
 ~~~~ {.python .trinket}
@@ -330,8 +330,8 @@ Jeśli nie potrzebujesz usuniętej wartości, możesz użyć operatora `del`:
 
 Jeśli znasz element, który chcesz usunąć (ale nie jego indeks), możesz użyć `remove`:
 
-\index{remove method}
-\index{method!remove}
+\index{remove, metoda}
+\index{metoda!remove}
 
 ~~~~ {.python .trinket}
 >>> t = ['a', 'b', 'c']
@@ -342,8 +342,8 @@ Jeśli znasz element, który chcesz usunąć (ale nie jego indeks), możesz uży
 
 Wartością zwracaną przez `remove` jest `None`.
 
-\index{None special value}
-\index{special value!None}
+\index{None, wartość specjalna}
+\index{wartość specjalna!None}
 
 Aby usunąć więcej niż jeden element, możesz użyć `del` z indeksami podanymi w postaci wycinka:
 
@@ -394,14 +394,16 @@ Przed rozpoczęciem pętli tworzymy pustą listę, a następnie za każdym razem
 Listy i ciągi znaków
 --------------------
 
-\index{list}
-\index{string}
-\index{sequence}
+\index{lista}
+\index{ciąg znaków}
+\index{napis}
+\index{łańcuch znaków}
+\index{sekwencja}
 
 Ciąg znaków jest sekwencją znaków, a lista jest sekwencją wartości, ale lista znaków nie jest tym samym co ciąg znaków. Aby przekonwertować ciąg znaków na listę znaków, możesz użyć funkcji `list`:
 
-\index{list!function}
-\index{function!list}
+\index{list, funkcja}
+\index{funkcja!list}
 
 ~~~~ {.python .trinket}
 >>> s = 'spam'
@@ -414,8 +416,8 @@ Ponieważ `list` jest nazwą wbudowanej funkcji, powinieneś unikać używania j
 
 Funkcja `list` rozbija ciąg znaków na pojedyncze litery. Jeśli chcesz rozbić ciąg znaków na słowa, to możesz użyć metody `split`:
 
-\index{split method}
-\index{method!split}
+\index{split, metoda}
+\index{metoda!split}
 
 ~~~~ {.python .trinket}
 >>> s = 'usycham z tęsknoty za fiordami'
@@ -430,9 +432,9 @@ Gdy już użyjesz `split` aby rozbić ciąg znaków na listę słów, możesz u�
 
 Możesz wywołać `split` z opcjonalnym argumentem zwanym *separatorem*, który określa jakie znaki mają być użyte do określania granic słów. Poniższy przykład używa myślnika jako separatora:
 
-\index{optional argument}
-\index{argument!optional}
-\index{delimiter}
+\index{opcjonalny argument}
+\index{argument!opcjonalny}
+\index{separator}
 
 ~~~~ {.python .trinket}
 >>> s = 'spam-spam-spam'
@@ -443,9 +445,9 @@ Możesz wywołać `split` z opcjonalnym argumentem zwanym *separatorem*, który 
 
 Funkcja `join` jest odwrotnością `split`. Przyjmuje ona listę ciągów znaków i konkatenuje jej elementy. `join` jest metodą obiektów będących ciągami znaków, więc musisz wywołać ją na separatorze i przekazać listę jako argument:
 
-\index{join method}
-\index{method!join}
-\index{concatenation}
+\index{join, metoda}
+\index{metoda!join}
+\index{konkatenacja}
 
 ~~~~ {.python .trinket}
 >>> t = ['usycham', 'z', 'tęsknoty', 'za', 'fiordami']
@@ -456,8 +458,8 @@ Funkcja `join` jest odwrotnością `split`. Przyjmuje ona listę ciągów znakó
 
 W tym przypadku separator jest znakiem spacji, więc `join` umieszcza spację między słowami. Aby połączyć ciągi znaków bez spacji, możesz użyć pustego ciągu znaków, "", jako separator.
 
-\index{empty string}
-\index{string!empty}
+\index{pusty ciąg znaków}
+\index{ciąg znaków!pusty}
 
 Parsowanie linii
 ----------------
@@ -488,8 +490,8 @@ Później poznamy coraz bardziej wyrafinowane techniki wybierania linii do dalsz
 Obiekty i wartości
 ------------------
 
-\index{object}
-\index{value}
+\index{obiekt}
+\index{wartość}
 
 Jeśli wykonamy poniższe instrukcje przypisania:
 
@@ -500,13 +502,13 @@ b = 'banan'
 
 to wiemy, że zarówno `a`, jak i `b` odnoszą się do ciągu znaków, ale nie wiemy, czy odnoszą się one do *tego samego* ciągu znaków. Istnieją dwa możliwe stany:
 
-\index{aliasing}
+\index{aliasowanie}
 
 ![Zmienne i obiekty](height=0.5in@../images/list1)
 
 W jednym przypadku, `a` i `b` odnoszą się do dwóch różnych obiektów, które mają tę samą wartość. W drugim przypadku, odnoszą się one do tego samego obiektu.
 
-\index{is operator}
+\index{is, operator}
 \index{operator!is}
 
 Aby sprawdzić, czy dwie zmienne odnoszą się do tego samego obiektu, możesz użyć operatora `is`.
@@ -529,21 +531,21 @@ Ale kiedy tworzysz dwie listy, otrzymujesz dwa obiekty:
 False
 ~~~~
 
-W tym przypadku powiedzielibyśmy, że te dwie listy są *równoważne*, ponieważ mają te same elementy, ale nie są *identywne*, ponieważ nie są tym samym obiektem. Jeżeli dwa obiekty są identyczne, to są one również równoważne, ale jeżeli są równoważne, to niekoniecznie są identyczne.
+W tym przypadku powiedzielibyśmy, że te dwie listy są *równoważne*, ponieważ mają te same elementy, ale nie są *identyczne*, ponieważ nie są tym samym obiektem. Jeżeli dwa obiekty są identyczne, to są one również równoważne, ale jeżeli są równoważne, to niekoniecznie są identyczne.
 
-\index{equivalence}
-\index{identity}
+\index{równoważność}
+\index{identyczność}
 
 Do tej pory używaliśmy zamiennie słów "obiekt" i "wartość", ale powinniśmy mówić, że obiekt ma wartość. Jeśli wykonasz `a = [1,2,3]`, to `a` odnosi się do obiektu listy, którego wartością jest konkretna sekwencja elementów. Jeśli inna lista ma te same elementy, to powiedzielibyśmy, że ma taką samą wartość.
 
-\index{object}
-\index{value}
+\index{obiekt}
+\index{wartość}
 
 Aliasy
 ------
 
-\index{aliasing}
-\index{reference!aliasing}
+\index{aliasowanie}
+\index{referencja!aliasowanie}
 
 Jeśli `a` odnosi się do obiektu, a Ty przypisujesz `b = a`, to obie zmienne odnoszą się do tego samego obiektu:
 
@@ -556,11 +558,11 @@ True
 
 Powiązanie zmiennej z obiektem nazywane jest *referencją*. W powyższym przykładzie istnieją dwie referencje do tego samego obiektu.
 
-\index{reference}
+\index{referencja}
 
 Obiekt z więcej niż jedną referencją ma więcej niż jedną nazwę, więc mówimy, że obiekt jest *aliasowany*.
 
-\index{mutability}
+\index{zmienność}
 
 Jeżeli aliasowany obiekt jest zmienny, to zmiany dokonane przy użyciu jednego aliasu wpływają na drugi:
 
@@ -572,7 +574,7 @@ Jeżeli aliasowany obiekt jest zmienny, to zmiany dokonane przy użyciu jednego 
 
 Chociaż takie zachowanie może być użyteczne, jest ono skłonność do generowania błędów. Ogólnie rzecz biorąc, jeśli pracujesz z obiektami zmiennymi, to bezpieczniej jest unikać tworzenia ich aliasów.
 
-\index{immutability}
+\index{niezmienność}
 
 W przypadku obiektów niezmiennych, takich jak ciągi znaków, aliasowanie nie jest aż tak dużym problemem. W poniższym przykładzie:
 
@@ -586,11 +588,11 @@ prawie nigdy nie ma różnicy czy `a` i `b` odnoszą się do tego samego ciągu 
 Argumenty będące listami
 ------------------------
 
-\index{list!as argument}
+\index{lista!jako argument}
 \index{argument}
-\index{argument!list}
-\index{reference}
-\index{parameter}
+\index{argument!lista}
+\index{referencja}
+\index{parametr}
 
 Kiedy przekazujesz listę do funkcji, funkcja ta otrzymuje referencję do listy. Jeżeli funkcja modyfikuje parametr będący listą, to z poziomu wywoływania funkcji zauważymy tę zmianę. Na przykład, `delete_head` usuwa pierwszy element z listy:
 
@@ -612,10 +614,11 @@ Parametr `t` i zmienna `letters` są aliasami dla tego samego obiektu.
 
 Ważne jest, by odróżniać operacje, które modyfikują listy, od operacji, które tworzą nowe listy. Na przykład, metoda `append` modyfikuje listę, ale operator `+` tworzy nową listę:
 
-\index{append method}
-\index{method!append}
-\index{list!concatenation}
-\index{concatenation!list}
+\index{append, metoda}
+\index{metoda!append}
+\index{lista!konkatenacja}
+\index{konkatenacja list}
+\index{łączenie list}
 
 ~~~~ {.python .trinket}
 >>> t1 = [1, 2]
@@ -641,8 +644,8 @@ def bad_delete_head(t):
 
 Operator wycinania tworzy nową listę, a przypisanie sprawia, że zmienna `t` odnosi się teraz do tej nowej listy, ale żadna z tych operacji nie ma żadnego wpływu na listę, która została przekazana do funkcji jako argument.
 
-\index{slice operator}
-\index{operator!slice}
+\index{wycinanie, operator}
+\index{operator!wycinanie}
 
 Alternatywnie można napisać funkcję, która tworzy i zwraca nową listę. Na przykład, `tail` zwraca wszystko oprócz pierwszego elementu listy:
 
@@ -665,7 +668,7 @@ Funkcja ta pozostawia pierwotną listę bez zmian. Poniżej pokazano jak można 
 Debugowanie
 -----------
 
-\index{debugging}
+\index{debugowanie}
 
 Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić do długich godzin debugowania. Oto kilka typowych pułapek wraz ze sposobami na ich uniknięcie:
 
@@ -686,8 +689,8 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     t = t.sort()           # ŹLE!
     ~~~~
 
-    \index{sort method}
-    \index{method!sort}
+    \index{sort, metoda}
+    \index{metoda!sort}
 
     Metoda `sort` zwraca `None`, więc następna operacja, którą wykonasz 
     z `t`, może się nie udać.
@@ -736,8 +739,8 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
 3.  Rób kopie by unikać aliasowania.
 
-    \index{aliasing!copying to avoid}
-    \index{copy!to avoid aliasing}
+    \index{aliasowanie!kopiowanie by zapobiec}
+    \index{kopiowanie!by zapobiec aliasowaniu}
 
     Jeśli chcesz użyć metody takiej jak `sort`, która modyfikuje
     argument, ale musisz także zachować oryginalną listę, to możesz
@@ -901,7 +904,7 @@ Słowniczek
 aliasowanie
 :   Okoliczność, w której dwie lub więcej zmiennych odnosi się do tego
     samego obiektu.
-\index{aliasing}
+\index{aliasowanie}
 
 element
 :   Jedna z wartości na liście (lub innej sekwencji); nazywana także
@@ -910,46 +913,48 @@ element
 
 identiczny
 :   Będący tym samym obiektem (co oznacza też równoważność).
-\index{identical}
+\index{identyczność}
 
 indeks
 :   Wartość będąca liczbą całkowitą, która wskazuje element na liście.
-\index{index}
+\index{indeks}
 \index{}
 
 lista
 :   Sekwencja wartości.
-\index{list}
+\index{lista}
 
 lista zagnieżdżona
 :   Lista, która jest elementem innej listy.
-\index{nested list}
+\index{lista!zagnieżdżona}
+\index{zagnieżdżona lista}
 
 obiekt
 :   Coś, do czego może odnosić się zmienna. Obiekt ma typ i wartość.
-\index{object}
+\index{obiekt}
 
 przejście po liście
 :   Sekwencyjny dostęp do każdego elementu listy.
-\index{list!traversal}
+\index{przejście po liście}
+\index{lista!przejście}
 
 referencja
 :   Związek między zmienną a jej wartością.
-\index{reference}
+\index{referencja}
 
 równoważny
 :   Posiadający tę samą wartość.
-\index{equivalent}
+\index{równoważność}
 
 separator
 :   Znak lub ciąg znaków używany do wskazania, gdzie ciąg znaków 
     powinien zostać podzielony.
-\index{delimiter}
+\index{separator}
 
 Ćwiczenia
 ---------
 
-\index{Romeo and Juliet}
+\index{Romeo i Julia}
 
 **Ćwiczenie 4: Pobierz kopię pliku** [**pl.py4e.com/code3/romeo.txt**](https://pl.py4e.com/code3/romeo.txt)**. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Dla każdej linii podziel ją na listę słów za pomocą funkcji `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli słowa nie ma na liście, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.**
 

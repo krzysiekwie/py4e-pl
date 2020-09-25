@@ -224,7 +224,7 @@ Przechodzenie w pętli i zliczanie
 \index{licznik}
 \index{zliczanie w pętli}
 \index{przechodzenie w pętli i zliczanie}
-\index{przechodzenie w pętli!op ciągach znaków}
+\index{przechodzenie w pętli!po ciągach znaków}
 
 Poniższy program zlicza ile razy litera "a" pojawia się w ciągu znaków:
 
