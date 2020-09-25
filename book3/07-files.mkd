@@ -1,14 +1,14 @@
 Pliki
 =====
 
-\index{file}
-\index{type!file}
+\index{plik}
+\index{typ!file}
 
 Pamięć nieulotna
 ----------------
 
-\index{persistence}
-\index{secondary memory}
+\index{pamięć nieulotna}
+\index{pamięć pomocnicza}
 
 Do tej pory uczyliśmy się pisać programy i komunikować *procesorowi* nasze zamiary za pomocą instrukcji warunkowych, funkcji i iteracji. Nauczyliśmy się jak tworzyć i wykorzystywać struktury danych w *pamięci głównej*. Procesor i pamięć główna są miejscem, w którym działa i uruchamia się nasze oprogramowanie. To właśnie tam odbywa się całe "myślenie".
 
@@ -23,9 +23,9 @@ Skupimy się przede wszystkim na odczycie i zapisie plików tekstowych, takich j
 Otwieranie plików
 -------------
 
-\index{file!open}
-\index{open function}
-\index{function!open}
+\index{plik!otwarcie}
+\index{open, funkcja}
+\index{funkcja!open}
 
 Kiedy chcemy odczytać lub zapisać plik (np. na dysku twardym), musimy najpierw *otworzyć* plik. Otwarcie pliku komunikuje się z Twoim systemem operacyjnym, który wie, gdzie przechowywane są dane dla każdego pliku. Gdy otwierasz plik, prosisz system operacyjny o znalezienie go po nazwie i o upewnienie się, że ten plik istnieje. W poniższym przykładzie otwieramy plik *mbox.txt*, który powinien być przechowywany w tym samym katalogu, w którym znajdujesz się po uruchomieniu Pythona. Możesz pobrać ten plik z [pl.py4e.com/code3/mbox.txt](https://pl.py4e.com/code3/mbox.txt).
 
@@ -35,7 +35,7 @@ Kiedy chcemy odczytać lub zapisać plik (np. na dysku twardym), musimy najpierw
 <_io.TextIOWrapper name='mbox.txt' mode='r' encoding='cp1252'>
 ~~~~
 
-\index{file handle}
+\index{uchwyt pliku}
 
 Jeśli funkcja `open` się powiedzie, system operacyjny zwróci nam  *uchwyt pliku*. Uchwyt pliku nie jest rzeczywistymi danymi zawartymi w tym pliku, lecz "uchwytem", który możemy użyć do odczytania danych. Otrzymujesz uchwyt, jeśli żądany plik istnieje i masz odpowiednie uprawnienia do jego odczytania.
 
@@ -54,6 +54,8 @@ Później użyjemy `try` i `except`, tak aby zgrabniej poradzić sobie z sytuacj
 
 Pliki tekstowe i linie
 ----------------------
+
+\index{plik tekstowy}
 
 Plik tekstowy może być uważany za sekwencję linii, podobnie jak ciąg znaków w Pythona może być uważany za sekwencję liter, liczb i symboli. Na przykład, poniżej znajduje się fragment pliku tekstowego, który rejestruje aktywność pocztową różnych osób w zespole rozwijającym projekt otwartego oprogramowania:
 
@@ -80,7 +82,8 @@ Pliki te są w standardowym formacie pliku zawierającego wiele wiadomości pocz
 
 Aby podzielić plik na linie, istnieje specjalny znak, który reprezentuje "koniec linii", zwany nomen omen znakiem *końca linii*.
 
-\index{newline}
+\index{nowa linia}
+\index{znak końca linii}
 
 W ciągach znaków Pythona znak *końca linii* reprezentujemy jako lewy ukośnik-n. Nawet jeśli wygląda to jak dwa znaki, to w rzeczywistości jest to pojedynczy znak. W poniższym przykładzie, gdy patrzymy na zmienną "stuff", wpisując ją w interpreterze, pokazuje nam ona `\n` w ciągu znaków, ale gdy używamy `print` do wyświetlenia ciągu znaków, widzimy go rozbitego na dwie linie przez znak końca linii.
 
@@ -108,8 +111,8 @@ Tak więc znak końca linii dzieli znaki w pliku na linie.
 Czytanie plików
 ---------------
 
-\index{file!reading}
-\index{counter}
+\index{plik!czytanie}
+\index{licznik}
 
 Podczas gdy *uchwyt pliku* nie zawiera danych pliku, to całkiem łatwo jest skonstruować pętlę `for` do jego odczytu i zliczyć linie występujące w pliku:
 
@@ -154,10 +157,10 @@ Pamiętaj, że ta forma funkcji `open` powinna być używana tylko wtedy, gdy da
 Przeszukiwanie pliku
 --------------------
 
-Kiedy przeszukujesz dane w pliku, bardzo powszechnym wzorcem postępowania jest odczytywanie danych pliku, ignorując przy tym większość linii i przetwarzając tylko te, które spełniają określony warunek. Możemy połączyć przebieg odczytywania pliku z metodami ciągów znaków, tak aby zbudować proste mechanizmy wyszukiwania.
+Kiedy przeszukujesz dane w pliku, bardzo powszechnym wzorcem postępowania jest odczytywanie danych pliku, ignorując przy tym większość linii i przetwarzając tylko te, które spełniają określony warunek - patrząc na to ogólniej, nazywamy to *schematem filtrowania*. Możemy połączyć przebieg odczytywania pliku z metodami ciągów znaków, tak aby zbudować proste mechanizmy wyszukiwania.
 
-\index{filter pattern}
-\index{pattern!filter}
+\index{filtrowanie, schemat}
+\index{schemat!filtrowanie}
 
 Na przykład, jeśli chcielibyśmy odczytać plik i wypisać tylko te linie, które rozpoczęły się od "From:", moglibyśmy użyć metody ciągów znaków *startswith*, tak aby wybrać tylko te linie, które mają pożądany początek:
 
@@ -287,16 +290,18 @@ FileNotFoundError: [Errno 2] No such file or directory: 'szurum-burum'
 Nie śmiej się. Użytkownicy w końcu zrobią wszystko, co w ich mocy, by wysypać Twoje programy, albo celowo, albo w złych zamiarach. W rzeczywistości ważną częścią każdego zespołu zajmującego się tworzeniem oprogramowania jest osoba lub grupa o nazwie *Quality Assurance* (w skrócie QA; zespół *zapewniania jakości*), której zadaniem jest robienie jak najbardziej szalonych rzeczy w celu wysypania oprogramowania stworzonego przez programistę.
 
 \index{Quality Assurance}
+\index{zapewnianie jakości}
 \index{QA}
 
 Zespół QA jest odpowiedzialny za znalezienie wad w programach, zanim dostarczymy je użytkownikom końcowym, którzy mogą je zakupić lub zapłacić nam za napisanie programu. Tak więc zespół QA jest najlepszym przyjacielem programisty.
 
-\index{try statement}
-\index{statement!try}
-\index{open function}
-\index{function!open}
-\index{exception!IOError}
+\index{try, instrukcja}
+\index{instrukcja!try}
+\index{open, funkcja}
+\index{funkcja!open}
+\index{wyjątek!IOError}
 \index{IOError}
+\index{łapanie wyjątku}
 
 Więc teraz, gdy widzimy wadę w programie, możemy ją elegancko naprawić, używając struktury `try`/`except`. Musimy przyjąć, że `open` może się nie powieść, więc dodamy kod naprawczy gdy `open` się zakończy się niepowodzeniem:
 
@@ -317,7 +322,7 @@ Podaj nazwę pliku: szurum-burum
 Nie można otworzyć pliku: szurum-burum
 ~~~~
 
-\index{Pythonic}
+\index{pythonowy}
 
 Ochrona wywołania `open` jest dobrym przykładem prawidłowego użycia `try` i `except` w programie Pythona. W języku angielskim używamy terminu "pythonowy" (ang. *pythonic*) wtedy, gdy robimy coś "w sposób Pythona". Możemy powiedzieć, że powyższy przykład jest "pythonowym" sposobem na otwarcie pliku.
 
@@ -326,7 +331,7 @@ Kiedy będziesz bardziej biegły w Pythonie, będziesz mógł brać udział w b�
 Pisanie do plików
 -----------------
 
-\index{file!writing}
+\index{plik!pisanie}
 
 Aby móc zapisywać dane do pliku, musisz otworzyć go w trybie "w", podanym jako drugi argument:
 
@@ -346,7 +351,8 @@ Metoda `write` obiektu uchwytu pliku umieszcza dane w pliku, zwracając liczbę 
 23
 ~~~~
 
-\index{newline}
+\index{nowa linia}
+\index{znak końca linii}
 
 Obiekt pliku śledzi gdzie się obecnie znajduje, więc jeśli ponownie wywołasz metodę `write`, to nowe dane zostaną umieszczone na końcu pliku.
 
@@ -366,11 +372,22 @@ Kiedy skończysz pisać, musisz zamknąć plik, tak aby upewnić się, że ostat
 
 Możemy zamknąć również pliki, które otwieramy do odczytu, tutaj ale możemy być trochę niechlujni gdy otwieramy tylko kilka plików, ponieważ Python zapewnia, że po zakończeniu programu wszystkie otwarte pliki są zamknięte. Kiedy zapisujemy dane do plików, chcemy je wyraźnie zamknąć, tak aby niczego nie pozostawić przypadkowi.
 
-\index{close method}
-\index{method!close}
+\index{close, metoda}
+\index{metoda!close}
 
 Kodowanie plików
 ----------------
+
+\index{plik!kodowanie}
+\index{kodowanie pliku}
+\index{system kodowania}
+\index{zestaw znaków}
+\index{ASCII}
+\index{UTF-8}
+\index{ISO 8859-2}
+\index{CP-1250}
+\index{CP-1252}
+\index{Unicode}
 
 Przechowująć dane tekstowe w plikach należy określić ile bitów potrzeba na zapisanie jednego znaku. Przez ostatnie lata zostało wypracowanych wiele systemów kodowania, np. klasyczny siedmiobitowy ASCII^[<https://pl.wikipedia.org/wiki/ASCII>], obecnie będący standardem UTF-8^[<https://pl.wikipedia.org/wiki/UTF-8>], popularny w naszej części geograficznej ISO-8859-2^[<https://pl.wikipedia.org/wiki/ISO_8859-2>] (znany również jako Latin-2) oraz CP-1250 (znany również jako Windows-1250^[<https://pl.wikipedia.org/wiki/CP-1250>]). Często informacja o kodowaniu pliku nie jest dostępna, a niektóre programy przetwarzające dane z góry zakładają jakieś kodowanie (np. UTF-8). W takich sytuacjach przetwarzanie pliku wejściowego w niepoprawnym kodowaniu da nam złe wyniki. W konsekwencji, pewną trudność może sprawić obsługa znaków diakrytycznych podczas odczytu i zapisu do pliku.
 
@@ -397,6 +414,8 @@ Z kolei w systemie Linux możemy otrzymać:
 >>> print(fhand)
 <_io.TextIOWrapper name='polski.txt' mode='r' encoding='UTF-8'>
 ~~~~
+
+\index{krzaki}
 
 Jeśli w takiej sytuacji spróbujemy odczytać i wyświetlić zawartość pliku, to w przypadku Windowsa otrzymamy tzw. krzaki:
 
@@ -465,8 +484,8 @@ Obecnie zasadniczo przyjętym standardem kodowania plików jest UTF-8.
 Debugowanie
 -----------
 
-\index{debugging}
-\index{whitespace}
+\index{debugowanie}
+\index{białe znaki}
 
 Kiedy odczytujesz dane lub zapisujesz dane do plików, możesz mieć problemy z białymi znakami. Tego typu błędy mogą być trudne do debugowania, ponieważ spacje, tabulacje i znaki końca linii są zazwyczaj niewidoczne:
 
@@ -477,9 +496,9 @@ Kiedy odczytujesz dane lub zapisujesz dane do plików, możesz mieć problemy z 
  4
 ~~~~
 
-\index{repr function}
-\index{function!repr}
-\index{string representation}
+\index{repr, funkcja}
+\index{funkcja!repr}
+\index{reprezentacja ciągu znaków}
 
 Wbudowana funkcja `repr` może pomóc. Przyjmuje ona dowolny obiekt jako argument i zwraca jego reprezentację w postaci ciągu znaków. Jeśli obiektem jest właśnie ciąg znaków, to białe znaki są przedstawiane w postaci z ukośnikiem lewym:
 
@@ -492,12 +511,13 @@ Może to być pomocne przy debugowaniu.
 
 Innym problemem, na który możesz się natknąć, jest to, że różne systemy używają różnych znaków, by oznaczyć koniec linii. Niektóre systemy (np. Linux i macOS) używają znaku końca linii, reprezentowanego przez `\n`. Kolejne używają znaku powrotu karetki, reprezentowanego przez `\r`. Jeszcze inne (np. Windows) używają obu tych znaków, tj. `\r\n`. Jeśli przenosisz pliki między różnymi systemami, te niespójności mogą powodować problemy.^[Jeśli korzystamy np. z edytora Atom, to po otwarciu interesującego nas pliku, informację o użytym sposobie zapisu oznaczenia końca linii możemy znaleźć na dolnej belce w prawym dolnym rogu aplikacji. LF (ang. *line feed*) oznacza `\n`, a CR (ang. *carriage return*) oznacza `\r` - przyp. tłum.]
 
-\index{end of line character}
+\index{nowa linia}
+\index{znak końca linii}
 
 Więcej o tym problemie możesz poczytać na stronie [pl.wikipedia.org/wiki/Koniec_linii](https://pl.wikipedia.org/wiki/Koniec_linii). Dla większości systemów istnieją aplikacje do konwersji z jednego formatu na drugi. Możesz je znaleźć na stronie [en.wikipedia.org/wiki/Newline](https://en.wikipedia.org/wiki/Newline) w sekcji "Conversion between newline formats". Oczywiście możesz też samodzielnie napisać taki konwerter.
 
-\index{file encoding}
-\index{encoding!file}
+\index{kodowanie pliku}
+\index{plik!kodowanie}
 
 Słowniczek
 ----------
@@ -506,26 +526,28 @@ krzaki
 :   Niepoprawnie wyświetlane znaki tekstowe.
 \index{krzaki}
 
-łapać wyjątek
+łapanie wyjątku
 :   Uniemożliwienie wyjątkowi zakończenia programu przy użyciu instrukcji `try` i `except`.
-\index{catch}
+\index{łapanie wyjątku}
 
 plik tekstowy
 :   Sekwencja znaków przechowywana na nośniku danych o trwałej pamięci, np. na dysku twardym.
-\index{text file}
+\index{plik tekstowy}
 
 pythonowy
 :   Sposób rozwiązania problemu, który działa elegancko w Pythonie. "Użycie try i except jest *pythonowym* sposobem na przywrócenie działania programu w przypadku nieistniejącego pliku".
-\index{Pythonic}
+\index{pythonowy}
 
 Quality Assurance
 :   Osoba lub zespół skoncentrowany na zapewnieniu ogólnej jakości produktu oprogramowania. QA jest często zaangażowana w testowanie produktu i identyfikowanie problemów zanim produkt zostanie wydany.
 \index{Quality Assurance}
 \index{QA}
+\index{zapewnianie jakości}
 
 znak końca linii
 :   Specjalny znak używany w plikach i ciągach znaków do wskazywania końca linii.
-\index{newline}
+\index{nowa linia}
+\index{znak końca linii}
 
 Ćwiczenia
 ---------
