@@ -5,7 +5,9 @@ Wyrażenia logiczne
 ------------------
 
 \index{wyrażenie!logiczne}
+\indes{logiczne, wyrażenie}
 \index{operator!logiczny}
+\index{logiczny, operator}
 
 *Wyrażenie logiczne* to wyrażenie, które jest prawdziwe lub fałszywe. Poniższe 
 przykłady używają operatora `==`, który porównuje dwa operandy i zwraca `True`,
@@ -60,6 +62,7 @@ Operatory logiczne
 ------------------
 
 \index{operator!logiczny}
+\index{logiczny, operator}
 
 Istnieją trzy *operatory logiczne*: `and`,
 `or` i `not`. Semantyka (znaczenie) tych operatorów jest podobna do ich
@@ -540,6 +543,7 @@ operator logiczny
 :   Jeden z operatorów, który łączy wyrażenia logiczne:
     `and`, `or` lub `not`.
 \index{operator!logiczny}
+\index{logiczny, operator}
 
 operator porównania
 :   Jeden z następujących operatorów, który porównuje swoje operandy: `==`,
@@ -570,6 +574,7 @@ warunki zagnieżdżone
 wyrażenie logiczne
 :   Wyrażenie o wartości `True` lub `False`.
 \index{wyrażenie!logiczne}
+\index{logiczne, wyrażenie}
 
 wzorzec strażnika
 :   Miejsce, w którym konstruujemy wyrażenie logiczne z dodatkowymi

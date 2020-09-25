@@ -236,7 +236,10 @@ W odpowiednim czasie poznamy powyższe zastrzeżone słówa oraz to kiedy ich
 używać, ale na razie skupimy się na odpowiedniku słowa "daj głos" w Pythonie
 (w języku człowiek-pies). Dobrą rzeczą we wskazywaniu Pythonowi, że ma "dać
 głos", jest to, że możemy mu nawet powiedzieć co ma powiedzieć, przekazując mu
-wiadomość w cudzysłowie:
+wiadomość pomiędzy apostrofami:
+
+\index{apostrof}
+\index{cudzysłów}
 
 ~~~~ {.python}
 print('Witaj świecie!')

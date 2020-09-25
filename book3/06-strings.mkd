@@ -4,10 +4,10 @@ Ciągi znaków
 Ciąg znaków jest sekwencją
 --------------------------
 
-\index{sequence}
-\index{character}
-\index{bracket operator}
-\index{operator!bracket}
+\index{sekwencja}
+\index{znak}
+\index{nawias kwadratowy, operator}
+\index{operator!nawias kwadratowy}
 
 Ciąg znaków jest *sekwencją* znaków. Możesz uzyskać dostęp do poszczególnych znaków za pomocą operatora nawiasów:
 
@@ -16,7 +16,7 @@ Ciąg znaków jest *sekwencją* znaków. Możesz uzyskać dostęp do poszczegól
 >>> letter = fruit[1]
 ~~~~
 
-\index{index}
+\index{indeks}
 \index{}
 
 Druga instrukcja wyodrębnia ze zmiennej `owoc` znak z pozycji o indeksie 1 i przypisuje go do zmiennej `letter`.
@@ -43,14 +43,14 @@ Tak więc "b" to 0-wa ("zerowa") litera słowa "banan", "a" to 1-sza litera, a "
 
 ![Indeksy w ciągach znaków](height=0.75in@../images/string)
 
-\index{index!starting at zero}
-\index{zero, index starting at}
+\index{indeks!numerowanie od zera}
+\index{zero, początek numerowania indeksów}
 
 Możesz użyć dowolnego wyrażenia, w tym zmiennych i operatorów, jako indeksu, ale wartość indeksu musi być liczbą całkowitą. W przeciwnym razie otrzymasz:
 
-\index{index}
+\index{indeks}
 \index{}
-\index{exception!TypeError}
+\index{wyjątek!TypeError}
 \index{TypeError}
 
 ~~~~ {.python}
@@ -61,8 +61,8 @@ TypeError: string indices must be integers
 Uzyskanie długości ciągu znaków przy użyciu `len`
 -------------------------------------------------
 
-\index{len function}
-\index{function!len}
+\index{len, funkcja}
+\index{funkcja!len}
 
 `len` jest funkcją wbudowaną, która zwraca liczbę znaków w danym ciągu znaków:
 
@@ -74,7 +74,7 @@ Uzyskanie długości ciągu znaków przy użyciu `len`
 
 Aby otrzymać ostatnią literę ciągu znaków, może Cię kusić by spróbować czegoś takiego:
 
-\index{exception!IndexError}
+\index{wyjątek!IndexError}
 \index{IndexError}
 
 ~~~~ {.python}
@@ -93,18 +93,17 @@ n
 
 Opcjonalnie możesz użyć ujemnych indeksów, które liczą wstecz od końca ciągu znaków. Wyrażenie `fruit[-1]` daje ostatnią literę, `fruit[-2]` daje przedostatnią itd.
 
-\index{index!negative}
-\index{negative index}
+\index{indeks!ujemny}
+\index{ujemny indeks}
 
 Przejście przez ciąg znaków przy użyciu pętli
 ---------------------------------------------
 
-\index{traversal}
-\index{loop!traversal}
-\index{for loop}
-\index{loop!for}
-\index{statement!for}
-\index{traversal}
+\index{przejście}
+\index{pętla!przejście}
+\index{for, pętla}
+\index{pętla!for}
+\index{instrukcja!for}
 
 Wiele obliczeń polega na przetwarzaniu tekstu znak po znaku. Często zaczynają się one od początku ciągu znaków, pobierają po kolei jeden znak, robią coś z nim i kontynuują tak aż do końca. Ten schemat przetwarzania jest nazywany *przejściem*. Jednym ze sposobów na napisanie przejścia jest użycie pętli `while`:
 
@@ -132,11 +131,12 @@ Za każdym razem idąc przez pętlę, kolejny znak w łańcuchu jest przypisywan
 Wycinki z ciągu znaków
 ----------------------
 
-\index{slice operator}
-\index{operator!slice}
-\index{index!slice}
-\index{string!slice}
-\index{slice!string}
+\index{wycinanie, operator}
+\index{operator!wycinanie}
+\index{indeks!wycinanie}
+\index{ciąg znaków!wycinanie}
+\index{wycinanie!ciąg znaków}
+\index{wycinek}
 
 Segment ciągu znaków nazywany jest *wycinkiem* lub *kawałkiem*. Wybranie wycinka jest podobne do wybrania znaku:
 
@@ -160,9 +160,12 @@ Jeśli pominiesz pierwszy indeks (przed dwukropkiem), wycinek zaczyna się od po
 'an'
 ~~~~
 
-Jeśli pierwszy indeks jest większy lub równy drugiemu, wynikiem jest *pusty ciąg znaków*, reprezentowany przez dwa apostrofy:
+Jeśli pierwszy indeks jest większy lub równy drugiemu, wynikiem jest *pusty ciąg znaków*, reprezentowany przez dwa apostrofy (zamiast apostrofu możemy użyć cudzysłowu):
 
-\index{quotation mark}
+\index{apostrof}
+\index{cudzysłów}
+\index{pusty ciąg znaków}
+\index{ciąg znaków!pusty}
 
 ~~~~ {.python}
 >>> fruit = 'banana'
@@ -174,20 +177,20 @@ Pusty ciąg znaków nie zawiera żadnych znaków i ma długość 0, ale poza tym
 
 **Część 2: Zakładając, że `fruit` jest ciągiem znaków, co oznacza `fruit[:]`?**
 
-\index{copy!slice}
-\index{slice!copy}
+\index{kopiowanie!wycinek}
+\index{wycinanie!kopia}
 
 Ciągi znaków są niezmienne
 --------------------------
 
-\index{mutability}
-\index{immutability}
-\index{string!immutable}
+\index{zmienność}
+\index{niezmienność}
+\index{ciąg znaków!niezmienność}
 
 Kuszące jest skorzystanie z operatora przypisania z zamiarem zmiany znaku w ciągu znaków. Na przykład:
 
 \index{TypeError}
-\index{exception!TypeError}
+\index{wyjątek!TypeError}
 
 ~~~~ {.python}
 >>> greeting = 'Witaj świecie!'
@@ -197,10 +200,10 @@ TypeError: 'str' object does not support item assignment
 
 Obiekt ("object") w tym przypadku to ciąg znaków, a element ("item") jest znakiem, do który próbowałeś coś przypisać. Na tę chwilę *obiekt* jest tym samym co wartość, ale definicję tę doszlifujemy później. *Element* jest jedną z wartości w sekwencji.
 
-\index{object}
-\index{item assignment}
-\index{assignment!item}
-\index{immutability}
+\index{obiekt}
+\index{element}
+\index{przypisanie!element}
+\index{niezmienność}
 
 Powodem błędu jest to, że ciągi znaków są *niezmienne*, co oznacza, że nie można zmienić istniejącego ciągu znaków. Jedyne co możesz zrobić, to stworzyć nowy łańcuch, który jest jakąś wersją oryginału:
 
@@ -213,15 +216,15 @@ Vitaj świecie!
 
 Ten przykład konkatenuje (łączy) nową pierwszą literę z wycinkiem zmiennej `greeting`. Nie ma to żadnego wpływu na pierwotny ciąg znaków.
 
-\index{concatenation}
+\index{konkatenacja}
 
 Przechodzenie w pętli i zliczanie
 ---------------------------------
 
-\index{counter}
-\index{counting and looping}
-\index{looping and counting}
-\index{looping!with strings}
+\index{licznik}
+\index{zliczanie w pętli}
+\index{przechodzenie w pętli i zliczanie}
+\index{przechodzenie w pętli!op ciągach znaków}
 
 Poniższy program zlicza ile razy litera "a" pojawia się w ciągu znaków:
 
@@ -236,17 +239,17 @@ print(count)
 
 Zmienna `count` jest inicjalizowana z wartością 0, a następnie zwiększana za każdym razem, gdy natrafimy na "a". Po wyjściu z pętli, `count` zawiera wynik: łączną liczbę występień litery "a".
 
-\index{encapsulation}
+\index{hermetyzacja}
 
 **Ćwiczenie 3: Hermetyzacja to styl programowania, w którym szczegóły danej implementacji są ukryte.^[W węższym znaczeniu hermetyzacja jest jednym założeń programowania obiektowego, ale na tę chwilę nie wchodźmy za bardzo w szczegóły tego zagadnienia.] Dokonaj hermetyzacji powyższego kodu poprzez zamknięcie go w funkcji o nazwie `count` i uogólnij ten kod tak, by przyjmował jako argumenty ciąg znaków lub literę.**
 
 Operator `in`
 -------------
 
-\index{in operator}
+\index{in, operator}
 \index{operator!in}
-\index{boolean operator}
-\index{operator!boolean}
+\index{logiczny, operator}
+\index{operator!logiczny}
 
 Słowo `in` jest operatorem logicznym, który bierze dwa ciągi znaków i zwraca `True` jeśli pierwszy z nich pojawi się jako podciąg w drugim:
 
@@ -260,8 +263,8 @@ False
 Porównywanie ciagów znaków
 --------------------------
 
-\index{string!comparison}
-\index{comparison!string}
+\index{ciąg znaków!porównywanie}
+\index{porównywanie!ciąg znaków}
 
 Operatory porównania działają również na ciągach znaków. Aby sprawdzić, czy dwa ciągi są równe:
 
@@ -327,12 +330,12 @@ Wywołanie *metody* jest podobne do wywołania funkcji (przyjmuje ona argumenty 
 
 Na przykład, metoda `upper` bierze ciąg znaków i zwraca nowy ciąg znaków, w którym wszystkie litery zostały zamienione na duże litery.
 
-\index{method}
-\index{string!method}
+\index{metoda}
+\index{ciąg znaków!metoda}
 
 Zamiast składni funkcji `upper(word)`, używa ona składni metody `word.upper()`.
 
-\index{dot notation}
+\index{notacja kropkowa}
 
 ~~~~ {.python}
 >>> word = 'banan'
@@ -343,11 +346,11 @@ BANAN
 
 Taka forma notacji kropkowej określa nazwę metody (`upper`) oraz nazwę ciągu znaków, do którego metoda ma zostać zastosowana (`word`). Puste nawiasy wskazują, że metoda ta nie przyjmuje żadnego argumentu.
 
-\index{parentheses!empty}
+\index{nawiasy okrągłe!puste}
 
 W tym przypadku powiedzielibyśmy, że *wywołujemy metodę* `upper` na `word`.
 
-\index{method invocation}
+\index{wywołanie metody}
 
 Na przykład, dla ciągów znaków istnieje metoda o nazwie `find`, która szuka pozycji jednego ciągu w drugim:
 
@@ -369,8 +372,8 @@ Metoda `find` może znaleźć zarówno podciągi, jak i znaki:
 
 Jako drugi argument może przyjąć indeks, od którego powinien zacząć szukać:
 
-\index{optional argument}
-\index{argument!optional}
+\index{opcjonalny argument}
+\index{argument!opcjonalny}
 
 ~~~~ {.python}
 >>> word.find('an', 2)
@@ -409,8 +412,8 @@ True
 
 W ostatnim przykładzie, metoda "lower" jest wywoływana, a następnie używamy `startswith` by sprawdzić, czy wynikowy ciąg małych liter zaczyna się od litery "m". Tak długo jak jesteśmy ostrożni z kolejnością, w jednym wyrażeniu możemy wykonywać wiele wywołań metod.
 
-\index{count method}
-\index{method!count}
+\index{count, metoda}
+\index{metoda!count}
 
 **Ćwiczenie 4: Istnieje metoda dla ciągu znaków o nazwie `count`, która jest podobna do funkcji z poprzedniego ćwiczenia. Przeczytaj dokumentację tej metody pod adresem:
 
@@ -452,16 +455,16 @@ Dokumentacja dotycząca metody `find` jest dostępna na stronie:
 Operator formatowania
 ---------------------
 
-\index{format operator}
-\index{operator!format}
+\index{formatowanie, operator}
+\index{operator!formatowanie}
 
 *Operator formatowania* `%` pozwala nam na konstruowanie ciągów znaków, zastępując części ciągów danymi przechowywanymi w zmiennych. W przypadku zastosowania go do liczb całkowitych, `%` jest operatorem modulo. Ale gdy pierwszym operandem jest ciąg znaków, `%` jest operatorem formatowania.
 
-\index{format string}
+\index{ciąg formatujący}
 
 Pierwszy operand jest *ciągiem formatującym*, który zawiera jedną lub więcej *sekwencji formatujących*, które z kolei określają w jaki sposób jest formatowany drugi operand. Wynikiem tej operacji jest nowy ciąg znaków.
 
-\index{format sequence}
+\index{sekwencja formatująca}
 
 Na przykład, sekwencja formatująca `%d` oznacza, że drugi operand powinien być sformatowany jako liczba całkowita ("d" oznacza po angielsku "decimal, czyli "dziesiętny"):
 
@@ -492,7 +495,7 @@ Poniższy przykład używa `%d` do formatowania liczby całkowitej, `%g` do form
 
 Liczba elementów w krotce musi być zgodna z liczbą sekwencji formatujących w ciągu znaków. Typy elementów również muszą być zgodne z sekwencjami formatującymi:
 
-\index{exception!TypeError}
+\index{wyjątek!TypeError}
 \index{TypeError}
 
 ~~~~ {.python}
@@ -511,7 +514,7 @@ Operator formatowania niesie ze sobą wiele możliwości, ale czasami może być
 Debugowanie
 -----------
 
-\index{debugging}
+\index{debugowanie}
 
 Umiejętność, którą powinieneś rozwijać w trakcie programowania, to zawsze zadawanie sobie pytania: "Co tu może się nie udać?" lub alternatywnie: "Jaką szaloną rzecz może zrobić nasz użytkownik, aby wysypać nasz (pozornie) doskonały program?".
 
@@ -542,8 +545,8 @@ Jedną z możliwości jest po prostu użycie metody `startswith`, która zwraca 
 if line.startswith('#'):
 ~~~~
 
-\index{guardian pattern}
-\index{pattern!guardian}
+\index{strażnik, wzorzec}
+\index{wzorzec!strażnik}
 
 Innym sposobem jest bezpieczne napisanie wyrażenia `if` przy użyciu *wzorca strażnika* i upewnienie się, że drugie wyrażenie logiczne jest ewaluowane tylko wtedy, gdy w ciągu znaków jest co najmniej jeden znak.
 
@@ -556,62 +559,58 @@ Słowniczek
 
 ciąg formatujący
 :   Ciąg znaków, używany z operatorem formatowania, zawierający sekwencje formatowania.
-\index{format string}
+\index{ciąg formatujący}
 
 element
 :   Jedna z wartości w sekwencji.
-\index{item}
+\index{element}
 
 indeks
 :   Wartość całkowita używana do zaznaczenia elementu w sekwencji, np. znaku w ciagu znaków.
-\index{index}
+\index{indeks}
 \index{}
 
 metoda
 :   Funkcja, która jest związana z obiektem i jest wywoływana przy użyciu notacji kropkowej.
-\index{method}
+\index{metoda}
 
 niezmienność
 :   Własność sekwencji, której elementy nie mogą być przypisywane.
-\index{immutability}
+\index{niezmienność}
 
 obiekt
 :   Coś, do czego może odnosić się zmienna. Na razie możesz używać zamiennie słowa "obiekt" i "wartość".
-\index{object}
+\index{obiekt}
 
 operator formatowania
 :   Operator `%`, który bierze ciąg formatujący oraz krotkę i generuje nowy ciąg znaków zawierający elementy krotki sformatowane zgodnie z opisem podanym w ciągu formatującym.
-\index{format operator}
-\index{operator!format}
+\index{formatowanie, operator}
+\index{operator!formatowanie}
 
 przejście
 :   Iteracja po elementach sekwencji, wykonująca jakąś podobną operację na każdym z nich.
-\index{traversal}
+\index{przejście}
 
 pusty ciąg znaków
 :   Ciąg bez żadnych znaków i o długości 0, reprezentowany przez dwa apostrofy.
-\index{empty string}
+\index{pusty ciąg znaków}
+\index{ciąg znaków!pusty}
 
 sekwencja
-:   Uporządkowany zbiór, tj. zbiór wartości, gdzie każda wartość jest identyfikowana przez indeks będący liczbą całkowitą.
-\index{sequence}
+:   Uporządkowany zbiór, tj. zbiór wartości, gdzie każda wartość jest sekwencja przez indeks będący liczbą całkowitą.
+\index{sekwencja}
 
 sekwencja formatująca
 :   Sekwencja znaków w ciągu formatującym, np. `%d`, która określa, jak dana wartość powinna być sformatowana.
-\index{format sequence}
+\index{sekwencja formatująca}
 
 wycinek
 :   Część ciągu znaków określonego przez zakres indeksów.
-\index{slice}
-
-wyszukiwanie
-:   Schemat przejścia, który zatrzymuje się gdy odnajdzie to, czego szuka.
-\index{search pattern}
-\index{pattern!search}
+\index{wycinek}
 
 wywołanie metody
 :   Instrukcja, która wykonuje funkcję ściśle związaną z danym obiektem i jego instancjami.
-\index{method invocation}
+\index{wywołanie metody}
 
 Ćwiczenia
 ---------
@@ -622,8 +621,8 @@ wywołanie metody
 
 **Użyj `find` i wycinków ciągów znaków, tak aby wyodrębnić część ciągu po znaku dwukropka, a następnie użyj funkcji `float`, tak aby przekształcić wyodrębniony ciąg znaków w liczbę zmiennoprzecinkową.**
 
-\index{string method}
-\index{method!string}
+\index{ciąg znaków, metody}
+\index{metoda!ciąg znaków}
 
 **Ćwiczenia 6: Przeczytaj dokumentację metod związanych z ciągami znaków na stronie <https://docs.python.org/library/stdtypes.html#string-methods>. Możesz poeksperymentować z niektórymi z nich, tak aby upewnić się, że rozumiesz jak one działają. Szczególnie przydatne są `strip` i `replace`".**
 

@@ -16,8 +16,9 @@ jak litera czy cyfra. Wartości, które widzieliśmy do tej pory, to 1, 2 i "Wit
 
 Wartości te należą do różnych *typów*: 2 jest liczbą całkowitą, a "Witaj
 świecie!" jest *ciągiem znaków*, "napisem" lub *łańcuchem znaków* (ang. *string*). Ty (i interpreter) możesz 
-rozpoznać ciągi znaków, ponieważ są one zawarte w cudzysłowie.
+rozpoznać ciągi znaków, ponieważ są one zawarte między apostrofami lub w cudzysłowie.
 
+\index{apostrof}
 \index{cudzysłów}
 
 Instrukcja `print` działa również w przypadku liczb całkowitych. Do uruchomienia
@@ -62,10 +63,9 @@ programowania używamy kropki - przyp. tłum.] (ang. *floating point*).
 <class 'float'>
 ~~~~
 
-A co z takimi wartościami jak "17" i "3.2"? Wyglądają one jak liczby, ale są w
-cudzysłowie jak ciągi znaków.
+A co z takimi wartościami jak '17' i '3.2'? Wyglądają one jak liczby, ale tak jak ciągi znaków, są zawarte między apostrofami.
 
-\index{cudzysłów}
+\index{apostrof}
 
 ~~~~ {.python .trinket  height="160"}
 >>> type('17')
