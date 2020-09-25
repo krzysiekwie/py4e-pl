@@ -4,10 +4,8 @@ Wykonanie warunkowe
 Wyrażenia logiczne
 ------------------
 
-\index{boolean expression}
-\index{expression!boolean}
-\index{logical operator}
-\index{operator!logical}
+\index{wyrażenie!logiczne}
+\index{operator!logiczny}
 
 *Wyrażenie logiczne* to wyrażenie, które jest prawdziwe lub fałszywe. Poniższe 
 przykłady używają operatora `==`, który porównuje dwa operandy i zwraca `True`,
@@ -23,12 +21,12 @@ False
 `True` i `False` są specjalnymi wartościami, które należą do klasy `bool`; nie 
 są one ciągami znaków:
 
-\index{True special value}
-\index{False special value}
-\index{special value!True}
-\index{special value!False}
-\index{bool type}
-\index{type!bool}
+\index{True, wartość specjalna}
+\index{False, wartość specjalna}
+\index{wartość specjalna!True}
+\index{wartość specjalna!False}
+\index{typ!logiczny}
+\index{typ!bool}
 
 ~~~~ {.python}
 >>> type(True)
@@ -55,14 +53,13 @@ znaku równości (`=`) zamiast znaku podwójnej równości (`==`). Pamiętaj, ż
 jest operatorem przypisania, a `==` jest operatorem porównania. Nie ma czegoś
 takiego jak `=<` lub `=>`.
 
-\index{comparison operator}
-\index{operator!comparison}
+\index{porównanie, operator}
+\index{operator!porówania}
 
 Operatory logiczne
 ------------------
 
-\index{logical operator}
-\index{operator!logical}
+\index{operator!logiczny}
 
 Istnieją trzy *operatory logiczne*: `and`,
 `or` i `not`. Semantyka (znaczenie) tych operatorów jest podobna do ich
@@ -72,9 +69,6 @@ znaczenia w języku angielskim. Na przykład,
 
 jest prawdziwe tylko wtedy, gdy `x` jest większe niż 0 *i* mniejsze niż 10.
 
-\index{and operator}
-\index{or operator}
-\index{not operator}
 \index{operator!and}
 \index{operator!or}
 \index{operator!not}
@@ -101,11 +95,11 @@ wiesz, co robisz.
 Instrukcja warunkowa
 --------------------
 
-\index{conditional statement}
-\index{statement!conditional}
-\index{if statement}
-\index{statement!if}
-\index{conditional executions}
+\index{warunkowa, instrukcja}
+\index{instrukcja!warunkowa}
+\index{if, instrukcja}
+\index{instrukcja!if}
+\index{wykonanie warunkowe}
 
 Aby napisać użyteczny program, prawie zawsze potrzebujemy możliwości sprawdzenia
 pewnych warunków i odpowiedniej zmiany zachowania programu. *Instrukcje
@@ -125,9 +119,9 @@ wcięte.
 Jeśli warunek logiczny jest prawdziwy, to wykonywane jest wcięcie wyrażenia.
 Jeśli warunek logiczny jest fałszywy, to wcięcie wyrażenia jest pomijane.
 
-\index{condition}
-\index{compound statement}
-\index{statement!compound}
+\index{warunek}
+\index{złożona, instrukcja}
+\index{instrukcja!złożona}
 
 Instrukcje `if` mają taką samą strukturę jak definicje funkcji lub pętle
 `for`^[Dowiemy się o funkcjach w rozdziale 4, a o pętlach w rozdziale 5.].
@@ -141,8 +135,8 @@ instrukcji `if`, ale musi być co najmniej jedno. Od czasu do czasu warto mieć
 ciało `if` bez instrukcji (zazwyczaj jako miejsce na kod, którego jeszcze nie
 napisałeś). W takim przypadku możesz użyć `pass`, który nie robi nic.
 
-\index{pass statement}
-\index{statement!pass}
+\index{pass, instrukcja}
+\index{instrukcja!pass}
 
 ~~~~ {.python}
 if x < 0 :
@@ -181,9 +175,9 @@ wykonywania *skryptu*, ale może poprawić czytelność Twojego kodu.
 Wykonanie alternatywnego bloku kodu
 -----------------------------------
 
-\index{alternative execution}
-\index{else keyword}
-\index{keyword!else}
+\index{wykonanie alternatywne}
+\index{else, słowo kluczowe}
+\index{słowo kluczowe!else}
 
 Drugą formą instrukcji `if` jest *wykonanie alternatywne*, w którym istnieją
 dwie możliwości i to warunek określa, która z nich zostanie wykonana. Składnia
@@ -205,13 +199,13 @@ Ponieważ warunek musi być albo prawdziwy, albo fałszywy, dokładnie jedna z
 alternatyw zostanie wykonana. Te alternatywy nazywane są *gałęziami*, ponieważ
 są gałęziami w przepływie wykonania programu.
 
-\index{branch}
+\index{gałąź}
 
 Warunki powiązane
 -----------------
 
-\index{chained conditional}
-\index{conditional!chained}
+\index{powiązanie, warunki}
+\index{warunki!powiązane}
 
 Czasami istnieje więcej niż dwie możliwości i potrzebujemy więcej niż dwóch
 gałęzi. Jednym ze sposobów na wyrażenie takich obliczeń jest *warunek
@@ -235,8 +229,8 @@ Nie ma ograniczenia co do liczby instrukcji `elif`. Jeśli istnieje klauzula
 `else`, to musi ona być na końcu (ale samo jej pojawienie się nie jest
 wymagane).
 
-\index{elif keyword}
-\index{keyword!elif}
+\index{elif, słowo kluczowe}
+\index{słowo kluczowe!elif}
 
 ~~~~ {.python}
 if choice == 'a':
@@ -256,8 +250,8 @@ swoją gałąź kodu.
 Warunki zagnieżdzone
 --------------------
 
-\index{nested conditional}
-\index{conditional!nested}
+\index{zagnieżdżone, warunki}
+\index{warunki!zagnieżdżone}
 
 Jeden warunek może być również zagnieżdżony w innym. Mogliśmy tak napisać
 przykład z trzema gałęziami:
@@ -335,7 +329,8 @@ Celsjusza:
 
 \index{fahrenheit}
 \index{celsius}
-\index{temperature conversion}
+\index{konwersja temperatury}
+\index{temperatura, konwersja}
 
 \VerbatimInput{../code3/fahren.py}
 
@@ -395,7 +390,8 @@ ponownie, albo przynajmniej zgrabnego zakończenia programu.
 Minimalna ewaluacja wyrażeń logicznych
 --------------------------------------
 
-\index{short circuit}
+\index{minimalna ewaluacja}
+\index{ewaluacja, minimalna}
 
 Gdy Python przetwarza wyrażenie logiczne takie jak `x >= 2 and (x/y) > 2`,
 ewaluuje je od lewej do prawej strony. Ze względu na definicję `and`, jeśli
@@ -408,8 +404,8 @@ logicznego, przerywa jego ewaluację i nie wykonuje obliczeń w pozostałej czę
 wyrażenia logicznego. Gdy ocena wyrażenia logicznego zostaje zatrzymana,
 ponieważ ogólna wartość jest już znana, nazywa się to *minimalną ewaluacją*.
 
-\index{guardian pattern}
-\index{pattern!guardian}
+\index{strażnik, wzorzec}
+\index{wzorzec!strażnik}
 
 Specyfika działania minimalnej ewaluacji ma konsekwencję w sprytnej technice
 zwanej *wzorcem strażnika*. Przeanalizujmy następującą sekwencję kodu w
@@ -472,7 +468,7 @@ W drugim wyrażeniu mówimy, że `y != 0` działa jak *strażnik*, tak by zapewn
 Debugowanie
 -----------
 
-\index{debugging}
+\index{debugowanie}
 \index{traceback}
 
 Mechanizm *traceback* w Pythonie pojawia się w przypadku wystąpienia błędu;
@@ -489,7 +485,7 @@ tabulacji, znaki końca linii oraz dowolne inne znaki niemające kształtu na
 ekranie.] mogą być trudne, ponieważ np. spacje i tabulacje są niewidoczne i
 jesteśmy przyzwyczajeni do ich ignorowania.
 
-\index{whitespace}
+\index{białe znaki}
 
 ~~~~ {.python}
 >>> x = 5
@@ -514,37 +510,42 @@ Słowniczek
 
 ciało
 :   Sekwencja instruckji zawarta w złożonej instrukcji.
-\index{body}
+\index{ciało}
 
 gałąź
 :   Jedna z alternatywnych sekwencji instrukcji występujących w instrukcji
     warunkowej.
-\index{branch}
+\index{gałąź}
 
 instrukcja warunkowa
 :   Instrukcja, które kontroluje przepływ wykonywania programu w zależności od
     pewnego warunku.
-\index{conditional statement}
-\index{statement!conditional}
+\index{warunkowa, instrukcja}
+\index{instrukcja!warunkowa}
 
 instrukcja złożona
 :   Instrukcja składająca się z nagłówka i ciała. Nagłówek kończy się
     dwukropkiem (:). Ciało jest wcięte w stosunku do nagłówka.
-\index{compound statement}
+\index{złożona, instrukcja}
+\index{instrukcja!złożona}
 
 minimalna ewaluacja
 :   Kiedy Python jest w trakcie ewaluacji złożonego wyrażenia logicznego i
     przerywa dalszą ewaluację, ponieważ Python zna końcową wartość wyrażenia
     bez potrzeby ewaluacji pozostałej reszty wyrażenia.
-\index{short circuit}
+\index{minimalna ewaluacja}
+\index{ewaluacja, minimalna}
 
 operator logiczny
 :   Jeden z operatorów, który łączy wyrażenia logiczne:
     `and`, `or` lub `not`.
+\index{operator!logiczny}
 
 operator porównania
 :   Jeden z następujących operatorów, który porównuje swoje operandy: `==`,
     `!=`, `>`, `<`, `>=` i `<=`.
+\index{porównanie, operator}
+\index{operator!porówania}
 
 traceback
 :   Lista funkcji, które są wykonywane; pojawia się, gdy wystąpi wyjątek.
@@ -553,29 +554,28 @@ traceback
 warunek
 :   Wyrażenie logiczne w instrukcji warunkowej określające która gałąź jest
     wykonywana.
-\index{condition}
+\index{warunek}
 
 warunki powiązane
 :   Wyrażenie warunkowe z serią alternatywnych gałęzi.
-\index{chained conditional}
-\index{conditional!chained}
+\index{powiązane, warunki}
+\index{warunki!powiązane}
 
 warunki zagnieżdżone
 :   Instrukcja warunkowa, które pojawia się w jednej z gałęzi innej instrukcji
     warunkowej.
-\index{nested conditional}
-\index{conditional!nested}
+\index{zagnieżdżone, warunki}
+\index{warunki!zagnieżdżone}
 
 wyrażenie logiczne
 :   Wyrażenie o wartości `True` lub `False`.
-\index{boolean expression}
-\index{expression!boolean}
+\index{wyrażenie!logiczne}
 
 wzorzec strażnika
 :   Miejsce, w którym konstruujemy wyrażenie logiczne z dodatkowymi
     porównaniami, tak aby skorzystać z działania minimalnej ewaluacji.
-\index{guardian pattern}
-\index{pattern!guardian}
+\index{strażnik, wzorzec}
+\index{wzorzec!strażnik}
 
 Ćwiczenia
 ---------

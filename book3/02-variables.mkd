@@ -47,13 +47,14 @@ używanie przecinka i tak też robimy na co dzień w polskim zapisie, podczas
 programowania używamy kropki - przyp. tłum.] (ang. *floating point*).
 
 \index{typ}
-\index{typ ciągu znaków}
+\index{typ!ciągu znaków}
+\index{typ!str}
 \index{class!str}
-\index{typ int}
-\index{typ całkowitoliczbowy}
+\index{typ!int}
+\index{typ!całkowitoliczbowy}
 \index{class!int}
-\index{typ float}
-\index{typ zmiennoprzecinkowy}
+\index{typ!float}
+\index{typ!zmiennoprzecinkowy}
 \index{class!float}
 
 ~~~~ {.python .trinket height="120"}
