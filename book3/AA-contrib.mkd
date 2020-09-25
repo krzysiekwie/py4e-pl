@@ -1,7 +1,7 @@
 Wsparcie i współpraca nad książką
 =================================
 
-Lista współtwórców "Python dla wszystkich"
+Lista współtwórców "Python for Everybody"
 -----------------------------------------
 
 Elliott Hauser,
@@ -40,10 +40,10 @@ Thomas Strassel, Ryan Clement, Alissa Talley, Caitlin Holman, Yong-Mi
 Kim, Karen Stover, Cherie Edmonds, Maria Seiferle, Romer Kristi D.
 Aranas (RK), Grant Boyer, Hedemarrie Dussan
 
-Przedmowa do "Myśl w języku Python!"
+Przedmowa do "Think Python"
 --------------------------
 
-### Dziwna historia "Myśl w języku Python!"
+### Dziwna historia "Think Python"
 
 (Allen B. Downey)
 
@@ -80,7 +80,7 @@ W ciągu ostatnich pięciu lat kontynuowałem rozwój książki, poprawiając pr
 
 Mam nadzieję, że praca z tą książką sprawi Ci przyjemność oraz pomoże Ci nauczyć się programować i myśleć, przynajmniej trochę, jak informatyk.
 
-### Podziękowania za wkład w "Myśl w języku Python!"
+### Podziękowania za wkład w "Think Python"
 
 (Allen B. Downey)
 
@@ -106,7 +106,7 @@ Needham MA\
 Allen Downey zajmuje stanowisko Associate Professor of Computer Science w
 Franklin W. Olin College of Engineering.
 
-Lista współtwórców "Myśl w języku Python!"
+Lista współtwórców "Think Python"
 ------------------------------------------
 
 \index{contributors}
@@ -115,7 +115,7 @@ Lista współtwórców "Myśl w języku Python!"
 
 W ciągu ostatnich kilku lat ponad 100 uważnych i skupionych czytelników przesłało sugestie i poprawki. Ich wkład i entuzjazm dla tego projektu był ogromną pomocą.
 
-Szczegółowe informacje na temat charakteru każdego wkładu w rozwój książki można znaleźć w tekście "Myśl w języku Python!".
+Szczegółowe informacje na temat charakteru każdego wkładu w rozwój książki można znaleźć w tekście "Think Python".
 
 Lloyd Hugh Allen, Yvon Boulianne, Fred Bremmer, Jonah Cohen, Michael
 Conlon, Benoit Girard, Courtney Gleason oraz Katherine Smith, Lee Harr,
