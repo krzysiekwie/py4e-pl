@@ -2,13 +2,13 @@
 Iteracja
 ========
 
-\index{iteration}
+\index{iteracja}
 
 Aktualizowanie zmiennych
 ------------------------
 
-\index{update}
-\index{variable!updating}
+\index{aktualizacja}
+\index{zmienna, aktualizowanie}
 
 Częstym schematem w instrukcjach przypisywania jest instrukcja, która aktualizuje zmienną w taki sposób, że nowa wartość zmiennej zależy od starej.
 
@@ -27,7 +27,8 @@ NameError: name 'x' is not defined
 
 Zanim będziesz mógł zaktualizować zmienną, musisz ją *zainicjalizować*, zwykle za pomocą prostego przypisania:
 
-\index{initialization (before update)}
+\index{inicjalizacja}
+\index{zmienna, inicjalizacja}
 
 ~~~~ {.python}
 >>> x = 0
@@ -36,16 +37,16 @@ Zanim będziesz mógł zaktualizować zmienną, musisz ją *zainicjalizować*, z
 
 Aktualizacja zmiennej poprzez dodanie wartości 1 nazywana jest *inkrementacją*; odjęcie wartości 1 nazywane jest *dekrementacją*.
 
-\index{increment}
-\index{decrement}
+\index{inkrementacja}
+\index{dekrementacja}
 
 Instrukcja `while`
 --------------------------------
 
-\index{statement!while}
-\index{while loop}
-\index{loop!while}
-\index{iteration}
+\index{instrukcja!while}
+\index{while, pętla}
+\index{pętla!while}
+\index{iteracja}
 
 Komputery są często używane do automatyzacji powtarzalnych zadań. Powtarzanie identycznych lub podobnych zadań bez popełniania błędów jest czymś, co komputery robią dobrze, a ludzie źle. Ponieważ iteracja często występuje w programach, Python oferuje kilka elementów, które ułatwiają z nimi pracę.
 
@@ -61,7 +62,7 @@ print('Odpalamy!')
 
 Instrukcję `while` można przeczytać prawie tak jakby była zapisana w języku angielskim. Oznacza to: "Dopóki `n` jest większe od 0, wyświetl wartość `n`, a następnie zmniejsz wartość `n` o 1. Gdy dojdziesz do 0, opuść instrukcję `while` i wyświetl słowo `Odpalamy!`".
 
-\index{flow of execution}
+\index{przepływ sterowania}
 
 Poniżej znajduje się bardziej ścisły opis przepływu sterowania w instrukcji `while`:
 
@@ -71,9 +72,9 @@ Poniżej znajduje się bardziej ścisły opis przepływu sterowania w instrukcji
 
 Taki przepływ sterowania nazywany jest *pętlą*, ponieważ trzeci krok zapętla się z powrotem do góry. Za każdym razem, gdy wykonujemy ciało pętli, nazywamy je *iteracją*. Dla powyższej pętli powiedzielibyśmy: "Miała ona pięć iteracji", co oznacza, że ciało pętli zostało wykonane pięć razy.
 
-\index{condition}
-\index{loop}
-\index{body}
+\index{warunek}
+\index{pętla}
+\index{ciało}
 
 Ciało pętli powinno zmieniać wartość jednej lub więcej zmiennych, tak aby ostatecznie warunek stał się fałszywy i pętla się zakończyła. Zmienną, która zmienia się z każdym wykonaniem pętli i która kontroluje kiedy pętla się kończy, nazywamy *zmienną sterującą*. Jeśli nie ma zmiennej sterującej, pętla będzie powtarzać się w nieskończoność, powodując powstanie *nieskończonej pętli*.
 
@@ -82,13 +83,13 @@ Nieskończone pętle
 
 Niekończącym się źródłem rozrywki dla programistów jest obserwacja, że wskazówki na szamponie "namydl, wypłucz, powtórz" są nieskończoną pętlą, ponieważ nie ma *zmiennej sterującej* mówiącej ile razy tę pętlę należy wykonać.
 
-\index{infinite loop}
-\index{loop!infinite}
+\index{nieskończona, pętla}
+\index{pętla!nieskończona}
 
 W przypadku przykładu z odliczaniem możemy udowodnić, że pętla się zakończy, ponieważ wiemy, że wartość `n` jest skończona, i widzimy, że wartość `n` zmniejsza się z każdą iteracją pętli, więc ostatecznie musimy dotrzeć do 0. W innych przypadkach pętla jest oczywiście nieskończona, ponieważ w ogóle nie ma zmiennej sterującej.
 
-\index{break statement}
-\index{statement!break}
+\index{break, instrukcja}
+\index{instrukcja!break}
 
 Czasami nie wiesz, że już czas zakończyć pętlę, dopóki nie przejdziesz do połowy ciała instrukcji. W takim przypadku można celowo napisać nieskończoną pętlę, a następnie użyć instrukcji `break` do wyskoczenia z pętli.
 
@@ -145,8 +146,8 @@ $
 Kończenie iteracji przy pomocy `continue`
 -----------------------------------------
 
-\index{continue statement}
-\index{statement!continue}
+\index{continue, instrukcja}
+\index{instrukcja!continue}
 
 Czasami jesteś w iteracji pętli i chcesz zakończyć bieżącą iterację, tak aby natychmiast przejść do następnej iteracji. W tym przypadku możesz użyć instrukcji `continue`, tak aby przejść do następnej iteracji bez kończenia ciała pętli w bieżącej iteracji.
 
@@ -171,8 +172,10 @@ Wszystkie linie są ponownie wyświetlane na ekranie z wyjątkiem tej, która za
 Definiowanie pętli przy użyciu `for` 
 --------------------------------------
 
-\index{for statement}
-\index{statement!for}
+\index{for, instrukcja}
+\index{instrukcja!for}
+\index{for, pętla}
+\index{pętla!for}
 
 Czasami chcemy przejść w pętli po *zbiorze* rzeczy, takich jak lista słów, wiersze w pliku lub lista liczb. Gdy mamy listę rzeczy do przeprocesowania w pętli, możemy skonstruować pętlę *określoną* używając instrukcji `for`. Nazywamy instrukcję `while` pętlą *nieokreśloną*, ponieważ po prostu zapętla się do momentu, gdy jakiś warunek przyjmie wartość `False`, podczas gdy pętla `for` zapętla się przez znany zestaw elementów, więc przechodzi przez tyle iteracji, ile jest elementów w zestawie.
 
@@ -220,6 +223,8 @@ Użyjemy listy liczb, tak aby zademonstrować koncepcje i budowę wspomnianych n
 
 ### Pętle zliczające i sumujące
 
+\index{licznik}
+
 Na przykład, aby zliczyć liczbę pozycji na liście, moglibyśmy napisać następującą pętlę `for`:
 
 ~~~~ {.python}
@@ -249,16 +254,16 @@ W powyższej pętli *używamy zmiennej sterującej*. Zamiast po prostu dodawać 
 
 Podczas wykonywania pętli, `total` kumuluje sumę elementów; używana w ten sposób zmienna jest czasami nazywana *akumulatorem*.
 
-\index{accumulator!sum}
+\index{akumulator}
 
 Ani pętla zliczająca, ani sumująca nie są szczególnie przydatne w praktyce, ponieważ istnieją wbudowane funkcje `len()` i `sum()`, które obliczają odpowiednio liczbę pozycji na liście i sumę pozycji na liście.
 
 ### Pętle typu maksimum i minimum
 
-\index{loop!maximum}
-\index{loop!minimum}
-\index{None special value}
-\index{special value!None}
+\index{pętla!typu maksimum}
+\index{pętla!typu minimum}
+\index{None, wartość specjalna}
+\index{wartość specjalna!None}
 
 Aby znaleźć największą wartość na liście lub sekwencji, tworzymy następującą pętlę:
 
@@ -327,8 +332,8 @@ Debugowanie
 
 Kiedy zaczniesz pisać większe programy, być może będziesz spędzać więcej czasu na debugowaniu. Więcej kodu oznacza większe szanse na popełnienie błędu i więcej miejsc dla błędów by się ukryć.
 
-\index{debugging!by bisection}
-\index{bisection, debugging by}
+\index{debugowanie!przez dzielenie na części}
+\index{dzielenie na części, debugowanie}
 
 Jednym ze sposobów na skrócenie czasu debugowania jest "debugowanie przez dzielenie na części". Na przykład, jeśli w Twoim programie jest 100 linii i sprawdzasz je po kolei, zajmie to 100 kroków.
 
@@ -345,30 +350,33 @@ Słowniczek
 
 akumulator
 :   Zmienna używana w pętli do sumowania lub akumulowania wyniku.
-\index{accumulator}
+\index{akumulator}
 
 dekrementacja
 :   Aktualizacja, która zmniejsza wartość zmiennej (najczęściej o jeden).
-\index{decrement}
+\index{dekrementacja}
 
 inicjalizacja
 :   Przypisanie, które nadaje wartość początkową zmiennej, która później zostanie zaktualizowana.
+\index{inicjalizacja}
+\index{zmienna, inicjalizacja}
 
 inkrementacja
 :   Aktualizacja, która zwiększa wartość zmiennej (najczęściej o jeden).
-\index{increment}
+\index{inkrementacja}
 
 iteracja
 :   Powtórne wykonanie zbioru instrukcji przy pomocy funkcji, która sama się wywołuje, lub przy pomocy pętli.
-\index{iteration}
+\index{iteracja}
 
 licznik
 :   Zmienna używana w pętli do zliczania ile razy coś się wydarzyło. Inicjalizujemy licznik jako zero, a następnie zwiększamy go za każdym razem, gdy chcemy coś "zliczyć".
-\index{counter}
+\index{licznik}
 
 pętla nieskończona
 :   Pętla, w której warunek kończący nie jest nigdy spełniony lub dla której nie ma warunku kończącego.
-\index{infinite loop}
+\index{nieskończona, pętla}
+\index{pętla!nieskończona}
 
 Ćwiczenia
 ---------
