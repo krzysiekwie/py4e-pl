@@ -87,8 +87,8 @@ osób.
 Architektura sprzętu kommputerowego
 -----------------------------------
 
-\index{hardware}
-\index{hardware!architecture}
+\index{sprzęt}
+\index{sprzęt!architektura}
 
 Zanim zaczniemy uczyć się języka, którym będziemy wydawać polecenia komputerom
 aby tworzyły dla nas oprogramowanie, musimy doszkolić się trochę o tym jak 
@@ -159,7 +159,7 @@ programistą, ale przynajmniej będziesz posiadał umiejętności spojrzenia na
 problem analizy danych/informacji oraz opracowania programu do rozwiązania
 takiego problemu.
 
-\index{problem solving}
+\index{rozwiązywanie problemów}
 
 W pewnym sensie, aby być programistą potrzebujesz dwóch umiejętności:
 
@@ -196,8 +196,7 @@ czytać.
 Słowa i zdania
 -------------------
 
-\index{programming language}
-\index{language!programming}
+\index{język programowania}
 
 W przeciwieństwie do ludzkich języków, słownictwo Pythona jest w rzeczywistości
 dość skromne. To "słownictwo" nazywamy "słowami zastrzeżonymi". Są to słowa, 
@@ -267,7 +266,7 @@ się w terminalu lub oknie wiersza poleceń i wpiszesz *python*, a interpreter
 Pythona rozpocznie pracę w trybie interaktywnym i pojawi się mniej więcej
 w następujący sposób:
 
-\index{interactive mode}
+\index{tryb interaktywny}
 
 ~~~~ {.python}
 Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25)
@@ -492,7 +491,7 @@ Gdy chcemy napisać program, to używamy edytora tekstu po to by zapisać
 instrukcje Pythona do pliku, który nazywa się *skryptem*. Zgodnie z przyjętą 
 konwencją, skrypty w Pythonie mają nazwy kończące się na `.py`.
 
-\index{script}
+\index{skrypt}
 
 Aby uruchomić skrypt, musisz podać interpreterowi Pythona nazwę pliku. W oknie
 wiersza poleceń wpiszesz `python hello.py` w następujący sposób:
@@ -717,7 +716,7 @@ to, o co prosiłeś.
 Debugowanie
 ---------
 
-\index{debugging}
+\index{debugowanie}
 
 Gdy Python zwraca błąd, a nawet gdy daje wynik inny niż zamierzony, to 
 rozpoczyna poszukiwanie przyczyny błędu. Debugowanie to proces znajdowania w
@@ -750,7 +749,7 @@ rozmyślania, a czasem wycofania się. Jeśli ugrzęźniesz w jednej z tych
 czynności, to wypróbuj inne. Każda czynność ma swój własny tryb wyszukiwania
 błędów.
 
-\index{typographical error}
+\index{błąd typograficzny}
 
 Na przykład przeczytanie kodu może pomóc gdy problem jest błędem
 typograficznym, ale nie pomoże gdy problem dotyczy niezrozumienia pewnych
@@ -758,7 +757,7 @@ konceptów i pojęć. Jeśli nie rozumiesz co robi Twój program, to możesz go
 przeczytać i ze 100 razy, a i tak nigdy nie zobaczysz błędu, ponieważ błąd tkwi
 w Twojej głowie.
 
-\index{experimental debugging}
+\index{debugowanie przez eksperymenty}
 
 Przeprowadzanie eksperymentów może pomóc, zwłaszcza jeśli przeprowadzasz małe,
 proste testy. Ale jeśli przeprowadzasz eksperymenty bez myślenia lub czytania
@@ -767,8 +766,8 @@ jest procesem dokonywania przypadkowych zmian, dopóki program nie zrobi
 właściwej rzeczy. Nie trzeba dodawać, że programowanie losowe może zająć dużo
 czasu.
 
-\index{random walk programming}
-\index{development plan!random walk programming}
+\index{programowanie losowe}
+\index{plan rozwoju aplikacji!programowanie losowe}
 
 Musisz trochę pomyśleć. Debugowanie jest jak nauki eksperymentalne. Powinieneś
 mieć przynajmniej jedną hipotezę na temat tego, na czym polega problem. Jeśli
@@ -832,69 +831,68 @@ Słowniczek
 
 błąd
 :   Pomyłka w programie.
-\index{bug}
+\index{błąd}
 
 błąd semantyczny
 :   Błąd w programie, który zmusza go do zrobienia czegoś zupełnie innego niż
     zakładał programista.
-\index{semantic error}
+\index{błąd!semantyczny}
 
 funkcja print
 :   Instrukcja, która powoduje, że interpreter Pythona wyświetla daną wartość
     na ekranie.
-\index{print function}
-\index{function!print}
+\index{funkcja!print}
 
 interpretowanie
 :   Uruchomienie programu napisanego w języku wysokiego poziomy poprzez
     translację w danym momencie jednej linii kodu.
-\index{interpret}
+\index{interpretowanie}
 
 język niskiego poziomu
 :   Język programowania, który jest zaprojektowany by komputer mógł go łatwo
     uruchomić; czasem nazywany "kodem maszynowym" lub "językiem asemblera".
-\index{low-level language}
+\index{język niskiego poziomu}
 
 język wysokiego poziomu
 :   Język programowania taki jak Python, który jest zaprojektowany aby był łatwy
     do czytania i pisania przez ludzi.
-\index{high-level language}
+\index{język wysokiego poziomu}
 
 kod maszynowy
 :   Język najniższego poziomu dla oprogramowania, który jest językiem
     bezpośrednio uruchamianym przez procesor (CPU).
-\index{machine code}
+\index{kod maszynowy}
 
 kod źródłowy
 :   Program napisany w języku wysokiego poziomu.
-\index{source code}
+\index{kod źródłowy}
 
 kompilacja
 :   Tłumaczenie za jednym zamachem programu napisanego w języku wysokiego
     poziomu do języka niskiego poziomu w celu jego późniejszego uruchomienia.
-\index{compile}
+\index{kompilacja}
 
 pamięć główna
 :   Przechowuje programy i dane. Pamięć główna traci wszystkie swoje informacje
     gdy komputer zostanie wyłączony.
-\index{main memory}
+\index{pamięć główna}
 
 pamięć pomocnicza
 :   Przechowuje programy i dane oraz zachowuje ich informacje nawet gdy
     komputer zostanie wyłączony. Zasadniczo wolniejsza od pamięci głównej.
     Przykładami pamięci pomocniczej mogą być dyski twarde oraz pamięć flash
     w pamięciach USB/pendrive.
-\index{secondary memory}
+\index{pamięć pomocnicza}
 
 parsowanie
 :   Sprawdzanie programu i analizowanie jego struktury składniowej.
-\index{parse}
+\index{parsowanie}
 
 procesor
 :   Serce każdego komputera. Jest to to, co uruchamia oprogramowanie, które
     piszemy; czasem występuje pod nazwą "CPU".
-\index{central processing unit}
 \index{CPU}
+\index{procesor}
 
 program
 :   Zbiór instrukcji, które określają obliczenia.
@@ -903,26 +901,26 @@ program
 przenoszalność
 :   Cecha programu, która pozawala na jego uruchomienia na więcej niż jednym
     komputerze.
-\index{portability}
+\index{przenoszalność}
 
 rozwiązywanie problemów
 :   Proces formułowania problemu, znajdywania rozwiązania i wyrażania tego
     rozwiązania.
-\index{problem solving}
+\index{rozwiązywanie problemów}
 
 semantyka
 :   Znaczenie programu.
-\index{semantics}
+\index{semantyka}
 
 tryb interaktywny
 :   Sposób używania interpretera Pythona poprzez pisanie komend i wyrażeń w
     wierszu poleceń za znakiem zachęty.
-\index{interactive mode}
+\index{tryb interaktywny}
 
 znak zachęty
 :   Pojawia się gdy program wyświetla wiadomość i wstrzymuje swoje działanie
     by użytkownik mógł wprowadzić dane wejściowe do programu.
-\index{prompt}
+\index{znak zachęty}
 
 Ćwiczenia
 ---------

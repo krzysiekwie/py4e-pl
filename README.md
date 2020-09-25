@@ -6,15 +6,15 @@ Polish translation progress
 
 | Element                | Text | Code | Trinket | Index | Figures | Lectures | YouTube | Autograder | Review |
 |------------------------|------|------|-------|-------|---------|----------|---------|------------|--------|
-| `A0-preface.mkd`       | ☒    |      |      |       |         |          |         |            | ☐    |
-| `AA-contrib.mkd`       | ☒    |      |      |       |         |          |         |            | ☐    |
+| `A0-preface.mkd`       | ☒    |      |      | ☐     |         |          |         |            | ☐    |
+| `AA-contrib.mkd`       | ☒    |      |      | ☐     |         |          |         |            | ☐    |
 | `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☐    |
 | `install.php`          | ☒    |      |      |       |         |          |         |            | ☐    |
 | `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☐    |
 | `software-win.php`     | ☒    |      |      |       |         |          | ☒      |            | ☐    |
 | `software-mac.php`     | ☒    |      |      |       |         |          | ☒      |            | ☐    |
-| `01-intro.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `02-variables.mkd`     | ☒    |      | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `01-intro.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `02-variables.mkd`     | ☒    |      | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `04-functions.mkd`     | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `05-iterations.mkd`    | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |

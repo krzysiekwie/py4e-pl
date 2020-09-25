@@ -4,19 +4,21 @@ Zmienne, wyrażenia i instrukcje
 Wartości i typy
 ----------------
 
-\index{value}
-\index{type}
-\index{string}
+\index{wartość}
+\index{typ}
+\index{ciąg znaków}
+\index{napis}
+\index{łańcuch znaków}
 
 *Wartość* jest jedną z podstawowych rzeczy, z którymi program pracuje, takich 
 jak litera czy cyfra. Wartości, które widzieliśmy do tej pory, to 1, 2 i "Witaj
 świecie!".
 
 Wartości te należą do różnych *typów*: 2 jest liczbą całkowitą, a "Witaj
-świecie!" jest *ciągiem liter* lub *łańcuchem znaków* (ang. *string*). Ty (i interpreter) możesz 
+świecie!" jest *ciągiem znaków*, "napisem" lub *łańcuchem znaków* (ang. *string*). Ty (i interpreter) możesz 
 rozpoznać ciągi znaków, ponieważ są one zawarte w cudzysłowie.
 
-\index{quotation mark}
+\index{cudzysłów}
 
 Instrukcja `print` działa również w przypadku liczb całkowitych. Do uruchomienia
 interpretera używamy komendy `python`.
@@ -44,12 +46,14 @@ formacie nazywanym *liczbą zmiennoprzecinkową*^[Mimo że nazwa wskazuje na
 używanie przecinka i tak też robimy na co dzień w polskim zapisie, podczas
 programowania używamy kropki - przyp. tłum.] (ang. *floating point*).
 
-\index{type}
-\index{string type}
+\index{typ}
+\index{typ ciągu znaków}
 \index{class!str}
-\index{int type}
+\index{typ int}
+\index{typ całkowitoliczbowy}
 \index{class!int}
-\index{float type}
+\index{typ float}
+\index{typ zmiennoprzecinkowy}
 \index{class!float}
 
 ~~~~ {.python .trinket height="120"}
@@ -60,7 +64,7 @@ programowania używamy kropki - przyp. tłum.] (ang. *floating point*).
 A co z takimi wartościami jak "17" i "3.2"? Wyglądają one jak liczby, ale są w
 cudzysłowie jak ciągi znaków.
 
-\index{quotation mark}
+\index{cudzysłów}
 
 ~~~~ {.python .trinket  height="160"}
 >>> type('17')
@@ -84,9 +88,8 @@ Pythonie, ale jest zapis całkowicie poprawny:
 Cóż, nie tego się spodziewaliśmy! Python interpretuje 1,000,000 jako oddzielony
 przecinkami ciąg liczb całkowitych, które wypisuje ze spacjami.
 
-\index{semantic error}
-\index{error!semantic}
-\index{error message}
+\index{błąd!semantyczny}
+\index{komunikat błędu}
 
 Jest to pierwszy przykład omawianego wcześniej błędu semantycznego: kod działa
 bez generowania komunikatu o błędzie, ale nie robi tego, co "powinien" robić.
@@ -94,9 +97,9 @@ bez generowania komunikatu o błędzie, ale nie robi tego, co "powinien" robić.
 Zmienne
 -------
 
-\index{variable}
-\index{assignment statement}
-\index{statement!assignment}
+\index{zmienna}
+\index{przypisanie}
+\index{instrukcja!przypisania}
 
 Jedną z najważniejszych cech języka programowania jest zdolność do operowania
 *zmiennymi*. Zmienna jest nazwą, która odnosi się do wartości.
@@ -137,7 +140,7 @@ Typ zmiennej jest typem wartości, do której się odnosi.
 Nazwy zmiennych i słowa kluczowe
 --------------------------------
 
-\index{keyword}
+\index{słowo kluczowe}
 
 Programiści zazwyczaj wybierają dla swoich zmiennych nazwy, które są sensowne i
 opisują do czego dana zmienna jest używana.
@@ -155,7 +158,7 @@ nazwach zawierających wiele słów, takich jak `moje_ime` lub
 podkreślenia, ale generalnie unikamy tego, chyba że piszemy kod biblioteki 
 docelowo używanej przez inne osoby.
 
-\index{underscore character}
+\index{znak podkreślenia}
 
 Jeśli nadasz zmiennej niepoprawną nazwę, otrzymasz błąd składniowy:
 
@@ -175,7 +178,7 @@ Okazuje się, że `class` jest jednym ze *słów kluczowych* Pythona. Interprete
 używa słów kluczowych do rozpoznania struktury programu, przez co nie można ich
 używać jako nazw zmiennych.
 
-\index{keyword}
+\index{słowo kluczowe}
 
 Python ma zarezerwowanych 35 słów kluczowych:
 
@@ -199,9 +202,9 @@ Instrukcje
 *Instrukcja* jest jednostką kodu, którą może wykonać interpreter Pythona.
 Widzieliśmy dwa rodzaje wyrażeń: print jako wyrażenie oraz przypisanie.
 
-\index{statement}
-\index{interactive mode}
-\index{script mode}
+\index{instrukcja}
+\index{tryb interaktywny}
+\index{tryb skryptowy}
 
 Kiedy wpisujesz instrukcję w trybie interaktywnym, interpreter wykonuje ją i
 wyświetla wynik (jeśli taki istnieje).
@@ -230,10 +233,10 @@ Instrukcja przypisania nie zwraca żadnych wyników.
 Operatory i operandy
 ----------------------
 
-\index{operator, arithmetic}
-\index{arithmetic operator}
+\index{arytmetyczny, operator}
+\index{operator arytmetyczny}
 \index{operand}
-\index{expression}
+\index{wyrażenie}
 
 *Operatory* są specjalnymi symbolami, które reprezentują obliczenia takie jak
 dodawanie i mnożenie. Wartości, na których operator jest stosowany, są nazywane
@@ -283,8 +286,8 @@ wyrażenie na kalkulatorze.
 
 \index{Python 3.0}
 \index{Python 2.0}
-\index{floating-point division}
-\index{division!floating-point}
+\index{zmiennoprzecinkowe, dzielenie}
+\index{dzielenie!zmiennoprzecinkowe}
 
 Wyrażenia
 ---------
@@ -294,8 +297,9 @@ sobie jest uważana za wyrażenie, podobnie jak zmienna, a więc wszystkie poni�
 są poprawnymi wyrażeniami (przy założeniu, że zmiennej `x` przypisano wcześniej
 jakąś wartość):
 
-\index{expression}
-\index{evaluate}
+\index{wyrażenie}
+\index{ewaluacja}
+\index{wartościowanie}
 
 ~~~~ {.python}
 17
@@ -326,8 +330,8 @@ x + 1
 Kolejność wykonywania działań
 -----------------------------
 
-\index{order of operations}
-\index{rules of precedence}
+\index{kolejność wykonywania działań}
+\index{zasady pierwszeństwa}
 \index{PEMDAS}
 
 Kiedy w danym wyrażeniu pojawia się więcej niż jeden operator, kolejność 
@@ -335,7 +339,7 @@ ewaluacji zależy od *zasad pierwszeństwa*. W przypadku operatorów
 matematycznych, Python stosuje konwencję matematyczną. Akronim *PEMDAS* jest 
 przydatnym sposobem na zapamiętanie tych reguł:
 
-\index{parentheses!overriding precedence}
+\index{nawiasy okrągłe!uchylenie zasad pierwszeństwa}
 
 -   Nawiasy okrągłe (ang. *P*arentheses) mają najwyższy priorytet i mogą być
     użyte do wymuszenia ewaluacji wyrażenia w pożądanej kolejności. Ponieważ
@@ -362,8 +366,8 @@ upewnić się, że obliczenia zostały wykonane w zamierzonej kolejności.
 Operator modulo
 ---------------
 
-\index{modulus operator}
-\index{operator!modulus}
+\index{modulo, operator}
+\index{operator!modulo}
 
 *Operator modulo* działa na liczbach całkowitych i zwraca resztę po podzieleniu
 pierwszego operanda przez drugi. W Pythonie operator modulo jest znakiem
@@ -384,7 +388,7 @@ Operator modulo okazuje się być zaskakująco użyteczny. Na przykład, możesz
 sprawdzić czy jedna liczba jest podzielna przez drugą: jeśli `x % y` wynos
 zero, to `x` jest podzielne przez `y`.
 
-\index{divisibility}
+\index{podzielność}
 
 Możesz również wyodrębnić ostatnią cyfrę po prawej stronie cyfry z liczby.
 Na przykład, `x % 10` zwraca ostatnią cyfrę po prawej stronie z `x` (w systemie
@@ -393,14 +397,14 @@ dziesiętnym). Podobnie, `x % 100` zwraca dwie ostatnie cyfry.
 Operacje na ciągach znaków
 --------------------------
 
-\index{string!operation}
-\index{operator!string}
+\index{ciąg znaków!operowanie}
+\index{operator!ciąg znaków}
 
 Operator `+` działa z ciągami znaków, ale nie jest to dodawanie w sensie
 matematycznym. Zamiast tego wykonuje on *konkatenację*, co oznacza łączenie
 łańcuchów znaków poprzez złączenie ich końców. Na przykład:
 
-\index{concatenation}
+\index{konkatenacja}
 
 ~~~~ {.python}
 >>> first = 10
@@ -426,7 +430,8 @@ Test Test Test
 Proszenie użytkownika o wprowadzenie danych
 -------------------------------------------
 
-\index{keyboard input}
+\index{dane wejściowe z klawiatury}
+\index{klawiatura, dane wejściowe}
 
 Czasami chcielibyśmy ustawić wartość zmiennej poprzez pobranie tej wartości od
 użytkownika za pomocą jego klawiatury. Python udostępnia wbudowaną funkcję o
@@ -451,7 +456,7 @@ komunikat informujący użytkownika o tym, co należy wprowadzić. Możesz przek
 ciąg znaków do `input`, który zostanie wyświetlony użytkownikowi przed
 wstrzymaniem działania na czas wprowadzania danych:
 
-\index{prompt}
+\index{znak zachęty}
 
 ~~~~ {.python}
 >>> name = input('Jak masz na imię?\n')
@@ -465,7 +470,8 @@ Sekwencja `\n` na końcu komunikatu reprezentuje *nową linię*, która jest
 specjalnym znakiem, który powoduje przerwanie aktualnej linii. Dlatego dane
 wprowadzane przez użytkownika znajdują się pod komunikatem.
 
-\index{newline}
+\index{nowa linia}
+\index{znak końca linii}
 
 Jeśli oczekujesz od użytkownika wprowadzenia liczby całkowitej, możesz spróbować
 przekonwertować zwracaną wartość na `int` używając funkcji `int()`:
@@ -494,12 +500,12 @@ ValueError: invalid literal for int() with base 10:
 Zobaczymy później jak poradzić sobie z tego typu błędami.
 
 \index{ValueError}
-\index{exception!ValueError}
+\index{wyjątek!ValueError}
 
 Komentarze
 ----------
 
-\index{comment}
+\index{komentarz}
 
 W miarę jak programy stają się coraz większe i bardziej skomplikowane, stają się
 również coraz trudniejsze do odczytania. Formalne języki są skomplikowane i
@@ -549,7 +555,8 @@ iść na pewien kompromis.
 Wybór mnemonicznych nazw zmiennych
 ----------------------------------
 
-\index{mnemonic}
+\index{mnemoniczne nazwy zmiennych}
+\index{mnemonika}
 
 Tak długo, jak stosujesz się do prostych zasad nazewnictwa zmiennych i unikasz
 zastrzeżonych słów, masz duży wybór przy nadawaniu nazw swoim zmiennym. Na
@@ -653,14 +660,13 @@ zaawansowanych programów - przyp. tłum.]
 Debugowanie
 ---------
 
-\index{debugging}
+\index{debugowanie}
 
 W tym momencie najbardziej prawdopodobnym błędem składniowym jest niepoprawna
 nazwa zmiennej, np. `class` i `yield`, które są słowami kluczowymi, lub
 `odd~job` i `US$`, które zawierają niedozwolone znaki.
 
-\index{syntax error}
-\index{error!syntax}
+\index{błąd!składniowy}
 
 Jeśli umieścisz spację w nazwie zmiennej, Python pomyśli, że są to dwa operandy
 bez operatora:
@@ -687,11 +693,10 @@ Widzimy tutaj, że zera widoące w liczbach całkowitych są niedozwolone,
 a Python podpowiada, że może chodzi nam o zapis w systemie ósemkowym, gdzie
 liczby zaczynają się od `0o`.
 
-\index{error message}
-\index{use before def}
-\index{exception}
-\index{runtime error}
-\index{error!runtime}
+\index{komunikat błędu}
+\index{użycie przed definicją}
+\index{wyjątek}
+\index{błąd!czasu wykonania}
 
 Błąd wykonania (ang. *runtime error*), który jest najprawdopodobniejszy
 do popełnienia przez Ciebie, to "użycie przed definicją", co oznacza próbę
@@ -707,9 +712,9 @@ NameError: name 'principle' is not defined
 W nazwach zmiennych wielkość liter jest rozróżniana, więc `LaTeX` nie jest 
 tym samym co `latex`.
 
-\index{case-sensitivity, variable names}
-\index{semantic error}
-\index{error!semantic}
+\index{nazwy zmiennych uwzględniające wielkość liter}
+\index{wielkość liter, nazwy zmiennych}
+\index{błąd!semantyczny}
 
 W tym momencie, najbardziej prawdopodobną przyczyną błędu semantycznego jest
 kolejność operacji. Na przykład, aby obliczyć $1/2\pi$, można pokusić się o
@@ -724,52 +729,56 @@ nie to samo! Nie ma możliwości by Python wiedział co chciałeś napisać, wi�
 tym przypadku nie dostaniesz komunikatu o błędzie; po prostu dostaniesz złą
 odpowiedź.
 
-\index{order of operations}
+\index{kolejność wykonywania działań}
 
 Słowniczek
 ----------
 
 ciąg znaków
-:   Typ danych `str`, który reprezentuje sekwencje znaków.
-\index{string}
+:   Typ danych `str`, który reprezentuje sekwencje znaków; inaczej napis lub łańcuch znaków.
+\index{ciąg znaków}
+\index{napis}
+\index{łańcuch znaków}
 
 ewaluacja
 :   Uproszczenie wyrażenia poprzez wykonanie operacji w celu uzyskania
-    pojedynczej wartości.
-\index{evaluate}
+    pojedynczej wartości; inaczej wartościowanie.
+\index{ewaluacja}
+\index{wartościowanie}
 
 instrukcja
 :   Część kodu, która reprezentuje polecenie lub akcję. Jak dotąd, polecenia,
     które widzieliśmy, to przypisania i wyrażenie print.
-\index{statement}
+\index{instrukcja}
 
 kolejność wykonywania działań
 :   Zbiór zasad regulujących kolejność ewaluacji wyrażeń obejmujących wiele
     operatorów i operandów.
-\index{rules of precedence}
-\index{precedence}
+\index{zasady pierwszeństwa}
+\index{kolejność wykonywania działań}
 
 komentarz
 :   Informacja w programie, która jest przeznaczona dla innych programistów (lub
     osób czytających kod źródłowy) i nie ma wpływu na wykonanie programu.
-\index{comment}
+\index{komentarz}
 
-konkatencja
+konkatenacja
 :   Połączenie dwóch ciągów znaków.
-\index{concatenation}
+\index{konkatenacja}
 
 liczba całkowita
 :   Typ danych `int`, który reprezentuje liczby całkowite.
-\index{integer}
+\index{liczba całkowita}
 
 liczba zmiennoprzecinkowa
 :   Typ danych `float`, który reprezentuje liczby z częściami ułamkowymi.
-\index{floating-point}
+\index{liczba zmiennoprzecinkowa}
 
 mnemonika
 :   Pomoc pamięciowa. Często nadajemy zmiennym nazwy mnemoniczne, tak aby pomóc
     nam zapamiętać co jest przechowywane w zmiennej. 
-\index{mnemonic}
+\index{mnemonika}
+\index{mnemoniczne nazwy zmiennych}
 
 operand
 :   Jedna z wartości, na której działa operator.
@@ -783,38 +792,38 @@ operator
 operator modulo
 :   Operator oznaczony znakiem procentu (`%`), który działa na liczbach
     całkowitych i zwraca resztę gdy jedna liczba jest dzielona przez drugą. 
-\index{modulus operator}
-\index{operator!modulus}
+\index{modulo, operator}
+\index{operator!modulo}
 
 przypisanie
 :   Instrukcja, która przypisuje wartość zmiennej.
-\index{assignment}
+\index{przypisanie}
 
 słowo kluczowe
 :   Zastrzeżone słowo, które jest używane przez kompilator/interpreter do
     przetwarzania programu; nie można używać słów kluczowych np. takich jak `if`,
     `def` i `while` jako nazw zmiennych. 
-\index{keyword}
+\index{słowo kluczowe}
 
 typ
 :   Kategoria wartości. Typy, które widzieliśmy do tej pory, to liczby całkowite
     (typ `int`), liczby zmiennoprzecinkowe (typ `float`) oraz ciągi znaków (typ
     `str`).
-\index{type}
+\index{typ}
 
 wartość
 :   Jedna z podstawowych jednostek danych, takich jak liczba lub ciąg znaków,
     którą operuje program.
-\index{value}
+\index{wartość}
 
 wyrażenie
 :   Kombinacja zmiennych, operatorów i wartości, która reprezentuje pojedynczą
     wartość wyniku. 
-\index{expression}
+\index{wyrażenie}
 
 zmienna
 :   Nazwa, która odnosi się do wartości.
-\index{variable}
+\index{zmienna}
 
 Ćwiczenia
 ---------
