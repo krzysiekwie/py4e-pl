@@ -15,8 +15,8 @@ Polish translation progress
 | `software-mac.php`     | ☒    |      |      |       |         |          | ☒      |            | ☐    |
 | `01-intro.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `02-variables.mkd`     | ☒    |      | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `04-functions.mkd`     | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `04-functions.mkd`     | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `05-iterations.mkd`    | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `06-strings.mkd`       | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `07-files.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
@@ -33,6 +33,7 @@ Polish translation progress
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | links to code repo...  |      |      |       |      |         |          |         |            |       |
+| remove "przyp. tłum."  |      |      |       |      |         |          |         |            |       |
 | English translation of index keywords |         |            |       |
 | Better index keywords in Chapter 15 about databases |         |            |       |
 | Functions and methods with `()` |         |            |       |

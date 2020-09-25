@@ -4,7 +4,8 @@ Funkcje
 Wywoływanie funkcji
 -------------------
 
-\index{function call}
+\index{wywołanie funkcji}
+\index{funkcja, wywołanie}
 
 W kontekście programowania, *funkcja* to nazwana sekwencja instrukcji, która
 wykonuje pewne obliczenia. Kiedy definiujesz funkcję, określasz jej nazwę i
@@ -21,13 +22,13 @@ funkcji. Argument jest wartością lub zmienną, którą przekazujemy do funkcji
 dane wejściowe funkcji. Wynikiem, dla funkcji `type`, jest typ przekazanego 
 argumentu. 
 
-\index{parentheses!argument in}
+\index{nawiasy okrągłe!argument}
 
 Zwykle mówi się, że funkcja "przyjmuje" argument i "zwraca" wynik. Wynik jest 
 nazywany *wartością zwracaną*. 
 
 \index{argument}
-\index{return value}
+\index{wartość zwracana}
 
 Funkcje wbudowane
 -----------------
@@ -72,15 +73,15 @@ używania "max" jako nazwy zmiennej).
 Funkcje konwersji typu
 ----------------------
 
-\index{conversion!type}
-\index{type conversion}
+\index{typ!konwersja}
+\index{konwersja typu}
 
 Python oferuje również funkcje wbudowane, które konwertują wartości z jednego 
 typu na drugi. Funkcja `int` przyjmuje dowolną wartość i konwertuje ją na liczbę 
 całkowitą, jeśli może, lub awanturuje się przeciwnym przypadku:
 
-\index{int function}
-\index{function!int}
+\index{int, funkcja}
+\index{funkcja!int}
 
 ~~~~ {.python}
 >>> int('32')
@@ -101,8 +102,8 @@ zaokrągla ich (ucina część ułamkową):
 
 `float` konwertuje liczby całkowite i ciągi znaków na liczby zmiennoprzecinkowe:
 
-\index{float function}
-\index{function!float}
+\index{float, funkcja}
+\index{funkcja!float}
 
 ~~~~ {.python}
 >>> float(32)
@@ -113,8 +114,8 @@ zaokrągla ich (ucina część ułamkową):
 
 Natomiast `str` konwertuje swój argument na ciąg znaków:
 
-\index{str function}
-\index{function!str}
+\index{str, funkcja}
+\index{funkcja!str}
 
 ~~~~ {.python}
 >>> str(32)
@@ -126,10 +127,12 @@ Natomiast `str` konwertuje swój argument na ciąg znaków:
 Funkcje matematyczne
 --------------------
 
-\index{math function}
-\index{function, math}
-\index{module}
-\index{module object}
+\index{matematyczna, funkcja}
+\index{funkcja matematyczna}
+\index{moduł}
+\index{obiekt modułu}
+\index{import, instrukcja}
+\index{instrukcja!import}
 
 Python posiada moduł `math`, który dostarcza większość znanych funkcji 
 matematycznych. Zanim będziemy mogli skorzystać z tego modułu, musimy go 
@@ -151,7 +154,7 @@ Obiekt modułu zawiera funkcje i zmienne zdefiniowane w tym module. Aby uzyskać
 dostęp do jednej z tych funkcji, musisz podać nazwę modułu i nazwę funkcji, 
 oddzielone kropką. Format ten nazywa się *notacją kropkową*. 
 
-\index{dot notation}
+\index{notacja kropkowa}
 
 ~~~~ {.python}
 >>> ratio = signal_power / noise_power
@@ -166,12 +169,12 @@ Pierwszy przykład oblicza logarytm przy podstawie 10 ze stosunku sygnału
 matematyczny udostępnia również funkcję o nazwie `log`, która oblicza logarytm 
 naturalny. 
 
-\index{log function}
-\index{function!log}
-\index{sine function}
+\index{log, funkcja}
+\index{funkcja!log}
+\index{sinus, funkcja}
 \index{radian}
-\index{trigonometric function}
-\index{function, trigonometric}
+\index{funkcja trygonometryczna}
+\index{trygonometryczna, funkcja}
 
 Drugi przykład znajduje sinus z wartości w zmiennej `radians`. Nazwa zmiennej 
 jest podpowiedzią, że `sin` i inne funkcje trygonometryczne (`cos`, `tan`, itp.) 
@@ -193,8 +196,8 @@ należy ją podzielić przez 360 i pomnożyć przez $2 \pi$:
 Jeśli znasz trygonometrię, to możesz sprawdzić poprzedni wynik, porównując go z 
 pierwiastkiem kwadratowym z dwóch podzielonym przez dwa: 
 
-\index{sqrt function}
-\index{function!sqrt}
+\index{sqrt, funkcja}
+\index{funkcja!sqrt}
 
 ~~~~ {.python}
 >>> math.sqrt(2) / 2.0
@@ -204,10 +207,10 @@ pierwiastkiem kwadratowym z dwóch podzielonym przez dwa:
 Liczby losowe
 --------------
 
-\index{random number}
-\index{number, random}
-\index{deterministic}
-\index{pseudorandom}
+\index{liczba losowa}
+\index{losowa, liczba}
+\index{deterministyczny}
+\index{pseudolosowość}
 
 Biorąc pod uwagę te same dane wejściowe, większość programów komputerowych 
 generuje za każdym razem te same dane wyjściowe, więc w takich przypadkach mówi 
@@ -223,14 +226,14 @@ pseudolosowe nie są tak naprawdę losowe, ponieważ są generowane przez
 deterministyczne obliczenia, ale po prostu patrząc na te liczby, nie da się ich 
 odróżnić od losowych. 
 
-\index{random module}
-\index{module!random}
+\index{random, moduł}
+\index{moduł!random}
 
 Moduł `random` oferuje funkcje, które generują liczby pseudolosowe (które od tej 
 chwili będę po prostu nazywał "losowymi"). 
 
-\index{random function}
-\index{function!random}
+\index{random, funkcja}
+\index{funkcja!random}
 
 Funkcja `random` zwraca losową liczbę pomiędzy 0.0 a 1.0 (włączając w to 0.0, 
 ale nie 1.0). Za każdym razem, gdy wywołujesz `random`, otrzymujesz następną 
@@ -268,8 +271,8 @@ Funkcja `random` jest tylko jedną z wielu funkcji, które obsługują liczby
 losowe. Funkcja `randint` pobiera parametry `low` oraz `high` i zwraca liczbę 
 całkowitą pomiędzy `low` i `high` (włączając w to obydwie te liczby). 
 
-\index{randint function}
-\index{function!randint}
+\index{randint, funkcja}
+\index{funkcja!randint}
 
 ~~~~ {.python}
 >>> random.randint(5, 10)
@@ -280,8 +283,8 @@ całkowitą pomiędzy `low` i `high` (włączając w to obydwie te liczby).
 
 Aby wybrać losowo element z jakiejś sekwencji, możesz użyć `choice`: 
 
-\index{choice function}
-\index{function!choice}
+\index{choice, funkcja}
+\index{funkcja!choice}
 
 ~~~~ {.python}
 >>> t = [1, 2, 3]
@@ -303,9 +306,9 @@ nazwę nowej funkcji i kolejność poleceń, które wykonują się podczas jej
 wywołania. Kiedy już zdefiniujemy jakąś funkcję, będziemy mogli używać jej 
 ile wlezie w całym programie.
 
-\index{function}
-\index{function definition}
-\index{definition!function}
+\index{funkcja}
+\index{funkcja, definicja}
+\index{definicja funkcji}
 
 Oto krótki przykład:
 
@@ -321,26 +324,29 @@ nazw zmiennych: litery, cyfry i niektóre znaki interpunkcyjne są dozwolone, al
 pierwszy znak nie może być liczbą. Nie możesz używać słowa kluczowego jako nazwy 
 funkcji i powinieneś unikać posiadania zmiennej i funkcji o tej samej nazwie. 
 
-\index{def keyword}
-\index{keyword!def}
+\index{def, słowo kluczowe}
+\index{słowo kluczowe!def}
 \index{argument}
 
 Puste nawiasy po nazwie oznaczają, że ta funkcja nie przyjmuje żadnych 
 argumentów. Później zbudujemy funkcje, które przyjmują argumenty jako swoje 
 dane wejściowe.
 
-\index{parentheses!empty}
-\index{header}
-\index{body}
-\index{indentation}
-\index{colon}
+\index{nawiasy okrągłe!puste}
+\index{nagłówek funkcji}
+\index{funkcja, nagłówek}
+\index{ciało funkcji}
+\index{funkcja, ciało}
+\index{wcięcie}
+\index{dwukropek}
 
 Pierwszy wiersz definicji funkcji nazywa się *nagłówkiem* funkcji; reszta nazywa 
 się *ciałem* funkcji. Nagłówek musi się kończyć dwukropkiem, a ciało musi być 
 wcięte. Zgodnie z konwencją, wcięcie jest zawsze czterema spacjami. Ciało może 
 zawierać dowolną liczbę instrukcji.
 
-\index{ellipses}
+\index{wielokropek}
+\index{trzy kropki}
 
 Jeżeli wpiszesz definicję funkcji w trybie interaktywnym, interpreter wypisze 
 trzy kropki (*...*) aby dać Ci znać, że definicja nie jest kompletna:
@@ -366,8 +372,8 @@ Zdefiniowanie funkcji tworzy zmienną o tej samej nazwie.
 
 Wartość `print_lyrics` to *obiekt funkcji* o typie "function".
 
-\index{function object}
-\index{object!function}
+\index{funkcja, obiekt}
+\index{obiekt funkcji}
 
 Składnia wywoływania nowej funkcji jest taka sama jak dla funkcji wbudowanych:
 
@@ -402,7 +408,8 @@ No ale tak naprawdę to nie tak idzie ta piosenka.
 Definiowanie i używanie
 -----------------------
 
-\index{function definition}
+\index{funkcja, definicja}
+\index{definicja funkcji}
 
 Składając razem fragmenty kodu z poprzedniej sekcji, cały program wygląda 
 następująco:
@@ -414,7 +421,7 @@ Definicje funkcji wykonywane są tak samo jak inne polecenia, ale efektem jest
 tworzenie obiektów funkcji. Polecenia wewnątrz funkcji są wykonywane dopiero po 
 jej wywołaniu, a definicja funkcji nie generuje danych wyjściowych.
 
-\index{use before def}
+\index{użycie przed definicją}
 
 Jak pewnie się spodziewasz, musisz stworzyć funkcję, zanim będziesz mógł ją 
 wykonać. Innymi słowy, definicja funkcji musi zostać wykonana przed jej 
@@ -431,7 +438,7 @@ taki program?**
 Przepływ sterowania
 -------------------
 
-\index{flow of execution}
+\index{przepływ sterowania}
 
 Aby zapewnić, że funkcja zostanie zdefiniowana przed jej pierwszym użyciem, 
 musisz znać kolejność, w jakiej wykonywane są instrukcje - tę kolejność nazywa 
@@ -466,10 +473,10 @@ za jego przepływem sterowania.
 Parametry i argumenty
 ---------------------
 
-\index{parameter}
-\index{function parameter}
+\index{parametr}
+\index{funkcja, parametr}
 \index{argument}
-\index{function argument}
+\index{funkcja, argument}
 
 Niektóre z wbudowanych funkcji, które widzieliśmy, wymagają argumentów. Na 
 przykład, gdy wywołujesz `math.sin`, podajesz liczbę jako argument. Niektóre 
@@ -479,7 +486,7 @@ podstawę i wykładnik.
 Wewnątrz funkcji argumenty są przypisane do zmiennych nazywanych *parametrami*. 
 Oto przykład zdefiniowanej przez użytkownika funkcji, która przyjmuje argument:
 
-\index{parentheses!parameters in}
+\index{nawiasy okrągłe!parameter}
 
 ~~~~ {.python}
 def print_twice(bruce):
@@ -509,7 +516,7 @@ Te same zasady składania wyrażeń lub instrukcji, które odnoszą się do funk
 wbudowanych, dotyczą także funkcji zdefiniowanych przez użytkownika, więc 
 możemy użyć dowolnego rodzaju wyrażenia jako argumentu w `print_twice`:
 
-\index{composition}
+\index{składanie}
 
 ~~~~ {.python}
 >>> print_twice('Spam '*4)
@@ -542,10 +549,10 @@ nazywamy `bruce`.
 Funkcje owocne i funkcje niezwracające wartości
 -----------------------------------------------
 
-\index{fruitful function}
-\index{void function}
-\index{function, fruitful}
-\index{function, void}
+\index{owocna, funkcja}
+\index{niezwracająca wartości, funkcja}
+\index{funkcja owocna}
+\index{funkcja niezwracająca wartości}
 
 Niektóre z używanych przez nas funkcji to np. funkcje matematyczne, które 
 zwracają wyniki; z braku lepszej nazwy, nazywam je *funkcjami owocnymi* 
@@ -581,16 +588,16 @@ Powyższy skrypt oblicza pierwiastek kwadratowy z 5, ale ponieważ nie zapisuje
 wyniku w zmiennej ani nie wyświetla zwróconego wyniku, nie jest on zbyt 
 użyteczny.
 
-\index{interactive mode}
-\index{script mode}
+\index{tryb interaktywny}
+\index{tryb skryptowy}
 
 Funkcje niezwracające wartości mogą wyświetlać coś na ekranie lub mieć jakiś 
 inny efekt. W związku z tym, że nie zwracają żadnej wartości, jeśli spróbujesz 
 przypisać wynik takiej funkcji do zmiennej, otrzymasz specjalną wartość 
 o nazwie `None`.
 
-\index{None special value}
-\index{special value!None}
+\index{None, wartość specjalna}
+\index{wartość specjalna!None}
 
 ~~~~ {.python}
 >>> result = print_twice('Ping')
@@ -625,7 +632,7 @@ przypisana do zmiennej `x` i wypisany.
 Dlaczego potrzebujemy funkcji?
 ------------------------------
 
-\index{function, reasons for}
+\index{funkcja, powody}
 
 Na początku może nie być jasne dlaczego warto podzielić program na funkcje. 
 Jest kilka powodów:
@@ -655,14 +662,14 @@ wartość występującą na tej liście.
 Debugowanie
 ---------
 
-\index{debugging}
+\index{debugowanie}
 
 Jeśli używasz edytora tekstu do pisania swoich skryptów, możesz mieć problemy
 ze spacjami i tabulacjami. Najlepszym sposobem na uniknięcie tych problemów
 jest użycie wyłącznie spacji (bez tabulacji). Większość edytorów tekstowych,
 które znają specyfikę Pythona, robi to domyślnie, ale niektóre nie.
 
-\index{whitespace}
+\index{białe znaki}
 
 Tabulacje i spacje są zazwyczaj niewidoczne, co utrudnia ich debugowanie, więc
 postaraj się znaleźć edytor, który zarządza wcięciami dla Ciebie.
@@ -691,92 +698,104 @@ Słowniczek
 
 algorytm
 :   Ogólny proces rozwiązywania pewnej kategorii problemów.
-\index{algorithm}
+\index{algorytm}
 
 argument
 :   Wartość przekazywana do funkcji w momencie jej wywołania. Wartość ta jest
     przypisana do odpowiadającego jej parametru w funkcji.
 \index{argument}
+\index{funkcja, argument}
 
 ciało funkcji
 :   Sekwencja instrukcji wewnątrz definicji funkcji.
-\index{body}
+\index{ciało funkcji}
+\index{funkcja, ciało}
 
 definicja funkcji
 :   Instrukcja, która tworzy nową funkcję, określająca jej nazwę, parametry i
     polecenia, które wykonuje.
-\index{function definition}
+\index{funkcja, definicja}
+\index{definicja funkcji}
 
 deterministyczny
 :   Dotyczy programu, który robi to samo za każdym razem, gdy dostarczy mu się
     te same dane wejściowe.
-\index{deterministic}
+\index{deterministyczny}
 
 funkcja
 :   Nazwany ciąg instrukcji wykonujący jakąś użyteczną operację. Funkcje mogą,
     ale nie muszą, przyjmować argumenty i mogą, ale nie muszą, zwracać wyniki.
-\index{function}
+\index{funkcja}
 
 funkcja niezwracająca wartości
 :   Funkcja, które nie posiada zwracanej wartości.
-\index{void function}
+\index{niezwracająca wartości, funkcja}
+\index{funkcja niezwracająca wartości}
 
 funkcja owocna
 :   Funkcja zwracająca wartość.
-\index{fruitful function}
+\index{funkcja owocna}
+\index{owocna, funkcja}
 
 instrukcja import
 :   Instrukcja, która wczytuje plik modułu i tworzy obiekt modułu.
-\index{import statement}
-\index{statement!import}
+\index{import, instrukcja}
+\index{instrukcja!import}
 
-mobiekt modułu
+obiekt modułu
 :   Wartość utworzona przez instrukcję `import`, która zapewnia dostęp do danych
     i kodu zdefiniowanego w module.
-\index{module}
+\index{moduł}
+\index{obiekt modułu}
 
 nagłówek funkcji
 :   Pierwszy wiersz definicji funkcji.
-\index{header}
+\index{nagłówek funkcji}
+\index{funkcja, nagłówek}
 
 notacja kropkowa
 :   Składnia do wywołania funkcji w innym module poprzez określenie nazwy
     modułu, po której następuje kropka i nazwa funkcji.
-\index{dot notation}
+\index{notacja kropkowa}
 
 obiekt funkcji
 :   Wartość utworzona przez definicję funkcji. Nazwa funkcji jest zmienną, która
     odnosi się do obiektu funkcji.
-\index{function definition}
+\index{obiekt funkcji}
+\index{funkcja, obiekt}
+\index{funkcja, definicja}
+\index{definicja funkcji}
 
 parametr
 :   Nazwa używana wewnątrz funkcji do odwoływania się do wartości przekazanej
     jako argument.
-\index{parameter}
+\index{parametr}
+\index{funkcja, parametr}
 
 przepływ sterowania
 :   Kolejność, w której polecenia są wykonywane podczas uruchamiania programu.
-\index{flow of execution}
+\index{przepływ sterowania}
 
-pseudolosowy
+pseudolosowość
 :   Odnosi się do ciągu liczb, które wydają się być losowe, ale są generowane
     przez deterministyczny program.
-\index{pseudorandom}
+\index{pseudolosowość}
 
 składanie
 :   Użycie wyrażenia jako części większego wyrażenia lub instrukcji jako części
     większej instrukcji.
-\index{composition}
+\index{składanie}
 
 wartość zwracana
 :   Wynik działania funkcji. Jeżeli wywołanie funkcji zostanie użyte jako
     wyrażenie, to wartość zwracana jest wartością tego wyrażenia.
-\index{return value}
+\index{wartość zwracana}
 
 wywołanie funkcji
 :   Polecenie, które uruchamia funkcję. Składa się z nazwy funkcji, po której
     następuje lista argumentów.
-\index{function call}
+\index{wywołanie funkcji}
+\index{funkcja, wywołanie}
 
 Ćwiczenia
 ---------
