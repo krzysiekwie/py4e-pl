@@ -21,7 +21,7 @@ Polish translation progress
 | `06-strings.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `07-files.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `08-lists.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `09-dictionaries.mkd`  | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `09-dictionaries.mkd`  | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `10-tuples.mkd`        | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `11-regex.mkd`         | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `12-network.mkd`       | ☒    | ☒   | ☒    | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |

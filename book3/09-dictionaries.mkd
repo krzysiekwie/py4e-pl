@@ -1,13 +1,13 @@
 Słowniki
 ========
 
-\index{dictionary}
-\index{dictionary}
+\index{słownik}
 
-\index{type!dict}
-\index{key}
-\index{key-value pair}
-\index{index}
+\index{typ!dict}
+\index{klucz}
+\index{para klucz-wartość}
+\index{element!słownik}
+\index{indeks}
 \index{}
 
 *Słownik* jest podobny do listy, ale bardziej ogólny. W liście indeksy muszą być liczbami całkowitymi; w słowniku indeksy mogą być (prawie) dowolnego typu.
@@ -18,8 +18,8 @@ Jako przykład zbudujemy słownik, który mapuje słowa angielskie na hiszpańsk
 
 Funkcja `dict` tworzy nowy słownik bez żadnych elementów. Ponieważ `dict` jest nazwą wbudowanej funkcji, powinieneś unikać używania jej jako nazwy zmiennej.
 
-\index{dict function}
-\index{function!dict}
+\index{dict, funkcja}
+\index{funkcja!dict}
 
 ~~~~ {.python .trinket}
 >>> eng2sp = dict()
@@ -29,8 +29,8 @@ Funkcja `dict` tworzy nowy słownik bez żadnych elementów. Ponieważ `dict` je
 
 Nawiasy klamrowe, `{}`, reprezentują pusty słownik. Aby dodać elementy do słownika, możesz użyć nawiasów kwadratowych:
 
-\index{squiggly bracket}
-\index{bracket!squiggly}
+\index{klamrowy, nawias}
+\index{nawias klamrowy}
 
 ~~~~ {.python}
 >>> eng2sp['one'] = 'uno'
@@ -53,6 +53,8 @@ Widoczny powyżej format wyjściowy jest również formatem wejściowym. Na przy
 
 Kolejność par klucz-wartość nie jest taka sama. W rzeczywistości, jeśli wpiszesz ten sam przykład na swoim komputerze, możesz uzyskać inny wynik. Ogólnie rzecz biorąc, kolejność pozycji w słowniku jest nieprzewidywalna.
 
+\index{wyszukiwanie}
+
 Jednak nie jest to problem, ponieważ elementy słownika nigdy nie są indeksowane za pomocą liczb całkowitych. Zamiast tego używasz kluczy do szukania odpowiadających im wartości:
 
 ~~~~ {.python}
@@ -64,7 +66,7 @@ Klucz `'two'` zawsze mapuje się do wartości "dos", więc kolejność elementó
 
 Jeśli klucza nie ma w słowniku, otrzymasz wyjątek:
 
-\index{exception!KeyError}
+\index{wyjątek!KeyError}
 \index{KeyError}
 
 ~~~~ {.python}
@@ -74,8 +76,8 @@ KeyError: 'four'
 
 Funkcja `len` działa również na słownikach i zwraca liczbę par klucz-wartość:
 
-\index{len function}
-\index{function!len}
+\index{len, funkcja}
+\index{funkcja!len}
 
 ~~~~ {.python}
 >>> len(eng2sp)
@@ -84,8 +86,9 @@ Funkcja `len` działa również na słownikach i zwraca liczbę par klucz-warto�
 
 Operator `in` też działa na słownikach i informuje Cię, czy coś pojawia się w słowniku jako *klucz* (wystąpienie jako wartość nie jest wystarczające).
 
-\index{membership!dictionary}
-\index{in operator}
+\index{przynależność!słownik}
+\index{słownik!przynależność}
+\index{in, operator}
 \index{operator!in}
 
 ~~~~ {.python}
@@ -97,8 +100,8 @@ False
 
 Aby sprawdzić, czy coś pojawia się w słowniku jako wartość, możesz użyć metody `values`, która zwraca wartości jako typ, który może być skonwertowany na listę, a następnie użyć operatora `in`:
 
-\index{values method}
-\index{method!values}
+\index{values, metoda}
+\index{metoda!values}
 
 ~~~~ {.python}
 >>> vals = list(eng2sp.values())
@@ -108,9 +111,11 @@ True
 
 Operator `in` używa różnych algorytmów dla list i słowników. W przypadku list, używa algorytmu wyszukiwania liniowego. Gdy lista staje się dłuższa, czas wyszukiwania wydłuża się bezpośrednio proporcjonalnie do jej długości. W przypadku słowników Python używa algorytmu zwanego *tablicą mieszającą* lub *tablicą z haszowaniem*, który ma niezwykłą właściwość: operator `in` zajmuje mniej więcej tyle samo czasu, niezależnie od tego, ile pozycji jest w słowniku. Nie będę tłumaczył, dlaczego funkcje haszujące są tak magiczne, ale możesz przeczytać o tym więcej na stronie [pl.wikipedia.org/wiki/Tablica_mieszająca](https://pl.wikipedia.org/wiki/Tablica_mieszaj%C4%85ca).
 
-\index{hash table}
-\index{set membership}
-\index{membership!set}
+\index{tablica z haszowaniem}
+\index{tablica mieszająca}
+\index{funkcja haszująca}
+\index{zbiór!przynależność}
+\index{przynależność!zbiór}
 
 **Ćwiczenie 1: Pobierz kopię pliku** [pl.py4e.com/code3/words.txt](https://pl.py4e.com/code3/words.txt)
 
@@ -119,7 +124,7 @@ Operator `in` używa różnych algorytmów dla list i słowników. W przypadku l
 Słownik jako zbiór liczników
 ----------------------------
 
-\index{counter}
+\index{licznik}
 
 Załóżmy, że otrzymałeś ciąg znaków zawierający angielski wyraz i chcesz policzyć ile razy każda litera się w nim pojawiła. Możesz to zrobić na kilka sposobów:
 
@@ -131,7 +136,7 @@ Załóżmy, że otrzymałeś ciąg znaków zawierający angielski wyraz i chcesz
 
 Każda z tych opcji wykonuje to samo obliczenie, ale każda z nich implementuje to w inny sposób.
 
-\index{implementation}
+\index{implementacja}
 
 *Implementacja* to sposób przeprowadzenia obliczeń; niektóre implementacje są lepsze od innych. Na przykład, zaletą implementacji poprzez słownik jest to, że nie musimy z góry wiedzieć, które litery pojawiają się w ciągu znaków i musimy tylko zrobić miejsce na te, które faktycznie się pojawiają.
 
@@ -151,8 +156,8 @@ print(d)
 W praktyce obliczamy *histogram*, który jest statystycznym terminem określającym zestaw liczników (lub częstości).
 
 \index{histogram}
-\index{frequency}
-\index{traversal}
+\index{częstość}
+\index{przejście}
 
 Pętla `for` przechodzi po ciągu znaków. Za każdym razem gdy przechodzimy przez pętlę, jeśli znak zawarty w `c` nie występuje w słowniku, tworzymy nową pozycję z kluczem `c` i wartością początkową 1 (ponieważ widzieliśmy tę literę raz). Jeśli `c` znajduje się już w słowniku, zwiększamy wartość `d[c]`.
 
@@ -166,8 +171,8 @@ Oto wynik programu:
 
 Histogram wskazuje, że litery "a" i "b" pojawiają się raz; "o" pojawia się dwa razy, i tak dalej.
 
-\index{get method}
-\index{method!get}
+\index{get, metoda}
+\index{metoda!get}
 
 Słowniki posiadają metodę `get`, która przyjmuje klucz i domyślną wartość. Jeśli klucz pojawia się w słowniku, `get` zwraca odpowiednią wartość; w przeciwnym razie zwraca wartość domyślną. Na przykład:
 
@@ -207,14 +212,14 @@ Do pierwszego zestawu przykładów wykorzystamy skróconą i uproszczoną wersj�
 
 Napiszemy w Pythonie program, które odczyta wiersze pliku, rozbijemy każdy wiersz na listę słów, a następnie przejdziemy w pętli przez każde słowo zawarte w linii i za pomocą słownika policzymy występienie każdego słowa.
 
-\index{nested loops}
-\index{loop!nested}
+\index{zagnieżdżone pętle}
+\index{pętla!zagnieżdżona}
 
 Za chwilę zobaczysz, że mamy dwie pętle `for`. Pętla zewnętrzna odczytuje wiersze pliku, a pętla wewnętrzna iteruje przez każde ze słów w danym wierszu. Jest to przykład schematu zwanego *pętlą zagnieżdżoną*, ponieważ jedna z pętli jest pętlą *zewnętrzną*, a druga pętlą *wewnętrzną*.
 
 Pętla wewnętrzna wykonuje wszystkie swoje iteracje za każdym razem gdy pętla zewnętrzna wykonuje jedną iterację. W związku z tym myślimy o pętli wewnętrznej jako iterującej "szybciej", a o pętli zewnętrznej jako iterującej wolniej.
 
-\index{Romeo and Juliet}
+\index{Romeo i Julia}
 
 Połączenie dwóch zagnieżdżonych pętli zapewnia, że będziemy zliczać każde słowo w każdym wierszu pliku wejściowego.
 
@@ -243,9 +248,9 @@ Trochę niewygodne jest przeglądanie słownika w celu znalezienia najczęściej
 Pętle i słowniki
 ----------------
 
-\index{dictionary!looping with}
-\index{looping!with dictionaries}
-\index{traversal}
+\index{słownik!przejście w pętli}
+\index{przechodzenie w pętli!po słownikach}
+\index{przejście}
 
 Jeśli używasz słownika jako sekwencji w instrukcji `for`, pętla przechodzi wtedy przez klucze słownika. Poniższa pętla wyświetla każdy klucz i odpowiadającą mu wartość:
 
@@ -285,8 +290,8 @@ annie 42
 
 Widzimy teraz tylko te elementy, które mają wartość powyżej 10.
 
-\index{keys method}
-\index{method!keys}
+\index{keys, metoda}
+\index{metoda!keys}
 
 Jeżeli chcesz wyświetlić klucze w porządku alfabetycznym, to korzystając z metody `keys` dostępnej w obiektach słownikowych sporządzasz listę kluczy występujących w słowniku, a następnie sortujesz tę listę i przechodzisz w pętli po tej posortowanej liście, przeglądając każdy klucz i wyświetlając pary klucz-wartość w posortowanej kolejności, tak jak pokazano poniżej:
 
@@ -313,7 +318,7 @@ Najpierw widzisz listę kluczy w nieposortowanej kolejności, które otrzymujemy
 Zaawansowane parsowanie tekstu
 -------------------------------
 
-\index{Romeo and Juliet}
+\index{Romeo i Julia}
 
 W powyższym przykładzie, używając pliku *romeo.txt*, uczyniliśmy ten plik tak prostym, jak to tylko możliwe, usuwając ręcznie całą interpunkcję. Rzeczywisty tekst ma dużo interpunkcji, tak jak to pokazano poniżej.
 
@@ -327,8 +332,6 @@ Who is already sick and pale with grief,
 Ponieważ funkcja `split` szuka spacji i traktuje słowa jako tokeny oddzielone spacjami, traktowalibyśmy słowa "soft!" i "soft" jako *różne* słówa i dla każdego z nich tworzylibyśmy osobny wpis w słowniku.
 
 Również ze względu na to, że plik ma tekst pisany dużymi literami, traktowalibyśmy "who" i "Who" jako różne słowa o różnej liczności.
-
-
 
 Oba te problemy możemy rozwiązać za pomocą metod związanych z obiektami ciągów znaków: `lower`, `punctuation` i `translate`. Metoda `translate` jest najbardziej wyrafinowaną z tych metod. Oto dokumentacja dla tej metody:
 
@@ -371,7 +374,7 @@ Przeglądanie powyższego wyniku nadal jest niewygodne i choć możemy użyć Py
 Debugowanie
 -----------
 
-\index{debugging}
+\index{debugowanie}
 
 Podczas pracy z większymi zbiorami danych, debugowanie poprzez wyświetlanie i ręczne sprawdzanie danych może okazać się niewygodne. Oto kilka sugestii dotyczących debugowania dużych zbiorów danych:
 
@@ -387,8 +390,9 @@ Sprawdź podsumowania i typy
 
 Napisz mechanizm do samokontroli
 :   Czasami możesz napisać kod do automatycznego sprawdzania błędów. Na przykład, jeśli obliczasz średnią z listy liczb, możesz sprawdzić, czy wynik nie jest większy od największego elementu na liście lub mniejszy od najmniejszego. Nazywa się to "sprawdzaniem poczytalności" (ang. sanity check), ponieważ wykrywa ono wyniki, które są "zupełnie nielogiczne".
-\index{sanity check}
-\index{consistency check}
+
+\index{sprawdzenie poczytalności}
+\index{sprawdzenie spójności}
 
     Inny rodzaj sprawdzenia porównuje wyniki dwóch różnych obliczeń, tak aby sprawdzić czy są one spójne. Nazywa się to "sprawdzaniem spójności" (ang. consistency check).
 
@@ -397,18 +401,16 @@ Napisz mechanizm do samokontroli
 
 Ponownie, czas spędzony na budowaniu dodatkowych rusztowań w Twoim programie może skrócić czas, który spędzasz na debugowaniu.
 
-\index{scaffolding}
-
 Słowniczek
 ----------
 
-element
+element słownika
 :   Inna nazwa dla pary klucz-wartość.
-\index{item!dictionary}
+\index{element!słownik}
 
 funkcja haszująca
 :   Funkcja używana przez tablice mieszające do obliczania lokalizacji dla danego klucza.
-\index{hash function}
+\index{funkcja haszująca}
 
 histogram
 :   Zbiór liczników.
@@ -416,36 +418,37 @@ histogram
 
 implementacja
 :   Sposób przeprowadzenia obliczeń.
-\index{implementation}
+\index{implementacja}
 
 klucz
 :   Obiekt, który pojawia się w słowniku jako pierwsza część pary klucz-wartość.
-\index{key}
+\index{klucz}
 
 para klucz-wartość
 :   Reprezentacja mapowania z klucza do wartości.
-\index{key-value pair}
+\index{para klucz-wartość}
 
 pętle zagnieżdżone
 :   Kiedy istnieje jedna lub więcej pętli "wewnątrz" innej pętli. Pętla wewnętrzna wykonuje się do końca za każdym razem, gdy pętla zewnętrzna iteruje się raz.
-\index{nested loops}
-\index{loop!nested}
+\index{zagnieżdżone pętle}
+\index{pętla!zagnieżdżona}
 
 słownik
 :   Mapowanie z zestawu kluczy do odpowiadających im wartości.
-\index{dictionary}
+\index{słownik}
 
 tablica mieszająca
-:   Algorytm używany do implementacji słowników Pythona.
-\index{hashtable}
+:   Algorytm używany do implementacji słowników Pythona; inaczej tablica z haszowaniem.
+\index{tablica z haszowaniem}
+\index{tablica mieszająca}
 
 wartość
 :   Obiekt, który pojawia się w słowniku jako druga część pary klucz-wartość. Jest to bardziej szczegółowe określenie niż nasze poprzednie użycia słowa "wartość".
-\index{value}
+\index{wartość}
 
 wyszukiwanie
 :   Operacja słownikowa, która dla podanego klucza znajduje odpowiadającą mu wartość.
-\index{lookup}
+\index{wyszukiwanie}
 
 Ćwiczenia
 ---------
