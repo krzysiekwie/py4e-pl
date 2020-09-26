@@ -116,7 +116,7 @@ Poruszanie się po listach
 -------------------------
 
 \index{lista!przejście}
-\index{przejście po liście}
+\index{przejście!lista}
 \index{for, pętla}
 \index{pętla!for}
 \index{instrukcja!for}
@@ -935,7 +935,7 @@ obiekt
 
 przejście po liście
 :   Sekwencyjny dostęp do każdego elementu listy.
-\index{przejście po liście}
+\index{przejście!lista}
 \index{lista!przejście}
 
 referencja

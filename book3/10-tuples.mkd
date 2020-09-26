@@ -4,16 +4,16 @@ Krotki
 Krotki są niezmienne
 --------------------
 
-\index{tuple}
-\index{type!tuple}
-\index{sequence}
+\index{krotka}
+\index{typ!tuple}
+\index{sekwencja}
 
 Krotka^[Ciekawostka: Angielskie tłumaczenie słowa "krotka", czyli *tuple*, pochodzi od nazw nadawanych sekwencjom liczb o różnej długości: *single, double, triple, quadruple, quintuple, sextuple, septuple* itd.] jest sekwencją wartości, podobnie jak lista. Wartości zapisane w krotce mogą być dowolnego typu i są indeksowane liczbami całkowitymi. Ważną różnicą jest to, że krotki są *niezmienne*. Krotki są również *porównywalne* i *haszowalne*, więc możemy sortować ich listy i używać krotek jako kluczy w słownikach.
 
-\index{mutability}
-\index{hashable}
-\index{comparable}
-\index{immutability}
+\index{zmienność}
+\index{haszowalny}
+\index{porównywalny}
+\index{niezmienność}
 
 Składniowo, krotka jest oddzieloną przecinkami listą wartości:
 
@@ -23,16 +23,16 @@ Składniowo, krotka jest oddzieloną przecinkami listą wartości:
 
 Chociaż nie jest to konieczne, krotki często ogranicza się nawiasami, tak aby pomóc nam szybko zidentyfikować krotki podczas przeglądania kodu Pythona:
 
-\index{parentheses!tuples in}
+\index{nawiasy okrągłe!krotki}
 
 ~~~~ {.python}
 >>> t = ('a', 'b', 'c', 'd', 'e')
 ~~~~
 
-Aby utworzyć krotkę z pojedynczym elementem, należy na końcu dołączyć przecinek:
+Aby utworzyć krotkę z pojedynczym elementem (tzw. *singleton*), należy na końcu dołączyć przecinek:
 
 \index{singleton}
-\index{tuple!singleton}
+\index{krotka!singleton}
 
 ~~~~ {.python .trinket}
 >>> t1 = ('a',)
@@ -50,8 +50,8 @@ Bez przecinka Python traktuje `('a')` jako wyrażenie z ciągiem znaków w nawia
 
 Innym sposobem na skonstruowanie krotki jest wbudowana funkcja `tuple`. Bez żadnego argumentu, tworzy ona pustą krotkę:
 
-\index{tuple function}
-\index{function!tuple}
+\index{tuple, funkcja}
+\index{funkcja!tuple}
 
 ~~~~ {.python .trinket}
 >>> t = tuple()
@@ -71,8 +71,8 @@ Ponieważ słowo `tuple` jest nazwą konstruktora, powinieneś unikać używania
 
 Większość operatorów związanych z listami działa również na krotkach. Operator nawiasów kwadratowych służy do podawania indeksu (pozycji) elementu:
 
-\index{bracket operator}
-\index{operator!bracket}
+\index{nawias kwadratowy, operator}
+\index{operator!nawias kwadratowy}
 
 ~~~~ {.python .trinket}
 >>> t = ('a', 'b', 'c', 'd', 'e')
@@ -82,10 +82,10 @@ Większość operatorów związanych z listami działa również na krotkach. Op
 
 Operator wycinania wybiera szereg elementów.
 
-\index{slice operator}
-\index{operator!slice}
-\index{tuple!slice}
-\index{slice!tuple}
+\index{wycinanie, operator}
+\index{operator!wycinanie}
+\index{krotka!wycinanie}
+\index{wycinanie!krotka}
 
 ~~~~ {.python}
 >>> print(t[1:3])
@@ -94,10 +94,10 @@ Operator wycinania wybiera szereg elementów.
 
 Ale jeśli spróbujesz zmodyfikować jeden z elementów krotki, to otrzymasz błąd:
 
-\index{exception!TypeError}
+\index{wyjątek!TypeError}
 \index{TypeError}
-\index{item assignment}
-\index{assignment!item}
+\index{element, przypisanie}
+\index{przypisanie!element}
 
 ~~~~ {.python}
 >>> t[0] = 'A'
@@ -115,10 +115,10 @@ Nie możesz modyfikować elementów krotki, ale możesz zastąpić jedną krotk�
 Porównywanie krotek
 -------------------
 
-\index{comparison!tuple}
-\index{tuple!comparison}
-\index{sort method}
-\index{method!sort}
+\index{porównywanie!krotka}
+\index{krotka!porównywanie}
+\index{sort, metoda}
+\index{metoda!sort}
 
 Operatory porównania działają z krotkami i innymi sekwencjami. Python zaczyna od porównania pierwszego elementu z każdej sekwencji. Jeśli są one równe, przechodzi do następnego elementu itd., aż znajdzie takie elementy, które się różnią. Kolejne elementy nie są już brane pod uwagę (nawet jeśli ich wartość jest bardzo duża).
 
@@ -142,11 +142,11 @@ Sortowanie
 Usunięcie dekorowania
 :   poprzez wyodrębnienie posortowanych elementów sekwencji.
 
-\index{DSU pattern}
-\index{pattern!DSU}
-\index{decorate-sort-undecorate pattern}
-\index{pattern!decorate-sort-undecorate}
-\index{Romeo and Juliet}
+\index{DSU, schemat}
+\index{schemat!DSU}
+\index{dekorowanie-sortowanie-usunięcie dekorowania, schemat}
+\index{schemat!dekorowanie-sortowanie-usunięcie dekorowania}
+\index{Romeo i Julia}
 
 Na przykład, załóżmy, że posiadasz listę wyrazów i chcesz je posortować od najdłuższego do najkrótszego:
 
@@ -156,9 +156,9 @@ Pierwsza pętla buduje listę krotek, gdzie każda krotka jest wyrazem poprzedzo
 
 Funkcja `sort` porównuje najpierw pierwsze elementy krotek, czyli długości wyrazów, a drugie elementy rozpatruje tylko w przypadku takich samych długości wyrazów. Argument z podaną nazwą `reverse=True` wskazuje funkcji `sort` by sortować w kolejności malejącej.
 
-\index{keyword argument}
-\index{argument!keyword}
-\index{traversal}
+\index{słowo kluczowe, argument}
+\index{argument!słowo kluczowe}
+\index{przejście}
 
 Druga pętla przechodzi przez listę krotek i tworzy listę wyrazów według ich malejącej długości. Czteroznakowe wyrazy są posortowane w odwrotnej kolejności alfabetycznej, więc słowo "what" pojawia się przed słowem "soft".
 
@@ -174,10 +174,8 @@ Oczywiście linia ta, gdy zostanie przekształcona w listę Pythona i posortowan
 Krotki i operacja przypisania
 -----------------------------
 
-\index{tuple!assignment}
-\index{assignment!tuple}
-\index{swap pattern}
-\index{pattern!swap}
+\index{krotka!przypisanie}
+\index{przypisanie!krotka}
 
 Jedną z unikalnych cech syntaktycznych języka Python jest możliwość posiadania krotki po lewej stronie instrukcji przypisania. Pozwala to na przypisanie w tym samym czasie więcej niż jednej zmiennej, w momencie gdy lewa strona jest sekwencją.
 
@@ -218,6 +216,9 @@ Stylistycznie rzecz ujmując, gdy używamy krotki po lewej stronie instrukcji pr
 >>>
 ~~~~
 
+\index{zamiana miejscami, schemat}
+\index{schemat!zamiana miejscami}
+
 Sprytne zastosowanie operacji przypisania krotki pozwala nam na *zamianę* wartości dwóch zmiennych przy pomocy jednej instrukcji:
 
 ~~~~ {.python}
@@ -228,7 +229,7 @@ Obie strony tego wyrażenia są krotkami, ale lewa strona jest krotką zmiennych
 
 Liczba zmiennych po lewej stronie i liczba wartości po prawej stronie musi być taka sama:
 
-\index{exception!ValueError}
+\index{wyjątek!ValueError}
 \index{ValueError}
 
 ~~~~ {.python}
@@ -238,9 +239,10 @@ ValueError: too many values to unpack
 
 Ogólnie rzecz biorąc, prawa strona może być dowolną sekwencją (ciągiem, listą lub krotką). Na przykład, aby podzielić adres e-mail na nazwę użytkownika i domenę, można napisać poniższy kod:
 
-\index{split method}
-\index{method!split}
-\index{email address}
+\index{split, metoda}
+\index{metoda!split}
+\index{e-mail, adres}
+\index{adres e-mail}
 
 ~~~~ {.python}
 >>> addr = 'monty@python.org'
@@ -259,10 +261,10 @@ python.org
 Słowniki i krotki
 -----------------
 
-\index{dictionary}
-\index{items method}
-\index{method!items}
-\index{key-value pair}
+\index{słownik}
+\index{items, metoda}
+\index{metoda!items}
+\index{para klucz-wartość}
 
 Słowniki posiadają metodę zwaną `items`, która zwraca listę krotek, gdzie każda krotka jest parą klucz-wartość:
 
@@ -292,8 +294,8 @@ Nowa lista jest posortowana rosnąco w porządku alfabetycznym według kluczy.
 Wielokrotne przypisanie w słownikach
 ------------------------------------
 
-\index{traverse!dictionary}
-\index{dictionary!traversal}
+\index{przejście!słownik}
+\index{słownik!przejście}
 
 Łącząc `items`, przypisanie krotki oraz `for`, możesz zobaczyć ciekawy schemat kodu do przechodzenia po kluczach i wartościach słownika w jednej pętli:
 
@@ -339,7 +341,7 @@ Ostrożnie konstruując listę krotek tak, aby w każdej z nich wartość była 
 Najczęściej występujące słowa
 -----------------------------
 
-\index{Romeo and Juliet}
+\index{Romeo i Julia}
 
 Wracając do naszego przykładu z tekstem z *Romeo i Julia* (Akt II, Scena II), możemy rozszerzyć nasz program po to by użyć opisanej wyżej techniki do wypisania dziesięciu najczęściej używanych słów w tekście:
 
@@ -375,8 +377,8 @@ Fakt, że takie skomplikowane parsowanie i analiza danych może być wykonana za
 Używanie krotek jako kluczy w słownikach
 ----------------------------------------
 
-\index{tuple!as key in dictionary}
-\index{hashable}
+\index{krotka!jako klucz w słowniku}
+\index{haszowalny}
 
 Ponieważ krotki są *haszowalne*, a listy nie są, to jeśli chcemy utworzyć *złożony* klucz do użycia w słowniku, to musimy użyć krotki jako klucza.
 
@@ -388,7 +390,7 @@ directory[last,first] = number
 
 Wyrażenie w nawiasach jest krotką. Moglibyśmy użyć przypisania krotki w pętli `for`, tak aby przejść po takim słownik.
 
-\index{tuple!in brackets}
+\index{krotka!w nawiasach kwadratowych}
 
 ~~~~ {.python}
 for last, first in directory:
@@ -400,17 +402,19 @@ Powyższa pętla przechodzi przez klucze w `directory`, które są krotkami. Prz
 Sekwencje: ciągi znaków, listy i krotki - O rany!
 -------------------------------------------------
 
-\index{sequence}
+\index{sekwencja}
 
 Skupiłem się na listach krotek, ale prawie wszystkie przykłady w tym rozdziale działają również z listami list, krotkami krotek i krotkami list. Aby uniknąć wyliczania możliwych kombinacji, czasem łatwiej jest mówić o sekwencjach sekwencji.
 
 W wielu kontekstach różne rodzaje sekwencji (ciągów znaków, list i krotek) mogą być używane zamiennie. Więc jak i dlaczego wybierasz jedną z nich zamiast innych?
 
-\index{string}
-\index{list}
-\index{tuple}
-\index{mutability}
-\index{immutability}
+\index{ciąg znaków}
+\index{napis}
+\index{łańcuch znaków}
+\index{lista}
+\index{krotka}
+\index{zmienność}
+\index{niezmienność}
 
 Zaczynając od tego, co oczywiste, ciągi znaków są bardziej ograniczone niż inne sekwencje, ponieważ ich elementy muszą być znakami. Są one również niezmienne. Jeśli potrzebujesz możliwości zmiany znaków w takim ciągu (w przeciwieństwie do tworzenia nowego ciągu), możesz w zamian użyć listy znaków.
 
@@ -424,18 +428,19 @@ Listy są popularniejsze w użyciu niż krotki, głównie dlatego, że są zmien
 
 Ponieważ krotki są niezmienne, nie dostarczają one metod takich jak `sort` i `reverse`, które modyfikują istniejące listy. Jednakże Python dostarcza wbudowane funkcje `sorted` i `reversed`, które przyjmują każdą sekwencję jako parametr i zwracają nową sekwencję z tymi samymi elementami w innej kolejności.
 
-\index{sorted function}
-\index{function!sorted}
-\index{reversed function}
-\index{function!reversed}
+\index{sorted, funkcja}
+\index{funkcja!sorted}
+\index{reversed, funkcja}
+\index{funkcja!reversed}
 
 Debugowanie
 -----------
 
-\index{debugging}
-\index{data structure}
-\index{shape error}
-\index{error!shape}
+\index{debugowanie}
+\index{struktura danych}
+\index{kształt, błąd}
+\index{błąd!kształtu}
+\index{kształt}
 
 Listy, słowniki i krotki są ogólnie znane jako *struktury danych*; w tym rozdziale zaczęliśmy zauważać złożone struktury danych, takie jak listy krotek oraz słowniki, które zawierają krotki jako klucze i listy jako wartości. Złożone struktury danych są użyteczne, ale są podatne na to, co nazywam *błędami kształtu*, tzn. błędy spowodowane niewłaściwym typem, rozmiarem lub zawartością struktury danych; być może piszesz też jakiś kod i zapominasz o kształcie swoich danych, przez co nieświadomie umieszczasz błąd w swoim programie. Na przykład, jeśli oczekujesz listy składającej się z jednej liczby całkowitej, a ja daję Ci po prostu zwykłą liczbę całkowitą (która nie jest opakowana listą), to Twój kod nie będzie działać.
 
@@ -444,32 +449,35 @@ Słowniczek
 
 DSU
 :   Skrót od "dekorowanie-sortowanie-usunięcie dekorowania"; schemat, który polega na budowaniu listy krotek, sortowaniu i wyodrębnianiu części wyniku.
-\index{DSU pattern}
+\index{DSU, schemat}
+\index{dekorowanie-sortowanie-usunięcie dekorowania, schemat}
+\index{schemat!dekorowanie-sortowanie-usunięcie dekorowania}
+\index{schemat!DSU}
 
 haszowalny
 :   Typ, który posiada funkcję haszowania. Typy niezmienne, takie jak liczby całkowite, zmiennoprzecinkowe i ciągi znaków, są haszowalne; typy zmienne, takie jak listy i słowniki, nie są haszowalne.
-\index{hashable}
+\index{haszowalny}
 
 krotka
 :   Niezmienna sekwencja elementów.
-\index{tuple}
+\index{krotka}
 
 kształt (struktury danych)
 :   Podsumowanie typu, rozmiaru i zawartości struktury danych.
-\index{shape}
+\index{kształt}
 
 porównywalny
 :   Typ, w którym można sprawdzić, czy jedna wartość jest większa, mniejsza lub równa innej wartości tego samego typu. Typy, które są porównywalne, można umieścić na liście i posortować.
-\index{comparable}
+\index{porównywalny}
 
 przypisanie do krotki
 :   Przypisanie z sekwencją po prawej stronie i krotką zmiennych po lewej. Prawa strona jest ewaluowana, a następnie jej elementy są przypisywane do zmiennych po lewej stronie.
-\index{tuple assignment}
-\index{assignment!tuple}
+\index{krotka!przypisanie}
+\index{przypisanie!krotka}
 
 struktura danych
 :   Kolekcja powiązanych ze sobą wartości, często zorganizowanych w listy, słowniki, krotki itp.
-\index{data structure}
+\index{struktura danych}
 
 Ćwiczenia
 ---------
@@ -508,7 +516,7 @@ Podaj nazwę pliku: mbox-short.txt
 19 1
 ~~~~
 
-**Ćwiczenie 3: Napisz program, który wczytuje plik i wypisuje *litery* malejąco po częstości ich występowania. Twój program powinien przekonwertować wszystkie dane wejściowe na małe litery i zliczać tylko litery a-z. Program nie powinien uwzględniać spacji, cyfr, interpunkcji ani niczego innego poza literami a-z. Znajdź próbki tekstów z kilku różnych języków i sprawdź, jak bardzo częstość liter różni się w zależności od języka. Porównaj swoje wyniki z tabelami pod adresem <https://en.wikipedia.org/wiki/Letter_frequency>.**
+\index{częstość występowania liter}
+\index{litery, częstość występowania}
 
-\index{letter frequency}
-\index{frequency!letter}
+**Ćwiczenie 3: Napisz program, który wczytuje plik i wypisuje *litery* malejąco po częstości ich występowania. Twój program powinien przekonwertować wszystkie dane wejściowe na małe litery i zliczać tylko litery a-z. Program nie powinien uwzględniać spacji, cyfr, interpunkcji ani niczego innego poza literami a-z. Znajdź próbki tekstów z kilku różnych języków i sprawdź, jak bardzo częstość liter różni się w zależności od języka. Porównaj swoje wyniki z tabelami pod adresem <https://en.wikipedia.org/wiki/Letter_frequency>.**
