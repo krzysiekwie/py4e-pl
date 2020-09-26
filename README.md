@@ -28,7 +28,7 @@ Polish translation progress
 | `13-web.mkd`           | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `14-objects.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `15-database.mkd`      | ☒    | ☒   | ☒    | ☒    | ☒(*)   | ☐        | ☐     | ☐          | ☐    |
-| `16-viz.mkd`           | ☒    | ☒   |       | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `16-viz.mkd`           | ☒    | ☒   |       | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |

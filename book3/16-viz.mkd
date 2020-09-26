@@ -10,8 +10,8 @@ Każda z tych aplikacji jest plikiem ZIP, który możesz pobrać na swój komput
 Budowanie mapy OpenStreetMap z geokodowanych danych
 ---------------------------------------------------
 
-\index{OpenStreetMap!map}
-\index{Visualization!map}
+\index{OpenStreetMap!mapa}
+\index{wizualizacja!mapa}
 
 W tym projekcie wykorzystamy API geokodowania OpenStreetMap (usługa Nominatim), po to by zamienić wpisane przez użytkowników nazwy uczelni na lokalizacje geograficzne^[Należy mieć na uwadze, że taka zamiana tekstu na dane geolokalizacyjne nie zawsze daje precyzyjne i poprawne wyniki, co będzie można też zauważyć w części wyników tej aplikacji.], a następnie umieścimy przetworzone dane na mapie OpenStreetMap. 
 
@@ -23,7 +23,7 @@ Aby rozpocząć, pobierz aplikację z poniższego adresu:
 
 W warunkach korzystania z usługi Nominatim jest wskazanie by ogarniczyć się do maksymalnie jednego zapytania na sekundę (usługa jest darmowa, stąd też gdybyśmy generowali bardzo dużą liczbę zapytań w krótkim czasie, to prawdopodobnie szybko zablokowano by nam dostęp do API). Nasze zadanie dzielimy na dwie fazy.
 
-\index{cache}
+\index{pamięć podręczna}
 
 W pierwszej fazie bierzemy nasze dane wejściowe z pliku *where.data* i odczytujemy je wiersz po wierszu, odczytując przy tym zgeokodowaną odpowiedź serwera Nominatim i przechowujemy ją w bazie danych (plik *geodata.sqlite*). Zanim użyjemy API geokodowania, po prostu sprawdzamy, czy w naszej bazie ("pamięci podręcznej") mamy już dane dla tego konkretnego wiersza, dzięki czemu w przypadku ponownego uruchomienia programu nie będziemy musieli drugi razy wysyłać zapytania do API.
 
@@ -86,9 +86,9 @@ By zobaczyć lokalizacje na mapie, otwórz plik *where.html* w przeglądarce int
 Wizualizacja sieci i połączeń
 -----------------------------
 
-\index{Google!page rank}
-\index{Visualization!networks}
-\index{Visualization!page rank}
+\index{Google!PageRank}
+\index{wizualizacja!sieci}
+\index{wizualizacja!PageRank}
 
 W poniższej aplikacji będziemy wykonywać niektóre funkcje znajdujące się w mechaniźmie wyszukiwarki internetowej. Najpierw przeczeszemy mały fragment sieci internetowej, uruchomimy uproszczoną wersję algorytmu Google PageRank by określić strony, do których jest najwięcej odniesień z innych stron (czyli by wskazać które strony są potencjalnie najistotniejsze), a następnie zwizualizujemy rangę strony i połączenia w naszym małym zakątku sieci. Aby utworzyć wizualizacje wykorzystamy bibliotekę JavaScript D3 <https://d3js.org/>.
 
