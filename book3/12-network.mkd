@@ -8,6 +8,8 @@ W tym rozdziale będziemy udawać, że jesteśmy przeglądarką internetową i b
 Hypertext Transfer Protocol - HTTP
 ----------------------------------
 
+\index{gniazdo}
+
 Protokół sieciowy, który napędza sieć internetową, jest w rzeczywistości dość prosty i ma wbudowane w Pythona wsparcie poprzez funkcję `socket`, która ułatwia w programie Pythona nawiązywanie połączeń sieciowych i pobieranie danych przez tzw. gniazda (lub z ang. sockety).
 
 *Gniazdo* jest bardzo podobne do pliku, z tą różnicą, że jedno gniazdo zapewnia dwukierunkowe połączenie między dwoma programami. Przy pomocy tego samego gniazda możesz zarówno odczytywać dane, jak i wysyłać/zapisywać dane. Jeżeli wyślesz jakieś dane do gniazda, to zostaną one wysłane do aplikacji znajdującej się na drugim końcu tego gniazda. Jeżeli czytasz dane z gniazda, to otrzymujesz dane, które wysłała do Ciebie aplikacja po drugiej stronie.
@@ -20,14 +22,20 @@ Istnieje wiele dokumentów, które opisują protokoły sieciowe. Hypertext Trans
 
 <https://www.w3.org/Protocols/rfc2616/rfc2616.txt>
 
+\index{port}
+
 Jest to długi i skomplikowany 176-stronicowy dokument z dużą ilością szczegółów. Jeśli uważasz, że jest interesujący, przeczytaj go w całości. Ale jeśli rozejrzysz się po stronie nr 36 dokumentu RFC2616, to znajdziesz składnię dla żądania GET. Aby poprosić o dokument z serwera WWW, wykonujemy połączenie z serwerem `data.pr4e.org` na porcie 80, a następnie wysyłamy linię w postaci
 
 `GET http://data.pr4e.org/romeo.txt HTTP/1.0`
 
 gdzie drugim parametrem jest strona internetowa, o którą prosimy, a następnie wysyłamy pustą linię. Serwer internetowy odpowie na zapytanie pewnym nagłówkiem i pustym wierszem, po którym wyśle treść dokumentu.
 
+Natomiast czym jest port? Jest to liczba, który generalnie wskazuje, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.
+
 Najprostsza przeglądarka internetowa na świecie
 -----------------------------------------------
+
+\index{gniazdo}
 
 Być może najprostszym sposobem na pokazanie, jak działa protokół HTTP, jest napisanie bardzo prostego programu, który nawiązuje połączenie z serwerem WWW i postępuje zgodnie z zasadami protokołu HTTP, tak by zażądać dokumentu i wyświetlić to, co serwer wysyłał z powrotem.
 
@@ -83,8 +91,8 @@ b'Hello world'
 Pobieranie obrazu przez HTTP
 ----------------------------
 
-\index{urllib!image}
-\index{image!jpg}
+\index{urllib!obraz}
+\index{obraz!jpg}
 \index{jpg}
 
 W poprzednim przykładzie pobraliśmy zwykły plik tekstowy, który zawierał w pliku znaki końca linii i po prostu wyświetliliśmy te dane na ekranie w trakcie działania programu. Podobnego programu możemy użyć do odtworzenia obrazu za pomocą HTTP. Zamiast wyświetlać dane na ekranie w trakcie działania programu, zgromadzimy je w obiekcie bajtowym, usuniemy nagłówki, a następnie zapiszemy dane obrazu do pliku:
@@ -127,8 +135,9 @@ W trakcie działania programu widać, że nie otrzymujemy 5120 znaków za każdy
 
 Twoje wyniki mogą być różne w zależności od szybkości Twojej sieci. Zauważ również, że przy ostatnim wywołaniu `recv()` otrzymujemy 3167 bajtów, co jest końcem strumienia, a przy następnym wywołaniu `recv()` otrzymujemy ciąg o zerowej długości, który mówi nam, że serwer wywołał `close()` na końcu gniazda i nie ma już więcej danych.
 
-\index{time}
-\index{time.sleep}
+\index{time, moduł}
+\index{moduł!time}
+\index{time.sleep, funkcja}
 
 Możemy spowolnić nasze kolejne wywołania `recv()` przez odkomentowanie wywołania `time.sleep()`. W ten sposób czekamy ćwierć sekundy po każdym wywołaniu, tak aby serwer mógł "wyprzedzić" nas i przesłać nam więcej danych, zanim ponownie wywołamy `recv()`. Z włączonym opóźnieniem program wykonuje się w następujący sposób:
 
@@ -161,7 +170,7 @@ Teraz, poza pierwszym i ostatnim wywołaniem `recv()`, otrzymujemy 5120 znaków 
 
 Istnieje bufor pomiędzy serwerem wykonującym żądania `send()` a naszą aplikacją wykonującą żądania `recv()`. Kiedy uruchamiamy program z założonym opóźnieniem, w pewnym momencie serwer może zapełnić bufor w gnieździe i być zmuszony do pauzy tak długo aż nasz program zacznie opróżniać bufor. Wstrzymanie aplikacji wysyłającej lub odbierającej w takiej sytuacji nazywane jest "kontrolą przepływu".
 
-\index{flow control}
+\index{kontrola przepływu}
 
 Pobieranie stron internetowych przy pomocy `urllib`
 ---------------------------------------------------
@@ -196,7 +205,7 @@ Odczytywanie plików binarnych za pomocą `urllib`
 
 Czasami chcesz pobrać nietekstowy (lub binarny) plik, taki jak zdjęcie lub plik wideo. Dane w tych plikach na ogół nie są przydatne do wypisywania na ekranie, jednak za pomocą `urllib` możesz łatwo wykonać kopię pliku znajdującego się pod adresem URL do lokalnego pliku na dysku twardym.
 
-\index{binary file}
+\index{plik binarny}
 
 Schemat postępowania polega na otwarciu adresu URL i użyciu `read` do pobrania całej zawartości dokumentu do zmiennej zawierającej ciąg znaków (`img`), a następnie zapisaniu tej informacji do pliku lokalnego:
 
@@ -217,11 +226,12 @@ python curl2.py
 Skopiowano 230210 znaków.
 ~~~~
 
-Parsowanie HTMLa oraz web scraping
-----------------------------------
+Parsowanie HTMLa, roboty internetowe i web scraping
+---------------------------------------------------
 
-\index{web!scraping}
-\index{parsing HTML}
+\index{web scraping}
+\index{robot internetowy}
+\index{parsowanie HTML}
 
 Jednym z częstych zastosowań `urllib` jest tzw. *web scraping* (dosł. wyskrobywanie danych z sieci). Mamy z nim do czynienia wtedy, gdy piszemy program, który udaje przeglądarkę internetową i pobiera strony, a następnie analizujemy dane zawarte na tych stronach w poszukiwaniu interesujących nas wzorców.
 
@@ -255,13 +265,13 @@ Nasze wyrażenie regularne szuka napisów, które zaczynają się od "href=\"htt
 
 Znak zapytania dodany do `.+?`` wskazuje, że dopasowanie nie być wykonane w trybie "zachłannym". Takie dopasowanie próbuje znaleźć *najmniejszy* możliwy pasujący ciąg znaków, a z kolei zachłanne dopasowanie próbuje znaleźć *największy* możliwy pasujący ciąg znaków.
 
-\index{greedy}
-\index{non-greedy}
+\index{zachłanny}
+\index{niezachłanny}
 
 Do naszego wyrażenia regularnego dodajemy nawiasy, aby wskazać, którą część pasującego napisu chcielibyśmy wydobyć. Program jest następujący:
 
-\index{regex!parentheses}
-\index{parentheses!regular expression}
+\index{regex!nawiasy okrągłe}
+\index{nawiasy okrągłe!wyrażenie regularne}
 
 \VerbatimInput{../code3/urlregex.py}
 
@@ -294,7 +304,7 @@ Problem ten może zostać rozwiązany za pomocą solidnej i stabilnej biblioteki
 Parsowanie HTMLa przy użyciu BeautifulSoup
 ------------------------------------------
 
-\index{BeautifulSoup}
+\index{BeautifulSoup, biblioteka}
 
 Nawet jeśli HTML wygląda jak XML^[Format XML jest opisany w następnym rozdziale.] i niektóre strony faktycznie są starannie skonstruowane jako XML, to niestety większość stron HTML jest zazwyczaj popsuta w taki sposób, że parser XMLa odrzuca całą stronę HTML jako nieprawidłowo sformatowany dokument.
 
@@ -316,9 +326,9 @@ Bardziej szczegółowe informacje na temat instalacji bibliotek za pomocą narz�
 
 Użyjemy `urllib` do odczytania strony, a następnie użyjemy `BeautifulSoup` do wyodrębnienia atrybutów `href` ze znacznika hiperłącza (`a`).
 
-\index{BeautifulSoup}
+\index{BeautifulSoup, biblioteka}
 \index{HTML}
-\index{parsing!HTML}
+\index{parsowanie HTML}
 
 \VerbatimInput{../code3/urllinks.py}
 
@@ -423,22 +433,23 @@ Słowniczek
 
 BeautifulSoup
 :   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, które przeglądarki internetowe zazwyczaj ignorują. Biblioteka BeautifulSoup ma swoją stronę pod adresem [www.crummy.com/software/BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/).
-\index{BeautifulSoup}
+\index{BeautifulSoup, biblioteka}
+
+gniazdo
+:   Połączenie sieciowe pomiędzy dwiema aplikacjami, w którym aplikacje mogą wysyłać i odbierać dane w obu kierunkach.
+\index{gniazdo}
 
 port
 :   Liczba, który generalnie wskazuje, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.
 \index{port}
 
-web scraping
-:   Sytuacja w której program podszywa się pod przeglądarkę internetową, pobiera stronę i przegląda jej zawartość. Często programy podążają za linkami na jednej stronie, by znaleźć następną, dzięki czemu mogą przemierzyć duży zbiór stron lub serwisy społecznościowe.
-\index{socket}
-
-gniazdo
-:   Połączenie sieciowe pomiędzy dwiema aplikacjami, w którym aplikacje mogą wysyłać i odbierać dane w obu kierunkach.
-\index{socket}
-
 robot internetowy
 :   Działanie wyszukiwarki internetowej polegające na pobieraniu strony, a następnie wszystkich stron, do których prowadzą linki z danej strony itd., aż do momentu, gdy mają prawie wszystkie strony w internecie, których używają do zbudowania swojego indeksu wyszukiwania.
+\index{robot internetowy}
+
+web scraping
+:   Sytuacja w której program podszywa się pod przeglądarkę internetową, pobiera stronę i przegląda jej zawartość. Często programy podążają za linkami na jednej stronie, by znaleźć następną, dzięki czemu mogą przemierzyć duży zbiór stron lub serwisy społecznościowe.
+\index{web scraping}
 
 Ćwiczenia
 ---------
