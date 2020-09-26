@@ -4,7 +4,8 @@ Programowanie obiektowe
 Zarządzanie większymi programami
 --------------------------------
 
-\index{object-oriented}
+\index{programowanie obiektowe}
+\index{obiektowe, programowanie}
 
 Na początku książki omówiliśmy cztery podstawowe wzorce programowania, których używamy do tworzenia programów:
 
@@ -33,7 +34,8 @@ Korzystanie z obiektów
 
 Jak się okazuje, w tej książce przez cały czas używaliśmy obiektów. Python dostarcza nam wiele wbudowanych obiektów. Oto prosty kod, w którym kilka pierwszych linii powinno być dla Ciebie w pewien sposób naturalnych i bardzo łatwych do zrozumienia.
 
-\index{list object}
+\index{lista, obiekt}
+\index{obiekt listy}
 
 \VerbatimInput{../code3/party1.py}
 
@@ -90,9 +92,9 @@ Jednym ze sposobów na myślenie o programowaniu obiektowym jest rozdzielenie na
 
 Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której korzystaliśmy z biblioteki BeautifulSoup, to możemy zobaczyć program, który jest skonstruowany poprzez złączenie różnych obiektów w celu wykonania tego zadania:
 
-\index{BeautifulSoup}
+\index{BeautifulSoup, biblioteka}
 \index{HTML}
-\index{parsing!HTML}
+\index{parsowanie HTML}
 
 \VerbatimInput{../code3/urllinks.py}
 
@@ -122,7 +124,9 @@ W podstawowym zakresie, obiektem to po prostu jakiś kod plus struktury danych, 
 
 Obiekt może zawierać szereg funkcji (które nazywamy *metodami*), jak również dane, które są wykorzystywane przez te funkcje. Dane będące częścią obiektu nazywamy *atrybutami*.
 
-\index{class keyword}
+\index{class, słowo kluczowe}
+\index{słowo kluczowe!class}
+\index{atrybut}
 
 Używamy słowa kluczowego `class` do zdefiniowania danych i kodu, które będą składały się na każdy z tych obiektów. Słowo kluczowe `class` zawiera nazwę klasy i rozpoczyna wcięty blok kodu, w którym umieszczamy atrybuty (dane) i metody (kod).
 
@@ -141,10 +145,10 @@ Kontynuując analizę naszego przykładowego program, widzimy pierwszą wykonywa
 an = PartyAnimal()
 ~~~~
 
-\index{construct}
-\index{object}
-\index{instance}
-\index{class}
+\index{tworzenie}
+\index{obiekt}
+\index{instancja}
+\index{klasa}
 
 Tutaj instruujemy Pythona, by skonstruował (tzn. stworzył) *obiekt* lub *instancję* klasy `PartyAnimal`. Wygląda to jak wywołanie funkcji o nazwie klasy. Python konstruuje obiekt z odpowiednimi danymi i metodami i zwraca obiekt, który jest następnie przypisany do zmiennej `an`. W pewnym sensie jest to dość podobne do poniższej linii, której używaliśmy już wcześniej:
 
@@ -192,8 +196,10 @@ Konstruujemy obiekt i czterokrotnie wywołujemy metodę `party`, zarówno zwięk
 Klasy i typy
 ------------
 
-\index{dir}
-\index{type}
+\index{dir, funkcja}
+\index{funkcja!dir}
+\index{type, funkcja}
+\index{funkcja!type}
 
 Jak już widzieliśmy, w Pythonie wszystkie zmienne mają określony typ. Możemy użyć wbudowanej funkcji `dir` do zbadania możliwości danej zmiennej. Możemy również użyć `type` i `dir` z tworzonymi klasami.
 
@@ -215,9 +221,10 @@ Możesz zauważyć, że przy użyciu słowa kluczowego `class` stworzyliśmy now
 Cykl życia obiektu
 ------------------
 
-\index{constructor}
-\index{destructor}
-\index{object lifecycle}
+\index{konstruktor}
+\index{destruktor}
+\index{cykl życia obiektu}
+\index{obiekt, cykl życia}
 
 W poprzednich przykładach definiowaliśmy klasę (szablon), używaliśmy jej do stworzenia instancji (obiektu) tej klasy, a następnie korzystaliśmy z instancji. Kiedy program zakończy pracę, wszystkie zmienne są porzucane. Zazwyczaj nie zastanawiamy się zbytnio nad tworzeniem i usuwaniem zmiennych. Jednak gdy nasze obiekty stają się coraz bardziej złożone, często musimy podjąć wewnątrz obiektu pewne działania, tak aby ustawić niektóre rzeczy w momencie gdy obiekt jest konstruowany i ewentualnie usunąć pewne rzeczy gdy obiekt jest porzucany.
 
@@ -279,6 +286,10 @@ Sally - zliczenie imprezek - 2
 Dziedziczenie
 -------------
 
+\index{klasa bazowa}
+\index{klasa pochodna}
+\index{dziedziczenie}
+
 Inną przydatną cechą programowania obiektowego jest możliwość stworzenia nowej klasy poprzez rozszerzenie już istniejącej. Podczas tej operacji klasę źródłową nazywamy *klasą bazową*, a nową klasę nazywamy *klasą pochodną* lub *klasą potomną*.
 
 Kontynuując poprzedni przykład, przeniesiemy naszą klasę `PartyAnimal` do osobnego pliku `party.py`.
@@ -328,37 +339,37 @@ Słowniczek
 
 atrybut
 :   Zmienna, która jest częścią klasy.
-\index{attribute}
-
-klasa
-:   Szablon, który może być użyty do stworzenia obiektu. Definiuje atrybuty i metody, które będą składały się na obiekt.
-\index{class}
-
-klasa pochodna
-:   Nowa klasa utworzona w momencie rozszerzenia klasy bazowej. Klasa pochodna dziedziczy wszystkie atrybuty i metody klasy bazowej.
-\index{child class}
-
-konstruktor
-:   Opcjonalna, specjalnie nazwana metoda (`__init__`), która jest wywoływana w momencie, gdy klasa jest używana do tworzenia obiektu. Zazwyczaj jest ona używana do ustawienia początkowych wartości obiektu.
-\index{constructor}
+\index{atrybut}
 
 destruktor
 :   Opcjonalna, specjalnie nazwana metoda (`__del__`), która jest wywoływana w momencie, gdy obiekt jest niszczony. Destruktory są rzadko używane.
-\index{destructor}
+\index{destruktor}
 
 dziedziczenie
 :   Kiedy tworzymy nową klasę poprzez rozszerzenie istniejącej już klasy. Klasa pochodna posiada wszystkie atrybuty i metody klasy bazowej oraz dodatkowe atrybuty i metody zdefiniowane przez klasę pochodną.
-\index{inheritance}
+\index{dziedziczenie}
 
-metoda
-:   Funkcja, która jest zawarta w klasie i obiektach, które są z niej utworzone. Niektóre wzorce obiektowe używają do opisu tego pojęcia "wiadomość" (ang. message) zamiast "metoda".
-\index{method}
-\index{message}
-
-obiekt
-:   Utworzona instancja klasy. Obiekt zawiera wszystkie atrybuty i metody, które zostały zdefiniowane przez klasę. Niektóre dokumentacje obiektowe używają terminu "instancja" zamiennie z terminem "obiekt".
-\index{method}
+klasa
+:   Szablon, który może być użyty do stworzenia obiektu. Definiuje atrybuty i metody, które będą składały się na obiekt.
+\index{klasa}
 
 klasa bazowa
 :   Klasa, która jest rozszerzana by utworzyć nową klasę pochodną. Klasa bazowa udostępnia klasie pochodnej wszystkie swoje metody i atrybuty.
-\index{parent class}
+\index{klasa bazowa}
+
+klasa pochodna
+:   Nowa klasa utworzona w momencie rozszerzenia klasy bazowej. Klasa pochodna dziedziczy wszystkie atrybuty i metody klasy bazowej.
+\index{klasa pochodna}
+
+konstruktor
+:   Opcjonalna, specjalnie nazwana metoda (`__init__`), która jest wywoływana w momencie, gdy klasa jest używana do tworzenia obiektu. Zazwyczaj jest ona używana do ustawienia początkowych wartości obiektu.
+\index{konstruktor}
+
+metoda
+:   Funkcja, która jest zawarta w klasie i obiektach, które są z niej utworzone.
+\index{metoda}
+
+obiekt
+:   Utworzona instancja klasy. Obiekt zawiera wszystkie atrybuty i metody, które zostały zdefiniowane przez klasę. Niektóre dokumentacje obiektowe używają terminu "instancja" zamiennie z terminem "obiekt".
+\index{obiekt}
+\index{instancja}
