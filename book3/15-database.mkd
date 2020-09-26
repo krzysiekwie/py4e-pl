@@ -4,11 +4,12 @@ Korzystanie z baz danych i języka SQL
 Czym jest baza danych?
 ----------------------
 
-\index{database}
+\index{baza danych}
 
 *Baza danych* to plik, który jest zorganizowany w specjalny sposób by mógł przechowywać dane. Większość baz danych jest zorganizowana tak jak słownik w tym sensie, że mapują one klucze na wartości. Największa różnica polega na tym, że baza danych znajduje się na dysku (lub innym trwałym nośniku danych), a więc zachowuje swoje dane po zakończeniu programu. Ponieważ baza danych przechowywana jest na trwałym nośniku, może ona przechowywać znacznie więcej danych niż słownik, co jest ograniczone wielkością pamięci w komputerze.
 
-\index{database!indexes}
+\index{baza danych!indeksy}
+\index{indeksy}
 
 Podobnie jak słownik, oprogramowanie bazodanowe jest zaprojektowane tak, aby dodawania i dostęp do danych był bardzo szybki, nawet dla dużych ilości danych. Oprogramowanie bazodanowe utrzymuje swoją wydajność poprzez budowanie *indeksów*, dzięki czemu dane są dodawane do bazy w taki sposób by umożliwić komputerowi szybkie przejście do konkretnego wpisu.
 
@@ -27,6 +28,23 @@ Kiedy pierwszy raz spojrzysz na bazę danych, to będzie ona wyglądała jak pli
 
 W technicznych opisach relacyjnych baz danych pojęcia tabeli, wiersza i kolumny są bardziej formalnie nazywane odpowiednio *relacją*, *krotką* i *atrybutem*. W tym rozdziale użyjemy mniej formalnych pojęć.
 
+\index{krotka}
+\index{baza danych!krotka}
+\index{wiersz}
+\index{baza danych!wiersz}
+
+\index{atrybut}
+\index{kolumna}
+\index{pole}
+\index{baza danych!atrybut}
+\index{baza danych!kolumna}
+\index{baza danych!pole}
+
+\index{relacja}
+\index{tabela}
+\index{baza danych!relacja}
+\index{baza danych!tabela}
+
 Przeglądarka baz SQLite
 -----------------------
 
@@ -43,6 +61,13 @@ Tworzenie tabeli w bazie danych
 
 Bazy danych wymagają bardziej szczegółowo zdefiniowanej struktury niż listy czy słowniki w Pythonie^[SQLite faktycznie pozwala na pewną elastyczność w typie danych przechowywanych w kolumnie, ale w tym rozdziale nasze typy danych będą ściśle określone, dzięki czemu pokazane tutaj idee będą miały zastosowanie również w innych systemach baz danych, np. w MySQL.].
 
+\index{atrybut}
+\index{kolumna}
+\index{pole}
+\index{baza danych!atrybut}
+\index{baza danych!kolumna}
+\index{baza danych!pole}
+
 Kiedy w bazie danych tworzymy *tabelę*, to musimy z wyprzedzeniem podać nazwę każdej *kolumny* występującej w tabeli oraz typ danych, który zamierzamy przechowywać w każdej z *kolumn*. Kiedy oprogramowanie bazy danych wie jaki typ danych będzie użyty w każdej kolumnie, może dzięki temu wybrać najbardziej efektywny sposób przechowywania i wyszukiwania danych w oparciu o ich typ.
 
 Możesz zapoznać się z różnymi typami danych obsługiwanymi przez SQLite pod następującym adresem URL:
@@ -53,17 +78,20 @@ Zdefiniowanie z góry struktury dla Twoich danych może się początkowo wydawa�
 
 Kod tworzący plik bazy danych i tabelę o nazwie `Utwory` z dwiema kolumnami jest następujący:
 
-\index{sqlite3 module}
-\index{module!sqlite3}
+\index{sqlite3, moduł}
+\index{moduł!sqlite3}
 
 \VerbatimInput{../code3/db1.py}
 
-\index{connect function}
-\index{function!connect}
-\index{cursor function}
-\index{function!cursor}
+\index{connect, funkcja}
+\index{funkcja!connect}
+\index{cursor, funkcja}
+\index{funkcja!cursor}
 
 Operacja `connect` nawiązuje "połączenie" z bazą danych przechowywaną w pliku `muzyka.sqlite`, który znajduje się w bieżącym katalogu. Jeśli plik ten nie istnieje, to zostanie utworzony. Powodem, dla którego nazywa się to "połączeniem" jest to, że czasami baza danych przechowywana jest na "serwerze baz danych", który jest innym komputerem niż ten, na którym uruchamiamy naszą aplikację. W naszych prostych przykładach baza danych będzie po prostu plikiem lokalnym w tym samym katalogu co uruchamiany przez nas kod Pythona.
+
+\index{kursor}
+\index{baza danych!kursor}
 
 *Kursor* jest podobny uchwytu pliku i używamy go do wykonania operacji na danych przechowywanych w bazie. Wywołanie `cursor()` jest koncepcyjnie bardzo podobne do wywołania `open()` podczas pracy z plikami tekstowymi.
 
@@ -381,6 +409,9 @@ W istocie, tworząc tabelę `Obserwuje` modelujemy "związek", w którym jedna o
 Programowanie z użyciem wielu tabel
 -----------------------------------
 
+index{klucz główny}
+\index{baza danych!klucz główny}
+
 Napiszemy jeszcze raz kod robota internetowego do chodzenia po kontach użytkowników Twittera, ale tym razem używając dwóch tabel i kluczy głównych i odniesień między tabelami. Dodatkowo w tej wersji programu zwiększymy liczbę pobieranych znajomych z 20 do 100. Poniżej znajduje się nowa wersja programu:
 
 \VerbatimInput{../code3/twfriends.py}
@@ -396,6 +427,9 @@ Nasz program zaczyna się komplikować, ale ilustruje schematy programowania, kt
 Po kolei zajmiemy się każdym z tych schematów.
 
 ### Ograniczenia w tabelach bazy danych
+
+\index{ograniczenie}
+\index{baza danych!ograniczenie}
 
 Projektując struktury naszych tabel możemy powiedzieć systemowi bazy danych, że chcielibyśmy aby egzekwował on od nas kilka zasad. Reguły te pomagają nam uniknąć popełniania błędów i wprowadzania do naszych tabel błędnych danych. Kiedy tworzymy nasze tabele:
 
@@ -527,6 +561,15 @@ Możesz zauważyć pola `id`, `nazwa` i `pobrana` z tabeli `Osoby` oraz  numery 
 Trzy rodzaje kluczy
 -------------------
 
+\index{klucz główny}
+\index{baza danych!klucz główny}
+
+\index{klucz logiczny}
+\index{baza danych!klucz logiczny}
+
+\index{klucz obcy}
+\index{baza danych!klucz obcy}
+
 Teraz, gdy zaczęliśmy budować model danych umieszczając nasze dane w wielu połączonych ze sobą tabelach i łącząc wiersze w tych tabelach za pomocą *kluczy*, musimy przyjrzeć się trochę terminologii dotyczącej kluczy. Ogólnie rzecz biorąc, istnieją trzy rodzaje kluczy używanych w modelu bazy danych.
 
 -   *Klucz logiczny* to klucz, którego "rzeczywisty świat" może użyć do wyszukiwania wierszy. W naszym przykładowym modelu danych, pole `nazwa` jest kluczem logicznym. Jest to nazwa ekranowa użytkownika i rzeczywiście szukamy wiersza użytkownika kilka razy w programie używając pola `nazwa`. Często okazuje się, że sensowne jest dodanie ograniczenia `UNIQUE` do klucza logicznego. Ponieważ klucz logiczny jest tym, w jaki sposób z zewnętrznego świata szukamy danego wiersza, nie ma sensu zezwalać w tabeli na wiele wierszy o tej samej wartości.
@@ -607,6 +650,9 @@ Możesz zbudować prostą bazę danych z pojedynczą tabelą pasującą do wielu
 Debugowanie
 -----------
 
+\index{przeglądarka bazy danych}
+\index{bazy danych!przeglądarka}
+
 Jednym z powszechnych schematów postępowania podczas tworzenia w Pythonie programu do łączenia się z bazą danych SQLite jest uruchomienie programu i sprawdzenie wyników za pomocą przeglądarki bazy danych SQLite. Przeglądarka pozwala na szybkie sprawdzenie, czy Twój program działa poprawnie.
 
 Musisz być tutaj ostrożny, ponieważ SQLite dba o to, by dwa programy nie zmieniały jednocześnie tych samych danych. Na przykład, jeśli otworzysz bazę danych w przeglądarce i dokonasz zmiany w bazie danych, ale w przeglądarce nie naciśniesz  jeszcze przycisku "zapisz", to przeglądarka "zablokuje" plik bazy danych i uniemożliwi dostęp do niego innym programom. W szczególności, Twój program napisany Pythonie nie będzie w stanie uzyskać dostępu do zablokowanego pliku.
@@ -618,46 +664,64 @@ Słowniczek
 
 atrybut
 :   Jedna z wartości w krotce. Częściej nazywany "kolumną" lub "polem".
-\index{attribute}
+\index{atrybut}
+\index{kolumna}
+\index{pole}
+\index{baza danych!atrybut}
+\index{baza danych!kolumna}
+\index{baza danych!pole}
 
 indeks
 :   Dodatkowe dane, które oprogramowanie bazy danych przechowuje w postaci wierszy i wstawia dodatkowo do tabeli, dzięki czemu wyszukiwanie informacji odbywa się bardzo szybko.
-\index{index}
+\index{indeks}
+\index{baza danych!indeksy}
 \index{}
 
 klucz główny
 :   Wartość numeryczna przypisana do każdego wiersza tabeli, która jest używana do odwołania się z innej tabeli do tego konkretnego wiersza. Często baza danych jest skonfigurowana tak, aby automatycznie przydzielać klucze główne w miarę wstawiania kolejnych wierszy.
-\index{primary key}
+\index{klucz główny}
+\index{baza danych!klucz główny}
 
 klucz logiczny
 :   Klucz, którego "świat zewnętrzny" używa do wyszukiwania konkretnego wiersza. Na przykład w tabeli z kontami użytkowników, adres email danej osoby może być dobrym kandydatem na klucz logiczny dla danych o użytkowniku.
-\index{logical key}
+\index{klucz logiczny}
+\index{baza danych!klucz logiczny}
 
 klucz obcy
 :   Klucz numeryczny, który wskazuje na klucz główny jakiegoś wiersza w innej tabeli. Klucze obce ustanawiają związki między wierszami przechowywanymi w różnych tabelach.
-\index{foreign key}
+\index{klucz obcy}
+\index{baza danych!klucz obcy}
 
 krotka
 :   Pojedynczy wpis w tabeli bazy danych, który jest zbiorem atrybutów. Częściej używa się określenia "wiersz".
-\index{tuple}
+\index{krotka}
+\index{baza danych!krotka}
+\index{wiersz}
+\index{baza danych!wiersz}
 
 kursor
 :   Kursor pozwala na programistyczne wykonywanie poleceń SQL w bazie danych i pobieranie danych z bazy. Kursor jest podobny do gniazda połączeń sieciowych lub uchwytu pliku.
-\index{cursor}
+\index{kursor}
+\index{baza danych!kursor}
 
 normalizacja
 :   Projektowanie modelu danych w taki sposób, aby żadne dane nie były powielone. Każdą porcję danych przechowujemy w bazie tylko w jednym miejscu i z innych miejsc odwołujemy się do niej za pomocą klucza obcego.
-\index{normalization}
-\index{database normalization}
+\index{normalizacja}
+\index{baza danych!normalizacja}
 
 ograniczenie
 :   Gdy mówimy bazie danych, by egzekwowała jakąś regułę/zasadę na kolumnie lub wierszu tabeli. Częstym ograniczeniem jest wymuszenie by w danej kolumnie nie było zduplikowanych wartości (tzn. by wszystkie wartości były unikalne).
-\index{constraint}
+\index{ograniczenie}
+\index{baza danych!ograniczenie}
 
 przeglądarka bazy danych
 :   Oprogramowanie, które pozwala na bezpośrednie połączenie z bazą danych i bezpośrednie zarządzanie bazą danych, bez konieczności pisania osobnego programu.
-\index{database browser}
+\index{przeglądarka bazy danych}
+\index{bazy danych!przeglądarka}
 
 relacja
 :   Obszar w obrębie bazy danych, który zawiera krotki i atrybuty. Częściej używa się określenia "tabela".
-\index{relation}
+\index{relacja}
+\index{tabela}
+\index{baza danych!relacja}
+\index{baza danych!tabela}

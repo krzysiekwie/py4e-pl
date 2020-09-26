@@ -27,15 +27,13 @@ Polish translation progress
 | `12-network.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `13-web.mkd`           | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `14-objects.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `15-database.mkd`      | ☒    | ☒   | ☒    | ☐    | ☒(*)   | ☐        | ☐     | ☐          | ☐    |
+| `15-database.mkd`      | ☒    | ☒   | ☒    | ☒    | ☒(*)   | ☐        | ☐     | ☐          | ☐    |
 | `16-viz.mkd`           | ☒    | ☒   |       | ☐    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
-| links to code repo...  |      |      |       |      |         |          |         |            |       |
 | remove "przyp. tłum."  |      |      |       |      |         |          |         |            |       |
 | English translation of index keywords |         |            |       |
-| Better index keywords in Chapter 15 about databases |         |            |       |
 | Functions and methods with `()` |         |            |       |
 | Inline code within grave accents |         |            |       |
 | `pip install...` -> `pip3 install...` |         |            |       |
