@@ -50,13 +50,13 @@ programowania używamy kropki - przyp. tłum.] (ang. *floating point*).
 \index{typ}
 \index{typ!ciągu znaków}
 \index{typ!str}
-\index{class!str}
+\index{klasa!str}
 \index{typ!int}
 \index{typ!całkowitoliczbowy}
-\index{class!int}
+\index{klasa!int}
 \index{typ!float}
 \index{typ!zmiennoprzecinkowy}
-\index{class!float}
+\index{klasa!float}
 
 ~~~~ {.python .trinket height="120"}
 >>> type(3.2)

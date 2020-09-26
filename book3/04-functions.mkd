@@ -615,6 +615,11 @@ wartość, która ma swój własny typ:
 <class 'NoneType'>
 ~~~~
 
+\index{return, instrukcja}
+\index{instrukcja!return}
+\index{return, słowo kluczowe}
+\index{słowo kluczowe!return}
+
 Aby zwrócić wynik z funkcji, używamy w niej instrukcji `return`. Na przykład, 
 możemy napisać bardzo prostą funkcję o nazwie `addtwo`, która dodaje dwie 
 liczby i zwraca wynik dodawania.

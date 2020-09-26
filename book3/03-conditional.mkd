@@ -102,6 +102,8 @@ Instrukcja warunkowa
 \index{instrukcja!warunkowa}
 \index{if, instrukcja}
 \index{instrukcja!if}
+\index{if, słowo kluczowe}
+\index{słowo kluczowe!if}
 \index{wykonanie warunkowe}
 
 Aby napisać użyteczny program, prawie zawsze potrzebujemy możliwości sprawdzenia
