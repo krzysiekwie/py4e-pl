@@ -3,13 +3,14 @@ Wyrażenia regularne
 
 Do tej pory odczytywaliśmy dane poprzez pliki, szukaliśmy wzorców i wyodrębnialiśmy różne fragmenty linii, które wydawały nam się interesujące. Używaliśmy metod związanych z ciągami znaków, takich jak `split` i `find`, a także używaliśmy list i wycinania fragmentów napisów do wyodrębnienia części linii.
 
-\index{regular expressions}
+\index{wyrażenia regularne}
 \index{regex}
-\index{re module}
+\index{re, moduł}
+\index{moduł!re}
 
 Zadanie wyszukiwania i wyodrębniania jest tak często wykonywane, że Python ma bardzo wszechstronną i wydajną bibliotekę o nazwie *wyrażenia regularne*, która dość elegancko radzi sobie z tymi zadaniami. Powodem, dla którego nie wprowadziliśmy wcześniej w książce wyrażeń regularnych jest to, że choć mają dużo możliwości i są bardzo przydatne, to niestety są trochę skomplikowane, a przyzwyczajenie się do ich składnia wymaga trochę czasu.
 
-Wyrażenia regularne są prawie własnym, małym językiem programowania do wyszukiwania i parsowania ciągów znaków. W rzeczywistości, o wyrażeniach regularnych napisano już wiele książek. W tym rozdziale zajmiemy się tylko podstawami wyrażeń regularnych. Więcej szczegółów na temat wyrażeń regularnych znajdziesz na stronie:
+Wyrażenia regularne (w skrócie z ang. *regex*) są prawie własnym, małym językiem programowania do wyszukiwania i parsowania ciągów znaków. W rzeczywistości, o wyrażeniach regularnych napisano już wiele książek. W tym rozdziale zajmiemy się tylko podstawami wyrażeń regularnych. Więcej szczegółów na temat wyrażeń regularnych znajdziesz na stronie:
 
 <https://pl.wikipedia.org/wiki/Wyrażenie_regularne>
 
@@ -26,7 +27,7 @@ Biblioteka wyrażeń regularnych `re` musi być zaimportowana w Twoim programie,
 
 Otwieramy plik, przechodzimy przez każdą linię i używamy wyrażenia regularnego w `search()` do wypisania tylko tych linii, które zawierają napis "From:". Powyższy program nie wykorzystuje prawdziwej mocy wyrażeń regularnych, ponieważ równie łatwo mogliśmy użyć `line.find()` do uzyskania tego samego wyniku.
 
-\index{string!find}
+\index{ciąg znaków!find}
 
 Moc wyrażeń regularnych ujawnia się wtedy, gdy dodajemy do ciągu znaków wyszukiwania specjalne znaki, które pozwalają nam dokładniej kontrolować to, które linie pasują do tego napisu. Dodanie tych specjalnych znaków do naszego wyrażenia regularnego pozwala nam na wyrafinowane dopasowanie i ekstrakcję danych przy jednoczesnym zachowaniu bardzo małej ilości kodu.
 
@@ -39,15 +40,17 @@ Na przykład, znak karety (tzw. daszek) jest używany w wyrażeniach regularnych
 
 Teraz będziemy dopasowywać tylko te linie, które *zaczynają się od* ciągu znaków "From:". Jest to wciąż bardzo prosty przykład, który mogliśmy zrealizować równoważnie przy pomocy metody `startswith()` dla ciągów znaków. Jednak wspomniany wyżej symbol służy tylko do zwrócenia uwagi, że wyrażenia regularne zawierają specjalne znaki akcji, które dają nam większą kontrolę nad tym, co będzie pasować do wyrażenia regularnego.
 
-\index{string!startswith}
+\index{ciąg znaków!startswith}
 
 Dopasowywanie znaków w wyrażeniach regularnych
 ----------------------------------------------
 
 Istnieje wiele innych specjalnych znaków, które pozwalają nam budować jeszcze bardziej wyrafinowane wyrażenia regularne. Najczęściej używanym znakiem specjalnym jest kropka, która dopasowuje każdy znak.
 
-\index{wild card}
-\index{regex!wild card}
+\index{wieloznacznik}
+\index{symbol wieloznaczny}
+\index{regex!wieloznacznik}
+\index{regex!symbol wieloznaczny}
 
 W poniższym przykładzie, wyrażenie regularne `F...m:` pasuje do któregokolwiek z ciągów znaków "From:", "Fxxm:", "F12m:" lub "F!@m:", ponieważ kropka w wyrażeniu regularnym oznacza dopasowanie dowolnego znaku.
 
@@ -85,7 +88,8 @@ From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
 
 Poprzez dodanie kolejnego znaku można też wskazać, że znak gwiazdki lub plusa nie ma być aż tak "zachłanny". Więcej informacji na temat wyłączania zachłannego zachowania tych znaków znajduje się w dokumentacji.
 
-\index{greedy}
+\index{zachłanny}
+\index{dopasowanie zachłanne}
 
 Wyciąganie danych przy użyciu wyrażeń regularnych
 -------------------------------------------------
@@ -102,7 +106,6 @@ Author: stephen.marquard@uct.ac.za
 
 Nie chcemy pisać specjalnego kodu dla każdego z typów linii oraz różnego dzielenia i wycinania napisów dla przeczególnych typów linii. Następujący program używa `findall()` do znalenia linii z adresami mailowymi i do wyciągnięcia jednego lub więcej adresów mailowych z tych linii.
 
-\index{findall}
 \index{regex!findall}
 
 \VerbatimInput{../code3/re05.py} 
@@ -155,7 +158,7 @@ Oto nasze nowe wyrażenie regularne:
 
 Robi się to trochę skomplikowane i możesz zacząć widzieć, dlaczego wyrażenia regularne są własnym, małym językiem. Tłumacząc to wyrażenie regularne na ludzki język, szukamy podciągów, które rozpoczynają się *pojedynczą* małą literą, dużą literą lub liczbą "[a-zA-Z0-9]", po których następuje zero lub więcej niebiałych znaków (`\S*`), po których następuje znak małpy, po których następuje zero lub więcej niebiałych znaków (`\S*`), po których następuje duża lub mała litera. Zauważ, że zmieniliśmy znak `+` na `*`, tak by wskazać zero lub więcej niebiałych znaków, ponieważ `[a-zA-Z0-9]` jest już jednym niebiałym znakiem. Pamiętaj, że `*` lub `+` odnosi się do pojedynczego znaku znajdującego się bezpośrednio po lewej stronie plusa lub gwiazdki.
 
-\index{regex!character sets(brackets)}
+\index{regex!zbiory znaków (nawiasy kwadratowe)}
 
 Jeśli użyjemy tego wyrażenia regularnego w naszym programie, nasze dane są bardziej przyzwoite:
 
@@ -220,12 +223,12 @@ X-DSPAM-Probability: 0.0000
 
 Teraz musimy rozwiązać problem wyodrębniania liczb. Chociaż byłoby to wystarczająco proste zrobić to przy użyciu `split`, to jednak możemy użyć kolejnej cechy wyrażeń regularnych, tak by w tym samym czasie zarówno wyszukać jak i przetworzyć linię.
 
-\index{string!split}
+\index{ciąg znaków!split}
 
 Nawiasy okrągłe są kolejną szczególną cechą wyrażeń regularnych. Kiedy dodajemy nawiasy do wyrażenia regularnego, są one ignorowane podczas dopasowywania ciągu znaków. Ale kiedy używasz `findall()`, nawiasy wskazują, że podczas gdy chcesz by całe wyrażenie pasowało, to jesteś zainteresowany tylko wyciągnięciem części podciągu, który pasuje do wyrażenia regularnego.
 
-\index{regex!parentheses}
-\index{parentheses!regular expression}
+\index{regex!nawiasy okrągłe}
+\index{nawiasy okrągłe!wyrażenie regularne}
 
 Tak więc dokonujemy następującej zmiany w naszym programie:
 
@@ -284,6 +287,8 @@ From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 ~~~~
 
 i dla każdej linii chcieliśmy wyodrębnić godzinę. Wcześniej robiliśmy to za pomocą dwóch wywołań `split`. Najpierw linia była dzielona na słowa, a następnie wyciągaliśmy piąte słowo i ponownie dzieliliśmy je po znaku dwukropka, tak aby wyciągnąć pierwsze dwa znaki, które nas interesowały.
+
+\index{kruchy kod}
 
 Pomimo działania, w rzeczywistości skutkowało to dość *kruchym kodem*, który zakłada, że linie są ładnie sformatowane. Jeśli dodałbyś wystarczająco dużo sekcji sprawdzających błędy (lub duży blok try/except) by upewnić się, że Twój program nigdy nie zawiedzie podczas analizy źle sformatowanych linii, kod rozrósłby się do 10-15 linii kodu, które byłyby dość ciężkie do odczytania.
 
@@ -439,22 +444,28 @@ Słowniczek
 
 dopasowanie zachłanne
 :   Pojęcie oznaczające, że znaki `+` i `*` w wyrażeniu regularnym rozszerzają się na zewnątrz, tak aby dopasować jak największy możliwy ciąg znaków.
-\index{greedy}
-\index{greedy matching}
+\index{zachłanny}
+\index{dopasowanie zachłanne}
 
 grep
 :   Polecenie dostępne w większości systemów unixowych, które przeszukuje pliki tekstowe w poszukiwaniu linii pasujących do wyrażeń regularnych. Nazwa komendy oznacza "Generalized Regular Expression Parser", czyli uogólniony parser wyrażeń regularnych.
 \index{grep}
 
 kruchy kod
-:   Kod programu, który działa tylko wtedy, gdy dane wejściowe są w określonym formacie, ale jest podatny na wysypanie całego programu, jeśli wystąpią jakieś odchylenia od właściwego formatu. Nazywamy to "kruchym kodem", ponieważ można go łatwo złamać.
+:   Kod programu, który działa tylko wtedy, gdy dane wejściowe są w określonym formacie, ale jest podatny na wysypanie całego programu, jeśli wystąpią jakieś odchylenia od właściwego formatu. Nazywamy to "kruchym kodem", ponieważ można go łatwo zepsuć.
+\index{kruchy kod}
 
 wieloznacznik
 :   Znak specjalny, który pasuje do dowolnego znaku. W wyrażeniach regularnych znakiem wieloznacznika jest kropka.
-\index{wild card}
+\index{wieloznacznik}
+\index{symbol wieloznaczny}
+\index{regex!wieloznacznik}
+\index{regex!symbol wieloznaczny}
 
 wyrażenie regularne
 :   Język służący do tworzenia bardziej złożonych ciągów wyszukiwania. Wyrażenie regularne może zawierać znaki specjalne, które wskazują, że szukane wyrażenie pasuje tylko do początku lub końca wiersza lub wielu innych podobnych możliwości.
+\index{wyrażenie regularne}
+\index{regex}
 
 Ćwiczenia
 ---------
