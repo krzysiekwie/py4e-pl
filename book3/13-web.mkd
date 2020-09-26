@@ -166,6 +166,8 @@ Posiadamy teraz możliwość wymiany danych pomiędzy aplikacjami przy użyciu p
 
 Następnym krokiem jest rozpoczęcie definiowania i dokumentowania "umów" pomiędzy aplikacjami wykorzystującymi powyższe techniki. Ogólna nazwa takiej umowy pomiędzy aplikacjami to *interfejsy programowania aplikacji* (ang. Application Program Interfaces, API). Kiedy używamy API, zazwyczaj jeden z programów udostępnia zestaw *usług* do wykorzystania przez inne aplikacje i publikuje API (tzn. "zasady"), których należy przestrzegać, by uzyskać dostęp do usług świadczonych przez ten program.
 
+\index{SOA}
+
 Gdy zaczynamy budować nasze programy, w których działanie obejmuje dostęp do usług świadczonych przez inne programy, nazywamy to podejście *architekturą zorientowaną na usługi* (ang, Service-Oriented Architecture, SOA). Podejście SOA to takie, w którym cała nasza aplikacja korzysta z usług innych aplikacji. Podejście inne niż SOA to takie, w którym aplikacja jest pojedynczą, samodzielną aplikacją, która zawiera cały kod niezbędny do jej implementacji i wdrożenia.
 
 Podczas korzystania z sieci widzimy wiele przykładów SOA. Możemy wejść na stronę internetową i zarezerwować podróże lotnicze, hotele i wypożyczyć samochody, a wszystko to z poziomu jednej strony. Dane dotyczące hoteli nie są przechowywane na serwerach linii lotniczych. Zamiast tego, serwery linii lotniczych kontaktują się z usługami znajdującymi się na serwerach rezerwacji hotelowychm pobierają dane dotyczące hoteli i przedstawiają je użytkownikowi. Kiedy użytkownik wyraża zgodę na dokonanie rezerwacji hotelowej za pomocą strony internetowej linii lotniczych, strona ta korzysta z innej usługi internetowej w systemach rezerwacji hotelowych, tak aby faktycznie dokonać tej rezerwacji. A gdy przychodzi czas, by obciążyć Twoją kartę płatniczą za całą transakcję, w proces ten włączają się jeszcze inne serwery.
@@ -180,7 +182,7 @@ Bezpieczeństwo i korzystanie z API
 ----------------------------------
 
 \index{OAuth}
-\index{API!key}
+\index{API!klucz}
 
 Dość często zdarza się, że chcąc skorzystać z API jakiegoś dostawcy, musisz posiadać tzw. klucz API. Ogólna idea jest taka, że dostawcy usług chcą wiedzieć, kto korzysta z ich usług i w jakim stopniu ich używa. Być może mają oni darmowe i płatne wersje swoich usług lub mają politykę ograniczającą liczbę zapytań, które pojedyncza osoba może wysłać w danym odcinku czasu.
 
@@ -220,8 +222,8 @@ Aplikacja nr 1: usługa sieciowa OpenStreetMap do geokodowania
 -------------------------------------------------------------
 
 \index{OpenStreetMap}
-\index{geocoding}
-\index{web service}
+\index{geokodowanie}
+\index{usługa sieciowa}
 
 OpenStreetMap posiada usługę internetową Nominatim, który pozwala nam korzystać z ich dużej bazy danych geograficznych. Możemy przesłać do ich geokodującego API ciąg znaków geograficznych, takich jak "Ann Arbor, MI", i sprawić, że OpenStreetMap zwróci swoje najbardziej prawdopodobne przypuszczenie dotyczące tego, gdzie na mapie możemy odnaleźć nasz ciąg znaków.
 
@@ -229,11 +231,15 @@ Usługa geokodowania jest bezpłatna, ale ograniczona ilościowo, więc w aplika
 
 *Używając bezpłatnego API, takiego jak API geokodowania OpenStreetMap, korzystanie z zasobów odbywa się z poszanowaniem pewnych zasad. Jeśli zbyt wiele osób będzie nadużywać danej usługi, to np. OpenStreetMap może zrezygnować z udostępniania bezpłatnej wersji lub znacznie ją ograniczyć.*
 
-\index{rate limiting}
+\index{ograniczenie szybkości}
 
 Możesz zapoznać się z dokumentacją online dotyczącą tej usługi^[<https://nominatim.org/release-docs/develop/api/Search/>], ale jest ona na tyle prosta, że możesz ją nawet przetestować za pomocą przeglądarki, wpisując w niej następujący adres URL:
 
 [`https://nominatim.openstreetmap.org/search.php?q=Ann%20Arbor%2C%20MI&format=geojson&limit=1`](https://nominatim.openstreetmap.org/search.php?q=Ann%20Arbor%2C%20MI&format=geojson&limit=1)
+
+\index{GeoJSON}
+
+Usługa zwraca nam dane w formacie GeoJSON. Jest to otwarty standard formatu danych przeznaczony do przedstawiania prostych obiektów geograficznych wraz z ich atrybutami nieprzestrzennymi i bazuje on na JSONie.
 
 Poniżej znajduje się prosta aplikacja zachęcająca użytkownika do wyszukania informacji geograficznych o wprowadzonej nazwie miejsca. Aplikacja wywołuje API geokodowania OpenStreetMap i pobiera informacje ze zwróconego JSONa.
 
