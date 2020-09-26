@@ -6,8 +6,8 @@ Polish translation progress
 
 | Element                | Text | Code | Trinket | Index | Figures | Lectures | YouTube | Autograder | Review |
 |------------------------|------|------|-------|-------|---------|----------|---------|------------|--------|
-| `A0-preface.mkd`       | ☒    |      |      | ☐     |         |          |         |            | ☐    |
-| `AA-contrib.mkd`       | ☒    |      |      | ☐     |         |          |         |            | ☐    |
+| `A0-preface.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
+| `AA-contrib.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
 | `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☐    |
 | `install.php`          | ☒    |      |      |       |         |          |         |            | ☐    |
 | `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☐    |

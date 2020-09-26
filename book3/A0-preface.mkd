@@ -49,7 +49,7 @@ Ostatecznym celem wszystkich tych zmian jest przejście od informatyki w znaczen
 
 Studenci, których ta książka zainteresuje i będą chcieli dalej zgłębiać poruszaną tematykę, powinni zajrzeć do książki Allena B. Downey'a *Think Python*. Ponieważ te dwie książki w dużym stopniu nakładają się na siebie, studenci szybko nabędą umiejętności w dodatkowych technicznych aspektach programowania i myślenia algorytmicznego, które zostały omówione w książce *Think Python*. A biorąc pod uwagę, że książki mają podobny styl narracji, czytelnicy powinni być w stanie szybko przejść przez *Think Python* przy minimalnym wysiłku.
 
-\index{Creative Commons License}
+\index{licencja Creative Commons}
 \index{CC-BY-SA}
 \index{BY-SA}
 

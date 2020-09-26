@@ -67,7 +67,7 @@ Moja pierwsza wersja książki była surowa, ale działała. Studenci czytali i 
 
 Wydałem tę książkę na licencji GNU Free Documentation License, która pozwala jej użytkownikom ją kopiować, modyfikować i rozpowszechniać.
 
-\index{GNU Free Documentation License}
+\index{licencja GNU Free Documentation License}
 \index{Free Documentation License, GNU}
 
 A teraz najfajniejsza część tej historii. Jeff Elkner, nauczyciel z liceum w Virginii, włączył moją książkę do swojego programu nauczania i przetłumaczył ją na Pythona. Wysłał mi kopię swojego tłumaczenia, a ja doznałem niezwykłego doświadczenia w nauce Pythona, czytając moją własną książkę.
@@ -91,7 +91,7 @@ Dziękuję również Chrisowi Meyersowi, który przyczynił się do powstania ki
 I dziękuję Fundacji Wolnego Oprogramowania za opracowanie GNU Free
 Documentation License, co pomogło mi w umożliwieniu współpracy z Jeffem i Chrisem.
 
-\index{GNU Free Documentation License}
+\index{licencja GNU Free Documentation License}
 \index{Free Documentation License, GNU}
 
 Dziękuję również redaktorom Lulu, którzy pracowali nad *How to Think Like a Computer Scientist*.
@@ -109,7 +109,7 @@ Franklin W. Olin College of Engineering.
 Lista współtwórców "Think Python"
 ------------------------------------------
 
-\index{contributors}
+\index{współtwórcy}
 
 (Allen B. Downey)
 
