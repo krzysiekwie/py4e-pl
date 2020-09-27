@@ -333,10 +333,10 @@ argumentów. Później zbudujemy funkcje, które przyjmują argumenty jako swoje
 dane wejściowe.
 
 \index{nawiasy okrągłe!puste}
-\index{nagłówek funkcji}
-\index{funkcja, nagłówek}
-\index{ciało funkcji}
-\index{funkcja, ciało}
+\index{nagłówek!funkcji}
+\index{funkcja!nagłówek}
+\index{ciało!funkcji}
+\index{funkcja!ciało}
 \index{wcięcie}
 \index{dwukropek}
 
@@ -713,8 +713,8 @@ argument
 
 ciało funkcji
 :   Sekwencja instrukcji wewnątrz definicji funkcji.
-\index{ciało funkcji}
-\index{funkcja, ciało}
+\index{ciało!funkcji}
+\index{funkcja!ciało}
 
 definicja funkcji
 :   Instrukcja, która tworzy nową funkcję, określająca jej nazwę, parametry i
@@ -756,7 +756,7 @@ obiekt modułu
 nagłówek funkcji
 :   Pierwszy wiersz definicji funkcji.
 \index{nagłówek funkcji}
-\index{funkcja, nagłówek}
+\index{funkcja!nagłówek}
 
 notacja kropkowa
 :   Składnia do wywołania funkcji w innym module poprzez określenie nazwy

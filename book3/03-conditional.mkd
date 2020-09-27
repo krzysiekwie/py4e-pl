@@ -127,6 +127,8 @@ Jeśli warunek logiczny jest fałszywy, to wcięcie wyrażenia jest pomijane.
 \index{warunek}
 \index{złożona, instrukcja}
 \index{instrukcja!złożona}
+\index{ciało!instrukcji}
+\index{instrukcja!ciało}
 
 Instrukcje `if` mają taką samą strukturę jak definicje funkcji lub pętle
 `for`^[Dowiemy się o funkcjach w rozdziale 4, a o pętlach w rozdziale 5.].
@@ -513,9 +515,10 @@ problem, ale często nie tam, gdzie został on popełniony.
 Słowniczek
 ----------
 
-ciało
-:   Sekwencja instruckji zawarta w złożonej instrukcji.
-\index{ciało}
+ciało instrukcji
+:   Sekwencja instrukcji zawarta w złożonej instrukcji.
+\index{ciało!instrukcji}
+\index{instrukcja!ciało}
 
 gałąź
 :   Jedna z alternatywnych sekwencji instrukcji występujących w instrukcji

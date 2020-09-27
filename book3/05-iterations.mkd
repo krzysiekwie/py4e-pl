@@ -74,7 +74,8 @@ Taki przepływ sterowania nazywany jest *pętlą*, ponieważ trzeci krok zapętl
 
 \index{warunek}
 \index{pętla}
-\index{ciało}
+\index{ciało!pętli}
+\index{pętla!ciało}
 
 Ciało pętli powinno zmieniać wartość jednej lub więcej zmiennych, tak aby ostatecznie warunek stał się fałszywy i pętla się zakończyła. Zmienną, która zmienia się z każdym wykonaniem pętli i która kontroluje kiedy pętla się kończy, nazywamy *zmienną sterującą*. Jeśli nie ma zmiennej sterującej, pętla będzie powtarzać się w nieskończoność, powodując powstanie *nieskończonej pętli*.
 
