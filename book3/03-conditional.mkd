@@ -5,7 +5,7 @@ Wyrażenia logiczne
 ------------------
 
 \index{wyrażenie!logiczne}
-\indes{logiczne, wyrażenie}
+\index{logiczne, wyrażenie}
 \index{operator!logiczny}
 \index{logiczny, operator}
 
