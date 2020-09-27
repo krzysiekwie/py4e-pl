@@ -30,6 +30,13 @@ O tym co autor uważa za komercyjne i niekomercyjne wykorzystanie tego materiał
 Przedmowa
 =========
 
+Informacja dotycząca polskiego wydania
+--------------------------------------
+
+Książka "Python dla wszystkich", w odniesieniu do swojego oryginału "Python for Everybody", jest nie tylko jej tłumaczeniem, ale posiada również szereg poprawek, rozwinięć i nowych materiałów.
+
+W rozdziale 7 dodano sekcję o przetwarzaniu plików zawierających polski tekst. Rozdziały 13 i 16 korzystają z usługi Nominatim dostarczanej przez OpenStreetMap zamiast z płatnego GoogleAPI. Skorowidz został poprawiony, usunięto zbędne odniesienia oraz dodano nowe w celu łatwiejszego wyszukiwania treści. W tekście dodano przypisy w celu rozjaśnienia polskiej terminologii. Na stronie internetowej, będącej uzupełnieniem tej książki, rozwinięto sekcję dotyczącą korzystania z Pythona pod Windowsem przy użyciu PowerShella. W kodach programów nie tłumaczono nazw zmiennych - jest to pewna ogólna konwencja programistyczna, ktora powinna również pomóc w sprawniejszym operowaniu pojęciami programistycznymi np. podczas wyszukiwania w internecie treści na zadany problem.
+
 Remiksowanie otwartej książki
 -----------------------------
 
@@ -53,7 +60,7 @@ Studenci, których ta książka zainteresuje i będą chcieli dalej zgłębiać 
 \index{CC-BY-SA}
 \index{BY-SA}
 
-Jako osoba posiadająca prawa autorskie do *Think Python*, Allen udzielił mi zgody na zmianę licencji na materiał pozostający w tej książce z licencji GNU Free Documentation License na nowszą licencję Creative Commons Attribution - Na tych samych warunkach. Jest to następstwem ogólnego przesunięcia licencji otwartej dokumentacji z GFDL na CC-BY-SA (np. Wikipedia). Korzystanie z licencji CC-BY-SA podtrzymuje silną tradycję książki w zakresie copyleft, jednocześnie jeszcze bardziej ułatwiając nowym autorom ponowne wykorzystanie tego materiału według własnego uznania.
+Jako osoba posiadająca prawa autorskie do *Think Python*, Allen udzielił mi zgody na zmianę licencji na materiał pozostający w tej książce z licencji GNU Free Documentation License na nowszą licencję Creative Commons Uznanie autorstwa-Na tych samych warunkach. Jest to następstwem ogólnego przesunięcia licencji otwartej dokumentacji z GFDL na CC-BY-SA (np. Wikipedia). Korzystanie z licencji CC-BY-SA podtrzymuje silną tradycję książki w zakresie copyleft, jednocześnie jeszcze bardziej ułatwiając nowym autorom ponowne wykorzystanie tego materiału według własnego uznania.
 
 Uważam, że ta książka jest przykładem na to dlaczego otwarte materiały są tak ważne dla przyszłości edukacji i chcę podziękować Allenowi B. Downeyowi i Cambridge University Press za ich przyszłościową decyzję o udostępnieniu książki w ramach otwartych praw autorskich. Mam nadzieję, że są zadowoleni z wyników moich wysiłków i mam nadzieję, że Ty, czytelniku, jesteś zadowolony z *naszych* zbiorowych wysiłków.
 

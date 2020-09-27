@@ -1,6 +1,15 @@
 Wsparcie i współpraca nad książką
 =================================
 
+Lista współtwórców "Python dla wszystkich"
+------------------------------------------
+
+Andrzej Wójtowicz
+
+Szczegóły dotyczące poszczególnego wkładu w tworzenie książki możesz znaleźć na stronie:
+
+https://github.com/andre-wojtowicz/py4e-pl/graphs/contributors
+
 Lista współtwórców "Python for Everybody"
 -----------------------------------------
 
