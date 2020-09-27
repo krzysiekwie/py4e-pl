@@ -1,3 +1,4 @@
+
 Szczegóły dotyczące praw autorskich
 ===================================
 
@@ -5,7 +6,7 @@ Ten utwór jest objęty licencją Creative Commons
 Uznanie autorstwa-Użycie niekomercyjne-Na tych samych warunkach 3.0 Unported.
 Licencja jest dostępna pod adresem
 
-[creativecommons.org/licenses/by-nc-sa/3.0/](https://creativecommons.org/licenses/by-nc-sa/3.0/).
+[https://creativecommons.org/licenses/by-nc-sa/3.0/](https://creativecommons.org/licenses/by-nc-sa/3.0/)
 
 Wolałbym udostępniać książkę na mniej restrykcyjnej licencji CC-BY-SA. Ale niestety istnieje kilka pozbawionych skrupułów organizacji, które szukają i znajdują książki z wolnymi licencjami, a następnie publikują i sprzedają praktycznie niezmienione egzemplarze książek w usłudze druku na żądanie takich jak LuLu czy KDP. KDP (na szczęście) dodało zasady, która daje pierwszeństwo woli rzeczywistego posiadacza praw autorskich przed podmiotami nie posiadającymi praw autorskich, które próbują opublikować wolny utwór objęty licencją. Niestety, istnieje wiele usług druku na żądanie i bardzo niewiele z nich rozważa takie zasady jak przyjęte przez KDP.
 

@@ -1,3 +1,4 @@
+
 Korzystanie z baz danych i języka SQL
 =====================================
 
@@ -15,7 +16,7 @@ Podobnie jak słownik, oprogramowanie bazodanowe jest zaprojektowane tak, aby do
 
 Istnieje wiele różnych systemów bazodanowych, które są wykorzystywane do wielu różnych celów, w tym: Oracle, MySQL, Microsoft SQL Server, PostgreSQL i SQLite. W tej książce skupimy się na SQLite, ponieważ jest to bardzo popularna baza danych i jest już wbudowana w Pythona. SQLite jest przeznaczony do bycia *wbudowanym* (*osadzonym*) w innych aplikacjach, tak aby zapewnić obsługę bazy danych w obrębie tych aplikacji. Na przykład, przeglądarka Firefox również korzysta wewnętrznie z bazy danych SQLite, podobnie jak wiele innych aplikacji.
 
-<http://sqlite.org/>
+<https://sqlite.org/>
 
 SQLite doskonale nadaje się do rozwiązywania niektórych informatycznych problemów z zarządzaniem danymi, takich jak robot internetowy do zbierania danych z Twittera, który opiszemy w tym rozdziale.
 
@@ -72,7 +73,7 @@ Kiedy w bazie danych tworzymy *tabelę*, to musimy z wyprzedzeniem podać nazwę
 
 Możesz zapoznać się z różnymi typami danych obsługiwanymi przez SQLite pod następującym adresem URL:
 
-<http://www.sqlite.org/datatypes.html>
+<https://www.sqlite.org/datatypes.html>
 
 Zdefiniowanie z góry struktury dla Twoich danych może się początkowo wydawać niewygodne, ale zyskiem z tego jest szybkie uzyskiwanie dostępu do Twoich danych, nawet jeśli baza danych zawiera ich dużą ilość.
 
@@ -256,7 +257,7 @@ Podsumowując, przy pierwszym uruchomieniu programu i podaniu konta Twittera, pr
 
 ~~~~
 Podaj nazwę konta na Twitterze lub wprowadź 'koniec': drchuck
-Pobieranie http://api.twitter.com/1.1/friends ...
+Pobieranie https://api.twitter.com/1.1/friends ...
 (...)
 Nowe konta= 20  widziane ponownie= 0
 Podaj nazwę konta na Twitterze lub wprowadź 'koniec': koniec
@@ -288,11 +289,11 @@ W tym momencie nasza baza danych odzwierciedla pobieranie danych o znajomych z n
 
 ~~~~
 Podaj nazwę konta na Twitterze lub wprowadź 'koniec':
-Pobieranie http://api.twitter.com/1.1/friends ...
+Pobieranie https://api.twitter.com/1.1/friends ...
 (...)
 Nowe konta= 18  widziane ponownie= 2
 Podaj nazwę konta na Twitterze lub wprowadź 'koniec':
-Pobieranie http://api.twitter.com/1.1/friends ...
+Pobieranie https://api.twitter.com/1.1/friends ...
 (...)
 Nowe konta= 17  widziane ponownie= 3
 Podaj nazwę konta na Twitterze lub wprowadź 'koniec': koniec

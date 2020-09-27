@@ -9,16 +9,16 @@ for fn in *.mkd; do
     x=`basename $fn .mkd`
     echo $x
     cat $fn | \
-    python pre-html.py | \
+    python2 pre-html.py | \
     tee tmp.html.pre.$x | \
-    python verbatim.py --files | \
+    python2 verbatim.py --files | \
     tee tmp.html.verbatim.$x | \
     pandoc -s \
     -f markdown -t html \
     --no-highlight \
     --default-image-extension=svg | \
     tee tmp.html.post.$x | \
-    python post-html.py | \
+    python2 post-html.py | \
     cat > ../html3/$x.php
 done
 

@@ -1,6 +1,6 @@
 /* This defines styles and classes used in the book */
 body { margin: 0; text-align: justify; font-size: medium; font-family: Arial, Helvetica, sans-serif; }
-code { font-family: monospace; font-weight: bold; font-size: small, overflow-x: scroll }
+code { font-family: monospace; font-weight: bold; font-size: small; overflow-x: scroll }
 h1 { text-align: left; }
 h2 { text-align: left; }
 h3 { text-align: left; }

@@ -2,7 +2,10 @@
 Python for Everybody (PY4E)
 ===========================
 
-Polish translation progress
+Polish translation
+------------------
+
+Generated `.pdf`, `.mobi` and `.mobi` are in [translations/PL](https://github.com/andre-wojtowicz/py4e-pl/tree/master/translations/PL).
 
 | Element                | Text | Code | Trinket | Index | Figures | Lectures | YouTube | Autograder | Review |
 |------------------------|------|------|-------|-------|---------|----------|---------|------------|--------|
@@ -34,6 +37,7 @@ Polish translation progress
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | Functions and methods with `()` |         |            |       |
 | Inline code within grave accents |         |            |       |
+| Fix URLs to be full URLs in `<...>` |         |            |       |
 | `unit.sh` check |         |            |       |
 
 (*) moved `book3/figs2` to `images`.

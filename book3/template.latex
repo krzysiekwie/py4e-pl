@@ -58,7 +58,7 @@ $if(lang)$
   \usepackage{polyglossia}
   \setmainlanguage{$mainlang$}
 \else
-  \usepackage[shorthands=off,$lang$]{babel}
+  \usepackage[shorthands=off,$langbabel$]{babel}
 \fi
 $endif$
 $if(natbib)$
@@ -84,6 +84,9 @@ $endif$
 \RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
 {fontsize=\small,gobble=2}
 
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breakanywhere,commandchars=\\\{\}}
+
 % Comment out extra trinket file includes in latex (used in interactive HTML version
 \usepackage{comment}
 \excludecomment{trinketfiles}
@@ -104,6 +107,23 @@ $if(graphics)$
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
+
+\usepackage{emptypage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhf[roh,leh]{\thepage}
+\fancyhf[reh]{\nouppercase{\leftmark}}
+\fancyhf[loh]{\nouppercase{\rightmark}}
+\fancypagestyle{plain}{
+  \fancyhf{} 
+  \fancyfoot[LE,RO]{} % same placement as with page style "fancy"
+  \renewcommand{\headrulewidth}{0pt}}
+
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+\usepackage[dotinlabels]{titletoc}
+
 \ifxetex
   \usepackage[setpagesize=false, % page size defined by xetex
               unicode=false, % unicode breaks when used with xetex
@@ -111,9 +131,11 @@ $endif$
 \else
   \usepackage[unicode=true]{hyperref}
 \fi
+
 \hypersetup{breaklinks=true,
             linktoc=all,
             linktocpage,
+            implicit=false,
             bookmarks=true,
             pdfauthor={$author-meta$},
             pdftitle={$title-meta$},
@@ -122,6 +144,11 @@ $endif$
             urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
             linkcolor=$if(linkcolor)$$linkcolor$$else$blue$endif$,
             pdfborder={0 0 0}}
+
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\do\/\do\-}
+\makeatother
+
 \urlstyle{same}  % don't use monospace font for urls
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
@@ -186,11 +213,9 @@ $endfor$
 
 
 $if(toc)$
-{
 \hypersetup{linkcolor=blue}
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
-}
 $endif$
 $if(lot)$
 \listoftables

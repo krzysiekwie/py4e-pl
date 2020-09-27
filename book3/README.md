@@ -65,59 +65,15 @@ Note that each build script plays nicely with the others and the represent paral
 workflows.  Please don't alter any of the python scripts that are used by another
 script if you intend on contributing a new script. 
 
-## KindleGen
+## Calibre
 
-The `book.sh` script will generate the `x.mobi` file is KindleGen is in the path:
-
-    https://www.amazon.com/gp/feature.html?docId=1000765211
-
-For Linux:
-
-    curl -O http://kindlegen.s3.amazonaws.com/kindlegen_linux_2.6_i386_v2_9.tar.gz
-    tar xfv kindlegen_linux_2.6_i386_v2_9.tar.gz 
-    cp kindlegen /usr/local/bin
+The `book.sh` script will generate the `x.mobi` file with Calibre.
 
 ## Createspace
 
 Just take the `x.pdf` and `x.mobi` files and copy them into the `createspace`
 folder, adding a date in the filename as version and then upload them to 
 createspace ins kindle publishing.
-
-Chinese Version
----------------
-
-If you are building the file for Chinese, touch the file
-
-    touch .chinese
-
-So it runs LaTeX in a way to produce chinese documents.
-
-Install the 'Noto Serif CJK SC' Font.  Download from here and unzip:
-
-    https://noto-website.storage.googleapis.com/pkgs/NotoSerifCJK.ttc.zip
-
-You should get a file like `NotoSerifCJK.ttc`.
-
-On Mac copy the file to `~/Library/Fonts` and rebuild font cache:
-
-    sudo atsutil databases -remove
-
-On Linux put them in `/usr/share/fonts`:
-
-    [ -d /usr/share/fonts/opentype ] || sudo mkdir /usr/share/fonts/opentype
-    [ -d /usr/share/fonts/opentype/noto ] || sudo mkdir /usr/share/fonts/opentype/noto
-    sudo mv NotoSerifCJK.ttc /usr/share/fonts/opentype/noto
-    sudo fc-cache -f -v
-
-Strange Note:  If you are running on a small memory linux system, you 
-may encounter the error "I can't write on file `test.pdf'" - turns
-out this is `xelatex` running out of RAM - this fixed it.
-
-    dd if=/dev/zero of=/var/512mb.swap bs=1M count=512
-    mkswap /var/512mb.swap
-    swapon /var/512mb.swap
-
-Ref: https://tex.stackexchange.com/questions/16801/xelatex-i-cant-write-on-file-test-pdf
 
 ## Contributing
 

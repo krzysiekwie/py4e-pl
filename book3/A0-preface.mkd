@@ -9,6 +9,7 @@ Podziękowania autorskie
 Historia wydań
 --------------
 
+* 2020-09-27 Pierwsza wersja robocza polskiej wersji językowej
 * 2016-07-05 Pierwsza kompletna wersja Pythona 3.0
 * 2015-12-20 Pierwsza wstępna konwersja do Pythona 3.0
 
@@ -29,13 +30,6 @@ O tym co autor uważa za komercyjne i niekomercyjne wykorzystanie tego materiał
 
 Przedmowa
 =========
-
-Informacja dotycząca polskiego wydania
---------------------------------------
-
-Książka "Python dla wszystkich", w odniesieniu do swojego oryginału "Python for Everybody", jest nie tylko jej tłumaczeniem, ale posiada również szereg poprawek, rozwinięć i nowych materiałów.
-
-W rozdziale 7 dodano sekcję o przetwarzaniu plików zawierających polski tekst. Rozdziały 13 i 16 korzystają z usługi Nominatim dostarczanej przez OpenStreetMap zamiast z płatnego GoogleAPI. Skorowidz został poprawiony, usunięto zbędne odniesienia oraz dodano nowe w celu łatwiejszego wyszukiwania treści. W tekście dodano przypisy w celu rozjaśnienia polskiej terminologii. Na stronie internetowej, będącej uzupełnieniem tej książki, rozwinięto sekcję dotyczącą korzystania z Pythona pod Windowsem przy użyciu PowerShella. W kodach programów nie tłumaczono nazw zmiennych - jest to pewna ogólna konwencja programistyczna, ktora powinna również pomóc w sprawniejszym operowaniu pojęciami programistycznymi np. podczas wyszukiwania w internecie treści na zadany problem.
 
 Remiksowanie otwartej książki
 -----------------------------
@@ -73,3 +67,11 @@ Ann Arbor, MI, USA\
 
 Charles Severance zajmuje stanowisko Clinical Associate Professor w School of Information na Uniwersytecie Michigan.
 
+Informacja dotycząca polskiego wydania
+--------------------------------------
+
+Książka "Python dla wszystkich", w odniesieniu do swojego oryginału "Python for Everybody", jest nie tylko jej tłumaczeniem, ale posiada również szereg poprawek, rozwinięć i nowych materiałów.
+
+W rozdziale 7 dodano sekcję o przetwarzaniu plików zawierających polski tekst. Rozdziały 13 i 16 korzystają z usługi Nominatim dostarczanej przez OpenStreetMap zamiast z płatnego GoogleAPI. Indeks został poprawiony, usunięto zbędne odniesienia oraz dodano nowe w celu łatwiejszego wyszukiwania treści. W tekście dodano przypisy w celu rozjaśnienia polskiej terminologii. W kodach programów nie tłumaczono nazw zmiennych - jest to pewna ogólna konwencja programistyczna, ktora powinna również pomóc w sprawniejszym operowaniu pojęciami programistycznymi np. podczas wyszukiwania w internecie treści na zadany problem.
+
+Na stronie internetowej, będącej uzupełnieniem tej książki, rozwinięto sekcję dotyczącą korzystania z Pythona pod Windowsem przy użyciu PowerShella. 

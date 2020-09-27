@@ -1,3 +1,4 @@
+
 Pliki
 =====
 
@@ -513,11 +514,10 @@ Innym problemem, na który możesz się natknąć, jest to, że różne systemy 
 
 \index{nowa linia}
 \index{znak końca linii}
-
-Więcej o tym problemie możesz poczytać na stronie [pl.wikipedia.org/wiki/Koniec_linii](https://pl.wikipedia.org/wiki/Koniec_linii). Dla większości systemów istnieją aplikacje do konwersji z jednego formatu na drugi. Możesz je znaleźć na stronie [en.wikipedia.org/wiki/Newline](https://en.wikipedia.org/wiki/Newline) w sekcji "Conversion between newline formats". Oczywiście możesz też samodzielnie napisać taki konwerter.
-
 \index{kodowanie pliku}
 \index{plik!kodowanie}
+
+Więcej o tym problemie możesz poczytać na stronie <https://pl.wikipedia.org/wiki/Koniec_linii>. Dla większości systemów istnieją aplikacje do konwersji z jednego formatu na drugi. Możesz je znaleźć na stronie <https://en.wikipedia.org/wiki/Newline> w sekcji "Conversion between newline formats". Oczywiście możesz też samodzielnie napisać taki konwerter.
 
 Słowniczek
 ----------

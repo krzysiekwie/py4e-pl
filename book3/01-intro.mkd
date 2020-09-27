@@ -215,7 +215,7 @@ chodziło na spacer po to by poprawić ich ogólny stan zdrowia", większość p
 prawdopodobnie usłyszy: "bla bla bla *spacer* bla bla bla bla". Dzieje się tak,
 ponieważ "spacer" jest zarezerwowanym słowem w języku komunikacji z psami. 
 Natomiast wiele wskazuje na to, że język komunikacji między ludźmi a kotami 
-nie ma zastrzeżonych słów^[<http://xkcd.com/231/>].
+nie ma zastrzeżonych słów^[<https://xkcd.com/231/>].
 
 Lista zastrzeżonych słów języka, w którym ludzie komunikują się z Pythonem,
 zawiera następujące wyrazy:
@@ -262,7 +262,7 @@ nowe umiejętności językowe.
 Zanim będziesz mógł rozmawiać z Pythonem, musisz najpierw zainstalować na swoim
 komputerze oprogramowanie Pythona oraz nauczyć się jak uruchomić Pythona na 
 swoim komputerze. Jest to zbyt wiele szczegółów jak na ten rozdział, więc
-sugeruję zajrzeć na stronę [www.py4e.com](http://www.py4e.com), gdzie umieściłem
+sugeruję zajrzeć na stronę [www.py4e.com](https://www.py4e.com), gdzie umieściłem
 szczegółowe instrukcje i zrzuty ekranu dotyczące konfiguracji i uruchamiania
 Pythona w systemach komputerów Macintosh i Windows. W pewnym momencie znajdziesz
 się w terminalu lub oknie wiersza poleceń i wpiszesz *python*, a interpreter
@@ -469,7 +469,7 @@ właściwie się dzieje?
 
 Interpreter Pythona jest napisany w języku wysokiego poziomu o nazwie "C".
 Możesz spojrzeć na rzeczywisty kod źródłowy interpretera Pythona, przechodząc na
-stronę [www.python.org](http://www.python.org) i sprawdzając kod źródłowy. Tak 
+stronę [www.python.org](https://www.python.org) i sprawdzając kod źródłowy. Tak 
 więc Python sam w sobie jest programem i jest skompilowany do kodu maszynowego.
 Gdy zainstalowałeś język Python na swoim komputerze (lub zainstalował go
 sprzedawca), to skopiowałeś do systemu kopię programu Python przetłumaczonego do
@@ -567,7 +567,7 @@ techniki Pythona, które zostały użyte do stworzenia tego programu. Jesteś
 użytkownikiem końcowym, więc po prostu korzystasz z programu i zachwycasz się
 jego sprytem oraz oszczędnością ręcznego wysiłku. Po prostu wpisujesz powyższy
 kod do pliku o nazwie *words.py* i go uruchamiasz, lub pobierasz kod źródłowy ze
-strony <http://www.py4e.com/code3/> i uruchamiasz.
+strony <https://pl.py4e.com/code3/> i uruchamiasz.
 
 \index{program}
 

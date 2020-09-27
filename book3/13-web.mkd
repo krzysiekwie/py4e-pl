@@ -1,3 +1,4 @@
+
 Korzystanie z usług sieciowych
 ==============================
 
@@ -235,7 +236,7 @@ Usługa geokodowania jest bezpłatna, ale ograniczona ilościowo, więc w aplika
 
 Możesz zapoznać się z dokumentacją online dotyczącą tej usługi^[<https://nominatim.org/release-docs/develop/api/Search/>], ale jest ona na tyle prosta, że możesz ją nawet przetestować za pomocą przeglądarki, wpisując w niej następujący adres URL:
 
-[`https://nominatim.openstreetmap.org/search.php?q=Ann%20Arbor%2C%20MI&format=geojson&limit=1`](https://nominatim.openstreetmap.org/search.php?q=Ann%20Arbor%2C%20MI&format=geojson&limit=1)
+<https://nominatim.openstreetmap.org/search.php?q=Ann%20Arbor%2C%20MI&format=geojson&limit=1>
 
 \index{GeoJSON}
 
@@ -254,7 +255,7 @@ Wynik działania programu jest następujący (część zwróconych danych JSON z
 ~~~~
 $ python3 geojson.py 
 Podaj nazwę miejsca: Ann Arbor, MI
-Pobieranie https://nominatim.openstreetmap.org/search.php?q=Ann+Arbor%2C+MI&format=geojson&limit=1
+Pobieranie https://nominatim.openstreetmap.org/search.php?q=...
 Pobrano 587 znaków
 ~~~~
 
@@ -274,7 +275,7 @@ Pobrano 587 znaków
                 "category": "place",
                 "type": "city",
                 "importance": 0.837069344370284,
-                "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+                "icon": "https://nominatim.openstreetmap.org/..."
             },
             "bbox": [
                 -83.8912291,
@@ -302,7 +303,7 @@ Podaj nazwę miejsca:
 
 Możesz pobrać [pl.py4e.com/code3/geoxml.py](https://pl.py4e.com/code3/geoxml.py), aby sprawdzić wariant XML w API geokodowania OpenStreetMap.
 
-**Ćwiczenie 1: Zmień** [`geojson.py`**`](https://pl.py4e.com/code3/geojson.py) **lub** [`geoxml.py`](https://pl.py4e.com/code3/geoxml.py) **w celu wypisania nazwy stanu z pobranych danych (jeżeli podane miejsce jest w USA). Dodaj sprawdzanie błędów, tak aby Twój program nie wyświetlał danych z mechanizmu traceback w momencie gdy w danych nie ma nazwy stanu. Gdy kod już zacznie działać, wyszukaj "Atlantic Ocean" i upewnij się, że obsługuje on lokalizacje, które nie znajdują się w żadnym kraju.**
+**Ćwiczenie 1: Zmień** [`geojson.py`](https://pl.py4e.com/code3/geojson.py) **lub** [`geoxml.py`](https://pl.py4e.com/code3/geoxml.py) **w celu wypisania nazwy stanu z pobranych danych (jeżeli podane miejsce jest w USA). Dodaj sprawdzanie błędów, tak aby Twój program nie wyświetlał danych z mechanizmu traceback w momencie gdy w danych nie ma nazwy stanu. Gdy kod już zacznie działać, wyszukaj "Atlantic Ocean" i upewnij się, że obsługuje on lokalizacje, które nie znajdują się w żadnym kraju.**
 
 Aplikacja nr 2: Twitter
 -----------------------
