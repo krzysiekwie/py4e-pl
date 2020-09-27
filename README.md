@@ -32,11 +32,8 @@ Polish translation progress
 | `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
-| remove "przyp. tłum."  |      |      |       |      |         |          |         |            |       |
-| English translation of index keywords |         |            |       |
 | Functions and methods with `()` |         |            |       |
 | Inline code within grave accents |         |            |       |
-| `pip install...` -> `pip3 install...` |         |            |       |
 | `unit.sh` check |         |            |       |
 
 (*) moved `book3/figs2` to `images`.

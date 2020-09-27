@@ -110,7 +110,7 @@ Ogólne definicje tych części są następujące:
     potrzebuje w pośpiechu. Pamięć główna jest prawie tak szybka jak procesor. 
     Jednakże informacje przechowywane w pamięci głównej znikają po wyłączeniu 
     komputera.^[Chodzi tutaj o pamięć o dostępie swobodnym, czyli RAM (z ang. 
-    *random-access memory*) - przyp. tłum.]
+    *random-access memory*).]
 
 -   *Pamięć pomocnicza* jest również używana do przechowywania informacji, ale
     jest znacznie wolniejsza niż pamięć główna. Zaletą pamięci dodatkowej jest 

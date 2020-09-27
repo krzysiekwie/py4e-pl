@@ -50,7 +50,7 @@ Instrukcja `while`
 
 Komputery są często używane do automatyzacji powtarzalnych zadań. Powtarzanie identycznych lub podobnych zadań bez popełniania błędów jest czymś, co komputery robią dobrze, a ludzie źle. Ponieważ iteracja często występuje w programach, Python oferuje kilka elementów, które ułatwiają z nimi pracę.
 
-Jedną z form iteracji w Pythonie jest instrukcja `while`. Poniżej znajduje się prosty program, który odlicza od pięciu, a następnie wyświetla "Odpalamy!".^[Należy pamiętać, że kopiując kod do interaktywnej sesji interpretera Pythona, wcięty blok musi zakończyć się nową linią. W przeciwnym razie, w tym programie przy funkcji `print` zostanie zgłoszony błąd "SyntaxError" - przyp. tłum.]
+Jedną z form iteracji w Pythonie jest instrukcja `while`. Poniżej znajduje się prosty program, który odlicza od pięciu, a następnie wyświetla "Odpalamy!".^[Należy pamiętać, że kopiując kod do interaktywnej sesji interpretera Pythona, wcięty blok musi zakończyć się nową linią. W przeciwnym razie, w tym programie przy funkcji `print` zostanie zgłoszony błąd "SyntaxError".]
 
 ~~~~ {.python}
 n = 5

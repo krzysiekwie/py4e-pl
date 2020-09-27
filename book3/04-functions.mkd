@@ -559,7 +559,7 @@ zwracają wyniki; z braku lepszej nazwy, nazywam je *funkcjami owocnymi*
 (ang. *fruitful functions*). Inne funkcje, takie jak `print_twice`, wykonują 
 jakąś akcję, ale nie zwracają wartości. Nazywa się je *funkcjami 
 niezwracającymi wartości*^[W niektórych językach programowania tego typu 
-funkcje nazywa się procedurami - przyp. tłum.] (ang. *void functions*).
+funkcje nazywa się procedurami.] (ang. *void functions*).
 
 Kiedy wołasz owocną funkcję, prawie zawsze chcesz zrobić coś ze zwróconym 
 wynikiem. Na przykład, możesz przypisać go do zmiennej lub użyć go jako części 
@@ -696,7 +696,7 @@ programu i uruchom go ponownie. Jeśli nie widzisz `hello`, to nie uruchamiasz
 właściwego programu!^[Ta technika debugowania nosi nazwę *caveman debugging*
 (z ang. debugowanie metodą jaskiniowca) lub *print debugging* i nie jest
 zalecana podczas profesjonalnego programowania, jednak dobrze sprawdza się
-podczas pierwszych kroków w nauce programowania - przyp. tłum.]
+podczas pierwszych kroków w nauce programowania.]
 
 Słowniczek
 ----------

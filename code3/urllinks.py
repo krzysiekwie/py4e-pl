@@ -1,7 +1,7 @@
 # Aby uruchomić poniższy kod, poprzez wiersz linii
 # poleceń zainstaluj bibliotekę BeautifulSoup:
 #
-#    pip install beautifulsoup4
+#    pip3 install beautifulsoup4
 #
 
 import urllib.request, urllib.parse, urllib.error

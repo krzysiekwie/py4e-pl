@@ -78,7 +78,7 @@ Są to ciągi znaków.
 
 Gdy wpiszesz dużą liczbę całkowitą, być może ulegniesz pokusie użycia przecinków
 między grupami trzycyfrowymi, np. jak w przypadku 1,000,000.^[Jest to zapis
-częściej stosowany w USA - przyp. tłum.] Nie jest poprawna liczba całkowita w
+częściej stosowany w USA.] Nie jest poprawna liczba całkowita w
 Pythonie, ale jest zapis całkowicie poprawny:
 
 ~~~~ {.python .trinket height="120"}
@@ -151,7 +151,7 @@ cyfry, ale nie mogą zaczynać się od cyfry. Użycie dużych liter jest poprawn
 ale lepiej jest zacząć nazwy zmiennych od małej litery (później zobaczymy
 dlaczego).^[Co prawda w nazwach zmiennych można też używać np. polskich znaków
 diakrytycznych, ale lepiej trzymać się przyjętej w środowisku programistów 
-konwencji i ich nie używać - przyp. tłum.]
+konwencji i ich nie używać.]
 
 Znak podkreślenia ( \_ ) może pojawić się w nazwie. Jest on często używany w
 nazwach zawierających wiele słów, takich jak `moje_ime` lub 
@@ -656,7 +656,7 @@ warto zwrócić uwagę, że zgodnie z przyjętą konwencją programistyczną naz
 zmiennych oraz komentarze powinny być w języku angielskim. Podczas realizacji
 tego kursu nie ma to większego znaczenia, gdyż tutaj programy piszemy dla siebie,
 jednak warto o tym pamiętać w przyszłości podczas tworzenia bardziej
-zaawansowanych programów - przyp. tłum.]
+zaawansowanych programów.]
 
 Debugowanie
 ---------

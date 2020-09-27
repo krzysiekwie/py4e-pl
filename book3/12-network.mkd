@@ -317,7 +317,7 @@ Jako przykład, przetworzymy trochę danych HTML i wyodrębnimy linki za pomocą
 Bibliotekę możemy zainstalować poprzez wiersz linii poleceń wydając komendę:
 
 ~~~~
-pip install beautifulsoup4
+pip3 install beautifulsoup4
 ~~~~
 
 Bardziej szczegółowe informacje na temat instalacji bibliotek za pomocą narzędzia *Python Package Index* `pip` są dostępne na stronie internetowej:
