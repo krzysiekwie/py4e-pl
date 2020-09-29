@@ -17,7 +17,7 @@
             </li>
             <li>
                 <a href="software-win.php">
-                    Konfigurowanie środowiska Python w systemie Microsoft Window
+                    Konfigurowanie środowiska Python w systemie Microsoft Windows
                 </a>
             </li>
             <li>
