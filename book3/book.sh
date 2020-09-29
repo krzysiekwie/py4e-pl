@@ -39,4 +39,6 @@ else
   echo "Output on x.pdf"
 fi
 
+rm ../images/*-eps-converted-to.pdf
+
 rm tmp.*

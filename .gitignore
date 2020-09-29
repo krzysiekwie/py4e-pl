@@ -29,3 +29,7 @@ gline.js
 gword.js
 *.sublime*
 *-eps-converted-to.pdf
+html3/*
+translations/PL/*.pdf
+translations/PL/*.epub
+translations/PL/*.mobi
