@@ -5,8 +5,6 @@ Python for Everybody (PY4E)
 Polish translation
 ------------------
 
-Generated `.pdf`, `.mobi` and `.mobi` are in [translations/PL](https://github.com/andre-wojtowicz/py4e-pl/tree/master/translations/PL).
-
 | Element                | Text | Code | Trinket | Index | Figures | Lectures | YouTube | Autograder | Review |
 |------------------------|------|------|-------|-------|---------|----------|---------|------------|--------|
 | `A0-preface.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
