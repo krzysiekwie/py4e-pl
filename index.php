@@ -17,7 +17,7 @@ W trakcie realizacji kolejnych <a href="lessons">lekcji</a> zauważysz dodatkowe
 Możesz śledzić swoje postępy w nauce za pomocą sekcji <a href="assignments">Zadania</a>, a gdy ukończysz pewną grupę zadań, możesz zdobyć <a href="badges">Odznakę</a>.
 Możesz pobrać odznaki i umieścić je na swojej stronie internetowej lub podlinkować adresów URL odznak umieszczonych na tej stronie.</li>
 <li class="list-group-item">
-Jeśli na własnych zajęciach chcesz korzystać materiałów udostępnionych tutaj na licencji Creative Commons, to możesz <a href="materials.php">pobrać lub zamieścić link</a> do treści z tej strony, <a href="tsugi/cc/export.php">wyeksportować materiały</a> kursu jako IMS Common Cartridge® lub złożyć wniosek o <a href="tsugi/admin/key/index.php">klucz i sekret</a> IMS Learning Tools Interoperability® (LTI®), tak by uruchomić mechanizm sprawdzarkowy ze swojego LMSa.
+Jeśli na własnych zajęciach chcesz korzystać materiałów udostępnionych tutaj na licencji Creative Commons, to możesz <a href="materials.php">pobrać lub zamieścić link</a> do treści z tej strony, <a href="tsugi/cc/export.php">wyeksportować materiały</a> kursu jako IMS Common Cartridge® lub złożyć wniosek o <a href="tsugi/admin/key/index.php">klucz i sekret</a> IMS Learning Tools Interoperability® (LTI®), tak by uruchomić mechanizm sprawdzarkowy ze swojego LMSa. <?php if ( !($CFG->providekeys) ) { echo _m("[Obecnie generowanie kluczy LTI jest wyłączone] "); } ?>
 </li>
 </ul>
 <?php } else { ?>
@@ -35,7 +35,7 @@ Jeśli <a href="tsugi/login.php">zalogujesz się</a> na tej stronie, to efekt je
 Na tej stronie poważnie traktujemy Twoją prywatność, możesz zapoznać się z naszą <a href="privacy">Polityką prywatności</a>, tak aby uzyskać więcej informacji.
 </li>
 <li class="list-group-item">
-Jeśli na własnych zajęciach chcesz korzystać materiałów udostępnionych tutaj na licencji Creative Commons, to możesz <a href="materials.php">pobrać lub zamieścić link</a> do treści z tej strony, <a href="tsugi/cc/export.php">wyeksportować materiały</a> kursu jako IMS Common Cartridge® lub złożyć wniosek o <a href="tsugi/admin/key/index.php">klucz i sekret</a> IMS Learning Tools Interoperability® (LTI®), tak by uruchomić mechanizm sprawdzarkowy ze swojego LMSa.
+Jeśli na własnych zajęciach chcesz korzystać materiałów udostępnionych tutaj na licencji Creative Commons, to możesz <a href="materials.php">pobrać lub zamieścić link</a> do treści z tej strony, <a href="tsugi/cc/export.php">wyeksportować materiały</a> kursu jako IMS Common Cartridge® lub złożyć wniosek o <a href="tsugi/admin/key/index.php">klucz i sekret</a> IMS Learning Tools Interoperability® (LTI®), tak by uruchomić mechanizm sprawdzarkowy ze swojego LMSa. <?php if ( !($CFG->providekeys) ) { echo _m("[Obecnie generowanie kluczy LTI jest wyłączone] "); } ?>
 </li>
 <li class="list-group-item">
 Kod tej witryny, w tym system sprawdzarkowy, slajdy i zawartość kursu, jest dostępny w serwisie <a href="https://github.com/andre-wojtowicz/py4e-pl" target="_blank">GitHub</a>. Oznacza to, że możesz stworzyć własną kopię strony kursu, opublikować ją i zremiksować w dowolny sposób. Co więcej, możesz przetłumaczyć całą witrynę (kurs) na swój język i również ją opublikować. Podałem <a href="https://github.com/csev/py4e/blob/master/TRANSLATION.md" target="_new">kilka instrukcji, jak przetłumaczyć ten kurs</a> w moim repozytorium GitHub.
