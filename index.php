@@ -5,82 +5,44 @@ use \Tsugi\UI\Output;
 require_once "top.php";
 require_once "nav.php";
 ?>
-<h1>Python for Everybody</h1>
+<h1>Python dla wszystkich</h1>
 <?php if ( isset($_SESSION['id']) ) { ?>
 <p>
-Welcome to my Massive Open Online Course (MOOC) version of Python for Everybody. 
-Now that you have logged in, you have access to course-style features of this web site.
+Witam na moim kursie MOOC (Massive Open Online Course) "Python dla wszystkich".
+Teraz, gdy jesteś już zalogowany na stronie, masz dostęp do dodatkowych funkcji związanych z kursem.
 <ul class="list-group">
 <li class="list-group-item">
-As you go through the <a href="lessons">Lessons</a> in the course you now will see additional
-links to the autograders in the class.  You can attempt the autograders and get a score.</li>
+W trakcie realizacji kolejnych <a href="lessons">lekcji</a> zauważysz dodatkowe linki związane z mechanizmem sprawdzarkowym zdań. Możesz podejść do zadań i uzyskać wynik.</li>
 <li class="list-group-item">
-You can track your progress through the course using the <a href="assignments">Assignments</a>
-tool and when you complete a group of assignments, you can earn a <a href="badges">Badge</a>.
-You can download these badges and host them on your web site or refer the badge URLs on this site.</li>
+Możesz śledzić swoje postępy w nauce za pomocą sekcji <a href="assignments">Zadania</a>, a gdy ukończysz pewną grupę zadań, możesz zdobyć <a href="badges">Odznakę</a>.
+Możesz pobrać odznaki i umieścić je na swojej stronie internetowej lub podlinkować adresów URL odznak umieszczonych na tej stronie.</li>
 <li class="list-group-item">
-If you want to use these Creative Commons Licensed materials 
-in your own classes you can 
-<a href="materials.php">download or link</a> to the artifacts on this site,
-<a href="tsugi/cc/export.php">export the course material</a> as an
-IMS Common Cartridge®, or apply for
-an IMS Learning Tools Interoperability® (LTI®)
-<a href="tsugi/admin/key/index.php">key and secret</a>
- to launch the autograders from your LMS.
+Jeśli na własnych zajęciach chcesz korzystać materiałów udostępnionych tutaj na licencji Creative Commons, to możesz <a href="materials.php">pobrać lub zamieścić link</a> do treści z tej strony, <a href="tsugi/cc/export.php">wyeksportować materiały</a> kursu jako IMS Common Cartridge® lub złożyć wniosek o <a href="tsugi/admin/key/index.php">klucz i sekret</a> IMS Learning Tools Interoperability® (LTI®), tak by uruchomić mechanizm sprawdzarkowy ze swojego LMSa.
 </li>
 </ul>
 <?php } else { ?>
 <p>
-Hello and welcome to my site where you can work through my course materials related to
-my free <a href="book.php">Python for Everybody</a> text book.  You can take this course for a certificate
-as the 
-<a href="https://www.coursera.org/specializations/python" target="_blank">Python for Everybody Specialization</a> on Coursera,
-<a href="https://www.edx.org/bio/charles-severance" target="_blank">Python for Everybody</a> (2 courses)  on edX, or
-<a href="https://www.futurelearn.com/courses/programming-for-everybody-python" target="_blank">Python for Everybody</a> (2 courses) on FutureLearn.
+Witaj na mojej stronie, na której możesz przeglądać materiały kursowe związane z moją bezpłatną książką <a href="book.php">Python dla wszystkich</a>. Możesz zrealizować ten kurs, tak aby uzyskać certyfikat w ramach <a href="https://www.coursera.org/specializations/python" target="_blank">specjalizacji w serwisie Coursera "Python for Everybody"</a>, <a href="https://www.edx.org/bio/charles-severance" target="_blank">dwóch kursów tematycznych "Python for Everybody" na edX</a> lub <a href="https://www.futurelearn.com/courses/programming-for-everybody-python" target="_blank">dwóch kursów "Python for Everybody" na FutureLearn</a>.
 </p>
 <p>
-You can use this web site many different ways:
+Możesz korzystać z tej strony na wiele różnych sposobów:
 <ul class="list-group">
 <li class="list-group-item">
-You browse my videos and course materials under <a href="lessons">Lessons</a>.  The materials
-I have developed
-for this class are all provided with a Creative Commons license so you can download or link to
-them to incorporate them into your own teaching if you like.</li>
+Możesz przeglądać moje filmy i materiały szkoleniowe umieszcone w sekcji <a href="lessons">Lekcje</a>. Wszystkie materiały, które tutaj opracowałem, są objęte licencją Creative Commons, więc możesz je pobrać lub podlinkować, tak aby włączyć je do własnego procesu nauczania, oczywiście jeśli chcesz.</li>
 <li class="list-group-item">
-If you <a href="tsugi/login.php">log in</a> to this site
-it is as if you have joined a free, global
-open and online course.  You have a grade book, autograded assignments, a discussion forum, and can earn
-badges for your efforts.</li>
+Jeśli <a href="tsugi/login.php">zalogujesz się</a> na tej stronie, to efekt jest taki jakbyś dołączył do bezpłatnego, globalnego, otwartego kursu internetowego. Będziesz posiadał dziennik ocen, automatyczne oceniane zadań i będziesz mógł zdobywać odznaki za swoje wysiłki.</li>
 <li class="list-group-item">
-We take your privacy seriously on this site, you can review our
-<a href="privacy">Privacy Policy</a> for more details.
+Na tej stronie poważnie traktujemy Twoją prywatność, możesz zapoznać się z naszą <a href="privacy">Polityką prywatności</a>, tak aby uzyskać więcej informacji.
 </li>
 <li class="list-group-item">
-If you want to use these materials 
-in your own classes you can download or link to the artifacts on this site,
-<a href="tsugi/cc/export.php">export the course material</a> as an
-IMS Common Cartridge®, or apply for
-an IMS Learning Tools Interoperability® (LTI®)
-<a href="tsugi/admin/key/index.php">key and secret</a>
- to launch the autograders from your LMS.
+Jeśli na własnych zajęciach chcesz korzystać materiałów udostępnionych tutaj na licencji Creative Commons, to możesz <a href="materials.php">pobrać lub zamieścić link</a> do treści z tej strony, <a href="tsugi/cc/export.php">wyeksportować materiały</a> kursu jako IMS Common Cartridge® lub złożyć wniosek o <a href="tsugi/admin/key/index.php">klucz i sekret</a> IMS Learning Tools Interoperability® (LTI®), tak by uruchomić mechanizm sprawdzarkowy ze swojego LMSa.
 </li>
 <li class="list-group-item">
-The code for this site including the autograders, slides, and course content is all available on
-<a href="https://github.com/csev/py4e" target="_blank">GitHub</a>.  That means you could make your own
-copy of the course site, publish it and remix it any way you like.  Even more exciting, you could translate
-the entire site (course) into your own language and publish it.  I have provided
-some <a href="https://github.com/csev/py4e/blob/master/TRANSLATION.md" target="_new">
-instructions on how to translate this course</a> in my GitHub repository.
+Kod tej witryny, w tym system sprawdzarkowy, slajdy i zawartość kursu, jest dostępny w serwisie <a href="https://github.com/andre-wojtowicz/py4e-pl" target="_blank">GitHub</a>. Oznacza to, że możesz stworzyć własną kopię strony kursu, opublikować ją i zremiksować w dowolny sposób. Co więcej, możesz przetłumaczyć całą witrynę (kurs) na swój język i również ją opublikować. Podałem <a href="https://github.com/csev/py4e/blob/master/TRANSLATION.md" target="_new">kilka instrukcji, jak przetłumaczyć ten kurs</a> w moim repozytorium GitHub.
 </li>
 </ul>
 <?php } ?>
-This site uses <a href="http://www.tsugi.org" target="_blank">Tsugi</a> 
-framework to embed a learning management system into this site and
-provide the autograders.  
-If you are interested in collaborating
-to build these kinds of sites for yourself, please see the
-<a href="http://www.tsugi.org" target="_blank">tsugi.org</a> website and/or 
-contact me.
+Ta strona wykorzystuje framework <a href="https://www.tsugi.org" target="_blank">Tsugi</a> do intregracji systemów LMS i udostępnienia mechanizmu sprawdzarkowego. Jeśli jesteś zainteresowany współpracą przy tworzeniu tego typu witryn na własne potrzeby, odwiedź stronę <a href="https://www.tsugi.org" target="_blank">tsugi.org</a> i/lub skontaktuj się ze mną.
 </p>
 <!--
 <?php

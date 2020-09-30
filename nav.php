@@ -33,7 +33,7 @@ if ( isset($_SESSION['id']) ) {
         $submenu->addLink('Google Classroom', $T.'gclass/login');
     }
     $submenu->addLink('Oceń ten kurs', 'https://www.class-central.com/mooc/7363/python-for-everybody');
-    $submenu->addLink('Prywatność', $R.'privacy');
+    $submenu->addLink('Polityka prywatności', $R.'privacy');
     if ( isset($_COOKIE['adminmenu']) && $_COOKIE['adminmenu'] == "true" ) {
         $submenu->addLink('Darmowe aplikacje Tsugi', 'https://www.tsugicloud.org');
         $submenu->addLink('Zarządzaj stroną', $T . 'admin/');
