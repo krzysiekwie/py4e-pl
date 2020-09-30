@@ -45,7 +45,7 @@ umieściłem na repozytorium GitHuba <a href="https://github.com/csev/py4e/blob/
 instrukcje dotyczące tego jak zabrać się za tłumaczenie</a>.
 Jeśli zaczyna tłumaczenie, skontaktuj się proszę ze mną aby skoordynować nasze działania.
 </p>
-<h2>Używanie tego kursu na Twoim lokalnym systemie LMS</h2>
+<h2>Używanie tego kursu w Twoim systemie LMS</h2>
 <p>Ta strona wykorzystuje oprogramowanie <a href="https://www.tsugi.org/" target="_blank">Tsugi</a>
 do hostowania mechanizmów sprawdzarkowych oraz do dostarczania tego materiału,
 tak aby mógł być on łatwo zintegrowany z systemami typu Learning Management System
@@ -55,6 +55,7 @@ lub podobnymi.
 <ul>
 <li>
 <p>
+<?php if ( !($CFG->providekeys) ) { echo _m("[Obecnie generowanie kluczy LTI jest wyłączone] "); } ?>
 Jeśli Twój LMS wspiera
 <a href="https://www.imsglobal.org/activity/learning-tools-interoperability" target="_blank">
 IMS Learning Tools Interoperabilty®</a> w wersji 1.x, to możesz się zalogować
@@ -64,6 +65,7 @@ czy potrzebujesz klucza LTI 1.x. Po otrzymaniu klucza otrzymasz instrukcje, jak 
 </li>
 <li>
 <p>
+<?php if ( !($CFG->providekeys) ) { echo _m("[Obecnie generowanie kluczy LTI jest wyłączone] "); } ?>
 <a href="#" title="Pobierz materiały kursu"
   onclick="showModalIframeUrl(this.title, 'iframe-dialog', 'iframe-frame', 'tsugi/cc/select', _TSUGI.spinnerUrl, true); return false;" >
   Pobierz materiały kursu
@@ -77,6 +79,7 @@ dostarczać Ci narzędzia oparte na LTI.
 </li>
 <li>
 <p>
+<?php if ( !($CFG->providekeys) ) { echo _m("[Obecnie generowanie kluczy LTI jest wyłączone] "); } ?>
 Jeśli Twój LMS wspiera
 <a href="https://www.imsglobal.org/specs/lticiv1p0" target="_blank">
 Learning Tools Interoperability® Content-Item Message</a>, to możesz się zalogować
@@ -88,16 +91,17 @@ dotyczące konfiguracji.
 </p>
 </li>
 <li><p>
+<?php if ( !isset($CFG->google_classroom_secret) ) { echo _m("[Obecnie niedostępne] "); } ?>
 Jeżeli używasz
 <a href="https://classroom.google.com" target="_blank">Google Classroom</a>,
 możesz automatycznie linkować zasoby z tej strony w trybie
-<a href="<?= $CFG->apphome ?>/lessons/intro?nostyle=yes">ograniczonego arkusza stylu lekcji</a>. (musisz być zalogowany)
+<a href="<?= $CFG->apphome ?>/lessons/intro?nostyle=yes">ograniczonego arkusza stylu lekcji</a> (musisz być zalogowany).
 </p></li>
 <li>
 <p>
 Jeśli Twój system LMS nie obsługuje ani Content Item, ani Common Cartridge, ale
 obsługuje LTI, to możesz ręcznie skopiować do swojego LMSa poszczególne linki
-do materiałów tego kursu. Mamy specjalny, <a href="<?= $CFG->apphome ?>/lessons/intro?nostyle=yes">ograniczony widok lekcji</a>, tal aby ręczne kopiowanie było tak łatwe, jak to tylko możliwe.
+do materiałów tego kursu. Mamy specjalny, <a href="<?= $CFG->apphome ?>/lessons/intro?nostyle=yes">ograniczony widok lekcji</a>, tak aby ręczne kopiowanie było tak łatwe, jak to tylko możliwe.
 </p>
 </li>
 </ul>
