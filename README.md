@@ -42,6 +42,8 @@ Polish translation
 
 URLs to translated trinkets are in `trinket3-pl-urls.md`.
 
+[Tsugi translation is done in separate repository.](https://github.com/andre-wojtowicz/tsugi/)
+
 ----
 
 Course materials for www.py4e.com

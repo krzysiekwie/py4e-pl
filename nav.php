@@ -5,7 +5,7 @@ $T = $CFG->wwwroot . '/';
 $adminmenu = isset($_COOKIE['adminmenu']) && $_COOKIE['adminmenu'] == "true";
 $set = new \Tsugi\UI\MenuSet();
 $set->setHome($CFG->servicename, $CFG->apphome);
-$set->addLeft('Start', $R.'install');
+$set->addLeft('Konfiguracja', $R.'install');
 $set->addLeft('Lekcje', $R.'lessons');
 if ( isset($_SESSION['id']) ) {
     $set->addLeft('Zadania', $R.'assignments');

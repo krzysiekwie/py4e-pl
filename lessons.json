@@ -1,6 +1,6 @@
 {
-"title": "Python for Everybody (PY4E)",
-"description" : "Hello and welcome to my site where you learn Python even if you have no programming background.",
+"title": "Python dla wszystkich (PY4E-PL)",
+"description" : "Witaj mojej stronie, na której nauczysz się Pythona, nawet jeśli nie masz doświadczenia w programowaniu.",
 "count": true,
 "required_modules": [
     "https://github.com/tsugitools/peer-grade"
@@ -13,14 +13,14 @@
 },
 "badges": [
     {
-        "title" : "Enrolled in Python for Everybody (PY4E)",
+        "title" : "Zapisany na 'Python dla wszystkich' (PY4E-PL)",
         "image" : "00_enrolled_py4e.png",
         "threshold" : "0.0",
         "assignments" : [
         ]
     },
     {
-        "title" : "Introductory Python - Hello World!",
+        "title" : "Podstawy Pythona - Witaj świecie!",
         "threshold" : "0.8",
         "image" : "01_hello_world.png",
         "assignments" : [
@@ -28,7 +28,7 @@
         ]
     },
     {
-        "title" : "Introductory Python - Getting Started",
+        "title" : "Podstawy Pythona - Konfiguracja",
         "threshold" : "0.8",
         "image" : "badge_01_code.png",
         "assignments" : [
@@ -41,7 +41,7 @@
         ]
     },
     {
-        "title" : "Python Data Structures",
+        "title" : "Struktury danych Pythona",
         "threshold" : "1.0",
         "image" : "badge_02_data.png",
         "assignments" : [
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "title" : "Accessing Web and Network Data With Python",
+        "title" : "Dostęp do Internetu i danych w sieci za pomocą Pythona",
         "threshold" : "0.8",
         "image" : "badge_03_network.png",
         "assignments" : [
@@ -68,7 +68,7 @@
         ]
     },
     {
-        "title" : "Using Databases With Python",
+        "title" : "Korzystanie z baz danych przy pomocy Pythona",
         "threshold" : "1.0",
         "image" : "badge_04_database.png",
         "assignments" : [
@@ -79,7 +79,7 @@
         ]
     },
     {
-        "title" : "Python for Everybody",
+        "title" : "Python dla wszystkich",
         "threshold" : "1.0",
         "image" : "badge_py4e.png",
         "assignments" : [
@@ -111,7 +111,7 @@
 ],
 "other_courses": [
     {
-        "title" : "Python for Everybody Specialization (Coursera)",
+        "title" : "Specjalizacja 'Python for Everybody' (Coursera)",
         "href" : "https://www.coursera.org/specializations/python"
     },
     {
@@ -121,23 +121,23 @@
 ],
 "modules": [
 { 
-    "title": "Installing Python",
+    "title": "Instalacja Pythona",
     "anchor": "install",
     "icon" : "fa-bicycle",
-    "description": "The first task is to work through the installation steps including installing Python and text editor.",
+    "description": "Pierwszym zadaniem jest przejście przez etapy instalacji oprogramowania, w tym instalację Pythona i edytora tekstu.",
     "assignment" : "install.php",
     "references" : [
         {
-            "title" : "Setting up the PythonLearn Environment in Microsoft Windows",
+            "title" : "Ustawienie środowiska w systemie Windows",
             "href" : "software-win.php"
         },
         {
-            "title" : "Setting up the PythonLearn Environment in Macintosh",
+            "title" : "Ustawienie środowiska w systemie macOS",
             "href" : "software-mac.php"
         }
     ],
     "lti" : {
-        "title": "Peer Graded: Installation Screen Shots",
+        "title": "Oceniane przez współuczestników kursu: Zrzuty ekranu pokazujące instalację",
         "launch" : "mod/peer-grade/",
         "resource_link_id": "install",
         "custom" : [
@@ -146,17 +146,17 @@
                 "json": 
 
 {
-  "title":"Peer Review: Installing and Running Python Screen Shots",
-  "description":"Install Python and a programming text editor and write a program that prints one line other than 'hello world', then take two screen shots and upload them below. You should use the command line to execute the Python program you wrote in the text editor. Please do *not* use the IDLE Python Shell, the Python Interpreter (>>>), or a shortcut in your text editor to run the code. Later in the class when we start reading files, we will need to be able to run Python programs from particular directories. See the videos for details.",
-  "grading":"This is a relatively simple assignment. The goal is to simply show that each student has Python installed on their desktop or laptop and can take screen shots. Please make your comments to help the student that you are reviewing.",
-  "assignment":"http://www.py4e.com/install",
+  "title":"Recenzja innych uczestników: zrzuty ekranu dokumentujące instalację i uruchomienia Pythona",
+  "description":"Zainstaluj Pythona i programistyczny edytor tekstu oraz napisz program, który wypisuje jedną linię inną niż 'Witaj świecie!', a następnie zrób dwa zrzuty ekranu i wgraj je poniżej. Powinieneś użyć wiersza poleceń do wykonania programu Pythona, który napisałeś w edytorze tekstowym. *Nie używaj* edytora IDLE Python Shell, interpretera Pythona (>>>), ani też skrótu w edytorze tekstu, który uruchamia kod. Później podczas kursu, gdy zaczniemy wczytywać pliki, będziemy musieli mieć możliwość uruchamiania programów z poszczególnych katalogów. Możesz obejrzeć filmy aby więcej się dowiedzieć na ten temat.",
+  "grading":"Jest to stosunkowo proste zadanie. Celem jest po prostu pokazanie, że każdy kursant ma zainstalowanego Pythona na swoim komputerze stacjonarnym lub laptopie i może wykonać zrzuty ekranu. Aby pomóc kursantowi, który będzie recenzentem Twojego zadania, dodaj również komentarze.",
+  "assignment":"https://py4e.pl/install",
   "parts":[
     {
-      "title":"Image of the program being edited in a text editor",
+      "title":"Obraz edytowanego programu w edytorze tekstowym",
       "type":"image"
     },
     {
-      "title":"Image of the program being executed in the command line or terminal",
+      "title":"Obraz programu wykonywanego w wierszu poleceń lub terminalu",
       "type":"image"
     }
   ],
