@@ -147,7 +147,7 @@
 
 {
   "title":"Recenzja współuczestników kursu: zrzuty ekranu dokumentujące instalację i uruchomienia Pythona",
-  "description":"Zainstaluj Pythona i programistyczny edytor tekstu oraz napisz program, który wypisuje jedną linię inną niż 'Witaj świecie!', a następnie zrób dwa zrzuty ekranu i wgraj je poniżej. Powinieneś użyć wiersza poleceń do wykonania programu Pythona, który napisałeś w edytorze tekstowym. *Nie używaj* edytora IDLE Python Shell, interpretera Pythona (>>>), ani też skrótu w edytorze tekstu, który uruchamia kod. Później podczas kursu, gdy zaczniemy wczytywać pliki, będziemy musieli mieć możliwość uruchamiania programów z poszczególnych katalogów. Możesz obejrzeć filmy aby więcej się dowiedzieć na ten temat.",
+  "description":"Zainstaluj Pythona i programistyczny edytor tekstu oraz napisz program, który wypisuje jedną linię inną niż \"Witaj świecie!\", a następnie zrób dwa zrzuty ekranu i wgraj je poniżej. Powinieneś użyć wiersza poleceń do wykonania programu Pythona, który napisałeś w edytorze tekstowym. *Nie używaj* edytora IDLE Python Shell, interpretera Pythona (>>>), ani też skrótu w edytorze tekstu, który uruchamia kod. Później podczas kursu, gdy zaczniemy wczytywać pliki, będziemy musieli mieć możliwość uruchamiania programów z poszczególnych katalogów. Możesz obejrzeć filmy aby więcej się dowiedzieć na ten temat.",
   "grading":"Jest to stosunkowo proste zadanie. Celem jest po prostu pokazanie, że każdy kursant ma zainstalowanego Pythona na swoim komputerze stacjonarnym lub laptopie i może wykonać zrzuty ekranu. Aby pomóc kursantowi, który będzie recenzentem Twojego zadania, dodaj również komentarze.",
   "assignment":"https://py4e.pl/install",
   "parts":[
@@ -221,7 +221,7 @@
         }
     ],
     "lti" : {
-        "title" : "Automatyczna ocena: 'Witaj świecie!'",
+        "title" : "Automatyczna ocena: prosty program \"Witaj świecie!\"",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_01_hello",
         "custom" : [
