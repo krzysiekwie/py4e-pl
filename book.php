@@ -23,8 +23,8 @@
 
 <p>Przykładowe kody programów oraz pliki danych do książki znajdują się <a href="code3" target="_blank">tutaj</a>.</p>
 <p>
-Rozdziały 2-10 są mocno zaczerpnięte z otwartej książki zatytułowanej: "<a href="https://www.greenteapress.com/thinkpython/thinkCSpy/" target="_blank">Think Python: How to Think like a Computer Scientist</a>" autorstwa
-    <a href="https://allendowney.com/" target="_blank">Allena B. Downey'a</a> i <a href="https://www.elkner.net/" target="_blank">Jeffa Elknera</a>.
+Rozdziały 2-10 są mocno zaczerpnięte z otwartej książki zatytułowanej: "<a href="https://greenteapress.com/wp/learning-with-python/" target="_blank">Think Python: How to Think like a Computer Scientist</a>" autorstwa
+    <a href="https://www.allendowney.com/wp/" target="_blank">Allena B. Downey'a</a> i <a href="https://elkner.net/" target="_blank">Jeffa Elknera</a>.
 </p>
 
 <?php
