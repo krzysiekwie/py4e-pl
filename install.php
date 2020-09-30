@@ -11,7 +11,7 @@
         <ul>
             <li>
                 <a href="software-pyaw.php">
-                    Używanie Pythona na PythonAnywher
+                    Używanie Pythona na PythonAnywhere
                 </a> 
                 (Chmura / przeglądarka - nie wymaga instalacji)
             </li>

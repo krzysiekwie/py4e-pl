@@ -25,7 +25,7 @@ if ( isset($_SESSION['id']) ) {
     }
 
     $submenu->addLink('Odznaki', $R.'badges');
-    $submenu->addLink('Otwarte zasoby edukacyjne', $R.'materials');
+    $submenu->addLink('Materiały', $R.'materials');
     if ( $CFG->providekeys ) {
         $submenu->addLink('Integracja z LMS', $T . 'settings');
     }

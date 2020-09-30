@@ -2,7 +2,7 @@
 
 $foot = '
 <p class="alert alert-info" role="alert">
-<b>Strona w budowie. Jeśli chcesz pomóc w tłumaczeniu, zajrzyj do repozytorium GitHub
+<b>Strona w budowie. Jeśli chcesz pomóc w tłumaczeniu, zajrzyj do repozytorium 
 <a href="https://github.com/andre-wojtowicz/py4e-pl/blob/master/README.md"
    target="_blank">https://github.com/andre-wojtowicz/py4e-pl</a>.</b>
 </p>
