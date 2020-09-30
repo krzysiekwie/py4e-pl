@@ -187,7 +187,7 @@
     "references" : [
         {
             "title" : "Rozdział 1: Wstęp",
-            "href" : "https://py4e.pl/html3/01-intro"
+            "href" : "https://py4e.pl/html3/01-intro.php"
         }
     ],
     "videos" : [
@@ -241,7 +241,7 @@
     "references" : [
         {
             "title" : "Rozdział 2: Zmienne, wyrażenia i instrukcje",
-            "href" : "https://py4e.pl/html3/02-variables"
+            "href" : "https://py4e.pl/html3/02-variables.php"
         }
     ],
     "videos" : [
@@ -283,7 +283,7 @@
     "references" : [
         {
             "title" : "Rozdział 3: Wykonanie warunkowe",
-            "href" : "https://py4e.pl/html3/03-conditional"
+            "href" : "https://py4e.pl/html3/03-conditional.php"
         }
     ],
     "videos" : [
@@ -338,7 +338,7 @@
     "references" : [
         {
             "title" : "Rozdział 4: Funkcje",
-            "href" : "https://py4e.pl/html3/04-functions"
+            "href" : "https://py4e.pl/html3/04-functions.php"
         }
     ],
     "videos" : [
@@ -376,7 +376,7 @@
     "references" : [
         {
             "title" : "Rozdział 5: Pętle i iteracje",
-            "href" : "https://py4e.pl/html3/05-iterations"
+            "href" : "https://py4e.pl/html3/05-iterations.php"
         }
     ],
     "videos" : [
@@ -422,7 +422,7 @@
     "references" : [
         {
             "title" : "Rozdział 6: Ciągi znaków",
-            "href" : "https://py4e.pl/html3/06-strings"
+            "href" : "https://py4e.pl/html3/06-strings.php"
         }
     ],
     "videos" : [
@@ -460,7 +460,7 @@
     "references" : [
         {
             "title" : "Rozdział 7: Pliki",
-            "href" : "https://py4e.pl/html3/07-files"
+            "href" : "https://py4e.pl/html3/07-files.php"
         }
     ],
     "videos" : [
@@ -498,7 +498,7 @@
     "references" : [
         {
             "title" : "Rozdział 8: Listy",
-            "href" : "https://py4e.pl/html3/08-lists"
+            "href" : "https://py4e.pl/html3/08-lists.php"
         }
     ],
     "videos" : [
@@ -571,7 +571,7 @@
     "references" : [
         {
             "title" : "Rozdział 9: Słowniki",
-            "href" : "https://py4e.pl/html3/09-dictionaries"
+            "href" : "https://py4e.pl/html3/09-dictionaries.php"
         },
         {
             "title" : "Fun: Sesame Street - The Count",
@@ -599,7 +599,7 @@
     "references" : [
         {
             "title" : "Rozdział 10: Krotki",
-            "href" : "https://py4e.pl/html3/10-tuples"
+            "href" : "https://py4e.pl/html3/10-tuples.php"
         }
     ],
 
@@ -652,7 +652,7 @@
     "references" : [
         {
             "title" : "Rozdział 11: Wyrażenia regularne",
-            "href" : "https://py4e.pl/html3/11-regex"
+            "href" : "https://py4e.pl/html3/11-regex.php"
         },
         {
             "title" : "Python Regular Expression Quick Guide",
@@ -680,7 +680,7 @@
     "references" : [
         {
             "title" : "Rozdział 12: Programy sieciowe",
-            "href" : "https://py4e.pl/html3/12-network"
+            "href" : "https://py4e.pl/html3/12-network.php"
         },
         {
             "title" : "ASCII Coding and Binary",
@@ -775,7 +775,7 @@
     "references" : [
         {
             "title" : "Rozdział 13: Korzystanie z usług sieciowych",
-            "href" : "https://py4e.pl/html3/13-web"
+            "href" : "https://py4e.pl/html3/13-web.php"
         }
     ],
 
@@ -878,7 +878,7 @@
     "references" : [
         {
             "title" : "Rozdział 14: Programowanie obiektowe",
-            "href" : "https://py4e.pl/html3/14-objects"
+            "href" : "https://py4e.pl/html3/14-objects.php"
         }
     ],
     "videos" : [
@@ -967,7 +967,7 @@
     "references" : [
         {
             "title" : "Rozdział 15: Bazy danych i SQL",
-            "href" : "https://py4e.pl/html3/15-database"
+            "href" : "https://py4e.pl/html3/15-database.php"
         },
         {
             "title" : "Python for Everybody Database Handout",
@@ -1030,7 +1030,7 @@
     "references" : [
         {
             "title" : "Rozdział 16: Wizualizacja danych",
-            "href" : "https://py4e.pl/html3/16-viz"
+            "href" : "https://py4e.pl/html3/16-viz.php"
         }
     ],
     "videos" : [
