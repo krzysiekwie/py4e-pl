@@ -52,8 +52,8 @@ if ( isset($_SESSION['id']) ) {
 
 $imenu = new \Tsugi\UI\Menu();
 
-$imenu->addLink('Instruktor', 'https://www.dr-chuck.com');
-$imenu->addLink('Dyżury', 'http://www.dr-chuck.com/office/');
+$imenu->addLink('Strona domowa', 'https://www.dr-chuck.com');
+$imenu->addLink('Dyżury', 'https://www.dr-chuck.com/office/');
 $set->addRight('Książka', $R . 'book');
 $set->addRight('Instruktor', $imenu);
 
