@@ -14,7 +14,7 @@ if ( isset($_SESSION['id']) ) {
     // if ( isset($CFG->disqushost) ) $set->addLeft('Discuss', $T.'discuss');
     // else if ( isset($CFG->disquschannel) ) $set->addLeft('Discuss', $CFG->disquschannel);
 } else {
-    $set->addLeft('OZE', $R.'materials');
+    $set->addLeft('Otwarte zasoby edukacyjne', $R.'materials');
 }
 
 if ( isset($_SESSION['id']) ) {
@@ -25,7 +25,7 @@ if ( isset($_SESSION['id']) ) {
     }
 
     $submenu->addLink('Odznaki', $R.'badges');
-    $submenu->addLink('Materiały', $R.'materials');
+    $submenu->addLink('Otwarte zasoby edukacyjne', $R.'materials');
     if ( $CFG->providekeys ) {
         $submenu->addLink('Integracja z LMS', $T . 'settings');
     }
@@ -52,7 +52,7 @@ if ( isset($_SESSION['id']) ) {
 
 $imenu = new \Tsugi\UI\Menu();
 
-$imenu->addLink('Instruktor', 'http://www.dr-chuck.com');
+$imenu->addLink('Instruktor', 'https://www.dr-chuck.com');
 $imenu->addLink('Dyżury', 'http://www.dr-chuck.com/office/');
 $set->addRight('Książka', $R . 'book');
 $set->addRight('Instruktor', $imenu);
