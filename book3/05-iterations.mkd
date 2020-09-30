@@ -1,6 +1,6 @@
 
-Iteracja
-========
+Pętle i iteracje
+================
 
 \index{iteracja}
 

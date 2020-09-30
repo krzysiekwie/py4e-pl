@@ -16,5 +16,5 @@ http_response_code(404);
 $OUTPUT->header();
 $OUTPUT->bodyStart();
 $OUTPUT->topNav();
-echo("<h2>Page not found.</h2>\n");
+echo("<h2>Nie odnaleziono strony.</h2>\n");
 $OUTPUT->footer();

@@ -146,7 +146,7 @@
                 "json": 
 
 {
-  "title":"Recenzja innych uczestników: zrzuty ekranu dokumentujące instalację i uruchomienia Pythona",
+  "title":"Recenzja współuczestników kursu: zrzuty ekranu dokumentujące instalację i uruchomienia Pythona",
   "description":"Zainstaluj Pythona i programistyczny edytor tekstu oraz napisz program, który wypisuje jedną linię inną niż 'Witaj świecie!', a następnie zrób dwa zrzuty ekranu i wgraj je poniżej. Powinieneś użyć wiersza poleceń do wykonania programu Pythona, który napisałeś w edytorze tekstowym. *Nie używaj* edytora IDLE Python Shell, interpretera Pythona (>>>), ani też skrótu w edytorze tekstu, który uruchamia kod. Później podczas kursu, gdy zaczniemy wczytywać pliki, będziemy musieli mieć możliwość uruchamiania programów z poszczególnych katalogów. Możesz obejrzeć filmy aby więcej się dowiedzieć na ten temat.",
   "grading":"Jest to stosunkowo proste zadanie. Celem jest po prostu pokazanie, że każdy kursant ma zainstalowanego Pythona na swoim komputerze stacjonarnym lub laptopie i może wykonać zrzuty ekranu. Aby pomóc kursantowi, który będzie recenzentem Twojego zadania, dodaj również komentarze.",
   "assignment":"https://py4e.pl/install",
@@ -179,15 +179,15 @@
     }
 },
 {
-    "title": "Why Program?",
+    "title": "Po co nam programowanie?",
     "anchor": "intro",
     "icon" : "fa-hand-o-right",
-    "description": "We learn why one might want to learn to program, and look at the basic issues with learning to program.",
+    "description": "Dowiemy się dlaczego ktoś może chcieć nauczyć się programowania i przyjrzymy się podstawowym problemom związanym z nauką programowania.",
     "slides": "lectures3/Pythonlearn-01-Intro.pptx",
     "references" : [
         {
-            "title" : "Chapter 1: Introduction",
-            "href" : "https://www.py4e.com/html3/01-intro"
+            "title" : "Rozdział 1: Wstęp",
+            "href" : "https://py4e.pl/html3/01-intro"
         }
     ],
     "videos" : [
@@ -221,7 +221,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Write Hello World",
+        "title" : "Automatyczna ocena: 'Witaj świecie!'",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_01_hello",
         "custom" : [
@@ -233,15 +233,15 @@
     }
 },
 {
-    "title": "Variables, expressions, and statements",
+    "title": "Zmienne, wyrażenia i instrukcje",
     "anchor": "memory",
     "icon" : "fa-database",
-    "description": "We learn how to make variables and store data in those variables.",
+    "description": "Nauczymy się jak tworzyć zmienne i przechowywać w nich dane.",
     "slides": "lectures3/Pythonlearn-02-Expressions.pptx",
     "references" : [
         {
-            "title" : "Chapter 2: Variables",
-            "href" : "https://www.py4e.com/html3/02-variables"
+            "title" : "Rozdział 2: Zmienne, wyrażenia i instrukcje",
+            "href" : "https://py4e.pl/html3/02-variables"
         }
     ],
     "videos" : [
@@ -263,7 +263,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Exercise 2.3",
+        "title" : "Automatyczna ocena: Ćwiczenie 2.3",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_02_03",
         "custom" : [
@@ -275,15 +275,15 @@
     }
 },
 {
-    "title": "Conditional Execution",
+    "title": "Wykonanie warunkowe",
     "anchor": "logic",
     "icon" : "fa-diamond",
-    "description": "We look at how Python executes some statements and skips others.",
+    "description": "Zobaczymy jak Python wykonuje niektóre instrukcje, a inne pomija.",
     "slides": "lectures3/Pythonlearn-03-Conditional.pptx",
     "references" : [
         {
-            "title" : "Chapter 3: Conditionals",
-            "href" : "https://www.py4e.com/html3/03-conditional"
+            "title" : "Rozdział 3: Wykonanie warunkowe",
+            "href" : "https://py4e.pl/html3/03-conditional"
         }
     ],
     "videos" : [
@@ -306,7 +306,7 @@
     ],
     "lti" : [ 
     {
-        "title" : "Autograder: Exercise 3.1",
+        "title" : "Automatyczna ocena: Ćwiczenie 3.1",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_03_01",
         "custom" : [
@@ -317,7 +317,7 @@
         ]
     },
     {
-        "title" : "Autograder: Exercise 3.3",
+        "title" : "Automatyczna ocena: Ćwiczenie 3.3",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_03_03",
         "custom" : [
@@ -330,15 +330,15 @@
     ]
 },
 {
-    "title": "Functions",
+    "title": "Funkcje",
     "anchor": "functions",
     "icon" : "fa-files-o",
-    "description": "Take a brief look at how Python implements the 'store and use later' programming pattern.",
+    "description": "Przyjrzymy się pobieżnie temu jak Python stosuje schemat programowania 'zapisz i użyj później'.",
     "slides": "lectures3/Pythonlearn-04-Functions.pptx",
     "references" : [
         {
-            "title" : "Chapter 4: Functions",
-            "href" : "https://www.py4e.com/html3/04-functions"
+            "title" : "Rozdział 4: Funkcje",
+            "href" : "https://py4e.pl/html3/04-functions"
         }
     ],
     "videos" : [
@@ -356,7 +356,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Exercise 4.6",
+        "title" : "Automatyczna ocena: Ćwiczenie 4.6",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_04_06",
         "custom" : [
@@ -368,15 +368,15 @@
     }
 },
 {
-    "title": "Loops and Iterations",
+    "title": "Pętle i iteracje",
     "anchor": "loops",
     "icon" : "fa-gears",
-    "description": "We look at how Python repeats statements using looping structures.",
+    "description": "Przyjrzyjmy się jak Python powtarza instrukcje przy użyciu struktury pętli.",
     "slides": "lectures3/Pythonlearn-05-Iterations.pptx",
     "references" : [
         {
-            "title" : "Chapter 5: Iterations",
-            "href" : "https://www.py4e.com/html3/05-iterations"
+            "title" : "Rozdział 5: Pętle i iteracje",
+            "href" : "https://py4e.pl/html3/05-iterations"
         }
     ],
     "videos" : [
@@ -402,7 +402,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Exercise 5.2",
+        "title" : "Automatyczna ocena: Ćwiczenie 5.2",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_05_02",
         "custom" : [
@@ -414,15 +414,15 @@
     }
 },
 {
-    "title": "Strings",
+    "title": "Ciągi znaków",
     "anchor": "strings",
     "icon" : "fa-file-text-o",
-    "description": "We look at how Python stores and manipulates textual data using string variables and functions.",
+    "description": "Przyjrzymy się jak Python przechowuje i zarządza danymi tekstowymi za pomocą funkcji i zmiennych będących ciągami znaków.",
     "slides": "lectures3/Pythonlearn-06-Strings.pptx",
     "references" : [
         {
-            "title" : "Chapter 6: Strings",
-            "href" : "https://www.py4e.com/html3/06-strings"
+            "title" : "Rozdział 6: Ciągi znaków",
+            "href" : "https://py4e.pl/html3/06-strings"
         }
     ],
     "videos" : [
@@ -440,7 +440,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Exercise 6.5",
+        "title" : "Automatyczna ocena: Ćwiczenie 6.5",
         "resource_link_id": "pythonauto_06_05",
         "launch" : "tools/pythonauto/",
         "custom" : [
@@ -452,15 +452,15 @@
     }
 },
 {
-    "title": "Files",
+    "title": "Pliki",
     "anchor": "files",
     "icon" : "fa-database",
-    "description": "We learn how to open data files on your computer and read through the files using Python.",
+    "description": "Dowiemy się jak za pomocą Pythona otwierać na komputerze pliki danych i odczytywać ich zawartość.",
     "slides": "lectures3/Pythonlearn-07-Files.pptx",
     "references" : [
         {
-            "title" : "Chapter 7: Files",
-            "href" : "https://www.py4e.com/html3/07-files"
+            "title" : "Rozdział 7: Pliki",
+            "href" : "https://py4e.pl/html3/07-files"
         }
     ],
     "videos" : [
@@ -478,7 +478,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Exercise 7.2",
+        "title" : "Automatyczna ocena: Ćwiczenie 7.2",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_07_02",
         "custom" : [
@@ -490,15 +490,15 @@
     }
 },
 {
-    "title": "Lists",
+    "title": "Listy",
     "anchor": "lists",
     "icon" : "fa-list-ol",
-    "description": "We look at Python's simplest data structure - the list.  Lists can store more than one item in a variable.",
+    "description": "Przyjrzyjmy się najprostszej strukturze danych Pythona tj. liście. Listy mogą przechowywać w zmiennej więcej niż jeden element.",
     "slides": "lectures3/Pythonlearn-08-Lists.pptx",
     "references" : [
         {
-            "title" : "Chapter 8: Lists",
-            "href" : "https://www.py4e.com/html3/08-lists"
+            "title" : "Rozdział 8: Listy",
+            "href" : "https://py4e.pl/html3/08-lists"
         }
     ],
     "videos" : [
@@ -521,7 +521,7 @@
     ],
     "lti" : [
     {
-        "title" : "Autograder: Exercise 8.4",
+        "title" : "Automatyczna ocena: Ćwiczenie 8.4",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_08_04",
         "custom" : [
@@ -532,7 +532,7 @@
         ]
     },
     {
-        "title" : "Autograder: Exercise 8.5",
+        "title" : "Automatyczna ocena: Ćwiczenie 8.5",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_08_05",
         "custom" : [
@@ -545,10 +545,10 @@
     ]
 },
 {
-    "title": "Dictionaries",
+    "title": "Słowniki",
     "anchor": "dictionary",
     "icon" : "fa-key",
-    "description": "The dictionary data structures allows us to store multiple values in an object and look up the values by their key.",
+    "description": "Struktury danych słownika pozwalają nam przechowywać w obiekcie wiele wartości i wyszukiwać wartości według ich klucza.",
     "slides": "lectures3/Pythonlearn-09-Dictionaries.pptx",
     "videos" : [
         {
@@ -570,8 +570,8 @@
     ],
     "references" : [
         {
-            "title" : "Chapter 9: Dictionaries",
-            "href" : "https://www.py4e.com/html3/09-dictionaries"
+            "title" : "Rozdział 9: Słowniki",
+            "href" : "https://py4e.pl/html3/09-dictionaries"
         },
         {
             "title" : "Fun: Sesame Street - The Count",
@@ -579,7 +579,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Exercise 9.4",
+        "title" : "Automatyczna ocena: Ćwiczenie 9.4",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_09_04",
         "custom" : [
@@ -591,15 +591,15 @@
     }
 },
 {
-    "title": "Tuples",
+    "title": "Krotki",
     "anchor": "tuples",
     "icon" : "fa-inbox",
-    "description": "The tuple is a Python data structure that is like a simple and efficient list.",
+    "description": "Krotka to struktura danych w Pythonie, która przypomina prostą i wydajną listę.",
     "slides": "lectures3/Pythonlearn-10-Tuples.pptx",
     "references" : [
         {
-            "title" : "Chapter 10: Tuples",
-            "href" : "https://www.py4e.com/html3/10-tuples"
+            "title" : "Rozdział 10: Krotki",
+            "href" : "https://py4e.pl/html3/10-tuples"
         }
     ],
 
@@ -618,7 +618,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Exercise 10.2",
+        "title" : "Automatyczna ocena: Ćwiczenie 10.2",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_10_02",
         "custom" : [
@@ -630,10 +630,10 @@
     }
 },
 {
-    "title": "Regular Expressions",
+    "title": "Wyrażenia regularne",
     "anchor": "regex",
     "icon" : "fa-magic",
-    "description": "Regular Expressions allow us to search for patterns in strings and extract data from strings using the regular expression programming language.",
+    "description": "Wyrażenia regularne pozwalają nam wyszukiwać w napisach pewne wzorce i wyodrębniać z nich dane przy użyciu języka programowania wyrażeń regularnych.",
     "slides": "lectures3/Pythonlearn-11-Regex.pptx",
     "videos" : [
         {
@@ -651,8 +651,8 @@
     ],
     "references" : [
         {
-            "title" : "Chapter 11: Regular Expressions",
-            "href" : "https://www.py4e.com/html3/11-regex"
+            "title" : "Rozdział 11: Wyrażenia regularne",
+            "href" : "https://py4e.pl/html3/11-regex"
         },
         {
             "title" : "Python Regular Expression Quick Guide",
@@ -660,7 +660,7 @@
         }
     ],
     "lti" : {
-        "title" : "Autograder: Regular Expressions",
+        "title" : "Automatyczna ocena: Wyrażenia regularne",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_01_regex",
         "custom" : [
@@ -672,15 +672,15 @@
     }
 },
 {
-    "title": "Network Programming",
+    "title": "Programy sieciowe",
     "anchor": "network",
     "icon" : "fa-cloud",
-    "description": "We take a quick look at how data moves across the network using the HyperText Transport Protocol (HTTP) and how we write programs to read data scross the network.",
+    "description": "Rzucimy okiem na to jak dane są przesyłane w sieci przy użyciu protokołu HTTP (HyperText Transport Protocol) i jak pisze się programy odczytujące dane z sieci.",
     "slides": "lectures3/Pythonlearn-12-HTTP.pptx",
     "references" : [
         {
-            "title" : "Chapter 12: Networked Programs",
-            "href" : "https://www.py4e.com/html3/12-network"
+            "title" : "Rozdział 12: Programy sieciowe",
+            "href" : "https://py4e.pl/html3/12-network"
         },
         {
             "title" : "ASCII Coding and Binary",
@@ -732,7 +732,7 @@
     ],
     "lti" : [
     {
-        "title" : "Autograder: Request-Response Cycle",
+        "title" : "Automatyczna ocena: cykl żądanie-odpowiedź",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_02_rrc",
         "custom" : [
@@ -743,7 +743,7 @@
         ]
     },
     {
-        "title" : "Autograder: Scraping HTML Data with BeautifulSoup",
+        "title" : "Automatyczna ocena: parsowanie danych HTML przy pomocy BeautifulSoup",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_03_html",
         "custom" : [
@@ -754,7 +754,7 @@
         ]
     },
     {
-        "title" : "Autograder: Following Links with BeautifulSoup",
+        "title" : "Automatyczna ocena: przechodzenie po linkach przy pomocy BeautifulSoup",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_04_links",
         "custom" : [
@@ -767,15 +767,15 @@
     ]
 },
 {
-    "title": "Using Web Services",
+    "title": "Korzystanie z usług sieciowych",
     "anchor": "servces",
     "icon" : "fa-briefcase",
-    "description": "Web services allow a program to access data available in a different server.",
+    "description": "Usługi sieciowe umożliwiają programowi dostęp do danych umieszczonych na innym serwerze.",
     "slides": "lectures3/Pythonlearn-13-WebServices.pptx",
     "references" : [
         {
-            "title" : "Chapter 13: Python and Web Services",
-            "href" : "https://www.py4e.com/html3/13-web"
+            "title" : "Rozdział 13: Korzystanie z usług sieciowych",
+            "href" : "https://py4e.pl/html3/13-web"
         }
     ],
 
@@ -835,7 +835,7 @@
     ],
     "lti" : [
     {
-        "title" : "Autograder: Extracting Data from XML",
+        "title" : "Automatyczna ocena: wydobywanie danych z XMLa",
         "resource_link_id": "pythondata_05_xml",
         "launch" : "tools/python-data/",
         "custom" : [
@@ -846,7 +846,7 @@
         ]
     },
     {
-        "title" : "Autograder: Extract Data from JSON",
+        "title" : "Automatyczna ocena: wydobywanie danych z JSONa",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_06_json",
         "custom" : [
@@ -857,7 +857,7 @@
         ]
     },
     {
-        "title" : "Autograder: Using the GeoJSON API",
+        "title" : "Automatyczna ocena: Używanie API GeoJSON",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_07_geo",
         "custom" : [
@@ -870,15 +870,15 @@
     ]
 },
 {
-    "title": "Object-Oriented Programming",
+    "title": "Programowanie obiektowe",
     "anchor": "Objects",
     "icon" : "fa-cubes",
-    "description": "We do a quick look at how Python supports the Object-Oriented programming pattern.",
+    "description": "Rzucimy okiem na to, jak Python obsługuje paradygmat programowania obiektowego.",
     "slides": "lectures3/Pythonlearn-14-Objects.pptx",
     "references" : [
         {
-            "title" : "Chapter 14: Python Objects",
-            "href" : "https://www.py4e.com/html3/14-objects"
+            "title" : "Rozdział 14: Programowanie obiektowe",
+            "href" : "https://py4e.pl/html3/14-objects"
         }
     ],
     "videos" : [
@@ -901,18 +901,18 @@
     ],
     "lti" : [
         {
-            "title" : "Quiz: Object-Oriented Programming",
+            "title" : "Quiz: Programowanie obiektowe",
             "launch" : "mod/gift/?quiz=16-Python-Objects.txt",
             "resource_link_id" : "py4e_16_oo_quiz"
         }
     ]
 },
 {
-    "title": "Databases",
+    "title": "Bazy danych i SQL",
     "chapter" : "15",
     "anchor": "database",
     "icon" : "fa-database",
-    "description": "Databases give us very fast random access to large amounts of data. There is a lot of material in this chapter as we learn the Structured Query Language (SQL).",
+    "description": "Bazy danych dają nam bardzo szybki dostęp do dużych ilości danych. Rozdział ten zawiera dużo materiału, ponieważ nauczymy się podstaw języka SQL.",
     "slides": "lectures3/Pythonlearn-15-Databases.pptx",
     "videos" : [
         {
@@ -966,8 +966,8 @@
     ],
     "references" : [
         {
-            "title" : "Chapter 15: Python and Databases",
-            "href" : "https://www.py4e.com/html3/15-database"
+            "title" : "Rozdział 15: Bazy danych i SQL",
+            "href" : "https://py4e.pl/html3/15-database"
         },
         {
             "title" : "Python for Everybody Database Handout",
@@ -976,7 +976,7 @@
     ],
     "lti" : [
     {
-        "title" : "Autograder: Single Table SQL",
+        "title" : "Automatyczna ocena: Pojedyncza tabela SQL",
         "launch" : "tools/sql-intro/",
         "resource_link_id": "pythonsql_01_single",
         "custom" : [
@@ -987,7 +987,7 @@
         ]
     },
     {
-        "title" : "Autograder: Counting Email in a Database",
+        "title" : "Automatyczna ocena: Zliczanie e-maili w bazie",
         "launch" : "tools/sql-intro/",
         "resource_link_id": "pythonsql_02_email",
         "custom" : [
@@ -998,7 +998,7 @@
         ]
     },
     {
-        "title" : "Autograder: Multi-Table Database - Tracks",
+        "title" : "Automatyczna ocena: Baza z kilkoma tabelami - Utwory",
         "launch" : "tools/sql-intro/",
         "resource_link_id": "pythonsql_03_tracks",
         "custom" : [
@@ -1009,7 +1009,7 @@
         ]
     },
     {
-        "title" : "Autograder: Many Students in Many Courses",
+        "title" : "Automatyczna ocena: Wielu studentów na wielu kursach",
         "launch" : "tools/sql-intro/",
         "resource_link_id": "pythonsql_04_many",
         "custom" : [
@@ -1022,15 +1022,15 @@
     ]
 },
 {
-    "title": "Data Visualization",
+    "title": "Wizualizacja danych",
     "anchor": "dataviz",
     "icon" : "fa-bar-chart-o",
-    "description": "In this section, we learn to scrape data from the network, store the data in a database and then read the data from the database to produce in in-browser visualization of the data.",
+    "description": "W tej sekcji nauczymy się jak pobierać dane z sieci, przechowywać je w bazie danych, a następnie odczytywać je z bazy danych, tak aby stworzyć w przeglądarce internetowej wizualizację tych danych.",
     "slides": "lectures3/Pythonlearn-16-Data-Viz.pptx",
     "references" : [
         {
-            "title" : "Chapter 16: Data Vizualization",
-            "href" : "https://www.py4e.com/html3/16-viz"
+            "title" : "Rozdział 16: Wizualizacja danych",
+            "href" : "https://py4e.pl/html3/16-viz"
         }
     ],
     "videos" : [
