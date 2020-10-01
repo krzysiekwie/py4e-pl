@@ -586,11 +586,11 @@ if ( $dueDate->message ) {
     echo('<button onclick="$(\'#info\').modal();return false;" class="btn btn-default" type="button"><span class="glyphicon glyphicon-info-sign"></span></button>'."\n");
 ?>
 <img id="spinner" src="static/spinner.gif" style="vertical-align: middle;display: none">
-<span id="redo" style="color:red;display:none"> Popraw swój kod i uruchom ponownie. </span>
-<span id="complete" style="color:green;display:none"> Zakończono uruchomienie. </span>
-<span id="gradegood" style="color:green;display:none"> Wynik zaktualizowany na serwerze. </span>
-<span id="gradelow" style="color:green;display:none"> Wynik zaktualizowany na serwerze. </span>
-<span id="gradebad" style="color:red;display:none"> Błąd zapisywania wyniku na serwerze. </span>
+<span id="redo" style="float: inline-end;color:red;display:none"> Popraw swój kod i uruchom ponownie. </span>
+<span id="complete" style="float: inline-end;color:green;display:none"> Zakończono uruchomienie. </span>
+<span id="gradegood" style="float: inline-end;color:green;display:none"> Wynik zaktualizowany na serwerze. </span>
+<span id="gradelow" style="float: inline-end;color:green;display:none"> Wynik zaktualizowany na serwerze. </span>
+<span id="gradebad" style="float: inline-end;color:red;display:none"> Błąd zapisywania wyniku na serwerze. </span>
 <br/>
 &nbsp;<br/>
 <div id="textarea" class="inputarea">
