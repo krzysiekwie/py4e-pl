@@ -13,7 +13,7 @@ Podobnie jak ciąg znaków, *lista* jest sekwencją wartości. W ciągu znaku, w
 \index{element}
 \index{sekwencja}
 
-Istnieje kilka sposobów na stworzenie nowej listy; najprostszym jest umieszczenie elementów w nawiasach kwadratowych ("[" i "]"):
+Istnieje kilka sposobów na stworzenie nowej listy; najprostszym jest umieszczenie elementów w nawiasach kwadratowych (`[` i `]`):
 
 ~~~~ {.python}
 [10, 20, 30, 40]
