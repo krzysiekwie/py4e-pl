@@ -417,7 +417,7 @@ Jeśli posiadasz komputer z systemem Linux, Unix lub macOS, prawdopodobnie posia
 $ curl -O https://www.py4e.com/cover.jpg
 ~~~~
 
-Polecenie `curl` jest skrótem od "copy URL" (z ang. skopiuj URL) i dlatego dwa wymienione wcześniej na [pl.py4e.com/code3](https://pl.py4e.com/code3) przykłady pobierania plików binarnych z `urllib` mają nazwy `curl1.py` i `curl2.py`, ponieważ implementują podobną funkcjonalność jak polecenie `curl`. Istnieje również przykładowy program `curl3.py`, który wykonuje to zadanie nieco efektywniej, na wypadek gdybyś rzeczywiście chciał użyć tego schematu w swoim programie.
+Polecenie `curl` jest skrótem od "copy URL" (z ang. skopiuj URL) i dlatego dwa wymienione wcześniej na [py4e.pl/code3](https://py4e.pl/code3) przykłady pobierania plików binarnych z `urllib` mają nazwy `curl1.py` i `curl2.py`, ponieważ implementują podobną funkcjonalność jak polecenie `curl`. Istnieje również przykładowy program `curl3.py`, który wykonuje to zadanie nieco efektywniej, na wypadek gdybyś rzeczywiście chciał użyć tego schematu w swoim programie.
 
 Drugim poleceniem, które działa bardzo podobnie, jest `wget`:
 

@@ -567,7 +567,7 @@ techniki Pythona, które zostały użyte do stworzenia tego programu. Jesteś
 użytkownikiem końcowym, więc po prostu korzystasz z programu i zachwycasz się
 jego sprytem oraz oszczędnością ręcznego wysiłku. Po prostu wpisujesz powyższy
 kod do pliku o nazwie *words.py* i go uruchamiasz, lub pobierasz kod źródłowy ze
-strony <https://pl.py4e.com/code3/> i uruchamiasz.
+strony <https://py4e.pl/code3/> i uruchamiasz.
 
 \index{program}
 

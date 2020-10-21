@@ -957,7 +957,7 @@ separator
 
 \index{Romeo i Julia}
 
-**Ćwiczenie 4: Pobierz kopię pliku** [**pl.py4e.com/code3/romeo.txt**](https://pl.py4e.com/code3/romeo.txt)**. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Dla każdej linii podziel ją na listę słów za pomocą funkcji `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli słowa nie ma na liście, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.**
+**Ćwiczenie 4: Pobierz kopię pliku** [**py4e.pl/code3/romeo.txt**](https://py4e.pl/code3/romeo.txt)**. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Dla każdej linii podziel ją na listę słów za pomocą funkcji `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli słowa nie ma na liście, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.**
 
 ~~~~
 Podaj nazwę pliku: romeo.txt

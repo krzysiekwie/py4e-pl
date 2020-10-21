@@ -28,7 +28,7 @@ Otwieranie plików
 \index{open, funkcja}
 \index{funkcja!open}
 
-Kiedy chcemy odczytać lub zapisać plik (np. na dysku twardym), musimy najpierw *otworzyć* plik. Otwarcie pliku komunikuje się z Twoim systemem operacyjnym, który wie, gdzie przechowywane są dane dla każdego pliku. Gdy otwierasz plik, prosisz system operacyjny o znalezienie go po nazwie i o upewnienie się, że ten plik istnieje. W poniższym przykładzie otwieramy plik *mbox.txt*, który powinien być przechowywany w tym samym katalogu, w którym znajdujesz się po uruchomieniu Pythona. Możesz pobrać ten plik z [pl.py4e.com/code3/mbox.txt](https://pl.py4e.com/code3/mbox.txt).
+Kiedy chcemy odczytać lub zapisać plik (np. na dysku twardym), musimy najpierw *otworzyć* plik. Otwarcie pliku komunikuje się z Twoim systemem operacyjnym, który wie, gdzie przechowywane są dane dla każdego pliku. Gdy otwierasz plik, prosisz system operacyjny o znalezienie go po nazwie i o upewnienie się, że ten plik istnieje. W poniższym przykładzie otwieramy plik *mbox.txt*, który powinien być przechowywany w tym samym katalogu, w którym znajdujesz się po uruchomieniu Pythona. Możesz pobrać ten plik z [py4e.pl/code3/mbox.txt](https://py4e.pl/code3/mbox.txt).
 
 ~~~~ {.python}
 >>> fhand = open('mbox.txt')
@@ -73,11 +73,11 @@ Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
 
 Cały plik interakcji mailowych jest dostępny pod adresem:
 
-[pl.py4e.com/code3/mbox.txt](https://pl.py4e.com/code3/mbox.txt)
+[py4e.pl/code3/mbox.txt](https://py4e.pl/code3/mbox.txt)
 
 a skrócona wersja pliku jest dostępna pod adresem:
 
-[pl.py4e.com/code3/mbox-short.txt](https://pl.py4e.com/code3/mbox-short.txt)
+[py4e.pl/code3/mbox-short.txt](https://py4e.pl/code3/mbox-short.txt)
 
 Pliki te są w standardowym formacie pliku zawierającego wiele wiadomości pocztowych. Wiersze rozpoczynające się od "From " oddzielają wiadomości, a wiersze rozpoczynające się od "From:" są częścią wiadomości. Więcej informacji na temat formatu mbox można znaleźć na stronie <https://pl.wikipedia.org/wiki/Mbox>.
 
@@ -394,7 +394,7 @@ Przechowująć dane tekstowe w plikach należy określić ile bitów potrzeba na
 
 Dla przykładu użyjemy pliku `polski.txt`, który jest do ściągnięcia z poniższej strony:
 
-[pl.py4e.com/code3/polski.txt](https://pl.py4e.com/code3/polski.txt)
+[py4e.pl/code3/polski.txt](https://py4e.pl/code3/polski.txt)
 
 Standardowo możemy otworzyć plik bez podawania żadnych argumentów:
 
@@ -564,7 +564,7 @@ RECEIVED: FROM MURDER (MAIL.UMICH.EDU [141.211.14.90])
      SAT, 05 JAN 2008 09:14:16 -0500
 ~~~~
 
-**Plik możesz pobrać z** [pl.py4e.com/code3/mbox-short.txt](https://pl.py4e.com/code3/mbox-short.txt)
+**Plik możesz pobrać z** [py4e.pl/code3/mbox-short.txt](https://py4e.pl/code3/mbox-short.txt)
 
 **Ćwiczenie 2: Napisz program proszący o podanie nazwy pliku, a następnie przeszukaj plik w celu znalezienia linii podobnej do poniższej:**
 
