@@ -935,7 +935,7 @@ b) Pobiera strony z internetu\
 c) Przechowuje informacje przez dłuższy czas, nawet po wyłączeniu sprzętu\
 d) Pobiera dane wejściowe od użytkownika
 
-**Ćwiczenie 2: What is a program?**
+**Ćwiczenie 2: Czym jest program?**
 
 **Ćwiczenie 3: Jaka jest różnica między kompilatorem a intepreterem?**
 
