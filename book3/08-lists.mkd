@@ -974,7 +974,7 @@ Podaj nazwę pliku: romeo.txt
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
 ~~~~
 
-**Musisz przeparsować linię zawierjącą "From" i wyświetlić drugie słowo dla każdej takiej linii. Następnie musisz zliczyć liczbę wierszy "From" (nie "From:") i na końcu wyświetlić tę liczbę. Poniżej znajduje się przykładowe poprawne wyjście (część linii wyjścia została usunięta):
+**Musisz przeparsować linię zawierjącą "From" i wyświetlić drugie słowo dla każdej takiej linii. Następnie musisz zliczyć liczbę wierszy "From" (nie "From:") i na końcu wyświetlić tę liczbę. Poniżej znajduje się przykładowe poprawne wyjście (część linii wyjścia została usunięta):**
 
 ~~~~
 python fromcount.py

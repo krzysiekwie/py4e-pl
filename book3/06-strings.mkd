@@ -416,11 +416,11 @@ W ostatnim przykładzie, metoda "lower" jest wywoływana, a następnie używamy 
 \index{count, metoda}
 \index{metoda!count}
 
-**Ćwiczenie 4: Istnieje metoda dla ciągu znaków o nazwie `count`, która jest podobna do funkcji z poprzedniego ćwiczenia. Przeczytaj dokumentację tej metody pod adresem:
+**Ćwiczenie 4: Istnieje metoda dla ciągu znaków o nazwie `count`, która jest podobna do funkcji z poprzedniego ćwiczenia. Przeczytaj dokumentację tej metody pod adresem:**
 
 <https://docs.python.org/library/stdtypes.html#string-methods>
 
-Napisz wywołanie metody, które zliczy ile razy litera "a" występuje w słowie "banan".**
+**Napisz wywołanie metody, które zliczy ile razy litera "a" występuje w słowie "banan".**
 
 Parsowanie ciągów znaków
 ------------------------
@@ -616,7 +616,7 @@ wywołanie metody
 Ćwiczenia
 ---------
 
-**Ćwiczenia 5: Weź następujący kod Pythona, który przechowuje ciąg znaków:**
+**Ćwiczenie 5: Weź następujący kod Pythona, który przechowuje ciąg znaków:**
 
 `str = 'X-DSPAM-Confidence: `**`0.8475`**`'`
 
@@ -625,6 +625,6 @@ wywołanie metody
 \index{ciąg znaków, metody}
 \index{metoda!ciąg znaków}
 
-**Ćwiczenia 6: Przeczytaj dokumentację metod związanych z ciągami znaków na stronie <https://docs.python.org/library/stdtypes.html#string-methods>. Możesz poeksperymentować z niektórymi z nich, tak aby upewnić się, że rozumiesz jak one działają. Szczególnie przydatne są `strip` i `replace`".**
+**Ćwiczenie 6: Przeczytaj dokumentację metod związanych z ciągami znaków na stronie** <https://docs.python.org/library/stdtypes.html#string-methods>**. Możesz poeksperymentować z niektórymi z nich, tak aby upewnić się, że rozumiesz jak one działają. Szczególnie przydatne są `strip` i `replace`".**
 
 **Dokumentacja używa składni, która może być nieco myląca. Na przykład, w `find(sub[, start[, end]])` nawiasy kwadratowe wskazują opcjonalne argumenty. Tak więc `sub` jest wymagany, ale `start` jest opcjonalny, a jeśli dodasz `start`, to `end` jest opcjonalny.**
