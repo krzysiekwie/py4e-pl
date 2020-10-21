@@ -3,13 +3,13 @@
 $EXERCISES =
 Array(
 "hello" => Array (
-"qtext" => "Napisz program, który korzysta z instrukcji <b>print</b> by 
+"qtext" => "Napisz program, który korzysta z funkcji <b>print()</b> by 
 wyświetlić 'witaj świecie', tak jak pokazano w sekcji 'Oczekiwany wynik'.",
 "desired" => "witaj świecie",
 "code" => '# poniższy kod prawie działa
 prinq("witaj świecie")',
 "checks" => Array(
-"print" => "Musisz w swoim kodzie użyć instrukcji print."
+"print" => "Musisz w swoim kodzie użyć funkcji print()."
 )),
 
 "loop" => Array (
@@ -44,24 +44,25 @@ print("Howdy")',
 )),
 
 "2.3" => Array(
-"qtext" => "<b>2.3</b> Write a program to prompt the user for
-hours and rate per hour using input
-to compute gross pay.  Use 35 hours and a rate of 2.75 per hour to test the
-program (the pay should be 96.25).  You should use <b>input</b> to
-read a string and <b>float()</b> to convert the string to a number.
-Do not worry about error checking or bad user data.",
-"desired" => "Pay: 96.25",
-"code" => '# This first line is provided for you
+"qtext" => "<b>2.3</b> Napisz program, który będzie prosił użytkownika o podanie
+liczby godzin oraz stawkę za godzinę i używając danych wejściowych obliczy 
+stosowne wynagrodzenie. Do przetestowania programu wykorzystaj następujące 
+wartości: 35 godzin, 2.75 za godzinę (wynagrodzenie powinno wynosić 96.25). 
+Powinieneś użyć <b>input()</b> aby odczytać ciąg znaków oraz <b>float()</b> aby
+przekonwertować go na liczbę. Nie musisz martwić się o sprawdzanie błędów lub 
+niepoprawne dane wprowadzane przez użytkownika.",
+"desired" => "Wynagrodzenie: 96.25",
+"code" => '# Udostępniliśmy Tobie pierwszą linię kodu
 
-hrs = input("Enter Hours:")',
+hrs = input("Podaj liczbę godzin:")',
 "checks" => Array(
-"input" => "You must prompt the pay and rate using the input() function.",
-"print" => "You must use the print statement to print the output.",
-"float" => "You should use the built-in float() function to convert from a string to a float.",
-"*" => "To multiply the pay and rate after you read them use the '*' operator.",
-"!35" => "You should not include the input data in your source code. You must read the values for the rate and pay using input().",
-"!2.75" => "You should not include the input data in your source code. You must read the values for the rate and pay using input().",
-"!96.25" => "You must actually calculate the pay.")),
+"input" => "Musisz poprosić o wprowadzenie liczby godzin i stawki godzinowej przy pomocy funkcji input().",
+"print" => "Musisz użyć funkcji print() aby wyświetlić wynik.",
+"float" => "Powinieneś użyć funkcji wbudowanej float() aby przekonwertować ciąg znaków na liczbę zmiennoprzecinkową.",
+"*" => "Aby przemnożyć liczbę godzin przez stawkę godzinową użyj operatora '*'.",
+"!35" => "Nie powinieneś umieszczać danych wejściowych w kodzie źródłowym programu. Musisz odczytać wartości liczby godzin i stawi godzinowej za pomocą funkcji input().",
+"!2.75" => "Nie powinieneś umieszczać danych wejściowych w kodzie źródłowym programu. Musisz odczytać wartości liczby godzin i stawi godzinowej za pomocą funkcji input().",
+"!96.25" => "Musisz obliczyć wynagrodzenie.")),
 
 
 "3.1" => Array(
