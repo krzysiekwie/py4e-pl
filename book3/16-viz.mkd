@@ -116,7 +116,8 @@ W powyższym przykładowym uruchomieniu wskazaliśmy naszemu robotowi, by sprawd
 
 ~~~~
 Wpisz adres internetowy lub wciśnij Enter: 
-Kontynuowanie istniejącego indeksowania stron. Usuń spider.sqlite, aby rozpocząć nowe indeksowanie.
+Kontynuowanie istniejącego indeksowania stron. Usuń spider.sqlite, 
+aby rozpocząć nowe indeksowanie.
 ['https://www.dr-chuck.com']
 Ile stron: 3
 22 https://www.dr-chuck.com/csev-blog/category/uncategorized (91096) 61
