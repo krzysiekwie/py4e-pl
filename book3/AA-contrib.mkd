@@ -115,7 +115,7 @@ Dziękuję również mojej żonie, Lisie, za jej pracę nad tą książką, oraz
 Allen B. Downey\
 Needham MA\
 
-Allen Downey zajmuje stanowisko Associate Professor of Computer Science w
+Allen Downey zajmuje stanowisko Associate Professor of Computer Science we
 Franklin W. Olin College of Engineering.
 
 Lista współtwórców "Think Python"

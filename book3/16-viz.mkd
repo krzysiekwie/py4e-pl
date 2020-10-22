@@ -45,10 +45,10 @@ Znaleziono w bazie  Arizona State University
 
 Znaleziono w bazie  Athens Information Technology
 
-Pobieranie https://nominatim.openstreetmap.org/search.php?q=University+of+Pretoria&format=geojson&limit=1&addressdetails=1&accept-language=pl
+Pobieranie https://nominatim.openstreetmap.org/search.php?q=...
 Pobrano 954 znaków {"type":"FeatureColl
 
-Pobieranie https://nominatim.openstreetmap.org/search.php?q=University+of+Salamanca&format=geojson&limit=1&addressdetails=1&accept-language=pl
+Pobieranie https://nominatim.openstreetmap.org/search.php?q=...
 Pobrano 822 znaków {"type":"FeatureColl
 
 ...
@@ -120,8 +120,8 @@ Kontynuowanie istniejącego indeksowania stron. Usuń spider.sqlite, aby rozpocz
 ['https://www.dr-chuck.com']
 Ile stron: 3
 22 https://www.dr-chuck.com/csev-blog/category/uncategorized (91096) 61
-27 https://www.dr-chuck.com/csev-blog/2014/09/how-to-achieve-vendor-lock-in-with-a-legit-open-source-license-affero-gpl (59001) 20
-30 https://www.dr-chuck.com/csev-blog/2020/08/styling-tsugi-koseu-lessons (33522) 21
+27 https://www.dr-chuck.com/csev-blog/2014/09/how-... (59001) 20
+30 https://www.dr-chuck.com/csev-blog/2020/08/styling-... (33522) 21
 Ile stron:
 ~~~~
 
@@ -131,8 +131,8 @@ Jeżeli chcesz wyświetlić zawartość bazy *spider.sqlite*, możesz uruchomić
 
 ~~~~
 (16, None, 1.0, 2, 'https://www.dr-chuck.com/csev-blog')
-(15, None, 1.0, 30, 'https://www.dr-chuck.com/csev-blog/2020/08/styling-tsugi-koseu-lessons')
-(15, None, 1.0, 22, 'https://www.dr-chuck.com/csev-blog/category/uncategorized')
+(15, None, 1.0, 30, 'https://www.dr-chuck.com/csev-blog/2020/08/...')
+(15, None, 1.0, 22, 'https://www.dr-chuck.com/csev-blog/category/...')
 ...
 22 wierszy.
 ~~~~
@@ -145,15 +145,16 @@ Gdy będziesz już miał kilka stron w swojej bazie danych, to za pomocą progra
 Ile iteracji: 2
 1 0.720326643053916
 2 0.34992366601870745
-[(1, 0.6196280991735535), (2, 2.4944679374657728), (3, 0.6923553719008263), (4, 1.1014462809917351), (5, 0.2696280991735535)]
+[(1, 0.6196280991735535), (2, 2.4944679374657728), (3, 0.6923553719008263),
+ (4, 1.1014462809917351), (5, 0.2696280991735535)]
 ~~~~
 
 Możesz ponownie wyświetlić zawartość bazy aby zobaczyć, że współczynnik PageRank dla stron został zaktualizowany: 
 
 ~~~~
-(16, 1.0, 2.4944679374657728, 2, 'https://www.dr-chuck.com/csev-blog')
-(15, 1.0, 2.1360764832409846, 30, 'https://www.dr-chuck.com/csev-blog/2020/08/styling-tsugi-koseu-lessons')
-(15, 1.0, 2.449518442516278, 22, 'https://www.dr-chuck.com/csev-blog/category/uncategorized')
+(16, 1.0, 2.49..., 2, 'https://www.dr-chuck.com/csev-blog')
+(15, 1.0, 2.13..., 30, 'https://www.dr-chuck.com/csev-blog/2020/08/...')
+(15, 1.0, 2.44..., 22, 'https://www.dr-chuck.com/csev-blog/category/...d')
 ...
 22 wierszy.
 ~~~~
@@ -182,7 +183,8 @@ Ile iteracji: 50
 48 2.520367345856324e-05
 49 2.114963873141301e-05
 50 1.7747381915049988e-05
-[(1, 9.945248881666563e-05), (2, 3.205252622657907), (3, 0.00012907931109952867), (4, 0.0003719906004627465), (5, 9.966636303771006e-05)]
+[(1, 9.945248881666563e-05), (2, 3.205252622657907), (3, 0.000129079311099),
+ (4, 0.0003719906004627465), (5, 9.966636303771006e-05)]
 ~~~~
 
 Dla każdej iteracji algorytmu PageRank program wypisuje średnią zmianę współczynnika na stronę. Początkowo sieć jest dość niezbalansowana, więc poszczególne wartości rankingu bardzo się zmieniają pomiędzy kolejnymi iteracjami. Jednak w kilku kolejnych iteracjach algorytm zbiega szybko do końcowego wyniku. Powinieneś uruchomić *sprank.py* na tyle długo, by kolejne wartości generowane przez aglorytm nie miały już zbyt dużych różnic.
@@ -229,11 +231,14 @@ Oto wynik uruchomienia *gmane.py*, który pobiera dziesięć ostatnich wiadomoś
 ~~~~
 Ile wiadomości: 10
 http://mbox.dr-chuck.net/sakai.devel/59643/59644 17553
-    matthew@longsight.com 2015-03-20T16:27:12-04:00 re: [building sakai] sakai 10 bulding error
+    matthew@longsight.com 2015-03-20T16:27:12-04:00 
+    re: [building sakai] sakai 10 bulding error
 http://mbox.dr-chuck.net/sakai.devel/59644/59645 13128
-    alberto.olivamolina@gmail.com 2015-03-20T16:36:12+01:00 re: [building sakai] sakai 10 bulding error
+    alberto.olivamolina@gmail.com 2015-03-20T16:36:12+01:00
+    re: [building sakai] sakai 10 bulding error
 http://mbox.dr-chuck.net/sakai.devel/59645/59646 7557
-    eric.duquenoy@univ-littoral.fr 2015-03-20T16:52:24+01:00 [building sakai] lti and sakai groups (or sections)
+    eric.duquenoy@univ-littoral.fr 2015-03-20T16:52:24+01:00
+    [building sakai] lti and sakai groups (or sections)
 http://mbox.dr-chuck.net/sakai.devel/59646/59647 1
 ...
 ~~~~

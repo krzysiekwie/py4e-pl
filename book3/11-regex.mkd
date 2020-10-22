@@ -360,7 +360,7 @@ Podczas gdy to tylko zarysowaliśmy niewielki zakres wyrażeń regularnych, to j
 
 `+` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je jeden lub więcej razy.
 
-`+?`Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je jeden lub więcej razy "wyłączając tryb zachłanny".
+`+?` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je jeden lub więcej razy "wyłączając tryb zachłanny".
 
 `?` Dotyczy bezpośrednio poprzedzającego(ych) znaku(ów) i wskazuje by dopasować go/je zero lub jeden raz.
 
