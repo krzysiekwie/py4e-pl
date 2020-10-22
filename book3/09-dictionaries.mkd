@@ -118,7 +118,7 @@ Operator `in` używa różnych algorytmów dla list i słowników. W przypadku l
 \index{zbiór!przynależność}
 \index{przynależność!zbiór}
 
-**Ćwiczenie 1: Pobierz kopię pliku** [py4e.pl/code3/words.txt](https://py4e.pl/code3/words.txt)
+**Ćwiczenie 1: Pobierz kopię pliku** <https://py4e.pl/code3/words.txt>
 
 **Napisz program, który odczytuje słowa z *words.txt* i przechowuje je jako klucze w słowniku. Nie ma znaczenia, jakie będą wartości w słowniku. Następnie możesz użyć operatora `in` jako szybkiego sposobu na sprawdzenie, czy dany wyraz znajduje się w słowniku.**
 
@@ -231,7 +231,7 @@ Połączenie dwóch zagnieżdżonych pętli zapewnia, że będziemy zliczać ka�
 
 W naszej instrukcji `else` używamy zwięzłej alternatywy dla inkrementacji zmiennej. `counts[word] += 1` jest odpowiednikiem `counts[word] = counts[word] + 1`. Każdej z tych metod można użyć do zmiany wartości zmiennej o dowolną pożądaną wielkość. Podobne alternatywy istnieją dla `-=`, `*=` i `/=`.
 
-Kiedy uruchamiamy program, widzimy surowy zrzut wszystkich zliczeń w nieposortowanej kolejności tablicy haszującej. (Plik *romeo.txt* jest dostępny pod adresem [py4e.pl/code3/romeo.txt](https://py4e.pl/code3/romeo.txt)).
+Kiedy uruchamiamy program, widzimy surowy zrzut wszystkich zliczeń w nieposortowanej kolejności tablicy haszującej. (Plik *romeo.txt* jest dostępny pod adresem <https://py4e.pl/code3/romeo.txt>).
 
 ~~~~
 python count1.py

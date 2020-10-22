@@ -20,7 +20,7 @@ W tym projekcie wykorzystamy API geokodowania OpenStreetMap (usługa Nominatim),
 
 Aby rozpocząć, pobierz aplikację z poniższego adresu:
 
-[py4e.pl/code3/geodata.zip](https://py4e.pl/code3/geodata.zip)
+<https://py4e.pl/code3/geodata.zip>
 
 W warunkach korzystania z usługi Nominatim jest wskazanie by ogarniczyć się do maksymalnie jednego zapytania na sekundę (usługa jest darmowa, stąd też gdybyśmy generowali bardzo dużą liczbę zapytań w krótkim czasie, to prawdopodobnie szybko zablokowano by nam dostęp do API). Nasze zadanie dzielimy na dwie fazy.
 
@@ -95,7 +95,7 @@ W poniższej aplikacji będziemy wykonywać niektóre funkcje znajdujące się w
 
 Możesz pobrać i rozpakować poniższą aplikację:
 
-[py4e.pl/code3/pagerank.zip](https://py4e.pl/code3/pagerank.zip)
+<https://py4e.pl/code3/pagerank.zip>
 
 ![Algorytm PageRank](height=3.5in@../images/pagerank)
 
@@ -212,7 +212,7 @@ Zdarza się, że trzeba pobrać z serwerów dane dotyczące poczty e-mail. Może
 
 Możesz pobrać aplikację z:
 
-[py4e.pl/code3/gmane.zip](https://py4e.pl/code3/gmane.zip)
+<https://py4e.pl/code3/gmane.zip>
 
 Będziemy korzystać z danych umieszczonych na bezpłatnej usłudze archiwizacji listy mailingowej o nazwie [Gmane](https://en.wikipedia.org/wiki/Gmane). Usługa była bardzo popularna wśród projektów open source, ponieważ zapewniała ładne i łatwe do przeszukiwania archiwum ich aktywności emailowej. Usługa posiadała również bardzo liberalną politykę dostępu do swoich danych poprzez swoje API.
 

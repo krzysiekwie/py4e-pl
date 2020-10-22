@@ -301,7 +301,7 @@ Ann Arbor, Washtenaw County, Michigan, 48104, United States of America
 Podaj nazwę miejsca:
 ~~~~
 
-Możesz pobrać [py4e.pl/code3/geoxml.py](https://py4e.pl/code3/geoxml.py), aby sprawdzić wariant XML w API geokodowania OpenStreetMap.
+Możesz pobrać <https://py4e.pl/code3/geoxml.py>, aby sprawdzić wariant XML w API geokodowania OpenStreetMap.
 
 **Ćwiczenie 1: Zmień** [`geojson.py`](https://py4e.pl/code3/geojson.py) **lub** [`geoxml.py`](https://py4e.pl/code3/geoxml.py) **w celu wypisania nazwy stanu z pobranych danych (jeżeli podane miejsce jest w USA). Dodaj sprawdzanie błędów, tak aby Twój program nie wyświetlał danych z mechanizmu traceback w momencie gdy w danych nie ma nazwy stanu. Gdy kod już zacznie działać, wyszukaj "Atlantic Ocean" i upewnij się, że obsługuje on lokalizacje, które nie znajdują się w żadnym kraju.**
 
@@ -310,7 +310,7 @@ Aplikacja nr 2: Twitter
 
 O czasu gdy API Twittera stało się coraz bardziej wartościowe, Twitter przeszedł z otwartego i publicznego API do takiego, które przy każdym 
 
-Nasze poniższe dwa przykłady opierają się na plikach *twurl.py*, *hidden.py*, *oauth.py*, *twitter1.py* i *twitter2.py*, które możesz pobrać z [py4e.pl/code3](https://py4e.pl/code3); po pobraniu plików, umieść je wszystkie w jednym katalogu.
+Nasze poniższe dwa przykłady opierają się na plikach *twurl.py*, *hidden.py*, *oauth.py*, *twitter1.py* i *twitter2.py*, które możesz pobrać z <https://py4e.pl/code3>; po pobraniu plików, umieść je wszystkie w jednym katalogu.
 
 Aby móc korzystać z tych programów, musisz mieć konto na Twitterze i autoryzować swój kod Pythona jako aplikację, ustawić klucz, sekret, token i sekret tokena. Wyedytuj plik *hidden.py* i umieść w nim cztery ciągi znaków w odpowiednich miejscach:
 
