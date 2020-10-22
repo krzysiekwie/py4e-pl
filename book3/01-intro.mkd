@@ -1,5 +1,4 @@
 % Python dla wszystkich 
-% Eksploracja danych z Python 3
 % Dr Charles R. Severance
 
 Dlaczego powinieneś nauczyć się pisać programy?

@@ -10,7 +10,7 @@
         Polskie tłumaczenie:
         <ul class="menu vertical nested is-active">
             <li class="menu-text">
-                <a href="html3">HTML</a>, <a href="translations/PL/py4e-pl-latest.pdf" target="_blank">PDF</a>, <a href="translations/PL/py4e-pl-latest.epub" target="_blank">EPUB</a>, <a href="translations/PL/py4e-pl-latest.mobi" target="_blank">MOBI</a>
+                <a href="html3">HTML</a>, <a href="translations/PL/py4e-pl-a4-latest.pdf" target="_blank">PDF (format A4)</a>, <a href="translations/PL/py4e-pl-print-latest.pdf" target="_blank">PDF (format do druku)</a>, <a href="translations/PL/py4e-pl-latest.epub" target="_blank">EPUB</a>, <a href="translations/PL/py4e-pl-latest.mobi" target="_blank">MOBI</a>
             </li>
             <li class="menu-text"><a href="https://github.com/andre-wojtowicz/py4e-pl" target="_blank">Kod źródłowy książki na GitHubie</a> (zmiany w repozytorium powodują automatyczne przebudowanie ww. formatów na tej stronie)</li>
         </ul>
