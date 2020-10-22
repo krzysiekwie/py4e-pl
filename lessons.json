@@ -221,7 +221,7 @@
         }
     ],
     "lti" : {
-        "title" : "Automatyczna ocena: prosty program \"Witaj świecie!\"",
+        "title" : "Automatyczna ocena: Prosty program \"Witaj świecie!\"",
         "launch" : "tools/pythonauto/",
         "resource_link_id": "pythonauto_01_hello",
         "custom" : [
@@ -732,7 +732,7 @@
     ],
     "lti" : [
     {
-        "title" : "Automatyczna ocena: cykl żądanie-odpowiedź",
+        "title" : "Automatyczna ocena: Cykl żądanie-odpowiedź",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_02_rrc",
         "custom" : [
@@ -743,7 +743,7 @@
         ]
     },
     {
-        "title" : "Automatyczna ocena: parsowanie danych HTML przy pomocy BeautifulSoup",
+        "title" : "Automatyczna ocena: Parsowanie danych HTML przy pomocy BeautifulSoup",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_03_html",
         "custom" : [
@@ -754,7 +754,7 @@
         ]
     },
     {
-        "title" : "Automatyczna ocena: przechodzenie po linkach przy pomocy BeautifulSoup",
+        "title" : "Automatyczna ocena: Przechodzenie po linkach przy pomocy BeautifulSoup",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_04_links",
         "custom" : [
@@ -835,7 +835,7 @@
     ],
     "lti" : [
     {
-        "title" : "Automatyczna ocena: wydobywanie danych z XMLa",
+        "title" : "Automatyczna ocena: Wydobywanie danych z XMLa",
         "resource_link_id": "pythondata_05_xml",
         "launch" : "tools/python-data/",
         "custom" : [
@@ -846,7 +846,7 @@
         ]
     },
     {
-        "title" : "Automatyczna ocena: wydobywanie danych z JSONa",
+        "title" : "Automatyczna ocena: Wydobywanie danych z JSONa",
         "launch" : "tools/python-data/",
         "resource_link_id": "pythondata_06_json",
         "custom" : [
@@ -998,7 +998,7 @@
         ]
     },
     {
-        "title" : "Automatyczna ocena: Baza z kilkoma tabelami - Utwory",
+        "title" : "Automatyczna ocena: Baza z kilkoma tabelami – Utwory",
         "launch" : "tools/sql-intro/",
         "resource_link_id": "pythonsql_03_tracks",
         "custom" : [

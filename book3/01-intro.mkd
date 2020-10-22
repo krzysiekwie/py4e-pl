@@ -25,7 +25,7 @@ Programiści dodają do sprzętu system operacyjny oraz zbiór aplikacji,
 dzięki czemu w ten sposób otrzymujemy osobistego asystenta cyfrowego, który
 okazuje się całkiem pomocny i zdolny do wsparcia nas w wielu różnych sprawach.
 
-Nasze komputery są szybkie i mają ogromne zasoby pamięci -- ten fakt mógłby
+Nasze komputery są szybkie i mają ogromne zasoby pamięci – ten fakt mógłby
 być dla nas bardzo pomocny gdybyśmy tylko znali język do porozumiewania się
 i wyjaśniania komputerowi co chcemy aby dla nas "teraz zrobił". Gdybyśmy
 znali taki język, to moglibyśmy powiedzieć komputerowi by wykonał za nas
@@ -37,7 +37,7 @@ które słowo było najczęście użyte oraz ile razy to słowo zostało użyte.
 Podczas gdy byłeś w stanie przeczytać i zrozumieć słowa w ciągu kilku sekund,
 zliczanie ich jest niemalże bolesne, ponieważ nie jest to tego rodzaju problem,
 dla którego zostały zaprojektowane ludzkie umysły. W przypadku komputera jest
-na odwrót -- czytanie i rozumienie tekstu z kartki papieru jest trudne
+na odwrót – czytanie i rozumienie tekstu z kartki papieru jest trudne
 do wykonania, ale zliczenie słów i wskazanie Tobie ile razy
 zostało użyte najczęściej występujące słowo jest bardzo łatwe:
 
