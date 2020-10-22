@@ -591,9 +591,11 @@ wzorzec strażnika
 Ćwiczenia
 ---------
 
-**Ćwiczenie 1: Przepisz ponownie swój program obliczający wynagrodzenie, tak aby
+#### Ćwiczenie 1
+
+Przepisz ponownie swój program obliczający wynagrodzenie, tak aby
 dać pracownikowi 1,5 raza większą stawkę godzinową za czas przepracowany
-powyżej 40 godzin.**
+powyżej 40 godzin.
 
 ~~~~
 Podaj liczbę godzin: 45
@@ -602,10 +604,12 @@ Wynagrodzenie: 475.0
 ~~~~
 
 
-**Ćwiczenie 2: Przepisz ponownie swój program płacowy używając `try` i `except`,
+#### Ćwiczenie 2
+
+Przepisz ponownie swój program płacowy używając `try` i `except`,
 tak aby elegancko obsługiwał on nie-numeryczne dane wejściowe, wyświetlając w
 takim przypadku wiadomość i kończąc swoje działanie. Poniżej znajdują się wyniki
-dwóch uruchomień programu:**
+dwóch uruchomień programu:
 
 ~~~~
 Podaj liczbę godzin: 20
@@ -618,9 +622,11 @@ Podaj liczbę godzin: czterdzieści
 Błąd, podaj wartość numeryczną
 ~~~~
 
-**Ćwiczenie 3: Napisz program, który poprosi użytkownika o wartość pomiędzy 0.0
+#### Ćwiczenie 3
+
+Napisz program, który poprosi użytkownika o wartość pomiędzy 0.0
 a 1.0. Jeśli wartość jest poza zakresem, wypisz komunikat o błędzie. Jeśli wartość
-jest między 0.0 a 1.0, wypisz ocenę, korzystając z poniższej tabeli:**
+jest między 0.0 a 1.0, wypisz ocenę, korzystając z poniższej tabeli:
 
 ~~~~
 Wartość   Ocena

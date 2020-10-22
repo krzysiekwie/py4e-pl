@@ -483,9 +483,11 @@ struktura danych
 Ćwiczenia
 ---------
 
-**Ćwiczenie 1: Zrewiduj swój poprzedni program w następujący sposób: Wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy. Policz liczbę wiadomości od każdej osoby za pomocą słownika.**
+#### Ćwiczenie 1
 
-**Po przeczytaniu wszystkich danych wypisz osobę, która zrobiła najwięcej rewizji, tworząc ze słownika listę krotek (liczba, email). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej rewizji.**
+Zrewiduj swój poprzedni program w następujący sposób: Wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy. Policz liczbę wiadomości od każdej osoby za pomocą słownika.
+
+Po przeczytaniu wszystkich danych wypisz osobę, która zrobiła najwięcej rewizji, tworząc ze słownika listę krotek (liczba, email). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej rewizji.
 
 ~~~~
 Przykładowa linia:
@@ -498,7 +500,9 @@ Podaj nazwę pliku: mbox.txt
 zqian@umich.edu 195
 ~~~~
 
-**Ćwiczenie 2: Napisz program, który dla każdej wiadomości zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z wiersza "From", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten ciąg na części za pomocą znaku dwukropka. Kiedy już zgromadzisz wartości dla każdej godziny, wypisz zliczenia, po jednym na wiersz, posortowane według godzin, tak jak pokazano poniżej.**
+#### Ćwiczenie 2
+
+Napisz program, który dla każdej wiadomości zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z wiersza "From", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten ciąg na części za pomocą znaku dwukropka. Kiedy już zgromadzisz wartości dla każdej godziny, wypisz zliczenia, po jednym na wiersz, posortowane według godzin, tak jak pokazano poniżej.
 
 ~~~~
 python timeofday.py
@@ -520,4 +524,6 @@ Podaj nazwę pliku: mbox-short.txt
 \index{częstość występowania liter}
 \index{litery, częstość występowania}
 
-**Ćwiczenie 3: Napisz program, który wczytuje plik i wypisuje *litery* malejąco po częstości ich występowania. Twój program powinien przekonwertować wszystkie dane wejściowe na małe litery i zliczać tylko litery a-z. Program nie powinien uwzględniać spacji, cyfr, interpunkcji ani niczego innego poza literami a-z. Znajdź próbki tekstów z kilku różnych języków i sprawdź, jak bardzo częstość liter różni się w zależności od języka. Porównaj swoje wyniki z tabelami pod adresem <https://en.wikipedia.org/wiki/Letter_frequency>.**
+#### Ćwiczenie 3
+
+Napisz program, który wczytuje plik i wypisuje *litery* malejąco po częstości ich występowania. Twój program powinien przekonwertować wszystkie dane wejściowe na małe litery i zliczać tylko litery a-z. Program nie powinien uwzględniać spacji, cyfr, interpunkcji ani niczego innego poza literami a-z. Znajdź próbki tekstów z kilku różnych języków i sprawdź, jak bardzo częstość liter różni się w zależności od języka. Porównaj swoje wyniki z tabelami pod adresem <https://en.wikipedia.org/wiki/Letter_frequency>.

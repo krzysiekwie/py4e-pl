@@ -264,9 +264,13 @@ Powyższy program tworzy następującą listę 10 losowych liczb z zakresu od 0.
 0.028511805472785867
 ~~~~
 
-**Ćwiczenie 1: Uruchom program na swoim systemie i zobacz jakie dostajesz 
+#### Ćwiczenie 1
+
+Uruchom program na swoim systemie i zobacz jakie dostajesz 
 liczby. Uruchom program więcej niż raz i zobacz jakie tym razem dostajesz 
-liczby.**
+liczby.
+
+----
 
 Funkcja `random` jest tylko jedną z wielu funkcji, które obsługują liczby 
 losowe. Funkcja `randint` pobiera parametry `low` oraz `high` i zwraca liczbę 
@@ -428,13 +432,17 @@ Jak pewnie się spodziewasz, musisz stworzyć funkcję, zanim będziesz mógł j
 wykonać. Innymi słowy, definicja funkcji musi zostać wykonana przed jej 
 pierwszym wywołaniem.
 
-**Ćwiczenie 2: Przesuń ostatnią linię programu na samą górę, tak aby wywołanie 
-funkcji pojawiło się przed definicjami. Uruchom program i zobacz jaki otrzymasz 
-komunikat o błędzie.**
+#### Ćwiczenie 2
 
-**Ćwiczenie 3: Przesuń wywołanie funkcji na sam dół i przenieś definicję 
+Przesuń ostatnią linię programu na samą górę, tak aby wywołanie 
+funkcji pojawiło się przed definicjami. Uruchom program i zobacz jaki otrzymasz 
+komunikat o błędzie.
+
+#### Ćwiczenie 3
+
+Przesuń wywołanie funkcji na sam dół i przenieś definicję 
 `print_lyrics` po definicji `repeat_lyrics`. Co się stanie, gdy uruchomisz
-taki program?**
+taki program?
 
 Przepływ sterowania
 -------------------
@@ -806,15 +814,19 @@ wywołanie funkcji
 Ćwiczenia
 ---------
 
-**Ćwiczenie 4: Jaki jest cel słowa kluczowego "def" w Pythonie?**
+#### Ćwiczenie 4
 
-a\) Jest to slang, który oznacza, że "następujący kod jest naprawdę fajny"\
-b) Oznacza początek funkcji\
-c) Oznacza, że następujące wcięcie sekcji kodu ma być przechowywane na później\
-d) Odpowiedzi b) i c) są poprawne\
-e) Żadne z powyższych
+Jaki jest cel słowa kluczowego "def" w Pythonie?
 
-**Ćwiczenie 5: Co wypisze następujący program Pythona?**
+a. Jest to slang, który oznacza, że "następujący kod jest naprawdę fajny".
+b. Oznacza początek funkcji.
+c. Oznacza, że następujące wcięcie sekcji kodu ma być przechowywane na później.
+d. Odpowiedzi b. i c. są poprawne.
+e. Żadne z powyższych.
+
+#### Ćwiczenie 5
+
+Co wypisze następujący program Pythona?
 
 ~~~~ {.python}
 def fred():
@@ -828,15 +840,17 @@ fred()
 jane()
 ~~~~
 
-a\) Zap ABC jane fred jane\
-b) Zap ABC Zap\
-c) ABC Zap jane\
-d) ABC Zap ABC\
-e) Zap Zap Zap
+a. Zap ABC jane fred jane
+b. Zap ABC Zap
+c. ABC Zap jane
+d. ABC Zap ABC
+e. Zap Zap Zap
 
-**Ćwiczenie 6: Przepisz ponownie swoje obliczenie wynagrodzenia z dodatkiem za
+#### Ćwiczenie 6
+
+Przepisz ponownie swoje obliczenie wynagrodzenia z dodatkiem za
 nadgodziny i stwórz funkcję o nazwie `computepay`, która przyjmuje dwa
-parametry (`hours` i `rate`).**
+parametry (`hours` i `rate`).
 
 ~~~~
 Podaj liczbę godzin: 45
@@ -844,13 +858,11 @@ Podaj stawkę godzinową: 10
 Wynagrodzenie: 475.0
 ~~~~
 
-**Ćwiczenie 7: Napisz ponownie program z poprzedniego rozdziału do wyliczania
-ocen za pomocą funkcji o nazwie `computegrade`, która przyjmuje jako parametr
-wartość i zwraca ocenę jako ciąg znaków.**
+#### Ćwiczenie 7
 
-**Exercise 7: Rewrite the grade program from the previous chapter using a
-function called `computegrade` that takes a score as its
-parameter and returns a grade as a string.**
+Napisz ponownie program z poprzedniego rozdziału do wyliczania
+ocen za pomocą funkcji o nazwie `computegrade`, która przyjmuje jako parametr
+wartość i zwraca ocenę jako ciąg znaków.
 
 ~~~~
 Wartość   Ocena

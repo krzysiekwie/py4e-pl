@@ -664,7 +664,9 @@ Funkcja ta pozostawia pierwotną listę bez zmian. Poniżej pokazano jak można 
 ['b', 'c']
 ~~~~
 
-**Ćwiczenie 1: Napisz funkcję o nazwie `chop`, która przyjmuje listę i modyfikuje ją, usuwając pierwszy i ostatni element, a następnie zwraca `None`. Następnie napisz funkcję o nazwie `middle`, która przyjmuje listę i zwraca nową listę, która zawiera wszystkie oprócz pierwszego i ostatniego elementu.**
+#### Ćwiczenie 1
+
+Napisz funkcję o nazwie `chop`, która przyjmuje listę i modyfikuje ją, usuwając pierwszy i ostatni element, a następnie zwraca `None`. Następnie napisz funkcję o nazwie `middle`, która przyjmuje listę i zwraca nową listę, która zawiera wszystkie oprócz pierwszego i ostatniego elementu.
 
 Debugowanie
 -----------
@@ -895,9 +897,13 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     zawiedzie, ale może to nie być wystarczające. Podczas programowania 
     musimy zawsze myśleć: "Co może się nie udać?".
 
-**Ćwiczenie 2: Dowiedz się, która linia powyższego programu nie jest jeszcze właściwie zabezpieczona. Zobacz, czy potrafisz skonstruować taki plik tekstowy, który spowoduje awarię programu, a następnie zmodyfikować program tak, by linia była odpowiednio zabezpieczona. Przetestuj poprawiony program by upewnić się, że obsługuje Twój nowy plik tekstowy.**
+#### Ćwiczenie 2
 
-**Ćwiczenie 3: Napisz ponownie kod ze strażnikiem z powyższego przykładu, ale bez dwóch instrukcji `if`. Zamiast tego użyj pojedynczej instrukcji `if` ze złożonym wyrażeniem logicznym używającym operatora logicznego.**
+Dowiedz się, która linia powyższego programu nie jest jeszcze właściwie zabezpieczona. Zobacz, czy potrafisz skonstruować taki plik tekstowy, który spowoduje awarię programu, a następnie zmodyfikować program tak, by linia była odpowiednio zabezpieczona. Przetestuj poprawiony program by upewnić się, że obsługuje Twój nowy plik tekstowy.
+
+#### Ćwiczenie 3
+
+Napisz ponownie kod ze strażnikiem z powyższego przykładu, ale bez dwóch instrukcji `if`. Zamiast tego użyj pojedynczej instrukcji `if` ze złożonym wyrażeniem logicznym używającym operatora logicznego.
 
 Słowniczek
 ----------
@@ -957,7 +963,9 @@ separator
 
 \index{Romeo i Julia}
 
-**Ćwiczenie 4: Pobierz kopię pliku** [**py4e.pl/code3/romeo.txt**](https://py4e.pl/code3/romeo.txt)**. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Dla każdej linii podziel ją na listę słów za pomocą funkcji `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli słowa nie ma na liście, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.**
+#### Ćwiczenie 4
+
+Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Dla każdej linii podziel ją na listę słów za pomocą funkcji `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli słowa nie ma na liście, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
 
 ~~~~
 Podaj nazwę pliku: romeo.txt
@@ -968,13 +976,15 @@ Podaj nazwę pliku: romeo.txt
 'with', 'yonder']
 ~~~~
 
-**Ćwiczenie 5: Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z funkcji `split`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".**
+#### Ćwiczenie 5
+
+Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z funkcji `split`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
 ~~~~
 
-**Musisz przeparsować linię zawierjącą "From" i wyświetlić drugie słowo dla każdej takiej linii. Następnie musisz zliczyć liczbę wierszy "From" (nie "From:") i na końcu wyświetlić tę liczbę. Poniżej znajduje się przykładowe poprawne wyjście (część linii wyjścia została usunięta):**
+Musisz przeparsować linię zawierjącą "From" i wyświetlić drugie słowo dla każdej takiej linii. Następnie musisz zliczyć liczbę wierszy "From" (nie "From:") i na końcu wyświetlić tę liczbę. Poniżej znajduje się przykładowe poprawne wyjście (część linii wyjścia została usunięta):
 
 ~~~~
 python fromcount.py
@@ -992,7 +1002,9 @@ cwen@iupui.edu
 Mamy 27 linii w pliku, w których From jest pierwszym wyrazem
 ~~~~
 
-**Ćwiczenie 6: Napisz ponownie program, który poprosi użytkownika o listę liczbę i wypisze na końcu największą i najmniejszą z nich wtedy, gdy użytkownik wpisze "gotowe". Napisz program w ten sposób, że zapisze on wprowadzone przez użytkownika liczby na liście i użyje funkcji `max()` oraz `min()` do znalezienia największej i najmniejszej liczby po zakończeniu pętli.**
+#### Ćwiczenie 6
+
+Napisz ponownie program, który poprosi użytkownika o listę liczbę i wypisze na końcu największą i najmniejszą z nich wtedy, gdy użytkownik wpisze "gotowe". Napisz program w ten sposób, że zapisze on wprowadzone przez użytkownika liczby na liście i użyje funkcji `max()` oraz `min()` do znalezienia największej i najmniejszej liczby po zakończeniu pętli.
 
 ~~~~
 Wprowadź liczbę: 6

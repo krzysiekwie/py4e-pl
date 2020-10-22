@@ -118,7 +118,11 @@ while index < len(fruit):
 
 Pętla ta przechodzi po ciągu znaków i wyświetla w wierszu pojedynczo każdą literę. Warunkiem pętli jest `index < len(fruit)`, więc gdy `index` jest równy długości łańcucha, warunek jest fałszywy, a ciało pętli nie jest już wykonywane. Ostatnim dostępnym znakiem jest ten z indeksem `len(fruit)-1`, który jest ostatnim znakiem w ciągu znaków.
 
-**Ćwiczenie 1: Napisz pętlę `while`, która zaczyna się od ostatniego znaku w ciągu znaków i działa w kierunku przeciwnym do pierwszego znaku, wypisując każdą literę w osobnej linii, ale tym razem w odwrotnej kolejności.**
+#### Ćwiczenie 1
+
+Napisz pętlę `while`, która zaczyna się od ostatniego znaku w ciągu znaków i działa w kierunku przeciwnym do pierwszego znaku, wypisując każdą literę w osobnej linii, ale tym razem w odwrotnej kolejności.
+
+----
 
 Innym sposobem na napisanie przejścia jest użycie pętli `for`:
 
@@ -176,7 +180,9 @@ Jeśli pierwszy indeks jest większy lub równy drugiemu, wynikiem jest *pusty c
 
 Pusty ciąg znaków nie zawiera żadnych znaków i ma długość 0, ale poza tym jest tym samym co każdy inny ciąg znaków.
 
-**Część 2: Zakładając, że `fruit` jest ciągiem znaków, co oznacza `fruit[:]`?**
+#### Ćwiczenie 2
+
+Zakładając, że `fruit` jest ciągiem znaków, co oznacza `fruit[:]`?
 
 \index{kopiowanie!wycinek}
 \index{wycinanie!kopia}
@@ -242,7 +248,9 @@ Zmienna `count` jest inicjalizowana z wartością 0, a następnie zwiększana za
 
 \index{hermetyzacja}
 
-**Ćwiczenie 3: Hermetyzacja to styl programowania, w którym szczegóły danej implementacji są ukryte.^[W węższym znaczeniu hermetyzacja jest jednym założeń programowania obiektowego, ale na tę chwilę nie wchodźmy za bardzo w szczegóły tego zagadnienia.] Dokonaj hermetyzacji powyższego kodu poprzez zamknięcie go w funkcji o nazwie `count` i uogólnij ten kod tak, by przyjmował jako argumenty ciąg znaków lub literę.**
+#### Ćwiczenie 3
+
+Hermetyzacja to styl programowania, w którym szczegóły danej implementacji są ukryte.^[W węższym znaczeniu hermetyzacja jest jednym założeń programowania obiektowego, ale na tę chwilę nie wchodźmy za bardzo w szczegóły tego zagadnienia.] Dokonaj hermetyzacji powyższego kodu poprzez zamknięcie go w funkcji o nazwie `count` i uogólnij ten kod tak, by przyjmował jako argumenty ciąg znaków lub literę.
 
 Operator `in`
 -------------
@@ -416,11 +424,13 @@ W ostatnim przykładzie, metoda "lower" jest wywoływana, a następnie używamy 
 \index{count, metoda}
 \index{metoda!count}
 
-**Ćwiczenie 4: Istnieje metoda dla ciągu znaków o nazwie `count`, która jest podobna do funkcji z poprzedniego ćwiczenia. Przeczytaj dokumentację tej metody pod adresem:**
+#### Ćwiczenie 4
+
+Istnieje metoda dla ciągu znaków o nazwie `count`, która jest podobna do funkcji z poprzedniego ćwiczenia. Przeczytaj dokumentację tej metody pod adresem:
 
 <https://docs.python.org/library/stdtypes.html#string-methods>
 
-**Napisz wywołanie metody, które zliczy ile razy litera "a" występuje w słowie "banan".**
+Napisz wywołanie metody, które zliczy ile razy litera "a" występuje w słowie "banan".
 
 Parsowanie ciągów znaków
 ------------------------
@@ -616,15 +626,19 @@ wywołanie metody
 Ćwiczenia
 ---------
 
-**Ćwiczenie 5: Weź następujący kod Pythona, który przechowuje ciąg znaków:**
+#### Ćwiczenie 5
+
+Weź następujący kod Pythona, który przechowuje ciąg znaków:
 
 `str = 'X-DSPAM-Confidence: `**`0.8475`**`'`
 
-**Użyj `find` i wycinków ciągów znaków, tak aby wyodrębnić część ciągu po znaku dwukropka, a następnie użyj funkcji `float`, tak aby przekształcić wyodrębniony ciąg znaków w liczbę zmiennoprzecinkową.**
+Użyj `find` i wycinków ciągów znaków, tak aby wyodrębnić część ciągu po znaku dwukropka, a następnie użyj funkcji `float`, tak aby przekształcić wyodrębniony ciąg znaków w liczbę zmiennoprzecinkową.
 
 \index{ciąg znaków, metody}
 \index{metoda!ciąg znaków}
 
-**Ćwiczenie 6: Przeczytaj dokumentację metod związanych z ciągami znaków na stronie** <https://docs.python.org/library/stdtypes.html#string-methods>**.** **Możesz poeksperymentować z niektórymi z nich, tak aby upewnić się, że rozumiesz jak one działają. Szczególnie przydatne są `strip` i `replace`.**
+#### Ćwiczenie 6
 
-**Dokumentacja używa składni, która może być nieco myląca. Na przykład, w `find(sub[, start[, end]])` nawiasy kwadratowe wskazują opcjonalne argumenty. Tak więc `sub` jest wymagany, ale `start` jest opcjonalny, a jeśli dodasz `start`, to `end` jest opcjonalny.**
+Przeczytaj dokumentację metod związanych z ciągami znaków na stronie <https://docs.python.org/library/stdtypes.html#string-methods>. Możesz poeksperymentować z niektórymi z nich, tak aby upewnić się, że rozumiesz jak one działają. Szczególnie przydatne są `strip` i `replace`.
+
+Dokumentacja używa składni, która może być nieco myląca. Na przykład, w `find(sub[, start[, end]])` nawiasy kwadratowe wskazują opcjonalne argumenty. Tak więc `sub` jest wymagany, ale `start` jest opcjonalny, a jeśli dodasz `start`, to `end` jest opcjonalny.

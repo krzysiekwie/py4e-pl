@@ -118,9 +118,11 @@ Operator `in` używa różnych algorytmów dla list i słowników. W przypadku l
 \index{zbiór!przynależność}
 \index{przynależność!zbiór}
 
-**Ćwiczenie 1: Pobierz kopię pliku** <https://py4e.pl/code3/words.txt>
+#### Ćwiczenie 1
 
-**Napisz program, który odczytuje słowa z *words.txt* i przechowuje je jako klucze w słowniku. Nie ma znaczenia, jakie będą wartości w słowniku. Następnie możesz użyć operatora `in` jako szybkiego sposobu na sprawdzenie, czy dany wyraz znajduje się w słowniku.**
+Pobierz kopię pliku <https://py4e.pl/code3/words.txt>
+
+Napisz program, który odczytuje słowa z *words.txt* i przechowuje je jako klucze w słowniku. Nie ma znaczenia, jakie będą wartości w słowniku. Następnie możesz użyć operatora `in` jako szybkiego sposobu na sprawdzenie, czy dany wyraz znajduje się w słowniku.
 
 Słownik jako zbiór liczników
 ----------------------------
@@ -454,15 +456,17 @@ wyszukiwanie
 Ćwiczenia
 ---------
 
-**Ćwiczenie 2: Napisz program, który skategoryzowałby każdą wiadomość pocztową względem czasu wykonania rewizji w projekcie. Aby to zrobić, poszukaj wierszy rozpoczynający się od "From", a następnie poszukaj trzeciego słowa i zachowaj bieżące zliczenia dla każdego dnia tygodnia. Na koniec programu wyświetl zawartość swojego słownika (kolejność nie ma znaczenia).**
+#### Ćwiczenie 2
 
-**Przykładowa linia:**
+Napisz program, który skategoryzowałby każdą wiadomość pocztową względem czasu wykonania rewizji w projekcie. Aby to zrobić, poszukaj wierszy rozpoczynający się od "From", a następnie poszukaj trzeciego słowa i zachowaj bieżące zliczenia dla każdego dnia tygodnia. Na koniec programu wyświetl zawartość swojego słownika (kolejność nie ma znaczenia).
+
+Przykładowa linia:
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 ~~~~
 
-**Przykładowe uruchomienie:**
+Przykładowe uruchomienie:
 
 ~~~~
 python dow.py
@@ -470,7 +474,9 @@ Podaj nazwę pliku: mbox-short.txt
 {'Fri': 20, 'Thu': 6, 'Sat': 1}
 ~~~~
 
-**Ćwiczenie 3: Napisz program, który odczytuje dane z dziennika skrzynki pocztowej, tworzy histogram przy użyciu słownika by zliczyć ile wiadomości przyszło z każdego adresu e-mail, a pod koniec wyświetla ten słownik.**
+#### Ćwiczenie 3
+
+Napisz program, który odczytuje dane z dziennika skrzynki pocztowej, tworzy histogram przy użyciu słownika by zliczyć ile wiadomości przyszło z każdego adresu e-mail, a pod koniec wyświetla ten słownik.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
@@ -482,7 +488,9 @@ Podaj nazwę pliku: mbox-short.txt
 'ray@media.berkeley.edu': 1}
 ~~~~
 
-**Ćwiczenie 4: Do powyższego programu dodaj kod, tak by dowiedzieć się kto otrzymał najwięcej e-maili. Po przeczytaniu wszystkich danych i utworzeniu słownika, przeszukaj słownik za pomocą pętli wyszukującej największą wartość (patrz: Rozdział 5. Pętle typu maksimum i minimum), tak by dowiedzieć się kto ma najwięcej wiadomości, a na koniec wyświetl informację o tym ile wiadomości ma dana osoba.**
+#### Ćwiczenie 4
+
+Do powyższego programu dodaj kod, tak by dowiedzieć się kto otrzymał najwięcej e-maili. Po przeczytaniu wszystkich danych i utworzeniu słownika, przeszukaj słownik za pomocą pętli wyszukującej największą wartość (patrz: Rozdział 5. Pętle typu maksimum i minimum), tak by dowiedzieć się kto ma najwięcej wiadomości, a na koniec wyświetl informację o tym ile wiadomości ma dana osoba.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
@@ -492,7 +500,9 @@ Podaj nazwę pliku: mbox.txt
 zqian@umich.edu 195
 ~~~~
 
-**Ćwiczenie 5: Napisz program, który zapamiętuje nazwę domeny, z której została wysłana wiadomość (zamiast informacji od kogo pochodziła wiadomość, tzn. całego adresu e-mail). Na koniec programu wyświetl zawartość swojego słownika.**
+#### Ćwiczenie 5
+
+Napisz program, który zapamiętuje nazwę domeny, z której została wysłana wiadomość (zamiast informacji od kogo pochodziła wiadomość, tzn. całego adresu e-mail). Na koniec programu wyświetl zawartość swojego słownika.
 
 ~~~~
 python schoolcount.py

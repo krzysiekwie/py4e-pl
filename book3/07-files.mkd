@@ -552,7 +552,9 @@ znak końca linii
 Ćwiczenia
 ---------
 
-**Ćwiczenie 1: Napisz program odczytujący plik i wypisz zawartość pliku (wiersz po wierszu), ale dużymi literami. Uruchomienie programu będzie wyglądało następująco:**
+#### Ćwiczenie 1
+
+Napisz program odczytujący plik i wypisz zawartość pliku (wiersz po wierszu), ale dużymi literami. Uruchomienie programu będzie wyglądało następująco:
 
 ~~~~
 python shout.py
@@ -564,15 +566,17 @@ RECEIVED: FROM MURDER (MAIL.UMICH.EDU [141.211.14.90])
      SAT, 05 JAN 2008 09:14:16 -0500
 ~~~~
 
-**Plik możesz pobrać z** <https://py4e.pl/code3/mbox-short.txt>
+Plik możesz pobrać z adresu <https://py4e.pl/code3/mbox-short.txt>
 
-**Ćwiczenie 2: Napisz program proszący o podanie nazwy pliku, a następnie przeszukaj plik w celu znalezienia linii podobnej do poniższej:**
+#### Ćwiczenie 2
+
+Napisz program proszący o podanie nazwy pliku, a następnie przeszukaj plik w celu znalezienia linii podobnej do poniższej:
 
 ~~~~
 X-DSPAM-Confidence: 0.8475
 ~~~~
 
-**Gdy trafisz na linię, która zaczyna się od "X-DSPAM-Confidence:", podziel linię tak, by wyodrębnić z niej liczbę zmiennoprzecinkową. Zliczaj te linie i sumuj wartości oznaczające pewność, że mamy do czynienia ze spamem. Kiedy dotrzesz do końca pliku, wydrukuj średnią wartość pewność co do spamu.**
+Gdy trafisz na linię, która zaczyna się od "X-DSPAM-Confidence:", podziel linię tak, by wyodrębnić z niej liczbę zmiennoprzecinkową. Zliczaj te linie i sumuj wartości oznaczające pewność, że mamy do czynienia ze spamem. Kiedy dotrzesz do końca pliku, wydrukuj średnią wartość pewność co do spamu.
 
 ~~~~
 Podaj nazwę pliku: mbox.txt
@@ -582,9 +586,11 @@ Podaj nazwę pliku: mbox-short.txt
 Średni poziom pewności spamu: 0.750718518519
 ~~~~
 
-**Przetestuj swój program na plikach *mbox.txt* i *mbox-short.txt*.**
+Przetestuj swój program na plikach *mbox.txt* i *mbox-short.txt*.
 
-**Ćwiczenie 3: Czasami, gdy programiści się nudzą lub chcą się trochę zabawić, dodają do swojego programu nieszkodliwy tzw. *Easter Egg*^[<https://pl.wikipedia.org/wiki/Easter_egg>] (dosł. z ang. *jajko wielkanocne*). Zmodyfikuj swój program, który pyta użytkownika o nazwę pliku tak, by wypisał zabawną wiadomość, gdy użytkownik wpisze w nim nazwę pliku "trele morele". Program powinien zachowywać się normalnie dla wszystkich innych plików, które istnieją i nie istnieją. Oto przykładowe wykonanie programu:**
+#### Ćwiczenie 3
+
+Czasami, gdy programiści się nudzą lub chcą się trochę zabawić, dodają do swojego programu nieszkodliwy tzw. *Easter Egg*^[<https://pl.wikipedia.org/wiki/Easter_egg>] (dosł. z ang. *jajko wielkanocne*). Zmodyfikuj swój program, który pyta użytkownika o nazwę pliku tak, by wypisał zabawną wiadomość, gdy użytkownik wpisze w nim nazwę pliku "trele morele". Program powinien zachowywać się normalnie dla wszystkich innych plików, które istnieją i nie istnieją. Oto przykładowe wykonanie programu:
 
 ~~~~
 python egg.py
@@ -600,4 +606,4 @@ Podaj nazwę pliku: trele morele
 TRELE MORELE - co za bzdury!
 ~~~~
 
-**Nie zachęcamy Cię do umieszczania Easter Eggów w Twoich programach; to tylko ćwiczenie.**
+Nie zachęcamy Cię do umieszczania Easter Eggów w Twoich programach; to tylko ćwiczenie.

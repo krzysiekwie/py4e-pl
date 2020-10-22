@@ -320,8 +320,10 @@ Jeśli wpiszesz wyrażenie w trybie interaktywnym, interpreter dokona jego
 Natomiast w skrypcie wyrażenie samo w sobie nic nie robi! Jest to powszechne
 źródło dezorientacji wśród początkujących.
 
-**Ćwiczenie 1: Wpisz następujące stwierdzenia w interpreterze Pythona, tak aby
-zobaczyć co one robią:**
+#### Ćwiczenie 1
+
+Wpisz następujące stwierdzenia w interpreterze Pythona, tak aby
+zobaczyć co one robią:
 
 ~~~~ {.python}
 5
@@ -830,17 +832,21 @@ zmienna
 Ćwiczenia
 ---------
 
-**Ćwiczenie 2: Napisz program, który wykorzystuje funkcję `input` do 
+#### Ćwiczenie 2
+
+Napisz program, który wykorzystuje funkcję `input` do 
 poproszenia użytkownika o jego imię, a następnie przywita go używając jego
-imienia.**
+imienia.
 
 ~~~~
 Podaj swoje imię: Chuck
 Hello Chuck
 ~~~~
 
-**Ćwiczenie 3: Napisz program, który wyświetli użytkownikowi pytanie o liczbę
-godzin pracy i stawkę za godzinę w celu obliczenia wynagrodzenia.**
+#### Ćwiczenie 3
+
+Napisz program, który wyświetli użytkownikowi pytanie o liczbę
+godzin pracy i stawkę za godzinę w celu obliczenia wynagrodzenia.
 
 ~~~~
 Podaj liczbę godzin: 39
@@ -853,7 +859,9 @@ dwie cyfry po przecinku. Jeśli chcesz, możesz pobawić się wbudowaną funkcj�
 Pythona `round`, tak aby prawidłowo zaokrąglić wynagrodznie do dwóch miejsc po
 przecinku.
 
-**Ćwiczenie 4: Załóżmy, że wykonujemy następujące instrukcje przypisania:**
+#### Ćwiczenie 4
+
+Załóżmy, że wykonujemy następujące instrukcje przypisania:
 
 ~~~~
 width = 17
@@ -873,6 +881,8 @@ wyrażenia).
 
 Aby sprawdzić swoje odpowiedzi, użyj interpretera Pythona.
 
-**Ćwiczenie 5: Napisz program, który prosi użytkownika o podanie temperatury 
+#### Ćwiczenie 5
+
+Napisz program, który prosi użytkownika o podanie temperatury 
 w skali Celsjusza, przelicza ją na skalę Fahrenheita i wyświetla przeliczoną
-temperaturę.**
+temperaturę.

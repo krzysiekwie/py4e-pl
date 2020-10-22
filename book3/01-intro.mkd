@@ -1006,7 +1006,7 @@ c. pamięć pomocnicza,
 d. urządzenie wejścia,
 e. urządzenie wyjścia. 
 
-Np. "Czym mógłby być procesor w kontekście człowieka?"?
+Np. "Czym mógłby być procesor w kontekście człowieka?".
 
 #### Ćwiczenie 9
 

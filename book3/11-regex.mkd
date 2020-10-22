@@ -471,7 +471,9 @@ wyrażenie regularne
 Ćwiczenia
 ---------
 
-**Ćwiczenie 1: Napisz prosty program symulujący działanie unixowej komendy `grep`. Poproś użytkownika o wpisanie wyrażenia regularnego i zliczenie linii, które pasowały do wyrażenia regularnego:**
+#### Ćwiczenie 1
+
+Napisz prosty program symulujący działanie unixowej komendy `grep`. Poproś użytkownika o wpisanie wyrażenia regularnego i zliczenie linii, które pasowały do wyrażenia regularnego:
 
 ~~~~
 $ python grep.py
@@ -487,13 +489,15 @@ Podaj wyrażenie regularne: java$
 mbox.txt ma 4175 linii, które pasują do java$
 ~~~~
 
-**Ćwiczenie 2: Napisz program zajdujący linie w postaci:**
+#### Ćwiczenie 2
+
+Napisz program zajdujący linie w postaci:
 
 ~~~~
 New Revision: 39772
 ~~~~
 
-**Wyodrębnij liczbę z każdej pasującej linii za pomocą wyrażenia regularnego i metody `findall()`. Oblicz średnią z tych liczb i wypisz ją w postaci liczby całkowitej.**
+Wyodrębnij liczbę z każdej pasującej linii za pomocą wyrażenia regularnego i metody `findall()`. Oblicz średnią z tych liczb i wypisz ją w postaci liczby całkowitej.
 
 ~~~~
 Podaj nazwę pliku: mbox.txt

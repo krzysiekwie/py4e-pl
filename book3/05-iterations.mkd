@@ -382,7 +382,9 @@ pętla nieskończona
 Ćwiczenia
 ---------
 
-**Ćwiczenie 1: Napisz program, który odczytuje liczby tak długo, aż użytkownik wprowadzi "gotowe". Po wpisaniu "gotowe" wydrukuj sumę, ile wprowadzono liczb oraz średnią z tych liczb. Jeśli użytkownik wprowadzi coś innego niż liczba, wykryj jego błąd używając `try` i `except`, wypisz komunikat o błędzie oraz przejdź do następnej liczby.**
+#### Ćwiczenie 1
+
+Napisz program, który odczytuje liczby tak długo, aż użytkownik wprowadzi "gotowe". Po wpisaniu "gotowe" wydrukuj sumę, ile wprowadzono liczb oraz średnią z tych liczb. Jeśli użytkownik wprowadzi coś innego niż liczba, wykryj jego błąd używając `try` i `except`, wypisz komunikat o błędzie oraz przejdź do następnej liczby.
 
 ~~~~
 Wprowadź liczbę: 4
@@ -394,4 +396,6 @@ Wprowadź liczbę: gotowe
 16 3 5.333333333333333
 ~~~~
 
-**Ćwiczenie 2: Napisz kolejny program, który będzie prosił o listę liczb tak jak wyżej, ale na końcu zamiast średniej wypisze zarówno największą, jak i najmniejszą wprowadzoną liczbę.**
+#### Ćwiczenie 2
+
+Napisz kolejny program, który będzie prosił o listę liczb tak jak wyżej, ale na końcu zamiast średniej wypisze zarówno największą, jak i najmniejszą wprowadzoną liczbę.
