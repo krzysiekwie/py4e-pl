@@ -927,27 +927,35 @@ znak zachęty
 Ćwiczenia
 ---------
 
-###### Ćwiczenie 1
+#### Ćwiczenie 1
 
 Jaką rolę pełni w komputerze pamięć pomocnicza?
 
-a. Wykonuje wszystkie obliczenia i logikę programu
-b. Pobiera strony z internetu
-c. Przechowuje informacje przez dłuższy czas, nawet po wyłączeniu sprzętu
-d. Pobiera dane wejściowe od użytkownika
+a. Wykonuje wszystkie obliczenia i logikę programu.
+b. Pobiera strony z internetu.
+c. Przechowuje informacje przez dłuższy czas, nawet po wyłączeniu sprzętu.
+d. Pobiera dane wejściowe od użytkownika.
 
-**Ćwiczenie 2: Czym jest program?**
+#### Ćwiczenie 2
 
-**Ćwiczenie 3: Jaka jest różnica między kompilatorem a intepreterem?**
+Czym jest program?
 
-**Ćwiczenie 4: Który z poniższych zawiera "kod maszynowy"?**
+#### Ćwiczenie 3
 
-a\) Interpreter Pythona\
-b) Klawiatura\
-c) Kod źródłowy Pythona\
-d) Dokument edytora tekstu
+Jaka jest różnica między kompilatorem a intepreterem?
 
-**Ćwiczenie 5: Co jest nie tak w poniższym kodzie:**
+#### Ćwiczenie 4
+
+Która z poniższych opcji zawiera "kod maszynowy"?
+
+a. Interpreter Pythona.
+b. Klawiatura.
+c. Kod źródłowy Pythona.
+d. Dokument edytora tekstu.
+
+#### Ćwiczenie 5
+
+Co jest nie tak w poniższym kodzie?
 
 ~~~~ {.python}
 >>> primt 'Witaj świecie!'
@@ -958,20 +966,23 @@ SyntaxError: invalid syntax
 >>>
 ~~~~
 
-**Ćwiczenie 6: Gdzie w komputerze będzie przechowywana zmienna "x" po wykonaniu
-poniższej linijki kodu Pythona?**
+#### Ćwiczenie 6
+
+Gdzie w komputerze będzie przechowywana zmienna "x" po wykonaniu poniższej linijki kodu Pythona?
 
 ~~~~ {.python}
 x = 123
 ~~~~
 
-a\) W procesorze\
-b) W pamięci głównej\
-c) W pamięci pomocnicznej\
-d) W urządzeniach wejścia\
-e) W urządzeniach wyjścia
+a. W procesorze.
+b. W pamięci głównej.
+c. W pamięci pomocnicznej.
+d. W urządzeniach wejścia.
+e. W urządzeniach wyjścia.
 
-**Ćwiczenie 7: Co wyświetli poniższy program:**
+#### Ćwiczenie 7
+
+Co wyświetli poniższy program?
 
 ~~~~ {.python}
 x = 43
@@ -979,15 +990,24 @@ x = x + 1
 print(x)
 ~~~~
 
-a\) 43\
-b) 44\
-c) x + 1\
-d) Błąd, ponieważ x = x + 1 łamie reguły matematyki
+a. 43
+b. 44
+c. x + 1
+d. Błąd, ponieważ x = x + 1 łamie reguły matematyki.
 
-**Ćwiczenie 8: Wyjaśnij każdy z poniższych elementów na przykładzie ludzkich
-możliwości: (1) procesor, (2) pamięć główna, (3) pamięć pomocnicza,
-(4) Urządzenie wejścia, oraz (5) urządzenie wyjścia. Np. "Czym mógłby być
-procesor w kontekście człowieka?"?**
+#### Ćwiczenie 8
 
-**Ćwiczenie 9: W jaki sposób naprawiasz "Syntax Error" (błąd składniowy)?**
+Wyjaśnij każdy z poniższych elementów na przykładzie ludzkich
+możliwości: 
 
+a. procesor, 
+b. pamięć główna, 
+c. pamięć pomocnicza,
+d. urządzenie wejścia,
+e. urządzenie wyjścia. 
+
+Np. "Czym mógłby być procesor w kontekście człowieka?"?
+
+#### Ćwiczenie 9
+
+W jaki sposób naprawiasz "Syntax Error" (błąd składniowy)?
