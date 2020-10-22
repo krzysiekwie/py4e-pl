@@ -127,6 +127,9 @@ $endif$
 
 \usepackage{titlesec}
 \titlelabel{\thetitle.\quad}
+\titleformat{\subsubsection}[runin]
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{\addperiod}
+\newcommand{\addperiod}[1]{#1.}
 \usepackage[rightlabels,dotinlabels]{titletoc}
 
     \titlecontents{chapter}[1.7em]{\medskip\bfseries}%

@@ -1,5 +1,7 @@
 % Python dla wszystkich 
 % Dr Charles R. Severance
+% Ostatnia aktualizacja: 2020-10-22
+% Ostatnia aktualizacja: 2020-10-22
 
 Dlaczego powinieneś nauczyć się pisać programy?
 ===============================================

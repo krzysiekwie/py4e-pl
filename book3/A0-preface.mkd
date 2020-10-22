@@ -62,7 +62,7 @@ Uważam, że ta książka jest przykładem na to dlaczego otwarte materiały są
 Pragnę podziękować Allenowi B. Downey'owi i Lauren Cowles za pomoc, cierpliwość i wskazówki dotyczące postępowania i rozwiązywania problemów związanych z prawami autorskimi do tej książki.
 
 Charles Severance\
-<www.dr-chuck.com>\
+[www.dr-chuck.com](https://www.dr-chuck.com)\
 Ann Arbor, MI, USA\
 9 września 2013 r.
 
