@@ -27,6 +27,7 @@ https://creativecommons.org/licenses/by-nc-sa/3.0/
 O tym co autor uważa za komercyjne i niekomercyjne wykorzystanie tego materiału, jak również wyłączenia licencyjne, możesz przeczytać w dodatku zatytułowanym "Szczegóły dotyczące praw autorskich".
 
 \cleardoublepage
+\pdfbookmark{Przedmowa}{preface}
 
 Przedmowa
 =========
@@ -36,7 +37,7 @@ Remiksowanie otwartej książki
 
 To całkiem naturalne, że naukowcy, którym ciągle się mówi "publikuj albo giń", chcą zawsze tworzyć od podstaw coś, co będzie ich własnym świeżym dziełem. Poniższa książka jest eksperymentem, który nie zaczyna się od zera, ale zamiast tego "remiksuje" książkę zatytułowaną *Think Python: How to Think Like a Computer Scientist*^[Polskie wydanie tej książki to *Myśl w języku Python! Nauka programowania*.] autorstwa Allena B. Downey'a, Jeffa Elknera i innych.
 
-W grudniu 2009 roku już piąty semestr z rzędu przygotowywałem się na Uniwersytecie Michigan do nauczania *SI502 - Networked Programming* i zdecydowałem, że nadszedł czas, by napisać podręcznik do Pythona, który będzie skupiał się na eksplorowaniu danych, a nie na rozumieniu algorytmów i abstrakcji. Moim celem w kursie SI502 jest nauczenie ludzi na całe życie umiejętności obsługi danych przy użyciu Pythona. Niewielu z moich studentów planowało zostać profesjonalnymi programistami. Zamiast tego planowali być bibliotekarzami, menadżerami, prawnikami, biologami, ekonomistami itp., którzy chcieliby umiejętnie wykorzystywać technologię w wybranej przez siebie dziedzinie.
+W grudniu 2009 roku już piąty semestr z rzędu przygotowywałem się na Uniwersytecie Michigan do nauczania *SI502 – Networked Programming* i zdecydowałem, że nadszedł czas, by napisać podręcznik do Pythona, który będzie skupiał się na eksplorowaniu danych, a nie na rozumieniu algorytmów i abstrakcji. Moim celem w kursie SI502 jest nauczenie ludzi na całe życie umiejętności obsługi danych przy użyciu Pythona. Niewielu z moich studentów planowało zostać profesjonalnymi programistami. Zamiast tego planowali być bibliotekarzami, menadżerami, prawnikami, biologami, ekonomistami itp., którzy chcieliby umiejętnie wykorzystywać technologię w wybranej przez siebie dziedzinie.
 
 Nigdy nie wydawało mi się, że znajdę idealną, zorientowaną na dane, książkę Pythona do mojego kursu, więc postanowiłem właśnie taką napisać. Na szczęście na trzy tygodnie przed tym, jak miałem zamiar zacząć moją nową książkę od zera w czasie przerwy wakacyjnej, dr Atul Prakash podczas spotkania na wydziale pokazał mi książkę *Think Python*, której używał do prowadzenia swojego kursu Pythona w tamtym semestrze. Jest to dobrze napisany tekst z dziedziny informatyki, skupiający się na krótkich, bezpośrednich wyjaśnieniach i łatwości uczenia się.
 
@@ -72,6 +73,6 @@ Informacja dotycząca polskiego wydania
 
 Książka "Python dla wszystkich", w odniesieniu do swojego oryginału "Python for Everybody", jest nie tylko jej tłumaczeniem, ale posiada również szereg poprawek, rozwinięć i nowych materiałów.
 
-W rozdziale 7 dodano sekcję o przetwarzaniu plików zawierających polski tekst. Rozdziały 13 i 16 korzystają z usługi Nominatim dostarczanej przez OpenStreetMap zamiast z płatnego GoogleAPI. Indeks został poprawiony, usunięto zbędne odniesienia oraz dodano nowe w celu łatwiejszego wyszukiwania treści. W tekście dodano przypisy w celu rozjaśnienia polskiej terminologii. W kodach programów nie tłumaczono nazw zmiennych - jest to pewna ogólna konwencja programistyczna, ktora powinna również pomóc w sprawniejszym operowaniu pojęciami programistycznymi np. podczas wyszukiwania w internecie treści na zadany problem.
+W rozdziale 7 dodano sekcję o przetwarzaniu plików zawierających polski tekst. Rozdziały 13 i 16 korzystają z usługi Nominatim dostarczanej przez OpenStreetMap zamiast z płatnego GoogleAPI. Indeks został poprawiony, usunięto zbędne odniesienia oraz dodano nowe w celu łatwiejszego wyszukiwania treści. W tekście dodano przypisy w celu rozjaśnienia polskiej terminologii. W kodach programów nie tłumaczono nazw zmiennych – jest to pewna ogólna konwencja programistyczna, ktora powinna również pomóc w sprawniejszym operowaniu pojęciami programistycznymi np. podczas wyszukiwania w internecie treści na zadany problem.
 
 Na stronie internetowej, będącej uzupełnieniem tej książki, rozwinięto sekcję dotyczącą korzystania z Pythona pod Windowsem przy użyciu PowerShella. 

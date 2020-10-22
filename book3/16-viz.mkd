@@ -125,7 +125,7 @@ Ile stron: 3
 Ile stron:
 ~~~~
 
-Możesz mieć wiele punktów startowych w tej samej bazie danych - w programie nazywane są one "witrynami". Robot internetowy jako następną stronę do sprawdzenia wybiera losową stronę spośród wszystkich nieodwiedzonych linków na wszystkich witrynach.
+Możesz mieć wiele punktów startowych w tej samej bazie danych – w programie nazywane są one "witrynami". Robot internetowy jako następną stronę do sprawdzenia wybiera losową stronę spośród wszystkich nieodwiedzonych linków na wszystkich witrynach.
 
 Jeżeli chcesz wyświetlić zawartość bazy *spider.sqlite*, możesz uruchomić *spdump.py*: 
 
@@ -220,7 +220,7 @@ Aby nie obciążać innych serwerów, moja własna kopia wiadomości dostępna j
 
 Gdy dane poczty elektronicznej Sakai były pobierane za pomocą tej aplikacji, to wytworzyło to prawie gigabajt danych i cały proces pobierania trwał kilka dni. Plik *README.txt* w powyższym pliku ZIP zawiera instrukcje opisujące pobranie archiwalnej kopii *content.sqlite*, która zawiera większość korpusu tekstowego poczty elektronicznej projektu Sakai (do marca 2015 r.). W związku z tym nie musisz przy pomocy robota internetowego ściągać danych przez pięć dni. Jeśli pobierzesz ww. archiwalną wersję bazy SQLite, to możesz dodatkowo uruchomić robota internetowego by uzupełnić dane o najnowsze wiadomości mailowe.
 
-Pierwszym krokiem jest przeskanowanie repozytorium Gmane. Główny adres URL jest zapisany w *gmane.py* wzmiennej *baseurl* i wskauzje na listę mailingową deweloperów projektu Sakai. Twój robot może skanować inne repozytorium - wystarczy, że zmienisz wspomniany adres adres URL. Jeśli zmienisz adres URL, to skasuj również plik *content.sqlite*.
+Pierwszym krokiem jest przeskanowanie repozytorium Gmane. Główny adres URL jest zapisany w *gmane.py* wzmiennej *baseurl* i wskauzje na listę mailingową deweloperów projektu Sakai. Twój robot może skanować inne repozytorium – wystarczy, że zmienisz wspomniany adres adres URL. Jeśli zmienisz adres URL, to skasuj również plik *content.sqlite*.
 
 Plik *gmane.py* działa jako odpowiedzialny robot internetowy, zapisujący w pamięci pobrane dane i odczekujący sekundę po pobraniu stu wiadomości. Program przechowuje wszystkie swoje dane w bazie, może być przerywany i uruchamiany ponownie tak często, jak to konieczne. Pobranie wszystkich danych może potrwać wiele godzin. Może być więc konieczne kilkukrotne ponowne uruchomienie tego programu.
 

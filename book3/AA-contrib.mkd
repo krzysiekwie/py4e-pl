@@ -1,4 +1,6 @@
 
+\hypersetup{bookmarksdepth=0}
+
 Wsparcie i współpraca nad książką
 =================================
 
@@ -9,7 +11,7 @@ Andrzej Wójtowicz
 
 Szczegóły dotyczące poszczególnego wkładu w tworzenie książki możesz znaleźć na stronie:
 
-https://github.com/andre-wojtowicz/py4e-pl/graphs/contributors
+<https://github.com/andre-wojtowicz/py4e-pl/graphs/contributors>
 
 Lista współtwórców "Python for Everybody"
 -----------------------------------------
@@ -35,7 +37,7 @@ Michael Fudge
 
 Szczegóły dotyczące poszczególnego wkładu w tworzenie książki możesz znaleźć na stronie:
 
-https://github.com/csev/py4e/graphs/contributors
+<https://github.com/csev/py4e/graphs/contributors>
 
 Lista współtwórców "Python for Informatics" 
 -------------------------------------------
@@ -82,11 +84,11 @@ Wydałem tę książkę na licencji GNU Free Documentation License, która pozwa
 
 A teraz najfajniejsza część tej historii. Jeff Elkner, nauczyciel z liceum w Virginii, włączył moją książkę do swojego programu nauczania i przetłumaczył ją na Pythona. Wysłał mi kopię swojego tłumaczenia, a ja doznałem niezwykłego doświadczenia w nauce Pythona, czytając moją własną książkę.
 
-Zrewidowaliśmy z Jeffem książkę, włączyliśmy do niej studium przypadku Chrisa Meyersa, a w 2001 roku wydaliśmy *How to Think Like a Computer Scientist: Learning with Python*, także na licencji GNU Free Documentation License. Już jako wydawnictwo Green Tea Press opublikowałem książkę i zacząłem ją sprzedawać w formie papierowej za pośrednictwem Amazon.com i księgarni uniwersyteckich. Inne książki z Green Tea Press są dostępne na stronie [greenteapress.com](https://greenteapress.com).
+Zrewidowaliśmy z Jeffem książkę, włączyliśmy do niej studium przypadku Chrisa Meyersa, a w 2001 roku wydaliśmy *How to Think Like a Computer Scientist: Learning with Python*, także na licencji GNU Free Documentation License. Już jako wydawnictwo Green Tea Press opublikowałem książkę i zacząłem ją sprzedawać w formie papierowej za pośrednictwem Amazon.com i księgarni uniwersyteckich. Inne książki z Green Tea Press są dostępne na stronie <https://greenteapress.com>.
 
 W 2003 roku zacząłem uczyć w Olin College, gdzie po raz pierwszy musiałem uczyć Pythona. Kontrast w zestawieniu z Javą był uderzający. Studenci mieli mniej problemów, uczyli się więcej, pracowali nad bardziej interesującymi projektami i ogólnie mieli dużo więcej zabawy.
 
-W ciągu ostatnich pięciu lat kontynuowałem rozwój książki, poprawiając przy tym błędy i niektóre przykłady oraz dodając nowe materiały, zwłaszcza w sekcji ćwiczeń. W 2008 roku rozpocząłem pracę nad dużą korektą - w tym samym czasie skontaktował się ze mną redaktor Cambridge University Press, który był zainteresowany wydaniem kolejnej edycji książki. Dobre wyczucie czasu!
+W ciągu ostatnich pięciu lat kontynuowałem rozwój książki, poprawiając przy tym błędy i niektóre przykłady oraz dodając nowe materiały, zwłaszcza w sekcji ćwiczeń. W 2008 roku rozpocząłem pracę nad dużą korektą – w tym samym czasie skontaktował się ze mną redaktor Cambridge University Press, który był zainteresowany wydaniem kolejnej edycji książki. Dobre wyczucie czasu!
 
 Mam nadzieję, że praca z tą książką sprawi Ci przyjemność oraz pomoże Ci nauczyć się programować i myśleć, przynajmniej trochę, jak informatyk.
 

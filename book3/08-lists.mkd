@@ -968,7 +968,7 @@ Podaj nazwę pliku: romeo.txt
 'with', 'yonder']
 ~~~~
 
-**Ćwiczenie 5: Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z funkcji `split`. Interesuje nas, kto wysłał wiadomość - informacja ta jest drugim słowem w wierszu zawierającym "From".**
+**Ćwiczenie 5: Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z funkcji `split`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".**
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008

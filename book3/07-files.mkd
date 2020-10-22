@@ -158,7 +158,7 @@ Pamiętaj, że ta forma funkcji `open` powinna być używana tylko wtedy, gdy da
 Przeszukiwanie pliku
 --------------------
 
-Kiedy przeszukujesz dane w pliku, bardzo powszechnym wzorcem postępowania jest odczytywanie danych pliku, ignorując przy tym większość linii i przetwarzając tylko te, które spełniają określony warunek - patrząc na to ogólniej, nazywamy to *schematem filtrowania*. Możemy połączyć przebieg odczytywania pliku z metodami ciągów znaków, tak aby zbudować proste mechanizmy wyszukiwania.
+Kiedy przeszukujesz dane w pliku, bardzo powszechnym wzorcem postępowania jest odczytywanie danych pliku, ignorując przy tym większość linii i przetwarzając tylko te, które spełniają określony warunek – patrząc na to ogólniej, nazywamy to *schematem filtrowania*. Możemy połączyć przebieg odczytywania pliku z metodami ciągów znaków, tak aby zbudować proste mechanizmy wyszukiwania.
 
 \index{filtrowanie, schemat}
 \index{schemat!filtrowanie}
@@ -357,7 +357,7 @@ Metoda `write` obiektu uchwytu pliku umieszcza dane w pliku, zwracając liczbę 
 
 Obiekt pliku śledzi gdzie się obecnie znajduje, więc jeśli ponownie wywołasz metodę `write`, to nowe dane zostaną umieszczone na końcu pliku.
 
-Podczas zapisu do pliku musimy być pewni, że ogarniamy znaki końca linii - tutaj wyraźnie wstawiamy znak końca linii, gdy tę linię chcemy zakończyć. Instrukcja `print` automatycznie dołącza znak nowej linii, ale metoda `write` nie dodaje jej automatycznie.
+Podczas zapisu do pliku musimy być pewni, że ogarniamy znaki końca linii – tutaj wyraźnie wstawiamy znak końca linii, gdy tę linię chcemy zakończyć. Instrukcja `print` automatycznie dołącza znak nowej linii, ale metoda `write` nie dodaje jej automatycznie.
 
 ~~~~ {.python}
 >>> line2 = 'ojczyzny naszej emblemat.\n'
@@ -478,7 +478,7 @@ Na szczęście możemy użyć parametry `encoding`:
 >>> fhand_pl2.close()
 ~~~~
 
-Problemy z kodowaniem to szeroki temat i początkującemu programiście może to napsuć wiele krwi. Istnieje wiele sposobów na automatyczne wykrywanie kodowania i konwersji z jednego na drugie. Jednak na potrzeby tego kursu wystarczy, że w razie wątpliwości otworzysz plik np. w programistycznym edytorze tekstu Atom lub edytorze tekstu Notepad++ - informacja o kodowaniu pliku będzie w prawym dolnym ekranie.
+Problemy z kodowaniem to szeroki temat i początkującemu programiście może to napsuć wiele krwi. Istnieje wiele sposobów na automatyczne wykrywanie kodowania i konwersji z jednego na drugie. Jednak na potrzeby tego kursu wystarczy, że w razie wątpliwości otworzysz plik np. w programistycznym edytorze tekstu Atom lub edytorze tekstu Notepad++ – informacja o kodowaniu pliku będzie w prawym dolnym ekranie.
 
 Obecnie zasadniczo przyjętym standardem kodowania plików jest UTF-8.
 

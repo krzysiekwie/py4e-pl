@@ -84,7 +84,7 @@ umiejętności programisty, a programowanie stanie się dla ciebie bardziej
 twórcze, twoje myśli mogą skierować się w stronę tworzenia programów dla innych
 osób.
 
-Architektura sprzętu kommputerowego
+Architektura sprzętu komputerowego
 -----------------------------------
 
 \index{sprzęt}
@@ -154,7 +154,7 @@ Zrozumieć programowanie
 -----------------------
 
 W dalszej części książki postaramy się zmienić Cię w osobę biegłą w sztuce
-programowania. Na końcu zostaniesz *programistą* - być może nie profesjonalnym 
+programowania. Na końcu zostaniesz *programistą* – być może nie profesjonalnym 
 programistą, ale przynajmniej będziesz posiadał umiejętności spojrzenia na
 problem analizy danych/informacji oraz opracowania programu do rozwiązania
 takiego problemu.
@@ -163,7 +163,7 @@ takiego problemu.
 
 W pewnym sensie, aby być programistą potrzebujesz dwóch umiejętności:
 
--   Po pierwsze, musisz znać język programowania (Python) - musisz znać 
+-   Po pierwsze, musisz znać język programowania (Python) – musisz znać 
     jego słownictwo i gramatykę. Musisz umieć poprawnie pisać słowa w tym nowym
     języku i umieć konstruować dobrze sformułowane "zdania".
 
@@ -203,7 +203,7 @@ dość skromne. To "słownictwo" nazywamy "słowami zastrzeżonymi". Są to sło
 które mają dla Pythona szczególne znaczenie. Gdy Python widzi te słowa w 
 programie napisanym w języku Python, to mają one jedno i tylko jedno znaczenie
 dla Pythona. Później, podczas pisania programów, stworzysz własne słowa, które
-dla ciebie mają jakieś znaczenie - będą to *zmienne*. Będziesz mieć dużą swobodę
+dla ciebie mają jakieś znaczenie – będą to *zmienne*. Będziesz mieć dużą swobodę
 w wyborze nazw dla swoich zmiennych, ale nie możesz używać żadnych zastrzeżonych
 słów Pythona jako nazwy zmiennej.
 
@@ -588,7 +588,7 @@ przydatne programy.
 
 Istnieje kilka schematów pojęciowych niskiego poziomu, których używamy do
 tworzenia programów. Konstrukcje te nie są przeznaczone tylko dla programów
-pisanych w Pythonie - są one częścią każdego języka programowania, od języka
+pisanych w Pythonie – są one częścią każdego języka programowania, od języka
 maszynowego po języki wysokiego poziomu.
 
 wejście

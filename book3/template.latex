@@ -122,7 +122,14 @@ $endif$
 
 \usepackage{titlesec}
 \titlelabel{\thetitle.\quad}
-\usepackage[dotinlabels]{titletoc}
+\usepackage[rightlabels,dotinlabels]{titletoc}
+
+    \titlecontents{chapter}[1.7em]{\medskip\bfseries}%
+    {\contentslabel{1.7em} }
+    {}%numberless%
+    {\enspace\hfill\contentspage}[\smallskip]%
+
+    \dottedcontents{section}[4.38em]{\smallskip}{3em}{0.6pc}
 
 \ifxetex
   \usepackage[setpagesize=false, % page size defined by xetex
@@ -134,9 +141,10 @@ $endif$
 
 \hypersetup{breaklinks=true,
             linktoc=all,
-            linktocpage,
+         %  linktocpage,
             implicit=false,
             bookmarks=true,
+            bookmarksnumbered,
             pdfauthor={$author-meta$},
             pdftitle={$title-meta$},
             colorlinks=true,
@@ -144,6 +152,10 @@ $endif$
             urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
             linkcolor=$if(linkcolor)$$linkcolor$$else$blue$endif$,
             pdfborder={0 0 0}}
+
+\makeatletter
+\renewcommand{\Hy@numberline}[1]{#1. }
+\makeatother
 
 \makeatletter
 \g@addto@macro{\UrlBreaks}{\do\/\do\-}
@@ -189,6 +201,7 @@ $header-includes$
 $endfor$
 
 \makeatletter
+\renewcommand*\l@chapter{\@dottedtocline{0}{0em}{1.5em}}
 \renewcommand*\l@section{\@dottedtocline{1}{1em}{3em}}
 \makeatother
 \makeindex
@@ -215,6 +228,10 @@ $endfor$
 $if(toc)$
 \hypersetup{linkcolor=blue}
 \setcounter{tocdepth}{$toc-depth$}
+
+\cleardoublepage
+\pdfbookmark{\contentsname}{toc}
+
 \tableofcontents
 $endif$
 $if(lot)$

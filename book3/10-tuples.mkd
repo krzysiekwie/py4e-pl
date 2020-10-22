@@ -400,7 +400,7 @@ for last, first in directory:
 
 Powyższa pętla przechodzi przez klucze w `directory`, które są krotkami. Przypisuje elementy każdej krotki do `last` i `first`, a następnie wypisuje nazwę i odpowiadający jej numer telefonu.
 
-Sekwencje: ciągi znaków, listy i krotki - O rany!
+Sekwencje: ciągi znaków, listy i krotki – O rany!
 -------------------------------------------------
 
 \index{sekwencja}

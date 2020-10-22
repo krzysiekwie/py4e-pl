@@ -6,7 +6,7 @@ Podczas gdy wiele przykładów w tej książce koncentruje się na odczytywaniu 
 
 W tym rozdziale będziemy udawać, że jesteśmy przeglądarką internetową i będziemy wyszukiwać strony internetowe za pomocą protokołu HTTP (Hypertext Transfer Protocol, czyli protokół przesyłania dokumentów hipertekstowych). Następnie będziemy odczytywać dane ze stron internetowych oraz będziemy te dane przetwarzać.
 
-Hypertext Transfer Protocol - HTTP
+Hypertext Transfer Protocol – HTTP
 ----------------------------------
 
 \index{gniazdo}
@@ -338,7 +338,7 @@ Program pyta o adres internetowy, następnie otwiera stronę, odczytuje dane i p
 Po uruchomieniu programu uzyskamy mniej więcej następujący wynik:
 
 ~~~~
-Enter - https://docs.python.org
+Podaj link - https://docs.python.org
 genindex.html
 py-modindex.html
 https://www.python.org/

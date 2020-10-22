@@ -442,7 +442,7 @@ Przepływ sterowania
 \index{przepływ sterowania}
 
 Aby zapewnić, że funkcja zostanie zdefiniowana przed jej pierwszym użyciem, 
-musisz znać kolejność, w jakiej wykonywane są instrukcje - tę kolejność nazywa 
+musisz znać kolejność, w jakiej wykonywane są instrukcje – tę kolejność nazywa 
 się *przepływem sterowania*.
 
 Wykonanie poleceń rozpoczyna się zawsze od pierwszej instrukcji programu. 

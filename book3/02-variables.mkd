@@ -46,7 +46,7 @@ Nic dziwnego, że ciągi znaków należą do typu `str`, a liczby całkowite (an
 dziesiętną należą do typu `float`, ponieważ liczby te są reprezentowane w
 formacie nazywanym *liczbą zmiennoprzecinkową*^[Mimo że nazwa wskazuje na
 używanie przecinka i tak też robimy na co dzień w polskim zapisie, podczas
-programowania używamy kropki - przyp. tłum.] (ang. *floating point*).
+programowania używamy kropki.] (ang. *floating point*).
 
 \index{typ}
 \index{typ!ciągu znaków}
