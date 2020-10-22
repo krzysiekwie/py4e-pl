@@ -927,12 +927,14 @@ znak zachęty
 Ćwiczenia
 ---------
 
-**Ćwiczenie 1: Jaką rolę pełni w komputerze pamięć pomocnicza?**
+###### Ćwiczenie 1
 
-a\) Wykonuje wszystkie obliczenia i logikę programu\
-b) Pobiera strony z internetu\
-c) Przechowuje informacje przez dłuższy czas, nawet po wyłączeniu sprzętu\
-d) Pobiera dane wejściowe od użytkownika
+Jaką rolę pełni w komputerze pamięć pomocnicza?
+
+a. Wykonuje wszystkie obliczenia i logikę programu
+b. Pobiera strony z internetu
+c. Przechowuje informacje przez dłuższy czas, nawet po wyłączeniu sprzętu
+d. Pobiera dane wejściowe od użytkownika
 
 **Ćwiczenie 2: Czym jest program?**
 
