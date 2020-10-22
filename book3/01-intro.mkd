@@ -261,7 +261,7 @@ nowe umiejętności językowe.
 Zanim będziesz mógł rozmawiać z Pythonem, musisz najpierw zainstalować na swoim
 komputerze oprogramowanie Pythona oraz nauczyć się jak uruchomić Pythona na 
 swoim komputerze. Jest to zbyt wiele szczegółów jak na ten rozdział, więc
-sugeruję zajrzeć na stronę [www.py4e.com](https://www.py4e.com), gdzie umieściłem
+sugeruję zajrzeć na stronę <https://py4e.pl>, gdzie umieściłem
 szczegółowe instrukcje i zrzuty ekranu dotyczące konfiguracji i uruchamiania
 Pythona w systemach komputerów Macintosh i Windows. W pewnym momencie znajdziesz
 się w terminalu lub oknie wiersza poleceń i wpiszesz *python*, a interpreter
@@ -468,7 +468,7 @@ właściwie się dzieje?
 
 Interpreter Pythona jest napisany w języku wysokiego poziomu o nazwie "C".
 Możesz spojrzeć na rzeczywisty kod źródłowy interpretera Pythona, przechodząc na
-stronę [www.python.org](https://www.python.org) i sprawdzając kod źródłowy. Tak 
+stronę <https://www.python.org> i sprawdzając kod źródłowy. Tak 
 więc Python sam w sobie jest programem i jest skompilowany do kodu maszynowego.
 Gdy zainstalowałeś język Python na swoim komputerze (lub zainstalował go
 sprzedawca), to skopiowałeś do systemu kopię programu Python przetłumaczonego do

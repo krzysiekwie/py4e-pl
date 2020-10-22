@@ -4,7 +4,7 @@ Korzystanie z usług sieciowych
 
 Kiedy już pozyskiwanie dokumentów przez HTTP i ich przetwarzenie stało się łatwe, ludziom nie zajęło dużo czasu opracowanie podejścia, w którym zaczęli tworzyć dokumenty specjalnie zaprojektowane do użytku przez inne programy (tj. coś innego niż HTML, który ma być wyświetlany w przeglądarce).
 
-Istnieją dwa popularne formaty, których używamy przy wymianie danych w sieci. eXtensible Markup Language (XML, z ang. rozszerzalny język znaczników) jest używany od bardzo dawna i najlepiej nadaje się do wymiany danych w formie dokumentów. Gdy programy chcą tylko wymieniać ze sobą słowniki, listy lub inne wewnętrzne informacje, używają JavaScript Object Notation (JSON, z ang. notacja obiektowa JavaScript, patrz [www.json.org](https://www.json.org)). Przyjrzymy się obu formatom.
+Istnieją dwa popularne formaty, których używamy przy wymianie danych w sieci. eXtensible Markup Language (XML, z ang. rozszerzalny język znaczników) jest używany od bardzo dawna i najlepiej nadaje się do wymiany danych w formie dokumentów. Gdy programy chcą tylko wymieniać ze sobą słowniki, listy lub inne wewnętrzne informacje, używają JavaScript Object Notation (JSON, z ang. notacja obiektowa JavaScript, patrz <https://www.json.org>). Przyjrzymy się obu formatom.
 
 XML
 ---
@@ -189,7 +189,7 @@ Dość często zdarza się, że chcąc skorzystać z API jakiegoś dostawcy, mus
 
 Czasami jest tak, że po otrzymaniu klucza API po prostu dołączasz go jako część danych w zapytaniu POST lub jako parametr w adresie URL podczas wywoływania API.
 
-Innym razem dostawca usług chce mieć większą pewność co do źródła zapytań i z tego powodu oczekuje, że będziesz wysyłał kryptograficznie podpisane wiadomości z wykorzystaniem tzw. współdzielonego klucza i sekretu. Bardzo popularną technologią, która jest używana do podpisywania tego rodzaju zapytań, jest *OAuth*. Więcej o tym protokole możesz przeczytać na stronie [www.oauth.net](https://www.oauth.net).
+Innym razem dostawca usług chce mieć większą pewność co do źródła zapytań i z tego powodu oczekuje, że będziesz wysyłał kryptograficznie podpisane wiadomości z wykorzystaniem tzw. współdzielonego klucza i sekretu. Bardzo popularną technologią, która jest używana do podpisywania tego rodzaju zapytań, jest *OAuth*. Więcej o tym protokole możesz przeczytać na stronie <https://www.oauth.net>.
 
 Na szczęście istnieje wiele wygodnych i darmowych bibliotek OAuth, dzięki czemu możesz uniknąć implementowania OAuth od zera. Biblioteki mają różny stopień skomplikowania i możliwości, a informacje o nich znajdują się na stronie internetowej OAuth.
 

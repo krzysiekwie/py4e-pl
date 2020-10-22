@@ -433,7 +433,7 @@ Słowniczek
 ----------
 
 BeautifulSoup
-:   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, które przeglądarki internetowe zazwyczaj ignorują. Biblioteka BeautifulSoup ma swoją stronę pod adresem [www.crummy.com/software/BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/).
+:   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, które przeglądarki internetowe zazwyczaj ignorują. Biblioteka BeautifulSoup ma swoją stronę pod adresem <https://www.crummy.com/software/BeautifulSoup>.
 \index{BeautifulSoup, biblioteka}
 
 gniazdo
