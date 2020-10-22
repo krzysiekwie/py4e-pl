@@ -840,7 +840,7 @@ imienia.
 
 ~~~~
 Podaj swoje imię: Chuck
-Hello Chuck
+Witaj Chuck!
 ~~~~
 
 #### Ćwiczenie 3
