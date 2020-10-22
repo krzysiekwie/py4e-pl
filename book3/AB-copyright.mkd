@@ -4,9 +4,9 @@ Szczegóły dotyczące praw autorskich
 
 Ten utwór jest objęty licencją Creative Commons
 Uznanie autorstwa-Użycie niekomercyjne-Na tych samych warunkach 3.0 Unported.
-Licencja jest dostępna pod adresem
+Licencja jest dostępna pod adresem:
 
-[https://creativecommons.org/licenses/by-nc-sa/3.0/](https://creativecommons.org/licenses/by-nc-sa/3.0/)
+<https://creativecommons.org/licenses/by-nc-sa/3.0/>
 
 Wolałbym udostępniać książkę na mniej restrykcyjnej licencji CC-BY-SA. Ale niestety istnieje kilka pozbawionych skrupułów organizacji, które szukają i znajdują książki z wolnymi licencjami, a następnie publikują i sprzedają praktycznie niezmienione egzemplarze książek w usłudze druku na żądanie takich jak LuLu czy KDP. KDP (na szczęście) dodało zasady, która daje pierwszeństwo woli rzeczywistego posiadacza praw autorskich przed podmiotami nie posiadającymi praw autorskich, które próbują opublikować wolny utwór objęty licencją. Niestety, istnieje wiele usług druku na żądanie i bardzo niewiele z nich rozważa takie zasady jak przyjęte przez KDP.
 
@@ -21,7 +21,7 @@ Jeśli zamierzasz przetłumaczyć książkę, możesz skontaktować się ze mną
 Oczywiście, możesz również skontaktować się ze mną i poprosić o zgodę, jeśli powyższe zapisy nie są wystarczające. We wszystkich przypadkach zgoda na ponowne użycie i remiksowanie tego materiału zostanie udzielona pod warunkiem, że pojawi się wyraźna wartość dodana lub korzyść dla studentów lub nauczycieli, która powstanie w wyniku nowej pracy.
 
 Charles Severance\
-www.dr-chuck.com \
+<www.dr-chuck.com>\
 Ann Arbor, MI, USA\
 9 września 2013 r.
 

@@ -703,12 +703,12 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     interaktywnym. Metody i operatory, które listy współdzielą z innymi
     sekwencjami (np. ciągami znaków) są udokumentowane pod adresem:
 
-    [docs.python.org/library/stdtypes.html#common-sequence-operations](https://docs.python.org/library/stdtypes.html#common-sequence-operations)
+    <https://docs.python.org/library/stdtypes.html#common-sequence-operations>
 
     Metody i operatory, którzy stosuje się tylko do zmiennych
     sekwencji, są udokumentowane na stronie internetowej:
 
-    [docs.python.org/library/stdtypes.html#mutable-sequence-types](https://docs.python.org/library/stdtypes.html#mutable-sequence-types)
+    <https://docs.python.org/library/stdtypes.html#mutable-sequence-types>
 
 2.  Wybierz idiom i trzymaj się go.
 

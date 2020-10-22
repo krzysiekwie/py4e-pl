@@ -20,9 +20,9 @@ Copyright 2009- Dr. Charles R. Severance.
 
 Ten utwór jest objęty licencją Creative Commons
 Uznanie autorstwa-Użycie niekomercyjne-Na tych samych warunkach 3.0 Unported.
-Licencja jest dostępna pod adresem
+Licencja jest dostępna pod adresem:
 
-https://creativecommons.org/licenses/by-nc-sa/3.0/
+<https://creativecommons.org/licenses/by-nc-sa/3.0/>
 
 O tym co autor uważa za komercyjne i niekomercyjne wykorzystanie tego materiału, jak również wyłączenia licencyjne, możesz przeczytać w dodatku zatytułowanym "Szczegóły dotyczące praw autorskich".
 
@@ -62,7 +62,7 @@ Uważam, że ta książka jest przykładem na to dlaczego otwarte materiały są
 Pragnę podziękować Allenowi B. Downey'owi i Lauren Cowles za pomoc, cierpliwość i wskazówki dotyczące postępowania i rozwiązywania problemów związanych z prawami autorskimi do tej książki.
 
 Charles Severance\
-www.dr-chuck.com\
+<www.dr-chuck.com>\
 Ann Arbor, MI, USA\
 9 września 2013 r.
 

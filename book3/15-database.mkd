@@ -16,9 +16,7 @@ Podobnie jak słownik, oprogramowanie bazodanowe jest zaprojektowane tak, aby do
 
 Istnieje wiele różnych systemów bazodanowych, które są wykorzystywane do wielu różnych celów, w tym: Oracle, MySQL, Microsoft SQL Server, PostgreSQL i SQLite. W tej książce skupimy się na SQLite, ponieważ jest to bardzo popularna baza danych i jest już wbudowana w Pythona. SQLite jest przeznaczony do bycia *wbudowanym* (*osadzonym*) w innych aplikacjach, tak aby zapewnić obsługę bazy danych w obrębie tych aplikacji. Na przykład, przeglądarka Firefox również korzysta wewnętrznie z bazy danych SQLite, podobnie jak wiele innych aplikacji.
 
-<https://sqlite.org/>
-
-SQLite doskonale nadaje się do rozwiązywania niektórych informatycznych problemów z zarządzaniem danymi, takich jak robot internetowy do zbierania danych z Twittera, który opiszemy w tym rozdziale.
+SQLite^[<https://sqlite.org/>] doskonale nadaje się do rozwiązywania niektórych informatycznych problemów z zarządzaniem danymi, takich jak robot internetowy do zbierania danych z Twittera, który opiszemy w tym rozdziale.
 
 Pojęcia związane z bazami danych
 --------------------------------
@@ -49,9 +47,7 @@ W technicznych opisach relacyjnych baz danych pojęcia tabeli, wiersza i kolumny
 Przeglądarka baz SQLite
 -----------------------
 
-Co prawda w tym rozdziale skoncentrujemy się na używaniu Pythona do pracy z danymi zawartymi w plikach bazy SQLite, jednak wiele operacji można wykonać wygodniej przy użyciu darmowego oprogramowania *Database Browser for SQLite*:
-
-<https://sqlitebrowser.org/>
+Co prawda w tym rozdziale skoncentrujemy się na używaniu Pythona do pracy z danymi zawartymi w plikach bazy SQLite, jednak wiele operacji można wykonać wygodniej przy użyciu darmowego oprogramowania *Database Browser for SQLite*^[<https://sqlitebrowser.org/>].
 
 Za pomocą tej aplikacji można łatwo tworzyć tabele, wstawiać i edytować dane oraz uruchamiać proste zapytania SQL dotyczące danych zawartych w bazie.
 
@@ -100,9 +96,7 @@ Operacja `connect` nawiązuje "połączenie" z bazą danych przechowywaną w pli
 
 Posiadając kursor, przy użyciu metody `execute()` możemy rozpocząć wykonywanie poleceń działających na zawartości bazy danych.
 
-Komendy bazy danych są wyrażone w specjalnym języku, który został ustandaryzowany u wielu różnych dostawców baz danych, tak aby umożliwić nam naukę jednego języka bazy danych. Język ten nazywa się *Structured Query Language* (z ang. strukturalny język zapytań) lub w skrócie *SQL*.
-
-<https://pl.wikipedia.org/wiki/SQL>
+Komendy bazy danych są wyrażone w specjalnym języku, który został ustandaryzowany u wielu różnych dostawców baz danych, tak aby umożliwić nam naukę jednego języka bazy danych. Język ten nazywa się *Structured Query Language* (z ang. strukturalny język zapytań) lub w skrócie *SQL*^[<https://pl.wikipedia.org/wiki/SQL>].
 
 W powyższym przykładzie na naszej bazie danych wykonujemy dwa polecenia SQL. Przyjmuje się, że słowa kluczowe SQL pisze się dużymi literami, a części polecenia, które my dodajemy (takie jak nazwy tabel i kolumn) pisze się małymi literami lub z dużej litery.
 
@@ -410,7 +404,7 @@ W istocie, tworząc tabelę `Obserwuje` modelujemy "związek", w którym jedna o
 Programowanie z użyciem wielu tabel
 -----------------------------------
 
-index{klucz główny}
+\index{klucz główny}
 \index{baza danych!klucz główny}
 
 Napiszemy jeszcze raz kod robota internetowego do chodzenia po kontach użytkowników Twittera, ale tym razem używając dwóch tabel i kluczy głównych i odniesień między tabelami. Dodatkowo w tej wersji programu zwiększymy liczbę pobieranych znajomych z 20 do 100. Poniżej znajduje się nowa wersja programu:

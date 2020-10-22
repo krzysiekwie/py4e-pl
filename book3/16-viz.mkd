@@ -91,7 +91,7 @@ Wizualizacja sieci i połączeń
 \index{wizualizacja!sieci}
 \index{wizualizacja!PageRank}
 
-W poniższej aplikacji będziemy wykonywać niektóre funkcje znajdujące się w mechaniźmie wyszukiwarki internetowej. Najpierw przeczeszemy mały fragment sieci internetowej, uruchomimy uproszczoną wersję algorytmu Google PageRank by określić strony, do których jest najwięcej odniesień z innych stron (czyli by wskazać które strony są potencjalnie najistotniejsze), a następnie zwizualizujemy rangę strony i połączenia w naszym małym zakątku sieci. Aby utworzyć wizualizacje wykorzystamy bibliotekę JavaScript D3 <https://d3js.org/>.
+W poniższej aplikacji będziemy wykonywać niektóre funkcje znajdujące się w mechaniźmie wyszukiwarki internetowej. Najpierw przeczeszemy mały fragment sieci internetowej, uruchomimy uproszczoną wersję algorytmu Google PageRank by określić strony, do których jest najwięcej odniesień z innych stron (czyli by wskazać które strony są potencjalnie najistotniejsze), a następnie zwizualizujemy rangę strony i połączenia w naszym małym zakątku sieci. Aby utworzyć wizualizacje wykorzystamy bibliotekę JavaScript D3^[<https://d3js.org/>].
 
 Możesz pobrać i rozpakować poniższą aplikację:
 
@@ -215,7 +215,7 @@ Możesz pobrać aplikację z:
 
 <https://py4e.pl/code3/gmane.zip>
 
-Będziemy korzystać z danych umieszczonych na bezpłatnej usłudze archiwizacji listy mailingowej o nazwie [Gmane](https://en.wikipedia.org/wiki/Gmane). Usługa była bardzo popularna wśród projektów open source, ponieważ zapewniała ładne i łatwe do przeszukiwania archiwum ich aktywności emailowej. Usługa posiadała również bardzo liberalną politykę dostępu do swoich danych poprzez swoje API.
+Będziemy korzystać z danych umieszczonych na bezpłatnej usłudze archiwizacji listy mailingowej o nazwie Gmane^[<https://en.wikipedia.org/wiki/Gmane>]. Usługa była bardzo popularna wśród projektów open source, ponieważ zapewniała ładne i łatwe do przeszukiwania archiwum ich aktywności emailowej. Usługa posiadała również bardzo liberalną politykę dostępu do swoich danych poprzez swoje API.
 
 Aby nie obciążać innych serwerów, moja własna kopia wiadomości dostępna jest pod adresem:
 
