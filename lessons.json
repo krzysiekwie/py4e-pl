@@ -137,7 +137,7 @@
         }
     ],
     "lti" : {
-        "title": "Oceniane przez współuczestników kursu: Zrzuty ekranu pokazujące instalację",
+        "title": "Oceniane przez współuczestników kursu: Zrzuty ekranu pokazujące instalację Pythona",
         "launch" : "mod/peer-grade/",
         "resource_link_id": "install",
         "custom" : [

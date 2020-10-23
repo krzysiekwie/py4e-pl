@@ -415,15 +415,11 @@ print(bigname, bigcount)
 ),
 
 "10.2" => Array(
-"qtext" => "<b>10.2</b> Write a program to read through the <b>mbox-short.txt</b> and figure
-out the distribution by hour of the day for each of the messages.  You can pull the hour
-out from the 'From ' line by finding the time and then splitting the string a second time
-using a colon.
+"qtext" => "<b>10.2</b> Napisz program, który odczytuje zawartość pliku <b>mbox-short.txt</b> i dla każdej wiadomości zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z linii \"From \", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten napis na części za pomocą znaku dwukropka. 
 <pre>
 From stephen.marquard@uct.ac.za Sat Jan  5 <b>09</b>:14:16 2008
 </pre>
-Once you have accumulated the counts for each hour, print out the counts, sorted by hour
-as shown below.",
+Kiedy już zgromadzisz wartości dla każdej godziny, wypisz zliczenia, po jednym na wiersz, posortowane według godzin.",
 "desired" => "04 3
 06 1
 07 1
@@ -436,11 +432,11 @@ as shown below.",
 17 2
 18 1
 19 1",
-"code" => 'name = input("Enter file:")
+"code" => 'name = input("Podaj nazwę pliku: ")
 if len(name) < 1 : name = "mbox-short.txt"
 handle = open(name)
 ',
-"xcode" => 'name = input("Enter file:")
+"xcode" => 'name = input("Podaj nazwę pliku: ")
 if len(name) < 1 : name = "mbox-short.txt"
 handle = open(name)
 counts = dict()
@@ -461,8 +457,8 @@ for key, val in lst :
     print(key, val)
 ',
 "checks" => Array(
-"for" => "You need a for loop to read the lines in the file.",
-"sort" => "You need to use list sort() method to sort the list of times.")
+"for" => "Musisz użyć pętli for aby odczytać linie z pliku.",
+"sort" => "Musisz użyć metody sort() aby posortować listę po godzinach.")
 ),
 
 "11.1" => Array (

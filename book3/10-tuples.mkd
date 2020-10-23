@@ -374,6 +374,28 @@ Tak więc teraz wynik programu w końcu wygląda tak jak tego oczekujemy od nasz
 
 Fakt, że takie skomplikowane parsowanie i analiza danych może być wykonana za pomocą łatwego do zrozumienia 19-wierszowego programu Pythona, jest jednym z powodów, dla których Python jest dobrym wyborem jako język do eksploracji informacji.
 
+Listy składane
+--------------
+
+W poprzednim przykładzie utworzyliśmy listę przy pomocy poniższego kodu:
+
+~~~~ {.python}
+lst = list()
+for key, val in list(counts.items()):
+    lst.append((val, key))
+~~~~
+
+Python posiada możliwość tworzenia dynamicznych list, które w pewnym sensie zawierają pętlę `for` wewnątrz jej definicji. Mechnizm ten nazywamy *listą składaną* (ang. *list comprehension*) i uzyskujemy dzięki niemu bardziej kompaktowy kod.
+
+W poprzednim przykładzie tworzenie listy moglibyśmy zapisać następująco:
+
+~~~~ {.python}
+lst = [ (v,k) for k,v in counts.items() ]
+~~~~
+
+Teraz kod naszego programu mógłby wyglądać następująco:
+
+\VerbatimInput{../code3/count4.py} 
 
 Używanie krotek jako kluczy w słownikach
 ----------------------------------------
@@ -502,10 +524,9 @@ zqian@umich.edu 195
 
 #### Ćwiczenie 2
 
-Napisz program, który dla każdej wiadomości zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z wiersza "From", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten ciąg na części za pomocą znaku dwukropka. Kiedy już zgromadzisz wartości dla każdej godziny, wypisz zliczenia, po jednym na wiersz, posortowane według godzin, tak jak pokazano poniżej.
+Napisz program, który dla każdej wiadomości zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z wiersza "From ", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten ciąg na części za pomocą znaku dwukropka. Kiedy już zgromadzisz wartości dla każdej godziny, wypisz zliczenia, po jednym na wiersz, posortowane według godzin, tak jak pokazano poniżej.
 
 ~~~~
-python timeofday.py
 Podaj nazwę pliku: mbox-short.txt
 04 3
 06 1

@@ -5,7 +5,7 @@ use \Tsugi\Util\LTI;
 use \Tsugi\Util\Net;
 
 $sanity = array(
-  're.findall' => 'You should use re.findall() to extract the numbers'
+  're.findall' => 'Powinieneś użyć re.findall() aby wyodrębnić liczby'
 );
 
 // Compute the stuff for the output
@@ -49,7 +49,7 @@ if ( isset($_POST['sum']) && isset($_POST['code']) ) {
     $RESULT->setJsonKey('code', $_POST['code']);
 
     if ( $_POST['sum'] != $actual_sum ) {
-        $_SESSION['error'] = "Your sum did not match";
+        $_SESSION['error'] = "Obliczona przez Ciebie suma nie pasuje do oczekiwanego wyniku";
         header('Location: '.addSession('index.php'));
         return;
     }
@@ -69,7 +69,7 @@ if ( isset($_POST['sum']) && isset($_POST['code']) ) {
 
 // echo($goodsha);
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -77,30 +77,25 @@ if ( $dueDate->message ) {
 }
 ?>
 <p>
-<b>Finding Numbers in a Haystack</b>
+<b>Szukanie liczb w stogu siana</b>
 <p>
-In this assignment you will read through and parse a file with text and numbers.  You will extract all the numbers
-in the file and compute the sum of the numbers.
+W tym zadaniu odczytasz i przeanalizujesz plik zawierający tekst i liczby. Wyodrębnisz wszystkie liczby występujące w pliku i obliczysz ich sumę.
 </p>
-<b>Data Files</b>
+<b>Pliki danych</b>
 <p>
-We provide two files for this assignment.  One is a sample file where we give you the sum for your
-testing and the other is the actual data you need to process for the assignment.  
+Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w którym podajemy również wynikową sumę, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
 <ul>
-<li> Sample data: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a> 
-(There are <?= $sample_count ?> values with a sum=<?= $sample_sum ?>) </li>
-<li> Actual data: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a> 
-(There are <?= $actual_count ?> values and the sum ends with <?= $actual_sum%1000 ?>)<br/> </li>
+<li> Dane przykładowe: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a> 
+(Występuje tam <?= $sample_count ?> wartości, których suma wynosi <?= $sample_sum ?>) </li>
+<li> Dane do zadania: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a> 
+(Występuje tam <?= $actual_count ?> wartości, których suma kończy się cyframi <?= $actual_sum%1000 ?>)<br/> </li>
 </ul>
-These links open in a new window.
-Make sure to save the file into the same folder as you will be writing your Python program.
-<b>Note:</b> Each student will have a distinct data file for the assignment - so only use your
-own data file for analysis.
+Linki z danymi otwierają się w nowym oknie. Pamiętaj aby zapisać plik w tym samym folderze, w którym będziesz pisać program w języku Python.
+<b>Uwaga</b>: każdy kursant ma oddzielny plik danych do zadania, więc do analizy używaj tylko własnego pliku danych.
 </p>
-<b>Data Format</b>
+<b>Format danych</b>
 <p>
-The file contains much of the text from the introduction of the textbook
-except that random numbers are inserted throughout the text.  Here is a sample of the output you might see:
+Plik zawiera znaczną część tekstu z wprowadzenia do angielskiej wersji podręcznika, z wyjątkiem tego, że w całym tekście wstawiane są losowe liczby. Oto fragment pliku:
 <pre>
 Why should you learn to write programs? 7746
 12 1929 8827
@@ -111,43 +106,30 @@ many reasons, ranging from making your living to solving
 someone else solve a problem.  This book assumes that 
 everyone needs to know how to program ...
 </pre>
-The sum for the sample text above is <b>27486</b>.
-The numbers can appear anywhere in the line.  There can be any number of 
-numbers in each line (including none).
+Suma dla powyższego tekstu wynosi <b>27486</b>.
+Liczby mogą pojawić się w dowolnym miejscu wiersza. W każdym wierszu liczby mogą wystąpić dowolnąć ilość razy (włączając w to brak wystąpień).
 </p>
-<b>Handling The Data</b>
+<b>Przetwarzanie danych</b>
 <p>
-The basic outline of this problem is to read the file, look for integers using the
-<b>re.findall()</b>, looking for a regular expression of <b>'[0-9]+'</b> and then 
-converting the extracted strings to integers and summing up the integers.
+Podstawowy szkic rozwiązania tego problemu to odczytanie pliku, wyszukanie liczb całkowitych za pomocą funkcji <b>re.findall()</b> i wyrażenia regularnego <b>'[0-9]+'</b>, a następnie przekonwertowanie wyodrębnionych ciągów znaków na liczby całkowite i ich zsumowanie.
 </p>
 <p>
 <?php httpsWarning($sample_url); ?>
-<b>Turn in Assignent</b>
+<b>Rozwiązanie zadania</b>
 <form method="post">
-Enter the sum from the actual data and your Python code below:<br/>
-Sum: <input type="text" size="20" name="sum"> (ends with <?= $actual_sum%1000 ?>)
-<input type="submit" value="Submit Assignment"><br/>
-Python code:<br/>
+Wprowadź poniżej sumę z danych do zadania oraz kod Pythona:<br/>
+Suma: <input type="text" size="20" name="sum"> (kończy się cyframi <?= $actual_sum%1000 ?>)
+<input type="submit" value="Wyślij rozwiązanie"><br/>
+Kod Pythona:<br/>
 <textarea rows="20" style="width: 90%" name="code"></textarea><br/>
 </form>
 </p>
-<b>Optional: Just for Fun</b>
+<b>Opcjonalnie: po prostu dla zabawy</b>
 <p>
-There are a number of different ways to approach this problem.  While we don't recommend trying
-to write the most compact code possible, it can sometimes be a fun exercise.  Here is a 
-a redacted version of two-line version of this program using list comprehension:
+Istnieje wiele różnych sposobów rozwiązania tego problemu. Chociaż nie zalecamy pisania możliwie najbardziej zwartego kodu, czasami może to być ciekawe ćwiczenie. Oto dwuwierszowa wersja rozwiązania tego zadania, używająca listy składanej:
 <pre>
-Python 2
-import re
-print sum( [ ****** *** * in **********('[0-9]+',**************************.read()) ] )
-
-Python 3:
 import re
 print( sum( [ ****** *** * in **********('[0-9]+',**************************.read()) ] ) )
 </pre>
-Please don't waste a lot of time trying to figure out the shortest solution until you 
-have completed the homework.   List comprehension is mentioned in Chapter 10 and the 
-<b>read()</b> method is covered in Chapter 7.
+Dopóki nie wykonasz zadania, nie trać zbyt dużo czasu na szukanie najkrótszego rozwiązania. Listy składane zostały omówione w rozdziale 10, a metoda <b>read()</b> została omówiona w rozdziale 7.
 </p>
-
