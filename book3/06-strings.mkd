@@ -59,7 +59,7 @@ Możesz użyć dowolnego wyrażenia, w tym zmiennych i operatorów, jako indeksu
 TypeError: string indices must be integers
 ~~~~
 
-Uzyskanie długości ciągu znaków przy użyciu `len`
+Uzyskanie długości ciągu znaków przy użyciu `len()`
 -------------------------------------------------
 
 \index{len, funkcja}
@@ -628,11 +628,11 @@ wywołanie metody
 
 #### Ćwiczenie 5
 
-Weź następujący kod Pythona, który przechowuje ciąg znaków:
+Mamy następujący kod Pythona, który przechowuje ciąg znaków:
 
-`str = 'X-DSPAM-Confidence: `**`0.8475`**`'`
+`text = 'X-DSPAM-Confidence: 0.8475'`
 
-Użyj `find` i wycinków ciągów znaków, tak aby wyodrębnić część ciągu po znaku dwukropka, a następnie użyj funkcji `float`, tak aby przekształcić wyodrębniony ciąg znaków w liczbę zmiennoprzecinkową.
+Użyj `find` i wycinków ciągów znaków, tak aby wyodrębnić część ciągu po znaku dwukropka, a następnie użyj funkcji `float`, tak aby przekształcić wyodrębniony ciąg znaków na liczbę zmiennoprzecinkową.
 
 \index{ciąg znaków, metody}
 \index{metoda!ciąg znaków}

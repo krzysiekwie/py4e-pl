@@ -54,7 +54,7 @@ niepoprawne dane wprowadzane przez użytkownika.",
 "desired" => "Wynagrodzenie: 96.25",
 "code" => '# Udostępniliśmy Tobie pierwszą linię kodu
 
-hrs = input("Podaj liczbę godzin:")',
+hrs = input("Podaj liczbę godzin: ")',
 "checks" => Array(
 "input" => "Musisz poprosić o wprowadzenie liczby godzin i stawki godzinowej przy pomocy funkcji input().",
 "print" => "Musisz użyć funkcji print() aby wyświetlić wynik.",
@@ -66,129 +66,106 @@ hrs = input("Podaj liczbę godzin:")',
 
 
 "3.1" => Array(
-"qtext" => "<b>3.1</b> Write a program to prompt the user for hours and rate per hour using input
-to compute gross pay.  Pay the hourly rate for the hours up to 40 and
-1.5 times the hourly rate for all hours
-worked above 40 hours.  Use 45 hours and a rate of 10.50 per hour to test the
-program (the pay should be 498.75).  You should use <b>input</b> to
-read a string and <b>float()</b> to convert the string to a number.
-Do not worry about error checking the user input - assume the user types numbers properly.
+"qtext" => "<b>3.1</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin. Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10,50 za godzinę (wynagrodzenie powinno wynosić 498,75). Powinieneś użyć <b>input()</b> aby odczytać wprowadzane dane oraz <b>float()</b>, aby przekonwertować wprowadzony ciąg znaków na liczbę. Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
 ",
 "desired" => "498.75",
-"desired2" => "Pay: 498.75",
-"code" => 'hrs = input("Enter Hours:")
+"desired2" => "Wynagrodzenie: 498.75",
+"code" => 'hrs = input("Podaj liczbę godzin: ")
 h = float(hrs)',
 "checks" => Array(
-"input" => "You must prompt the pay and rate using the input() function.",
-"print" => "You must use the print statement to print the output.",
-"if" => "You should use an if statement to decide to to the overtime computation or not.",
-"float" => "You should use the built-in float() function to convert from a string to a float.",
-"!45" => "You must read the data using input() and then convert it. The number '45' should not appear in your program.",
-"!10.5" => "You must read the data using input() and then convert it.",
-"!498" => "You must actually calculate the pay.")),
+"input" => "Musisz poprosić o wprowadzenie liczby godzin i stawki godzinowej przy pomocy funkcji input().",
+"print" => "Musisz użyć funkcji print() aby wyświetlić wynik.",
+"if" => "Powinieneś użyć instrukcji if, tak aby zdecydować czy wykonać obliczenia dotyczące godzin nadliczbowych.",
+"float" => "Powinieneś użyć funkcji wbudowanej float() aby przekonwertować ciąg znaków na liczbę zmiennoprzecinkową.",
+"!45" => "Musisz odczytać dane wejściowe przy pomocy input(), a następnie je przekonwertować. Liczba '45' nie powinna pojawić się w Twoim programie.",
+"!10.5" => "Musisz odczytać dane wejściowe przy pomocy input(), a następnie je przekonwertować.",
+"!498" => "Musisz obliczyć wynagrodzenie.")),
 
 "3.3" => Array(
-"qtext" => "<b>3.3</b> Write a program to prompt for a score between 0.0 and 1.0.
-If the score is out of range, print an error. If the score is between 0.0 and 1.0,
-print a grade using the following table:<br/>
-Score    Grade<br/>
->= 0.9     A<br/>
->= 0.8     B<br/>
->= 0.7     C<br/>
->= 0.6     D<br/>
-< 0.6      F<br/>
-If the user enters a value out of range, print a suitable error message and exit.
-For the test, enter a score of 0.85.
+"qtext" => "<b>3.3</b> Napisz program, który poprosi użytkownika o wartość pomiędzy 0.0 a 1.0. Jeśli wartość jest poza zakresem, wypisz komunikat o błędzie. Jeśli wartość jest między 0.0 a 1.0, wypisz ocenę, korzystając z poniższej tabeli:<br/>
+Wartość   Ocena<br/>
+>= 0.9     5,0<br/>
+>= 0.8     4,5<br/>
+>= 0.7     4,0<br/>
+>= 0.6     3,5<br/>
+>= 0.5     3,0<br/>
+ < 0.5     2,0<br/>
+Jeśli użytkownik wprowadzi wartość spoza zakresu, wypisz odpowiedni komunikat o błędzie i zakończ działanie programu.
+Do przetestowania działania wprowadź wartość 0.75.
 ",
-"desired" => "B",
-"code" => 'score = input("Enter Score: ")',
+"desired" => "4,0",
+"code" => 'score = input("Podaj wartość: ")',
 "checks" => Array(
-"input" => "You must prompt for the score using the input() function.",
-"float" => "You should use the built-in float() function to convert from a string to a float.",
-"print" => "You must use the print statement to print the output.",
-"if" => "You should use an if statement to check the value of the score.",
-"elif" => "One of the learning objectives of this assignment is to use an elif statement when checking the value of the score.")
+"input" => "Musisz poprosić o podanie wartości przy pomocy funkcji input().",
+"float" => "Powinieneś użyć funkcji wbudowanej float() aby przekonwertować ciąg znaków na liczbę zmiennoprzecinkową.",
+"print" => "Musisz użyć funkcji print() aby wyświetlić wynik.",
+"if" => "Powinieneś użyć instrukcji if aby sprawdzić jaka powinna być ocena na podstawie wprowadzonej wartości.",
+"elif" => "Jednym z celów tego zadania jest nauczenie użycia instrukcji elif podczas podejmowania decyzji o ocenie na podstawie wprowadzonej wartości.")
 ),
 
 "4.6" => Array(
-"qtext" => "<b>4.6</b> Write a program to prompt the user for hours
-and rate per hour using input
-to compute gross pay.  Pay should be the normal rate for hours up to 40 and
-time-and-a-half for the hourly rate for all hours worked above 40 hours.
-Put the logic to do the computation of pay in
-a function called <b>computepay()</b>
-and use the function to do the computation.  The function should return a value.
-Use 45 hours and a rate of 10.50 per hour to test the
-program (the pay should be 498.75).
-You should use <b>input</b> to
-read a string and <b>float()</b> to convert the string to a number.
-Do not worry about error checking the user input unless you want to -
-you can assume the user types numbers properly.  Do not name your variable
-sum or use the sum() function.
+"qtext" => "<b>4.6</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin.
+Umieść logikę obliczenia wynagrodzenia w funkcji o nazwie <b>computepay()</b>, a następnie użyj tej funkcji. Funkcja powinna zwrócić wartość.
+Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10,50 za godzinę (wynagrodzenie powinno wynosić 498,75). Powinieneś użyć <b>input()</b> aby odczytać wprowadzane dane oraz <b>float()</b>, aby przekonwertować wprowadzony ciąg znaków na liczbę. Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
+Nie nazywaj swojej zmiennej sum ani nie używaj funkcji sum().
 ",
-"desired" => "Pay 498.75",
+"desired" => "Wynagrodzenie: 498.75",
 "code" => 'def computepay(h,r):
     return 42.37
 
-hrs = input("Enter Hours:")
-p = computepay(10,20)
-print("Pay",p)',
+hrs = input("Podaj liczbę godzin: ")
+p = computepay(10, 20)
+print("Wynagrodzenie:", p)',
 "checks" => Array(
-"input" => "You must prompt the pay and rate using the input() function.",
-"print" => "You must use the print statement to print the output.",
-"!45" => "You must prompt for the data.",
-"!10.5" => "You must prompt for the data.",
-"if" => "You should use an if statement to decide to to the overtime computation or not.",
-"float" => "You should use the built-in float() function to convert from a string to a float.",
-"def" => "You must use a function called computepay to do the computation.",
-"!sum(" => "Do not use a variable named sum or a function named sum()",
-"return" => "You must use a return statement to pass the computed pay back to the main code.",
-"computepay" => "You must use a function called computepay to do the computation.",
-"!475" => "You must actually calculate the pay.")
+"input" => "Musisz poprosić o wprowadzenie liczby godzin i stawki godzinowej przy pomocy funkcji input().",
+"print" => "Musisz użyć funkcji print() aby wyświetlić wynik.",
+"!45" => "Musisz poprosić użytkownika o wprowadzenie danych.",
+"!10.5" => "Musisz poprosić użytkownika o wprowadzenie danych.",
+"if" => "Powinieneś użyć instrukcji if, tak aby zdecydować czy wykonać obliczenia dotyczące godzin nadliczbowych.",
+"float" => "Powinieneś użyć funkcji wbudowanej float() aby przekonwertować ciąg znaków na liczbę zmiennoprzecinkową.",
+"def" => "Musisz użyć funkcji o nazwie computepay do wykonania obliczeń.",
+"!sum(" => "Nie nazywaj swojej zmiennej sum ani nie używaj funkcji sum().",
+"return" => "Musisz użyć instrukcji return, tak aby przekazać obliczone wynagrodzenie do głównego kodu.",
+"computepay" => "Musisz użyć funkcji o nazwie computepay do wykonania obliczeń.",
+"!498" => "Musisz obliczyć wynagrodzenie.")
 ),
 
 "5.2" => Array(
-"qtext" => "<b>5.2</b> Write a program that repeatedly prompts a user for integer numbers
-until the user enters 'done'.  Once 'done' is entered, print out the largest and smallest
-of the numbers.  If the user enters anything other than a valid number catch it
-with a try/except and put out an appropriate message and ignore the number.
-Enter 7, 2, bob, 10,  and 4 and match the output below.
+"qtext" => "<b>5.2</b> Napisz program, który odczytuje liczby całkowite tak długo, aż użytkownik wprowadzi \"gotowe\". Po wpisaniu \"gotowe\" wypisz największą i najmniejszą z wprowadzonych liczb. Jeśli użytkownik wprowadzi coś innego niż liczbę, obsłuż to przy pomocy try/catch, wypisz odpowiedni komunikat i zignoruj wprowadzoną wartość. Wprowadź 7, 2, bob, 10 i 4 i dopasuj swój wynik do oczekiwanego wyniku.
 ",
-"desired" => "Invalid input
-Maximum is 10
-Minimum is 2",
+"desired" => "Nieprawidłowe wejście
+Największa: 10
+Najmniejsza: 2",
 "code" => 'largest = None
 smallest = None
 while True:
-    num = input("Enter a number: ")
-    if num == "done" : break
+    num = input("Wprowadź liczbę: ")
+    if num == "gotowe" : break
     print(num)
 
-print("Maximum", largest)',
+print("Największa:", largest)',
 "checks" => Array(
-"input" => "You must prompt for the numbers using the input() function.",
-"print" => "You must use the print statement to print the output.",
-"while" => "You should use a while statement to read the numbers.",
-"int" => "You should use the int() function to convert from a string to an integer.",
-"! 2" => "You should actually compute the maximum and minimum.",
-"!=2" => "You should actually compute the maximum and minimum.",
-"! 10" => "You should actually compute the maximum and minimum.",
-"!=10" => "You should actually compute the maximum and minimum.",
-"try" => "You should handle bad numbers using a try/except structure.",
-"except" => "You should handle bad numbers using a try/except structure.")
+"input" => "Musisz poprosić o wprowadzenie liczby przy pomocy funkcji input().",
+"print" => "Musisz użyć funkcji print() aby wyświetlić wyniki.",
+"while" => "Powinieneś użyć instrukcji while do odczytania liczb.",
+"int" => "Powinieneś użyć funkcji int() aby przekonwertować ciąg znaków na liczbę całkowitą.",
+"! 2" => "Powinieneś obliczyć największą i najmniejszą liczbę.",
+"!=2" => "Powinieneś obliczyć największą i najmniejszą liczbę.",
+"! 10" => "Powinieneś obliczyć największą i najmniejszą liczbę.",
+"!=10" => "Powinieneś obliczyć największą i najmniejszą liczbę.",
+"try" => "Powinieneś obsłużyć przypadek wprowadzenia niepoprawnych liczb przy pomocy try/except.",
+"except" => "Powinieneś obsłużyć przypadek wprowadzenia niepoprawnych liczb przy pomocy try/except.")
 ),
 
 "6.5" => Array(
-"qtext" => "<b>6.5</b> Write code using find() and string slicing (see section 6.10) to extract
-the number at the end of the line below.   Convert the extracted value to a floating point
-number and print it out.",
+"qtext" => "<b>6.5</b> Napisz kod wykorzystujący funkcję find() i wycinki ciągów znaków (patrz: sekcja 6.10. w książce), tak aby wyodrębnić liczbę znajdującą się na końcu poniższego wiersza. Przekonwertuj wyodrębnioną wartość na liczbę zmiennoprzecinkową i wypisz ją.",
 "desired" => "0.8475",
-"code" => 'text = "X-DSPAM-Confidence:    0.8475";',
+"code" => 'text = "X-DSPAM-Confidence: 0.8475"',
 "checks" => Array(
-"find" => "You should use the find function to get the position of the colon in the string.",
-":" => "You should use string slicing [n:m] to extract data from the string.",
-"float" => "You should use the float() function to convert from a string to an integer.",
-'!"0.8475"' =>  "You must actually pull the data from the string.")
+"find" => "Powinieneś użyć funkcji find() do uzyskania pozycji dwukropka w ciągu znaków.",
+":" => "Powinieneś użyć wycinków ciągów znaków [n:m] do wyciągnięcia danych z ciągu znaków.",
+"float" => "Powinieneś użyć funkcji float() do konwersji ciągu znaków na liczbę zmiennoprzecinkową.",
+'!"0.8475"' =>  "Musisz wyciągnąć dane z ciągu znaków.")
 ),
 
 "fopen" => Array(
