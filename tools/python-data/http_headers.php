@@ -42,7 +42,7 @@ if ( count($_POST) > 0 ) {
         }
     } 
     if ( $count == 0 ) {
-        die("No expected fields found");
+        die("Nie odnaleziono odpowiednich pól");
     }
 
     $gradetosend = (1.0 * $good) / $count;
@@ -53,7 +53,7 @@ if ( count($_POST) > 0 ) {
 }
 
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -65,28 +65,18 @@ unset($_SESSION['postdata']);
 
 ?>
 <p>
-<b>Exploring the HyperText Transport Protocol</b>
+<b>Eksploracja protokołu HTTP</b>
 <p>
-You are to retrieve the following document using the HTTP protocol in a way
-that you can examine the HTTP Response headers.
+Będziesz musiał pobrać następujący dokument za pomocą protokołu HTTP w taki sposób, tak abyś mógł sprawdzić nagłówki odpowiedzi HTTP.
 <ul>
 <li><a href="<?= $getUrl ?>" target="_blank"><?= $getUrl ?></a></li>
 </ul>
 </p>
 <p>
-There are three ways that you might retrieve this web page and look at the response headers:
-<ul>
-<li><b>Preferred:</b> Modify the <a href="<?= $CFG->apphome ?>/code3/socket1.py" target="_blank">socket1.py</a>
-program to retrieve the above URL and print out the headers and data.  
-Make sure to <b>change</b> the code to retrieve the above URL - the values are
-different for each URL.
-</li>
-<li>Open the URL in a web browser with a developer console or FireBug and manually examine the headers that
-are returned.</li>
-</ul>
+Zmodyfikuj program <a href="<?= $CFG->apphome ?>/code3/socket1.py" target="_blank">socket1.py</a>, tak aby pobrać powyższy adres URL i wypisać nagłówki oraz dane. Pamiętaj aby zmienić kod programu, tak by pobrał powyższy adres URL - wartości nagłówków są różne dla każdego adresu URL.
 </p>
 <p>
-Enter the header values in each of the fields below and press "Submit".
+W każdym z poniższych pól wprowadź wartość nagłówka, a następnie naciśnij przycisk "Wyślij rozwiązanie".
 <form method="post">
 <?php
     $count = 0;
@@ -116,7 +106,7 @@ Enter the header values in each of the fields below and press "Submit".
 if ( $USER->instructor ) {
 echo("\n<hr/>");
 echo("\n<pre>\n");
-echo("Retrieved information:\n");
+echo("Uzyskane informacje:\n");
 print_r($headers);
 echo("\n");
 echo($data);
