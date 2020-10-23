@@ -570,7 +570,7 @@ Plik możesz pobrać z adresu <https://py4e.pl/code3/mbox-short.txt>
 
 #### Ćwiczenie 2
 
-Napisz program proszący o podanie nazwy pliku, a następnie przeszukaj plik w celu znalezienia linii podobnej do poniższej:
+Napisz program proszący o podanie nazwy pliku, a następnie przeszukaj plik w celu znalezienia linii podobnych do poniższej:
 
 ~~~~
 X-DSPAM-Confidence: 0.8475

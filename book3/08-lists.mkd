@@ -444,7 +444,7 @@ Możesz wywołać `split` z opcjonalnym argumentem zwanym *separatorem*, który 
 ['spam', 'spam', 'spam']
 ~~~~
 
-Funkcja `join` jest odwrotnością `split`. Przyjmuje ona listę ciągów znaków i konkatenuje jej elementy. `join` jest metodą obiektów będących ciągami znaków, więc musisz wywołać ją na separatorze i przekazać listę jako argument:
+Metoda `join` jest odwrotnością `split`. Przyjmuje ona listę ciągów znaków i konkatenuje jej elementy. `join` jest metodą obiektów będących ciągami znaków, więc musisz wywołać ją na separatorze i przekazać listę jako argument:
 
 \index{join, metoda}
 \index{metoda!join}
@@ -965,7 +965,7 @@ separator
 
 #### Ćwiczenie 4
 
-Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Dla każdej linii podziel ją na listę słów za pomocą funkcji `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli słowa nie ma na liście, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
+Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Dla każdej linii podziel ją na listę słów za pomocą metody `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli słowa nie ma na liście, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
 
 ~~~~
 Podaj nazwę pliku: romeo.txt
@@ -978,7 +978,7 @@ Podaj nazwę pliku: romeo.txt
 
 #### Ćwiczenie 5
 
-Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z funkcji `split`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".
+Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z metody `split`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
@@ -987,7 +987,6 @@ From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
 Musisz przeparsować linię zawierjącą "From" i wyświetlić drugie słowo dla każdej takiej linii. Następnie musisz zliczyć liczbę wierszy "From" (nie "From:") i na końcu wyświetlić tę liczbę. Poniżej znajduje się przykładowe poprawne wyjście (część linii wyjścia została usunięta):
 
 ~~~~
-python fromcount.py
 Podaj nazwę pliku: mbox-short.txt
 stephen.marquard@uct.ac.za
 louis@media.berkeley.edu

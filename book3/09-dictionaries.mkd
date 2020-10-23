@@ -469,7 +469,6 @@ From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 Przykładowe uruchomienie:
 
 ~~~~
-python dow.py
 Podaj nazwę pliku: mbox-short.txt
 {'Fri': 20, 'Thu': 6, 'Sat': 1}
 ~~~~
@@ -505,7 +504,6 @@ zqian@umich.edu 195
 Napisz program, który zapamiętuje nazwę domeny, z której została wysłana wiadomość (zamiast informacji od kogo pochodziła wiadomość, tzn. całego adresu e-mail). Na koniec programu wyświetl zawartość swojego słownika.
 
 ~~~~
-python schoolcount.py
 Podaj nazwę pliku: mbox-short.txt
 {'media.berkeley.edu': 4, 'uct.ac.za': 6, 'umich.edu': 7,
 'gmail.com': 1, 'caret.cam.ac.uk': 1, 'iupui.edu': 8}

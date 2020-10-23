@@ -233,30 +233,27 @@ print(text.upper())
 ),
 
 "7.2" => Array(
-"qtext" => '<b>7.2</b> Write a program that prompts for a file name, then opens that file
-and reads through the file, looking for lines of the form:
+"qtext" => '<b>7.2</b> Napisz program proszący o podanie nazwy pliku, a następnie otwórz ten plik i przeszukaj go w celu znalezienia linii podobnych do poniższej:
 <pre>
-X-DSPAM-Confidence:    0.8475
+X-DSPAM-Confidence: 0.8475
 </pre>
-Count these lines and extract the floating point values from each
-of the lines and compute the average of those values and produce an output
-as shown below.  Do not use the sum() function or a variable named sum in your solution.
+Zliczaj te linie i wyodrębnij z nich wartości zmiennoprzecinkowe, oblicz średnią z tych wartości i wypisz ten wynik. W swoim rozwiązaniu nie używaj funkcji sum() ani zmiennej o nazwie sum.
 <p>
-You can download the sample data at
-<a href="http://www.py4e.com/code3/mbox-short.txt" target="_blank">
-http://www.py4e.com/code3/mbox-short.txt</a> when you are testing
-below enter <b>mbox-short.txt</b> as the file name.',
-"desired" => "Average spam confidence: 0.750718518519",
-"code" => '# Use the file name mbox-short.txt as the file name
-fname = input("Enter file name: ")
+Plik testowy możesz pobrać z adresu
+<a href="https://py4e.pl/code3/mbox-short.txt" target="_blank">
+https://py4e.pl/code3/mbox-short.txt</a>. Podczas testowania swojego programu wpisz <b>mbox-short.txt</b> jako nazwę pliku.
+</p>',
+"desired" => "Średni poziom pewności spamu: 0.750718518519",
+"code" => '# Użyj mbox-short.txt jako nazwy pliku
+fname = input("Podaj nazwę pliku: ")
 fh = open(fname)
 for line in fh:
     if not line.startswith("X-DSPAM-Confidence:") : continue
     print(line)
-print("Done")
+print("Gotowe")
 ',
-"xcode" => '# Use the file name mbox-short.txt as the file name
-fname = input("Enter file name: ")
+"xcode" => '# Użyj mbox-short.txt jako nazwy pliku
+fname = input("Podaj nazwę pliku: ")
 fh = open(fname)
 tot = 0.0
 count = 0
@@ -265,35 +262,32 @@ for line in fh:
     words = line.split()
     tot = tot + float(words[1])
     count = count + 1
-print("Average spam confidence:", tot/count)
+print("Średni poziom pewności spamu:", tot/count)
 ',
 "checks" => Array(
-"input" => "You must prompt for the file name using the input() function.",
-"open" => "You need to use open() to open the file.",
-"!sum" => "You should not use the sum() function and avoid using sum as a variable.",
-"float" => "You should use the float() function to convert from a string to an integer.",
-'!18518' =>  "You must actually pull the data from the strings and convert it.",
-"/" => "Average is usually a total / count.")
+"input" => "Musisz poprosić o nazwę pliku przy pomocy funkcji input().",
+"open" => "Musisz użyć funkcji open() aby otworzyć plik.",
+"!sum" => "Nie używaj funkcji sum() ani nie nadawaj zmiennej nazwy sum.",
+"float" => "Powinieneś użyć funkcji float() aby przekonwertować ciąg znaków na liczbę zmiennoprzecinkową.",
+'!18518' =>  "Musisz pobrać dane z ciągów znaków, a następnie je przekonwertować.",
+"/" => "Średnia to suma podzielona przez liczbę elementów.")
 ),
 
 "8.4" => Array(
-"qtext" => '<b>8.4</b> Open the file <b>romeo.txt</b> and read it line by
-line.  For each line, split the line into a list of words using the <b>split()</b>
-method.   The program should build a list of words.  For each word on each line
-check to see if the word is already in the list and if not append it to the list.
-When the program completes, sort and print the resulting words in alphabetical order.
+"qtext" => '<b>8.4</b> Otwórz plik <b>romeo.txt</b> i odczytaj go wiersz po wierszu. Każdą linię podziel na listę słów, używając metody split(). Program powinien zbudować listę słów. Dla każdego słowa w każdym wierszu sprawdź, czy słowo jest już na liście, a jeśli nie, to dołącz je do listy. Po zakończeniu programu posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
 <p>
-You can download the sample data at
-<a href="http://www.py4e.com/code3/romeo.txt" target="_blank">
-http://www.py4e.com/code3/romeo.txt</a>',
+Plik testowy możesz pobrać z adresu
+<a href="https://py4e.pl/code3/romeo.txt" target="_blank">
+https://py4e.pl/code3/romeo.txt</a>.
+</p>',
 "desired" => "['Arise', 'But', 'It', 'Juliet', 'Who', 'already', 'and', 'breaks', 'east', 'envious', 'fair', 'grief', 'is', 'kill', 'light', 'moon', 'pale', 'sick', 'soft', 'sun', 'the', 'through', 'what', 'window', 'with', 'yonder']",
-"code" => 'fname = input("Enter file name: ")
+"code" => 'fname = input("Podaj nazwę pliku: ")
 fh = open(fname)
 lst = list()
 for line in fh:
 print(line.rstrip())
 ',
-"xcode" => 'fname = input("Enter file name: ")
+"xcode" => 'fname = input("Podaj nazwę pliku: ")
 fh = open(fname)
 lst = list()
 for line in fh:
@@ -305,32 +299,30 @@ lst.sort()
 print(lst)
 ',
 "checks" => Array(
-"split" => "You should use split() to break each line into words.",
-"append" => "You should use append() to add the word to the list if it is not there.",
-"!extend" => "You should not use extend() in this assignment.",
-"open" => "You need to use open() to open the file.",
-"sort" => "You need to use sort() to sort the list before you print it out.",
-"!'yonder'" => "You should not put the output data in strings",
-"!.remove(" => "You should not need to use the remove() method",
-"!.set(" => "You should not need to use the set() method",
-"for" => "You need two for loops. One for the lines and one for the words on each line.")
+"split" => "Powinieneś użyć metody split() aby podzielić linię na wyrazy.",
+"append" => "Powinieneś użyć metody append() aby dodać wyraz do listy, o ile go tam jeszcze nie ma.",
+"!extend" => "Nie powinieneś używać extend() w tym ćwiczeniu.",
+"open" => "Powinieneś użyć funkcji open() aby otworzyć plik.",
+"sort" => "Zanim wypiszesz listę, powinieneś użyć metody sort() aby ją posortować.",
+"!'yonder'" => "Nie powinieneś umieszzać wynikowych danych w zmiennych znakowych.",
+"!.remove(" => "Nie powinieneś używać metody remove().",
+"!.set(" => "Nie powinieś używać metody set()",
+"for" => "Potrzebujesz dwie pętle for. Jedna będzie dla obsługi linii, a druga dla każdego słowa w danej linii.")
 ),
 
 "8.5" => Array(
-"qtext" => "<b>8.5</b> Open the file <b>mbox-short.txt</b> and read it line by
-line.  When you find a line that starts with 'From ' like the following line:
+"qtext" => "<b>8.5</b> Otwórz plik <b>mbox-short.txt</b> i odczytaj go linia po linii. Gdy trafisz na linię zaczynającą się od 'From ', tak jak poniżej:
 <pre>
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 </pre>
-You will parse the From line using split() and print out the second word in the line
-(i.e. the entire address of the person who sent the message).  Then print out
-a count at the end.
+to przeparsuj taką linię przy pomocy metody split() i wypisz drugi wyraz z tej linii (i.e. cały adres mailowy osoby, która wysłała wiadomość). Pod koniec działania programu wypisz liczbę wystąpień tego rodzaju linii.
 <p>
-<b>Hint:</b> make sure not to include the lines that start with 'From:'.".
+<b>Wskazówka:</b> upewnij się, że nie uwzględniasz linii, które zaczynają się od 'From:'.
+</p>".
 '<p>
-You can download the sample data at
-<a href="http://www.py4e.com/code3/mbox-short.txt" target="_blank">
-http://www.py4e.com/code3/mbox-short.txt</a>',
+Plik testowy możesz pobrać z adresu
+<a href="https://py4e.pl/code3/mbox-short.txt" target="_blank">
+https://py4e.pl/code3/mbox-short.txt</a>.',
 "desired" => "stephen.marquard@uct.ac.za
 louis@media.berkeley.edu
 zqian@umich.edu
@@ -358,16 +350,16 @@ ray@media.berkeley.edu
 cwen@iupui.edu
 cwen@iupui.edu
 cwen@iupui.edu
-There were 27 lines in the file with From as the first word",
-"code" => 'fname = input("Enter file name: ")
+Mamy 27 linii w pliku, w których From jest pierwszym wyrazem",
+"code" => 'fname = input("Podaj nazwę pliku: ")
 if len(fname) < 1 : fname = "mbox-short.txt"
 
 fh = open(fname)
 count = 0
 
-print("There were", count, "lines in the file with From as the first word")
+print("Mamy", count, "linii w pliku, w których From jest pierwszym wyrazem")
 ',
-"xcode" => 'fname = input("Enter file name: ")
+"xcode" => 'fname = input("Podaj nazwę pliku: ")
 if len(fname) < 1 : fname = "mbox-short.txt"
 
 fh = open(fname)
@@ -378,29 +370,23 @@ for line in fh:
     if wds[0] != "From" : continue
     print(wds[1])
     count = count + 1
-print("There were", count, "lines in the file with From as the first word")
+print("Mamy", count, "linii w pliku, w których From jest pierwszym wyrazem")
 ',
 "checks" => Array(
-"for" => "You need a for loop to read the lines in the file.",
-"split" => "You should use split() to break each line into words.",
-"if" => "You need to use one or more if statements to skip the lines that do not start with 'From '.",
-"open" => "You need to use open() to open the file.")
+"for" => "Musisz użyć pętli for aby odczytać linie z pliku.",
+"split" => "Powinieneś użyć metody split() aby podzielić linię na wyrazy.",
+"if" => "Musisz użyć co najmniej jedną instrukcję if aby pominąć linie, które nie zaczynają się od 'From '.",
+"open" => "Musisz użyć funkcji open() aby otworzyć plik.")
 ),
 
 "9.4" => Array(
-"qtext" => "<b>9.4</b> Write a program to read through the <b>mbox-short.txt</b> and figure
-out who has sent the greatest number of mail messages.  The program looks
-for 'From ' lines and takes the second
-word of those lines as the person who sent the mail.  The program creates a Python
-dictionary that maps the sender's mail address to a count of the number of times
-they appear in the file.  After the dictionary is produced, the program reads through
-the dictionary using a maximum loop to find the most prolific committer.",
+"qtext" => "<b>9.4</b> Napisz program, który odczyta zawartość pliku <b>mbox-short.txt</b> i wskaże kto wysłał największą liczbę wiadomości e-mail. Program wyszukuje wiersze zaczynające się od 'From ' i wykorzystuje drugie wyrazy z tych wierszy jako osoby, które wysłały wiadomości. Program tworzy słownik, który odwzorowuje adres e-mail nadawcy na liczbę jego wystąpień w pliku. Po utworzeniu słownika, program przeczesuje słownik przy użyciu pętli typu maksymalnej w celu znalezieniu osoby, która wystąpiła najwięcej razy.",
 "desired" => "cwen@iupui.edu 5",
-"code" => 'name = input("Enter file:")
+"code" => 'name = input("Podaj nazwę pliku: ")
 if len(name) < 1 : name = "mbox-short.txt"
 handle = open(name)
 ',
-"xcode" => 'name = input("Enter file:")
+"xcode" => 'name = input("Podaj nazwę pliku: ")
 if len(name) < 1 : name = "mbox-short.txt"
 handle = open(name)
 counts = dict()
@@ -421,11 +407,11 @@ for name,count in counts.items():
 print(bigname, bigcount)
 ',
 "checks" => Array(
-"for" => "You need a for loop to read the lines in the file.",
-"split" => "You should use split() to break each line into words.",
-"!cwen@iupui.edu" => "You need a for loop to read the data in the file.",
-"if" => "You need to use one or more if statements to skip the lines that do not start with 'From '.",
-"open" => "You need to use open() to open the file.")
+"for" => "Musisz użyć pętli for aby odczytać linie z pliku.",
+"split" => "Powinieneś użyć metody split() aby podzielić linię na wyrazy.",
+"!cwen@iupui.edu" => "Musisz użyć pętli for aby odczytać dane z pliku.",
+"if" => "Musisz użyć co najmniej jedną instrukcję if aby pominąć linie, które nie zaczynają się od 'From '.",
+"open" => "Musisz użyć funkcji open() aby otworzyć plik.")
 ),
 
 "10.2" => Array(
