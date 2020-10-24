@@ -220,22 +220,24 @@
             "youtube" : "aDwb41EMEQQ"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Prosty program \"Witaj świecie!\"",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_01_hello",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "hello"
-            }
-        ]
-    },
-    {
-        "title" : "Quiz: Po co nam programowanie?",
-        "launch" : "mod/gift/?quiz=Py4Inf-01-Intro.txt",
-        "resource_link_id" : "py4e_01_in_quiz"
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Prosty program \"Witaj świecie!\"",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_01_hello",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "hello"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Po co nam programowanie?",
+            "launch" : "mod/gift/?quiz=Py4Inf-01-Intro.txt",
+            "resource_link_id" : "py4e_01_in_quiz"
+        }
+    ]
 },
 {
     "title": "Zmienne, wyrażenia i instrukcje",
