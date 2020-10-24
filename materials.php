@@ -108,7 +108,7 @@ do materiałów tego kursu. Mamy specjalny, <a href="<?= $CFG->apphome ?>/lesson
 <h2>Archiwum audio</h2>
 <p>
 Tutaj znajduje się archiwalny
-<a href="https://archive.org/details/201509UMSI502Podcasts_201601" target="_blank">zapis wykładów na żywa</a>
+<a href="https://archive.org/details/201509UMSI502Podcasts_201601" target="_blank">zapis wykładów na żywo</a>
 z kursu SI502, którego uczyłem na Uniwersytecie Michigan w School of Information jesienią 2015 r.
 </p>
 
