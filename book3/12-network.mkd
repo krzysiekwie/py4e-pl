@@ -264,7 +264,7 @@ href="http[s]?://.+?"
 
 Nasze wyrażenie regularne szuka napisów, które zaczynają się od "href=\"http://" lub "href=\"https://", po których następuje jeden lub więcej znaków (`.+?`), po których następuje kolejny cudzysłów. Znak zapytania `?` za `[s]` wskazuje na szukanie łańcucha "http", po którym następuje zero lub jedno "s".
 
-Znak zapytania dodany do `.+?`` wskazuje, że dopasowanie nie być wykonane w trybie "zachłannym". Takie dopasowanie próbuje znaleźć *najmniejszy* możliwy pasujący ciąg znaków, a z kolei zachłanne dopasowanie próbuje znaleźć *największy* możliwy pasujący ciąg znaków.
+Znak zapytania dodany do `.+?` wskazuje, że dopasowanie nie być wykonane w trybie "zachłannym". Takie dopasowanie próbuje znaleźć *najmniejszy* możliwy pasujący ciąg znaków, a z kolei zachłanne dopasowanie próbuje znaleźć *największy* możliwy pasujący ciąg znaków.
 
 \index{zachłanny}
 \index{niezachłanny}

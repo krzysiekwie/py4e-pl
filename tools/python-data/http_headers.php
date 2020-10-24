@@ -99,7 +99,7 @@ W każdym z poniższych pól wprowadź wartość nagłówka, a następnie naciś
         echo("<br/>\n");
     } 
 ?>
-<input type="submit">
+<input type="submit" value="Wyślij rozwiązanie">
 </form>
 </p>
 <?php

@@ -16,8 +16,8 @@ if ( PHP_INT_SIZE == 8 ) {
 }
 
 $sanity = array(
-  'urllib' => 'You should use urllib to retrieve the HTML Pages',
-  'BeautifulSoup' => 'You should use BeautifulSoup to parse the HTML'
+    'urllib' => 'Powinieneś użyć modułu urllib aby pobrać dane z adresu URL',
+    'BeautifulSoup' => 'Powinieneś użyć biblioteki BeautifulSoup aby przeparsować HTML'
 );
 
 // Compute the stuff for the output
@@ -61,7 +61,7 @@ $oldgrade = $RESULT->grade;
 if ( isset($_POST['name']) && isset($_POST['code']) ) {
     if ( $USER->instructor && strpos($_POST['name'],'42') === 0 ) {
         $pieces = explode(',',$_POST['name']);
-        $_SESSION['success'] = "Debug Mode Unlocked";
+        $_SESSION['success'] = "Tryb debugowania odblokowany";
         if ( count($pieces) == 2 ) {
             $_SESSION['debug'] = $pieces[1];
         } else {
@@ -74,7 +74,7 @@ if ( isset($_POST['name']) && isset($_POST['code']) ) {
     $RESULT->setJsonKey('code', $_POST['code']);
 
     if ( $_POST['name'] != $actual_last ) {
-        $_SESSION['error'] = "Your name did not match";
+        $_SESSION['error'] = "Podana przez Ciebie nazwa nie pasuje do oczekiwanego wyniku";
         header('Location: '.addSession('index.php'));
         return;
     }
@@ -93,7 +93,7 @@ if ( isset($_POST['name']) && isset($_POST['code']) ) {
 }
 
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -103,45 +103,39 @@ $sample_url = dataUrl('known_by_'.$sample_names[0].'.html');
 $actual_url = dataUrl('known_by_'.$actual_names[0].'.html');
 ?>
 <p>
-<b>Following Links in Python</b>
+<b>Przechodzenie po linkach w Pythonie</b>
 <p>
-In this assignment you will write a Python program that expands on
-<a href="http://www.py4e.com/code3/urllinks.py" target="_blank">http://www.py4e.com/code3/urllinks.py</a>.
-The program will use <b>urllib</b> to read the HTML from the data files below,
-extract the href= vaues from the anchor tags, scan for a tag that is in
-a particular position relative to the first name in the list,
-follow that link and repeat the process
-a number of times and report the last name you find.
+W poniższym zadaniu napiszesz program w języku Python, który poszerza możliwości programu
+<a href="https://py4e.pl/code3/urllinks.py" target="_blank">https://py4e.pl/code3/urllinks.py</a>.
+Program będzie używał modułu <b>urllib</b> do odczytania kodu HTML z poniższych plików, wyodrębni wartości "href" ze znaczników hiperłączy, przeskanuje dane w poszukiwaniu znacznika będącego w określonej pozycji względem pierwszego imienia na liście, przejdzie do kolejnej strony i powtórzy cały proces wiele tak aż na końcy wyświetli ostatnie znalezione imię.
 </p>
 <p>
-We provide two files for this assignment.  One is a sample file where we give
-you the name for your testing and the other is the actual data you need
-to process for the assignment
+Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w którym podajemy również wynikową sumę, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
 <ul>
-<li> Sample problem: Start at
+<li> Dane przykładowe: Rozpocznij od
 <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a> <br/>
-Find the link at position <b><?= $sample_pos+1 ?></b> (the first name is 1).
-Follow that link.  Repeat this process <b><?= $sample_pages ?></b> times.  The
-answer is the last name that you retrieve.<br/>
-Sequence of names:
+Znajdź link na pozycji <b><?= $sample_pos+1 ?></b> (pierwsze imię jest 1).
+Przejdź dalej po tym linku. Powtórz cały proces <b><?= $sample_pages ?></b> razy. 
+Odpowiedzią jest ostatnie imię, które odnalazłeś.
+<br/>
+Sekwencja imion:
 <?php
     foreach($sample_names as $name) {
         echo($name.' ');
     }
     echo("<br/>\n");
 ?>
-Last name in sequence: <?= $sample_last ?><br/>
+Ostatnie imię w sekwencji: <?= $sample_last ?><br/>
 </li>
-<li> Actual problem: Start at: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a> <br/>
-Find the link at position <b><?= $actual_pos+1 ?></b> (the first name is 1).
-Follow that link.  Repeat this process <b><?= $actual_pages ?></b> times.  The
-answer is the last name that you retrieve.<br/>
-Hint: The first character of the name of the last page
-that you will load is: <?= substr($actual_last,0,1) ?><br/>
+<li> Dane do zadania: Rozpocznij od <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a> <br/>
+Znajdź link na pozycji <b><?= $actual_pos+1 ?></b> (pierwsze imię jest 1).
+Przejdź dalej po tym linku. Powtórz cały proces <b><?= $actual_pages ?></b> razy.
+Odpowiedzią jest ostatnie imię, które odnalazłeś.<br/>
+Wskazówka: Pierwszą literą imienia z ostatniej strony do przetworzenia jest: <?= substr($actual_last,0,1) ?><br/>
 <?php
 if ( isset($_SESSION['debug']) ) {
     echo("<pre>\n");
-    echo("Debug sequence of names: \n");
+    echo("Debugowanie sekwencji imion: \n");
     foreach($actual_names as $name) {
         echo("  $name\n");
     }
@@ -150,43 +144,37 @@ if ( isset($_SESSION['debug']) ) {
 ?>
 </li>
 </ul>
-<b>Strategy</b>
+<b>Strategia</b>
 <p>
-The web pages tweak the height between the links and hide the page after a few seconds
-to make it difficult for you to do the assignment without writing a Python program.
-But frankly with a little effort and patience you can overcome these attempts to make it
-a little harder to complete the assignment without writing a Python program.
-But that is not the point.   The point is to write a clever Python program to solve the
-program.
+Przetwarzane przez Ciebie strony internetowe będą dostosowywać odstępy między linkami i będą ukrywały zawartość strony po kilku sekundach, tak aby utrudnić wykonanie zadania bez napisania programu. Jednak szczerze mówiąc, przy odrobinie wysiłku i cierpliwości będziesz w stanie pokonać te utrudnienia. Ale to nie o to tutaj chodzi. Celem tego zadania jest by napisać sprytny program w Pythonie do rozwiązania powyższego problemu.
 </p>
-<p><b>Sample execution</b>
+<p><b>Przykładowe wykonanie</b>
 <p>
-Here is a sample execution of a solution:
+Oto przykładowe wykonanie rozwiązania:
 <pre>
-$ python3 solution.py
-Enter URL: <?= dataUrl('known_by_Fikret.html')."\n"; ?>
-Enter count: 4
-Enter position: 3
-Retrieving: <?= dataUrl('known_by_Fikret.html')."\n"; ?>
-Retrieving: <?= dataUrl('known_by_Montgomery.html')."\n"; ?>
-Retrieving: <?= dataUrl('known_by_Mhairade.html')."\n"; ?>
-Retrieving: <?= dataUrl('known_by_Butchi.html')."\n"; ?>
-Retrieving: <?= dataUrl('known_by_Anayah.html')."\n"; ?>
+Podaj adres URL: <?= dataUrl('known_by_Fikret.html')."\n"; ?>
+Podaj liczbę powtórzeń: 4
+Podaj pozycję: 3
+Pobieram: <?= dataUrl('known_by_Fikret.html')."\n"; ?>
+Pobieram: <?= dataUrl('known_by_Montgomery.html')."\n"; ?>
+Pobieram: <?= dataUrl('known_by_Mhairade.html')."\n"; ?>
+Pobieram: <?= dataUrl('known_by_Butchi.html')."\n"; ?>
+Pobieram: <?= dataUrl('known_by_Anayah.html')."\n"; ?>
 </pre>
-The answer to the assignment for this execution is "Anayah".
+Rozwiązaniem zadania jest "Anayah".
 </p>
 <?php httpsWarning($sample_url); ?>
-<p><b>Turning in the Assignment</b>
+<p><b>Rozwiązanie zadania</b>
 <form method="post">
-Enter the last name retrieved and your Python code below:<br/>
-Name: <input type="text" size="20" name="name">
-(name starts with <?= substr($actual_last,0,1) ?>)
-<input type="submit" value="Submit Assignment"><br/>
+Umieść poniżej ostatnie pobrane imię oraz kod Pythona:<br/>
+Imię: <input type="text" size="20" name="name">
+(imię zaczyna się na literę <?= substr($actual_last,0,1) ?>)
+<input type="submit" value="Wyślij rozwiązanie"><br/>
 <?php
 if ( $USER->instructor ) {
-    echo("<b>Instructor Note:</b> If you want to test a student's data enter '42,Viki' with with starting name of the student's actual data.<br/>");
+    echo("<b>Wskazówki dla instruktora:</b> Jeśli chcesz sprawdzić kod kursanta, wprowadź '42,Viki' z imieniem od którego kursant ma rozpocząć działanie.<br/>");
 }
 ?>
-Python code:<br/>
+Kod Pythona:<br/>
 <textarea rows="20" style="width: 90%" name="code"></textarea><br/>
 </form>
