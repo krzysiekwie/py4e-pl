@@ -32,19 +32,19 @@ if ( isset($_POST['sha1']) ) {
         $_SESSION['debug'] = '42';
     }
     if ( $_POST['sha1'] != $goodsha ) {
-        $_SESSION['error'] = "Your code did not match";
+        $_SESSION['error'] = "Podany przez Ciebie kod nie pasuje do oczekiwanego wyniku";
         header('Location: '.addSession('index.php'));
         return;
     }
 
     $gradetosend = 1.0;
-    $scorestr = "Your answer is correct, score saved.";
+    $scorestr = "Odpowiedź poprawna, wynik został zapisany.";
     if ( $dueDate->penalty > 0 ) {
         $gradetosend = $gradetosend * (1.0 - $dueDate->penalty);
-        $scorestr = "Effective Score = $gradetosend after ".$dueDate->penalty*100.0." percent late penalty";
+        $scorestr = "Wynik efektywny = $gradetosend po ".$dueDate->penalty*100.0." procent kary za spóźnienie";
     }
     if ( $oldgrade > $gradetosend ) {
-        $scorestr = "New score of $gradetosend is < than previous grade of $oldgrade, previous grade kept";
+        $scorestr = "Nowy wynik $gradetosend jest mniejszy niż poprzedni wynik $oldgrade, więc poprzedni wynik zostaje zachowany";
         $gradetosend = $oldgrade;
     }
 
@@ -56,7 +56,7 @@ if ( isset($_POST['sha1']) ) {
     if ( $retval === true ) {
         $_SESSION['success'] = $scorestr;
     } else if ( is_string($retval) ) {
-        $_SESSION['error'] = "Grade not sent: ".$retval;
+        $_SESSION['error'] = "Wynik nie został wysłany: ".$retval;
     } else {
         echo("<pre>\n");
         var_dump($retval);
@@ -71,7 +71,7 @@ if ( isset($_POST['sha1']) ) {
 
 // echo($goodsha);
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -88,33 +88,31 @@ if ( isset($_SESSION['debug']) ) {
 ?>
 <p>
 <form method="post">
-To get credit for this assignment, perform the instructions below and 
-enter the code you get here: <br/>
+Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i wprowadź poniżej uzyskany kod:<br/>
 <input type="text" size="80" name="sha1">
 <input type="submit">
 </form>
-(Hint: starts with <?= substr($goodsha,0,3) ?>)<br/>
+(Wskazówka: kod zaczyna się od <?= substr($goodsha,0,3) ?>)<br/>
 </p>
-<h1>Instructions</h1>
+<h1>Instrukcje</h1>
 <p>
-If you don't already have it, install the SQLite Browser from
-<a href="http://sqlitebrowser.org/" target="_blank">
-http://sqlitebrowser.org/</a>.
+Jeśli nie masz jeszcze zainstalowanej aplikacji SQLite Browser, to możesz ją ściągnąć z
+<a href="https://sqlitebrowser.org/" target="_blank">
+https://sqlitebrowser.org/</a>.
 <p>
-Then, create a SQLITE database or use an existing 
-database and create a table 
-in the database called "Ages":
+Następnie utwórz bazę danych SQLite lub użyj jakiejś istniejącej bazy i utwórz
+w niej tabele tabelę o nazwie "Ages":
 
 <pre>
-CREATE TABLE Ages ( 
-  name VARCHAR(128), 
-  age INTEGER
-)
+CREATE TABLE Ages
+( 
+   name VARCHAR(128), 
+   age  INTEGER
+);
 </pre>
 <p>
-Then make sure the table is empty by deleting any rows that 
-you previously inserted, and insert these rows and only these rows 
-with the following commands:
+Następnie upewnij się że tabela jest pusta poprzez usunięcie poprzednio wstawionych
+wierszy, a potem umieść w tabeli tylko i wyłącznie poniże wiersze:
 <pre>
 <?php
 echo("DELETE FROM Ages;\n");
@@ -123,15 +121,15 @@ foreach($database as $row) {
 }
 ?>
 </pre>
-Once the inserts are done, run the following SQL command:
+Po wstawieniu wierszy do tabeli, uruchom poniższe polecenie SQL:
 <pre>
 SELECT hex(name || age) AS X FROM Ages ORDER BY X
 </pre>
-Find the <b>first</b> row in the resulting record set and enter the long string that looks like 
-<b>53656C696E613333</b>.
+Znajdź <b>pierwszy</b> wynikowy wiersz i jako odpowiedź do zadania wprowadź ciąg
+znaków który wygląda jak <b>53656C696E613333</b>.
 </p>
 <p>
-<b>Note:</b> This assignment must be done using SQLite - in particular, the 
-<code>SELECT</code> query above will not work in any other database.  So 
-you cannot use MySQL or Oracle for this assignment.
+<b>Uwaga:</b> Zadanie musi być wykonane przy użyciu SQLite. W szczególności powyższe polecenie
+<code>SELECT</code> może nie działać na innych silnikach bazodanowych, więc nie
+korzystaj w tym zadaniu np. z baz MySQL lub Oracle.
 </p>
