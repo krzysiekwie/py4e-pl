@@ -6,8 +6,8 @@ use \Tsugi\Core\LTIX;
 use \Tsugi\Util\LTI;
 
 $sanity = array(
-  'urllib' => 'You should use urllib to retrieve the data from the URL',
-  'json' => 'You should use json to parse the data retrieved from the URL'
+  'urllib' => 'Powinieneś użyć modułu urllib aby pobrać dane z adresu URL',
+  'json' => 'Powinieneś użyć modułu json aby przeparsować dane z adresu URL'
 );
 
 // A random code
@@ -29,7 +29,7 @@ if ( isset($_POST['sum']) && isset($_POST['code']) ) {
     $RESULT->setJsonKey('code', $_POST['code']);
 
     if ( $_POST['sum'] != $sum ) {
-        $_SESSION['error'] = "Your sum did not match";
+        $_SESSION['error'] = "Obliczona przez Ciebie suma nie pasuje do oczekiwanego wyniku";
         header('Location: '.addSession('index.php'));
         return;
     }
@@ -49,7 +49,7 @@ if ( isset($_POST['sum']) && isset($_POST['code']) ) {
 
 // echo($goodsha);
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -57,31 +57,28 @@ if ( $dueDate->message ) {
 }
 ?>
 <p>
-<b>Extracting Data from JSON</b>
+<b>Wydobywanie danych z JSONa</b>
 <p>
-In this assignment you will write a Python program somewhat similar to
-<a href="http://www.py4e.com/code3/json2.py" target="_blank">http://www.py4e.com/code3/json2.py</a>.
-The program will prompt for a URL, read the JSON data from that URL using
-<b>urllib</b> and then parse and extract the comment counts from the JSON data,
-compute the sum of the numbers in the file and enter the sum below:<br/>
+W poniższym zadaniu napiszesz program w Pythonie podobny do
+<a href="https://py4e.pl/code3/json2.py" target="_blank">https://py4e.pl/code3/json2.py</a>.
+
+Program będzie prosił o adres URL, odczytywał dane JSON z podanego adresu URL przy użyciu <b>urllib</b>, przeparsuje dane,
+wyodrębni liczbę komentarzy w danych JSONie oraz obliczy ich sumę.
 </p>
 <p>
-We provide two files for this assignment.  One is a sample file where we give you the sum for your
-testing and the other is the actual data you need to process for the assignment.
+Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w którym podajemy również wynikową sumę, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
 <ul>
-<li> Sample data: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a>
-(Sum=<?= $sum_sample ?>) </li>
+<li> Dane przykładowe: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a>
+(Suma wynosi <?= $sum_sample ?>) </li>
 <li> Actual data: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a>
-(Sum ends with <?= $sum%100 ?>)<br/> </li>
+(Suma kończy się cyframi <?= $sum%100 ?>)<br/> </li>
 </ul>
-You do not need to save these files to your folder since your
-program will read the data directly from the URL.
-<b>Note:</b> Each student will have a distinct data url for the assignment - so only use your
-own data url for analysis.
+Nie musisz zapisywać tych plików w swoim katalogu, ponieważ Twój program odczyta dane bezpośrednio z adresu URL.
+<b>Uwaga</b>: każdy kursant ma oddzielny plik danych do zadania, więc do analizy używaj tylko własnego pliku danych.
 </p>
-<b>Data Format</b>
+<b>Format danych</b>
 <p>
-The data consists of a number of names and comment counts in JSON as follows:
+Dane w formacie JSON składają się z wielu imion i liczb komentarzy, które wyglądają w następujący sposób:
 <pre>
 {
   comments: [
@@ -98,29 +95,24 @@ The data consists of a number of names and comment counts in JSON as follows:
 }
 </pre>
 <p>
-The closest sample code that shows how to parse JSON and extract a list is
-<a href="http://www.py4e.com/code3/json2.py" target="_blank">json2.py</a>.  You might also want
-to look at
-<a href="http://www.py4e.com/code3/geoxml.py" target="_blank">geoxml.py</a>
-to see how to prompt for a URL and retrieve data from a URL.
+Przykładowy kod pokazujący jak przeparsować JSONa i wyodrębnić listę dostępny jest w pliku <a href="http://www.py4e.com/code3/json2.py" target="_blank">json2.py</a>. Być może będziesz chciał również porównać kod <a href="http://www.py4e.com/code3/geoxml.py" target="_blank">geoxml.py</a> aby zobaczyć jak poprosić użytkownika o adres URL i w jaki sposób pobrać dane z podanego adresu URL.
 </p>
-<p><b>Sample Execution</b></p>
+<p><b>Przykładowe uruchomienie</b></p>
 <pre>
-$ python3 solution.py
-Enter location: http://py4e-data.dr-chuck.net/comments_42.json
-Retrieving http://py4e-data.dr-chuck.net/comments_42.json
-Retrieved 2733 characters
-Count: 50
-Sum: 2...
+Podaj adres: http://py4e-data.dr-chuck.net/comments_42.json
+Pobieranie: http://py4e-data.dr-chuck.net/comments_42.json
+Pobrano 2733 znaków
+Ile liczb: 50
+Suma: 2...
 </pre>
 <?php httpsWarning($sample_url); ?>
-<p><b>Turning in the Assignment</b>
+<p><b>Rozwiązanie zadania</b>
 <form method="post">
-Enter the sum from the actual data and your Python code below:<br/>
-Sum: <input type="text" size="20" name="sum">
-(ends with <?= $sum%100 ?>)
-<input type="submit" value="Submit Assignment"><br/>
-Python code:<br/>
+Wprowadź poniżej sumę z danych do zadania oraz kod Pythona:<br/>
+Suma: <input type="text" size="20" name="sum">
+(kończy się cyframi <?= $sum%100 ?>)
+<input type="submit" value="Wyślij rozwiązanie"><br/>
+Kod Pythona:<br/>
 <textarea rows="20" style="width: 90%" name="code"></textarea><br/>
 </form>
 

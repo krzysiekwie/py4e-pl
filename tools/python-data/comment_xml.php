@@ -6,7 +6,7 @@ use \Tsugi\Core\LTIX;
 use \Tsugi\Util\LTI;
 
 $sanity = array(
-  'urllib' => 'You should use urllib to retrieve the data from the URL'
+  'urllib' => 'Powinieneś użyć modułu urllib aby pobrać dane z adresu URL'
 );
 
 // A random code
@@ -28,7 +28,7 @@ if ( isset($_POST['sum']) && isset($_POST['code']) ) {
     $RESULT->setJsonKey('code', $_POST['code']);
 
     if ( $_POST['sum'] != $sum ) {
-        $_SESSION['error'] = "Your sum did not match";
+        $_SESSION['error'] = "Obliczona przez Ciebie suma nie pasuje do oczekiwanego wyniku";
         header('Location: '.addSession('index.php'));
         return;
     }
@@ -48,7 +48,7 @@ if ( isset($_POST['sum']) && isset($_POST['code']) ) {
 
 // echo($goodsha);
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -56,72 +56,61 @@ if ( $dueDate->message ) {
 }
 ?>
 <p>
-<b>Extracting Data from XML</b>
+<b>Wydobywanie danych z XMLa</b>
 <p>
-In this assignment you will write a Python program somewhat similar to
-<a href="http://www.py4e.com/code3/geoxml.py" target="_blank">http://www.py4e.com/code3/geoxml.py</a>.
-The program will prompt for a URL, read the XML data from that URL using
-<b>urllib</b> and then parse and extract the comment counts from the XML data,
-compute the sum of the numbers in the file.
+W poniższym zadaniu napiszesz program w Pythonie podobny do
+<a href="https://py4e.pl/code3/geoxml.py" target="_blank">https://py4e.pl/code3/geoxml.py</a>.
+
+Program będzie prosił o adres URL, odczytywał dane XML z podanego adresu URL przy użyciu <b>urllib</b>, przeparsuje dane,
+wyodrębni liczbę komentarzy w danych XML oraz obliczy ich sumę.
 </p>
 <p>
-We provide two files for this assignment.  One is a sample file where we give you the sum for your
-testing and the other is the actual data you need to process for the assignment.
+Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w którym podajemy również wynikową sumę, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
 <ul>
-<li> Sample data: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a>
-(Sum=<?= $sum_sample ?>) </li>
+<li> Dane przykładowe: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a>
+(Suma wynosi <?= $sum_sample ?>) </li>
 <li> Actual data: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a>
-(Sum ends with <?= $sum%100 ?>)<br/> </li>
+(Suma kończy się cyframi <?= $sum%100 ?>)<br/> </li>
 </ul>
-You do not need to save these files to your folder since your
-program will read the data directly from the URL.
-<b>Note:</b> Each student will have a distinct data url for the assignment - so only use your
-own data url for analysis.
+Nie musisz zapisywać tych plików w swoim katalogu, ponieważ Twój program odczyta dane bezpośrednio z adresu URL.
+<b>Uwaga</b>: każdy kursant ma oddzielny plik danych do zadania, więc do analizy używaj tylko własnego pliku danych.
 </p>
-<b>Data Format and Approach</b>
+<b>Format danych</b>
 <p>
-The data consists of a number of names and comment counts in XML as follows:
+Dane w formacie XML składają się z wielu imion i liczb komentarzy, które wyglądają w następujący sposób:
 <pre>
 &lt;comment&gt;
   &lt;name&gt;Matthias&lt;/name&gt;
   &lt;count&gt;97&lt;/count&gt;
 &lt;/comment&gt;
 </pre>
-You are to look through all the &lt;comment&gt; tags and find the &lt;count&gt; values
-sum the numbers.
-The closest sample code that shows how to parse XML is
-<a href="http://www.py4e.com/code3/geoxml.py" target="_blank">geoxml.py</a>.
-But since the nesting of the elements in our data is different than the data
-we are parsing in that sample code you will have to make real changes to the code.
+Musisz przejrzeć wszystkie znaczniki &lt;comment&gt; i odnaleźć w nich wartości &lt;count&gt; tak aby obliczyć ich sumę.
+Przykładowy kod pokazujący jak przeparsować XMLa dostępny jest w pliku <a href="http://www.py4e.com/code3/geoxml.py" target="_blank">geoxml.py</a>.
+Jednakże w naszych danych zagnieżdżanie elementów jest inne te użyte w powyższym przykładowym kodzie, więc będziesz musiał wprowadzić w kodzie spore zmiany.
 </p>
 <p>
-To make the code a little simpler, you can use an XPath selector string to
-look through the entire tree of XML for any tag named 'count' with the following
-line of code:
+Aby uprościć nieco Twój kod, możesz użyć selektora XPath tak, aby przejrzeć całe drzewo XML dla dowolnego znacznika o nazwie "count":
 <pre>
 counts = tree.findall('.//count')
 </pre>
-Take a look at the Python ElementTree documentation and look for the supported XPath
-syntax for details.  You could also work from the top of the XML down to the comments
-node and then loop through the child nodes of the comments node.
+Zapoznaj się z dokumentacją ElementTree i poszukaj obsługiwanej składni XPath. Możesz także iść od góry XMLa wgłąb do węzła "comments", a następnie przechodzić przez węzły potomne tego węzła.
 </p>
-<p><b>Sample Execution</b></p>
+<p><b>Przykładowe uruchomienie</b></p>
 <p>
 <pre>
-$ python3 solution.py
-Enter location: http://py4e-data.dr-chuck.net/comments_42.xml
-Retrieving http://py4e-data.dr-chuck.net/comments_42.xml
-Retrieved 4189 characters
-Count: 50
-Sum: 2...
+Podaj adres: http://py4e-data.dr-chuck.net/comments_42.xml
+Pobieranie: http://py4e-data.dr-chuck.net/comments_42.xml
+Pobrano 4189 znaków
+Ile liczb: 50
+Suma: 2...
 </pre>
 <?php httpsWarning($sample_url); ?>
-<p><b>Turning in the Assignment</b></p>
+<p><b>Rozwiązanie zadania</b></p>
 <form method="post">
-Enter the sum from the actual data and your Python code below:<br/>
-Sum: <input type="text" size="20" name="sum">
-(ends with <?= $sum%100 ?>)
-<input type="submit" value="Submit Assignment"><br/>
-Python code:<br/>
+Wprowadź poniżej sumę z danych do zadania oraz kod Pythona:<br/>
+Suma: <input type="text" size="20" name="sum">
+(kończy się cyframi <?= $sum%100 ?>)
+<input type="submit" value="Wyślij rozwiązanie"><br/>
+Kod Pythona:<br/>
 <textarea rows="20" style="width: 90%" name="code"></textarea><br/>
 </form>
