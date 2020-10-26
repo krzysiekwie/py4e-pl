@@ -148,7 +148,7 @@ if ( $dueDate->message ) {
 Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i prześlij poniżej plik z bazą SQLite3: <br/>
 <input name="database" type="file"> 
 (Plik musi mieć rozszerzenie .sqlite)<br/>
-<input type="submit">
+<input type="submit" value="Wyślij rozwiązanie">
 <p>
 Nie musisz eksportować ani konwertować bazy - po prostu wyślij utworzony przez Twój program plik <b>.sqlite</b>.
 Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <b>connect()</b>.

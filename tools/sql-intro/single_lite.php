@@ -90,7 +90,7 @@ if ( isset($_SESSION['debug']) ) {
 <form method="post">
 Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i wprowadź poniżej uzyskany kod:<br/>
 <input type="text" size="80" name="sha1">
-<input type="submit">
+<input type="submit" value="Wyślij rozwiązanie">
 </form>
 (Wskazówka: kod zaczyna się od <?= substr($goodsha,0,3) ?>)<br/>
 </p>
