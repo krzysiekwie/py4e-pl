@@ -25,19 +25,19 @@ $oldgrade = $RESULT->grade;
 
 if ( isset($_POST['sha1']) ) {
     if ( $_POST['sha1'] != $goodsha ) {
-        $_SESSION['error'] = "Your code did not match";
+        $_SESSION['error'] = "Podany przez Ciebie kod nie pasuje do oczekiwanego wyniku";
         header('Location: '.addSession('index.php'));
         return;
     }
 
     $gradetosend = 1.0;
-    $scorestr = "Your answer is correct, score saved.";
+    $scorestr = "Odpowiedź poprawna, wynik został zapisany.";
     if ( $dueDate->penalty > 0 ) {
         $gradetosend = $gradetosend * (1.0 - $dueDate->penalty);
-        $scorestr = "Effective Score = $gradetosend after ".$dueDate->penalty*100.0." percent late penalty";
+        $scorestr = "Wynik efektywny = $gradetosend po ".$dueDate->penalty*100.0." procent kary za spóźnienie";
     }
     if ( $oldgrade > $gradetosend ) {
-        $scorestr = "New score of $gradetosend is < than previous grade of $oldgrade, previous grade kept";
+        $scorestr = "Nowy wynik $gradetosend jest mniejszy niż poprzedni wynik $oldgrade, więc poprzedni wynik zostaje zachowany";
         $gradetosend = $oldgrade;
     }
 
@@ -49,7 +49,7 @@ if ( isset($_POST['sha1']) ) {
     if ( $retval === true ) {
         $_SESSION['success'] = $scorestr;
     } else if ( is_string($retval) ) {
-        $_SESSION['error'] = "Grade not sent: ".$retval;
+        $_SESSION['error'] = "Wynik nie został wysłany: ".$retval;
     } else {
         echo("<pre>\n");
         var_dump($retval);
@@ -67,7 +67,7 @@ $data_url = str_replace('index.php','roster_data.php',$url);
 
 // echo($goodsha);
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -76,42 +76,37 @@ if ( $dueDate->message ) {
 ?>
 <p>
 <form method="post">
-To get credit for this assignment, perform the instructions below and 
-enter the code you get here: <br/>
+Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i wprowadź poniżej uzyskany kod: <br/>
 <input type="text" size="80" name="sha1">
 <input type="submit">
 </form>
-(Hint: starts with <?= substr($goodsha,0,3) ?>)<br/>
+(Wskazówka: kod zaczyna się od <?= substr($goodsha,0,3) ?>)<br/>
 </p>
-<h1>Instructions</h1>
+<h1>Instrukcje</h1>
 <p>
-This application will read roster data in JSON format, parse the file, and
-then produce an SQLite database that contains a User, Course, and Member table
-and populate the tables from the data file.
-</p>
-<p>
-You can base your solution on this code:
-<a href="http://www.py4e.com/code3/roster/roster.py" target="_blank">
-http://www.py4e.com/code3/roster/roster.py</a> - this code is incomplete
-as you need to modify the program to store the <b>role</b> column 
-in the <b>Member</b> table to complete the assignment.
+Aplikacja będzie miała za zadanie odczytać dane dotyczące listy uczestników kursów
+zapisanej w pliku JSON, przeparsować plik, a następnie utworzyć
+bazę danych SQLite zawierającą tabele User, Course i Member uzupełnione odpowiednimi danymi.
 </p>
 <p>
-Each student gets their own file for the assignment.  Download 
-<a href="roster_data.php" target="_blank">this file</a> and save it
-as <code>roster_data.json</code>.  Move the downloaded file into the same
-folder as your <code>roster.py</code> program.
+Możesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu
+<a href="https://py4e.pl/code3/roster/roster.py" target="_blank">
+http://py4e.pl/code3/roster/roster.py</a>. Kod jest niekompletny i musisz
+go zmodyfikować w ten sposób aby przechowywał kolumnę <b>role</b> w tabeli <b>Member</b>.
 </p>
 <p>
-Once you have made the necessary changes to the program
-and it has been run successfully reading the above JSON data, 
-run the following SQL command:
+Każdy kursant pracuje na osobnym pliku z danymi. Ściągnij 
+<a href="roster_data.php" target="_blank">ten plik</a> i zapisz go jako
+<code>roster_data.json</code>. Przenieś ściągnięty plik do tego samego katalogu co program <code>roster.py</code>.
+</p>
+<p>
+Gdy dokonasz niezbędnych zmian w Twoim programie i będzie on w stanie poprawnie
+odczytać dane JSON, uruchom poniższe zapytanie SQL:
 <pre>
-SELECT hex(User.name || Course.title || Member.role ) AS X FROM 
-    User JOIN Member JOIN Course 
-    ON User.id = Member.user_id AND Member.course_id = Course.id
-    ORDER BY X
+SELECT hex(User.name || Course.title || Member.role ) AS X
+FROM   User JOIN Member JOIN Course 
+       ON User.id = Member.user_id AND Member.course_id = Course.id
+ORDER BY X;
 </pre>
-Find the <b>first</b> row in the resulting record set and enter the long string that looks like 
-<b>53656C696E613333</b>.
+Znajdź <b>pierwszy</b> wynikowy wiersz i jako odpowiedź wprowadź długi napis, który wygląda mniej więcej jak <b>53656C696E613333</b>.
 </p>

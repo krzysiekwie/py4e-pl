@@ -8,7 +8,7 @@ cur.execute('DROP TABLE IF EXISTS Counts')
 cur.execute('''
 CREATE TABLE Counts (email TEXT, count INTEGER)''')
 
-fname = input('Enter file name: ')
+fname = input('Podaj nazwę pliku: ')
 if (len(fname) < 1): fname = 'mbox-short.txt'
 fh = open(fname)
 for line in fh:

@@ -123,7 +123,9 @@ foreach($database as $row) {
 </pre>
 Po wstawieniu wierszy do tabeli, uruchom poniższe polecenie SQL:
 <pre>
-SELECT hex(name || age) AS X FROM Ages ORDER BY X
+SELECT hex(name || age) AS X 
+FROM   Ages
+ORDER BY X;
 </pre>
 Znajdź <b>pierwszy</b> wynikowy wiersz i jako odpowiedź do zadania wprowadź ciąg
 znaków który wygląda jak <b>53656C696E613333</b>.

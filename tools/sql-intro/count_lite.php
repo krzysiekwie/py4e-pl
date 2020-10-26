@@ -24,31 +24,31 @@ if ( isset($_FILES['database']) ) {
 
     // Check to see if they left off the file
     if( $fdes['error'] == 4) {
-        $_SESSION['error'] = 'Missing file, make sure to select a file before pressing submit';
+        $_SESSION['error'] = 'Brak pliku; upewnij się, że wybrałeś plik przed wysłaniem rozwiązania';
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     if ( $fdes['size'] > $MAX_UPLOAD_FILE_SIZE ) {
-        $_SESSION['error'] = "Uploaded file must be < ".$OUTPUT->displaySize($MAX_UPLOAD_FILE_SIZE);
+        $_SESSION['error'] = "Wgrywany plik musi mieć rozmiar < ".$OUTPUT->displaySize($MAX_UPLOAD_FILE_SIZE);
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     if ( ! endsWith($fdes['name'],'.sqlite') ) {
-        $_SESSION['error'] = "Uploaded file must have .sqlite suffix: ".$fdes['name'];
+        $_SESSION['error'] = "Wgrywany plik musi mieć rozszerzenie .sqlite: ".$fdes['name'];
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     if ( ! isset($fdes['tmp_name']) ) {
-        $_SESSION['error'] = "Could not find file on server: ".$fdes['name'];
+        $_SESSION['error'] = "Nie odnaleziono pliku na serwerze: ".$fdes['name'];
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     if ( strlen($fdes['tmp_name']) < 1 ) {
-        $_SESSION['error'] = "Temporary name not found: ".$fdes['name'];
+        $_SESSION['error'] = "Nie odnaleziono tymczasowej nazwy: ".$fdes['name'];
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
@@ -59,7 +59,7 @@ if ( isset($_FILES['database']) ) {
     $prefix = fread($fh, 100);
     fclose($fh);
     if ( ! startsWith($prefix,'SQLite format 3') ) {
-        $_SESSION['error'] = "Uploaded file is not SQLite3 format: ".$fdes['name'];
+        $_SESSION['error'] = "Wgrywany plik nie jest w formacie SQLite3: ".$fdes['name'];
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
@@ -70,13 +70,13 @@ if ( isset($_FILES['database']) ) {
         $results = @$db->query('SELECT org, count FROM Counts 
             ORDER BY count DESC LIMIT 5');
     } catch(Exception $ex) {
-        $_SESSION['error'] = "SQL Error: ".$ex->getMessage();
+        $_SESSION['error'] = "Błąd SQL: ".$ex->getMessage();
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     if ( $results === false ) {
-        $_SESSION['error'] = "SQL Query Error: ".$db->lastErrorMsg();
+        $_SESSION['error'] = "Błąd zapytania SQL: ".$db->lastErrorMsg();
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
@@ -91,19 +91,19 @@ if ( isset($_FILES['database']) ) {
     }
 
     if ( $good < 5 ) {
-        $_SESSION['error'] = "Data is incorrect: ".$fdes['name'];
+        $_SESSION['error'] = "Niepoprawne dane: ".$fdes['name'];
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     $gradetosend = 1.0;
-    $scorestr = "Your answer is correct, score saved.";
+    $scorestr = "Odpowiedź poprawna, wynik został zapisany.";
     if ( $dueDate->penalty > 0 ) {
         $gradetosend = $gradetosend * (1.0 - $dueDate->penalty);
-        $scorestr = "Effective Score = $gradetosend after ".$dueDate->penalty*100.0." percent late penalty";
+        $scorestr = "Wynik efektywny = $gradetosend po ".$dueDate->penalty*100.0." procent kary za spóźnienie";
     }
     if ( $oldgrade > $gradetosend ) {
-        $scorestr = "New score of $gradetosend is < than previous grade of $oldgrade, previous grade kept";
+        $scorestr = "Nowy wynik $gradetosend jest mniejszy niż poprzedni wynik $oldgrade, więc poprzedni wynik zostaje zachowany";
         $gradetosend = $oldgrade;
     }
 
@@ -115,7 +115,7 @@ if ( isset($_FILES['database']) ) {
     if ( $retval === true ) {
         $_SESSION['success'] = $scorestr;
     } else if ( is_string($retval) ) {
-        $_SESSION['error'] = "Grade not sent: ".$retval;
+        $_SESSION['error'] = "Wynik nie został wysłany: ".$retval;
     } else {
         echo("<pre>\n");
         var_dump($retval);
@@ -129,7 +129,7 @@ if ( isset($_FILES['database']) ) {
 }
 
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -138,54 +138,47 @@ if ( $dueDate->message ) {
 ?>
 <p>
 <form name="myform" enctype="multipart/form-data" method="post" >
-To get credit for this assignment, perform the instructions below and 
-upload your SQLite3 database here:<br/>
+Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i prześlij poniżej plik z bazą SQLite3:<br/>
 <input name="database" type="file"> 
-(Must have a .sqlite suffix)<br/>
-Hint: The top organizational count is <?= $answer['iupui.edu'] ?>.<br/>
+(Plik musi mieć rozszerzenie .sqlite)<br/>
+Wskazówka: The top organizational count is <?= $answer['iupui.edu'] ?>.<br/>
 <input type="submit">
 <p>
-You do not need to export or convert the database -  simply upload 
-the <b>.sqlite</b> file that your program creates.  See the example code for
-the use of the <b>connect()</b> statement.
+Nie musisz eksportować ani konwertować bazy - po prostu wyślij utworzony przez Twój program plik <b>.sqlite</b>.
+Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <b>connect()</b>.
 </p>
 </form>
 </p>
-<h1>Counting Organizations</h1>
+<h1>Zliczanie organizacji</h1>
 <p>
-This application will read the mailbox data (mbox.txt) and count the
-number of email messages per organization (i.e. domain name of the email
-address) using a database with the following schema to maintain the counts.
+Aplikacja będzie odczytywała dane mailowe (plik <b>mbox.txt</b>) i zliczy ile każda 
+organizacja wysłała wiadomości mailowych (tzn. każda część domenowa adresu e-mail
+będzie traktowana jako organizacja). Dane będą przechowywane w bazie danych 
+o poniższym schemacie:
 <pre>
-CREATE TABLE Counts (org TEXT, count INTEGER)
+CREATE TABLE Counts
+(
+    org   TEXT,
+    count INTEGER
+);
 </pre>
-When you have run the program on <b>mbox.txt</b> upload the resulting
-database file above for grading.
+Po uruchomieniu programu na pliku <b>mbox.txt</b>, jako rozwiązanie wgraj tutaj wynikową bazą danę. 
 </p>
 <p>
-If you run the program multiple times in testing or with dfferent files, 
-make sure to empty out the data before each run.
+Jeśli będzie uruchamiał program kilka razy lub jeśli będziesz używał różnych plików wejściowych,
+to pamiętaj aby za każdym razem wyczyścić bazę danych.
 <p>
-You can use this code as a starting point for your application:
-<a href="http://www.py4e.com/code3/emaildb.py" target="_blank">
-http://www.py4e.com/code3/emaildb.py</a>.
+
+Możesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu <a href="https://py4e.pl/code3/emaildb.py" target="_blank">
+https://py4e.pl/code3/emaildb.py</a>.
 </p>
 <p>
-The data file for this application is the same as in previous assignments:
-<a href="http://www.py4e.com/code3/mbox.txt" target="_blank">
-http://www.py4e.com/code3/mbox.txt</a>.
+Dane do tego zdania dostępne są w pliku <a href="https://py4e.pl/code3/mbox.txt" target="_blank">
+https://py4e.pl/code3/mbox.txt</a>.
 </p>
 <p>
-Because the sample code is using an <b>UPDATE</b> statement
-and committing the results to the database as each record
-is read in the loop, it might take as long as a few minutes to process
-all the data.  The commit insists on completely writing all the
-data to disk every time it is called.
+Ponieważ przykładowy kod podczas odczytywania każdego rekordu w pętli używa instrukcji <b>UPDATE</b> i przekazuje wyniki do bazy danych, przetworzenie wszystkich danych może zająć nawet kilka minut. Metoda <b>commit()</b> powoduje, że nowe dane są zapisywane na dysku za każdym wywołaniem tej metody.
 </p>
 <p>
-The program can be speeded up greatly by moving the commit operation
-outside of the loop.  In any database program, there is a balance
-between the number of operations you execute between commits and the
-importance of not losing the results of operations that have
-not yet been committed.
+Program można znacznie przyspieszyć przenosząc poza pętlę operację <b>commit()</b>. W każdym programie bazodanowym istnieje równowaga między liczbą wykonywanych operacji zapisywania danych a troską o to aby nie utracić wyników operacji, które nie zostały jeszcze zapisane.
 </p>

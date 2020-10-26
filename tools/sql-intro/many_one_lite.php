@@ -37,19 +37,19 @@ if ( isset($_FILES['database']) ) {
 
     // Check to see if they left off the file
     if( $fdes['error'] == 4) {
-        $_SESSION['error'] = 'Missing file, make sure to select a file before pressing submit';
+        $_SESSION['error'] = 'Brak pliku; upewnij się, że wybrałeś plik przed wysłaniem rozwiązania';
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     if ( $fdes['size'] > $MAX_UPLOAD_FILE_SIZE ) {
-        $_SESSION['error'] = "Uploaded file must be < ".$OUTPUT->displaySize($MAX_UPLOAD_FILE_SIZE);
+        $_SESSION['error'] = "Wgrywany plik musi mieć rozmiar < ".$OUTPUT->displaySize($MAX_UPLOAD_FILE_SIZE);
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     if ( ! endsWith($fdes['name'],'.sqlite') ) {
-        $_SESSION['error'] = "Uploaded file must have .sqlite suffix: ".$fdes['name'];
+        $_SESSION['error'] = "Wgrywany plik musi mieć rozszerzenie .sqlite: ".$fdes['name'];
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
@@ -60,7 +60,7 @@ if ( isset($_FILES['database']) ) {
     $prefix = fread($fh, 100);
     fclose($fh);
     if ( ! startsWith($prefix,'SQLite format 3') ) {
-        $_SESSION['error'] = "Uploaded file is not SQLite3 format: ".$fdes['name'];
+        $_SESSION['error'] = "Wgrywany plik nie jest w formacie SQLite3: ".$fdes['name'];
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
@@ -75,13 +75,13 @@ if ( isset($_FILES['database']) ) {
                     AND Album.artist_id = Artist.id
                 ORDER BY Artist.name LIMIT 3");
     } catch(Exception $ex) { 
-        $_SESSION['error'] = "SQL Error: ".$ex->getMessage();
+        $_SESSION['error'] = "Błąd SQL: ".$ex->getMessage();
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     if ( $results === false ) {
-        $_SESSION['error'] = "SQL Query Error: ".$db->lastErrorMsg();
+        $_SESSION['error'] = "Błąd zapytania SQL: ".$db->lastErrorMsg();
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
@@ -98,19 +98,19 @@ if ( isset($_FILES['database']) ) {
     }
 
     if ( $good < 3 ) {
-        $_SESSION['error'] = "Data is incorrect: ".$fdes['name'];
+        $_SESSION['error'] = "Niepoprawne dane: ".$fdes['name'];
         header( 'Location: '.addSession('index.php') ) ;
         return;
     }
 
     $gradetosend = 1.0;
-    $scorestr = "Your answer is correct, score saved.";
+    $scorestr = "Odpowiedź poprawna, wynik został zapisany.";
     if ( $dueDate->penalty > 0 ) {
         $gradetosend = $gradetosend * (1.0 - $dueDate->penalty);
-        $scorestr = "Effective Score = $gradetosend after ".$dueDate->penalty*100.0." percent late penalty";
+        $scorestr = "Wynik efektywny = $gradetosend po ".$dueDate->penalty*100.0." procent kary za spóźnienie";
     }
     if ( $oldgrade > $gradetosend ) {
-        $scorestr = "New score of $gradetosend is < than previous grade of $oldgrade, previous grade kept";
+        $scorestr = "Nowy wynik $gradetosend jest mniejszy niż poprzedni wynik $oldgrade, więc poprzedni wynik zostaje zachowany";
         $gradetosend = $oldgrade;
     }
 
@@ -122,7 +122,7 @@ if ( isset($_FILES['database']) ) {
     if ( $retval === true ) {
         $_SESSION['success'] = $scorestr;
     } else if ( is_string($retval) ) {
-        $_SESSION['error'] = "Grade not sent: ".$retval;
+        $_SESSION['error'] = "Wynik nie został wysłany: ".$retval;
     } else {
         echo("<pre>\n");
         var_dump($retval);
@@ -136,7 +136,7 @@ if ( isset($_FILES['database']) ) {
 }
 
 if ( $RESULT->grade > 0 ) {
-    echo('<p class="alert alert-info">Your current grade on this assignment is: '.($RESULT->grade*100.0).'%</p>'."\n");
+    echo('<p class="alert alert-info">Twoja aktualna ocena za to zadanie to: '.($RESULT->grade*100.0).'%</p>'."\n");
 }
 
 if ( $dueDate->message ) {
@@ -145,72 +145,77 @@ if ( $dueDate->message ) {
 ?>
 <p>
 <form name="myform" enctype="multipart/form-data" method="post" >
-To get credit for this assignment, perform the instructions below and 
-upload your SQLite3 database here: <br/>
+Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i prześlij poniżej plik z bazą SQLite3: <br/>
 <input name="database" type="file"> 
-(Must have a .sqlite suffix)<br/>
+(Plik musi mieć rozszerzenie .sqlite)<br/>
 <input type="submit">
 <p>
-You do not need to export or convert the database -  simply upload 
-the <b>.sqlite</b> file that your program creates.  See the example code for
-the use of the <b>connect()</b> statement.
+Nie musisz eksportować ani konwertować bazy - po prostu wyślij utworzony przez Twój program plik <b>.sqlite</b>.
+Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <b>connect()</b>.
 </p>
 </form>
 </p>
-<h1>Musical Track Database</h1>
+<h1>Baza danych dotycząca utworów muzycznych</h1>
 <p>
-This application will read an iTunes export file in XML and produce a properly
-normalized database with this structure:
+Aplikacja będzie miała za zadanie odczytać wyeksportowany plik iTunes w formacie XML,
+a następnie będzie musiała utworzyć poprawnie znormalizowaną bazę danych o następującej stukturze:
 <pre>
-CREATE TABLE Artist (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    name    TEXT UNIQUE
+CREATE TABLE Artist
+(
+    id   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    name TEXT UNIQUE
 );
 
-CREATE TABLE Genre (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    name    TEXT UNIQUE
+CREATE TABLE Genre
+(
+    id   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    name TEXT UNIQUE
 );
 
-CREATE TABLE Album (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+CREATE TABLE Album
+(
+    id         INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     artist_id  INTEGER,
-    title   TEXT UNIQUE
+    title      TEXT UNIQUE
 );
 
-CREATE TABLE Track (
-    id  INTEGER NOT NULL PRIMARY KEY 
-        AUTOINCREMENT UNIQUE,
-    title TEXT  UNIQUE,
+CREATE TABLE Track
+(
+    id        INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    title     TEXT UNIQUE,
     album_id  INTEGER,
     genre_id  INTEGER,
-    len INTEGER, rating INTEGER, count INTEGER
+    len       INTEGER, 
+    rating    INTEGER, 
+    count     INTEGER
 );
 </pre>
 </p>
 <p>
-If you run the program multiple times in testing or with different files, 
-make sure to empty out the data before each run.
+Jeśli będzie uruchamiał program kilka razy lub jeśli będziesz używał różnych plików wejściowych,
+to pamiętaj aby za każdym razem wyczyścić bazę danych.
 <p>
-You can use this code as a starting point for your application:
-<a href="http://www.py4e.com/code3/tracks.zip" target="_blank">
-http://www.py4e.com/code3/tracks.zip</a>.  
-The ZIP file contains the <b>Library.xml</b> file to be used for this assignment.
-You can export your own tracks from iTunes and create a database, but
-for the database that you turn in for this assignment, only use the 
-<b>Library.xml</b> data that is provided.
+ożesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu zawartego w 
+<a href="https://py4e.pl/code3/tracks.zip" target="_blank">
+https://py4e.pl/code3/tracks.zip</a>.  
+Plik .zip zawiera również plik <b>Library.xml</b>, który jest używany do oceniania poprawności przesyłanych rozwiązań.
+Możesz wyeksportować swoje własne utwory z iTunes i utworzyć bazę, ale w celach
+rozliczeniowych tego zadania użyj pliku <b>Library.xml</b>, który jest w pliku .zip.
 </p>
 <p>
-To grade this assignment, the program will run a query like this on
-your uploaded database and look for the data it expects to see:
+Podczas oceny poprawności Twojego rozwiązania, na przesłanej przez Ciebie bazie danych zostanie wywołane poniższe zapytanie SQL, tak aby porównać otrzymane wyniki ze spodziewanymi wynikami:
 <pre>
-SELECT Track.title, Artist.name, Album.title, Genre.name 
-    FROM Track JOIN Genre JOIN Album JOIN Artist 
-    ON Track.genre_id = Genre.ID and Track.album_id = Album.id 
-        AND Album.artist_id = Artist.id
-    ORDER BY Artist.name LIMIT 3
+SELECT Track.title,
+       Artist.name,
+       Album.title,
+       Genre.name 
+FROM   Track JOIN Genre JOIN Album JOIN Artist 
+       ON Track.genre_id = Genre.ID 
+          AND Track.album_id = Album.id 
+          AND Album.artist_id = Artist.id
+ORDER BY Artist.name LIMIT 3;
 </pre>
-The expected result of the modified query on your database is: (shown here as a simple HTML table with titles)
+Spodziewany wynik zapytania na Twojej bazie danych jest następujący (tutaj jest to wyświetlone jako prosta tabela HTML z nagłówkiem):
 <table border="2">
 <tr>
 <th>Track</th><th>Artist</th><th>Album</th><th>Genre</th>
@@ -221,7 +226,8 @@ foreach($answer as $ans) {
     foreach($ans as $i => $txt ) {
         echo("<td>".htmlentities($txt)."</td>");
     }
-    echo("<tr>\n");
+    echo("</tr>\n");
 }
 ?>
+</table>
 </p>

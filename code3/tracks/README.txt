@@ -1,6 +1,7 @@
-To export your own Library.xml from iTunes 
+Aby wyeksportować własną bibliotekę iTunes jako plik Library.xml:
 
 File -> Library -> Export Library
 
-Make sure it is in the correct folder.   Of course iTUnes might change
-UI and/or export format any time - so good luck :)
+Upewnij się, że wyeksportowany plik jest w prawidłowym katalogu. Oczywiście
+iTunes w każdej chwili może zmienić interfejs użytkowniak i/lub format 
+eksportowanych danych - zatem powodzenia :)
