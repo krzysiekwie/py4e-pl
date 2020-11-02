@@ -7,13 +7,11 @@ Polish translation
 
 | Element                | Text | Code | Trinket | Index | Figures | Lectures | YouTube | Autograder | Review |
 |------------------------|------|------|-------|-------|---------|----------|---------|------------|--------|
-| `A0-preface.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
-| `AA-contrib.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
-| `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☐    |
 | `install.php`          | ☒    |      |      |       |         |          |         |            | ☒    |
-| `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☒    |
 | `software-win.php`     | ☒    |      |      |       |         |          | ☒      |            | ☒    |
 | `software-mac.php`     | ☒    |      |      |       |         |          | ☒      |            | ☒    |
+| `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☒    |
+| `A0-preface.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☒    |
 | `01-intro.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `02-variables.mkd`     | ☒    |      | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
@@ -30,12 +28,13 @@ Polish translation
 | `14-objects.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `15-database.mkd`      | ☒    | ☒   | ☒    | ☒    | ☒(*)   | ☐        | ☐     | ☐          | ☐    |
 | `16-viz.mkd`           | ☒    | ☒   |       | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `AA-contrib.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
+| `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☐    |
 | `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
 | "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | Functions and methods with `()` |         |            |       |
 | Inline code within grave accents |         |            |       |
-| Fix URLs to be full URLs in `<...>` |         |            |       |
 | `unit.sh` check |         |            |       |
 
 (*) moved `book3/figs2` to `images`.
