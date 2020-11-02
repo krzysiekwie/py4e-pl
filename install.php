@@ -3,41 +3,30 @@
 <div class="hide-for-large" id="mobile-support"></div>
 <div id="first-row" class="row">
     <div class="small-12 columns">
-        <h2>Konfigurowanie Twojego środowiska programistycznego Python</h2>
+        <h2>Jak skonfigurować swoje środowisko programistyczne?</h2>
         <p>
-            Mamy osobne strony dla każdego z powszechnie używanych systemów
-            operacyjnych:
+            Poniżej znajdują się instrukcje pokazujące w jaki sposób zinstalować
+            Pythona na najpoularniejszych systemach operacyjnych oraz w środowiskach
+            chmurowych:
         </p>
         <ul>
             <li>
-                <a href="software-pyaw.php">
-                    Używanie Pythona na PythonAnywhere
-                </a> 
-                (Chmura / przeglądarka - nie wymaga instalacji)
+                <a href="software-win.php">Windows</a>
             </li>
             <li>
-                <a href="software-win.php">
-                    Konfigurowanie środowiska Python w systemie Microsoft Windows
-                </a>
+                <a href="software-mac.php">macOS</a>
             </li>
             <li>
-                <a href="software-mac.php">
-                    Konfigurowanie środowiska Python na Macintoshu
-                </a>
+                <a href="software-pyaw.php">PythonAnywhere</a> 
+                (chmura/przeglądarka; nie wymaga instalacji)
             </li>
-            <li>
-                Możesz także skonfigurować Pythona w systemie Windows 10
-                używając <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">
-                Windows Subsystem for Linux (WSL)</a> jeśli na Twoim
-                komputerze z Windowsem wolisz pracę zbliżoną do takiej jak
-                na Linuxie.
-            </li>
+            
         </ul>
         <p>
-        Inne chmurowe środowiska Pythona obejmują:
-            <a href="http://trinket.io">Trinket</a>,
-            <a href="http://c9.io">Cloud9</a>, lub
-            <a href="http://codeanywhere.com">CodeAnywhere</a>.
+        Inne środowiska chmurowe:
+            <a href="https://trinket.io">Trinket</a>,
+            <a href="https://c9.io">Cloud9</a>,
+            <a href="https://codeanywhere.com">CodeAnywhere</a>.
         </p>
 
     </div>

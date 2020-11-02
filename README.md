@@ -10,10 +10,10 @@ Polish translation
 | `A0-preface.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
 | `AA-contrib.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
 | `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☐    |
-| `install.php`          | ☒    |      |      |       |         |          |         |            | ☐    |
-| `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☐    |
-| `software-win.php`     | ☒    |      |      |       |         |          | ☒      |            | ☐    |
-| `software-mac.php`     | ☒    |      |      |       |         |          | ☒      |            | ☐    |
+| `install.php`          | ☒    |      |      |       |         |          |         |            | ☒    |
+| `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☒    |
+| `software-win.php`     | ☒    |      |      |       |         |          | ☒      |            | ☒    |
+| `software-mac.php`     | ☒    |      |      |       |         |          | ☒      |            | ☒    |
 | `01-intro.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `02-variables.mkd`     | ☒    |      | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |

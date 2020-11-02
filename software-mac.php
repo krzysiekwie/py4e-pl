@@ -1,57 +1,84 @@
 <?php include("top.php"); ?>
 <?php include("nav.php"); ?>
 
-<h1>Rozpoczęcie pracy z Pythonem na Macintoshu</h1>
+<h1>Instalacja Pythona 3 na systemie macOS</h1>
 
-<p>Python 2 i Python 3 są już zainstalowane na systemie operacyjnym macOS, więc
-jedyne co musisz dodać to edytor programistycznych kodów źródłowych.</p>
+<p>Python w wersji 2 jest już zainstalowany na systemie operacyjnym macOS.
+Zainstalujemy Pythona 3 poprzez ściągnięcie instalatora.</p>
+
+<h4>Instalacja standardowa</h4>
+
+<p>Pobierz i zainstaluj Pythona 3.x z:</p>
+
+<p><a href="https://www.python.org/download/" target="_blank">
+https://www.python.org/download/</a></p>
 
 <h2>Instalacja edytora tekstu Atom</h2>
 
-<p>Pobierz i zainstaluj program Atom z poniższej strony:</p>
-<p><a href="http://atom.io" target="_blank">http://atom.io</a></p>
+<p>Pobierz i program Atom z poniższej strony:</p>
+<p><a href="https://atom.io" target="_blank">https://atom.io</a></p>
 
-<h1>Pisanie programu Python 3 z Atomem na Macintoshu</h1>
+Po pobraniu i rozpakowaniu, przenieś go do Aplikacji/Applications.
 
-<p>Mamy krótki <a href="https://www.youtube.com/watch?v=aIcLCww_kQM" target="_blank">
-film pokazujący krok po kroku</a> jak używać edytora Atom i jak napisać swój
-pierwszy program Python 3.</p>
+Po instalacji, w opcjach pakietów programu <code>Packages > Settings View > Manage Packages</code>
+możesz wyłączyć pakiety  "git-diff" i "github".
 
-<h1>Uruchomienie terminala na macOS</h1>
+<h4>Pisanie programu Python w edytorze Atom</h4>
 
-<p>Program Terminal jest jakby zakopany w <b>Finder -> Aplikacje -> Narzędzia ->
+<p>Poniższy krótki <a href="https://www.youtube.com/watch?v=aIcLCww_kQM" target="_blank">
+film</a> pokazuje krok po kroku jak zainstalować Pythona 3 i edytor Atom oraz jak 
+swój napisać pierwszy program.</p>
+
+<h1>Uruchomienie terminala</h1>
+
+<p>Program Terminal znajduje się w <b>Finder > Aplikacje > Narzędzia >
 Terminal</b>.</p>
-<p>Istnieje kilka skrótów, które mogą okazać się pomocne. Możesz w prawej górnej
-części ekranu kliknąć na przycisk wyszukiwania Spotlight i wpisać
-<b>terminal</b>, a następnie uruchomić Terminal, który pojawi się na liście.</p>
-<p>Możesz sprawić, że Terminal po uruchomieniu pozostanie zadokowany - kliknij i
-przytrzymują ikonę Terminala w Docku, a następnie wybierz opcję "Zatrzymaj w
-Docku". Następnie możesz szybko uruchomić Terminal, klikając na jego ikonę w
-Docku.</p>
 
-<h1>Gdzie się znajdujesz?</h1>
+<p>Alternatywnie możesz w prawej górnej części ekranu kliknąć na przycisk
+wyszukiwania Spotlight i wpisać <b>terminal</b>, a następnie uruchomić Terminal, który pojawi się na liście.</p>
+
+<p>Możesz sprawić, że Terminal po uruchomieniu pozostanie zadokowany. Kliknij i
+przytrzymują ikonę Terminala w Docku, a następnie wybierz opcję "Zatrzymaj w
+Docku". Następnie klikając na jego ikonę w Docku możesz szybko go uruchomić.</p>
+
+<h4>Gdzie się znajdujesz?</h4>
 
 <p>Po uruchomieniu wiersza poleceń domyślnie znajdujesz się w swoim
-katalogu "domowym". W poniższym przykładzie, zamiast "csev" powinna być nazwa
+"katalogu domowym". W poniższym przykładzie, zamiast "csev" powinna być nazwa
 Twojego aktualnie zalogowanego konta.</p>
+
 <pre>
-    Katalog domowy na Macu: 		/Users/csev
+    Katalog domowy: 		/Users/csev
 </pre>
-<p>W wierszu poleceń zazwyczaj znajduje się wskazówka, gdzie się znajdujesz w 
-strukturze katalogów na dysku twardym. Jeśli naprawdę chcesz się dowiedzieć 
-gdzie się w tej hierarchii znajdujesz, użyj polecenia <b>pwd</b>.</p>
+
+<p>Katalog domowy skrótowo oznacza się znakiem "~".</p>
+
+<p>W wierszu poleceń zazwyczaj znajduje się informacja o tym gdzie obecnie się znajdujesz w
+hierarchii katalogów na dysku twardym. Informacja o tym zwykle wyświetlana jest
+przed tzw. znakiem zachęty. Katalog, w którym obecnie się znajdujesz, nazywa
+się "katalogiem roboczym".</p>
+
+<pre>
+    udhcp-macvpn-624:~ csev$
+</pre>
+
+<p>Jeśli chcesz wyświetlić pełną informację o ścieżce katalogu roboczego,
+wydaj polecenie "pwd" bez parametrów:</p>
+
 <pre>
     udhcp-macvpn-624:~ csev$ pwd
     /Users/csev
     udhcp-macvpn-624:~ csev$ 
 </pre>
 
-<h1>Gdzie możesz pójść?</h1>
+<p>Jak widać, skrótowy zapis "~" katalogu domowego został rozwinięty do "/Users/csev".</p>
 
-<p>Generalnie pierwszą rzeczą, którą chcesz zrobić po otwarciu interfejsu
-wiersza poleceń, jest przejście do właściwego folderu. Powiedzmy, że chcesz
+<h4>W jaki sposób zmienić bieżący katalog?</h4>
+
+<p>Generalnie pierwszą rzeczą, którą chcesz zrobić po otwarciu terminala, jest
+przejście do właściwego katalogu. Powiedzmy, że chcesz
 uruchomić plik znajdujący się na Biurku. Polecenie <b>cd Desktop</b> pozwoli Ci
-dostać się do katalogu, który jest Twoim Biurkiem.</p>
+dostać się do odpowiedniego katalogu.</p>
 <pre>
     udhcp-macvpn-624:~ csev$ pwd
     /Users/csev
@@ -60,16 +87,16 @@ dostać się do katalogu, który jest Twoim Biurkiem.</p>
     /Users/csev/Desktop
     udhcp-macvpn-624:Desktop csev$
 </pre>
-<p><b>Sprytna sztuczka:</b> w poleceniu cd możesz częściowo wpisać nazwę katalogu,
-np. Des zamiast Desktop, a następnie nacisnąć klawisz TAB i system automatycznie
-uzupełni nazwę katalogu, jeśli wpisałeś ją na tyle, że system będzie mógł 
-dokładnie odgadnąć co masz na myśli.</p>
 
-<h2>Przechodzenie w dół (lub do góry)</h2>
+<p><b>Wskazówka:</b> W poleceniu "cd" możesz częściowo wpisać nazwę katalogu, 
+np. Des zamiast Desktop, a następnie nacisnąć klawisz <code>Tab</code>, dzięki czemu
+system automatycznie uzupełni nazwę katalogu, o ile wpisałeś ją na tyle, że 
+system będzie mógł precyzyjnie wskazać katalog, który miałeś na myśli.
+</p>
 
 <p>Używając polecenia <b>cd ..</b> możesz zmienić bieżący katalog na katalog
 nadrzędny (tj. katalog "powyżej" tego katalogu, w którym się aktualnie
-znajdujesz). Komenda ta oznacza "idź do góry o jeden poziom".</p>
+znajdujesz). Komenda ta oznacza "idź do góry o jeden poziom":</p>
 <pre>
     udhcp-macvpn-624:Desktop csev$ pwd
     /Users/csev/Desktop
@@ -79,14 +106,13 @@ znajdujesz). Komenda ta oznacza "idź do góry o jeden poziom".</p>
     udhcp-macvpn-624:~ csev$ 
 </pre>
 
-<h2>Jeśli się zgubisz...</h2>
+<h4>Jeśli się zgubisz...</h4>
 
-<p>Jeżeli nie wiesz w którym katalogu się znajdujesz i/lub nie wiesz jak dostać
-się do danego katalogu - po prostu zamknij i ponownie otwórz okno Terminala /
-wiersza linii poleceń. Powrócisz wtedy do swojego katalogu "domowego" - możesz
-więc ponownie zacząć nawigację zaczynając od znanej Ci lokalizacji.</p>
+<p>Jeżeli nie wiesz w którym katalogu się znajdujesz i/lub nie wiesz jak dostać się
+do danego katalogu, to po prostu zamknij i ponownie otwórz okno Terminala. Powrócisz wtedy do swojego "katalogu domowego", przez co 
+zaczynając od znanej Ci lokalizacji będziesz mógł ponownie nawigować po katalogach.</p>
 
-<h2>Jakie pliki i foldery się tutaj znajdują?</h2>
+<h4>Jakie pliki i foldery się tutaj znajdują?</h4>
 
 <p>Za pomocą polecenia <b>ls -l</b> możesz wyświetlić zawartość aktualnego
 katalogu.</p>
@@ -99,7 +125,7 @@ katalogu.</p>
     udhcp-macvpn-624:Desktop csev$ 
 </pre>
 
-<h2>Uruchamianie Twojego programu Python w Terminalu</h2>
+<h1>Uruchamianie Twojego programu z poziomu Terminala</h1>
 
 <p>Uruchom program Terminal, przejdź do odpowiedniego katalogu i wpisz poniższe
 polecenie:</p>
@@ -110,13 +136,15 @@ polecenie:</p>
 <b>mojprogram.py</b>, pokazując w oknie Terminala wyjście programu i/lub
 ewentualne błędy.</p>
 
-<h2>Kilka ciekawych wskazówek dotyczących programu Terminal</h2>
+<p>W oknie wiersza poleceń możesz wielokrotnie uruchamiać swój program.</p>
 
-<p>Możesz przewijać poprzednie komendy, naciskając na klawiaturze strzałki w
-górę i w dół, a potem możesz ponownie wykonywać wyświetlone komendy za pomocą
-klawisza Enter. Dzięki temu możesz zaoszczędzić sporo czasu podczas pisania
-komend. Jeśli lubisz mieć porządek na ekranie, możesz wyczyścić bufor
-poprzednich komend oraz ekran, naciskając jednocześnie klawisz Command i klawisz
-K.</p>
+<p>Możesz użyć klawisza strzałki <b style="color:black;background-color:#a0ffff">w
+górę</b> aby przewijać poprzednie polecenia, a potem nacisnąć <code>Enter</code> aby ponownie
+je wykonać. Jest to szczególnie przydatne jeśli zmieniamy zawartość programu i chcemy
+go szybko uruchomić w celu przetestowania dokonanych zmian.</p>
+
+<p>Jeśli lubisz mieć porządek na ekranie, możesz wyczyścić bufor
+poprzednich komend oraz ekran, naciskając jednocześnie klawisz <code>Command+K</code>.
+</p>
 
 <?php include('footer.php');?>
