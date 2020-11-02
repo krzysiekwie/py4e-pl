@@ -21,7 +21,7 @@ https://www.python.org/download/</a></p>
 Po pobraniu i rozpakowaniu, przenieś go do Aplikacji/Applications.
 
 Po instalacji, w opcjach pakietów programu <code>Packages > Settings View > Manage Packages</code>
-możesz wyłączyć pakiety  "git-diff" i "github".
+możesz wyłączyć pakiety "git-diff" i "github".
 
 <h4>Pisanie programu Python w edytorze Atom</h4>
 

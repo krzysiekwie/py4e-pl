@@ -24,8 +24,8 @@ która spełni wszystkie Twoje potrzeby związane z tym kursem aż do rozdziału
 </p>
 
 <p>PythonAnywhere zobowiązuje się do umożliwienia Ci posiadania bezpłatnego konta
-na zawsze (pod warunkiem, że będziesz się na to konto logować i z niego korzytać).
-Usługa posiada również niedrogie ofety, które sprawdzą się w sytuacji, w której
+na zawsze (pod warunkiem, że będziesz się na to konto logować i z niego korzystać).
+Usługa posiada również niedrogie oferty, które sprawdzą się w sytuacji, w której
 będziesz potrzebować więcej miejsca na dysku, większej mocy obliczeniowej dla swoich 
 projektów, większej elastyczności lub dodatkowych funkcji. Podkreślmy jednak, że 
 bezpłatna oferta wystarczy do ukończenia tego kursu.</p>

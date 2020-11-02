@@ -39,7 +39,7 @@ swój napisać pierwszy program.</p>
 
 <h1>Uruchomienie wiersza poleceń</h1>
 
-<p>Klasyczny wiersz poleceń cmd.exe możemy uruchomić poprzez wciśnięcie na kalwiaturze klawisza
+<p>Klasyczny wiersz poleceń cmd.exe możemy uruchomić poprzez wciśnięcie na klawiaturze klawisza
 <code>Windows</code>, wpisania "cmd.exe" i wybrania odpowiedniej aplikacji. Ewentualnie można wybrać 
 kombinację klawiszy <code>Windows+R</code>, wpisać "cmd.exe" i wybrać "OK". Nowszą wersją
 klasycznego wiersza poleceń cmd.exe jest PowerShell, jednak na potrzeby kursu

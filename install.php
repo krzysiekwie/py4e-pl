@@ -5,8 +5,8 @@
     <div class="small-12 columns">
         <h2>Jak skonfigurować swoje środowisko programistyczne?</h2>
         <p>
-            Poniżej znajdują się instrukcje pokazujące w jaki sposób zinstalować
-            Pythona na najpoularniejszych systemach operacyjnych oraz w środowiskach
+            Poniżej znajdują się instrukcje pokazujące w jaki sposób zainstalować
+            Pythona na najpopularniejszych systemach operacyjnych oraz w środowiskach
             chmurowych:
         </p>
         <ul>
