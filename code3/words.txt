@@ -1,16 +1,16 @@
 Pisanie programów (lub programowanie) jest bardzo twórczą i satysfakcjonującą 
 aktywnością. Możesz pisać programy z wielu powodów, od zarabiania na życie,
 przez rozwiązywanie trudnych problemów analizy danych, po zabawę i pomaganie
-komuś w rozwiązaniu problemu. Poniższa książka zakłada, że {\em każdy} powienien
-wiedzieć jak programować oraz że gdy już dowiesz się jak programować, to 
-zorientujesz się co chcesz zrobić ze swoimi nowo odkrytymi umiejętnościami.
+komuś w rozwiązaniu jakiegoś problemu. Poniższa książka zakłada, że *każdy* powinien
+wiedzieć jak się programuje, więc gdy już dowiesz się jak programować, to 
+zorientujesz się co chcesz zrobić ze swoją nową umiejętnością.
 
-W codziennym życiu jesteśmy otoczeniu przez komputery, począwszy od laptopów,
+W codziennym życiu jesteśmy otoczeni przez komputery, począwszy od laptopów,
 po smartfony. Możemy myśleć o tych komputerach jako o naszych
-"osobistych asystentach", którzy w naszym imieniu mogą zająć się wieloma
-rzeczami. Sprzęt we współczesnych komputerach jest zasadniczo
+"osobistych asystentach", którzy w naszym imieniu mogą się zająć wieloma
+sprawami. Sprzęt we współczesnych komputerach jest zasadniczo
 zbudowany tak, aby nieustannie zadawać nam pytanie "Co mam teraz zrobić?".
 
-Programiści dodają do sprzętu system operacyjny oraz zbiór aplikacji,
-dzięki czemu w ten sposób otrzymujemy osobistego asystenta cyfrowego, który
-okazuje się całkiem pomocny i zdolny do wsparcia nas w wielu różnych sprawach.
+Programiści dodają do sprzętu system operacyjny oraz zbiór aplikacji.
+W ten sposób otrzymujemy osobistego asystenta cyfrowego, który
+okazuje się być całkiem pomocny i zdolny do wsparcia nas w wielu różnych sprawach.

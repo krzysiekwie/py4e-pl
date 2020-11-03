@@ -7,80 +7,81 @@ Dlaczego powinieneś nauczyć się pisać programy?
 Pisanie programów (lub programowanie) jest bardzo twórczą i satysfakcjonującą 
 aktywnością. Możesz pisać programy z wielu powodów, od zarabiania na życie,
 przez rozwiązywanie trudnych problemów analizy danych, po zabawę i pomaganie
-komuś w rozwiązaniu problemu. Poniższa książka zakłada, że *każdy* powienien
-wiedzieć jak programować oraz że gdy już dowiesz się jak programować, to 
-zorientujesz się co chcesz zrobić ze swoimi nowo odkrytymi umiejętnościami.
+komuś w rozwiązaniu jakiegoś problemu. Poniższa książka zakłada, że *każdy* powinien
+wiedzieć jak się programuje, więc gdy już dowiesz się jak programować, to 
+zorientujesz się co chcesz zrobić ze swoją nową umiejętnością.
 
-W codziennym życiu jesteśmy otoczeniu przez komputery, począwszy od laptopów,
+W codziennym życiu jesteśmy otoczeni przez komputery, począwszy od laptopów,
 po smartfony. Możemy myśleć o tych komputerach jako o naszych
-"osobistych asystentach", którzy w naszym imieniu mogą zająć się wieloma
-rzeczami. Sprzęt we współczesnych komputerach jest zasadniczo
+"osobistych asystentach", którzy w naszym imieniu mogą się zająć wieloma
+sprawami. Sprzęt we współczesnych komputerach jest zasadniczo
 zbudowany tak, aby nieustannie zadawać nam pytanie "Co mam teraz zrobić?".
 
 ![Osobisty asystent cyfrowy](height=1.0in@../images/pda)
 
-Programiści dodają do sprzętu system operacyjny oraz zbiór aplikacji,
-dzięki czemu w ten sposób otrzymujemy osobistego asystenta cyfrowego, który
-okazuje się całkiem pomocny i zdolny do wsparcia nas w wielu różnych sprawach.
+Programiści dodają do sprzętu system operacyjny oraz zbiór aplikacji.
+W ten sposób otrzymujemy osobistego asystenta cyfrowego, który
+okazuje się być całkiem pomocny i zdolny do wsparcia nas w wielu różnych sprawach.
 
-Nasze komputery są szybkie i mają ogromne zasoby pamięci – ten fakt mógłby
-być dla nas bardzo pomocny gdybyśmy tylko znali język do porozumiewania się
+Nasze komputery są szybkie i mają ogromne zasoby pamięci – ten fakt byłby 
+dla nas bardzo pomocny gdybyśmy tylko znali język do porozumiewania się
 i wyjaśniania komputerowi co chcemy aby dla nas "teraz zrobił". Gdybyśmy
 znali taki język, to moglibyśmy powiedzieć komputerowi by wykonał za nas
 pewne powtarzające się czynności. Co ciekawe, to, co komputery potrafią 
-najlepiej, to często rzeczy, które my, ludzie, uważamy za nudne i otępiające.
+najlepiej, to często rzeczy, które my, ludzie, uważamy za nudne i wręcz 
+otępiające.
 
-Na przykład, spójrz na pierwsze trzy akapity tego rozdziału i powiedz mi
-które słowo było najczęście użyte oraz ile razy to słowo zostało użyte.
-Podczas gdy byłeś w stanie przeczytać i zrozumieć słowa w ciągu kilku sekund,
-zliczanie ich jest niemalże bolesne, ponieważ nie jest to tego rodzaju problem,
+Na przykład, spójrz na pierwsze trzy akapity tego rozdziału i wskaż
+które słowo było najczęściej użyte oraz ile razy to słowo zostało użyte.
+W ciągu kilku sekund byłeś w stanie przeczytać i zrozumieć słowa, ale
+zliczanie ich jest niemalże bolesne, ponieważ nie jest to taki rodzaju problem,
 dla którego zostały zaprojektowane ludzkie umysły. W przypadku komputera jest
 na odwrót – czytanie i rozumienie tekstu z kartki papieru jest trudne
-do wykonania, ale zliczenie słów i wskazanie Tobie ile razy
+do wykonania, ale zliczenie słów i wskazanie ile razy
 zostało użyte najczęściej występujące słowo jest bardzo łatwe:
 
 ~~~~ {.python}
-python words.py
+$ python3 words.py
 Podaj nazwę pliku: words.txt
 w 5
 ~~~~
 
-Nasz "osobisty asystent analizy informacji" szybko powiedział nam, że słowo
-"w" został użyty pięć razy w pierwszych trzech akapitach tego rozdziału.
+Nasz "osobisty asystent analizy informacji" szybko powiedział nam, że w pierwszych 
+trzech akapitach tego rozdziału słowo "w" zostało użyte pięć razy.
 
 Właśnie ten fakt, że komputery są dobre w rzeczach, w których ludzie dobrzy 
-nie są, jest powodem, dla którego musisz nauczyć się mówić "językiem
+nie są, jest powodem dla którego musisz nauczyć się mówić "językiem
 komputerowym". Gdy nauczysz się tego nowego języka, możesz przekazywać 
-nieciekawe zadania swojemu partnerowi (komputerowi), pozostawiając sobie więcej
-czasu na robienie rzeczy, do których jesteś wyjątkowo przystosowany. Wnosisz
-kreatywność, intuicję i pomysłowość do tego duetu.
+swojemu partnerowi (komputerowi) nieciekawe zadania, pozostawiając sobie więcej
+czasu na sprawy, dla których jesteś przystosowany. Do tego duetu wnosisz kreatywność,
+intuicję i pomysłowość.
 
 Kreatywność i motywacja
 -----------------------
 
-Chociaż ta książka nie jest przeznaczona dla profesjonalnych programistów, 
-profesjonalne programowanie może być bardzo satysfakcjonującą pracą,
+Chociaż ta książka nie jest przeznaczona dla zawodowych programistów, 
+to zawodowe programowanie może być pracą bardzo satysfakcjonującą,
 zarówno po kątem finansowym, jak i osobistym. Tworzenie przydatnych, eleganckich
-i sprytnych programów, z których mogą korzystać inni, to bardzo kreatywne
-zajęcie. Twój komputer lub smartfon zwykle zawiera wiele różnych programów od 
-wielu różnych grup programistów, które konkurują o Twoją uwagę i 
-zainteresowanie. Robią wszystko, co w ich mocy, aby spełnić Twoje potrzeby i 
+i sprytnych programów, z których mogą korzystać inni, jest bardzo kreatywnym
+zajęciem. Twój komputer lub smartfon zwykle zawiera wiele różnych programów dostarczonych 
+przez wielu różnych grup programistów. Aplikacje te ciągle konkurują o Twoją uwagę i 
+zainteresowanie. Robią one wszystko co w ich mocy, aby spełnić Twoje potrzeby i 
 zapewnić podczas ich używania najlepsze *user experience* (z ang. *doświadczenie
-użytkownika*). W niektórych sytuacjach, gdy wybierasz oprogramowanie, 
-programiści są bezpośrednio wynagradzani z powodu twojego wyboru.
+użytkownika*). W niektórych sytuacjach, gdy wybierasz konkretne oprogramowanie, 
+programiści są bezpośrednio wynagradzani z powodu Twojego wyboru.
 
 Jeśli myślimy o programach jako o twórczym wyniku pracy grup programistów, 
-to być może poniższy rysunek przedstawia bardziej racjonalną wersję naszego
+to zapewne poniższy rysunek będzie przedstawiał bardziej racjonalną wersję naszego
 smartfona:
 
 ![Programiści mówią do Ciebie](height=1.0in@../images/pda2)
 
-Na razie naszą główną motywacją nie jest zarabianie pieniędzy ani zadowolenie 
-użytkowników końcowych, ale raczej bardziej produktywne przetwarzanie danych i 
+Na tę chwilę naszą główną motywacją nie jest zarabianie pieniędzy ani zadowolenie 
+użytkowników końcowych; bardziej będzie nas interesowało produktywne przetwarzanie danych i 
 informacji, które napotkamy w naszym życiu. Na początku będziesz zarówno 
-programistą, jak i końcowym użytkownikiem swoich programów. Gdy zdobędziesz 
-umiejętności programisty, a programowanie stanie się dla ciebie bardziej
-twórcze, twoje myśli mogą skierować się w stronę tworzenia programów dla innych
+programistą, jak i końcowym użytkownikiem swoich programów. Gdy zdobędziesz już 
+umiejętności programisty, a programowanie stanie się dla Ciebie bardziej
+kreatywne, będziesz mógł skierować się w stronę tworzenia programów dla innych
 osób.
 
 Architektura sprzętu komputerowego
@@ -90,9 +91,9 @@ Architektura sprzętu komputerowego
 \index{sprzęt!architektura}
 
 Zanim zaczniemy uczyć się języka, którym będziemy wydawać polecenia komputerom
-aby tworzyły dla nas oprogramowanie, musimy doszkolić się trochę o tym jak 
-budowane są komputery. Gdybyś rozebrał komputer lub smartfon i zajrzał głęboko
-mu się przyjał, to znalazłbyś następujące części:
+aby tworzyły dla nas oprogramowanie, musimy trochę się doszkolić z tego jak 
+budowane są komputery. Gdybyś rozebrał komputer lub smartfon i wnikliwie się mu 
+przyjrzał, to znalazłbyś następujące części:
 
 ![Architektura sprzętowa](height=1.75in@../images/arch)
 
@@ -101,15 +102,14 @@ Ogólne definicje tych części są następujące:
 -   *Procesor* (ang. *central processing unit*, CPU) to część komputera, która 
      została zbudowana tak, aby dosłownie mieć obsesję na punkcie pytania 
      "Co dalej?". Jeśli komputer ma moc 3,0 gigaherców, to oznacza to, że 
-     procesor zapyta "Co dalej?" trzy miliardy razy na sekundę. Będziesz musiał 
-     nauczyć się w jaki sposób szybko porozumiewać się, tak by nadążać 
-     za procesorem.
+     procesor pyta "Co dalej?" trzy miliardy razy na sekundę. Będziesz musiał 
+     nauczyć się szybkiej komunikacji z procesorem, tak by za nim nadążać.
 
--   *Pamięć główna* jest używana do przechowywania informacji, których procesor
+-   *Pamięć główna*^[Chodzi tutaj o pamięć o dostępie swobodnym, czyli RAM (z ang. 
+    *random-access memory*).] jest używana do przechowywania informacji, których procesor
     potrzebuje w pośpiechu. Pamięć główna jest prawie tak szybka jak procesor. 
     Jednakże informacje przechowywane w pamięci głównej znikają po wyłączeniu 
-    komputera.^[Chodzi tutaj o pamięć o dostępie swobodnym, czyli RAM (z ang. 
-    *random-access memory*).]
+    komputera.
 
 -   *Pamięć pomocnicza* jest również używana do przechowywania informacji, ale
     jest znacznie wolniejsza niż pamięć główna. Zaletą pamięci dodatkowej jest 
@@ -123,38 +123,36 @@ Ogólne definicje tych części są następujące:
     komputerem.
 
 -   Obecnie większość komputerów ma również *połączenie sieciowe*, które 
-    umożliwia pobieranie informacji przez sieć. Możemy myśleć o sieci jako o
+    umożliwia pobieranie informacji z sieci. Możemy myśleć o sieci jako o
     bardzo powolnym miejscu do przechowywania i pobierania danych, które nie 
-    zawsze są dostępne. W pewnym sensie sieć jest wolniejszą i czasami zawodną 
+    zawsze są dostępne. W pewnym sensie sieć jest wolniejszą (i czasami zawodną) 
     formą *pamięci pomocniczej*.
 
 Chociaż większość szczegółów dotyczących działania tych komponentów najlepiej
-pozostawić konstruktorom komputerów, dobrze jest mieć pewną terminologię, tak 
-abyśmy mogli rozmawiać o tych różnych częściach komputera podczas pisania 
-naszych programów.
+pozostawić konstruktorom komputerów, dobrze jest znać podstawową terminologię na tyle 
+abyśmy podczas pisania naszych programów mogli rozmawiać o różnych częściach komputera.
 
 Twoim zadaniem jako programisty jest wykorzystywanie i zarządzanie każdym z tych
-zasobów w celu rozwiązania problemu i przeanalizowania danych uzyskanych podczas
-rozwiązynia tego probelmu. Jako programista będziesz głównie "rozmawiać" z 
-procesorem i mówić mu, co ma robić dalej. Czasami powiesz procesorowi aby 
-użył pamięci głównej, pamięci pomocniczej, sieci lub urządzeń wejścia/wyjścia.
+zasobów po to by rozwiązać problem i przeanalizować otrzymane dane. Jako programista 
+będziesz głównie "rozmawiać" z procesorem i mówić mu, co ma dalej robić. Czasami
+powiesz procesorowi aby użył pamięci głównej, pamięci pomocniczej, sieci lub 
+urządzeń wejścia/wyjścia.
 
 ![Gdzie jesteś?](height=1.75in@../images/arch2)
 
-Musisz być osobą, która odpowiada na pytanie procesora "Co dalej?". Jednakże 
-byłoby bardzo niewygodne zmniejszenie Ciebie do 5 mm wysokości i włożenie do 
-komputera tylko po to, abyś mógł wydawać polecenia trzy miliardy razy na 
-sekundę. Zamiast tego musisz wcześniej zapisać swoje instrukcje. Zapisane 
+Musisz być osobą, która odpowiada na pytanie procesora "Co dalej?". Zmniejszenie
+Ciebie do 5 mm wysokości i włożenie do komputera tylko po to, abyś
+mógł wydawać polecenia trzy miliardy razy na sekundę, to raczej niezbyt komfortowe
+rozwiązanie. Zamiast tego najpierw będziesz musiał zapisać swoje instrukcje. Zapisane 
 instrukcje nazywamy *programem*, a czynność zapisywania tych instrukcji i 
 doprowadzania ich do poprawnej formy nazywamy *programowaniem*.
-
 
 Zrozumieć programowanie
 -----------------------
 
-W dalszej części książki postaramy się zmienić Cię w osobę biegłą w sztuce
-programowania. Na końcu zostaniesz *programistą* – być może nie profesjonalnym 
-programistą, ale przynajmniej będziesz posiadał umiejętności spojrzenia na
+W dalszej części książki postaramy się zamienić Ciebie w osobę biegłą w sztuce
+programowania. Na końcu zostaniesz *programistą* – być może niekoniecznie profesjonalnym,
+ale przynajmniej będziesz posiadał umiejętności spojrzenia na
 problem analizy danych/informacji oraz opracowania programu do rozwiązania
 takiego problemu.
 
@@ -162,34 +160,34 @@ takiego problemu.
 
 W pewnym sensie, aby być programistą potrzebujesz dwóch umiejętności:
 
--   Po pierwsze, musisz znać język programowania (Python) – musisz znać 
+-   Po pierwsze, musisz znać język programowania (np. Python) – musisz znać 
     jego słownictwo i gramatykę. Musisz umieć poprawnie pisać słowa w tym nowym
     języku i umieć konstruować dobrze sformułowane "zdania".
 
 -   Po drugie, musisz umieć "opowiadać historię". Pisząc opowiadanie, łączysz
     słowa i zdania, tak aby przekazać czytelnikowi jakąś ideę lub myśl. 
-    Konstruowanie historii wymaga pewnej sztuki, ale umiejętność pisania 
-    historii poprawia się poprzez pisanie i uzyskiwanie informacji zwrotnych. 
+    Tworzenie historii wymaga pewnej sztuki, ale umiejętność jej pisania 
+    poprawia się poprzez pisanie i uzyskiwanie informacji zwrotnych. 
     W programowaniu nasz program jest "historią", a problem, który próbujesz 
-    rozwiązać, to "idea/myśl".
+    rozwiązać, to "idea" lub "myśl".
 
 Gdy nauczysz się jednego języka programowania (w tym przypadku Pythona), 
-znacznie łatwiej będzie Ci nauczyć się drugiego języka programowania, takiego 
-jak JavaScript lub C++. Nowy język programowania ma bardzo różne słownictwo i
+znacznie łatwiej będzie Ci nauczyć się drugiego języka programowania, np.
+JavaScript lub C++. Nowy język programowania ma bardzo różne słownictwo i
 gramatykę, ale umiejętności rozwiązywania problemów będą takie same we 
 wszystkich językach programowania.
 
-Dość szybko nauczysz się "słownictwa" i "zdań" w Pythonie. Napisanie spójnego
+Dość szybko nauczysz się "słownictwa" i "zdań" stosowanych w Pythonie. Napisanie spójnego
 programu rozwiązującego zupełnie nowy problem zajmie trochę więcej czasu.
-Uczymy programowania podobnie jak pisania. Zaczynamy czytać i objaśniać 
-programy, potem piszemy proste programy, a potem z czasem piszemy coraz bardziej
+Uczymy się programowania podobnie jak zwykłego pisania. Zaczynamy czytać i objaśniać 
+programy, potem tworzymy proste programy, a z czasem piszemy coraz bardziej
 złożone programy. W pewnym momencie "znajdziesz swoją muzę", sam zobaczysz 
 pewne wzorce i w bardziej naturalny sposób zauważysz w jaki sposób podchodzić
 do danego problemu i jak napisać program, który go rozwiązuje. A gdy już do tego
-dojdziesz, programowanie stanie się bardzo przyjemną i twórczą czynnością.
+dojdziesz, programowanie stanie się dla Ciebie bardzo przyjemne i kreatywne.
 
 Zaczniemy od słownictwa i struktury programów w języku Python. Bądź cierpliwy,
-ponieważ proste przykłady przypomną ci moment w życiu gdy pierwszy raz zacząłeś
+ponieważ proste przykłady przypomną Ci ten moment w życiu, w którym pierwszy raz zacząłeś
 czytać.
 
 Słowa i zdania
@@ -197,24 +195,23 @@ Słowa i zdania
 
 \index{język programowania}
 
-W przeciwieństwie do ludzkich języków, słownictwo Pythona jest w rzeczywistości
-dość skromne. To "słownictwo" nazywamy "słowami zastrzeżonymi". Są to słowa, 
-które mają dla Pythona szczególne znaczenie. Gdy Python widzi te słowa w 
-programie napisanym w języku Python, to mają one jedno i tylko jedno znaczenie
-dla Pythona. Później, podczas pisania programów, stworzysz własne słowa, które
-dla ciebie mają jakieś znaczenie – będą to *zmienne*. Będziesz mieć dużą swobodę
-w wyborze nazw dla swoich zmiennych, ale nie możesz używać żadnych zastrzeżonych
-słów Pythona jako nazwy zmiennej.
+W przeciwieństwie do zwykłych języków stosowanych przez ludzi do codziennej komunikacji,
+słownictwo Pythona jest w rzeczywistości dość skromne. To "słownictwo" nazywamy "słowami zastrzeżonymi". 
+Są to wyrazy, które mają dla Pythona szczególne znaczenie. Gdy Python widzi te słowa w 
+programie, to mają one dla niego jedno i tylko jedno znaczenie. Później, już podczas
+pisania programów, stworzysz własne słowa, które dla Ciebie będą miały jakieś specjalne znaczenie – będą 
+to *zmienne*. Będziesz mieć dużą swobodę w wyborze nazw dla swoich zmiennych, 
+za wyjątkiem używania zastrzeżonych słów Pythona.
 
-Gdy trenujemy psa, używamy specjalnych słów, takich jak "siad", "zostań" i 
-"aport". Kiedy rozmawiasz z psem i nie używasz żadnych zastrzeżonych słów,
-to po prostu patrzy na ciebie z pytającym wyrazem twarzy, dopóki nie powiesz
-zastrzeżonego słowa. Na przykład, jeśli powiesz: "chciałbym aby więcej ludzi
+Gdy trenujemy psa, używamy specjalnych słów, np. "siad", "zostań" i 
+"aport". Kiedy rozmawiasz z psem i nie używasz żadnych specjalnych (zastrzeżonych) słów,
+to po prostu patrzy na Ciebie z pytającym wyrazem twarzy tak długo, aż nie powiesz
+zastrzeżonego słowa. Np. jeśli powiesz: "chciałbym aby więcej ludzi
 chodziło na spacer po to by poprawić ich ogólny stan zdrowia", większość psów 
 prawdopodobnie usłyszy: "bla bla bla *spacer* bla bla bla bla". Dzieje się tak,
-ponieważ "spacer" jest zarezerwowanym słowem w języku komunikacji z psami. 
-Natomiast wiele wskazuje na to, że język komunikacji między ludźmi a kotami 
-nie ma zastrzeżonych słów^[<https://xkcd.com/231/>].
+ponieważ "spacer" jest specjalnym słowem w języku komunikacji z psami. 
+Natomiast wiele wskazuje na to, że język do komunikacji ludzi z kotami 
+nie ma żadnych zastrzeżonych słów^[<https://xkcd.com/231/>].
 
 Lista zastrzeżonych słów języka, w którym ludzie komunikują się z Pythonem,
 zawiera następujące wyrazy:
@@ -227,14 +224,13 @@ zawiera następujące wyrazy:
     continue  for       lambda      try
     def       from      nonlocal    while    
 
-To tyle, a dodatkowo w przeciwieństwie do psa, Python jest już w pełni 
-wyszkolony. Kiedy powiesz "try", Python wykona polecenie "try" bezbłędnie 
-za każdym razem gdy je wypowiesz.
+I tyle. Dodatkowo, w przeciwieństwie do psa, Python jest już w pełni 
+wyszkolony. Za każdym razem gdy wypowiesz słowo "try", Python bezbłędnie wykona polecenie "try".
 
-W odpowiednim czasie poznamy powyższe zastrzeżone słówa oraz to kiedy ich 
-używać, ale na razie skupimy się na odpowiedniku słowa "daj głos" w Pythonie
-(w języku człowiek-pies). Dobrą rzeczą we wskazywaniu Pythonowi, że ma "dać
-głos", jest to, że możemy mu nawet powiedzieć co ma powiedzieć, przekazując mu
+W odpowiednim czasie poznamy powyższe zastrzeżone słowa oraz to kiedy ich 
+używać, ale na razie skupimy się na Pythonowym odpowiedniku słowa "daj głos", które
+jest używane w komunikacji między człowiekiem a psem. Dobrą rzeczą we wskazywaniu Pythonowi, że ma "dać
+głos", jest to, że możemy mu nawet wskazać co ma powiedzieć, przekazując mu
 wiadomość pomiędzy apostrofami:
 
 \index{apostrof}
@@ -245,28 +241,27 @@ print('Witaj świecie!')
 ~~~~
 
 I oto napisaliśmy w Pythonie nasze pierwsze poprawne składniowo zdanie. Nasze
-zdanie zaczyna się od funkcji *print*, po której następuje ujęty w apostrofy 
-ciąg wybranego przez nas tekstu. Ciągi tekstu w instrukcjach *print* są ujęte w
+zdanie zaczyna się od funkcji `print()`, po której następuje ujęty w apostrofy 
+ciąg wybranego przez nas tekstu. Napisy używane w funkcjach `print()` są ujęte w
 apostrofy lub cudzysłowy. Apostrofy i cudzysłowy robią to samo; większość ludzi
-używa apostrofów z wyjątkiem przypadków, w których apostrof pojawia się w ciągu
-tekstu.
+używa apostrofów, z wyjątkiem przypadków, w których apostrof pojawia się w samym
+napisie.
 
 Rozmawianie z Pythonem
 ----------------------
 
-Teraz, gdy mamy już słowo i proste zdanie, które znamy w Pythonie, musimy 
+Mamy już słowo i proste zdanie, które znamy w Pythonie. Teraz musimy 
 wiedzieć w jaki sposób rozpocząć rozmowę z Pythonem, tak aby przetestować nasze
 nowe umiejętności językowe.
 
 Zanim będziesz mógł rozmawiać z Pythonem, musisz najpierw zainstalować na swoim
-komputerze oprogramowanie Pythona oraz nauczyć się jak uruchomić Pythona na 
-swoim komputerze. Jest to zbyt wiele szczegółów jak na ten rozdział, więc
-sugeruję zajrzeć na stronę <https://py4e.pl>, gdzie umieściłem
-szczegółowe instrukcje i zrzuty ekranu dotyczące konfiguracji i uruchamiania
-Pythona w systemach komputerów Macintosh i Windows. W pewnym momencie znajdziesz
-się w terminalu lub oknie wiersza poleceń i wpiszesz *python*, a interpreter
-Pythona rozpocznie pracę w trybie interaktywnym i pojawi się mniej więcej
-w następujący sposób:
+komputerze oprogramowanie Pythona oraz nauczyć się jak je uruchomić. Jest to 
+zbyt wiele szczegółów jak na ten rozdział, więc sugeruję zajrzeć na stronę
+<https://py4e.pl>, gdzie umieściłem instrukcje dotyczące konfiguracji i 
+uruchamiania Pythona na systemach Windows i macOS oraz w środowisku chmurowym PythonAnywhere.
+W każdym z przypadków w pewnym momencie znajdziesz się w oknie wiersza poleceń lub w terminalu, wpiszesz `python3`,
+potwierdzisz klawiszem `Enter`, a interpreter Pythona rozpocznie pracę w trybie interaktywnym,
+pojawiając się mniej więcej w następujący sposób:
 
 \index{tryb interaktywny}
 
@@ -278,12 +273,12 @@ information.
 >>>
 ~~~~
 
-Znak zachęty `>>>` jest sposobem zadawania Tobie pytań przez interpreter języka
-Python "Co mam teraz zrobić?". Python jest teraz gotowy do rozmowy z tobą.
-Wszystko co musisz teraz wiedzieć, to jak mówić w języku Pythona.
+Znak zachęty `>>>` jest sposobem, w który interpreter języka Python zadaje Tobie
+pytanie "Co mam teraz zrobić?". Python jest teraz gotowy do rozmowy z Tobą.
+Teraz musisz się tylko dowiedzieć jak mówić w języku Python.
 
 Powiedzmy na przykład, że nie znałeś nawet najprostszych słów lub zdań w języku
-Pythona. Możesz użyć standardowego zwrotu, z którego korzystają astronauci gdy
+Python. Możesz użyć standardowego zwrotu, z którego korzystają astronauci gdy
 lądują na odległej planecie i próbują rozmawiać z jej mieszkańcami:
 
 ~~~~ {.python}
@@ -295,8 +290,8 @@ SyntaxError: invalid syntax
 >>>
 ~~~~
 
-Nie idzie nam za dobrze. Jeśli nie wymyślisz czegoś szybko, mieszkańcy planety
-prawdopodobnie dźgną cię włóczniami, rzucą na rożen, upieczą na ogniu i zjedzą
+Nie idzie Ci za dobrze. Jeśli nie wymyślisz czegoś szybko, mieszkańcy planety
+prawdopodobnie dźgną Ciebie swoimi włóczniami, rzucą na rożen, upieką na ogniu i zjedzą
 na obiad.
 
 Na szczęście na czas podróży zabrałeś kopię tej książki, a następnie 
@@ -307,7 +302,7 @@ przewróciłeś kartki na tę stronę i spróbowałeś jeszcze raz:
 Witaj świecie!
 ~~~~
 
-Wygląda to o wiele lepiej, więc spróbuj przekazać trochę więcej komunikatów:
+Wygląda to teraz o wiele lepiej, więc spróbuj przekazać trochę więcej komunikatów:
 
 ~~~~ {.python}
 >>> print('Musisz być legendarnym bogiem, który pochodzi z nieba')
@@ -325,18 +320,18 @@ SyntaxError: Missing parentheses in call to 'print'
 ~~~~
 
 Przez jakiś czas rozmowa szła całkiem dobrze, ale potem popełniłeś malutki błąd
-używając języka Python, a Python ponownie pokazał swoje pazury.
+i Python ponownie pokazał swoje pazury.
 
-W tym miejscu powinieneś również zdać sobie sprawę, że podczas gdy Python jest
-niesamowicie złożony i wydajny oraz bardzo wybredny pod względem składni 
-używanej do komunikacji z nim, Python *nie* jest inteligentny. Tak naprawdę po
-prostu rozmawiasz ze sobą, ale używając odpowiedniej składni.
+W tym miejscu powinieneś również zdać sobie sprawę, że z jednej strony Python jest
+niesamowicie złożony i wydajny oraz jednocześnie jest bardzo wybredny pod względem składni 
+używanej do komunikowania się z nim. Ale z drugiej strony, Python *nie* jest inteligentny.
+Tak naprawdę po prostu rozmawiasz ze sobą, ale używając odpowiedniej składni.
 
-W pewnym sensie, kiedy używasz programu napisanego przez kogoś innego, to
-rozmowa odbywa się między tobą a innymi programistami, gdzie Python działa jako
+W pewnym sensie, gdy używasz programu napisanego przez kogoś innego, to
+rozmowa odbywa się między Tobą a innym programistą, a Python działa jako
 pośrednik. Python to sposób, dzięki któremu twórcy programów mogą wyrazić jak ma
-przebiegać taka rozmowa. W kilku kolejnych rozdziałach będziesz jednym z tych
-programistów używających Pythona do rozmów z użytkownikami twojego programu.
+przebiegać taka rozmowa. W następnych rozdziałach będziesz jednym z tych
+programistów, którzy używają Pythona do rozmów z użytkownikami Twojego programu.
 
 Zanim opuścimy naszą pierwszą rozmowę z interpreterem Pythona, prawdopodobnie
 powinieneś znać właściwy sposób na "pożegnanie się" podczas interakcji z
@@ -355,21 +350,22 @@ SyntaxError: invalid syntax
 >>> quit()
 ~~~~
 
-Możesz zauważyć, że błąd jest różny dla pierwszych dwóch niepoprawnych prób.
-Drugi błąd jest inny, ponieważ *if* jest słowem zastrzeżonym, a Python zobaczył
-to słowo i pomyślał, że próbujemy coś powiedzieć, ale składnia zdania była
+Możesz zauważyć, że błąd jest różny dla pierwszych dwóch niepoprawnych prób zakończenia pracy.
+Drugi błąd jest inny, ponieważ `if` jest słowem zastrzeżonym, a Python zobaczył
+to słowo i pomyślał, że próbujemy mu coś powiedzieć, ale składnia zdania była
 błędna.
 
-Właściwym sposobem "pożegnania się" z Pythonem jest wpisanie *quit()* za
-interaktywnym znakiem zachęty `>>>`. Odgadnięcie tego pewnie zajęłoby ci trochę
-czasu, więc posiadanie książki pod ręką prawdopodobnie okaże się pomocne.
+Właściwym sposobem "pożegnania się" z Pythonem jest wpisanie za
+interaktywnym znakiem zachęty `>>>` instrukcji `quit()`. Zapewne dojście do tego zajęłoby 
+Ci trochę czasu, więc jak widzisz, posiadanie tej książki pod ręką okaże się w
+najbliższym czasie całkiem pomocne.
 
 Terminologia: interpreter i kompilator
 -------------------------------------
 
-Python jest językiem *wysokiego poziomu*, który w założeniu ma być dla ludzi
-stosunkowo prosty do czytania i pisania oraz do odczytywania i przetwarzania
-przez komputery. Inne języki wysokiego poziomu to Java, C++, PHP, Ruby, Basic,
+Python jest językiem *wysokiego poziomu*, który w założeniu ma być
+stosunkowo prosty dla ludzi do czytania i pisania, a dla komputerów do odczytywania i przetwarzania.
+Inne języki wysokiego poziomu to Java, C++, PHP, Ruby, Basic,
 Perl, JavaScript i wiele innych. Sprzęt wewnątrz procesora nie rozumie żadnego
 z tych języków wysokiego poziomu.
 
@@ -384,18 +380,18 @@ przedstawiony w postaci zer i jedynek:
 ~~~~
 
 Język maszynowy wydaje się z pozoru dość prosty, biorąc pod uwagę, że istnieją
-tylko zera i jedynki, ale jego składnia jest jeszcze bardziej złożona i znacznie
-bardziej skomplikowana niż Python. Tak więc bardzo niewielu programistów
-kiedykolwiek pisze w języku maszynowym. Zamiast tego tworzymy różne translatory,
-tak aby umożliwić programistom pisanie w językach wysokiego poziomu takich jak
-Python lub JavaScript, a te translatory konwertują programy na język maszynowy
+tylko zera i jedynki, ale w porównaniu z Pythonem jego składnia jest jeszcze bardziej złożona i znacznie
+bardziej skomplikowana. W konsekwencji bardzo niewielu programistów
+pisze cokolwiek w języku maszynowym. Zamiast tego tworzone są różne translatory 
+umożliwiające programistom pisanie w językach wysokiego poziomu takich jak
+Python lub JavaScript, a następnie te translatory konwertują programy na język maszynowy
 w celu ich wykonania przez procesor.
 
 Ponieważ język maszynowy jest powiązany ze sprzętem komputerowym, język 
 maszynowy nie jest *przenośny* w przypadku różnych typów sprzętu. Programy
 napisane w językach wysokiego poziomu można przenosić między różnymi
-komputerami, używając innego interpretera na nowej maszynie lub rekompilując kod
-w celu utworzenia wersji językowej programu dla nowej maszyny.
+komputerami, używając innego interpretera na nowej maszynie lub ponownie kompilując kod
+w celu utworzenia wersji programu dla nowej maszyny.
 
 Translatory języków programowania dzielą się na dwie ogólne kategorie: 
 (1) interpretery i (2) kompilatory.
@@ -403,12 +399,12 @@ Translatory języków programowania dzielą się na dwie ogólne kategorie:
 *Interpreter* odczytuje kod źródłowy programu w postaci napisanej przez
 programistę, analizuje kod źródłowy i w locie interpretuje instrukcje. Python to
 interpreter i kiedy uruchamiamy Pythona interaktywnie, to możemy wpisać wiersz 
-(zdanie) w języku Pythona, a Python natychmiast to przetworzy i jest gotowy
-do wpisania kolejnego wiersza w języku Pythona.
+(zdanie) w języku Python, a interpreter Pythona natychmiast to przetworzy i jest gotowy
+do wpisania kolejnej linii w języku Python.
 
-Niektóre wiersze w języku Pythona mówią Pythonowi, że chcesz aby zapamiętał on 
-jakąś wartość na później. Musimy wybrać nazwę dla tej wartości do zapamiętania
-i możemy użyć tej symbolicznej nazwy do późniejszego pobrania tej wartości.
+Niektóre wiersze napisane w języku Python mówią interpreterowi Pythona, że chcesz aby zapamiętał on 
+jakąś wartość na później. Musimy wybrać nazwę dla tej zapamiętywanej wartości, a potem
+możemy użyć tej umownej nazwy do pobrania tej wartości.
 Używamy terminu *zmienna* w odniesieniu do etykiet, których używamy odnosząc się
 do tych przechowywanych danych.
 
@@ -423,8 +419,8 @@ do tych przechowywanych danych.
 ~~~~
 
 W tym przykładzie prosimy Pythona, aby zapamiętał wartość sześć i użył etykiety
-*x* abyśmy mogli później pobrać tę wartość. Sprawdzamy za pomocą *print* czy 
-Python faktycznie zapamiętał wartość. Następnie prosimy Pythona o pobranie *x*,
+*x* abyśmy mogli później pobrać tę wartość. Sprawdzamy za pomocą funkcji `print()` czy 
+Python faktycznie zapamiętał tę wartość. Następnie prosimy Pythona o pobranie *x*,
 pomnożenie przez siedem i umieszczenie nowo obliczonej wartości w *y*. Następnie
 prosimy Pythona o wyświetlenie aktualnej wartości znajdującej się w *y*.
 
@@ -435,17 +431,17 @@ Napisaliśmy nasz pierwszy prosty akapit z czterema zdaniami w logicznej i
 zrozumiałej kolejności.
 
 Naturą *interpretera* jest możliwość prowadzenia interaktywnej rozmowy, tak jak
-pokazano powyżej. *Kompilator* musi otrzymać w pliku cały program, potem
+pokazano powyżej. Z kolei *kompilator* najpierw musi otrzymać w pliku cały program, potem
 uruchamia proces tłumaczenia kodu źródłowego wysokiego poziomu na język
-maszynowy, a następnie kompilator umieszcza wynikowy język maszynowy w pliku
+maszynowy, a następnie kompilator umieszcza w pliku wynikowy język maszynowy
 w celu jego późniejszego wykonania.
 
 Jeśli masz system Windows, często te wykonywalne programy maszynowe mają
 przyrostek ".exe" lub ".dll", które oznaczają odpowiednio "plik wykonywalny" i 
-"bibliotekę łączoną dynamicznie". W systemach Linux i Macintosh nie ma
+"bibliotekę łączoną dynamicznie". W systemach Linux i macOS nie ma
 przyrostka, który jednoznacznie określałby plik jako wykonywalny.
 
-Gdybyś miał otworzyć plik wykonywalny w edytorze tekstu, to wyglądałby on 
+Gdybyś otworzył plik wykonywalny w edytorze tekstu, to wyglądałby on 
 jak pisany przez szaleńca i byłby nieczytelny:
 
 ~~~~
@@ -461,32 +457,32 @@ Nie jest łatwo czytać ani pisać w języku maszynowym, więc dobrze, że mamy
 *interpretery* i *kompilatory*, które pozwalają nam pisać w językach wysokiego
 poziomu takich jak Python czy C.
 
-W tym miejscu w naszej dyskusji o kompilatorach i interpreterach powinieneś
-trochę się zastanowić nad samym interpreterem Pythona. W jakim języku jest on
-napisany? Czy jest napisany w języku kompilowanym? Gdy wpiszemy "python", to co 
-właściwie się dzieje?
+W tym miejscu w naszej dyskusji o kompilatorach i interpreterach powinieneś już się
+trochę zastanawiać nad samym interpreterem Pythona. W jakim języku jest on
+napisany? Czy jest napisany w języku kompilowanym? Gdy wpisujemy w terminalu "python3", to co 
+się właściwie dzieje?
 
 Interpreter Pythona jest napisany w języku wysokiego poziomu o nazwie "C".
 Możesz spojrzeć na rzeczywisty kod źródłowy interpretera Pythona, przechodząc na
-stronę <https://www.python.org> i sprawdzając kod źródłowy. Tak 
+stronę <https://www.python.org> i sprawdzając jego kod źródłowy. Tak 
 więc Python sam w sobie jest programem i jest skompilowany do kodu maszynowego.
-Gdy zainstalowałeś język Python na swoim komputerze (lub zainstalował go
-sprzedawca), to skopiowałeś do systemu kopię programu Python przetłumaczonego do
-kodu maszynowego. W systemie Windows wykonywalny kod maszynowy samego Pythona
-prawdopodobnie znajduje się w pliku o nazwie takiej jak:
+Gdy zainstalowałeś na swoim komputerze Pythona (lub zainstalował go
+dostawca sprzętu), to w rzeczywistości skopiowałeś do swojego systemu kopię
+programu Python przetłumaczonego na kod maszynowy. W systemie Windows wykonywalny
+kod maszynowy samego Pythona prawdopodobnie znajduje się w pliku o nazwie takiej jak:
 
 ~~~~
-C:\Python35\python.exe
+C:\Python39\python.exe
 ~~~~
 
-Jest to więcej niż faktycznie musisz wiedzieć by zostać programistą Pythona, ale
-czasami warto już na początku odpowiedzieć sobie na te dręczące pytania.
+Powyższe informacje stanowią większą wiedzę od tej, która wystarcza do zostania programistą Pythona.
+Niemniej, czasami warto już na początku odpowiedzieć sobie na intrygujące pytania.
 
 Pisanie programu
 ----------------
 
 Wpisywanie poleceń do interpretera Pythona to świetny sposób na
-eksperymentowanie z funkcjami Pythona, ale nie jest zalecane do rozwiązywania
+eksperymentowanie z jego funkcjami, ale nie jest zalecane do rozwiązywania
 bardziej złożonych problemów.
 
 Gdy chcemy napisać program, to używamy edytora tekstu po to by zapisać
@@ -495,51 +491,61 @@ konwencją, skrypty w Pythonie mają nazwy kończące się na `.py`.
 
 \index{skrypt}
 
-Aby uruchomić skrypt, musisz podać interpreterowi Pythona nazwę pliku. W oknie
-wiersza poleceń wpiszesz `python hello.py` w następujący sposób:
+Utwórz w katalogu roboczym plik o nazwie `hello.py`, który zawiera jedną linię:
+
+~~~~ {.python}
+print('Witaj świecie!')
+~~~~
+
+Wyświetlmy w terminalu zawartość pliku:
 
 ~~~~ {.bash}
 $ cat hello.py
 print('Witaj świecie!')
-$ python hello.py
+~~~~
+
+Symbol "\$" to znak zachęty systemu operacyjnego, a `cat hello.py` wyświetla
+nam zawartość pliku `hello.py`, który składa się z jednej linii.
+
+Aby uruchomić skrypt, musiy podać interpreterowi Pythona nazwę pliku:
+
+~~~~ {.bash}
+$ python3 hello.py
 Witaj świecie!
 ~~~~
 
-Symbol "\$" to znak zachęty systemu operacyjnego, a "cat hello.py" wyświetla
-nam, że plik "hello.py" zawiera jednolinijkowy program w języku Python do 
-wyświetlania ciągu znaków.
-
 Uruchamiamy interpreter języka Python i mówimy mu aby wczytał kod źródłowy z
-pliku "hello.py" (zamiast interaktywnie pytać nas o kolejne wiersze kodu
+pliku `hello.py` (zamiast interaktywnie pytać nas o kolejne wiersze kodu
 Pythona).
 
-Zauważysz, że nie było potrzeby umieszczania *quit()* na końcu pliku programu
-Pythona. Gdy Python wczytuje kod źródłowy z pliku, to wie, że ma zakończyć pracę
-gdy osiągnie koniec pliku.
+Zauważysz, że nie było potrzeby umieszczania na końcu pliku programu
+instrukcji `quit()`. Gdy Python wczytuje kod źródłowy z pliku, to wie, że ma zakończyć pracę
+gdy dojdzie do jego końca.
 
 Czym jest program?
 ------------------
 
 W najbardziej podstawowej formie definicja *programu* to sekwencja instrukcji
 Pythona, które została stworzona po to by coś zrobić. Nawet nasz prosty skrypt
-*hello.py* jest programem. Jest to program jednowierszowy i co prawda nie jest
-on szczególnie przydatny, ale w najściślejszej definicji jest to program w
+`hello.py` jest programem. Jest to program jednowierszowy i co prawda nie jest
+on szczególnie przydatny, ale w najściślejszej definicji jest to program napisany w
 języku Python.
 
 Najłatwiej jest zrozumieć czym jest program, myśląc o problemie, dla którego
-można ntworzyć program rozwiązujący ten problem, a następnie patrząc właśnie
+można stworzyć program rozwiązujący ten problem, a następnie patrząc właśnie
 na ten program, który rozwiązuje ten problem.
 
 Załóżmy, że prowadzisz badania w dziedzinie socjologii obliczeniowej bazując
 na postach umieszczanych na Facebooku i interesuje Cię najczęściej używane słowo
 w danej serii postów. Możesz wydrukować strumień postów na Facebooku i przejrzeć
 tekst w poszukiwaniu najpopularniejszego słowa, ale zajęłoby to dużo czasu i
-byłoby to bardzo podatne na pomyłki. Sprytniej byłoby napisać program w
-Pythonie, który szybko i dokładnie poradzi sobie z tym zadaniem, dzięki czemu
-będziesz mógł spędzić weekend na robieniu czegoś fajnego.
+podejście to byłoby bardzo podatne na pomyłki. Sprytniej byłoby napisać w Pythonie program,
+który szybko i dokładnie poradzi sobie z tym zadaniem, dzięki czemu zamiast marnować
+weekend na przeglądanie wydruków postów, będziesz mógł spędzić końcówkę tygodnia
+na robieniu innych fajnych rzeczy.
 
-Dla przykładu, spójrz na poniższy tekst o klaunie i samochodzie. Spójrz na tekst
-i policz jakie słowo jest najczęściej używane oraz ile razy występuje.
+Dla przykładu, spójrz na poniższy tekst o klaunie i samochodzie. Wskaż które 
+słowo jest najczęściej używane oraz ile razy wystąpiło w tekście:
 
 ~~~~
 the clown ran after the car and the car ran into the tent
@@ -547,13 +553,13 @@ and the tent fell down on the clown and the car
 ~~~~
 
 Następnie wyobraź sobie, że wykonujesz to zadanie patrząc na miliony linii
-tekstu. Szczerze mówiąc, szybsze byłoby nauczenie się języka Python i napisanie
-programu w języku Python do liczenia słów, niż ręczne analizowanie słów.
+tekstu. Szczerze mówiąc, już szybsze byłoby nauczenie się języka Python i napisanie
+w nim programu do zliczania słów.
 
 Jeszcze lepszą informacją jest to, że wymyśliłem już prosty program do
 znajdowania najczęściej występującego słowa w pliku tekstowym. Napisałem go,
 przetestowałem, a teraz oddaję Ci go do użytku, tak abyś mógł zaoszczędzić
-trochę czasu.
+trochę czasu:
 
 \VerbatimInput{../code3/words.py}
 \begin{trinketfiles}
@@ -562,16 +568,16 @@ trochę czasu.
 
 Nie musisz nawet znać języka Python, aby korzystać z tego programu. Będziesz
 musiał przejść przez rozdział 10 tej książki aby w pełni zrozumieć niesamowite
-techniki Pythona, które zostały użyte do stworzenia tego programu. Jesteś
+techniki Pythona, które zostały użyte do stworzenia tego programu. Ale teraz jesteś
 użytkownikiem końcowym, więc po prostu korzystasz z programu i zachwycasz się
-jego sprytem oraz oszczędnością ręcznego wysiłku. Po prostu wpisujesz powyższy
-kod do pliku o nazwie *words.py* i go uruchamiasz, lub pobierasz kod źródłowy ze
-strony <https://py4e.pl/code3/> i uruchamiasz.
+jego sprytem oraz oszczędnością ręcznego wysiłku. Po prostu zapisujesz powyższy
+kod w pliku o nazwie `words.py` (lub pobierasz kod źródłowy ze
+strony <https://py4e.pl/code3/>) i go uruchamiasz.
 
 \index{program}
 
 Jest to dobry przykład na to jak Python i jego język działają jako pośrednicy
-między tobą (użytkownikiem końcowym) a mną (programistą). Python to dla nas
+między Tobą (użytkownikiem końcowym) a mną (programistą). Python to dla nas
 sposób na wymianę przydatnych sekwencji instrukcji (tj. programów) we wspólnym
 języku, z którego może korzystać każdy kto zainstaluje Pythona na swoim
 komputerze. Nikt z nas nie rozmawia *z Pythonem*, a zamiast tego komunikujemy
@@ -581,40 +587,40 @@ Elementy składowe programów
 ---------------------------
 
 W następnych kilku rozdziałach dowiemy się więcej o słownictwie, strukturze
-zdań, akapitów i opowieści w Pythonie. Dowiemy się o zaawansowanych
-możliwościach Pythona oraz o tym jak łączyć te możliwości, tak aby tworzyć 
+zdań, akapitów i opowieści pisanych w Pythonie. Dowiemy się o zaawansowanych
+możliwościach Pythona oraz o tym jak je łączyć, tak aby tworzyć 
 przydatne programy.
 
-Istnieje kilka schematów pojęciowych niskiego poziomu, których używamy do
+Istnieje kilka schematów pojęciowych niskiego poziomu, których używamy podczas
 tworzenia programów. Konstrukcje te nie są przeznaczone tylko dla programów
 pisanych w Pythonie – są one częścią każdego języka programowania, od języka
 maszynowego po języki wysokiego poziomu.
 
 wejście
-:   Uzyskaj dane ze "świata zewnętrznego". Może to być odczyt danych z pliku lub
+:   Dane pozyskane ze "świata zewnętrznego". Może to być odczyt danych z pliku lub
     nawet jakiegoś urządzenia takiego jak mikrofon lub GPS. W naszych
     początkowych programach dane wejściowe będą pochodzić od użytkownika
     wpisującego dane na klawiaturze.
 
 wyjście
-:   Wyświetl wyniki programu na ekranie, zapisze je w pliku lub na przykład 
-    przekaż je do urządzenia takiego jak głośnik w celu odtworzenia muzyki lub
+:   Wyniki programu wyświetlone na ekranie, zapisane w pliku lub na przykład 
+    przekazane do urządzenia takiego jak głośnik w celu odtworzenia muzyki lub
     wygłoszenia tekstu.
 
 wykonanie sekwencyjne
-:   Wykonaj instrukcje jedna po drugiej w tej kolejności, w której występują w
+:   Wykonanie serii instrukcji jedna po drugiej w tej kolejności, w której występują w
     skrypcie.
 
 wykonanie warunkowe
-:   Sprawdź czy występują określone warunki, a następnie wykonaj lub pomiń 
-    sekwencję instrukcji.
+:   Sprawdzenie czy zachodzą określone warunki, a następnie wykonanie lub pominięcie 
+    sekwencji instrukcji.
 
 wykonanie wielokrotne
-:   Wykonaj kilka zestawów instrukcji wielokrotnie, zwykle z pewnymi zmianami.
+:   Wykonanie kilku zestawów instrukcji wielokrotnie, zwykle z pewnymi zmianami.
 
 ponowne użycie
-:   Napisz zestaw instrukcji raz i nadaj im nazwę, a następnie w miarę potrzeb 
-    użyj tych instrukcji w całym programie.
+:   Napisanie zestawu instrukcji raz i nadanie im nazwę, a następnie w miarę potrzeb 
+    używanie tych instrukcji w całym programie poprzez użycie tej nazwy.
 
 Brzmi to zbyt prosto by mogło być prawdziwe, no i oczywiście nigdy nie jest to
 takie proste. To tak jakby powiedzieć, że chodzenie to po prostu "stawianie
@@ -622,21 +628,21 @@ jednej stopy przed drugą". "Sztuka" pisania programu polega na wielokrotnym
 komponowaniu i splataniu ze sobą powyższych podstawowych elementów, a wszystko
 to w celu wytworzenia czegoś, co jest przydatne dla użytkowników tego programu.
 
-Powyższy program do liczenia słów bezpośrednio używa wszystkich tych wzorców z
-wyjątkiem jednego.
+Pokazany wcześniej program do zliczania słów bezpośrednio używa prawie wszystkich (za wyjątkiem jednego)
+powyższych schematów pojęciowych.
 
 Co może pójść nie tak?
------------------------------
+----------------------
 
 Jak widzieliśmy w naszych pierwszych rozmowach z Pythonem, musimy bardzo 
-precyzyjnie komunikować się gdy piszemy kod w Pythonie. Najmniejsze odchylenie 
-lub błąd spowoduje, że Python przestanie patrzeć na Twój program.
+precyzyjnie komunikować się gdy piszemy kod. Najmniejsze odchylenie 
+lub błąd spowoduje, że Python przestanie w ogóle patrzeć na Twój program.
 
 Początkujący programiści często przyjmują fakt, że Python nie pozostawia miejsca
 na błędy, jako dowód na to, że Python jest podły, nienawistny i okrutny. Podczas
 gdy Python wydaje się lubić wszystkie pozostałe osoby, Python zna programistów
 osobiście i żywi do nich urazę. Z powodu tej urazy Python bierze nasze doskonale
-napisane programy i odrzuca je jako "nieodpowiednie" tylko po to by nas drażnić.
+napisane programy i odrzuca je jako "nieodpowiednie" tylko po to, by nas drażnić.
 
 ~~~~ {.python}
 >>> primt 'Witaj świecie!'
@@ -665,9 +671,9 @@ SyntaxError: invalid syntax
 Niewiele można zyskać kłócąc się z Pythonem. To tylko narzędzie. Nie ma emocji
 i jest szczęśliwy oraz gotowy by Ci służyć kiedy tylko tego potrzebujesz.
 Komunikaty o błędach brzmią ostro, ale są one po prostu wezwaniem pomocy
-przez Pythona. Sprawdził co wpisałeś i po prostu nie może tego zrozumieć.
+przez Pythona. Interpreter sprawdził co wpisałeś i po prostu nie może tego zrozumieć.
 
-Python jest bardziej podobny do psa, który kocha Cię bezwarunkowo, zna kilka
+Python jest bardzo podobny do psa, który kocha Cię bezwarunkowo, zna kilka
 kluczowych słów, które rozumie, patrzy na Ciebie ze słodkim wyrazem twarzy
 (`>>>`) i czeka aż powiesz coś, co zrozumie. Gdy Python mówi "SyntaxError:
 invalid syntax", to po prostu macha ogonem i mówi: "Wydawało mi się, że coś
@@ -678,13 +684,13 @@ W miarę jak Twoje programy będą coraz bardziej wyrafinowane, napotkasz trzy
 ogólne typy błędów:
 
 Błędy składniowe
-:   Błędy składniowe (ang. *syntax errors*) to pierwsze błędy, które popełnisz,
-    i zarazem najłatwiejsze do naprawienia. Błąd składniowy oznacza, że
+:   Błąd składniowy (ang. *syntax error*) to pierwszy błąd, który popełnisz,
+    i zarazem najłatwiejszy do naprawienia. Błąd tego typu oznacza, że
     naruszyłeś "gramatyczne" zasady Pythona. Python robi wszystko co w jego mocy
     by wskazać wiersz i znak, w którym zauważył, że jest zdezorientowany.
     Jedynym trudnym problemem błędów składniowych jest to, że czasami błąd,
-    który wymaga naprawy, występuje w programie w rzeczywistości wcześniej 
-    niż w miescu, w którym Python *zauważył*, że został zdezorientowany. Tak
+    który wymaga naprawy, w rzeczywistości występuje w programie znacznie wcześniej 
+    niż w miejscu, w którym Python *zauważył*, że został zdezorientowany. Tak
     więc linia i znak, które Python wskazuje w błędzie składniowym, mogą być
     tylko punktem wyjścia dla Twojego śledztwa.
 
@@ -696,7 +702,7 @@ Błędy logiczne
     idź do biblioteki, a następnie zakręć butelkę".
 
 Błędy semantyczne
-:   Błąd semantyczny (ang. *semantic error*) występuje gdy opis kroków, które
+:   Błąd semantyczny (ang. *semantic error*) występuje wtedy, gdy opis kroków, które
     należy wykonać, jest idealny pod względem składniowym i podany we właściwej
     kolejności, ale w programie jest po prostu pomyłka. Program jest całkowicie
     poprawny, ale nie robi tego co *zamierzałeś* by zrobił. Prostym przykładem
@@ -706,7 +712,7 @@ Błędy semantyczne
     stronie". Twój znajomy jest bardzo spóźniony i dzwoni do Ciebie, aby
     powiedzieć, że są na farmie i chodzą za stodołą, ale nie ma tu śladu
     restauracji. Następnie pytasz: "Skręciłeś w lewo czy w prawo na stacji
-    benzynowej?". A oni mówią: "Postępowałem dokładnie zgodnie z twoimi 
+    benzynowej?". A oni mówią: "Postępowałem dokładnie zgodnie z Twoimi 
     wskazówkami, mam je zapisane, jest napisane, żeby skręcić w lewo i jechać
     jeden kilometr do stacji benzynowej". Następnie mówisz: "Bardzo mi przykro,
     bo chociaż moje instrukcje były poprawne składniowo, to niestety zawierały
@@ -716,12 +722,12 @@ We wszystkich trzech typach błędów Python po prostu stara się zrobić dokła
 to, o co prosiłeś.
 
 Debugowanie
----------
+-----------
 
 \index{debugowanie}
 
-Gdy Python zwraca błąd, a nawet gdy daje wynik inny niż zamierzony, to 
-rozpoczyna poszukiwanie przyczyny błędu. Debugowanie to proces znajdowania w
+Gdy Python zwraca błąd lub wynik inny od zamierzonego, to 
+rozpoczynamy poszukiwanie przyczyny błędu. *Debugowanie* to proces znajdowania w
 kodzie przyczyny błędu. Podczas debugowania programu, a zwłaszcza podczas pracy
 nad poważnym błędem, należy spróbować czterech rzeczy:
 
@@ -742,7 +748,7 @@ rozmyślanie
 
 wycofanie się
 :   W pewnym momencie najlepszą rzeczą, którą można zrobić, jest wycofanie się,
-    tj. cofnięcie ostatnich zmian aż wrócisz do programu, który działa i który
+    tj. cofnięcie ostatnich zmian do momentu aż wrócisz do programu, który działa i który
     rozumiesz. Następnie możesz rozpocząć rekonstrukcję programu.
 
 Początkujący programiści czasami grzęzną przy jednej z tych czynności i
@@ -755,7 +761,7 @@ błędów.
 
 Na przykład przeczytanie kodu może pomóc gdy problem jest błędem
 typograficznym, ale nie pomoże gdy problem dotyczy niezrozumienia pewnych
-konceptów i pojęć. Jeśli nie rozumiesz co robi Twój program, to możesz go 
+konceptów i pojęć. Jeśli nie rozumiesz co Twój program robi, to możesz go 
 przeczytać i ze 100 razy, a i tak nigdy nie zobaczysz błędu, ponieważ błąd tkwi
 w Twojej głowie.
 
@@ -763,8 +769,8 @@ w Twojej głowie.
 
 Przeprowadzanie eksperymentów może pomóc, zwłaszcza jeśli przeprowadzasz małe,
 proste testy. Ale jeśli przeprowadzasz eksperymenty bez myślenia lub czytania
-kodu, możesz wpaść w schemat, który nazywam "programowaniem losowym", który
-jest procesem dokonywania przypadkowych zmian, dopóki program nie zrobi
+kodu, możesz wpaść w schemat, który nazywam "programowaniem losowym", będący 
+procesem dokonywania przypadkowych zmian tak długo, aż program nie zrobi
 właściwej rzeczy. Nie trzeba dodawać, że programowanie losowe może zająć dużo
 czasu.
 
@@ -782,44 +788,44 @@ skończysz zadawać pytanie.
 
 Ale nawet najlepsze techniki debugowania zawiodą jeśli jest zbyt wiele błędów
 lub jeśli kod, który próbujesz naprawić, jest zbyt duży i skomplikowany. Czasami
-najlepszą opcją jest wycofanie się i uproszczanie programu tak długo, aż
-dojdziesz do czegoś, co działa i co rozumiesz.
+najlepszą opcją jest wycofanie się i upraszczanie programu tak długo, aż
+dojdziesz do czegoś, co działa i rozumiesz.
 
 Początkujący programiści często niechętnie się wycofują, ponieważ nie mogą
 znieść usunięcia linii kodu (nawet jeśli jest błędny). Jeśli sprawi to, że
-poczujesz się lepiej, to skopiuj kod programu do innego pliku zanim zaczniesz go
-demontować. Następnie możesz wklejać po trochu z powrotem kawałki kod.
+poczujesz się lepiej, to zanim zaczniesz demontować swój kod, skopiuj go do innego pliku.
+Następnie możesz z powrotem wklejać po trochu kawałki kod.
 
 Podróż do krainy rozwoju
 ------------------------
 
-W miarę postępów przez kolejne części książki nie bój się jeśli za pierwszym
-razem przedstawiane koncepcje nie będą wydawały się do siebie pasować. Kiedy
-uczyłeś się mówić, to przez kilka pierwszych lat nie stanowiło problemu, że po
+W miarę zagłębiania się w kolejne części książki, nie bój się jeśli za pierwszym
+razem przedstawiane koncepcje nie będą wydawały się pasować do siebie. Gdy
+uczyłeś się mówić, to przez kilka pierwszych lat nie dla nikogo stanowiło problemu, że po
 prostu wydawałeś słodkie odgłosy chichotania. I nie był to problem, że przejście
 od prostego słownictwa do prostych zdań zajęło ci sześć miesięcy, a przejście od
-zdań do akapitów zajęło ci jeszcze 5-6 lat, a kilka lat więcej by móc napisać
-interesujące, kompletne, samodzielne opowiadanie.
+zdań do akapitów zajęło ci jeszcze 5-6 lat, a jeszcze kilka dodatkowych lat zajęło pisanie
+interesujących, kompletnych i samodzielnych opowiadań.
 
 Chcemy abyś nauczył się języka Python znacznie szybciej, więc w następnych
 kilku rozdziałach uczymy wszystkiego po trochu w tym samym czasie. No ale to jest
 tak jakby uczyć się nowego języka, którego przyswojenie i zrozumienie wymaga
 czasu zanim posługiwanie się nim stanie się naturalne. Prowadzi to do pewnego
-zamieszania, gdy odkrywamy i powracamy do tematów, tak abyś mógł zobaczyć
+zamieszania gdy odkrywamy i powracamy do tematów, tak abyś mógł zobaczyć
 pełny obraz, podczas gdy jednocześnie definiujemy małe fragmenty składające się
-na ten pełny obraz. Podczas gdy książka jest napisana w sposób liniowy, a jeśli
-bierzesz udział w kursie, to będzie on przebiegał w sposób liniowy, nie wahaj
-się być bardzo nieliniowym w stosunku do materiału. Spójrz do kolejnych i
-poprzednich rozdziałow i czytaj je bez stresu. Przeglądając bardziej
+na ten pełny obraz. Książka jest napisana w sposób liniowy i jeśli
+bierzesz udział w kursie, to będzie on również przebiegał w sposób liniowy, ale nie wahaj
+się być bardzo nieliniowym w stosunku do materiału. Zajrzyj do kolejnych i
+poprzednich rozdziałów i czytaj je bez stresu. Przeglądając bardziej
 zaawansowany materiał bez pełnego zrozumienia szczegółów, możesz lepiej
-zrozumieć pytanie "dlaczego?" pojawiające się w programowaniu. Przeglądając
+zrozumieć pytanie "dlaczego?", które często pojawia się w programowaniu. Przeglądając
 wcześniejszy materiał, a nawet powtarzając poprzednie ćwiczenia, zdasz sobie
-sprawę, że faktycznie nauczyłeś się bardzo wielu rzeczy, nawet jeśli materiał,
+sprawę, że faktycznie nauczyłeś się już bardzo wielu rzeczy, nawet jeśli materiał,
 na który się właśnie patrzysz, wydaje się nieco nieprzystępny.
 
 Zwykle gdy uczysz się swojego pierwszego języka programowania, to jest kilka
 wspaniałych chwil typu "a-ha!", w których możesz spojrzeć zza uderzeń młota i
-dłuta w jakąś skałę, odejść i zobaczyć, że rzeczywiście budujesz piękną rzeźbę.
+dłuta w jakąś skałę; możesz odejść na bok i zobaczyć, że rzeczywiście budujesz piękną rzeźbę.
 
 Jeśli coś wydaje się szczególnie trudne, to zazwyczaj nie ma sensu zarywać
 całej nocy i wpatrywać się w ten problem. Zrób sobie przerwę, zdrzemnij się,
@@ -887,7 +893,7 @@ pamięć pomocnicza
 \index{pamięć pomocnicza}
 
 parsowanie
-:   Sprawdzanie programu i analizowanie jego struktury składniowej.
+:   Sprawdzanie tekstu i analizowanie jego struktury składniowej.
 \index{parsowanie}
 
 procesor
@@ -942,7 +948,7 @@ Czym jest program?
 
 #### Ćwiczenie 3
 
-Jaka jest różnica między kompilatorem a intepreterem?
+Jaka jest różnica między kompilatorem a interpreterem?
 
 #### Ćwiczenie 4
 
@@ -976,7 +982,7 @@ x = 123
 
 a. W procesorze.
 b. W pamięci głównej.
-c. W pamięci pomocnicznej.
+c. W pamięci pomocniczej.
 d. W urządzeniach wejścia.
 e. W urządzeniach wyjścia.
 
