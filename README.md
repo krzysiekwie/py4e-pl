@@ -12,7 +12,7 @@ Polish translation
 | `software-mac.php`     | ☒    |      |      |       |         |          | ☒      |            | ☒    |
 | `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☒    |
 | `A0-preface.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☒    |
-| `01-intro.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
+| `01-intro.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
 | `02-variables.mkd`     | ☒    |      | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
 | `04-functions.mkd`     | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |

@@ -775,7 +775,6 @@ właściwej rzeczy. Nie trzeba dodawać, że programowanie losowe może zająć 
 czasu.
 
 \index{programowanie losowe}
-\index{plan rozwoju aplikacji!programowanie losowe}
 
 Musisz trochę pomyśleć. Debugowanie jest jak nauki eksperymentalne. Powinieneś
 mieć przynajmniej jedną hipotezę na temat tego, na czym polega problem. Jeśli

@@ -14,7 +14,7 @@ $if(fontfamily)$
 $else$
 \usepackage{lmodern}
 $endif$
-\usepackage{makeidx}
+\usepackage{imakeidx}
 $if(linestretch)$
 \usepackage{setspace}
 \setstretch{$linestretch$}
@@ -296,6 +296,8 @@ $endif$
 
 \normalsize
 
+\cleardoublepage
+\pdfbookmark{\indexname}{idx}
 \printindex
 
 % \newpage\null\thispagestyle{empty}\newpage
