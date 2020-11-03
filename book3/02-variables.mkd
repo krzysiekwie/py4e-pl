@@ -12,27 +12,32 @@ Wartości i typy
 \index{łańcuch znaków}
 
 *Wartość* jest jedną z podstawowych rzeczy, z którymi program pracuje, takich 
-jak litera czy cyfra. Wartości, które widzieliśmy do tej pory, to 1, 2 i "Witaj
+jak litera czy cyfra. Wartości, które widzieliśmy do tej pory, to np. 6 i "Witaj
 świecie!".
 
-Wartości te należą do różnych *typów*: 2 jest liczbą całkowitą, a "Witaj
-świecie!" jest *ciągiem znaków*, "napisem" lub *łańcuchem znaków* (ang. *string*). Ty (i interpreter) możesz 
+Wartości te należą do różnych *typów*: 6 jest liczbą całkowitą, a "Witaj
+świecie!" jest *ciągiem znaków*, *napisem* lub *łańcuchem znaków* (ang. *string*). Ty (i interpreter) możesz 
 rozpoznać ciągi znaków, ponieważ są one zawarte między apostrofami lub w cudzysłowie.
 
 \index{apostrof}
 \index{cudzysłów}
 
-Instrukcja `print` działa również w przypadku liczb całkowitych. Do uruchomienia
-interpretera używamy komendy `python`.
+Do uruchomienia interpretera używamy komendy `python3`:
 
 ~~~~ {.python}
-python
+$ python3
+>>>
+~~~~
+
+Funkcja `print()`, poza wyświetlaniem tekstu, działa również w przypadku liczb całkowitych:
+
+~~~~ {.python}
 >>> print(4)
 4
 ~~~~
 
 Jeśli nie jesteś pewien jaki typ ma dana wartość, interpreter może Ci to
-powiedzieć.
+podpowiedzieć:
 
 ~~~~ {.python .trinket height="160"}
 >>> type('Witaj świecie!')
@@ -43,10 +48,10 @@ powiedzieć.
 
 Nic dziwnego, że ciągi znaków należą do typu `str`, a liczby całkowite (ang.
 *integers*) należą do typu `int`. Mniej oczywiste jest, że liczby z kropką
-dziesiętną należą do typu `float`, ponieważ liczby te są reprezentowane w
+dziesiętną należą do typu `float`; liczby te są reprezentowane w
 formacie nazywanym *liczbą zmiennoprzecinkową*^[Mimo że nazwa wskazuje na
 używanie przecinka i tak też robimy na co dzień w polskim zapisie, podczas
-programowania używamy kropki.] (ang. *floating point*).
+programowania używamy kropki.] (ang. *floating point*):
 
 \index{typ}
 \index{typ!ciągu znaków}
@@ -64,7 +69,8 @@ programowania używamy kropki.] (ang. *floating point*).
 <class 'float'>
 ~~~~
 
-A co z takimi wartościami jak '17' i '3.2'? Wyglądają one jak liczby, ale tak jak ciągi znaków, są zawarte między apostrofami.
+A co z takimi wartościami jak `'17'` i `'3.2'`? Wyglądają one jak liczby, ale 
+tak jak ciągi znaków, są zawarte między apostrofami:
 
 \index{apostrof}
 
@@ -79,8 +85,8 @@ Są to ciągi znaków.
 
 Gdy wpiszesz dużą liczbę całkowitą, być może ulegniesz pokusie użycia przecinków
 między grupami trzycyfrowymi, np. jak w przypadku 1,000,000.^[Jest to zapis
-częściej stosowany w USA.] Nie jest poprawna liczba całkowita w
-Pythonie, ale jest zapis całkowicie poprawny:
+częściej stosowany w USA.] W Pythonie nie jest to poprawna liczba całkowita, ale
+sam zapis jest całkowicie prawidłowy:
 
 ~~~~ {.python .trinket height="120"}
 >>> print(1,000,000)
@@ -88,7 +94,7 @@ Pythonie, ale jest zapis całkowicie poprawny:
 ~~~~
 
 Cóż, nie tego się spodziewaliśmy! Python interpretuje 1,000,000 jako oddzielony
-przecinkami ciąg liczb całkowitych, które wypisuje ze spacjami.
+przecinkami ciąg liczb całkowitych, które wypisuje pooddzielane spacjami.
 
 \index{błąd!semantyczny}
 \index{komunikat błędu}
@@ -114,12 +120,12 @@ Jedną z najważniejszych cech języka programowania jest zdolność do operowan
 >>> pi = 3.1415926535897931
 ~~~~
 
-Powyższy przykład składa się z trzech przypisań. Pierwsze wiersz przypisuje
+Powyższy przykład składa się z trzech przypisań. Pierwszy wiersz przypisuje
 łańcuch znaków do nowej zmiennej o nazwie `message`; drugi przypisuje liczbę
 całkowitą 17 do `n`;
 trzeci przypisuje (przybliżoną) wartość $\pi$ do `pi`.
 
-Aby wyświetlić wartość zmiennej, możesz skorzystać z instrukcji print:
+Aby wyświetlić wartość zmiennej, możesz skorzystać z funkcji `print()`:
 
 ~~~~ {.python}
 >>> print(n)
@@ -128,7 +134,7 @@ Aby wyświetlić wartość zmiennej, możesz skorzystać z instrukcji print:
 3.141592653589793
 ~~~~
 
-Typ zmiennej jest typem wartości, do której się odnosi.
+Typ zmiennej jest typem wartości, do której się odnosi:
 
 ~~~~ {.python}
 >>> type(message)
@@ -155,10 +161,10 @@ diakrytycznych, ale lepiej trzymać się przyjętej w środowisku programistów
 konwencji i ich nie używać.]
 
 Znak podkreślenia ( \_ ) może pojawić się w nazwie. Jest on często używany w
-nazwach zawierających wiele słów, takich jak `moje_ime` lub 
+nazwach zawierających wiele słów, takich jak `moje_imie` lub 
 `predkosc_jaskolki_bez_obciazenia`. Nazwy zmiennych mogą zaczynać się od znaku
-podkreślenia, ale generalnie unikamy tego, chyba że piszemy kod biblioteki 
-docelowo używanej przez inne osoby.
+podkreślenia, ale generalnie unikamy tego, chyba że piszemy kod biblioteki, która 
+docelowo będzie używana przez inne osoby.
 
 \index{znak podkreślenia}
 
@@ -202,20 +208,20 @@ Instrukcje
 ----------
 
 *Instrukcja* jest jednostką kodu, którą może wykonać interpreter Pythona.
-Widzieliśmy dwa rodzaje wyrażeń: print jako wyrażenie oraz przypisanie.
+Widzieliśmy ich dwa rodzaje: `print()` jako wyrażenie oraz przypisanie.
 
 \index{instrukcja}
 \index{tryb interaktywny}
 \index{tryb skryptowy}
 
-Kiedy wpisujesz instrukcję w trybie interaktywnym, interpreter wykonuje ją i
-wyświetla wynik (jeśli taki istnieje).
+Gdy w trybie interaktywnym wpiszesz jakąś instrukcję, to interpreter ją wykona i
+wyświetli wynik (o ile taki istnieje).
 
 Skrypt zazwyczaj zawiera sekwencję instrukcji. Jeżeli istnieje więcej niż jedna
 instrukcja, wyniki pojawiają się jeden po drugim podczas wykonywania kolejnych
 instrukcji.
 
-Na przykład, skrypt
+Np. poniższy skrypt:
 
 ~~~~ {.python}
 print(1)
@@ -223,7 +229,7 @@ x = 2
 print(x)
 ~~~~
 
-zwraca wynik
+zwraca następujący wynik:
 
 ~~~~
 1
@@ -256,8 +262,9 @@ minute/60
 (5+9)*(15-7)
 ~~~~
 
-Nastąpiła zmiana w operatorze dzielenia między Pythonem 2.x a Pythonem 3.x. W
-Pythonie 3.x wynik takiego dzielenia jest wynikiem zmiennoprzecinkowym:
+Jeśli pisałeś programy w Pythonie 2.x, to musisz wiedzieć, że w Pythonie 3.x 
+nastąpiła zmiana w operatorze dzielenia. W Pythonie 3.x wynik takiego dzielenia
+jest wynikiem zmiennoprzecinkowym:
 
 ~~~~ {.python .trinket height="160"}
 >>> minute = 59
@@ -265,7 +272,7 @@ Pythonie 3.x wynik takiego dzielenia jest wynikiem zmiennoprzecinkowym:
 0.9833333333333333
 ~~~~
 
-Operator dzielenia w Pythonie 2.0 dzieliłby dwie liczby całkowite i obcinałby
+Operator dzielenia w Pythonie 2.x dzieliłby dwie liczby całkowite i obcinałby
 wynik do liczby całkowitej:
 
 ~~~~ {.python}
@@ -275,7 +282,7 @@ wynik do liczby całkowitej:
 ~~~~
 
 Aby uzyskać taki sam wynik w Pythonie 3.0, należy użyć dzielenia
-całkowitoliczbowego `//`, zaokrąglającego w dół.
+całkowitoliczbowego `//`, zaokrąglającego w dół:
 
 ~~~~ {.python .trinket  height="160"}
 >>> minute = 59
@@ -283,11 +290,11 @@ całkowitoliczbowego `//`, zaokrąglającego w dół.
 0
 ~~~~
 
-W Pythonie 3.0 dzielenie liczb całkowitych działa tak jakbyś wprowadził
+W Pythonie 3.x dzielenie liczb całkowitych działa tak jakbyś wprowadził
 wyrażenie na kalkulatorze.
 
-\index{Python 3.0}
-\index{Python 2.0}
+\index{Python 3.x}
+\index{Python 2.x}
 \index{zmiennoprzecinkowe, dzielenie}
 \index{dzielenie!zmiennoprzecinkowe}
 
@@ -421,7 +428,7 @@ matematycznym. Zamiast tego wykonuje on *konkatenację*, co oznacza łączenie
 100150
 ~~~~
 
-Operator `*` pracuje również z ciągami znkaów, powielając zawartość napisu
+Operator `*` pracuje również z ciągami znaków, powielając zawartość napisu
 tyle razy ile wynosi wartość liczby całkowitej. Na przykład:
 
 ~~~~ {.python}
@@ -564,7 +571,7 @@ Wybór mnemonicznych nazw zmiennych
 
 Tak długo, jak stosujesz się do prostych zasad nazewnictwa zmiennych i unikasz
 zastrzeżonych słów, masz duży wybór przy nadawaniu nazw swoim zmiennym. Na
-początku wybór ten czasami może być dezorrientujący zarówno podczas czytania
+początku wybór ten czasami może być dezorientujący zarówno podczas czytania
 kodu programu, jak i pisania własnych programów. Na przykład, następujące trzy
 programy są identyczne pod względem tego co robią, ale są bardzo różne gdy je
 czytasz i starasz się je zrozumieć.
@@ -621,7 +628,7 @@ for word in words:
 Co tu się dzieje? Które z tokenów (for, word, in, itp.) są słowami
 zastrzeżonymi, a które są tylko nazwami zmiennych? Czy Python rozumie zapis
 "words" na poziomie fundamentalnym? Początkujący programiści mają problem z
-oddzieleniem tych częsci kodu, które *muszą* być takie same jak w tym
+oddzieleniem tych części kodu, które *muszą* być takie same jak w tym
 przykładzie, od tych, które po prostu są wyborem dokonywanym przez programistę.
 
 Poniższy kod jest odpowiednikiem powyższego kodu:
@@ -693,7 +700,7 @@ SyntaxError: leading zeros in decimal integer literals are not permitted;
              use an 0o prefix for octal integers
 ~~~~
 
-Widzimy tutaj, że zera widoące w liczbach całkowitych są niedozwolone,
+Widzimy tutaj, że zera wiodące w liczbach całkowitych są niedozwolone,
 a Python podpowiada, że może chodzi nam o zapis w systemie ósemkowym, gdzie
 liczby zaczynają się od `0o`.
 
@@ -856,7 +863,7 @@ Wynagrodzenie: 1121.25
 
 Na razie nie będziemy się martwić o to, by nasze wynagrodzenie miało dokładnie
 dwie cyfry po przecinku. Jeśli chcesz, możesz pobawić się wbudowaną funkcją
-Pythona `round`, tak aby prawidłowo zaokrąglić wynagrodznie do dwóch miejsc po
+Pythona `round`, tak aby prawidłowo zaokrąglić wynagrodzenie do dwóch miejsc po
 przecinku.
 
 #### Ćwiczenie 4
