@@ -8,7 +8,7 @@ Wywoływanie funkcji
 \index{wywołanie funkcji}
 \index{funkcja, wywołanie}
 
-W kontekście programowania, *funkcja* to nazwana sekwencja instrukcji, która
+W kontekście programowania *funkcja* to nazwana sekwencja instrukcji, która
 wykonuje pewne obliczenia. Kiedy definiujesz funkcję, określasz jej nazwę i
 kolejność instrukcji. Później możesz "wywołać" funkcję po jej nazwie. 
 Widzieliśmy już jeden przykład *wywołania funkcji*:
@@ -20,7 +20,7 @@ Widzieliśmy już jeden przykład *wywołania funkcji*:
 
 Nazwa funkcji to `type`. Wyrażenie w nawiasach nazywane jest *argumentem* 
 funkcji. Argument jest wartością lub zmienną, którą przekazujemy do funkcji jako 
-jej dane wejściowe. Wynikiem, dla funkcji `type`, jest typ przekazanego 
+jej dane wejściowe. Wynikiem dla funkcji `type` jest typ przekazanego 
 argumentu. 
 
 \index{nawiasy okrągłe!argument}
@@ -178,7 +178,7 @@ naturalny.
 \index{trygonometryczna, funkcja}
 
 Drugi przykład znajduje sinus z wartości w zmiennej `radians`. Nazwa zmiennej 
-jest podpowiedzią, że `sin` i inne funkcje trygonometryczne (`cos`, `tan`, itp.) 
+jest podpowiedzią, że `sin` i inne funkcje trygonometryczne (`cos`, `tan` itp.) 
 przyjmują argumenty w radianach. Aby przeliczyć wartość ze stopni na radiany, 
 należy ją podzielić przez 360 i pomnożyć przez $2 \pi$:
 
@@ -213,7 +213,7 @@ Liczby losowe
 \index{deterministyczny}
 \index{pseudolosowość}
 
-Na podstawie tych samych danych wejściowych, większość programów komputerowych 
+Na podstawie tych samych danych wejściowych większość programów komputerowych 
 generuje za każdym razem te same dane wyjściowe, więc w takich przypadkach mówi 
 się, że te programy są *deterministyczne*. Determinizm jest zazwyczaj dobrą 
 rzeczą, ponieważ oczekujemy, że to samo obliczenie da ten sam wynik. W przypadku 
@@ -224,7 +224,7 @@ Uczynienie programu prawdziwie niedeterministycznym okazuje się wcale nie takie
 proste, ale są sposoby, by przynajmniej wydawał się niedeterministyczny. Jednym 
 z nich jest użycie *algorytmów*, które generują liczby *pseudolosowe*. Liczby 
 pseudolosowe nie są tak naprawdę losowe, ponieważ są generowane przez 
-deterministyczne obliczenia, ale po prostu patrząc na te liczby, nie da się ich 
+deterministyczne obliczenia, ale patrząc na te liczby, nie da się ich 
 odróżnić od losowych. 
 
 \index{random, moduł}
@@ -266,8 +266,8 @@ Powyższy program tworzy następującą listę 10 losowych liczb z zakresu od 0.
 
 #### Ćwiczenie 1
 
-Uruchom program na swoim systemie i zobacz jakie dostajesz 
-liczby. Uruchom program więcej niż raz i zobacz jakie tym razem dostajesz 
+Uruchom program na swoim systemie i zobacz, jakie dostajesz 
+liczby. Uruchom program więcej niż raz i zobacz, jakie tym razem dostajesz 
 liczby.
 
 ----
@@ -327,7 +327,7 @@ def print_lyrics():
 funkcji to `print_lyrics`. Zasady dotyczące nazw funkcji są takie same jak dla 
 nazw zmiennych: litery, cyfry i niektóre znaki interpunkcyjne są dozwolone, ale 
 pierwszy znak nie może być liczbą. Nie możesz używać słowa kluczowego jako nazwy 
-funkcji i powinieneś unikać posiadania zmiennej i funkcji o tej samej nazwie. 
+funkcji i powinieneś unikać zmiennej i funkcji o tej samej nazwie. 
 
 \index{def, słowo kluczowe}
 \index{słowo kluczowe!def}
@@ -354,7 +354,7 @@ zawierać dowolną liczbę instrukcji.
 \index{trzy kropki}
 
 Jeżeli wpiszesz definicję funkcji w trybie interaktywnym, interpreter wypisze 
-trzy kropki (*...*) aby dać Ci znać, że definicja nie jest kompletna:
+trzy kropki (*...*), aby dać Ci znać, że definicja nie jest kompletna:
 
 ~~~~ {.python}
 >>> def print_lyrics():
@@ -416,7 +416,7 @@ Definiowanie i używanie
 \index{funkcja, definicja}
 \index{definicja funkcji}
 
-Składając razem fragmenty kodu z poprzedniej sekcji, cały program wygląda 
+Po złożeniu fragmentów kodu z poprzedniej sekcji, zauważymy, że cały program wygląda 
 następująco:
 
 \VerbatimInput{../code3/lyrics.py}
@@ -435,8 +435,8 @@ pierwszym wywołaniem.
 #### Ćwiczenie 2
 
 Przesuń ostatnią linię programu na samą górę, tak aby wywołanie 
-funkcji pojawiło się przed definicjami. Uruchom program i zobacz jaki otrzymasz 
-komunikat o błędzie.
+funkcji pojawiło się przed definicjami. Uruchom program i zobacz, jaki 
+komunikat o błędzie otrzymasz.
 
 #### Ćwiczenie 3
 
@@ -463,17 +463,17 @@ wywołana.
 Wywołanie funkcji można traktować w przepływie sterowania jak objazd. Zamiast 
 przejść do następnego polecenia, przepływ sterowania przeskakuje do ciała 
 funkcji, wykonuje tam wszystkie polecenia, a następnie wraca do miejsca, w 
-którym zostało on przerwany.
+którym przerwał.
 
 Brzmi to całkiem prosto, dopóki nie przypomnisz sobie, że jedna funkcja 
 może wywołać inną. Będąc w środku jednej funkcji, program może być zmuszony do 
-wykonania poleceń w innej funkcji. Ale może podczas wykonywania tej nowej funkcji, 
+wykonania poleceń w innej funkcji. Ale może podczas wykonywania tej nowej funkcji 
 program będzie musiał wykonać jeszcze jedną funkcję!
 
-Na szczęście Python jest dobry w śledzeniu gdzie się znajduje, więc za każdym 
-razem, gdy funkcja się kończy, program wznawia działanie tam gdzie przerwał 
-działanie w funkcji, która ją wywołała. Kiedy dociera do końca programu, to 
-program się kończy.
+Na szczęście Python jest dobry w śledzeniu, gdzie się znajduje, więc za każdym 
+razem, gdy funkcja się kończy, program wznawia działanie tam, gdzie przerwał, 
+w funkcji, która ją wywołała. Po dojściu do końca programu, jego działanie 
+zostaje zakończone.
 
 Jaki jest morał tej strasznej opowieści? Kiedy czytasz kod programu, nie 
 zawsze chcesz go czytać od góry do dołu. Czasami większy sens ma podążanie 
@@ -550,8 +550,8 @@ Eryk Pół-Ćma.
 Eryk Pół-Ćma.
 ~~~~
 
-Nazwa zmiennej, którą przekazujemy jako argument (`michael`) nie ma nic 
-wspólnego z nazwą parametru (`bruce`). Nie ma znaczenia jak na tę wartość 
+Nazwa zmiennej, którą przekazujemy jako argument (`michael`), nie ma nic 
+wspólnego z nazwą parametru (`bruce`). Nie ma znaczenia, jak na tę wartość 
 wołano w domu (w miejscu wywoływania); tutaj w `print_twice` wszystkich 
 nazywamy `bruce`.
 
@@ -564,7 +564,7 @@ Funkcje owocne i funkcje niezwracające wartości
 \index{funkcja niezwracająca wartości}
 
 Niektóre z używanych przez nas funkcji to np. funkcje matematyczne, które 
-zwracają wyniki; z braku lepszej nazwy, nazywam je *funkcjami owocnymi* 
+zwracają wyniki; z braku lepszej nazwy nazywam je *funkcjami owocnymi* 
 (ang. *fruitful functions*). Inne funkcje, takie jak `print_twice`, wykonują 
 jakąś akcję, ale nie zwracają wartości. Nazywa się je *funkcjami 
 niezwracającymi wartości*^[W niektórych językach programowania tego typu 
@@ -574,7 +574,7 @@ jakąś akcję, ale nie zwracają wartości. Nazywa się je *pustymi funkcjami
 * (za tłum Pilch: Myśl w języku Python/Downey: Think Python  ) -->
 
 Kiedy wywołujesz owocną funkcję, prawie zawsze chcesz zrobić coś ze zwróconym 
-wynikiem. Na przykład, możesz przypisać go do zmiennej lub użyć go jako części 
+wynikiem. Na przykład możesz przypisać go do zmiennej lub użyć go jako części 
 wyrażenia:
 
 ~~~~ {.python}
@@ -632,7 +632,7 @@ wartość, która ma swój własny typ:
 \index{return, słowo kluczowe}
 \index{słowo kluczowe!return}
 
-Aby zwrócić wynik z funkcji, używamy w niej instrukcji `return`. Na przykład, 
+Aby zwrócić wynik z funkcji, używamy w niej instrukcji `return`. Na przykład 
 możemy napisać bardzo prostą funkcję o nazwie `addtwo`, która dodaje dwie 
 liczby i zwraca wynik dodawania.
 
@@ -640,7 +640,7 @@ liczby i zwraca wynik dodawania.
 
 Gdy powyższy skrypt zostanie wykonany, instrukcja `print` wypisze "8", 
 ponieważ funkcja `addtwo` została wywołana z argumentami 3 i 5. Wewnątrz 
-funkcji, parametry `a` i `b` miały wartości odpowiednio 3 i 5. Funkcja 
+funkcji parametry `a` i `b` miały wartości odpowiednio 3 i 5. Funkcja 
 obliczyła sumę tych dwóch liczb i umieściła ją w zmiennej lokalnej o nazwie 
 `added`. Następnie użyła instrukcji `return`, by wysłać wyliczoną wartość z 
 powrotem do kodu wywołującego funkcję, gdzie zwrócona wartość została 
@@ -651,7 +651,7 @@ Dlaczego potrzebujemy funkcji?
 
 \index{funkcja, powody}
 
-Na początku może nie być jasne dlaczego warto podzielić program na funkcje. 
+Na początku może nie być jasne, dlaczego warto podzielić program na funkcje. 
 Jest kilka powodów:
 
 -   Stworzenie nowej funkcji daje Ci możliwość nazwania grupy poleceń, co sprawia, że
@@ -696,7 +696,7 @@ Nie zapomnij również zapisać swojego programu, zanim go uruchomisz. Niektóre
 przypadku program, który oglądasz w edytorze tekstu, nie jest taki sam, jak
 program, który uruchamiasz.
 
-Debugowanie może trwać bardzo długo jeśli będziesz ciągle uruchamiać ten sam
+Debugowanie może trwać bardzo długo, jeśli będziesz ciągle uruchamiać ten sam
 nieprawidłowy program!
 <!-- został EN, PL jest ok -->
 Debugging can take a long time if you keep running the same incorrect
@@ -745,7 +745,7 @@ funkcja
 \index{funkcja}
 
 funkcja niezwracająca wartości
-:   Funkcja, które nie posiada zwracanej wartości.
+:   Funkcja, która nie posiada zwracanej wartości.
 \index{niezwracająca wartości, funkcja}
 \index{funkcja niezwracająca wartości}
 
