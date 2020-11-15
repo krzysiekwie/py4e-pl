@@ -10,7 +10,7 @@ Ciąg znaków jest sekwencją
 \index{nawias kwadratowy, operator}
 \index{operator!nawias kwadratowy}
 
-Ciąg znaków jest *sekwencją* znaków. Możesz uzyskać dostęp do poszczególnych znaków za pomocą operatora nawiasów:
+Ciąg znaków jest *sekwencją* znaków. Możesz uzyskać dostęp do poszczególnych znaków za pomocą operatora w postaci nawiasów kwadratowych:
 
 ~~~~ {.python}
 >>> fruit = 'banan'
@@ -22,7 +22,7 @@ Ciąg znaków jest *sekwencją* znaków. Możesz uzyskać dostęp do poszczegól
 
 Druga instrukcja wyodrębnia ze zmiennej `owoc` znak z pozycji o indeksie 1 i przypisuje go do zmiennej `letter`.
 
-Wyrażenie w nawiasach nazywane jest *indeksem*. Indeks wskazuje, który chcesz znak z zadanej sekwencji.
+Wyrażenie w nawiasach kwadratowych nazywane jest *indeksem*. Indeks wskazuje, który chcesz znak z zadanej sekwencji.
 
 Ale prawdopodobnie nie otrzymasz tego, czego oczekujesz:
 
@@ -39,8 +39,8 @@ Dla większości ludzi pierwsza litera słowa "banan" to "b", a nie "a". Jednak 
 >>> print(letter)
 b
 ~~~~
-
-Tak więc "b" to 0-wa ("zerowa") litera słowa "banan", "a" to 1-sza litera, a "n" to 2-ga litera.
+<!-- unikam celowo(?) błędnego zapisu w EN "1th" i "2th" -->
+Tak więc "b" to 0. ("zerowa") litera słowa "banan", "a" to pierwsza litera, a "n" to druga litera.
 
 ![Indeksy w ciągach znaków](height=0.75in@../images/string)
 
@@ -65,7 +65,7 @@ Uzyskanie długości ciągu znaków przy użyciu `len()`
 \index{len, funkcja}
 \index{funkcja!len}
 
-`len` jest funkcją wbudowaną, która zwraca liczbę znaków w danym ciągu znaków:
+`len` jest funkcją wbudowaną, która zwraca liczbę znaków w danym ciągu:
 
 ~~~~ {.python}
 >>> fruit = 'banan'
@@ -73,7 +73,7 @@ Uzyskanie długości ciągu znaków przy użyciu `len()`
 5
 ~~~~
 
-Aby otrzymać ostatnią literę ciągu znaków, może Cię kusić by spróbować czegoś takiego:
+Może Cię kusić by spróbować czegoś takiego, aby otrzymać ostatnią literę ciągu znaków:
 
 \index{wyjątek!IndexError}
 \index{IndexError}
@@ -116,11 +116,11 @@ while index < len(fruit):
     index = index + 1
 ~~~~
 
-Pętla ta przechodzi po ciągu znaków i wyświetla w wierszu pojedynczo każdą literę. Warunkiem pętli jest `index < len(fruit)`, więc gdy `index` jest równy długości łańcucha, warunek jest fałszywy, a ciało pętli nie jest już wykonywane. Ostatnim dostępnym znakiem jest ten z indeksem `len(fruit)-1`, który jest ostatnim znakiem w ciągu znaków.
+Pętla ta przechodzi po ciągu znaków i wyświetla w wierszu pojedynczo każdą literę. Warunkiem pętli jest `index < len(fruit)`, więc gdy `index` jest równy długości łańcucha, warunek jest fałszywy, a ciało pętli nie jest już wykonywane. Ostatnim dostępnym znakiem jest ten z indeksem `len(fruit)-1`, który jest ostatnim znakiem w ciągu.
 
 #### Ćwiczenie 1
 
-Napisz pętlę `while`, która zaczyna się od ostatniego znaku w ciągu znaków i działa w kierunku przeciwnym do pierwszego znaku, wypisując każdą literę w osobnej linii, ale tym razem w odwrotnej kolejności.
+Napisz pętlę `while`, która zaczyna się od ostatniego znaku w ciągu i działa od końca, do pierwszego znaku, wypisując każdą literę w osobnej linii, w odwrotnej kolejności.
 
 ----
 
@@ -131,7 +131,7 @@ for char in fruit:
     print(char)
 ~~~~
 
-Za każdym razem idąc przez pętlę, kolejny znak w łańcuchu jest przypisywany do zmiennej `char`. Pętla jest kontynuowana aż do momentu, gdy nie pozostaną już żadne znaki do przypisania.
+Za każdym przejściem przez pętlę, kolejny znak w łańcuchu jest przypisywany do zmiennej `char`. Pętla jest kontynuowana aż do momentu, gdy nie pozostaną już żadne znaki do przypisania.
 
 Wycinki z ciągu znaków
 ----------------------
@@ -166,7 +166,7 @@ Jeśli pominiesz pierwszy indeks (przed dwukropkiem), wycinek zaczyna się od po
 ~~~~
 
 Jeśli pierwszy indeks jest większy lub równy drugiemu, wynikiem jest *pusty ciąg znaków*, reprezentowany przez dwa apostrofy (zamiast apostrofu możemy użyć cudzysłowu):
-
+<!-- fragment w nawiasie sugeruje, że to użytkownik wybiera czy pusty ciąg znaków będzie reprezentowany przez '' czy ""  -->
 \index{apostrof}
 \index{cudzysłów}
 \index{pusty ciąg znaków}
@@ -204,8 +204,8 @@ Kuszące jest skorzystanie z operatora przypisania z zamiarem zmiany znaku w ci�
 >>> greeting[0] = 'J'
 TypeError: 'str' object does not support item assignment
 ~~~~
-
-Obiekt ("object") w tym przypadku to ciąg znaków, a element ("item") jest znakiem, do który próbowałeś coś przypisać. Na tę chwilę *obiekt* jest tym samym co wartość, ale definicję tę doszlifujemy później. *Element* jest jedną z wartości w sekwencji.
+<!-- zmiana znaczenia, proszę zweryfikować -->
+Obiekt ("object") w tym przypadku to ciąg znaków, a element ("item") jest znakiem, który próbowałeś do niego przypisać. Na tę chwilę *obiekt* jest tym samym co wartość, ale definicję tę doszlifujemy później. *Element* jest jedną z wartości w sekwencji.
 
 \index{obiekt}
 \index{element}
@@ -244,7 +244,7 @@ for letter in word:
 print(count)
 ~~~~
 
-Zmienna `count` jest inicjalizowana z wartością 0, a następnie zwiększana za każdym razem, gdy natrafimy na "a". Po wyjściu z pętli, `count` zawiera wynik: łączną liczbę występień litery "a".
+Zmienna `count` jest inicjalizowana z wartością 0, a następnie zwiększana za każdym razem, gdy natrafimy na "a". Po wyjściu z pętli, `count` zawiera wynik: łączną liczbę wystąpień litery "a".
 
 \index{hermetyzacja}
 
@@ -269,7 +269,7 @@ True
 False
 ~~~~
 
-Porównywanie ciagów znaków
+Porównywanie ciągów znaków
 --------------------------
 
 \index{ciąg znaków!porównywanie}
@@ -406,8 +406,8 @@ True
 >>> line.startswith('m')
 False
 ~~~~
-
-Możesz zauważyć, że `startswith` wymaga dopasowania wielkości liter, więc czasami zanim zrobimy jakiekolwiek sprawdzenie, bierzemy linię i konwertujemy wszystko na małe litery przy użyciu metody `lower`.
+<!-- mapujemy wszystkie znaki - nawiązanie do map()? -->
+Możesz zauważyć, że `startswith` wymaga dopasowania wielkości liter, więc czasami zanim zrobimy jakiekolwiek sprawdzenie, konwertujemy wszystkie znaki w linii na małe litery przy użyciu metody `lower`.
 
 ~~~~ {.python}
 >>> line = 'Miłego dnia'
@@ -419,7 +419,7 @@ False
 True
 ~~~~
 
-W ostatnim przykładzie, metoda "lower" jest wywoływana, a następnie używamy `startswith` by sprawdzić, czy wynikowy ciąg małych liter zaczyna się od litery "m". Tak długo jak jesteśmy ostrożni z kolejnością, w jednym wyrażeniu możemy wykonywać wiele wywołań metod.
+W ostatnim przykładzie, metoda "lower" jest wywoływana, a następnie używamy `startswith` by sprawdzić, czy wynikowy ciąg małych liter zaczyna się od litery "m". Tak długo jak jesteśmy pilnujemy właściwiej kolejności, w jednym wyrażeniu możemy wykonywać wiele wywołań metod.
 
 \index{count, metoda}
 \index{metoda!count}
@@ -435,11 +435,11 @@ Napisz wywołanie metody, które zliczy ile razy litera "a" występuje w słowie
 Parsowanie ciągów znaków
 ------------------------
 
-Często chcemy zajrzeć do ciągu znaków i znaleźć pewie podciąg. Na przykład, jeśli przedstawiono nam serię linii sformatowanych w następujący sposób:
+Często chcemy zajrzeć do ciągu znaków i znaleźć pewien podciąg. Na przykład, jeśli przedstawiono nam serię linii sformatowanych w następujący sposób:
 
 `From stephen.marquard@`*` uct.ac.za`*` Sat Jan  5 09:14:16 2008`
 
-i chcielibyśmy z każdej linii wyciągnąć tylko drugą połowę adresu e-mail (tj. `uct.ac.za`), to możemy to zrobić za pomocą metody `find` operacji wyciągania wycinków z ciągów znaków.
+i chcielibyśmy z każdej linii wyciągnąć tylko drugą połowę adresu e-mail (tj. `uct.ac.za`), to możemy to zrobić za pomocą metody `find` i operacji wyciągania wycinków z ciągów znaków.
 
 Najpierw znajdziemy w ciągu znaków pozycję znaku `@`. Następnie znajdziemy pozycję pierwszej spacji *po* znaku `@`. Na końcu użyjemy wycinków by wyodrębnić część ciągu znaków, której szukamy.
 
@@ -495,13 +495,13 @@ Sekwencja formatowania może pojawić się w dowolnym miejscu łańcucha, więc 
 'Zauważyłem 42 wielbłądy.'
 ~~~~
 
-Jeśli w ciągu znaków znajduje się więcej niż jedna sekwencja formatująca, to drugim argumentem musi być krotka^[Krotka to sekwencja wartości oddzielonych przecinkami wewnątrz pary nawiasów. Omówimy krotki w rozdziale 10.]. Każda sekwencja formatują jest dopasowywana do kolejnego elementu krotki.
+Jeśli w ciągu znaków znajduje się więcej niż jedna sekwencja formatująca, to drugim argumentem musi być krotka^[Krotka to sekwencja wartości oddzielonych przecinkami wewnątrz pary nawiasów. Omówimy krotki w rozdziale 10.]. Każda sekwencja formatująca jest dopasowywana do kolejnego elementu krotki.
 
 Poniższy przykład używa `%d` do formatowania liczby całkowitej, `%g` do formatowania liczby zmiennoprzecinkowej (nie pytaj dlaczego), a `%s` do formatowania ciągu znaków^["s" od angielskiego "string", czyli ciąg znaków.]:
 
 ~~~~ {.python}
->>> 'W ciągu %d lat zauważyłem %g %s.' % (3, 0.1, 'wielbłąda')
-'W ciągu 3 lat zauważyłem 0.1 wielbłąda.'
+>>> 'Przez %d lata widziałem %g %s.' % (3, 0.1, 'wielbłąda')
+'Przez 3 lata widziałem 0.1 wielbłąda.'
 ~~~~
 
 Liczba elementów w krotce musi być zgodna z liczbą sekwencji formatujących w ciągu znaków. Typy elementów również muszą być zgodne z sekwencjami formatującymi:
@@ -527,13 +527,13 @@ Debugowanie
 
 \index{debugowanie}
 
-Umiejętność, którą powinieneś rozwijać w trakcie programowania, to zawsze zadawanie sobie pytania: "Co tu może się nie udać?" lub alternatywnie: "Jaką szaloną rzecz może zrobić nasz użytkownik, aby wysypać nasz (pozornie) doskonały program?".
+Umiejętność, którą powinieneś rozwijać w trakcie programowania, to zawsze zadawanie sobie pytania: "Co tu się może nie udać?" lub alternatywnie: "Jaką szaloną rzecz może zrobić nasz użytkownik, aby wysypać nasz (pozornie) doskonały program?".
 
 Na przykład, spójrz na program, którego użyliśmy do zademonstrowania pętli `while` w rozdziale o iteracjach:
 
 \VerbatimInput{../code3/copytildone2.py}
 
-Spójrz co się stanie gdy użytkownik wprowadzi w pusty wiersz:
+Spójrz co się stanie gdy użytkownik wprowadzi pusty wiersz:
 
 ~~~~ {.python}
 > no hejka
@@ -548,7 +548,7 @@ Traceback (most recent call last):
 IndexError: string index out of range
 ~~~~
 
-Kod działa dobrze, dopóki nie zostanie mu podsunięty pusty wiersz. Nie można wtedy odnaleźć znaku zerowgo, więc otrzymujemy komunikat mechanizmu traceback. Są na to dwa rozwiązania, które sprawiają, że trzeci wiersz jest "bezpieczny", nawet jeśli jest on pusty.
+Kod działa dobrze, dopóki nie zostanie mu podsunięty pusty wiersz. Nie można wtedy odnaleźć znaku zerowego, więc otrzymujemy komunikat mechanizmu traceback. Są na to dwa rozwiązania, które sprawiają, że trzeci wiersz jest "bezpieczny", nawet jeśli jest on pusty.
 
 Jedną z możliwości jest po prostu użycie metody `startswith`, która zwraca `False` jeśli ciąg znaków jest pusty.
 
@@ -577,7 +577,7 @@ element
 \index{element}
 
 indeks
-:   Wartość całkowita używana do zaznaczenia elementu w sekwencji, np. znaku w ciagu znaków.
+:   Wartość całkowita używana do zaznaczenia elementu w sekwencji, np. znaku w ciągu znaków.
 \index{indeks}
 \index{}
 
@@ -608,7 +608,7 @@ pusty ciąg znaków
 \index{ciąg znaków!pusty}
 
 sekwencja
-:   Uporządkowany zbiór, tj. zbiór wartości, gdzie każda wartość jest sekwencja przez indeks będący liczbą całkowitą.
+:   Uporządkowany zbiór, tj. zbiór wartości, gdzie każda wartość jest identyfikowana przez indeks będący liczbą całkowitą.
 \index{sekwencja}
 
 sekwencja formatująca
@@ -616,7 +616,7 @@ sekwencja formatująca
 \index{sekwencja formatująca}
 
 wycinek
-:   Część ciągu znaków określonego przez zakres indeksów.
+:   Część ciągu znaków określona przez zakres indeksów.
 \index{wycinek}
 
 wywołanie metody

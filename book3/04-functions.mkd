@@ -20,7 +20,7 @@ Widzieliśmy już jeden przykład *wywołania funkcji*:
 
 Nazwa funkcji to `type`. Wyrażenie w nawiasach nazywane jest *argumentem* 
 funkcji. Argument jest wartością lub zmienną, którą przekazujemy do funkcji jako 
-dane wejściowe funkcji. Wynikiem, dla funkcji `type`, jest typ przekazanego 
+jej dane wejściowe. Wynikiem, dla funkcji `type`, jest typ przekazanego 
 argumentu. 
 
 \index{nawiasy okrągłe!argument}
@@ -36,7 +36,7 @@ Funkcje wbudowane
 
 Python zapewnia szereg ważnych funkcji wbudowanych, z których możemy korzystać 
 bez konieczności podawania definicji tych funkcji. Twórcy Pythona napisali 
-zestaw funkcji do rozwiązywania popularnych problemów i włączyli je do Pythona, 
+zestaw funkcji do rozwiązywania popularnych problemów i dołączyli je do Pythona, 
 tak abyśmy mogli z nich korzystać. 
 
 Funkcje `max` i `min` dają nam odpowiednio największe i najmniejsze wartości 
@@ -79,7 +79,7 @@ Funkcje konwersji typu
 
 Python oferuje również funkcje wbudowane, które konwertują wartości z jednego 
 typu na drugi. Funkcja `int` przyjmuje dowolną wartość i konwertuje ją na liczbę 
-całkowitą, jeśli może, lub awanturuje się przeciwnym przypadku:
+całkowitą, jeśli może, lub skarży się, jeśli nie:
 
 \index{int, funkcja}
 \index{funkcja!int}
@@ -213,15 +213,15 @@ Liczby losowe
 \index{deterministyczny}
 \index{pseudolosowość}
 
-Biorąc pod uwagę te same dane wejściowe, większość programów komputerowych 
+Na podstawie tych samych danych wejściowych, większość programów komputerowych 
 generuje za każdym razem te same dane wyjściowe, więc w takich przypadkach mówi 
 się, że te programy są *deterministyczne*. Determinizm jest zazwyczaj dobrą 
 rzeczą, ponieważ oczekujemy, że to samo obliczenie da ten sam wynik. W przypadku 
 niektórych aplikacji chcemy jednak, by komputer był nieprzewidywalny. Gry są 
-oczywistym przykładem, ale jest ich więcej. 
+oczywistym przykładem, ale nie jedynym. 
 
 Uczynienie programu prawdziwie niedeterministycznym okazuje się wcale nie takie 
-proste, ale są sposoby, by przynajmniej wydawał się niedeterministycznym. Jednym 
+proste, ale są sposoby, by przynajmniej wydawał się niedeterministyczny. Jednym 
 z nich jest użycie *algorytmów*, które generują liczby *pseudolosowe*. Liczby 
 pseudolosowe nie są tak naprawdę losowe, ponieważ są generowane przez 
 deterministyczne obliczenia, ale po prostu patrząc na te liczby, nie da się ich 
@@ -309,7 +309,7 @@ Do tej pory korzystaliśmy tylko z funkcji dostarczanych wraz z Pythonem, ale
 możliwe jest również dodawanie nowych funkcji. *Definicja funkcji* określa 
 nazwę nowej funkcji i kolejność poleceń, które wykonują się podczas jej 
 wywołania. Kiedy już zdefiniujemy jakąś funkcję, będziemy mogli używać jej 
-ile wlezie w całym programie.
+raz za razem w całym programie.
 
 \index{funkcja}
 \index{funkcja, definicja}
@@ -347,7 +347,7 @@ dane wejściowe.
 
 Pierwszy wiersz definicji funkcji nazywa się *nagłówkiem* funkcji; reszta nazywa 
 się *ciałem* funkcji. Nagłówek musi się kończyć dwukropkiem, a ciało musi być 
-wcięte. Zgodnie z konwencją, wcięcie jest zawsze czterema spacjami. Ciało może 
+wcięte. Zgodnie z konwencją, wcięciem są zawsze cztery spacje. Ciało może 
 zawierać dowolną liczbę instrukcji.
 
 \index{wielokropek}
@@ -465,10 +465,10 @@ przejść do następnego polecenia, przepływ sterowania przeskakuje do ciała
 funkcji, wykonuje tam wszystkie polecenia, a następnie wraca do miejsca, w 
 którym zostało on przerwany.
 
-Brzmi to wystarczająco prosto, dopóki nie przypomnisz sobie, że jedna funkcja 
+Brzmi to całkiem prosto, dopóki nie przypomnisz sobie, że jedna funkcja 
 może wywołać inną. Będąc w środku jednej funkcji, program może być zmuszony do 
-wykonania poleceń w innej funkcji. Ale podczas wykonywania tej nowej funkcji, 
-program może być zmuszony do wykonania jeszcze jednej funkcji!
+wykonania poleceń w innej funkcji. Ale może podczas wykonywania tej nowej funkcji, 
+program będzie musiał wykonać jeszcze jedną funkcję!
 
 Na szczęście Python jest dobry w śledzeniu gdzie się znajduje, więc za każdym 
 razem, gdy funkcja się kończy, program wznawia działanie tam gdzie przerwał 
@@ -569,8 +569,11 @@ zwracają wyniki; z braku lepszej nazwy, nazywam je *funkcjami owocnymi*
 jakąś akcję, ale nie zwracają wartości. Nazywa się je *funkcjami 
 niezwracającymi wartości*^[W niektórych językach programowania tego typu 
 funkcje nazywa się procedurami.] (ang. *void functions*).
+<!--wykonują 
+jakąś akcję, ale nie zwracają wartości. Nazywa się je *pustymi funkcjami 
+* (za tłum Pilch: Myśl w języku Python/Downey: Think Python  ) -->
 
-Kiedy wołasz owocną funkcję, prawie zawsze chcesz zrobić coś ze zwróconym 
+Kiedy wywołujesz owocną funkcję, prawie zawsze chcesz zrobić coś ze zwróconym 
 wynikiem. Na przykład, możesz przypisać go do zmiennej lub użyć go jako części 
 wyrażenia:
 
@@ -587,7 +590,7 @@ Kiedy wywołujesz funkcję w trybie interaktywnym, Python wyświetla wynik:
 ~~~~
 
 Ale w skrypcie, jeśli wywołasz owocną funkcję i nie zapiszesz wyniku funkcji 
-w zmiennej, to zwracana wartość zniknie we mgle!
+w zmiennej, to zwracana wartość zniknie jak we mgle!
 
 ~~~~ {.python}
 math.sqrt(5)
@@ -641,7 +644,7 @@ funkcji, parametry `a` i `b` miały wartości odpowiednio 3 i 5. Funkcja
 obliczyła sumę tych dwóch liczb i umieściła ją w zmiennej lokalnej o nazwie 
 `added`. Następnie użyła instrukcji `return`, by wysłać wyliczoną wartość z 
 powrotem do kodu wywołującego funkcję, gdzie zwrócona wartość została 
-przypisana do zmiennej `x` i wypisany.
+przypisana do zmiennej `x` i wypisana.
 
 Dlaczego potrzebujemy funkcji?
 ------------------------------
@@ -651,8 +654,8 @@ Dlaczego potrzebujemy funkcji?
 Na początku może nie być jasne dlaczego warto podzielić program na funkcje. 
 Jest kilka powodów:
 
--   Stworzenie nowej funkcji daje Ci możliwość nazwania grupy poleceń, co czyni
-    Twój program łatwiejszym do odczytania, zrozumienia i debugowania.
+-   Stworzenie nowej funkcji daje Ci możliwość nazwania grupy poleceń, co sprawia, że
+    Twój program jest łatwiejszy do odczytania, zrozumienia i debugowania.
 
 -   Funkcje mogą sprawić, że program będzie mniejszy poprzez wyeliminowanie
     powtarzającego się kodu. Później, jeśli dokonasz zmiany kodu, będziesz
@@ -662,14 +665,14 @@ Jest kilka powodów:
     części, a następnie złożenie ich w działającą całość.
 
 -   Dobrze zaprojektowane funkcje są często przydatne w wielu programach. Kiedy
-    już napiszesz i zdebugujesz jedną z nich, możesz ją ponownie użyć w innym
+    już napiszesz i zdebugujesz jedną z nich, możesz jej ponownie użyć w innym
     programie.
 
 W pozostałej części książki często będziemy używać definicji funkcji, tak by
 wyjaśnić pewne pojęcie. Częścią umiejętności tworzenia i korzystania z funkcji
 jest posiadanie funkcji, która właściwie uchwyci cel taki jak "znajdź
 najmniejszą wartość na liście wartości". Później pokażemy Ci kod, który znajduje
-najmniejszą wartość na liście wartości i przedstawimy go jako funkcję o nazwie
+najmniejszą wartość na liście i przedstawimy go jako funkcję o nazwie
 `min`, która przyjmuje listę wartości jako swój argument i zwraca najmniejszą
 wartość występującą na tej liście.
 
@@ -680,22 +683,22 @@ Debugowanie
 
 Jeśli używasz edytora tekstu do pisania swoich skryptów, możesz mieć problemy
 ze spacjami i tabulacjami. Najlepszym sposobem na uniknięcie tych problemów
-jest użycie wyłącznie spacji (bez tabulacji). Większość edytorów tekstowych,
-które znają specyfikę Pythona, robi to domyślnie, ale niektóre nie.
+jest użycie wyłącznie spacji (bez tabulacji). Większość (ale nie wszystkie) edytorów tekstowych,
+które znają specyfikę Pythona, robi to domyślnie.
 
 \index{białe znaki}
 
 Tabulacje i spacje są zazwyczaj niewidoczne, co utrudnia ich debugowanie, więc
-postaraj się znaleźć edytor, który zarządza wcięciami dla Ciebie.
+postaraj się znaleźć edytor, który zarządza wcięciami za Ciebie.
 
 Nie zapomnij również zapisać swojego programu, zanim go uruchomisz. Niektóre
-środowiska programistyczne robią to automatycznie, ale niektóre nie. W takim
+środowiska programistyczne robią to automatycznie, a niektóre nie. W takim
 przypadku program, który oglądasz w edytorze tekstu, nie jest taki sam, jak
 program, który uruchamiasz.
 
 Debugowanie może trwać bardzo długo jeśli będziesz ciągle uruchamiać ten sam
 nieprawidłowy program!
-
+<!-- został EN, PL jest ok -->
 Debugging can take a long time if you keep running the same incorrect
 program over and over!
 
@@ -818,7 +821,7 @@ wywołanie funkcji
 
 Jaki jest cel słowa kluczowego "def" w Pythonie?
 
-a. Jest to slang, który oznacza, że "następujący kod jest naprawdę fajny".
+a. Jest to slang, który oznacza: "następujący kod jest naprawdę fajny".
 b. Oznacza początek funkcji.
 c. Oznacza, że następujące wcięcie sekcji kodu ma być przechowywane na później.
 d. Odpowiedzi b. i c. są poprawne.
