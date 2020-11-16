@@ -454,7 +454,7 @@ jak pisany przez szaleńca i byłby nieczytelny:
 
 Nie jest łatwo czytać ani pisać w języku maszynowym, więc dobrze, że mamy
 *interpretery* i *kompilatory*, które pozwalają nam pisać w językach wysokiego
-poziomu takich jak Python czy C.
+poziomu, takich jak Python czy C.
 
 W tym miejscu w naszej dyskusji o kompilatorach i interpreterach powinieneś już się
 trochę zastanawiać nad samym interpreterem Pythona. W jakim języku jest on
@@ -727,7 +727,7 @@ Debugowanie
 
 Gdy Python zwraca błąd lub wynik inny od zamierzonego, to 
 rozpoczynamy poszukiwanie przyczyny błędu. *Debugowanie* to proces znajdowania w
-kodzie przyczyny błędu. Podczas debugowania programu, a zwłaszcza podczas pracy
+kodzie przyczyny błędu. W trakcie debugowania programu, a zwłaszcza podczas pracy
 nad poważnym błędem, należy spróbować czterech rzeczy:
 
 czytanie

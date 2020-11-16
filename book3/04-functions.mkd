@@ -670,7 +670,7 @@ Jest kilka powodów:
 
 W pozostałej części książki często będziemy używać definicji funkcji, tak by
 wyjaśnić pewne pojęcie. Częścią umiejętności tworzenia i korzystania z funkcji
-jest posiadanie funkcji, która właściwie uchwyci cel taki jak "znajdź
+jest posiadanie funkcji, która właściwie uchwyci cel, taki jak "znajdź
 najmniejszą wartość na liście wartości". Później pokażemy Ci kod, który znajduje
 najmniejszą wartość na liście i przedstawimy go jako funkcję o nazwie
 `min`, która przyjmuje listę wartości jako swój argument i zwraca najmniejszą
@@ -693,7 +693,7 @@ postaraj się znaleźć edytor, który zarządza wcięciami za Ciebie.
 
 Nie zapomnij również zapisać swojego programu, zanim go uruchomisz. Niektóre
 środowiska programistyczne robią to automatycznie, a niektóre nie. W takim
-przypadku program, który oglądasz w edytorze tekstu, nie jest taki sam, jak
+przypadku program, który oglądasz w edytorze tekstu, nie jest taki sam jak
 program, który uruchamiasz.
 
 Debugowanie może trwać bardzo długo, jeśli będziesz ciągle uruchamiać ten sam

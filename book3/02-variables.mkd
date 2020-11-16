@@ -245,7 +245,7 @@ Operatory i operandy
 \index{operand}
 \index{wyrażenie}
 
-*Operatory* są specjalnymi symbolami, które reprezentują obliczenia takie jak
+*Operatory* są specjalnymi symbolami, które reprezentują obliczenia, takie jak
 dodawanie i mnożenie. Wartości, na których operator jest stosowany, są nazywane
 *operandami*.
 
