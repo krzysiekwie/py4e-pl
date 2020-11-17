@@ -9,9 +9,9 @@ Do tej pory odczytywaliśmy dane poprzez pliki, szukaliśmy wzorców i wyodrębn
 \index{re, moduł}
 \index{moduł!re}
 
-Zadanie wyszukiwania i wyodrębniania jest tak często wykonywane, że Python ma bardzo wszechstronną i wydajną bibliotekę o nazwie *wyrażenia regularne*, która dość elegancko radzi sobie z tymi zadaniami. Powodem, dla którego nie wprowadziliśmy wcześniej w książce wyrażeń regularnych jest to, że choć mają dużo możliwości i są bardzo przydatne, to niestety są trochę skomplikowane, a przyzwyczajenie się do ich składnia wymaga trochę czasu.
+Zadanie wyszukiwania i wyodrębniania jest tak często wykonywane, że Python ma bardzo wszechstronną i wydajną bibliotekę o nazwie *wyrażenia regularne*, która dość elegancko radzi sobie z tymi zadaniami. Powodem, dla którego nie wprowadziliśmy wcześniej w książce wyrażeń regularnych jest to, że choć mają dużo możliwości i są bardzo przydatne, to niestety są trochę skomplikowane, a przyzwyczajenie się do ich składni wymaga trochę czasu.
 
-Wyrażenia regularne (w skrócie z ang. *regex*) są prawie samodzielnym, małym językiem programowania do wyszukiwania i parsowania ciągów znaków. W rzeczywistości, o wyrażeniach regularnych napisano już wiele książek. W tym rozdziale zajmiemy się tylko podstawami wyrażeń regularnych. Więcej szczegółów na ich temat znajdziesz na stronie:
+Wyrażenia regularne (w skrócie z ang. *regex*) są prawie samodzielnym, małym językiem programowania do wyszukiwania i parsowania ciągów znaków. O wyrażeniach regularnych napisano już wiele książek. W tym rozdziale zajmiemy się tylko podstawami wyrażeń regularnych. Więcej szczegółów na ich temat znajdziesz na stronie:
 
 <https://pl.wikipedia.org/wiki/Wyrażenie_regularne>
 
@@ -32,7 +32,7 @@ Otwieramy plik, przechodzimy przez każdą linię i używamy wyrażenia regularn
 
 Moc wyrażeń regularnych ujawnia się wtedy, gdy dodajemy do ciągu znaków wyszukiwania specjalne znaki, które pozwalają nam dokładniej kontrolować to, które linie do niego pasują. Dodanie tych specjalnych znaków do naszego wyrażenia regularnego pozwala nam na wyrafinowane dopasowanie i ekstrakcję danych przy jednoczesnym użyciu bardzo małej ilości kodu.
 
-Na przykład, znak karety (tzw. daszek) jest używany w wyrażeniach regularnych by dopasować "początek" linii. Moglibyśmy w następujący sposób zmienić nasz program na dopasowywanie tylko tych linii, w których "From:" było na początku:
+Na przykład znak karety (tzw. daszek) jest używany w wyrażeniach regularnych, by dopasować "początek" linii. Moglibyśmy zmienić nasz program na dopasowywanie tylko tych linii, w których "From:" było na początku, w następujący sposób:
 
 \VerbatimInput{../code3/re02.py} 
 \begin{trinketfiles}
@@ -53,7 +53,7 @@ Istnieje wiele innych specjalnych znaków, które pozwalają nam budować jeszcz
 \index{regex!wieloznacznik}
 \index{regex!symbol wieloznaczny}
 
-W poniższym przykładzie, wyrażenie regularne `F...m:` pasuje do któregokolwiek z ciągów znaków "From:", "Fxxm:", "F12m:" lub "F!@m:", ponieważ kropka w wyrażeniu regularnym oznacza dopasowanie dowolnego znaku.
+W poniższym przykładzie wyrażenie regularne `F...m:` pasuje do któregokolwiek z ciągów znaków "From:", "Fxxm:", "F12m:" lub "F!@m:", ponieważ kropka w wyrażeniu regularnym oznacza dopasowanie dowolnego znaku.
 
 \VerbatimInput{../code3/re03.py} 
 \begin{trinketfiles}
@@ -81,7 +81,7 @@ Możesz myśleć o symbolu wieloznacznym `.+` jako o rozszerzeniu, które dopaso
 From:.+@
 ~~~~
 
-Dobrze jest też myśleć o plusie i gwiazdce jako o znakach "ekspansywnych". Na przykład, następujący wzorzec dopasowuje tekst aż do ostatniego znaku małpy w napisie, jako że `.+` "wychodzi do zewnątrz":
+Dobrze jest też myśleć o plusie i gwiazdce jako o znakach "ekspansywnych". Na przykład następujący wzorzec dopasowuje tekst aż do ostatniego znaku małpy w napisie, jako że `.+` "wychodzi do zewnątrz":
 
 ~~~~
 From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
@@ -95,7 +95,7 @@ Poprzez dodanie kolejnego znaku można też wskazać, że znak gwiazdki lub plus
 Wyciąganie danych przy użyciu wyrażeń regularnych
 -------------------------------------------------
 
-Jeśli w Pythonie chcemy wyodrębnić dane z ciągu znaków, to możemy użyć metody `findall()` do wyciągnięcia wszystkich podciągów, które pasują do wyrażenia regularnego. Użyjemy przykładu, w którym w dowolnej linii chcemy wyodrębnić wszystko to, co wygląda jak adres email, niezależnie od jej formatu. Na przykład, chcemy wyodrębnić adresy email z każdej z poniższych linii:
+Jeśli w Pythonie chcemy wyodrębnić dane z ciągu znaków, to możemy użyć metody `findall()` do wyciągnięcia wszystkich podciągów, które pasują do wyrażenia regularnego. Użyjemy przykładu, w którym w dowolnej linii chcemy wyodrębnić wszystko to, co wygląda jak adres email, niezależnie od jej formatu. Na przykład chcemy wyodrębnić adresy email z każdej z poniższych linii:
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
@@ -124,14 +124,14 @@ Wynik programu jest następujący:
 
 Tłumacząc wyrażenie regularne na ludzki język: szukamy podciągów, które zawierają co najmniej jeden *niebiały* znak, po którym następuje znak małpy, po którym następuje co najmniej jeszcze jeden niebiały znak. `\S+` dopasowuje tyle niebiałych znaków, ile tylko się da.
 
-Wyrażenie regularne pasuje dwukrotnie (csev@umich.edu i cwen@iupui.edu), ale nie pasuje do napisu "@2PM", ponieważ nie ma w nim żadnych niebiałych znaków *przed* znakiem małpy. Możemy w następujący sposób użyć tego wyrażenia regularnego by odczytać wszystkie linie w pliku i wypisać wszystko to, co wygląda jak adres e-mail:
+Wyrażenie regularne pasuje dwukrotnie (csev@umich.edu i cwen@iupui.edu), ale nie pasuje do napisu "@2PM", ponieważ nie ma w nim żadnych niebiałych znaków *przed* znakiem małpy. Możemy w następujący sposób użyć tego wyrażenia regularnego, by odczytać wszystkie linie w pliku i wypisać wszystko to, co wygląda jak adres e-mail:
 
 \VerbatimInput{../code3/re06.py} 
 \begin{trinketfiles}
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-Czytamy każdą linie, a następnie wyodrębniamy wszystkie podciągi, które pasują do naszego wyrażenia regularnego. Ponieważ `findall()` zwraca listę, po prostu sprawdzamy czy liczba elementów na tej liście jest większa od zera, tak by wypisać tylko te linie, w których znaleźliśmy przynajmniej jeden podciąg wyglądający jak adres e-mail.
+Czytamy każdą linię, a następnie wyodrębniamy wszystkie podciągi, które pasują do naszego wyrażenia regularnego. Ponieważ `findall()` zwraca listę, po prostu sprawdzamy, czy liczba elementów na tej liście jest większa od zera, tak by wypisać tylko te linie, w których znaleźliśmy przynajmniej jeden podciąg wyglądający jak adres e-mail.
 
 Jeśli uruchomimy program na pliku *mbox.txt*, otrzymamy następujący wynik:
 
@@ -147,9 +147,9 @@ Jeśli uruchomimy program na pliku *mbox.txt*, otrzymamy następujący wynik:
 ['source@collab.sakaiproject.org;']
 ~~~~
 
-Niektóre z tych adresów e-mail mają nieprawidłowe znaki, takie jak "<" lub ";" na początku lub na końcu. Zaznaczmy w programie, że interesuje nas tylko ta część napisu, która zaczyna i kończy się literą lub cyfrą.
+Niektóre z tych adresów e-mail mają nieprawidłowe znaki, takie jak "<" lub ";", na początku lub na końcu. Zaznaczmy w programie, że interesuje nas tylko ta część napisu, która zaczyna i kończy się literą lub cyfrą.
 
-Aby to zrobić, używamy innej cechy wyrażeń regularnych. Kwadratowe nawiasy służą do wskazania zbioru akceptowalnych znaków, które jesteśmy skłonni rozważyć jako pasujące. W pewnym sensie, `\S` prosi o dopasowanie dowolnych "niebiałych znaków". Teraz będziemy nieco dokładniejsi, jeśli chodzi o znaki, które będziemy dopasowywać.
+Aby to zrobić, używamy innej cechy wyrażeń regularnych. Kwadratowe nawiasy służą do wskazania zbioru akceptowalnych znaków, które jesteśmy skłonni rozważyć jako pasujące. W pewnym sensie `\S` prosi o dopasowanie dowolnych "niebiałych znaków". Teraz będziemy nieco dokładniejsi, jeśli chodzi o znaki, które będziemy dopasowywać.
 
 Oto nasze nowe wyrażenie regularne:
 
@@ -157,7 +157,7 @@ Oto nasze nowe wyrażenie regularne:
 [a-zA-Z0-9]\S*@\S*[a-zA-Z]
 ~~~~
 
-Robi się to trochę skomplikowane i może zaczynasz rozumieć, dlaczego wyrażenia regularne są samodzielnym, małym językiem. Tłumacząc to wyrażenie regularne ludzki język: szukamy podciągów, które rozpoczynają się *pojedynczą* małą literą, dużą literą lub liczbą "[a-zA-Z0-9]", po których następuje zero lub więcej niebiałych znaków (`\S*`), po których następuje znak małpy, po których następuje zero lub więcej niebiałych znaków (`\S*`), po których następuje duża lub mała litera. Zauważ, że zmieniliśmy znak `+` na `*`, tak by wskazać zero lub więcej niebiałych znaków, ponieważ `[a-zA-Z0-9]` jest już jednym niebiałym znakiem. Pamiętaj, że `*` lub `+` odnosi się do pojedynczego znaku znajdującego się bezpośrednio po lewej stronie plusa lub gwiazdki.
+Robi się to trochę skomplikowane i może zaczynasz rozumieć, dlaczego wyrażenia regularne są samodzielnym, małym językiem. Tłumacząc to wyrażenie regularne na ludzki język: szukamy podciągów, które rozpoczynają się *pojedynczą* małą literą, dużą literą lub liczbą "[a-zA-Z0-9]", po których następuje zero lub więcej niebiałych znaków (`\S*`), po których następuje znak małpy, po których następuje zero lub więcej niebiałych znaków (`\S*`), po których następuje duża lub mała litera. Zauważ, że zmieniliśmy znak `+` na `*`, tak by wskazać zero lub więcej niebiałych znaków, ponieważ `[a-zA-Z0-9]` jest już jednym niebiałym znakiem. Pamiętaj, że `*` lub `+` odnosi się do pojedynczego znaku znajdującego się bezpośrednio po lewej stronie plusa lub gwiazdki.
 
 \index{regex!zbiory znaków (nawiasy kwadratowe)}
 
@@ -180,7 +180,7 @@ Jeśli użyjemy tego wyrażenia regularnego w naszym programie, nasze dane będ�
 ['apache@localhost']
 ~~~~
 
-Zauważ, że w liniach `source@collab.sakaiproject.org`, nasze wyrażenie regularne wyeliminowało dwa znaki na końcu napisu (">;"). Dzieje się tak dlatego, że kiedy dołączamy `[a-zA-Z]` na końcu wyrażenia regularnego, wymagamy by jakikolwiek ciąg znaków, który znajdzie parser wyrażenia, musiał kończyć się literą. Więc kiedy parser widzi ">" na końcu "sakaiproject.org>;", to po prostu zatrzymuje się na ostatniej znalezionej "pasującej" literze (w tym przypadku "g" było ostatnim dobrym dopasowaniem).
+Zauważ, że w liniach `source@collab.sakaiproject.org` nasze wyrażenie regularne wyeliminowało dwa znaki na końcu napisu (">;"). Dzieje się tak dlatego, że kiedy dołączamy `[a-zA-Z]` na końcu wyrażenia regularnego, wymagamy, by jakikolwiek ciąg znaków, który znajdzie parser wyrażenia, musiał kończyć się literą. Więc kiedy parser widzi ">" na końcu "sakaiproject.org>;", to po prostu zatrzymuje się na ostatniej znalezionej "pasującej" literze (w tym przypadku "g" było ostatnim dobrym dopasowaniem).
 
 Zauważ również, że wynik programu jest listą Pythona, która ma ciąg znaków jako pojedynczy element.
 
@@ -204,7 +204,7 @@ Możemy skonstruować następujące wyrażenie regularne, tak aby wybrać intere
 ^X-.*: [0-9.]+
 ~~~~
 
-Tłumacząc to na ludzki, mówimy, że chcemy te linie, które zaczynają się od `X-`, po których następuje zero lub więcej znaków (`.*`), po których następuje dwukropek (`:`), a następnie spacja. Po spacji szukamy jednego lub więcej znaków, które są albo cyfrą (0-9), albo kropką `[0-9.]+`. Zauważ, że wewnątrz nawiasów kwadratowych, kropka odpowiada rzeczywistej kropce (tzn. pomiędzy nawiasami kwadratowymi nie jest ona traktowana jako wieloznacznik).
+Tłumacząc to na ludzki, mówimy, że chcemy te linie, które zaczynają się od `X-`, po których następuje zero lub więcej znaków (`.*`), po których następuje dwukropek (`:`), a następnie spacja. Po spacji szukamy jednego lub więcej znaków, które są albo cyfrą (0-9), albo kropką `[0-9.]+`. Zauważ, że wewnątrz nawiasów kwadratowych kropka odpowiada rzeczywistej kropce (tzn. pomiędzy nawiasami kwadratowymi nie jest ona traktowana jako wieloznacznik).
 
 Jest to bardzo zwięzłe wyrażenie, które będzie pasowało tylko do interesujących nas linii, jak widać poniżej:
 
@@ -222,11 +222,11 @@ X-DSPAM-Confidence: 0.6178
 X-DSPAM-Probability: 0.0000
 ~~~~
 
-Teraz musimy rozwiązać problem wyodrębniania liczb. Chociaż da się to zrobić bardzo prosto przy użyciu `split`, to jednak możemy użyć kolejnej cechy wyrażeń regularnych, tak by w tym samym czasie zarówno wyszukać jak i przetworzyć linię.
+Teraz musimy rozwiązać problem wyodrębniania liczb. Chociaż da się to zrobić bardzo prosto przy użyciu `split`, to jednak możemy użyć kolejnej cechy wyrażeń regularnych, tak by w tym samym czasie zarówno wyszukać, jak i przetworzyć linię.
 
 \index{ciąg znaków!split}
 
-Nawiasy okrągłe są kolejną szczególną cechą wyrażeń regularnych. Kiedy dodajemy nawiasy do wyrażenia regularnego, są one ignorowane podczas dopasowywania ciągu znaków. Ale kiedy używasz `findall()`, nawiasy wskazują, że podczas gdy chcesz by całe wyrażenie pasowało, to jesteś zainteresowany tylko wyciągnięciem części podciągu, który pasuje do wyrażenia regularnego.
+Nawiasy okrągłe są kolejną szczególną cechą wyrażeń regularnych. Kiedy dodajemy nawiasy do wyrażenia regularnego, są one ignorowane podczas dopasowywania ciągu znaków. Ale kiedy używasz `findall()`, nawiasy wskazują, że podczas gdy chcesz, by całe wyrażenie pasowało, to jesteś zainteresowany tylko wyciągnięciem części podciągu, który pasuje do wyrażenia regularnego.
 
 \index{regex!nawiasy okrągłe}
 \index{nawiasy okrągłe!wyrażenie regularne}
@@ -252,7 +252,7 @@ Wynik programu jest następujący:
 ..
 ~~~~
 
-Liczby wciąż są elementami list i muszą zostać przekonwertowane z ciągów znaków na typ zmiennoprzecinkowy. Niemniej, użyliśmy wachlarza możliwości wyrażeń regularnych zarówno do wyszukiwania, jak i wydobywania informacji, które uznaliśmy za interesujące.
+Liczby wciąż są elementami list i muszą zostać przekonwertowane z ciągów znaków na typ zmiennoprzecinkowy. Niemniej jednak użyliśmy wachlarza możliwości wyrażeń regularnych zarówno do wyszukiwania, jak i wydobywania informacji, które uznaliśmy za interesujące.
 
 A oto inny przykład użycia powyższej techniki. Jeśli spojrzymy na zawartość pliku, to znajdziemy tam wiele linii w następującej postaci:
 
@@ -279,7 +279,7 @@ Kiedy uruchamiamy program, otrzymujemy następujący wynik:
 ...
 ~~~~
 
-Pamiętaj, że `[0-9]+` jest "zachłanne", więc zanim wydobędziemy te cyfry, to stara się on uzyskać jak najdłuższy ciąg cyfr. To "zachłanne" zachowanie jest powodem dla którego otrzymujemy wszystkie pięć cyfr dla każdej liczby. Biblioteka wyrażeń regularnych przeszukuje w obu kierunkach tak długo aż napotka na coś innego niż cyfra albo na początek lub koniec wiersza.
+Pamiętaj, że `[0-9]+` jest "zachłanne", więc zanim wydobędziemy te cyfry, to stara się on uzyskać jak najdłuższy ciąg cyfr. To "zachłanne" zachowanie jest powodem, dla którego otrzymujemy wszystkie pięć cyfr dla każdej liczby. Biblioteka wyrażeń regularnych przeszukuje w obu kierunkach tak długo, aż napotka coś innego niż cyfra albo na początek lub koniec wiersza.
 
 Teraz możemy użyć wyrażeń regularnych, aby powtórzyć ćwiczenie z wcześniejszej części książki, w której byliśmy zainteresowani porą dnia każdej wiadomości. Szukaliśmy linii w postaci:
 
@@ -291,7 +291,7 @@ i dla każdej linii chcieliśmy wyodrębnić godzinę. Wcześniej robiliśmy to 
 
 \index{kruchy kod}
 
-Pomimo działania, w rzeczywistości skutkowało to dość *kruchym kodem*, który zakłada, że linie są ładnie sformatowane. Jeśli dodałbyś wystarczająco dużo sekcji sprawdzających błędy (lub duży blok try/except) by upewnić się, że Twój program nigdy nie zawiedzie podczas analizy źle sformatowanych linii, kod rozrósłby się do 10-15 linii, które byłyby dość ciężkie do odczytania.
+Pomimo działania w rzeczywistości skutkowało to dość *kruchym kodem*, który zakłada, że linie są ładnie sformatowane. Jeśli dodałbyś wystarczająco dużo sekcji sprawdzających błędy (lub duży blok try/except), by upewnić się, że Twój program nigdy nie zawiedzie podczas analizy źle sformatowanych linii, kod rozrósłby się do 10-15 linii, które byłyby dość ciężkie do odczytania.
 
 Na szczęście możemy to osiągnąć w znacznie prostszy sposób, używając następującego wyrażenia regularnego:
 
@@ -301,7 +301,7 @@ Na szczęście możemy to osiągnąć w znacznie prostszy sposób, używając na
 
 Tłumaczenie tego wyrażenia regularnego jest takie, że szukamy linii, które zaczynają się od `From ` (zwróć uwagę na spację), po których następuje dowolna liczba znaków (`.*`), po których następuje spacja, po której następują dwie cyfry `[0-9][0-9]`, po których następuje znak dwukropka. Jest to definicja typów linii, których szukamy.
 
-Aby wyciągnąć tylko godzinę przy użyciu `findall()`, dodajemy nawiasy okrągłe wokół dwóch cyfr w następujący sposób:
+Aby wyciągnąć tylko godzinę przy użyciu `findall()`, dodajemy nawiasy okrągłe wokół dwóch cyfr:
 
 ~~~~
 ^From .* ([0-9][0-9]):
@@ -314,7 +314,7 @@ W ten sposób powstaje następujący program:
 ../code3/mbox-short.txt
 \end{trinketfiles}
 
-Gdy uruchomimy program, uzyskamy następujący wynik:
+Gdy uruchomimy program, uzyskamy taki wynik:
 
 ~~~~
 ['09']
@@ -327,9 +327,9 @@ Gdy uruchomimy program, uzyskamy następujący wynik:
 Znak ucieczki
 -------------
 
-Ponieważ w wyrażeniach regularnych używamy znaków specjalnych, tak aby dopasować początek lub koniec wiersza lub określić wieloznaczniki, potrzebujemy jakiegoś sposobu na wskazanie, że te same znaki mogą być "normalne" i chcemy dopasować rzeczywisty znak, taki jak znak dolara lub daszka.
+Ponieważ w wyrażeniach regularnych używamy znaków specjalnych, aby dopasować początek lub koniec wiersza lub określić wieloznaczniki, potrzebujemy jakiegoś sposobu na wskazanie, że te same znaki mogą być "normalne", i chcemy dopasować rzeczywisty znak, taki jak znak dolara lub daszka.
 
-Możemy wskazać, że chcemy po prostu dopasować znak, poprzedzając go odwrotnym ukośnikiem `\` (jest to tzw. znak ucieczki; inne nazwy to znak modyfikacji lub znak uwalniania). Na przykład, przy pomocy poniższego wyrażenia regularnego możemy znaleźć kwoty pieniędzy.
+Możemy wskazać, że chcemy po prostu dopasować znak, poprzedzając go odwrotnym ukośnikiem `\` (jest to tzw. znak ucieczki; inne nazwy to znak modyfikacji lub znak uwalniania). Na przykład przy pomocy poniższego wyrażenia regularnego możemy znaleźć kwoty pieniędzy.
 
 ~~~~ {.python}
 import re
@@ -337,12 +337,12 @@ x = 'Uzyskaliśmy $10.00 za ciasteczka.'
 y = re.findall('\$[0-9.]+',x)
 ~~~~
 
-Ponieważ poprzedzamy znak dolara odwrotnym ukośnikiem, w rzeczywistości odpowiada on znakowi dolara w wejściowym napisie, zamiast oznaczać "koniec linii", a reszta wyrażenia regularnego odpowiada jednej lub kilku cyfrom lub znakowi kropki. *Uwaga:* w nawiasach kwadratowych znaki nie są traktowane jako "specjalne". Jeśli napiszemy `[0-9.]`, to w rzeczywistości oznacza to cyfry lub kropkę. Poza nawiasami kwadratowymi, kropka jest znakiem symbolu wieloznacznego i dopasowuje każdy znak. W nawiasach kwadratowych, kropka jest kropką.
+Ponieważ poprzedzamy znak dolara odwrotnym ukośnikiem, w rzeczywistości odpowiada on znakowi dolara w wejściowym napisie, zamiast oznaczać "koniec linii", a reszta wyrażenia regularnego odpowiada jednej lub kilku cyfrom lub znakowi kropki. *Uwaga:* w nawiasach kwadratowych znaki nie są traktowane jako "specjalne". Jeśli napiszemy `[0-9.]`, to w rzeczywistości oznacza to cyfry lub kropkę. Poza nawiasami kwadratowymi kropka jest znakiem symbolu wieloznacznego i dopasowuje każdy znak. W nawiasach kwadratowych kropka jest kropką.
 
 Podsumowanie
 ------------
 
-Podczas gdy to tylko zarysowaliśmy niewielki zakres wyrażeń regularnych, to jednak nauczyliśmy się trochę o ich języku. Są to ciągi specjalnych znaków przeznaczone do wyszukiwania, które przekazują Twoje życzenia do systemu wyrażeń regularnych, który z kolei definiuje "dopasowanie" i wydobywa tekst z dopasowanych ciągów. Oto niektóre z tych specjalnych znaków i sekwencji znaków:
+Podczas gdy tylko zarysowaliśmy niewielki zakres wyrażeń regularnych, to jednak nauczyliśmy się trochę o ich języku. Są to ciągi specjalnych znaków przeznaczone do wyszukiwania, które przekazują Twoje życzenia do systemu wyrażeń regularnych, który z kolei definiuje "dopasowanie" i wydobywa tekst z dopasowanych ciągów. Oto niektóre z tych specjalnych znaków i sekwencji znaków:
 
 `^` Dopasowuje początek linii.
 
@@ -356,27 +356,27 @@ Podczas gdy to tylko zarysowaliśmy niewielki zakres wyrażeń regularnych, to j
 
 `*` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je zero lub więcej razy.
 
-`*?` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je zero lub więcej razy "wyłączając tryb zachłanny".
+`*?` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je zero lub więcej razy, "wyłączając tryb zachłanny".
 
 `+` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je jeden lub więcej razy.
 
-`+?` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je jeden lub więcej razy "wyłączając tryb zachłanny".
+`+?` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je jeden lub więcej razy, "wyłączając tryb zachłanny".
 
 `?` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je zero lub jeden raz.
 
-`??` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je zero lub jeden raz "wyłączając tryb zachłanny".
+`??` Dotyczy bezpośrednio poprzedzającego znaku lub znaków i wskazuje, by dopasować je zero lub jeden raz, "wyłączając tryb zachłanny".
 
-`[aeiou]` Dopasowuje pojedynczy znak o ile ten znak jest w określonym zestawie. W tym przykładzie dopasowanie dotyczy "a", "e", "i", "o" lub "u", ale nie dopasowuje żadnych innych znaków.
+`[aeiou]` Dopasowuje pojedynczy znak, o ile ten znak jest w określonym zestawie. W tym przykładzie dopasowanie dotyczy "a", "e", "i", "o" lub "u", ale nie dopasowuje żadnych innych znaków.
 
 `[a-z0-9]` Możesz określić zakresy znaków, używając znaku minus. Ten przykład to pojedynczy znak, który musi być małą literą lub cyfrą.
 
 `[^A-Za-z]` Gdy pierwszym znakiem w zapisie zestawu znaków jest kareta (daszek), to oznacza on zaprzeczenie. Ten przykład odpowiada pojedynczemu znakowi, który jest *czymś innym* niż duże lub małe litery.
 
-`( )` Gdy nawiasy okrągłe są dodawane do wyrażenia regularnego, to są one ignorowane podczas dopasowania, ale pozwalają na wyodrębnienie konkretnego podzbioru dopasowanego napisu, a nie całego ciągu znaków,  podczas użycia `findall()`.
+`( )` Gdy nawiasy okrągłe są dodawane do wyrażenia regularnego, są one ignorowane podczas dopasowania, ale pozwalają na wyodrębnienie konkretnego podzbioru dopasowanego napisu, a nie całego ciągu znaków, podczas użycia `findall()`.
 
 `\b` Dopasowuje pusty ciąg znaków, ale tylko na początku lub na końcu wyrazu.
 
-`\B` Dopasowuje pusty ciąg znaków, ale ani na początku ani na końcu słowa.
+`\B` Dopasowuje pusty ciąg znaków, ale ani na początku, ani na końcu słowa.
 
 `\d` Dopasowuje dowolną cyfrę dziesiętną; odpowiednik [0-9].
 
@@ -389,7 +389,7 @@ Wsparcie wyszukiwania plików za pomocą wyrażeń regularnych zostało wbudowan
 
 \index{grep}
 
-W rzeczywistości Unix posiada wbudowany program wiersza poleceń o nazwie *grep* (Generalized Regular Expression Parser, czyli uogólniony parser wyrażeń regularnych), który robi prawie to samo, co przykłady z `search()` umieszczone w tym rozdziale. Więc jeśli masz system Macintosh lub Linux, możesz spróbować następujących komend w oknie linii poleceń.
+W rzeczywistości Unix posiada wbudowany program wiersza poleceń o nazwie *grep* (Generalized Regular Expression Parser, czyli uogólniony parser wyrażeń regularnych), który robi prawie to samo, co przykłady z `search()` umieszczone w tym rozdziale. Więc jeśli masz system Macintosh lub Linux, możesz spróbować następujących komend w oknie linii poleceń:
 
 ~~~~ {.bash}
 $ grep '^From:' mbox-short.txt
@@ -399,14 +399,14 @@ From: zqian@umich.edu
 From: rjlowe@iupui.edu
 ~~~~
 
-Powyższe polecenie mówi programowi `grep` żeby pokazał Ci linie, które zaczynają się od ciągu znaków "From:" w pliku *mbox-short.txt*. Jeśli trochę poeksperymentujesz z komendą `grep` i przeczytasz dokumentację tego programu, znajdziesz kilka subtelnych różnic między obsługą wyrażeń regularnych w Pythonie a obsługą wyrażeń regularnych w `grep`. Dla przykładu, `grep` nie obsługuje `\S` oznaczającego niebiały znak, więc będziesz musiał użyć nieco bardziej złożonego zapisu (w uproszczeniu) `[^ \n\r\t]`, co po prostu oznacza dopasowanie znaku, który jest czymś innym niż spacja, znaki końca linii lub tabulacja.
+Powyższe polecenie mówi programowi `grep`, żeby pokazał Ci linie, które zaczynają się od ciągu znaków "From:" w pliku *mbox-short.txt*. Jeśli trochę poeksperymentujesz z komendą `grep` i przeczytasz dokumentację tego programu, znajdziesz kilka subtelnych różnic między obsługą wyrażeń regularnych w Pythonie a obsługą wyrażeń regularnych w `grep`. Na przykład `grep` nie obsługuje `\S` oznaczającego niebiały znak, więc będziesz musiał użyć nieco bardziej złożonego zapisu (w uproszczeniu) `[^ \n\r\t]`, co po prostu oznacza dopasowanie znaku, który jest czymś innym niż spacja, znaki końca linii lub tabulacja.
 
 Debugowanie
 -----------
 
 Python ma wbudowaną prostą i podstawową dokumentację, która może być bardzo pomocna, jeśli musisz szybko przypomnieć sobie nazwę danej metody. Dokumentacja ta może być przeglądana w trybie interaktywnym w interpreterze Pythona.
 
-Możesz wywołać interaktywny system pomocy używając `help()`.
+Możesz wywołać interaktywny system pomocy, używając `help()`.
 
 ~~~~ {.python}
 >>> help()
@@ -414,9 +414,9 @@ Możesz wywołać interaktywny system pomocy używając `help()`.
 help> modules
 ~~~~
 
-Aby wyjść z systemu pomocy wpisz `quit`.
+Aby wyjść z systemu pomocy, wpisz `quit`.
 
-Jeśli wiesz, jakiego modułu chcesz użyć, możesz użyć polecenia `dir()`  w następujący sposób, tak aby znaleźć metody dostępne w tym module:
+Jeśli wiesz, jakiego modułu chcesz użyć, możesz użyć polecenia `dir()` w następujący sposób, tak aby znaleźć metody dostępne w tym module:
 
 ~~~~ {.python .trinket}
 >>> import re

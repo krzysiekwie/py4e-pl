@@ -21,7 +21,7 @@ XML wygląda bardzo podobnie do HTMLa, ale jest bardziej uporządkowany. Oto fra
 </osoba>
 ~~~~
 
-Każda para znaczników: otwierający (np. `<osoba>`) i zamykający (np. `</osoba>`) reprezentuje *element* lub *węzeł* (ang. node) o tej samej nazwie co znacznik (np. `osoba`). Każdy element może zawierać jakiś tekst, pewne atrybuty (np. `ukryty`) i inne zagnieżdżone elementy. Jeśli element XML jest pusty (tzn. nie ma treści), to może być przedstawiony za pomocą samozamykającego się tagu (np. `<email />`).
+Każda para znaczników: otwierający (np. `<osoba>`) i zamykający (np. `</osoba>`), reprezentuje *element* lub *węzeł* (ang. node) o tej samej nazwie co znacznik (np. `osoba`). Każdy element może zawierać jakiś tekst, pewne atrybuty (np. `ukryty`) i inne zagnieżdżone elementy. Jeśli element XML jest pusty (tzn. nie ma treści), to może być przedstawiony za pomocą samozamykającego się tagu (np. `<email />`).
 
 Często pomocne jest myślenie o dokumencie XML jako o strukturze drzewa, w którym znajduje się najwyższy element (tutaj: `osoba`), a inne znaczniki (np. `telefon`) są oznaczane jako *dzieci* elementów będących ich *rodzicami*.
 
@@ -38,9 +38,9 @@ Oto prosta aplikacja, która przetwarza część XMLa i wyodrębnia z niego niek
 
 \VerbatimInput{../code3/xml1.py}
 
-Potrójny apostrof (`'''`), jak również potrójny cudzysłów (`"""`), pozwalają na tworzenie napisów, które obejmują wiele linii.
+Potrójny apostrof (`'''`), jak również potrójny cudzysłów (`"""`) pozwalają na tworzenie napisów, które obejmują wiele linii.
 
-Wywołanie `fromstring` zamienia reprezentację XMLa z ciągu znaków na "drzewo" elementów XML. Gdy element XML znajduje się w drzewie, mamy wiele metod, które możemy wywołać by wyodrębnić interesujące nas dane z ciągu znaków w XMLu. Funkcja `find` przeszukuje drzewo XML i wyciąga element, który pasuje do określonego znacznika.
+Wywołanie `fromstring` zamienia reprezentację XMLa z ciągu znaków na "drzewo" elementów XML. Gdy element XML znajduje się w drzewie, mamy wiele metod, które możemy wywołać, by wyodrębnić interesujące nas dane z ciągu znaków w XMLu. Funkcja `find` przeszukuje drzewo XML i wyciąga element, który pasuje do określonego znacznika.
 
 ~~~~
 Imię: Chuck
@@ -71,7 +71,7 @@ Id 009
 Attribute 7
 ~~~~
 
-W instrukcji `findall` należy uwzględnić wszystkie elementy poziomu nadrzędnego z wyjątkiem elementu najwyższego poziomu (np. `users/user`). W przeciwnym razie, Python nie znajdzie żadnych szukanych przez nas węzłów.
+W instrukcji `findall` należy uwzględnić wszystkie elementy poziomu nadrzędnego z wyjątkiem elementu najwyższego poziomu (np. `users/user`). W przeciwnym razie Python nie znajdzie żadnych szukanych przez nas węzłów.
 
 ~~~~ {.python}
 import xml.etree.ElementTree as ET
@@ -129,7 +129,7 @@ Oto kodowanie JSON, które w przybliżeniu odpowiada prostemu XMLowi, który wid
 }
 ~~~~
 
-Zapewne zauważysz kilka różnic. Po pierwsze, w XMLu możemy dodać do znacznika "telefon" atrybuty takie jak "miedzynar". W JSON mamy po prostu pary klucz-wartość. Również znacznik XML "osoba" zniknął i został zastąpiony zestawem zewnętrznych nawiasów klamrowych.
+Zapewne zauważysz kilka różnic. Przede wszystkim w XMLu możemy dodać do znacznika "telefon" atrybuty takie jak "miedzynar". W JSON mamy po prostu pary klucz-wartość. Również znacznik XML "osoba" zniknął i został zastąpiony zestawem zewnętrznych nawiasów klamrowych.
 
 Ogólnie rzecz biorąc, struktury JSON są prostsze niż XML, ponieważ JSON ma mniej możliwości niż XML. Ale ma tę zaletę, że mapuje *bezpośrednio* do jakiegoś połączenia słowników i list. A ponieważ prawie wszystkie języki programowania mają coś w rodzaju słowników i list Pythona, JSON jest bardzo naturalnym formatem wymiany danych pomiędzy dwoma współpracującymi ze sobą programami.
 
@@ -138,13 +138,13 @@ JSON szybko staje się najczęściej wybieranym formatem dla prawie wszystkich d
 Parsowanie JSONa
 ----------------
 
-Budujemy nasz JSON poprzez dowolne zagnieżdżanie słowników i list. W poniższym przykładzie przedstawiamy listę użytkowników, gdzie każdy użytkownik jest zestawem par klucz-wartość (czyli słownikiem). Mamy więc listę słowników.
+Budujemy naszego JSONa poprzez dowolne zagnieżdżanie słowników i list. W poniższym przykładzie przedstawiamy listę użytkowników, gdzie każdy użytkownik jest zestawem par klucz-wartość (czyli słownikiem). Mamy więc listę słowników.
 
 W poniższym programie wykorzystujemy wbudowaną bibliotekę `json` do parsowania JSONa i odczytywania z niego danych. Porównaj kod z wcześniejszym przykładem pracującym na XMLu. JSON ma mniej detali, więc musimy z góry wiedzieć, że otrzymujemy listę, i że lista ta składa się z użytkowników, a każdy użytkownik jest zestawem par klucz-wartość. JSON jest bardziej zwięzły (zaleta), ale mniej samoopisowy (wada).
 
 \VerbatimInput{../code3/json2.py}
 
-Jeśli porównasz kod wyodrębniający dane z JSONa i XMLa, to zauważysz w tym przykładzie, że to, co otrzymujemy z `json.loads()`, jest listą Pythona, po której przechodzimy pętlą `for`, a każda pozycja na tej liście jest słownikiem Pythona. Kiedy już JSON zostanie przeparsowany, możemy użyć operatora indeksu, tak by wyodrębnić różne fragmenty danych związane z użytkownikiem. Nie musimy korzystać z biblioteki JSON by przekopać się przez parsowanego JSONa, ponieważ zwracane dane są po prostu natywnymi strukturami Pythona.
+Jeśli porównasz kod wyodrębniający dane z JSONa i XMLa, to zauważysz w tym przykładzie, że to, co otrzymujemy z `json.loads()`, jest listą Pythona, po której przechodzimy pętlą `for`, a każda pozycja na tej liście jest słownikiem Pythona. Kiedy już JSON zostanie przeparsowany, możemy użyć operatora indeksu, tak by wyodrębnić różne fragmenty danych związane z użytkownikiem. Nie musimy korzystać z biblioteki JSON, by przekopać się przez parsowanego JSONa, ponieważ zwracane dane są po prostu natywnymi strukturami Pythona.
 
 Wynik powyższego programu jest dokładnie taki sam jak wersji z XMLem.
 
@@ -158,12 +158,12 @@ Id 009
 Attribute 7
 ~~~~
 
-Ogólnie rzecz biorąc, w obrębie usług sieciowych istnieje branżowy trend polegający na odchodzeniu od XMLa i zmierzaniu w kierunku JSONa. JSON jest prostszy i bardziej bezpośrednio mapuje do natywnych struktur danych, które mamy już w językach programowania, więc kod parsujący JSONa i wyodrębniający dane jest w takim przypadku zazwyczaj prostszy i bardziej czytelny. Z drugiej strony, XML jest bardziej samoopisowy niż JSON, a więc są pewne zastosowania, w których to XML ma przewagę. Na przykład większość edytorów tekstu przechowuje dokumenty wewnętrznie przy użyciu XMLa, a nie JSONa.
+Ogólnie rzecz biorąc, w obrębie usług sieciowych istnieje branżowy trend polegający na odchodzeniu od XMLa i zmierzaniu w kierunku JSONa. JSON jest prostszy i bardziej bezpośrednio mapuje do natywnych struktur danych, które mamy już w językach programowania, więc kod parsujący JSONa i wyodrębniający dane jest w takim przypadku zazwyczaj prostszy i bardziej czytelny. Z drugiej strony XML jest bardziej samoopisowy niż JSON, a więc są pewne zastosowania, w których to XML ma przewagę. Na przykład większość edytorów tekstu przechowuje dokumenty wewnętrznie przy użyciu XMLa, a nie JSONa.
 
 API – Interfejsy programowania aplikacji
 ----------------------------------------
 
-Mamy teraz możliwość wymiany danych pomiędzy aplikacjami przy użyciu protokołu HTTP oraz sposób na reprezentowanie skomplikowanych danych, które wysyłamy tam i z powrotem pomiędzy aplikacjami, przy użyciu XMLa lub JSONa.
+Mamy teraz możliwość wymiany danych pomiędzy aplikacjami przy użyciu protokołu HTTP oraz sposób na reprezentowanie skomplikowanych danych, które wysyłamy tam i z powrotem między aplikacjami przy użyciu XMLa lub JSONa.
 
 Następnym krokiem jest rozpoczęcie definiowania i dokumentowania "umów" pomiędzy aplikacjami wykorzystującymi powyższe techniki. Ogólna nazwa takiej umowy to *interfejsy programowania aplikacji* (ang. Application Program Interfaces, API). Kiedy używamy API, zazwyczaj jeden z programów udostępnia zestaw *usług* do wykorzystania przez inne aplikacje i publikuje API (tzn. "zasady"), których należy przestrzegać, by uzyskać dostęp do tych usług.
 
@@ -171,7 +171,7 @@ Następnym krokiem jest rozpoczęcie definiowania i dokumentowania "umów" pomi�
 <!-- tu i niżej: "SOA" może "architektura usługowa"? w ramach trendu odchodzenia od "zorientowania" jak OOP "programowanie obiektowe" -->
 Gdy zaczynamy budować nasze programy, których działanie obejmuje dostęp do usług świadczonych przez inne programy, nazywamy to podejście *architekturą zorientowaną na usługi* (ang, Service-Oriented Architecture, SOA). Podejście SOA to takie, w którym cała nasza aplikacja korzysta z usług innych aplikacji. Podejście inne niż SOA to takie, w którym aplikacja jest pojedyncza i samodzielna – zawiera cały kod niezbędny do jej implementacji i wdrożenia.
 
-Podczas korzystania z sieci widzimy wiele przykładów SOA. Możemy wejść na stronę internetową i zarezerwować podróże lotnicze, hotele i wypożyczyć samochody, a wszystko to z poziomu jednej strony. Dane dotyczące hoteli nie są przechowywane na serwerach linii lotniczych. Zamiast tego, serwery linii lotniczych kontaktują się z usługami znajdującymi się na serwerach rezerwacji hotelowych, pobierają dane dotyczące hoteli i przedstawiają je użytkownikowi. Kiedy użytkownik wyraża zgodę na dokonanie rezerwacji hotelowej za pomocą strony internetowej linii lotniczych, strona ta korzysta z innej usługi internetowej w systemach hotelowych, tak aby faktycznie dokonać tej rezerwacji. A gdy przychodzi czas, by obciążyć kartę płatniczą za całą transakcję, w proces ten włączają się jeszcze inne serwery.
+Podczas korzystania z sieci widzimy wiele przykładów SOA. Możemy wejść na stronę internetową i zarezerwować podróże lotnicze, hotele i wypożyczyć samochody, a wszystko to z poziomu jednej strony. Dane dotyczące hoteli nie są przechowywane na serwerach linii lotniczych. Zamiast tego serwery linii lotniczych kontaktują się z usługami znajdującymi się na serwerach rezerwacji hotelowych, pobierają dane dotyczące hoteli i przedstawiają je użytkownikowi. Kiedy użytkownik wyraża zgodę na dokonanie rezerwacji hotelowej za pomocą strony internetowej linii lotniczych, strona ta korzysta z innej usługi internetowej w systemach hotelowych, tak aby faktycznie dokonać tej rezerwacji. A gdy przychodzi czas, by obciążyć kartę płatniczą za całą transakcję, w proces ten włączają się jeszcze inne serwery.
 
 ![SOA – architektura zorientowana na usługi](height=3.0in@../images/soa)
 
@@ -189,7 +189,7 @@ Dość często zdarza się, że chcąc skorzystać z API jakiegoś dostawcy, mus
 
 Czasami jest tak, że po otrzymaniu klucza API po prostu dołączasz go jako część danych w zapytaniu POST lub jako parametr w adresie URL podczas wywoływania API.
 
-Inni dostawcy usług chcą mieć większą pewność co do źródła zapytań i z tego powodu oczekują, że będziesz wysyłał kryptograficznie podpisane wiadomości z wykorzystaniem tzw. współdzielonego klucza i sekretu. Bardzo popularną technologią, która jest używana do podpisywania tego rodzaju zapytań, jest *OAuth*. Więcej o tym protokole możesz przeczytać na stronie <https://www.oauth.net>.
+Inni dostawcy usług chcą mieć większą pewność co do źródła zapytań i z tego powodu oczekują, że będziesz wysyłał kryptograficznie podpisane wiadomości z wykorzystaniem tzw. współdzielonego klucza i sekretu. Bardzo popularną technologią używaną do podpisywania tego rodzaju zapytań jest *OAuth*. Więcej o tym protokole możesz przeczytać na stronie <https://www.oauth.net>.
 
 Na szczęście istnieje wiele wygodnych i darmowych bibliotek OAuth, dzięki czemu możesz uniknąć implementowania OAuth od zera. Biblioteki mają różny stopień skomplikowania i możliwości, a informacje o nich znajdują się na stronie internetowej OAuth.
 
@@ -226,15 +226,15 @@ Aplikacja nr 1: usługa sieciowa OpenStreetMap do geokodowania
 \index{geokodowanie}
 \index{usługa sieciowa}
 
-OpenStreetMap posiada usługę internetową Nominatim, który pozwala nam korzystać z ich dużej bazy danych geograficznych. Możemy przesłać do ich geokodującego API ciąg znaków geograficznych, takich jak "Ann Arbor, MI", i sprawić, że OpenStreetMap zwróci swoje najbardziej prawdopodobne przypuszczenie dotyczące tego, gdzie na mapie możemy odnaleźć nasz ciąg znaków.
+OpenStreetMap oferuje usługę internetową Nominatim, która pozwala nam korzystać z ich dużej bazy danych geograficznych. Możemy przesłać do ich geokodującego API ciąg znaków geograficznych, takich jak "Ann Arbor, MI", i sprawić, że OpenStreetMap zwróci najbardziej prawdopodobne przypuszczenie dotyczące tego, gdzie na mapie możemy odnaleźć nasz ciąg znaków.
 
 Usługa geokodowania jest bezpłatna, ale ograniczona ilościowo, więc w aplikacji komercyjnej nie możesz korzystać z API w sposób nieograniczony. Ale jeśli np. masz trochę danych z ankiety, w której użytkownicy wprowadzili w polu danych jakąś lokalizację w dowolnym formacie, to możesz użyć tego API, tak by całkiem nieźle oczyścić swoje dane.
 
-*Używając bezpłatnego API, takiego jak API geokodowania OpenStreetMap, korzystaj z zasobów z poszanowaniem zasad. Jeśli zbyt wiele osób będzie nadużywać danej usługi, to np. OpenStreetMap może zrezygnować z udostępniania bezpłatnej wersji lub znacznie ją ograniczyć.*
+*Używając bezpłatnego API, takiego jak na przykład API geokodowania OpenStreetMap, korzystaj z zasobów z poszanowaniem zasad. Jeśli zbyt wiele osób będzie nadużywać takiej usługi, to jej dostawca może zrezygnować z udostępniania bezpłatnej wersji lub znacznie ją ograniczyć.*
 
 \index{ograniczenie szybkości}
 
-Możesz zapoznać się z dokumentacją online dotyczącą tej usługi^[<https://nominatim.org/release-docs/develop/api/Search/>], ale jest ona na tyle prosta, że możesz ją nawet przetestować za pomocą przeglądarki, wpisując w niej następujący adres URL:
+Możesz zapoznać się z dokumentacją online dotyczącą tej usługi^[<https://nominatim.org/release-docs/develop/api/Search/>], ale jest ona na tyle prosta, że możesz ją przetestować nawet za pomocą przeglądarki, wpisując następujący adres URL:
 
 <https://nominatim.openstreetmap.org/search.php?q=Ann%20Arbor%2C%20MI&format=geojson&limit=1>
 
@@ -305,14 +305,14 @@ Możesz pobrać <https://py4e.pl/code3/geoxml.py>, aby sprawdzić wariant XML w 
 
 #### Ćwiczenie 1
 
-Zmień <https://py4e.pl/code3/geojson.py> lub <https://py4e.pl/code3/geoxml.py> tak, żeby wypisać nazwę stanu z pobranych danych (jeżeli podane miejsce jest w USA). Dodaj sprawdzanie błędów, aby Twój program nie wyświetlał danych z mechanizmu traceback w momencie gdy w danych nie ma nazwy stanu. Gdy kod już zacznie działać, wyszukaj "Atlantic Ocean" i upewnij się, że program obsługuje też lokalizacje, które nie znajdują się w żadnym kraju.
+Zmień <https://py4e.pl/code3/geojson.py> lub <https://py4e.pl/code3/geoxml.py> tak, żeby wypisać nazwę stanu z pobranych danych (jeżeli podane miejsce jest w USA). Dodaj sprawdzanie błędów, aby Twój program nie wyświetlał danych z mechanizmu traceback, gdy w danych nie ma nazwy stanu. Gdy kod już zacznie działać, wyszukaj "Atlantic Ocean" i upewnij się, że program obsługuje też lokalizacje, które nie znajdują się w żadnym kraju.
 
 Aplikacja nr 2: Twitter
 -----------------------
 <!-- dodano brakujący fragment tłumaczenia -->
-Od czasu gdy API Twittera stało się bardziej wartościowe, Twitter przeszedł z otwartego i publicznego API do takiego, które przy każdym zapytaniu wymaga użycia OAuth. 
+Od czasu, gdy API Twittera stało się bardziej wartościowe, Twitter przeszedł z otwartego i publicznego API do takiego, które przy każdym zapytaniu wymaga użycia OAuth. 
 
-Oba nasze przykłady opierają się na plikach *twurl.py*, *hidden.py*, *oauth.py*, *twitter1.py* i *twitter2.py*, które możesz pobrać z <https://py4e.pl/code3>. Po pobraniu plików, umieść je wszystkie w jednym katalogu.
+Oba nasze przykłady opierają się na plikach *twurl.py*, *hidden.py*, *oauth.py*, *twitter1.py* i *twitter2.py*, które możesz pobrać z <https://py4e.pl/code3>. Po pobraniu plików umieść je wszystkie w jednym katalogu.
 
 Aby móc korzystać z tych programów, musisz mieć konto na Twitterze i autoryzować swój kod Pythona jako aplikację, ustawić klucz, sekret, token i sekret tokena. Wyedytuj plik *hidden.py* i umieść w nim cztery ciągi znaków w odpowiednich miejscach:
 
@@ -322,7 +322,7 @@ Usługa sieciowa Twittera jest dostępna za pomocą podobnego do poniższego adr
 
 <https://api.twitter.com/1.1/statuses/user_timeline.json>
 
-Jednak po dodaniu wszystkich informacji dotyczących uwierzytelniania, adres URL będzie wyglądał mniej więcej tak:
+Jednak po dodaniu wszystkich informacji dotyczących uwierzytelniania adres URL będzie wyglądał mniej więcej tak:
 
 ~~~~
 https://api.twitter.com/1.1/statuses/user_timeline.json?count=2
@@ -334,7 +334,7 @@ https://api.twitter.com/1.1/statuses/user_timeline.json?count=2
 
 Jeśli chcesz dowiedzieć więcej o znaczeniu różnych parametrów, które są dodawane w celu spełnienia wymogów bezpieczeństwa OAuth, to możesz przeczytać specyfikację OAuth.
 
-W naszych programach korzystających z Twittera, wszystkie skomplikowane mechanizmy będą ukryte w plikach *oauth.py* i *twurl.py*. Po prostu ustawiamy sekrety w *hidden.py*, następnie wysyłamy żądany adres URL do funkcji *twurl.augment()*, a kod biblioteki dodaje za nas wszystkie niezbędne parametry do adresu URL.
+W naszych programach korzystających z Twittera wszystkie skomplikowane mechanizmy będą ukryte w plikach *oauth.py* i *twurl.py*. Po prostu ustawiamy sekrety w *hidden.py*, następnie wysyłamy żądany adres URL do funkcji *twurl.augment()*, a kod biblioteki dodaje za nas wszystkie niezbędne parametry do adresu URL.
 
 Poniższy program pobiera oś czasu dla konkretnego użytkownika Twittera i zwraca go nam w formacie JSON w postaci ciągu znaków. Po uzyskaniu danych po prostu wypisujemy pierwsze 250 znaków ciągu:
 
@@ -367,9 +367,9 @@ Pozostało 177
 Podaj nazwę konta na Twitterze:
 ~~~~
 
-Wraz z danymi zwróconymi z osi czasu, Twitter zwraca również w nagłówkach odpowiedzi HTTP metadane dotyczące żądania. Nagłówek, `x-rate-limit-remaining`, informuje nas o tym ile jeszcze żądań możemy wysłać, zanim zostaniemy zablokowani na pewien krótki czas. Jak widać, nasze kolejne wywołania API powodują zmniejszenie tej wartości o jeden.
+Wraz z danymi zwróconymi z osi czasu Twitter zwraca również w nagłówkach odpowiedzi HTTP metadane dotyczące żądania. Nagłówek `x-rate-limit-remaining` informuje nas o tym, ile jeszcze żądań możemy wysłać, zanim zostaniemy zablokowani na pewien krótki czas. Jak widać, nasze kolejne wywołania API powodują zmniejszenie tej wartości o jeden.
 
-W poniższym przykładzie, pobieramy znajomych użytkownika na Twitterze, analizujemy zwrócony JSON i wyodrębniamy niektóre informacje o znajomych. Po przeparsowaniu JSONa do postaci list i słowników, ponownie zamieniamy go do zwykłej postaci tekstowej, ale tym razem nadajemy mu po dwie spacje na wcięcie i "ładnie" wypisujemy na ekranie, tak aby umożliwić nam dalsze zgłębianie otrzymanych danych (co może być przydatne jeśli będziemy chcieli wyodrębnić więcej pól).
+W poniższym przykładzie pobieramy znajomych użytkownika na Twitterze, analizujemy zwrócony JSON i wyodrębniamy niektóre informacje o znajomych. Po przeparsowaniu JSONa do postaci list i słowników ponownie zamieniamy go do zwykłej postaci tekstowej, ale tym razem nadajemy mu po dwie spacje na wcięcie i "ładnie" wypisujemy na ekranie, tak aby umożliwić nam dalsze zgłębianie otrzymanych danych (co może być przydatne, jeśli będziemy chcieli wyodrębnić więcej pól).
 
 \VerbatimInput{../code3/twitter2.py} 
 \begin{trinketfiles}
@@ -435,4 +435,4 @@ Podaj nazwę konta na Twitterze:
 
 W ostatnim fragmencie wyniku programu widzimy pętlę `for`,która odczytuje pięciu ostatnich "znajomych" konta *@drchuck* na Twitterze i wypisuje najnowszy status dla każdego z nich. W zwróconym JSONie znajduje się dużo więcej danych. Jeśli spojrzysz na wynik programu, to zobaczysz również, że operacja "znalezienia znajomych" danego konta ma inny limit wywołań niż dozwolona liczba zapytań dotycząca osi czasu.
 
-Korzystanie z bezpiecznych kluczy API daje Twitterowi pewność, kto i  jakim zakresie, korzysta z jego API i danych. Podejście oparte na ustanawianiu limitów zapytań pozwala na proste wyszukiwanie danych osobowych, ale nie na zbudowanie produktu, który pobierałby przez API Twittera jakieś dane miliony razy dziennie.
+Korzystanie z bezpiecznych kluczy API daje Twitterowi pewność, kto i w jakim zakresie korzysta z jego API i danych. Podejście oparte na ustanawianiu limitów zapytań pozwala na proste wyszukiwanie danych osobowych, ale nie na zbudowanie produktu, który pobierałby przez API Twittera jakieś dane miliony razy dziennie.

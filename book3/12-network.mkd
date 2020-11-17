@@ -2,9 +2,9 @@
 Programy sieciowe
 =================
 
-Mimo że wiele przykładów w tej książce koncentruje się na odczytywaniu plików i wyszukiwaniu w nich danych, istnieje wiele innych różnych źródeł informacji, jeśli wziąć pod uwagę internet.
+Mimo że wiele przykładów w tej książce koncentruje się na odczytywaniu plików i wyszukiwaniu w nich danych, istnieje wiele innych, zróżnicowanych źródeł informacji, jeśli wziąć pod uwagę internet.
 
-W tym rozdziale będziemy udawać, że jesteśmy przeglądarką internetową i wyszukiwać strony internetowe za pomocą HTTP (Hypertext Transfer Protocol, czyli protokołu przesyłania dokumentów hipertekstowych). Następnie będziemy odczytywać dane ze stron internetowych oraz je przetwarzać.
+W tym rozdziale będziemy udawać, że jesteśmy przeglądarką internetową, i wyszukiwać strony internetowe za pomocą HTTP (Hypertext Transfer Protocol, czyli protokołu przesyłania dokumentów hipertekstowych). Następnie będziemy odczytywać dane ze stron internetowych oraz je przetwarzać.
 
 Hypertext Transfer Protocol – HTTP
 ----------------------------------
@@ -17,7 +17,7 @@ Protokół sieciowy, który napędza internet, jest w rzeczywistości dość pro
 
 Ale jeżeli próbujesz odczytać z gniazda dane wtedy, gdy program na drugim końcu jeszcze żadnych nie wysłał, to po prostu czekasz. Jeżeli programy po obu stronach gniazda po prostu czekają na jakieś dane, nie wysyłając niczego, to będą czekać bardzo długo, więc ważną częścią programów komunikujących się przez internet jest posiadanie jakiegoś protokołu.
 
-Protokół jest zestawem precyzyjnych reguł, które określają kto robi pierwszy krok, jak to zrobić, a następnie jakie są możliwe odpowiedzi, kto wysyła kolejną wiadomość itd. W pewnym sensie te dwie aplikacje na obu końcach gniazda wykonują taniec i pilnują, żeby się nawzajem nie nadepnąć.
+Protokół jest zestawem precyzyjnych reguł, które określają, kto robi pierwszy krok, jak to zrobić, a następnie jakie są możliwe odpowiedzi, kto wysyła kolejną wiadomość itd. W pewnym sensie te dwie aplikacje na obu końcach gniazda wykonują taniec i pilnują, żeby się nawzajem nie nadepnąć.
 
 Istnieje wiele dokumentów, które opisują protokoły sieciowe. Hypertext Transfer Protocol jest opisany w poniższym dokumencie:
 
@@ -46,7 +46,7 @@ Najpierw program nawiązuje połączenie z serwerem na porcie 80 [data.pr4e.org]
 
 ![Połączenie przez gniazdo](height=2.0in@../images/socket)
 
-Gdy już wyślemy pusty wiersz, to piszemy pętlę, która odbiera z gniazda dane w 512-znakowych kawałkach i drukuje je aż do momentu gdy nie będzie więcej danych do odczytania (czyli `recv()` zwróci pusty ciąg znaków).
+Gdy już wyślemy pusty wiersz, piszemy pętlę, która odbiera z gniazda dane w 512-znakowych kawałkach i drukuje je aż do momentu, gdy nie będzie więcej danych do odczytania (czyli `recv()` zwróci pusty ciąg znaków).
 
 Program generuje następujące wynik:
 
@@ -70,15 +70,15 @@ Arise fair sun and kill the envious moon
 Who is already sick and pale with grief
 ~~~~
 
-Wyjście zaczyna się od nagłówków, które serwer WWW wysyła w celu opisania dokumentu. Na przykład, nagłówek `Content-Type` wskazuje, że dokument jest zwykłym dokumentem tekstowym (`text/plain`).
+Wyjście zaczyna się od nagłówków, które serwer WWW wysyła w celu opisania dokumentu. Na przykład nagłówek `Content-Type` wskazuje, że dokument jest zwykłym dokumentem tekstowym (`text/plain`).
 
-Po wysłaniu przez serwer nagłówków, dodaje on pustą linię wskazującą koniec nagłówków, a następnie wysyła dane rzeczywiście zawarte w pliku *romeo.txt*.
+Po wysłaniu przez serwer nagłówków dodaje on pustą linię wskazującą koniec nagłówków, a następnie wysyła dane rzeczywiście zawarte w pliku *romeo.txt*.
 
-Powyższy przykład pokazuje jak przy pomocy gniazd wykonać niskopoziomowe połączenie sieciowe. Gniazda mogą być używane do komunikacji z serwerem WWW, z serwerem pocztowym albo z różnymi innymi rodzajami serwerów. Wystarczy znaleźć dokument, który opisuje protokół, i napisać kod do wysłania i odbioru danych zgodnie z tym protokołem.
+Powyższy przykład pokazuje, jak przy pomocy gniazd wykonać niskopoziomowe połączenie sieciowe. Gniazda mogą być używane do komunikacji z serwerem WWW, z serwerem pocztowym albo z różnymi innymi rodzajami serwerów. Wystarczy znaleźć dokument, który opisuje protokół, i napisać kod do wysłania i odbioru danych zgodnie z tym protokołem.
 
 Ponieważ jednak najczęściej używanym przez nas protokołem jest protokół internetowy HTTP, Python posiada specjalną bibliotekę zaprojektowaną specjalnie do jego obsługi i pobierania dokumentów i danych umieszczonych w sieci.
 
-Jednym z wymogów korzystania z protokołu HTTP jest konieczność wysyłania i odbierania danych w postaci obiektów bajtowych, a nie ciągów znaków. W poprzednim przykładzie, metody `encode()` i `decode()` przekształcają odpowiednio ciągi znaków na obiekty bajtowe i obiekty bajtowe na ciągi znaków.
+Jednym z wymogów korzystania z protokołu HTTP jest konieczność wysyłania i odbierania danych w postaci obiektów bajtowych a nie ciągów znaków. W poprzednim przykładzie metody `encode()` i `decode()` przekształcają odpowiednio ciągi znaków na obiekty bajtowe i obiekty bajtowe na ciągi znaków.
 
 Następny przykład używa notacji `b''` do określenia, że zmienna powinna być przechowywana jako obiekt bajtowy. `encode()` i `b''` są równoważne, o ile nie używamy np. znaków diakrytycznych (generalnie użycie `encode()` jest bardziej uniwersalne).
 
@@ -100,7 +100,7 @@ W poprzednim przykładzie pobraliśmy zwykły plik tekstowy, który zawierał zn
 
 \VerbatimInput{../code3/urljpeg.py}
 
-Po uruchomieniu programu, generuje on następujące wyjście:
+Po uruchomieniu programu generuje on następujące wyjście:
 
 ~~~~
 $ python urljpeg.py
@@ -130,9 +130,9 @@ Connection: close
 Content-Type: image/jpeg
 ~~~~
 
-Widać, że dla tego adresu URL nagłówek `Content-Type` wskazuje, że treść dokumentu jest obrazem (`image/jpeg`). Gdy program zakończy pracę, możesz obejrzeć dane obrazu otwierając plik `stuff.jpg` w programie do przeglądania obrazów.
+Widać, że dla tego adresu URL nagłówek `Content-Type` wskazuje, że treść dokumentu jest obrazem (`image/jpeg`). Gdy program zakończy pracę, możesz obejrzeć dane obrazu, otwierając plik `stuff.jpg` w programie do przeglądania obrazów.
 
-W trakcie działania programu widać, że nie otrzymujemy 5120 znaków za każdym razem, gdy wywołujemy metodę `recv()`. Otrzymujemy tyle znaków, ile zostało wysłanych do nas przez serwer WWW w momencie wywołania `recv()`. W tym przykładzie, możemy otrzymać od 3200 do 5120 znaków za każdym razem gdy żądamy danych.
+W trakcie działania programu widać, że nie otrzymujemy 5120 znaków za każdym razem, gdy wywołujemy metodę `recv()`. Otrzymujemy tyle znaków, ile zostało wysłanych do nas przez serwer WWW w momencie wywołania `recv()`. W tym przykładzie możemy otrzymać od 3200 do 5120 znaków za każdym razem, gdy żądamy danych.
 
 W zależności od szybkości Twojej sieci te wartości mogą być jeszcze inne. Zauważ również, że przy ostatnim wywołaniu `recv()` otrzymujemy 3167 bajtów, czyli końcówkę strumienia, a przy następnym wywołaniu `recv()` otrzymujemy ciąg o zerowej długości, który mówi nam, że serwer wywołał `close()` po swojej stronie gniazda i nie przyjdzie już więcej danych.
 
@@ -167,9 +167,9 @@ Connection: close
 Content-Type: image/jpeg
 ~~~~
 
-Teraz, poza pierwszym i ostatnim wywołaniem `recv()`, otrzymujemy 5120 znaków za każdym razem gdy prosimy o nowe dane.
+Teraz, poza pierwszym i ostatnim wywołaniem `recv()`, otrzymujemy 5120 znaków za każdym razem, gdy prosimy o nowe dane.
 
-Pomiędzy serwerem wykonującym żądania `send()` a naszą aplikacją wykonującą żądania `recv()` jest bufor. Kiedy uruchamiamy program z założonym opóźnieniem, w pewnym momencie serwer może zapełnić bufor w gnieździe i być zmuszony zaczekać aż nasz program zacznie opróżniać bufor. Wstrzymanie aplikacji wysyłającej lub odbierającej w takiej sytuacji nazywane jest "kontrolą przepływu".
+Pomiędzy serwerem wykonującym żądania `send()` a naszą aplikacją wykonującą żądania `recv()` jest bufor. Kiedy uruchamiamy program z założonym opóźnieniem, w pewnym momencie serwer może zapełnić bufor w gnieździe i być zmuszony zaczekać, aż nasz program zacznie opróżniać bufor. Wstrzymanie aplikacji wysyłającej lub odbierającej w takiej sytuacji nazywane jest "kontrolą przepływu".
 
 \index{kontrola przepływu}
 
@@ -184,7 +184,7 @@ Równoważny kod odczytujący z sieci plik *romeo.txt* przy użyciu `urllib` jes
 
 \VerbatimInput{../code3/urllib1.py}
 
-Po otwarciu strony internetowej za pomocą `urllib.urlopen`, możemy potraktować ją jak plik i odczytać za pomocą pętli `for`.
+Po otwarciu strony internetowej za pomocą `urllib.urlopen` możemy potraktować ją jak plik i odczytać za pomocą pętli `for`.
 
 Po uruchomieniu programu widzimy tylko zawartość pliku. Nagłówki są nadal wysyłane przez serwer, ale kod `urllib` pochłania nagłówki i zwraca nam tylko dane.
 
@@ -199,7 +199,7 @@ Jako kolejny przykład możemy napisać program, który pobierze dane z `romeo.t
 
 \VerbatimInput{../code3/urlwords.py}
 
-Po otwarciu strony internetowej, możemy odczytać jej zawartość jak z lokalnego pliku.
+Po otwarciu strony internetowej możemy odczytać jej zawartość jak z lokalnego pliku.
 
 Odczytywanie plików binarnych za pomocą `urllib`
 ------------------------------------------------
@@ -212,9 +212,9 @@ Schemat postępowania polega na otwarciu adresu URL i użyciu `read` do pobrania
 
 \VerbatimInput{../code3/curl1.py}
 
-Program ten odczytuje przez sieć wszystkie dane na raz i przechowuje je w zmiennej `img` w pamięci głównej komputera, a następnie otwiera plik `cover.jpg` i zapisuje dane na dysku. Argument `wb` w wywołaniu funkcji `open()` otwiera plik binarny tylko do zapisu. Program ten będzie działał, jeśli rozmiar pliku jest mniejszy niż rozmiar pamięci Twojego komputera.
+Program ten odczytuje przez sieć wszystkie dane na raz i przechowuje je w zmiennej `img` w pamięci głównej komputera, a później otwiera plik `cover.jpg` i zapisuje dane na dysku. Argument `wb` w wywołaniu funkcji `open()` otwiera plik binarny tylko do zapisu. Program ten będzie działał, jeśli rozmiar pliku jest mniejszy niż rozmiar pamięci Twojego komputera.
 
-Jeśli jednak jest to duży plik audio lub wideo, powyższy program może się zawiesić lub przynajmniej działać bardzo wolno w momencie gdy na Twoim komputerze zabraknie pamięci. Aby uniknąć wyczerpania pamięci, pobieramy dane w blokach (lub buforach), a następnie zapisujemy każdy blok na dysku przed pobraniem kolejnego bloku. W ten sposób program może odczytać plik o dowolnym rozmiarze bez zajmowania całej pamięci, którą posiadasz w komputerze.
+Jeśli jednak jest to duży plik audio lub wideo, powyższy program może się zawiesić lub przynajmniej działać bardzo wolno, kiedy na Twoim komputerze zabraknie pamięci. Aby uniknąć wyczerpania pamięci, pobieramy dane w blokach (lub buforach), a następnie zapisujemy każdy blok na dysku przed pobraniem kolejnego bloku. W ten sposób program może odczytać plik o dowolnym rozmiarze bez zajmowania całej pamięci, którą posiadasz w komputerze.
 
 \VerbatimInput{../code3/curl2.py}
 
@@ -236,9 +236,9 @@ Parsowanie HTMLa, roboty internetowe i web scraping
 
 Jednym z częstych zastosowań `urllib` jest tzw. *web scraping* (dosł. wyłuskiwanie danych z sieci). Mamy z nim do czynienia wtedy, gdy piszemy program, który udaje przeglądarkę internetową i pobiera strony, a następnie analizujemy dane zawarte na tych stronach w poszukiwaniu interesujących nas wzorców.
 
-Na przykład, wyszukiwarka taka jak Google, sprawdza kod źródłowy jednej strony internetowej, wyodrębnia linki do innych stron, a następnie pobiera te strony, wyodrębnia z nich linki itd. Używając tej techniki, Google poprzez swoje *roboty internetowe* indeksuje/przechodzi przez prawie wszystkie strony znajdujące się w sieci internetowej.
+Na przykład wyszukiwarka taka jak Google sprawdza kod źródłowy jednej strony internetowej, wyodrębnia linki do innych stron, a następnie pobiera te strony, wyodrębnia z nich linki itd. Używając tej techniki, Google poprzez swoje *roboty internetowe* indeksuje/przechodzi przez prawie wszystkie strony znajdujące się w sieci internetowej.
 
-Google wykorzystuje również informacje o liczbie linków z innych stron do danej strony, jako jedną z miar tego jak "ważna" jest dana strona i jak wysoko powinna się ona znajdować w wynikach wyszukiwania.
+Google wykorzystuje również informacje o liczbie linków z innych stron do danej strony jako jedną z miar tego, jak "ważna" jest dana strona i jak wysoko powinna się ona znajdować w wynikach wyszukiwania.
 
 Parsowanie HTMLa przy użyciu wyrażeń regularnych
 ------------------------------------------------
@@ -264,7 +264,7 @@ href="http[s]?://.+?"
 
 Nasze wyrażenie regularne szuka napisów, które zaczynają się od "href=\"http://" lub "href=\"https://", po których następuje jeden lub więcej znaków (`.+?`), po których następuje kolejny cudzysłów. Znak zapytania `?` za `[s]` wskazuje na szukanie łańcucha "http", po którym następuje zero lub jedno "s".
 
-Znak zapytania dodany do `.+?` wskazuje, że dopasowanie nie być wykonane w trybie "zachłannym". Takie dopasowanie próbuje znaleźć *najmniejszy* możliwy pasujący ciąg znaków, a z kolei zachłanne dopasowanie próbuje znaleźć *największy* możliwy pasujący ciąg znaków.
+Znak zapytania dodany do `.+?` wskazuje, że dopasowanie nie może być wykonane w trybie "zachłannym". Takie dopasowanie próbuje znaleźć *najmniejszy* możliwy pasujący ciąg znaków, a z kolei zachłanne dopasowanie próbuje znaleźć *największy* możliwy pasujący ciąg znaków.
 
 \index{zachłanny}
 \index{niezachłanny}
@@ -311,11 +311,11 @@ Nawet jeśli HTML wygląda jak XML^[Format XML jest opisany w następnym rozdzia
 
 Istnieje wiele bibliotek Pythona, które mogą pomóc Ci w parsowaniu HTMLa i wyodrębnieniu danych ze stron. Każda z tych bibliotek ma swoje mocne i słabe strony, a Ty możesz wybrać jedną z nich w zależności od swoich potrzeb.
 
-Jako przykład, przetworzymy trochę danych HTML i wyodrębnimy linki za pomocą biblioteki *BeautifulSoup*. Ta biblioteka toleruje bardzo wadliwy kod HTML i nadal pozwala na łatwe wyodrębnienie potrzebnych danych. Możesz pobrać i zainstalować kod BeautifulSoup ze strony:
+Jako przykład przetworzymy trochę danych HTML i wyodrębnimy linki za pomocą biblioteki *BeautifulSoup*. Ta biblioteka toleruje bardzo wadliwy kod HTML i nadal pozwala na łatwe wyodrębnienie potrzebnych danych. Możesz pobrać i zainstalować kod BeautifulSoup ze strony:
 
 <https://pypi.org/project/beautifulsoup4/>
 
-Bibliotekę możemy zainstalować poprzez wiersz linii poleceń wydając komendę:
+Bibliotekę możemy zainstalować poprzez wiersz linii poleceń, wydając komendę:
 
 ~~~~
 pip3 install beautifulsoup4
@@ -333,7 +333,7 @@ Użyjemy `urllib` do odczytania strony, a następnie użyjemy `BeautifulSoup` do
 
 \VerbatimInput{../code3/urllinks.py}
 
-Program pyta o adres internetowy, następnie otwiera stronę, odczytuje dane i przekazuje je do parsera BeautifulSoup, a następnie pobiera wszystkie znaczniki hiperłączy i dla każdego z nich wypisuje atrybut `href`.
+Program pyta o adres internetowy, po czym otwiera stronę, odczytuje dane i przekazuje je do parsera BeautifulSoup, a następnie pobiera wszystkie znaczniki hiperłączy i dla każdego z nich wypisuje atrybut `href`.
 
 Po uruchomieniu programu uzyskamy mniej więcej następujący wynik:
 
@@ -404,7 +404,7 @@ Attrs: [('href', 'http://www.dr-chuck.com/page2.htm')]
 
 <https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser>
 
-Powyższe przykłady są tylko namiastką możliwości jakie stoją za BeautifulSoup jeśli chodzi o parsowanie HTMLa.
+Powyższe przykłady są tylko namiastką możliwości, jakie daje BeautifulSoup, jeśli chodzi o parsowanie HTMLa.
 
 Dodatek dla użytkowników systemu Unix / Linux
 ---------------------------------------------
@@ -441,7 +441,7 @@ gniazdo
 \index{gniazdo}
 
 port
-:   Liczba wskazująca ogólnie z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.
+:   Liczba ogólnie wskazująca, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.
 \index{port}
 
 robot internetowy
@@ -457,7 +457,7 @@ web scraping
 
 #### Ćwiczenie 1
 
-Zmień program używający gniazda `socket1.py` tak, aby poprosić użytkownika o podanie adresu URL i by mógł on przeczytać dowolną stronę internetową. Możesz użyć `split('/')` aby rozbić URL na części składowe, dzięki czemu łatwo wyodrębnisz nazwę hosta dla metody `connect`. Dodaj sprawdzanie błędów przy użyciu `try` i `except`, tak aby poradzić sobie z przypadkiem, w którym użytkownik wprowadzi nieprawidłowo sformatowany lub nieistniejący adres URL.
+Zmień program używający gniazda `socket1.py` tak, aby poprosić użytkownika o podanie adresu URL i by mógł on przeczytać dowolną stronę internetową. Możesz użyć `split('/')`, aby rozbić URL na części składowe, dzięki czemu łatwo wyodrębnisz nazwę hosta dla metody `connect`. Dodaj sprawdzanie błędów przy użyciu `try` i `except`, aby poradzić sobie z przypadkiem, w którym użytkownik wprowadzi nieprawidłowo sformatowany lub nieistniejący adres URL.
 
 #### Ćwiczenie 2
 
@@ -465,7 +465,7 @@ Zmień swój program używający gniazda tak, by zliczał liczbę otrzymanych zn
 
 #### Ćwiczenie 3
 
-Użyj `urllib` aby powtórzyć poprzednie ćwiczenie dotyczące (1) pobrania dokumentu z adresu URL, (2) wyświetlenia do 3000 znaków, (3) zliczenia całkowitej liczby znaków w dokumencie. Nie martw się o nagłówki, po prostu pokaż pierwsze 3000 znaków dokumentu.
+Użyj `urllib`, aby powtórzyć poprzednie ćwiczenie dotyczące (1) pobrania dokumentu z adresu URL, (2) wyświetlenia do 3000 znaków, (3) zliczenia całkowitej liczby znaków w dokumencie. Nie martw się o nagłówki, po prostu pokaż pierwsze 3000 znaków dokumentu.
 
 #### Ćwiczenie 4
 
