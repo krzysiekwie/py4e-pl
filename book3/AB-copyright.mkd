@@ -10,7 +10,7 @@ Licencja jest dostępna pod adresem:
 
 Wolałbym udostępniać książkę na mniej restrykcyjnej licencji CC-BY-SA. Ale niestety istnieje kilka pozbawionych skrupułów organizacji, które wyszukują książki z wolnymi licencjami, a następnie publikują i sprzedają praktycznie niezmienione egzemplarze książek w usługach druku na żądanie takich jak LuLu czy KDP. KDP (na szczęście) dodało zasady, które dają rzeczywistemu posiadaczowi praw autorskich pierwszeństwo przed podmiotami nie posiadającymi praw autorskich, które próbują opublikować wolny utwór objęty licencją. Niestety, istnieje wiele usług druku na żądanie i bardzo niewiele z nich rozważa takie zasady jak przyjęte przez KDP.
 
-Z żalem dodałem element NC (NonCommercial, z ang. użycie niekomercyjne) do licencji tej książki, tak by dać sobie możliwość roszczeń w przypadku, gdy ktoś spróbuje skopiować tę książkę i będzie ją sprzedawać komercyjnie. Niestety, dodanie elementu NC ogranicza wykorzystanie tego materiału w zakresie na jaki chciałbym zezwolić. Dodałem więc tę część dokumentu, aby opisać konkretne sytuacje, w których z góry wyrażam zgodę na wykorzystanie materiału zawartego w tej książce w sytuacjach, które niektórzy mogą uznać za komercyjne.
+Z żalem dodałem element NC (NonCommercial, z ang. użycie niekomercyjne) do licencji tej książki, tak by dać sobie możliwość roszczeń w przypadku, gdy ktoś spróbuje skopiować tę książkę i będzie ją sprzedawać komercyjnie. Jednak dodanie elementu NC ogranicza wykorzystanie tego materiału w zakresie, na jaki chciałbym zezwolić. Dodałem więc tę część dokumentu, aby opisać konkretne sytuacje, w których z góry wyrażam zgodę na wykorzystanie materiału zawartego w tej książce w sytuacjach, które niektórzy mogą uznać za komercyjne.
 
 -   Jeśli drukujesz ograniczoną liczbę egzemplarzy całości lub części tego podręcznika do wykorzystania podczas zajęć (np. w formie pakietu szkoleniowego), otrzymujesz na te materiały licencję CC-BY.
 
@@ -18,7 +18,7 @@ Z żalem dodałem element NC (NonCommercial, z ang. użycie niekomercyjne) do li
 
 Jeśli zamierzasz przetłumaczyć książkę, możesz skontaktować się ze mną, abyśmy mogli się upewnić, że posiadasz wszystkie związane z nią materiały kursowe, dzięki czemu będziesz mógł je również przetłumaczyć.
 
-Oczywiście, możesz również skontaktować się ze mną i poprosić o zgodę, jeśli powyższe zapisy nie są wystarczające. We wszystkich przypadkach zgoda na ponowne użycie i remiksowanie tego materiału zostanie udzielona pod warunkiem, że pojawi się wyraźna wartość dodana lub korzyść dla studentów lub nauczycieli, która powstanie w wyniku nowej pracy.
+Oczywiście możesz również skontaktować się ze mną i poprosić o zgodę, jeśli powyższe zapisy nie są wystarczające. We wszystkich przypadkach zgoda na ponowne użycie i remiksowanie tego materiału zostanie udzielona, pod warunkiem, że pojawi się wyraźna wartość dodana lub korzyść dla studentów lub nauczycieli, która powstanie w wyniku nowej pracy.
 
 Charles Severance\
 [www.dr-chuck.com](https://www.dr-chuck.com)\

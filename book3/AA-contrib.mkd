@@ -61,7 +61,7 @@ Przedmowa do "Think Python"
 
 W styczniu 1999 roku przygotowywałem się do prowadzenia wstępnych zajęć z programowania w języku Java. Miałem te zajęcia trzy razy i byłem sfrustrowany. Wskaźnik braku zaliczenia przedmiotu był zbyt wysoki i nawet wśród studentów, którym się udało zdać, ogólny poziom uzyskanych wyników był zbyt niski.
 
-Jednym z oczywistych problemów były książki. Były one zbyt grube, zawierały za dużo zbędnych szczegółów na temat Javy i nie zawierały wystarczająco dużo wskazówek na temat programowania wysokopoziomowego. Na dodatek wszystkie prowadziły w tą samą pułapkę: zaczynały się łatwo, stopniowo trudność rosła, a potem gdzieś koło rozdziału 5 studenci wpadali jak w przerębel. Nowy materiał zasypywał ich lawiną, za szybko i w zbyt dużych ilościach, a ja spędziłbym resztę semestru zbierając resztki tych, którzy przeżyli.
+Jednym z oczywistych problemów były książki. Były one zbyt grube, zawierały za dużo zbędnych szczegółów na temat Javy, a za mało wskazówek na temat programowania wysokopoziomowego. Na dodatek wszystkie prowadziły tym samym szlakiem: zaczynały się łatwo, stopniowo trudność rosła, a potem gdzieś koło rozdziału 5 studenci wpadali jak w przerębel. Nowy materiał zasypywał ich lawiną – za szybko i w zbyt dużych ilościach – a ja spędziłbym resztę semestru, próbując ratować tych, którzy przeżyli.
 
 Dwa tygodnie przed pierwszym dniem zajęć postanowiłem napisać własną książkę. Moje cele były następujące:
 
@@ -73,16 +73,16 @@ Dwa tygodnie przed pierwszym dniem zajęć postanowiłem napisać własną ksią
 
 -   Skupienie na programowaniu, a nie na języku programowania. Włączyłem do książki minimalny użyteczny podzbiór języka Java i pominąłem resztę.
 
-Potrzebowałem tytułu, więc wybrałem pierwsze co mi przyszło do głowy *How to Think Like a Computer Scientist*.
+Potrzebowałem tytułu, więc wybrałem pierwsze, co mi przyszło do głowy: *How to Think Like a Computer Scientist*.
 
-Moja pierwsza wersja książki była surowa, ale działała. Studenci czytali i rozumieli temat na tyle, że podczas zajęć mogłem spędzać czas analizując trudniejsze i ciekawe tematy oraz (co najważniejsze) pozwalając studentom ćwiczyć.
+Moja pierwsza wersja książki była surowa, ale działała. Studenci czytali i rozumieli temat na tyle, że podczas zajęć mogłem spędzać czas, analizując trudniejsze i ciekawe tematy oraz (co najważniejsze) pozwalając studentom ćwiczyć.
 
 Wydałem tę książkę na licencji GNU Free Documentation License, która pozwala jej użytkownikom ją kopiować, modyfikować i rozpowszechniać.
 
 \index{licencja GNU Free Documentation License}
 \index{Free Documentation License, GNU}
 
-A teraz najfajniejsza część tej historii. Jeff Elkner, nauczyciel z liceum w Virginii, włączył moją książkę do swojego programu nauczania i przetłumaczył ją na Pythona. Wysłał mi kopię swojego tłumaczenia, a ja doznałem niezwykłego doświadczenia ucząc się Pythona z mojej własnej książki.
+A teraz najfajniejsza część tej historii. Jeff Elkner, nauczyciel z liceum w Virginii, włączył moją książkę do swojego programu nauczania i przetłumaczył ją na Pythona. Wysłał mi kopię swojego tłumaczenia, a ja doznałem niezwykłego doświadczenia, ucząc się Pythona z mojej własnej książki.
 
 Poprawiliśmy z Jeffem książkę, włączyliśmy do niej studium przypadku Chrisa Meyersa, a w 2001 roku wydaliśmy *How to Think Like a Computer Scientist: Learning with Python*, także na licencji GNU Free Documentation License. Już jako wydawnictwo Green Tea Press opublikowałem książkę i zacząłem ją sprzedawać w formie papierowej za pośrednictwem Amazon.com i księgarni uniwersyteckich. Inne książki z Green Tea Press są dostępne na stronie <https://greenteapress.com>.
 
@@ -101,14 +101,14 @@ Po pierwsze i najważniejsze, dziękuję Jeffowi Elknerowi, który przetłumaczy
 Dziękuję również Chrisowi Meyersowi, który przyczynił się do powstania kilku sekcji w *How to Think Like a Computer Scientist*.
 
 I dziękuję Fundacji Wolnego Oprogramowania za opracowanie GNU Free
-Documentation License, co umożliwoło mi współpracę z Jeffem i Chrisem.
+Documentation License, co umożliwiło mi współpracę z Jeffem i Chrisem.
 
 \index{licencja GNU Free Documentation License}
 \index{Free Documentation License, GNU}
 
 Dziękuję również redaktorom Lulu, którzy pracowali nad *How to Think Like a Computer Scientist*.
 
-Dziękuję wszystkim studentom, którzy pracowali z wcześniejszymi wersjami tej książki oraz wszystkim współtwórcom (wymienionym w załączniku), którzy przesyłali poprawki i sugestie.
+Dziękuję wszystkim studentom, którzy pracowali z wcześniejszymi wersjami tej książki, oraz wszystkim współtwórcom (wymienionym w załączniku), którzy przesyłali poprawki i sugestie.
 
 Dziękuję również mojej żonie, Lisie, za jej pracę nad tą książką, oraz Green Tea Press i wszystkim innym.
 

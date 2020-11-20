@@ -17,16 +17,16 @@ Na początku książki omówiliśmy cztery podstawowe wzorce programowania, któ
 
 W późniejszych rozdziałach analizowaliśmy proste zmienne, jak również struktury danych, takie jak listy, krotki i słowniki.
 
-Podczas tworzenia programów, projektujemy struktury danych i piszemy kod służący do operowania tymi strukturami danych. Istnieje wiele sposobów pisania programów i prawdopodobnie do tej pory napisałeś już kilka programów, które nie są "zbyt eleganckie", oraz kilka innych programów, które są "bardziej eleganckie". Mimo że Twoje programy mogą być małe, to zapewne zaczynasz dostrzegać, że pisanie kodu wymaga odrobiny artyzmu i estetyki.
+Podczas tworzenia programów projektujemy struktury danych i piszemy kod służący do operowania tymi strukturami danych. Istnieje wiele sposobów pisania programów i prawdopodobnie do tej pory napisałeś już kilka programów, które nie są "zbyt eleganckie", oraz kilka innych programów, które są "bardziej eleganckie". Mimo że Twoje programy mogą być małe, to zapewne zaczynasz dostrzegać, że pisanie kodu wymaga odrobiny artyzmu i estetyki.
 
-W miarę jak programy rozrastają się do milionów wierszy, coraz ważniejsze staje się pisanie kodu, który jest łatwy do zrozumienia. Jeśli pracujesz nad programem o długości miliona linii, nigdy nie dasz rady mieć w głowie całego programu naraz. Potrzebujemy sposobów, aby rozbić duże programy na wiele mniejszych kawałków, tak abyśmy mieli mniej kodu do przeglądania rozwiązując jakiś problem, naprawiając błędy lub dodając nowe funkcje.
+W miarę jak programy rozrastają się do milionów wierszy, coraz ważniejsze staje się pisanie kodu, który jest łatwy do zrozumienia. Jeśli pracujesz nad programem o długości miliona linii, nigdy nie dasz rady mieć w głowie całego programu naraz. Potrzebujemy sposobów, aby rozbić duże programy na wiele mniejszych kawałków, tak abyśmy mieli mniej kodu do przeglądania, rozwiązując jakiś problem, naprawiając błędy lub dodając nowe funkcje.
 
-W pewnym sensie, programowanie obiektowe jest sposobem na uporządkowanie kodu tak, abyś mógł skupić się na 50 liniach i go zrozumieć, ignorując na chwilę pozostałe 999 950 linii kodu.
+W pewnym sensie programowanie obiektowe jest sposobem na uporządkowanie kodu tak, abyś mógł skupić się na 50 liniach i go zrozumieć, ignorując na chwilę pozostałe 999 950 linii kodu.
 
 Rozpoczęcie pracy
 -----------------
 
-Podobnie jak w przypadku wielu innych aspektów programowania, poznanie koncepcji programowania obiektowego jest konieczne zanim będzie można je skutecznie wykorzystać. Powinieneś potraktować ten rozdział jako sposób na poznanie niektórych terminów i pojęć oraz popracować z kilkoma prostymi przykładami, aby stworzyć podstawy do dalszej nauki.
+Podobnie jak w przypadku wielu innych aspektów programowania, poznanie koncepcji programowania obiektowego jest konieczne, zanim będzie można je skutecznie wykorzystać. Powinieneś potraktować ten rozdział jako sposób na poznanie niektórych terminów i pojęć oraz popracować z kilkoma prostymi przykładami, aby stworzyć podstawy do dalszej nauki.
 
 Przeczytanie tego rozdziału powinno przede wszystkim dać Ci podstawowe zrozumienie, jak konstruowane są obiekty i jak one funkcjonują, a co najważniejsze, jak wykorzystujemy możliwości obiektów, które są nam dostarczane przez Pythona i jego biblioteki.
 
@@ -76,7 +76,7 @@ Możemy przyjrzeć się możliwościom danego obiektu, patrząc na wynik funkcji
     'insert', 'pop', 'remove', 'reverse', 'sort']
     >>>
 
-Pozostała część tego rozdziału zdefiniuje wszystkie powyższe terminy, więc pamiętaj by po jego zakończeniu wrócić do tej sekcji i ponownie przeczytać powyższe akapity i sprawdzić czy je rozumiesz.
+Pozostała część tego rozdziału zdefiniuje wszystkie powyższe terminy, więc pamiętaj, by po jego zakończeniu wrócić do tej sekcji i ponownie przeczytać powyższe akapity i sprawdzić czy je rozumiesz.
 
 Zaczynając od programów...
 --------------------------
@@ -101,27 +101,27 @@ Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której kor
 
 Wczytujemy adres URL do zmiennej przechowującej ciąg znaków, a następnie przekazujemy ją do `urllib`, tak aby pobrać dane z sieci. Biblioteka `urllib` wykorzystuje w rzeczywistości bibliotekę `socket` do nawiązania połączenia z siecią w celu pobrania danych. Bierzemy ciąg znaków, który zwraca `urllib`, i przekazujemy go do BeautifulSoup do dalszej analizy. BeautifulSoup korzysta z obiektu `html.parser`^[<https://docs.python.org/3/library/html.parser.html>] i w wyniku też zwraca nam obiekt. Na zwróconym obiekcie wywołujemy metodę `tags()`, która zwraca słownik obiektów będących znacznikami. Przechodzimy w pętli po znacznikach i dla każdego znacznika wywołujemy metodę `get()`, tak aby wypisać jego atrybut `href`.
 
-Możemy narysować dla tego programu diagram z oznaczeniem jak te obiekty ze sobą współpracują.
+Możemy narysować dla tego programu diagram z oznaczeniem, jak te obiekty ze sobą współpracują.
 
 ![Program jako sieć obiektów](height=1.50in@../images/program-oo)
 
-W tym przypadku kluczowe nie jest idealne zrozumienie jak ten program działa, ale zobaczenie jak w celu stworzenia programu budujemy sieć współdziałających ze sobą obiektów i zarządzamy przepływem informacji pomiędzy nimi. Ważne jest również zauważenie, że gdy kilka rozdziałów temu natrafiłeś na ten program, to mogłeś w pełni zrozumieć co się w nim dzieje nawet nie zdając sobie sprawy z tego, że program "zarządzał przepływem danych pomiędzy obiektami". To były po prostu tylko linie kodu, które wykonały swoje zadanie.
+W tym przypadku kluczowe nie jest idealne zrozumienie jak ten program działa, ale zobaczenie, jak w celu stworzenia programu budujemy sieć współdziałających ze sobą obiektów i zarządzamy przepływem informacji pomiędzy nimi. Należy również zauważyć, że gdy kilka rozdziałów temu natrafiłeś na ten program, to mogłeś w pełni zrozumieć, co się w nim dzieje, nawet nie zdając sobie sprawy z tego, że program "zarządzał przepływem danych pomiędzy obiektami". To były po prostu tylko linie kodu, które wykonały swoje zadanie.
 
 Dzielenie problemu na mniejsze podproblemy
 ------------------------------------------
 
-Jedną z zalet podejścia obiektowego jest to, że może ono ukryć złożoność jakiegoś problemu. Na przykład, o ile musimy wiedzieć jak używać biblioteki `urllib` i BeautifulSoup, to nie musimy wiedzieć jak one działają w środku. Pozwala nam to skupić się na tej części problemu, którą musimy rozwiązać, i pominąć pozostałe części programu.
+Jedną z zalet podejścia obiektowego jest to, że może ono ukryć złożoność jakiegoś problemu. Na przykład, o ile musimy wiedzieć, jak używać biblioteki `urllib` i BeautifulSoup, to nie musimy wiedzieć, jak one działają w środku. Pozwala nam to skupić się na tej części problemu, którą musimy rozwiązać, i pominąć pozostałe części programu.
 
 ![Pomijanie szczegółów podczas używania obiektu](height=1.50in@../images/program-oo-code)
 
-Możliwość skupienia się wyłącznie na tej części programu, na której nam zależy, i pomijanie reszty, jest również pomocna dla twórców używanych przez nas obiektów. Na przykład, programiści tworzący BeautifulSoup nie muszą wiedzieć ani dbać o to, w jaki sposób pobieramy naszą stronę HTML, jakie części chcemy przeczytać lub co planujemy zrobić z danymi, które pobieramy ze strony.
+Możliwość skupienia się wyłącznie na tej części programu, na której nam zależy, i pominięcia reszty jest również pomocna dla twórców używanych przez nas obiektów. Na przykład programiści tworzący BeautifulSoup nie muszą wiedzieć ani dbać o to, w jaki sposób pobieramy naszą stronę HTML, jakie części chcemy przeczytać lub co planujemy zrobić z danymi, które pobieramy ze strony.
 
 ![Pomijanie szczegółów podczas budowania obiektu](height=1.50in@../images/program-oo-bs4)
 
 Nasz pierwszy obiekt w Pythonie
 -------------------------------
 
-W podstawowym zakresie, obiekt to po prostu jakiś kod plus struktury danych, które są mniejsze niż cały program. Zdefiniowanie funkcji pozwala nam na zapisanie krótkiego kodu i nadanie mu nazwy, a następnie wywołanie tego kodu za pomocą nazwy funkcji.
+W podstawowym zakresie obiekt to po prostu jakiś kod plus struktury danych, które są mniejsze niż cały program. Zdefiniowanie funkcji pozwala nam na zapisanie krótkiego kodu i nadanie mu nazwy, a następnie wywołanie tego kodu za pomocą nazwy funkcji.
 
 Obiekt może zawierać szereg funkcji (które nazywamy *metodami*), jak również dane, które są wykorzystywane przez te funkcje. Dane będące częścią obiektu nazywamy *atrybutami*.
 
@@ -129,13 +129,13 @@ Obiekt może zawierać szereg funkcji (które nazywamy *metodami*), jak równie�
 \index{słowo kluczowe!class}
 \index{atrybut}
 
-Zawsze gdy tworzymy obiekt używamy słowa kluczowego `class` do zdefiniowania danych i kodu, które będą się na niego składały. Słowo kluczowe `class` zawiera nazwę klasy i rozpoczyna wcięty blok kodu, w którym umieszczamy atrybuty (dane) i metody (kod).
+Zawsze gdy tworzymy obiekt, używamy słowa kluczowego `class` do zdefiniowania danych i kodu, które będą się na niego składały. Słowo kluczowe `class` zawiera nazwę klasy i rozpoczyna wcięty blok kodu, w którym umieszczamy atrybuty (dane) i metody (kod).
 
 \VerbatimInput{../code3/party2.py}
 
 Każda metoda wygląda jak funkcja. Zaczyna się od słowa kluczowego `def` i składa się z wciętego bloku kodu. Nasz obiekt ma jeden atrybut (`x`) i jedną metodę (`party`). Metody mają specjalny pierwszy parametr, który nazywamy umownie `self`.
 
-Tak jak słowo kluczowe `def` nie powoduje wykonania kodu funkcji, tak samo słowo kluczowe `class` nie tworzy obiektu. Zamiast tego, definiuje ono szablon mówiący o tym jakie dane i kod będą zawarte w każdym obiekcie typu `PartyAnimal`. Klasa jest jak foremka do wykrawania ciastek, a obiekty tworzone przy jej użyciu to ciasteczka^[Prawa autorskie do obrazu ciasteczka: CC-BY
+Tak jak słowo kluczowe `def` nie powoduje wykonania kodu funkcji, tak samo słowo kluczowe `class` nie tworzy obiektu. Zamiast tego definiuje ono szablon mówiący o tym, jakie dane i kod będą zawarte w każdym obiekcie typu `PartyAnimal`. Klasa jest jak foremka do wykrawania ciastek, a obiekty tworzone przy jej użyciu to ciasteczka^[Prawa autorskie do obrazu ciasteczka: CC-BY
 <https://www.flickr.com/photos/dinnerseries/23570475099>]. Nie umieszczasz lukru na foremce do wykrawania ciastek – lukier umieszczasz na ciasteczkach. A na każdym ciasteczku możesz umieścić inny lukier!
 
 ![Klasa i dwa obiekty](height=2.0in@../photos/cookie_cutter_flickr_Didriks)
@@ -159,7 +159,7 @@ counts = dict()
 
 Tutaj instruujemy Pythona, by skonstruował obiekt przy użyciu szablonu `dict` (obecnego już w Pythonie), zwrócił instancję słownika i przypisał ją do zmiennej `counts`.
 
-Klasa `PartyAnimal` jest używana do konstruowania obiektu, natomiast zmienna `an` jest używana do wskazywania na ten obiekt. Używamy `an` żeby mieć dostęp do kodu i danych dla tej konkretnej instancji klasy `PartyAnimal`.
+Klasa `PartyAnimal` jest używana do konstruowania obiektu, natomiast zmienna `an` jest używana do wskazywania tego obiektu. Używamy `an`, żeby mieć dostęp do kodu i danych dla tej konkretnej instancji klasy `PartyAnimal`.
 
 Każdy obiekt/instancja `PartyAnimal` zawiera w sobie zmienną `x` oraz metodę/funkcję o nazwie `party`. W tej linii wywołujemy metodę `party`:
 
@@ -167,13 +167,13 @@ Każdy obiekt/instancja `PartyAnimal` zawiera w sobie zmienną `x` oraz metodę/
 an.party()
 ~~~~
 
-Kiedy metoda `party` jest wywoływana, pierwszy parametr (który nazywamy umownie `self`) wskazuje na konkretną instancję obiektu `PartyAnimal`, z której wywoływana jest metoda `party`. W obrębie metody `party` widzimy linię:
+Kiedy metoda `party` jest wywoływana, pierwszy parametr (który nazywamy umownie `self`) wskazuje konkretną instancję obiektu `PartyAnimal`, z której wywoływana jest metoda `party`. W obrębie metody `party` widzimy linię:
 
 ~~~~ {.python}
 self.x = self.x + 1
 ~~~~
 
-Składnia ta, używająca operatora *kropki*, mówi '`x` wewnątrz `self`'. Przy każdym wywołaniu `party()`, wewnętrzna wartość `x` jest zwiększana o 1 (a później wartość ta jest wypisywana na ekran przy pomocy `print()`).
+Składnia ta, używająca operatora *kropki*, mówi '`x` wewnątrz `self`'. Przy każdym wywołaniu `party()` wewnętrzna wartość `x` jest zwiększana o 1 (a później wartość ta jest wypisywana na ekran przy pomocy `print()`).
 
 Poniższa linia przedstawia inny sposób wywołania metody `party` wewnątrz obiektu `an`:
 
@@ -192,7 +192,7 @@ Jak na razie 3
 Jak na razie 4
 ~~~~
 
-Konstruujemy obiekt i czterokrotnie wywołujemy metodę `party`, zarówno zwiększając, jak i wypisując wartość `x` będącą wewnątrz obiektu `an`.
+Konstruujemy obiekt i czterokrotnie wywołujemy metodę `party` zarówno zwiększając, jak i wypisując wartość `x` będącą wewnątrz obiektu `an`.
 
 Klasy i typy
 ------------
@@ -227,9 +227,9 @@ Cykl życia obiektu
 \index{cykl życia obiektu}
 \index{obiekt, cykl życia}
 
-W poprzednich przykładach definiowaliśmy klasę (szablon), używaliśmy jej do stworzenia instancji (obiektu) tej klasy, a następnie korzystaliśmy z instancji. Kiedy program zakończy pracę, wszystkie zmienne są porzucane. Zazwyczaj nie zastanawiamy się zbytnio nad tworzeniem i usuwaniem zmiennych. Jednak gdy nasze obiekty stają się coraz bardziej złożone, często musimy podjąć wewnątrz obiektu pewne działania, tak aby ustawić niektóre rzeczy w momencie gdy obiekt jest konstruowany i ewentualnie usunąć pewne rzeczy gdy obiekt jest porzucany.
+W poprzednich przykładach definiowaliśmy klasę (szablon), używaliśmy jej do stworzenia instancji (obiektu) tej klasy, a następnie korzystaliśmy z instancji. Kiedy program zakończy pracę, wszystkie zmienne są porzucane. Zazwyczaj nie zastanawiamy się zbytnio nad tworzeniem i usuwaniem zmiennych. Jednak gdy nasze obiekty stają się coraz bardziej złożone, często musimy podjąć wewnątrz obiektu pewne działania, tak aby ustawić niektóre rzeczy w momencie, gdy obiekt jest konstruowany, i ewentualnie usunąć pewne rzeczy, gdy obiekt jest porzucany.
 
-Jeśli chcemy by nasz obiekt był świadomy momentów konstruowania i niszczenia, dodajemy do niego specjalnie nazwane metody:
+Jeśli chcemy, by nasz obiekt był świadomy momentów konstruowania i niszczenia, dodajemy do niego specjalnie nazwane metody:
 
 \VerbatimInput{../code3/party4.py}
 
@@ -249,9 +249,9 @@ Gdy Python tworzy nasz obiekt, to wywołuje metodę `__init__`, tak aby dać nam
 an = 42
 ~~~~
 
-to w rzeczywistości "odrzuca nasz obiekt", żeby móc ponownie użyć zmiennej `an` do przechowywania wartości `42`. Właśnie w tym momencie, w którym nasz obiekt `an` jest "niszczony", wywoływany jest nasz kod destruktora (`__del__`). Nie możemy powstrzymać zniszczenia naszej zmiennej, ale możemy dokonać niezbędnego czyszczenia tuż zanim nasz obiekt zostanie zniszczony.
+to w rzeczywistości "odrzuca nasz obiekt", żeby móc ponownie użyć zmiennej `an` do przechowywania wartości `42`. Właśnie w tym momencie, w którym nasz obiekt `an` jest "niszczony", wywoływany jest nasz kod destruktora (`__del__`). Nie możemy powstrzymać zniszczenia naszej zmiennej, ale możemy dokonać niezbędnego czyszczenia, tuż zanim nasz obiekt zostanie zniszczony.
 
-Często podczas prac nad kodem obiektu zapada decyzja by dodać do niego konstruktor, tak aby ustawić jego początkowe wartości. Natomiast stosunkowo rzadko się zdarzy byśmy potrzebowali destruktora dla danego obiektu.
+Często podczas prac nad kodem obiektu zapada decyzja, by dodać do niego konstruktor, tak aby ustawić jego początkowe wartości. Natomiast stosunkowo rzadko się zdarzy, byśmy potrzebowali destruktora dla danego obiektu.
 
 Wiele instancji
 ---------------
@@ -268,7 +268,7 @@ Konstruktor posiada zarówno parametr `self`, który wskazuje na instancję obie
 s = PartyAnimal('Sally')
 ~~~~
 
-Wewnątrz konstruktora, druga linia kopiuje parametr (`nam`), który jest przekazywany do atrybutu `name` będącego już w instancji obiektu.
+Wewnątrz konstruktora druga linia kopiuje parametr (`nam`), który jest przekazywany do atrybutu `name` będącego już w instancji obiektu.
 
 ~~~~
 self.name = nam
@@ -297,11 +297,11 @@ Kontynuując poprzedni przykład, przeniesiemy naszą klasę `PartyAnimal` do os
 
 \VerbatimInput{../code3/party.py}
 
-Następnie, w nowym pliku możemy "zaimportować" klasę `PartyAnimal` i ją rozszerzyć ją, tak jak pokazano poniżej:
+Następnie w nowym pliku możemy "zaimportować" klasę `PartyAnimal` i rozszerzyć ją, tak jak pokazano poniżej:
 
 \VerbatimInput{../code3/party6.py}
 
-Kiedy definiujemy klasę `CricketFan`, wskazujemy, że rozszerzamy klasę `PartyAnimal`. Oznacza to, że wszystkie zmienne (`x`) i metody (`party`) z klasy `PartyAnimal` są *dziedziczone* przez klasę `CricketFan`. Na przykład, w ramach metody `six` klasy `CricketFan` wywołujemy metodę `party` z klasy `PartyAnimal`.
+Kiedy definiujemy klasę `CricketFan`, wskazujemy, że rozszerzamy klasę `PartyAnimal`. Oznacza to, że wszystkie zmienne (`x`) i metody (`party`) z klasy `PartyAnimal` są *dziedziczone* przez klasę `CricketFan`. Na przykład w ramach metody `six` klasy `CricketFan` wywołujemy metodę `party` z klasy `PartyAnimal`.
 
 Podczas uruchomienia programu tworzymy zmienne `s` i `j` jako niezależne instancje `PartyAnimal` i `CricketFan`. Obiekt `j` ma dodatkowe możliwości w porównaniu do obiektu `s`.
 
@@ -325,9 +325,9 @@ Powyższy rozdział jest bardzo szybkim wprowadzeniem do programowania obiektowe
 
 \VerbatimInput{../code3/party1.py}
 
-Pierwsza linia tworzy *obiekt* typu `list`. Gdy Python tworzy obiekt typu `list`, to wywołuje metodę *konstruktora* (o nazwie `__init__`), tak by ustawić wewnętrzne atrybuty, które będą używane do przechowywania danych listy. Nie przekazaliśmy żadnych parametrów do *konstruktora*. Gdy konstruktor zakończy działanie, używamy zmiennej `stuff` tak, by móc wskazywać na zwróconą instancję klasy `list`.
+Pierwsza linia tworzy *obiekt* typu `list`. Gdy Python tworzy obiekt typu `list`, to wywołuje metodę *konstruktora* (o nazwie `__init__`), tak by ustawić wewnętrzne atrybuty, które będą używane do przechowywania danych listy. Nie przekazaliśmy żadnych parametrów do *konstruktora*. Gdy konstruktor zakończy działanie, używamy zmiennej `stuff`, aby móc wskazywać na zwróconą instancję klasy `list`.
 
-Druga i trzecia linia wywołują metodę `append` z jednym parametrem, żeby dodać nową pozycję na końcu listy, aktualizując atrybuty w ramach obiektu `stuff`. Następnie w czwartej linii wywołujemy metodę `sort` bez parametrów, po to by posortować dane wewnątrz obiektu `stuff`.
+Druga i trzecia linia wywołują metodę `append` z jednym parametrem, żeby dodać nową pozycję na końcu listy, aktualizując atrybuty w ramach obiektu `stuff`. Następnie w czwartej linii wywołujemy metodę `sort` bez parametrów, by posortować dane wewnątrz obiektu `stuff`.
 
 W kolejnym kroku wypisujemy pierwszą pozycję z listy za pomocą nawiasów kwadratowych, które są skrótem do wywołania metody `__getitem__` w ramach `stuff`. Jest to równoważne z wywołaniem metody `__getitem__` w ramach *klasy* `list` oraz przekazaniem obiektu `stuff` jako pierwszego, a szukanej pozycji jako drugiego parametru.
 
@@ -347,7 +347,7 @@ destruktor
 \index{destruktor}
 
 dziedziczenie
-:   Tworzenie nowej klasy poprzez rozszerzenie klasy już istniejącej. Klasa pochodna oprócz dodatkowych atrybutów i metod zdefiniowanych w niej, posiada również wszystkie atrybuty i metody klasy bazowej.
+:   Tworzenie nowej klasy poprzez rozszerzenie klasy już istniejącej. Klasa pochodna oprócz dodatkowych atrybutów i metod zdefiniowanych w niej posiada również wszystkie atrybuty i metody klasy bazowej.
 \index{dziedziczenie}
 
 klasa
@@ -355,7 +355,7 @@ klasa
 \index{klasa}
 
 klasa bazowa
-:   Klasa, która jest rozszerzana by utworzyć nową klasę pochodną. Klasa bazowa udostępnia klasie pochodnej wszystkie swoje metody i atrybuty.
+:   Klasa, która jest rozszerzana, by utworzyć nową klasę pochodną. Klasa bazowa udostępnia klasie pochodnej wszystkie swoje metody i atrybuty.
 \index{klasa bazowa}
 
 klasa pochodna
@@ -367,7 +367,7 @@ konstruktor
 \index{konstruktor}
 
 metoda
-:   Funkcja, która jest zawarta w klasie i obiektach, które są z niej utworzone.
+:   Funkcja zawarta w klasie i obiektach, które są z niej utworzone.
 \index{metoda}
 
 obiekt
