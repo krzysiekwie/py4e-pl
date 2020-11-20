@@ -1,9 +1,9 @@
 # Przechowuj ten plik oddzielnie
 
-# 1. Zaloguj się lub utworz konto na https://twitter.com
+# 1. Zaloguj się lub załóż konto na https://twitter.com
 # 2. Wejdź na stronę https://developer.twitter.com/en/apps
 #    i spróbuj utworzyć nową aplikację ("Create an app"):
-#    a) zostaniesz poproszony o utworzenie konta deweloperskiego
+#    a) zostaniesz poproszony o założenie konta deweloperskiego
 #       (Please apply for a Twitter developer account);
 #    b) kliknij na "Apply"
 #    c) wybierz "Hobbyist" > "Exploring the API" i wybierz "Next"
@@ -13,9 +13,9 @@
 #       się jak korzystać z API Twittera, zamierzasz napisać dwa mini-projekty,
 #       które w interaktywny sposób pobierają nazwę konta Twittera i dla podanego
 #       konta w projekcie nr 1 pobierzesz i wyświetlisz oś czasu użytkownika
-#       zwróconą w formacie JSON, a w projekcie nr 2 pobierszesz jego listę jego
+#       zwróconą w formacie JSON, a w projekcie nr 2 pobierzesz listę jego
 #       znajomych w formacie JSON i przeparsujesz ją w celu wyciągnięcia informacji
-#       o znajomych; opiszę tę sekcję w miarę szczegółowo, gdyż wpływa ona
+#       o znajomych; opisz tę sekcję dość szczegółowo, gdyż wpływa ona
 #       na akceptację Twojego zgłoszenia); w sekcji "Specifics" zaznacz wszystko
 #       na "No"
 #    f) zweryfikuj zgłoszenie, przeczytaj warunki umowy i wyślij zgłoszenie
