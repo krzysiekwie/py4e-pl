@@ -8,7 +8,7 @@ Listy
 Lista jest sekwencją
 --------------------
 
-Podobnie jak ciąg znaków, *lista* jest sekwencją wartości. W ciągu znaku, wartości są znakami, natomiast w liście mogą być dowolnego typu. Wartości występujące w liście są nazywane *elementami*, z rzadka *pozycjami*.
+Podobnie jak ciąg znaków, *lista* jest sekwencją wartości. W ciągu znaku wartości są znakami, natomiast w liście mogą być dowolnego typu. Wartości występujące w liście są nazywane *elementami*, z rzadka *pozycjami*.
 
 \index{element}
 \index{sekwencja}
@@ -31,7 +31,7 @@ Gdy jedna lista znajduje się w innej liście, to mówimy, że jest *zagnieżdż
 \index{zagnieżdżona lista}
 \index{lista!zagnieżdżona}
 
-Lista, która nie zawiera żadnych elementów, nazywana jest listą pustą. Możesz utworzyć taką listę używając pustych nawiasów kwadratowych, tj. `[]`.
+Lista, która nie zawiera żadnych elementów, nazywana jest listą pustą. Możesz utworzyć taką listę, używając pustych nawiasów kwadratowych, tj. `[]`.
 
 \index{pusta lista}
 \index{lista!pusta}
@@ -58,14 +58,14 @@ Listy są zmienne
 \index{nawias kwadratowy, operator}
 \index{operator!nawias kwadratowy}
 
-Składnia dostępu do elementów listy jest taka sama jak w przypadku dostępu do znaków w napisach: używa się operatora nawiasów kwadratowych. Wyrażenie wewnątrz nawiasów określa indeks. Pamiętaj, że indeksy zaczynają się od 0:
+Składnia dostępu do elementów listy jest taka sama, jak w przypadku dostępu do znaków w napisach: używa się operatora w postaci nawiasów kwadratowych. Wyrażenie wewnątrz nawiasów określa indeks. Pamiętaj, że indeksy zaczynają się od 0:
 
 ~~~~ {.python}
 >>> print(cheeses[0])
 Cheddar
 ~~~~
 
-W odróżnieniu od ciągów znaków, listy są zmienne, ponieważ możesz zmienić kolejność elementów na liście lub ponownie przypisać jakiś element do listy. Kiedy operator nawiasów pojawia się po lewej stronie przypisania, identyfikuje on pozycję listy, do której zostanie coś przypisane.
+W odróżnieniu od ciągów znaków, listy są zmienne, ponieważ możesz zmienić kolejność elementów na liście lub ponownie przypisać jakiś element do listy. Kiedy nawias kwadratowy pojawi się po lewej stronie przypisania, identyfikuje on pozycję listy, do której zostanie coś przypisane.
 
 \index{zmienność}
 
@@ -129,7 +129,7 @@ for cheese in cheeses:
     print(cheese)
 ~~~~
 
-Jest to dobre rozwiązanie jeśli musisz tylko odczytać elementy z listy. Ale jeśli chcesz coś w niej dopisać lub zaktualizować, to potrzebujesz indeksów. W takiej sytuacji najczęściej wykorzystuje się połączenie funkcji `range` i `len`:
+Jest to dobre rozwiązanie, jeśli musisz tylko odczytać elementy z listy. Ale jeśli chcesz coś w niej dopisać lub zaktualizować, to potrzebujesz indeksów. W takiej sytuacji najczęściej wykorzystuje się połączenie funkcji `range` i `len`:
 
 \index{przechodzenie w pętli!po indeksach}
 \index{indeks!przechodzenie w pętli}
@@ -139,7 +139,7 @@ for i in range(len(numbers)):
     numbers[i] = numbers[i] * 2
 ~~~~
 
-Powyższa pętla przechodzi przez listę i aktualizuje każdy element. `len` zwraca liczbę elementów na liście. `range` zwraca listę indeksów od 0 do $n-1$, gdzie $n$ jest długością listy. Przy każdej iteracji pętli, `i` kolejno uzyskuje indeks elementu. Instrukcja przypisania w ciele pętli używa `i` do odczytania starej wartości elementu i przypisania nowej wartości.
+Powyższa pętla przechodzi przez listę i aktualizuje każdy element. `len` zwraca liczbę elementów na liście. `range` zwraca listę indeksów od 0 do $n-1$, gdzie $n$ jest długością listy. Przy każdej iteracji pętli `i` kolejno uzyskuje indeks elementu. Instrukcja przypisania w ciele pętli używa `i` do odczytania starej wartości elementu i przypisania nowej wartości.
 
 \index{element, aktualizacja}
 \index{aktualizacja!element}
@@ -226,11 +226,11 @@ Jeśli pominiesz pierwszy indeks, wycinek zaczyna się od początku listy. Jeśl
 ['a', 'b', 'c', 'd', 'e', 'f']
 ~~~~
 
-Ponieważ listy są zmienne, często przydatne jest wykonanie kopii przed wykonaniem innych operacji, które wywracają ich zawartość do góry nogami.
+Ponieważ listy są zmienne, często przydatne jest zrobienie kopii przed wykonaniem innych operacji, które namieszają i zmasakrują ich elementy.
 
 \index{zmienność}
 
-Operator wycinania zastosowany po lewej stronie instrukcji przypisania może aktualizować wiele elementów:
+Operator wycinania zastosowany po lewej stronie instrukcji przypisania może zmienić wiele elementów:
 
 \index{wycinanie!aktualizacja}
 \index{aktualizacja!wycinek}
@@ -248,7 +248,7 @@ Metody obiektów będących listami
 \index{lista!metoda}
 \index{metoda listy}
 
-Python udostępnia metody, które działają na listach. Na przykład, `append` dodaje nowy element na końcu listy:
+Python udostępnia metody, które działają na listach. Na przykład `append` dodaje nowy element na końcu listy:
 
 \index{append, metoda}
 \index{metoda!append}
@@ -273,7 +273,7 @@ Python udostępnia metody, które działają na listach. Na przykład, `append` 
 ['a', 'b', 'c', 'd', 'e']
 ~~~~
 
-W powyższym przykładzie lsita `t2` pozostaje niezmieniona.
+W powyższym przykładzie lista `t2` pozostaje niezmieniona.
 
 `sort` układa elementy listy od najmniejszego do największego:
 
@@ -301,7 +301,7 @@ Usuwanie elementów
 \index{element, usuwanie}
 \index{usuwanie elementu}
 
-Istnieje kilka sposobów na usunięcie elementów z listy. Jeśli znasz indeks elementu, który chcesz usunąć, to możesz użyć metody `pop`:
+Istnieje kilka sposobów na usunięcie elementów z listy. Jeśli znasz indeks elementu, który chcesz usunąć, możesz użyć metody `pop`:
 
 \index{pop, metoda}
 \index{metoda!pop}
@@ -355,12 +355,12 @@ Aby usunąć więcej niż jeden element, możesz użyć `del` z indeksami podany
 ['a', 'f']
 ~~~~
 
-Jak zwykle, wycinek wybiera wszystkie elementy aż do drugiego indeksu, ale wyłączając z tego ostatnią pozycję.
+Jak zwykle wycinek wybiera wszystkie elementy aż do drugiego indeksu, ale bez ostatniej pozycji.
 
 Listy i funkcje
 ---------------
 
-Istnieje szereg wbudowanych funkcji, które mogą być używane na listach i które pozwalają na szybkie przeglądanie listy bez konieczności pisania własnych pętli:
+Istnieje szereg wbudowanych funkcji, które mogą być używane na listach, pozwalających na szybkie przeglądanie listy bez konieczności pisania własnych pętli:
 
 ~~~~ {.python .trinket}
 >>> nums = [3, 41, 12, 9, 74, 15]
@@ -384,9 +384,9 @@ Poniżej mamy program, który liczy średnią bez listy:
 
 \VerbatimInput{../code3/avenum.py}
 
-W powyższym programie mamy zmienne `count` i `total`, tak aby podczas kolejnych próśb o wprowadzenie danych pamiętać ile już wprowadzono liczb oraz by przechowywać sumę bieżącą wprowadzonych liczb.
+W powyższym programie mamy zmienne `count` i `total`, aby podczas kolejnych próśb o wprowadzenie danych pamiętać, ile już wprowadzono liczb, oraz by przechowywać sumę bieżącą wprowadzonych liczb.
 
-W alternatywnym podejściu, możemy po prostu zapamiętać każdą wprowadzoną liczbę i pod koniec użyć wbudowanych funkcji do obliczenia sumy i zliczenia elementów.
+W alternatywnym podejściu możemy po prostu zapamiętać każdą wprowadzoną liczbę i pod koniec użyć wbudowanych funkcji do obliczenia sumy i zliczenia elementów.
 
 \VerbatimInput{../code3/avelist.py}
 
@@ -401,7 +401,7 @@ Listy i ciągi znaków
 \index{łańcuch znaków}
 \index{sekwencja}
 
-Ciąg znaków jest sekwencją znaków, a lista jest sekwencją wartości, ale lista znaków nie jest tym samym co ciąg znaków. Aby przekonwertować ciąg znaków na listę znaków, możesz użyć funkcji `list`:
+Ciąg znaków jest sekwencją znaków, a lista jest sekwencją wartości, ale lista znaków i ciąg znaków to nie to samo. Aby przekonwertować ciąg znaków na listę znaków, możesz użyć funkcji `list`:
 
 \index{list, funkcja}
 \index{funkcja!list}
@@ -415,7 +415,7 @@ Ciąg znaków jest sekwencją znaków, a lista jest sekwencją wartości, ale li
 
 Ponieważ `list` jest nazwą wbudowanej funkcji, powinieneś unikać używania jej jako nazwy zmiennej. Unikam również litery "l", ponieważ w wyglądzie jest zbyt podobna do liczby "1". Właśnie dlatego używam "t".
 
-Funkcja `list` rozbija ciąg znaków na pojedyncze litery. Jeśli chcesz rozbić ciąg znaków na słowa, to możesz użyć metody `split`:
+Funkcja `list` rozbija ciąg znaków na pojedyncze litery. Jeśli chcesz rozbić ciąg znaków na słowa, możesz użyć metody `split`:
 
 \index{split, metoda}
 \index{metoda!split}
@@ -429,9 +429,9 @@ Funkcja `list` rozbija ciąg znaków na pojedyncze litery. Jeśli chcesz rozbić
 tęsknoty
 ~~~~
 
-Gdy już użyjesz `split` aby rozbić ciąg znaków na listę słów, możesz użyć operatora indeksu (nawias kwadratowy) aby przyjrzeć się konkretnemu słowu na liście.
+Gdy już użyjesz `split`, aby rozbić ciąg znaków na listę słów, możesz użyć operatora indeksu (nawias kwadratowy), żeby przyjrzeć się konkretnemu słowu na liście.
 
-Możesz wywołać `split` z opcjonalnym argumentem zwanym *separatorem*, który określa jakie znaki mają być użyte do określania granic słów. Poniższy przykład używa myślnika jako separatora:
+Możesz wywołać `split` z opcjonalnym argumentem zwanym *separatorem*, który określa, jakie znaki mają być użyte do określania granic słów. Poniższy przykład używa myślnika jako separatora:
 
 \index{opcjonalny argument}
 \index{argument!opcjonalny}
@@ -457,7 +457,7 @@ Metoda `join` jest odwrotnością `split`. Przyjmuje ona listę ciągów znaków
 'usycham z tęsknoty za fiordami'
 ~~~~
 
-W tym przypadku separator jest znakiem spacji, więc `join` umieszcza spację między słowami. Aby połączyć ciągi znaków bez spacji, możesz użyć pustego ciągu znaków, "", jako separator.
+W tym przypadku separator jest znakiem spacji, więc `join` umieszcza spację między słowami. Aby połączyć ciągi znaków bez spacji, możesz użyć pustego ciągu znaków, "", jako separatora.
 
 \index{pusty ciąg znaków}
 \index{ciąg znaków!pusty}
@@ -465,13 +465,13 @@ W tym przypadku separator jest znakiem spacji, więc `join` umieszcza spację mi
 Parsowanie linii
 ----------------
 
-Zwykle gdy czytamy z pliku, chcemy zrobić coś innego niż tylko wyświetlić całą linię. Często chcemy znaleźć "interesujące linie", a następnie *rozdzielić* linię, tak aby później znaleźć jakąś interesującą *część* tej linii. Co by było gdybyśmy chcieli wyświetlić dzień tygodnia z tych linii, które zaczynają się od "From "?
+Zwykle gdy czytamy z pliku, chcemy zrobić coś innego, niż tylko wyświetlić całą linię. Często chcemy znaleźć "interesujące linie", a następnie *rozdzielić* linię, aby później znaleźć jakąś interesującą *część* tej linii. Co by było, gdybyśmy chcieli wyświetlić dzień tygodnia z tych linii, które zaczynają się od "From "?
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 ~~~~
 
-Metoda `split` jest bardzo skuteczna gdy ma do czynienia z tego rodzaju problemem. Możemy napisać mały program, który szuka linii zaczynających się od "From ", rozdzielić te linie przy pomocy `split`, a następnie wyświetlić trzecie słowo występujące w danej linii:
+Metoda `split` jest bardzo skuteczna, gdy ma do czynienia z tego rodzaju problemem. Możemy napisać mały program, który szuka linii zaczynających się od "From ", rozdzielić te linie przy pomocy `split`, a następnie wyświetlić trzecie słowo występujące w danej linii:
 
 \VerbatimInput{../code3/search5.py}
 \begin{trinketfiles}
@@ -486,7 +486,7 @@ Program generuje następujące wyjście:
     Fri
     ...
 
-Później poznamy coraz bardziej wyrafinowane techniki wybierania linii do dalszego przetwarzania oraz dowiemy się jak je przeanalizować, tak aby znaleźć dokładnie ten fragment informacji, którego szukamy.
+Później poznamy coraz bardziej wyrafinowane techniki wybierania linii do dalszego przetwarzania oraz dowiemy się, jak je przeanalizować, tak aby znaleźć dokładnie ten fragment informacji, którego szukamy.
 
 Obiekty i wartości
 ------------------
@@ -507,7 +507,7 @@ to wiemy, że zarówno `a`, jak i `b` odnoszą się do ciągu znaków, ale nie w
 
 ![Zmienne i obiekty](height=0.5in@../images/list1)
 
-W jednym przypadku, `a` i `b` odnoszą się do dwóch różnych obiektów, które mają tę samą wartość. W drugim przypadku, odnoszą się one do tego samego obiektu.
+W jednym przypadku `a` i `b` odnoszą się do dwóch różnych obiektów, które mają tę samą wartość. W drugim przypadku odnoszą się one do tego samego obiektu.
 
 \index{is, operator}
 \index{operator!is}
@@ -521,7 +521,7 @@ Aby sprawdzić, czy dwie zmienne odnoszą się do tego samego obiektu, możesz u
 True
 ~~~~
 
-W powyższym przykładzie, Python stworzył tylko jeden obiekt ciagu znaków, a obie zmienne `a` i `b` odnoszą się właśnie do tego obiektu.
+W powyższym przykładzie Python stworzył tylko jeden obiekt ciągu znaków, a obie zmienne `a` i `b` odnoszą się właśnie do tego obiektu.
 
 Ale kiedy tworzysz dwie listy, otrzymujesz dwa obiekty:
 
@@ -573,7 +573,7 @@ Jeżeli aliasowany obiekt jest zmienny, to zmiany dokonane przy użyciu jednego 
 [17, 2, 3]
 ~~~~
 
-Chociaż takie zachowanie może być użyteczne, jest ono skłonność do generowania błędów. Ogólnie rzecz biorąc, jeśli pracujesz z obiektami zmiennymi, to bezpieczniej jest unikać tworzenia ich aliasów.
+Chociaż takie zachowanie może być użyteczne, ma ono skłonność do generowania błędów. Ogólnie rzecz biorąc, jeśli pracujesz z obiektami zmiennymi, to bezpieczniej jest unikać tworzenia ich aliasów.
 
 \index{niezmienność}
 
@@ -584,7 +584,7 @@ a = 'banan'
 b = 'banan'
 ~~~~
 
-prawie nigdy nie ma różnicy czy `a` i `b` odnoszą się do tego samego ciągu znaków, czy też nie.
+prawie nigdy nie ma różnicy, czy `a` i `b` odnoszą się do tego samego ciągu znaków, czy też nie.
 
 Argumenty będące listami
 ------------------------
@@ -595,14 +595,14 @@ Argumenty będące listami
 \index{referencja}
 \index{parametr}
 
-Kiedy przekazujesz listę do funkcji, funkcja ta otrzymuje referencję do listy. Jeżeli funkcja modyfikuje parametr będący listą, to z poziomu wywoływania funkcji zauważymy tę zmianę. Na przykład, `delete_head` usuwa pierwszy element z listy:
+Kiedy przekazujesz listę do funkcji, funkcja ta otrzymuje referencję do listy. Jeżeli funkcja modyfikuje parametr będący listą, to z poziomu wywoływania funkcji zauważymy tę zmianę. Na przykład `delete_head` usuwa pierwszy element z listy:
 
 ~~~~ {.python}
 def delete_head(t):
     del t[0]
 ~~~~
 
-Oto jak możemy ją użyć:
+Oto jak możemy jej użyć:
 
 ~~~~ {.python .trinket}
 >>> letters = ['a', 'b', 'c']
@@ -636,7 +636,7 @@ None
 False
 ~~~~
 
-Ta różnica jest istotna gdy piszesz definicję funkcji modyfikującej listy. Na przykład, poniższa funkcja *nie usuwa* nagłówka listy:
+Ta różnica jest istotna, gdy piszesz definicję funkcji modyfikującej listy. Na przykład poniższa funkcja *nie usuwa* nagłówka listy:
 
 ~~~~ {.python}
 def bad_delete_head(t):
@@ -648,14 +648,14 @@ Operator wycinania tworzy nową listę, a przypisanie sprawia, że zmienna `t` o
 \index{wycinanie, operator}
 \index{operator!wycinanie}
 
-Alternatywnie można napisać funkcję, która tworzy i zwraca nową listę. Na przykład, `tail` zwraca wszystko oprócz pierwszego elementu listy:
+Zamiast tego można napisać funkcję, która tworzy i zwraca nową listę. Na przykład `tail` zwraca wszystko oprócz pierwszego elementu listy:
 
 ~~~~ {.python}
 def tail(t):
     return t[1:]
 ~~~~
 
-Funkcja ta pozostawia pierwotną listę bez zmian. Poniżej pokazano jak można użyć tej funkcji:
+Funkcja ta pozostawia pierwotną listę bez zmian. Poniżej pokazano, jak można użyć tej funkcji:
 
 ~~~~ {.python .trinket}
 >>> letters = ['a', 'b', 'c']
@@ -666,7 +666,7 @@ Funkcja ta pozostawia pierwotną listę bez zmian. Poniżej pokazano jak można 
 
 #### Ćwiczenie 1
 
-Napisz funkcję o nazwie `chop`, która przyjmuje listę i modyfikuje ją, usuwając pierwszy i ostatni element, a następnie zwraca `None`. Następnie napisz funkcję o nazwie `middle`, która przyjmuje listę i zwraca nową listę, która zawiera wszystkie oprócz pierwszego i ostatniego elementu.
+Napisz funkcję o nazwie `chop`, która przyjmuje listę i modyfikuje ją, usuwając pierwszy i ostatni element, a następnie zwraca `None`. Potem napisz funkcję o nazwie `middle`, która przyjmuje listę i zwraca nową, która zawiera wszystkie oprócz pierwszego i ostatniego elementu.
 
 Debugowanie
 -----------
@@ -676,7 +676,7 @@ Debugowanie
 Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić do długich godzin debugowania. Oto kilka typowych pułapek wraz ze sposobami na ich uniknięcie:
 
 1.  Nie zapominaj, że większość metod listowych modyfikuje argument i
-    zwraca `None`. Jest to odmienne zachowanie w stosunku do tego, co
+    zwraca `None`. Jest to zachowanie odmienne w stosunku do tego, co
     widzieliśmy w metodach obiektów będących ciągami znaków, które 
     zwracają nowy ciąg znaków, a oryginał zostawiają w spokoju.
 
@@ -698,14 +698,14 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     Metoda `sort` zwraca `None`, więc następna operacja, którą wykonasz 
     z `t`, może się nie udać.
 
-    Przed użyciem metod i operatorów dla list, powinieneś dokładnie
+    Przed użyciem metod i operatorów dla list powinieneś dokładnie
     przeczytać dokumentację, a następnie przetestować ją w trybie
     interaktywnym. Metody i operatory, które listy współdzielą z innymi
-    sekwencjami (np. ciągami znaków) są udokumentowane pod adresem:
+    sekwencjami (np. ciągami znaków), są udokumentowane pod adresem:
 
     <https://docs.python.org/library/stdtypes.html#common-sequence-operations>
 
-    Metody i operatory, którzy stosuje się tylko do zmiennych
+    Metody i operatory, które stosuje się tylko do zmiennych
     sekwencji, są udokumentowane na stronie internetowej:
 
     <https://docs.python.org/library/stdtypes.html#mutable-sequence-types>
@@ -716,10 +716,10 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
     Częścią problemu z listami jest to, że jest zbyt wiele sposobów
     na wykonanie jakiejś rzeczy. Na przykład, aby usunąć element z
-    listy, możesz użyć `pop`, `remove`, `del`, a nawet użyć przypisania poprzez operację wycinania.
+    listy, możesz użyć `pop`, `remove`, `del`, a nawet użyć przypisania poprzez wycinanie.
 
     Aby dodać element, możesz użyć metody `append` lub operatora `+`.
-    Ale nie zapomnij, że poniższe sposoby są właściwe:
+    Ale nie zapomnij, że poniższe sposoby są prawidłowe:
 
     ~~~~ {.python}
     t.append(x)
@@ -740,14 +740,14 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     z nich powoduje błąd w czasie wykonania; pozostałe trzy są 
     dozwolone, ale robią coś niepoprawnego.
 
-3.  Rób kopie by unikać aliasowania.
+3.  Rób kopie, by unikać aliasowania.
 
     \index{aliasowanie!kopiowanie by zapobiec}
     \index{kopiowanie!by zapobiec aliasowaniu}
 
     Jeśli chcesz użyć metody takiej jak `sort`, która modyfikuje
     argument, ale musisz także zachować oryginalną listę, to możesz
-    uprzednio zrobić kopię tej listy.
+    uprzednio zrobić jej kopię.
 
     ~~~~ {.python}
     orig = t[:]
@@ -756,28 +756,28 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
     W powyższym przykładzie możesz również użyć wbudowanej funkcji
     `sorted`, która zwraca nową, posortowaną listę, a oryginał pozostawia nienaruszony. Jednak w tym przypadku powinieneś unikać
-    używania nazwy `sorted` jako nazwy dla zmiennej!
+    używania `sorted` jako nazwy dla zmiennej!
 
 4.  Listy, `split` i pliki
 
-    Kiedy odczytujemy i analizujemy pliki, jest wiele okazji by trafić 
+    Kiedy odczytujemy i analizujemy pliki, pojawia się wiele okazji, by trafić 
     na takie dane wejściowe, które mogą wysypać nasz program, więc 
-    dobrym pomysłem jest powrót do wzorca *strażnika* wtedy, gdy 
-    przychodzi nam do pisania programów, które czytają z pliku i 
+    dobrym pomysłem jest powrót do wzorca *strażnika*, gdy 
+    piszemy programy, które czytają z pliku i 
     szukają "igły w stogu siana".
 
     Wróćmy do naszego programu, który szuka dnia tygodnia w wierszach 
-    naszego pliku:
+    pliku:
 
     ~~~~
     From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
     ~~~~
 
     Ponieważ rozbijamy linijkę na słowa, możemy zrezygnować z użycia
-    `startswith` i po prostu spojrzeć na pierwsze słowo linii, tak aby
+    `startswith` i po prostu spojrzeć na pierwsze słowo linii, aby
     określić, czy w ogóle jesteśmy zainteresowani tym wierszem. Możemy 
-    użyć `continue` do pominięcia linii, które nie mają słowa "From" 
-    jako pierwszego słowa, tak jak podano poniżej:
+    użyć `continue` do pominięcia linii, które zaczynają się od słowa "From", 
+    tak jak w przykładzie poniżej:
 
     ~~~~ {.python}
     fhand = open('mbox-short.txt')
@@ -787,7 +787,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
         print(words[2])
     ~~~~
 
-    Wygląda to znacznie prościej i nawet nie musimy używać `rstrip` do usunięcia znaku końca linii. Ale czy to jest faktycznie lepsze?
+    Wygląda to znacznie prościej i nawet nie musimy używać `rstrip` do usunięcia znaku końca linii. Ale czy to jest faktycznie lepsze rozwiązanie?
 
     ~~~~
     python search8.py
@@ -805,10 +805,10 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     program zawiódł?
 
     Mógłbyś się na ten kod długo gapić i zachodzić w głowę lub poprosić 
-    kogoś o pomoc, ale szybsze i mądrzejsze podejście polega na dodaniu 
-    instrukcji `print`. Najlepszym miejscem na dodanie wyświetlenia 
+    kogoś o pomoc, ale szybsze i mądrzejsze podejście to dodanie 
+    instrukcji `print`. Najlepszym miejscem na dodanie wyświetlania 
     danych jest tuż przed wierszem, w którym program się wysypał i 
-    wwyświetlenie tych danych, które wydają się być przyczyną 
+    pokazanie tych danych, które wydają się być przyczyną 
     niepowodzenia.
 
     Dzięki takiemu podejściu do problemu możemy wygenerować wiele linii 
@@ -827,9 +827,9 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     ~~~~
 
     Kiedy uruchomimy program, przez ekran przewinie się duża ilość 
-    danych wyjściowych, ale na końcu zobaczymy nasze debugowane dane 
+    danych, ale na końcu zobaczymy nasze debugowane dane 
     wyjściowe i zrzut z mechanizmu traceback, więc wiemy, co się 
-    wydarzyło tuż przed pojawieniem się błędu.
+    wydarzyło tuż przed błędem.
 
     ~~~~
     Debug: ['X-DSPAM-Confidence:', '0.8475']
@@ -859,11 +859,11 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     Błąd pojawia się wtedy, gdy nasz program natknie się na pustą 
     linię! Oczywiście w pustym wierszu znajduje się "zero słów". 
     Dlaczego nie pomyśleliśmy o tym, gdy pisaliśmy kod? Kiedy nasz kod 
-    szuka pierwszego słowa (`word[0]`) by sprawdzić czy pasuje do 
+    szuka pierwszego słowa (`word[0]`), by sprawdzić, czy pasuje do 
     "From", otrzymujemy błąd "index out of range".
 
     Jest to oczywiście idealne miejsce na dodanie kodu ze 
-    *strażnikiem*, tak aby uniknąć sprawdzania pierwszego słowa jeśli 
+    *strażnikiem*, tak aby uniknąć sprawdzania pierwszego słowa, jeśli 
     go nie ma. Istnieje wiele sposobów na ochronę takiego kodu; 
     zdecydujemy się sprawdzić liczbę słów, które mamy, zanim spojrzymy 
     na pierwsze słowo:
@@ -879,27 +879,27 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
         print(words[2])
     ~~~~ 
 
-    Najpierw zakomentowaliśmy instrukcję o debugowaniu zamiast ją od 
+    Najpierw zakomentowaliśmy instrukcję debugowania zamiast ją od 
     razu usuwać, na wypadek gdyby nasza modyfikacja zawiodła i 
-    musieliśmy debugować kod ponownie. Następnie dodaliśmy instrukcję 
+    trzeba było debugować kod ponownie. Następnie dodaliśmy instrukcję 
     strażnika, który sprawdza, czy mamy zero słów, a jeśli tak, to 
     używamy `continue` by przejść do następnej linii w pliku.
 
     Możemy myśleć o tych dwóch instrukcjach `continue` jako o pomocy w 
     filtrowaniu zestawu linii, które są dla nas "interesujące" i które 
-    chcemy jeszcze trochę przetworzyć. Linia, która nie ma słów jest 
+    chcemy jeszcze trochę przetworzyć. Linia, która nie ma słów, jest 
     dla nas "nieciekawa", więc przechodzimy do następnej linii. Linia, 
     która nie ma "From" jako pierwszego słowa, jest dla nas nieciekawa, 
     więc ją pomijamy.
 
-    Zmodyfikowany działa z powodzeniem, więc być może jest poprawny. 
+    Zmodyfikowany program działa, więc być może jest poprawny. 
     Nasza instrukcja strażnika zapewnia, że `word[0]` nigdy nie 
-    zawiedzie, ale może to nie być wystarczające. Podczas programowania 
+    spowoduje błędu, ale może to nie być wystarczające. Podczas programowania 
     musimy zawsze myśleć: "Co może się nie udać?".
 
 #### Ćwiczenie 2
 
-Dowiedz się, która linia powyższego programu nie jest jeszcze właściwie zabezpieczona. Zobacz, czy potrafisz skonstruować taki plik tekstowy, który spowoduje awarię programu, a następnie zmodyfikować program tak, by linia była odpowiednio zabezpieczona. Przetestuj poprawiony program by upewnić się, że obsługuje Twój nowy plik tekstowy.
+Sprawdź, która linia powyższego programu nie jest jeszcze właściwie zabezpieczona. Zobacz, czy potrafisz skonstruować taki plik tekstowy, który wysypie program, a następnie zmodyfikować program tak, by linia była odpowiednio zabezpieczona. Przetestuj poprawiony program, by upewnić się, że obsługuje Twój nowy plik tekstowy.
 
 #### Ćwiczenie 3
 
@@ -918,8 +918,8 @@ element
     pozycją.
 \index{element}
 
-identiczny
-:   Będący tym samym obiektem (co oznacza też równoważność).
+identyczny
+:   Będący tym samym obiektem (co oznacza, że jest też równoważny).
 \index{identyczność}
 
 indeks
@@ -965,7 +965,7 @@ separator
 
 #### Ćwiczenie 4
 
-Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Dla każdej linii podziel ją na listę słów za pomocą metody `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli słowa nie ma na liście, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
+Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Każdą z nich podziel na listę słów za pomocą metody `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli go nie ma, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
 
 ~~~~
 Podaj nazwę pliku: romeo.txt
@@ -984,7 +984,7 @@ Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz z
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
 ~~~~
 
-Musisz przeparsować linię zawierjącą "From" i wyświetlić drugie słowo dla każdej takiej linii. Następnie musisz zliczyć liczbę wierszy "From" (nie "From:") i na końcu wyświetlić tę liczbę. Poniżej znajduje się przykładowe poprawne wyjście (część linii wyjścia została usunięta):
+Musisz przeparsować linię zawierającą "From" i wyświetlić drugie słowo dla każdej takiej linii. Następnie musisz zliczyć liczbę wierszy "From" (nie "From:") i na końcu wyświetlić tę liczbę. Poniżej znajduje się przykładowe poprawne wyjście (część linii wyjścia została usunięta):
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
@@ -1003,7 +1003,7 @@ Mamy 27 linii w pliku, w których From jest pierwszym wyrazem
 
 #### Ćwiczenie 6
 
-Napisz ponownie program, który poprosi użytkownika o listę liczbę i wypisze na końcu największą i najmniejszą z nich wtedy, gdy użytkownik wpisze "gotowe". Napisz program w ten sposób, że zapisze on wprowadzone przez użytkownika liczby na liście i użyje funkcji `max()` oraz `min()` do znalezienia największej i najmniejszej liczby po zakończeniu pętli.
+Napisz ponownie program, który poprosi użytkownika o listę liczb i wypisze na końcu największą i najmniejszą z nich, gdy użytkownik wpisze "gotowe". Napisz program w ten sposób, że zapisze on wprowadzone przez użytkownika liczby na liście i użyje funkcji `max()` oraz `min()` do znalezienia największej i najmniejszej liczby po zakończeniu pętli.
 
 ~~~~
 Wprowadź liczbę: 6

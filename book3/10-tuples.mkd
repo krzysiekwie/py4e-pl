@@ -9,20 +9,20 @@ Krotki są niezmienne
 \index{typ!tuple}
 \index{sekwencja}
 
-Krotka^[Ciekawostka: Angielskie tłumaczenie słowa "krotka", czyli *tuple*, pochodzi od nazw nadawanych sekwencjom liczb o różnej długości: *single, double, triple, quadruple, quintuple, sextuple, septuple* itd.] jest sekwencją wartości, podobnie jak lista. Wartości zapisane w krotce mogą być dowolnego typu i są indeksowane liczbami całkowitymi. Ważną różnicą jest to, że krotki są *niezmienne*. Krotki są również *porównywalne* i *haszowalne*, więc możemy sortować ich listy i używać krotek jako kluczy w słownikach.
+Krotka^[Ciekawostka: Angielskie tłumaczenie słowa "krotka", czyli *tuple*, pochodzi od nazw nadawanych sekwencjom cyfr o różnej długości: *single, double, triple, quadruple, quintuple, sextuple, septuple* itd.] jest sekwencją wartości, podobnie jak lista. Wartości zapisane w krotce mogą być dowolnego typu i są indeksowane liczbami całkowitymi. Ważną różnicą jest to, że krotki są *niezmienne*. Krotki są również *porównywalne* i *haszowalne*, więc możemy sortować ich listy i używać krotek jako kluczy w słownikach.
 
 \index{zmienność}
 \index{haszowalny}
 \index{porównywalny}
 \index{niezmienność}
 
-Składniowo, krotka jest oddzieloną przecinkami listą wartości:
+Składniowo krotka jest oddzieloną przecinkami listą wartości:
 
 ~~~~ {.python}
 >>> t = 'a', 'b', 'c', 'd', 'e'
 ~~~~
 
-Chociaż nie jest to konieczne, krotki często ogranicza się nawiasami, tak aby pomóc nam szybko zidentyfikować krotki podczas przeglądania kodu Pythona:
+Chociaż nie jest to konieczne, krotki często ogranicza się nawiasami, tak aby pomóc nam szybko je zidentyfikować podczas przeglądania kodu Pythona:
 
 \index{nawiasy okrągłe!krotki}
 
@@ -105,7 +105,7 @@ Ale jeśli spróbujesz zmodyfikować jeden z elementów krotki, to otrzymasz bł
 TypeError: object doesn't support item assignment
 ~~~~
 
-Nie możesz modyfikować elementów krotki, ale możesz zastąpić jedną krotkę drugą krotką:
+Nie możesz modyfikować elementów krotki, ale możesz zastąpić jedną krotkę inną krotką:
 
 ~~~~ {.python .trinket}
 >>> t = ('A',) + t[1:]
@@ -130,12 +130,12 @@ True
 True
 ~~~~
 
-Funkcja `sort` działa w ten sam sposób. Sortuje przede wszystkim według pierwszego elementu, ale w przypadku takich samych wartości, sortuje według drugiego elementu itd.
+Funkcja `sort` działa w ten sam sposób. Sortuje przede wszystkim według pierwszego elementu, ale w przypadku takich samych wartości sortuje według drugiego elementu itd.
 
 Powyższa własność prowadzi do schematu zwanego *DSU* oznaczającego
 
 Dekorowanie
-:   sekwencji poprzez zbudowanie listy krotek z jednym lub więcej kluczami sortowania, które poprzedzają elementy sekwencji,
+:   sekwencji poprzez zbudowanie listy krotek z jednym lub wieloma kluczami sortowania, które poprzedzają elementy sekwencji,
 
 Sortowanie
 :   listy krotek przy pomocy funkcji wbudowanej `sort`,
@@ -149,13 +149,13 @@ Usunięcie dekorowania
 \index{schemat!dekorowanie-sortowanie-usunięcie dekorowania}
 \index{Romeo i Julia}
 
-Na przykład, załóżmy, że posiadasz listę wyrazów i chcesz je posortować od najdłuższego do najkrótszego:
+Załóżmy, że masz listę wyrazów i chcesz je posortować od najdłuższego do najkrótszego:
 
 \VerbatimInput{../code3/soft.py}
 
 Pierwsza pętla buduje listę krotek, gdzie każda krotka jest wyrazem poprzedzonym jego długością.
 
-Funkcja `sort` porównuje najpierw pierwsze elementy krotek, czyli długości wyrazów, a drugie elementy rozpatruje tylko w przypadku takich samych długości wyrazów. Argument z podaną nazwą `reverse=True` wskazuje funkcji `sort` by sortować w kolejności malejącej.
+Funkcja `sort` porównuje najpierw pierwsze elementy krotek, czyli długości wyrazów, a drugie elementy rozpatruje tylko w przypadku takich samych długości wyrazów. Argument z podaną nazwą `reverse=True` wskazuje funkcji `sort`, by sortować w kolejności malejącej.
 
 \index{słowo kluczowe, argument}
 \index{argument!słowo kluczowe}
@@ -205,7 +205,7 @@ To nie jest magia, Python *z grubsza* tłumaczy składnię przypisania krotek na
 >>>
 ~~~~
 
-Stylistycznie rzecz ujmując, gdy używamy krotki po lewej stronie instrukcji przypisania, pomijamy nawiasy, ale poniższa składnia jest równie poprawna:
+Stylistycznie rzecz ujmując, gdy używamy krotki po lewej stronie instrukcji przypisania, pomijamy nawiasy, ale poniższa składnia jest również poprawna:
 
 ~~~~ {.python}
 >>> m = [ 'have', 'fun' ]
@@ -228,7 +228,7 @@ Sprytne zastosowanie operacji przypisania krotki pozwala nam na *zamianę* warto
 
 Obie strony tego wyrażenia są krotkami, ale lewa strona jest krotką zmiennych; prawa strona jest krotką wyrażeń. Każda wartość po prawej stronie jest przypisana do odpowiadającej jej zmiennej po lewej stronie. Wszystkie wyrażenia po prawej stronie są ewaluowane przed każdym z przypisań.
 
-Liczba zmiennych po lewej stronie i liczba wartości po prawej stronie musi być taka sama:
+Liczba zmiennych po lewej stronie i liczba wartości po prawej stronie muszą być takie same:
 
 \index{wyjątek!ValueError}
 \index{ValueError}
@@ -250,7 +250,7 @@ Ogólnie rzecz biorąc, prawa strona może być dowolną sekwencją (ciągiem, l
 >>> uname, domain = addr.split('@')
 ~~~~
 
-Wartość zwracana przez `split` jest listą z dwoma elementami; pierwszy element jest przypisany do `uname`, a drugi do `domain`.
+Wartość zwracana przez `split` jest listą z dwoma elementami; pierwszy element jest przypisany do `uname`, a drugi – do `domain`.
 
 ~~~~ {.python}
 >>> print(uname)
@@ -298,16 +298,16 @@ Wielokrotne przypisanie w słownikach
 \index{przejście!słownik}
 \index{słownik!przejście}
 
-Łącząc `items`, przypisanie krotki oraz `for`, możesz zobaczyć ciekawy schemat kodu do przechodzenia po kluczach i wartościach słownika w jednej pętli:
+Używając razem `items`, przypisania krotki oraz `for`, możesz zobaczyć ciekawy schemat kodu do przechodzenia po kluczach i wartościach słownika w jednej pętli:
 
 ~~~~ {.python}
 for key, val in list(d.items()):
     print(val, key)
 ~~~~
 
-Powyższa pętla ma dwie *zmienne iteracyjne*, ponieważ `items` zwraca listę krotek i `key, val` jest przypisaniem krotki, które kolejno iteruje przez każdą z par klucz-wartość w słowniku.
+Powyższa pętla ma dwie *zmienne iteracyjne*, ponieważ `items` zwraca listę krotek, a `key, val` jest przypisaniem krotki, które kolejno iteruje przez każdą z par klucz-wartość w słowniku.
 
-W każdej kolejnej iteracji pętli, zarówno `key`, jak i `val` posuwają się naprzód do kolejnej pary klucz-wartość w słowniku (nadal w kolejności haszach).
+W każdej kolejnej iteracji pętli zarówno `key`, jak i `val` posuwają się naprzód do kolejnej pary klucz-wartość w słowniku (nadal w kolejności haszy).
 
 Wynik tej pętli jest następujący:
 
@@ -317,7 +317,7 @@ Wynik tej pętli jest następujący:
 1 b
 ~~~~
 
-I ponownie, mamy tutaj kolejności kluczy po haszach (tzn. bez konkretnej kolejności).
+I ponownie mamy tutaj kolejności kluczy po haszach (tzn. bez żadnej konkretnej kolejności).
 
 Jeżeli połączymy te dwie techniki, możemy wypisać zawartość słownika posortowaną po *wartościach* zapisanych w każdej parze klucz-wartość.
 
@@ -344,20 +344,20 @@ Najczęściej występujące słowa
 
 \index{Romeo i Julia}
 
-Wracając do naszego przykładu z tekstem z *Romeo i Julia* (Akt II, Scena II), możemy rozszerzyć nasz program po to by użyć opisanej wyżej techniki do wypisania dziesięciu najczęściej używanych słów w tekście:
+Wracając do naszego przykładu z tekstem z *Romeo i Julia* (Akt II, Scena II), możemy rozszerzyć nasz program po to, by użyć opisanej wyżej techniki do wypisania dziesięciu najczęściej używanych słów w tekście:
 
 \VerbatimInput{../code3/count3.py} 
 \begin{trinketfiles}
 ../code3/romeo-full.txt
 \end{trinketfiles}
 
-Pierwsza część programu, która odczytuje plik i tworzy słownik, który mapuje każde słowo do liczbę jego wystąpień w dokumencie, pozostaje niezmieniona. Ale zamiast po prostu wypisać `counts` i zakończyć program, konstruujemy listę krotek `(val, key)`, a następnie sortujemy tę listę w odwrotnej kolejności.
+Pierwsza część programu, która odczytuje plik i tworzy słownik, który mapuje każde słowo do liczby jego wystąpień w dokumencie, pozostaje niezmieniona. Ale zamiast po prostu wypisać `counts` i zakończyć program, konstruujemy listę krotek `(val, key)`, a następnie sortujemy tę listę w odwrotnej kolejności.
 
 Ponieważ wartość jest pierwsza, będzie ona użyta do porównań. Jeśli jest więcej niż jedna krotka o tej samej wartości, to operacja sortowania spojrzy na drugi element (klucz), więc krotki, w których wartość jest taka sama, będą posortowane w kolejności alfabetycznej po kluczu.
 
 Na koniec piszemy ładną pętlę `for`, która podczas iteracji wykonuje operację przypisania z fragmentu listy (`lst[:10]`) i wypisuje dziesięć najczęściej występujących słów.
 
-Tak więc teraz wynik programu w końcu wygląda tak jak tego oczekujemy od naszej analizy częstości słów.
+Tak więc teraz wynik programu w końcu wygląda tak, jak tego oczekujemy od naszej analizy częstości słów.
 
 ~~~~
 61 i
@@ -372,7 +372,7 @@ Tak więc teraz wynik programu w końcu wygląda tak jak tego oczekujemy od nasz
 24 thee
 ~~~~
 
-Fakt, że takie skomplikowane parsowanie i analiza danych może być wykonana za pomocą łatwego do zrozumienia 19-wierszowego programu Pythona, jest jednym z powodów, dla których Python jest dobrym wyborem jako język do eksploracji informacji.
+Fakt, że takie skomplikowane parsowanie i analiza danych mogą być wykonane za pomocą łatwego do zrozumienia 19-wierszowego programu Pythona, jest jednym z powodów, dla których Python jako język do eksploracji informacji to dobry wybór.
 
 Listy składane
 --------------
@@ -385,7 +385,7 @@ for key, val in list(counts.items()):
     lst.append((val, key))
 ~~~~
 
-Python posiada możliwość tworzenia dynamicznych list, które w pewnym sensie zawierają pętlę `for` wewnątrz jej definicji. Mechnizm ten nazywamy *listą składaną* (ang. *list comprehension*) i uzyskujemy dzięki niemu bardziej kompaktowy kod.
+Python posiada możliwość tworzenia dynamicznych list, które w pewnym sensie zawierają pętlę `for` wewnątrz jej definicji. Mechanizm ten nazywamy *listą składaną* (ang. *list comprehension*) i uzyskujemy dzięki niemu bardziej kompaktowy kod.
 
 W poprzednim przykładzie tworzenie listy moglibyśmy zapisać następująco:
 
@@ -393,7 +393,7 @@ W poprzednim przykładzie tworzenie listy moglibyśmy zapisać następująco:
 lst = [ (v,k) for k,v in counts.items() ]
 ~~~~
 
-Teraz kod naszego programu mógłby wyglądać następująco:
+Teraz kod naszego programu mógłby wyglądać tak:
 
 \VerbatimInput{../code3/count4.py} 
 
@@ -403,7 +403,7 @@ Używanie krotek jako kluczy w słownikach
 \index{krotka!jako klucz w słowniku}
 \index{haszowalny}
 
-Ponieważ krotki są *haszowalne*, a listy nie są, to jeśli chcemy utworzyć *złożony* klucz do użycia w słowniku, to musimy użyć krotki jako klucza.
+Ponieważ krotki są *haszowalne*, a listy nie są, to jeśli chcemy utworzyć *złożony* klucz do użycia w słowniku, musimy użyć krotki jako klucza.
 
 Napotkalibyśmy klucz złożony, gdybyśmy chcieli stworzyć książkę telefoniczną, która mapuje z nazwisko-imię do numerów telefonów. Zakładając, że zdefiniowaliśmy zmienne `last`, `first` i `number`, moglibyśmy napisać instrukcję przypisania do słownika w następujący sposób:
 
@@ -411,7 +411,7 @@ Napotkalibyśmy klucz złożony, gdybyśmy chcieli stworzyć książkę telefoni
 directory[last,first] = number
 ~~~~
 
-Wyrażenie w nawiasach jest krotką. Moglibyśmy użyć przypisania krotki w pętli `for`, tak aby przejść po takim słownik.
+Wyrażenie w nawiasach jest krotką. Moglibyśmy użyć przypisania krotki w pętli `for`, tak aby przejść po takim słowniku.
 
 \index{krotka!w nawiasach kwadratowych}
 
@@ -445,11 +445,11 @@ Listy są popularniejsze w użyciu niż krotki, głównie dlatego, że są zmien
 
 1.  W niektórych kontekstach, jak np. instrukcja `return`, stworzenie krotki jest składniowo prostsze od stworzenia listy. W innych przepadkach możesz preferować listę.
 
-2.  Jeśli chcesz użyć sekwencji jako klucza w słowniku, musisz użyć typu niezmiennego takiego jak krotka lub ciąg znaków.
+2.  Jeśli chcesz użyć sekwencji jako klucza w słowniku, musisz użyć typu niezmiennego, takiego jak krotka lub ciąg znaków.
 
 3.  Jeżeli przekazujesz sekwencję jako argument do funkcji, używanie krotek zmniejsza możliwość nieoczekiwanego działania kodu spowodowanego aliasowaniem.
 
-Ponieważ krotki są niezmienne, nie dostarczają one metod takich jak `sort` i `reverse`, które modyfikują istniejące listy. Jednakże Python dostarcza wbudowane funkcje `sorted` i `reversed`, które przyjmują każdą sekwencję jako parametr i zwracają nową sekwencję z tymi samymi elementami w innej kolejności.
+Ponieważ krotki są niezmienne, nie dostarczają metod takich jak `sort` i `reverse`, które modyfikują istniejące listy. Jednakże Python dostarcza wbudowane funkcje `sorted` i `reversed`, które przyjmują każdą sekwencję jako parametr i zwracają nową sekwencję z tymi samymi elementami w innej kolejności.
 
 \index{sorted, funkcja}
 \index{funkcja!sorted}
@@ -465,7 +465,7 @@ Debugowanie
 \index{błąd!kształtu}
 \index{kształt}
 
-Listy, słowniki i krotki są ogólnie znane jako *struktury danych*; w tym rozdziale zaczęliśmy zauważać złożone struktury danych, takie jak listy krotek oraz słowniki, które zawierają krotki jako klucze i listy jako wartości. Złożone struktury danych są użyteczne, ale są podatne na to, co nazywam *błędami kształtu*, tzn. błędy spowodowane niewłaściwym typem, rozmiarem lub zawartością struktury danych; być może piszesz też jakiś kod i zapominasz o kształcie swoich danych, przez co nieświadomie umieszczasz błąd w swoim programie. Na przykład, jeśli oczekujesz listy składającej się z jednej liczby całkowitej, a ja daję Ci po prostu zwykłą liczbę całkowitą (która nie jest opakowana listą), to Twój kod nie będzie działać.
+Listy, słowniki i krotki są ogólnie znane jako *struktury danych*; w tym rozdziale zaczęliśmy zauważać złożone struktury danych, takie jak listy krotek oraz słowniki, które zawierają krotki jako klucze i listy jako wartości. Złożone struktury danych są użyteczne, ale są podatne na to, co nazywam *błędami kształtu*, tzn. błędy spowodowane niewłaściwym typem, rozmiarem lub zawartością struktury danych; być może piszesz też jakiś kod i zapominasz o kształcie swoich danych, przez co nieświadomie umieszczasz błąd w swoim programie. Na przykład, jeśli oczekujesz listy składającej się z jednej liczby całkowitej, a ja daję Ci po prostu zwykłą liczbę całkowitą (która nie jest opakowana listą), Twój kod nie będzie działać.
 
 Słowniczek
 ----------
@@ -507,9 +507,9 @@ struktura danych
 
 #### Ćwiczenie 1
 
-Zrewiduj swój poprzedni program w następujący sposób: Wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy. Policz liczbę wiadomości od każdej osoby za pomocą słownika.
-
-Po przeczytaniu wszystkich danych wypisz osobę, która zrobiła najwięcej rewizji, tworząc ze słownika listę krotek (liczba, email). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej rewizji.
+Przepisz swój poprzedni program w następujący sposób: wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy. Policz liczbę wiadomości od każdej osoby za pomocą słownika.
+<!-- może "zmian" zamiast "rewizji", czy czytelnik wie o git/commit -->
+Po przeczytaniu wszystkich danych wypisz osobę z największą liczbą rewizji, tworząc ze słownika listę krotek (liczba, email). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej rewizji.
 
 ~~~~
 Przykładowa linia:
@@ -524,7 +524,7 @@ zqian@umich.edu 195
 
 #### Ćwiczenie 2
 
-Napisz program, który dla każdej wiadomości zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z wiersza "From ", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten ciąg na części za pomocą znaku dwukropka. Kiedy już zgromadzisz wartości dla każdej godziny, wypisz zliczenia, po jednym na wiersz, posortowane według godzin, tak jak pokazano poniżej.
+Napisz program, który zlicza rozkład godzin dla wszystkich wiadomości. Możesz wyciągnąć godzinę z wiersza "From ", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten ciąg na części za pomocą znaku dwukropka. Kiedy już zgromadzisz wartości dla każdej godziny, wypisz zliczenia, po jednym na wiersz, posortowane według godzin, tak jak pokazano poniżej.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
@@ -547,4 +547,4 @@ Podaj nazwę pliku: mbox-short.txt
 
 #### Ćwiczenie 3
 
-Napisz program, który wczytuje plik i wypisuje *litery* malejąco po częstości ich występowania. Twój program powinien przekonwertować wszystkie dane wejściowe na małe litery i zliczać tylko litery a-z. Program nie powinien uwzględniać spacji, cyfr, interpunkcji ani niczego innego poza literami a-z. Znajdź próbki tekstów z kilku różnych języków i sprawdź, jak bardzo częstość liter różni się w zależności od języka. Porównaj swoje wyniki z tabelami pod adresem <https://en.wikipedia.org/wiki/Letter_frequency>.
+Napisz program, który wczytuje plik i wypisuje *litery* malejąco po częstości ich występowania. Twój program powinien przekonwertować wszystkie dane wejściowe na małe litery i zliczać tylko litery a-z. Program nie powinien uwzględniać spacji, cyfr, interpunkcji ani niczego innego poza literami a-z. Znajdź próbki tekstów z kilku różnych języków i sprawdź, jak bardzo częstość występowania liter różni się w zależności od języka. Porównaj swoje wyniki z tabelami pod adresem <https://en.wikipedia.org/wiki/Letter_frequency>.
