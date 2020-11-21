@@ -13,26 +13,25 @@ Polish translation
 | `software-pyaw.php`    | ☒    |      |      |       |         |          |         |            | ☒    |
 | `A0-preface.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☒    |
 | `01-intro.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
-| `02-variables.mkd`     | ☒    |      | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `04-functions.mkd`     | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `05-iterations.mkd`    | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `06-strings.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `07-files.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `08-lists.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `09-dictionaries.mkd`  | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `10-tuples.mkd`        | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `11-regex.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `12-network.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `13-web.mkd`           | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `14-objects.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `15-database.mkd`      | ☒    | ☒   | ☒    | ☒    | ☒(*)   | ☐        | ☐     | ☐          | ☐    |
-| `16-viz.mkd`           | ☒    | ☒   |       | ☒    | ☒      | ☐        | ☐     | ☐          | ☐    |
-| `AA-contrib.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☐    |
-| `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☐    |
+| `02-variables.mkd`     | ☒    |      | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `03-conditional.mkd`   | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `04-functions.mkd`     | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `05-iterations.mkd`    | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `06-strings.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `07-files.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `08-lists.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `09-dictionaries.mkd`  | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `10-tuples.mkd`        | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `11-regex.mkd`         | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `12-network.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `13-web.mkd`           | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `14-objects.mkd`       | ☒    | ☒   | ☒    | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `15-database.mkd`      | ☒    | ☒   | ☒    | ☒    | ☒(*)   | ☐        | ☐     | ☐          | ☒    |
+| `16-viz.mkd`           | ☒    | ☒   |       | ☒    | ☒      | ☐        | ☐     | ☐          | ☒    |
+| `AA-contrib.mkd`       | ☒    |      |      | ☒     |         |          |         |            | ☒    |
+| `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☒    |
 | `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
-| "ciągi znaków" -> "napisy" |      |      |       |      |         |          |         |            |       |
 | Functions and methods with `()` |         |            |       |
 | Inline code within grave accents |         |            |       |
 | `unit.sh` check |         |            |       |

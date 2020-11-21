@@ -36,7 +36,7 @@ Przedmowa
 
 Remiksowanie otwartej książki
 -----------------------------
-<!-- Think Python ma polskie tłumaczenie  https://helion.pl/ksiazki/mysl-w-jezyku-python-nauka-programowania-wydanie-ii-allen-b-downey,myjep2.htm#format/e -->
+
 To całkiem naturalne, że naukowcy, którym ciągle się mówi "publikuj albo giń", ciągle chcą tworzyć coś zupełnie od podstaw; coś, co będzie ich własnym, świeżym dziełem. Poniższa książka nie powstała od zera, ale zamiast tego "remiksuje" książkę zatytułowaną *Think Python: How to Think Like a Computer Scientist*^[Polskie wydanie tej książki to *Myśl w języku Python! Nauka programowania*.] autorstwa Allena B. Downeya, Jeffa Elknera i innych.
 
 W grudniu 2009 roku na Uniwersytecie Michigan piąty semestr z rzędu przygotowywałem się do prowadzenia kursu *SI502 – Networked Programming*. Zdecydowałem, że nadszedł czas, by napisać podręcznik do Pythona, który będzie skupiał się na eksplorowaniu danych, a nie na rozumieniu algorytmów i pojęć abstrakcyjnych. W kursie SI502 moim celem jest nauczenie przydatnych przez całe życie umiejętności obsługi danych przy użyciu Pythona. Niewielu z moich studentów planowało zostać zawodowymi programistami. Zamiast tego chcieli być bibliotekarzami, menedżerami, prawnikami, biologami, ekonomistami itp., którzy w wybranej przez siebie dziedzinie umiejętnie wykorzystywaliby technologię.

@@ -555,23 +555,19 @@ wspólnego z nazwą parametru (`bruce`). Nie ma znaczenia, jak na tę wartość
 wołano w domu (w miejscu wywoływania); tutaj w `print_twice` wszystkich 
 nazywamy `bruce`.
 
-Funkcje owocne i funkcje niezwracające wartości
------------------------------------------------
+Funkcje owocne i funkcje puste
+------------------------------
 
 \index{owocna, funkcja}
-\index{niezwracająca wartości, funkcja}
+\index{pusta, funkcja}
 \index{funkcja owocna}
-\index{funkcja niezwracająca wartości}
+\index{funkcja pusta}
 
 Niektóre z używanych przez nas funkcji to np. funkcje matematyczne, które 
 zwracają wyniki; z braku lepszej nazwy nazywam je *funkcjami owocnymi* 
 (ang. *fruitful functions*). Inne funkcje, takie jak `print_twice`, wykonują 
-jakąś akcję, ale nie zwracają wartości. Nazywa się je *funkcjami 
-niezwracającymi wartości*^[W niektórych językach programowania tego typu 
+jakąś akcję, ale nie zwracają wartości. Nazywa się je *pustymi funkcjami*^[W niektórych językach programowania tego typu 
 funkcje nazywa się procedurami.] (ang. *void functions*).
-<!--wykonują 
-jakąś akcję, ale nie zwracają wartości. Nazywa się je *pustymi funkcjami 
-* (za tłum Pilch: Myśl w języku Python/Downey: Think Python  ) -->
 
 Kiedy wywołujesz owocną funkcję, prawie zawsze chcesz zrobić coś ze zwróconym 
 wynikiem. Na przykład możesz przypisać go do zmiennej lub użyć go jako części 
@@ -603,7 +599,7 @@ użyteczny.
 \index{tryb interaktywny}
 \index{tryb skryptowy}
 
-Funkcje niezwracające wartości mogą wyświetlać coś na ekranie lub mieć jakiś 
+Funkcje puste mogą wyświetlać coś na ekranie lub mieć jakiś 
 inny efekt. W związku z tym, że nie zwracają żadnej wartości, jeśli spróbujesz 
 przypisać wynik takiej funkcji do zmiennej, otrzymasz specjalną wartość 
 o nazwie `None`.
@@ -698,9 +694,6 @@ program, który uruchamiasz.
 
 Debugowanie może trwać bardzo długo, jeśli będziesz ciągle uruchamiać ten sam
 nieprawidłowy program!
-<!-- został EN, PL jest ok -->
-Debugging can take a long time if you keep running the same incorrect
-program over and over!
 
 Upewnij się, że kod, na który patrzysz, jest tym samym kodem, który uruchamiasz.
 Jeśli nie jesteś pewien, umieść coś w rodzaju `print("hello")` na początku
@@ -744,10 +737,10 @@ funkcja
     ale nie muszą, przyjmować argumenty i mogą, ale nie muszą, zwracać wyniki.
 \index{funkcja}
 
-funkcja niezwracająca wartości
+funkcja pusta
 :   Funkcja, która nie posiada zwracanej wartości.
-\index{niezwracająca wartości, funkcja}
-\index{funkcja niezwracająca wartości}
+\index{pusta, funkcja}
+\index{funkcja pusta}
 
 funkcja owocna
 :   Funkcja zwracająca wartość.

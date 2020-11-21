@@ -287,7 +287,7 @@ Traceback (most recent call last):
     fhand = open(fname)
 FileNotFoundError: [Errno 2] No such file or directory: 'szurum-burum'
 ~~~~
-<!-- chyba mało sensowna pomyłka w EN "on purpose or malicious" -->
+
 Nie śmiej się. Użytkownicy czasem robią wszystko, co w ich mocy, by wysypać Twoje programy – albo przypadkiem, albo w złych zamiarach. W rzeczywistości ważną częścią każdego zespołu zajmującego się tworzeniem oprogramowania jest osoba lub grupa o nazwie *Quality Assurance* (w skrócie QA; zespół *zapewniania jakości*), której zadaniem jest robienie najbardziej szalonych rzeczy w celu wysypania oprogramowania stworzonego przez programistów.
 
 \index{Quality Assurance}
@@ -344,8 +344,8 @@ Aby móc zapisywać dane do pliku, musisz otworzyć go w trybie "w", podanym jak
 
 Jeśli plik już istnieje, otwarcie go w trybie do zapisu usuwa stare dane i tworzy nowy pusty plik, więc bądź ostrożny! Jeśli plik nie istnieje, tworzony jest nowy.
 
-Metoda `write` obiektu uchwytu pliku umieszcza dane w pliku, zwracając liczbę zapisanych znaków. Domyślnym trybem zapisu jest tryb tekstowy, przeznaczony do zapisu (i odczytu) ciągów znaków.
-<!-- czy brak "łąź" jest celowy? -->
+Metoda `write` obiektu uchwytu pliku umieszcza dane w pliku, zwracając liczbę zapisanych znaków. Domyślnym trybem zapisu jest tryb tekstowy, przeznaczony do zapisu (i odczytu) ciągów znaków. Dodajmy jedną linię do naszego pliku (nie używaj polskich znaków – wrócimy do tego problemu za chwilę):
+
 ~~~~ {.python}
 >>> line1 = "Oto galaz eukaliptusa,\n"
 >>> fout.write(line1)

@@ -508,8 +508,8 @@ struktura danych
 #### Ćwiczenie 1
 
 Przepisz swój poprzedni program w następujący sposób: wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy. Policz liczbę wiadomości od każdej osoby za pomocą słownika.
-<!-- może "zmian" zamiast "rewizji", czy czytelnik wie o git/commit -->
-Po przeczytaniu wszystkich danych wypisz osobę z największą liczbą rewizji, tworząc ze słownika listę krotek (liczba, email). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej rewizji.
+
+Po przeczytaniu wszystkich danych wypisz osobę, która zrobiła najwięcej zmian, tworząc ze słownika listę krotek (liczba, email). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej zmian.
 
 ~~~~
 Przykładowa linia:

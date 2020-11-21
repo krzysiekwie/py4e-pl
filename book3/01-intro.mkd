@@ -334,9 +334,8 @@ programistów, którzy używają Pythona do rozmów z użytkownikami Twojego pro
 
 Zanim opuścimy naszą pierwszą rozmowę z interpreterem Pythona, prawdopodobnie
 powinieneś poznać właściwy sposób na "pożegnanie się" podczas interakcji z
-mieszkańcami planety Python:
-<!-- fragment przykładu poniżej bez tłumaczenia, może zmienić powyższe zdanie na: powinieneś poznać właściwy sposób na "pożegnanie się" podczas interakcji z
-mieszkańcami planety Python, skoro ani polski ani angielski nie działa:  -->
+mieszkańcami planety Python, skoro ani polski ani angielski nie działa:
+
 ~~~~ {.python}
 >>> do-zobaczenia
 Traceback (most recent call last):

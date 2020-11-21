@@ -168,14 +168,15 @@ Mamy teraz możliwość wymiany danych pomiędzy aplikacjami przy użyciu protok
 Następnym krokiem jest rozpoczęcie definiowania i dokumentowania "umów" pomiędzy aplikacjami wykorzystującymi powyższe techniki. Ogólna nazwa takiej umowy to *interfejsy programowania aplikacji* (ang. Application Program Interfaces, API). Kiedy używamy API, zazwyczaj jeden z programów udostępnia zestaw *usług* do wykorzystania przez inne aplikacje i publikuje API (tzn. "zasady"), których należy przestrzegać, by uzyskać dostęp do tych usług.
 
 \index{SOA}
-<!-- tu i niżej: "SOA" może "architektura usługowa"? w ramach trendu odchodzenia od "zorientowania" jak OOP "programowanie obiektowe" -->
-Gdy zaczynamy budować nasze programy, których działanie obejmuje dostęp do usług świadczonych przez inne programy, nazywamy to podejście *architekturą zorientowaną na usługi* (ang, Service-Oriented Architecture, SOA). Podejście SOA to takie, w którym cała nasza aplikacja korzysta z usług innych aplikacji. Podejście inne niż SOA to takie, w którym aplikacja jest pojedyncza i samodzielna – zawiera cały kod niezbędny do jej implementacji i wdrożenia.
+\index{architektura usługowa}
+
+Gdy zaczynamy budować nasze programy, których działanie obejmuje dostęp do usług świadczonych przez inne programy, nazywamy to podejście *architekturą usługową* (ang. Service-Oriented Architecture, SOA). Podejście SOA to takie, w którym cała nasza aplikacja korzysta z usług innych aplikacji. Podejście inne niż SOA to takie, w którym aplikacja jest pojedyncza i samodzielna – zawiera cały kod niezbędny do jej implementacji i wdrożenia.
 
 Podczas korzystania z sieci widzimy wiele przykładów SOA. Możemy wejść na stronę internetową i zarezerwować podróże lotnicze, hotele i wypożyczyć samochody, a wszystko to z poziomu jednej strony. Dane dotyczące hoteli nie są przechowywane na serwerach linii lotniczych. Zamiast tego serwery linii lotniczych kontaktują się z usługami znajdującymi się na serwerach rezerwacji hotelowych, pobierają dane dotyczące hoteli i przedstawiają je użytkownikowi. Kiedy użytkownik wyraża zgodę na dokonanie rezerwacji hotelowej za pomocą strony internetowej linii lotniczych, strona ta korzysta z innej usługi internetowej w systemach hotelowych, tak aby faktycznie dokonać tej rezerwacji. A gdy przychodzi czas, by obciążyć kartę płatniczą za całą transakcję, w proces ten włączają się jeszcze inne serwery.
 
-![SOA – architektura zorientowana na usługi](height=3.0in@../images/soa)
+![SOA – architektura usługowa](height=3.0in@../images/soa)
 
-Architektura zorientowana na usługi ma wiele zalet, w tym: (1) zawsze przechowujemy tylko jedną kopię danych (jest to szczególnie ważne w przypadku rezerwacji hotelowych, w których nie chcemy wykonywać nadmiernych i niewykonalnych zobowiązań) oraz (2) właściciele danych mogą ustalić zasady korzystania z nich. Z tego powodu system SOA musi być starannie zaprojektowany, tak aby działał wydajnie i spełniał potrzeby użytkownika.
+Architektura usługowa ma wiele zalet, w tym: (1) zawsze przechowujemy tylko jedną kopię danych (jest to szczególnie ważne w przypadku rezerwacji hotelowych, w których nie chcemy wykonywać nadmiernych i niewykonalnych zobowiązań) oraz (2) właściciele danych mogą ustalić zasady korzystania z nich. Z tego powodu system SOA musi być starannie zaprojektowany, tak aby działał wydajnie i spełniał potrzeby użytkownika.
 
 Kiedy aplikacja udostępnia przez internet zestaw usług w swoim API, nazywamy to *usługą sieciową* (ang. web service).
 
@@ -210,9 +211,9 @@ JSON
 \index{JavaScript Object Notation}
 
 SOA
-:   Architektura zorientowana na usługi. Sytuacja, w której aplikacja składa się z połączonych w sieci komponentów.
+:   Architektura usługowa. Sytuacja, w której aplikacja składa się z połączonych w sieci komponentów.
 \index{SOA}
-\index{Service Oriented Architecture}
+\index{architektura usługowa}
 
 XML
 :   Rozszerzalny język znaczników. Format, który pozwala na oznakowanie danych strukturalnych.
@@ -309,7 +310,7 @@ Zmień <https://py4e.pl/code3/geojson.py> lub <https://py4e.pl/code3/geoxml.py> 
 
 Aplikacja nr 2: Twitter
 -----------------------
-<!-- dodano brakujący fragment tłumaczenia -->
+
 Od czasu, gdy API Twittera stało się bardziej wartościowe, Twitter przeszedł z otwartego i publicznego API do takiego, które przy każdym zapytaniu wymaga użycia OAuth. 
 
 Oba nasze przykłady opierają się na plikach *twurl.py*, *hidden.py*, *oauth.py*, *twitter1.py* i *twitter2.py*, które możesz pobrać z <https://py4e.pl/code3>. Po pobraniu plików umieść je wszystkie w jednym katalogu.

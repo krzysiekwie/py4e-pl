@@ -228,7 +228,7 @@ Pierwszym krokiem jest przeskanowanie repozytorium Gmane. Główny adres URL jes
 Plik *gmane.py* działa odpowiedzialnie – zapisuje w pamięci pobrane dane i odczekuje sekundę po pobraniu stu wiadomości. Program przechowuje wszystkie swoje dane w bazie, może być przerywany i uruchamiany ponownie tak często, jak to konieczne. Pobranie wszystkich danych może potrwać wiele godzin. Może być więc konieczne kilkukrotne ponowne uruchomienie tego programu.
 
 Oto wynik uruchomienia *gmane.py*, który pobiera dziesięć ostatnich wiadomości z listy deweloperów projektu Sakai: 
-<!-- literówka w tekście EN poniżej "bulding", czy powinno być "building  -->
+
 ~~~~
 Ile wiadomości: 10
 http://mbox.dr-chuck.net/sakai.devel/59643/59644 17553

@@ -289,8 +289,8 @@ W powyższym przykładzie lista `t2` pozostaje niezmieniona.
 
 Większość metod listowych nie zwraca żadnej konkretnej wartości; modyfikują one listę i zwracają `None`. Tego typu modyfikacja nazywana jest *modyfikacją w miejscu*. Jeśli przypadkowo napiszesz `t = t.sort()`, zapewne będziesz zawiedziony zwróconym wynikiem.
 
-\index{niezwracająca wartości, metoda}
-\index{metoda!niezwracająca wartości}
+\index{pusta, metoda}
+\index{metoda!pusta}
 \index{modyfikacja w miejscu}
 \index{None, wartość specjalna}
 \index{wartość specjalna!None}

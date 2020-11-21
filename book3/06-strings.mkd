@@ -20,7 +20,7 @@ Ciąg znaków jest *sekwencją* znaków. Możesz uzyskać dostęp do poszczegól
 \index{indeks}
 \index{}
 
-Druga instrukcja wyodrębnia ze zmiennej `owoc` znak z pozycji o indeksie 1 i przypisuje go do zmiennej `letter`.
+Druga instrukcja wyodrębnia ze zmiennej `fruit` znak z pozycji o indeksie 1 i przypisuje go do zmiennej `letter`.
 
 Wyrażenie w nawiasach kwadratowych nazywane jest *indeksem*. Indeks wskazuje, który chcesz znak z zadanej sekwencji.
 
@@ -39,7 +39,7 @@ Dla większości ludzi pierwsza litera słowa "banan" to "b", a nie "a". Jednak 
 >>> print(letter)
 b
 ~~~~
-<!-- unikam celowo(?) błędnego zapisu w EN "1th" i "2th" -->
+
 Tak więc "b" to 0. ("zerowa") litera słowa "banan", "a" to pierwsza litera, a "n" to druga litera.
 
 ![Indeksy w ciągach znaków](height=0.75in@../images/string)
@@ -65,7 +65,7 @@ Uzyskanie długości ciągu znaków przy użyciu `len()`
 \index{len, funkcja}
 \index{funkcja!len}
 
-`len` jest funkcją wbudowaną, która zwraca liczbę znaków w danym ciągu:
+`len()` jest funkcją wbudowaną, która zwraca liczbę znaków w danym ciągu:
 
 ~~~~ {.python}
 >>> fruit = 'banan'
@@ -165,10 +165,9 @@ Jeśli pominiesz pierwszy indeks (przed dwukropkiem), wycinek zaczyna się od po
 'an'
 ~~~~
 
-Jeśli pierwszy indeks jest większy lub równy drugiemu, wynikiem jest *pusty ciąg znaków*, reprezentowany przez dwa apostrofy (zamiast apostrofu możemy użyć cudzysłowu):
-<!-- fragment w nawiasie sugeruje, że to użytkownik wybiera czy pusty ciąg znaków będzie reprezentowany przez '' czy ""  -->
+Jeśli pierwszy indeks jest większy lub równy drugiemu, wynikiem jest *pusty ciąg znaków*, reprezentowany przez dwa apostrofy:
+
 \index{apostrof}
-\index{cudzysłów}
 \index{pusty ciąg znaków}
 \index{ciąg znaków!pusty}
 
@@ -204,7 +203,7 @@ Kuszące jest skorzystanie z operatora przypisania z zamiarem zmiany znaku w ci�
 >>> greeting[0] = 'J'
 TypeError: 'str' object does not support item assignment
 ~~~~
-<!-- zmiana znaczenia, proszę zweryfikować -->
+
 Obiekt ("object") w tym przypadku to ciąg znaków, a element ("item") jest znakiem, który próbowałeś do niego przypisać. W tym momencie *obiekt* jest tym samym co wartość, ale definicję tę doszlifujemy później. *Element* jest jedną z wartości w sekwencji.
 
 \index{obiekt}
@@ -406,7 +405,7 @@ True
 >>> line.startswith('m')
 False
 ~~~~
-<!-- mapujemy wszystkie znaki - nawiązanie do map()? -->
+
 Możesz zauważyć, że `startswith` wymaga dopasowania wielkości liter, więc czasami zanim zrobimy jakiekolwiek sprawdzenie, konwertujemy wszystkie znaki w linii na małe litery przy użyciu metody `lower`.
 
 ~~~~ {.python}

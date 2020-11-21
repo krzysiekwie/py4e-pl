@@ -274,7 +274,7 @@
            transform="matrix(1,0,0,-1,434.993,113)"><tspan
              id="tspan158"
              y="0"
-             x="0 5.5615139 8.8915138 11.113173 16.674688 19.453028 21.674688 23.896347 31.118008 33.339668 38.90118 43.90118 48.90118 53.90118 59.462696 61.684357">print’‘większa’)</tspan></text>
+             x="0 5.5615139 8.8915138 11.113173 16.674688 19.453028 21.674688 23.896347 31.118008 33.339668 38.90118 43.90118 48.90118 53.90118 59.462696 61.684357">print(‘większa’)</tspan></text>
 </g><path
          id="path162"
          style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"

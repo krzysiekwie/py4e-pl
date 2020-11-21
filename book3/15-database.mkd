@@ -213,12 +213,12 @@ Oto kod źródłowy naszej aplikacji zbierającej informacje z Twittera:
 \VerbatimInput{../code3/twspider.py}
 
 Nasza baza danych jest przechowywana w pliku `spider.sqlite` i ma jedną tabelę o nazwie `Twitter`. Każdy wiersz w tabeli `Twitter` ma osobną kolumnę dla nazwy konta, informacji, czy pobraliśmy listę znajomych tego konta oraz tego, ile razy konto wystąpiło na listach znajomych.
-<!-- w trzech kolejnych akapitach "znajomi" i "friends" jest użyte zamiennie, w twspider.py "friends" nie występuje -->
-W głównej pętli programu prosimy o podanie nazwy konta Twittera lub "koniec", aby wyjść z programu. Jeżeli użytkownik poda nazwę konta na Twitterze, pobierzemy listę jego znajomych (i ich statusy) oraz dodajemy każdego znajomego do bazy danych, o ile jeszcze go tam nie ma. Jeśli znajomy jest już na liście, to w bazie danych dodajemy 1 do pola `znajomi` w danym wierszu tabeli.
 
-Jeśli użytkownik naciśnie przycisk `<Enter>`, to szukamy w bazie danych kolejnego konta na Twitterze, którego jeszcze nie odwiedziliśmy, pobieramy znajomych tego konta i ich statusy, dodajemy znajomych do bazy danych lub aktualizujemy ich liczbę zwiększając wartość w `friends`.
+W głównej pętli programu prosimy o podanie nazwy konta Twittera lub "koniec", aby wyjść z programu. Jeżeli użytkownik poda nazwę konta na Twitterze, pobierzemy listę jego znajomych (i ich statusy) oraz dodajemy każdego znajomego do bazy danych, o ile jeszcze go tam nie ma. Jeśli znajomy jest już na liście, to w bazie danych dodajemy 1 do kolumny `znajomi` w danym wierszu tabeli.
 
-Kiedy pozyskamy już listę znajomych i statusy, idziemy w pętli przez wszystkie elementy `user` występujące w zwróconym JSONie i dla każdego użytkownika pobieramy `screen_name`. Następnie używamy instrukcji `SELECT`, by sprawdzić, czy ta konkretna wartość `screen_name` została już zapisana w bazie danych, i pobieramy liczbę znajomych (`friends`), jeśli dany rekord istnieje.
+Jeśli użytkownik naciśnie przycisk `<Enter>`, to szukamy w bazie danych kolejnego konta na Twitterze, którego jeszcze nie odwiedziliśmy, pobieramy znajomych tego konta i ich statusy, dodajemy znajomych do bazy danych lub aktualizujemy ich liczbę zwiększając wartość w zmiennej `friends`.
+
+Kiedy pozyskamy już listę znajomych i statusy, idziemy w pętli przez wszystkie elementy `user` występujące w zwróconym JSONie i dla każdego użytkownika pobieramy `screen_name`. Następnie używamy instrukcji `SELECT`, by sprawdzić, czy ta konkretna wartość `screen_name` została już zapisana w bazie danych, i pobieramy liczbę znajomych (zmienna `friends`), jeśli dany rekord istnieje.
 
 ~~~~ {.python}
 countnew = 0

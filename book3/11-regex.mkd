@@ -260,7 +260,7 @@ A oto inny przykład użycia powyższej techniki. Jeśli spojrzymy na zawartoś�
 Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
 ~~~~
 
-Gdybyśmy chcieli wyciągnąć wszystkie numery rewizji (liczba całkowita na końcu tego typu wierszy) przy użyciu tej samej techniki, co chwilę wcześniej, moglibyśmy napisać następujący program:
+Gdybyśmy chcieli wyciągnąć wszystkie numery zmian (liczba całkowita na końcu tego typu wierszy) przy użyciu tej samej techniki, co chwilę wcześniej, moglibyśmy napisać następujący program:
 
 \VerbatimInput{../code3/re12.py} 
 \begin{trinketfiles}
