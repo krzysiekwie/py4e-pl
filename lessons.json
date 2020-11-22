@@ -269,17 +269,24 @@
             "youtube" : "DVmspDooG2c"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 2.3",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_02_03",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "2.3"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 2.3",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_02_03",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "2.3"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Zmienne, wyrażenia i instrukcje",
+            "launch" : "mod/gift/?quiz=Py4Inf-02-Expressions.txt",
+            "resource_link_id" : "py4e_02_ex_quiz"
+        }
+    ]
 },
 {
     "title": "Wykonanie warunkowe",
@@ -312,28 +319,33 @@
         }
     ],
     "lti" : [ 
-    {
-        "title" : "Automatyczna ocena: Ćwiczenie 3.1",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_03_01",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "3.1"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Ćwiczenie 3.3",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_03_03",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "3.3"
-            }
-        ]
-    }
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 3.1",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_03_01",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "3.1"
+                }
+            ]
+        },
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 3.3",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_03_03",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "3.3"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Wykonanie warunkowe",
+            "launch" : "mod/gift/?quiz=Py4Inf-03-Conditional.txt",
+            "resource_link_id" : "py4e_03_if_quiz"
+        }
     ]
 },
 {
@@ -362,17 +374,24 @@
             "youtube" : "l93PhBUJ_S0"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 4.6",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_04_06",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "4.6"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 4.6",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_04_06",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "4.6"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Funkcje",
+            "launch" : "mod/gift/?quiz=Py4Inf-04-Functions.txt",
+            "resource_link_id" : "py4e_04_def_quiz"
+        }
+    ]
 },
 {
     "title": "Pętle i iteracje",
@@ -408,17 +427,24 @@
             "youtube" : "R2GrfqRofZc"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 5.2",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_05_02",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "5.2"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 5.2",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_05_02",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "5.2"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Pętle i iteracje",
+            "launch" : "mod/gift/?quiz=Py4Inf-05-Iterations.txt",
+            "resource_link_id" : "py4e_05_for_quiz"
+        }
+    ]
 },
 {
     "title": "Ciągi znaków",
@@ -446,17 +472,24 @@
             "youtube" : "BGTxwsDI9KY"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 6.5",
-        "resource_link_id": "pythonauto_06_05",
-        "launch" : "tools/pythonauto/",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "6.5"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 6.5",
+            "resource_link_id": "pythonauto_06_05",
+            "launch" : "tools/pythonauto/",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "6.5"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Ciągi znaków",
+            "launch" : "mod/gift/?quiz=Py4Inf-06-Strings.txt",
+            "resource_link_id" : "py4e_06_str_quiz"
+        }
+    ]
 },
 {
     "title": "Pliki",
@@ -484,17 +517,24 @@
             "youtube" : "MHZ4KnFZ7Y0"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 7.2",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_07_02",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "7.2"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 7.2",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_07_02",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "7.2"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Pliki",
+            "launch" : "mod/gift/?quiz=Py4Inf-07-Files.txt",
+            "resource_link_id" : "py4e_07_files_quiz"
+        }
+    ]
 },
 {
     "title": "Listy",
@@ -527,28 +567,33 @@
         }
     ],
     "lti" : [
-    {
-        "title" : "Automatyczna ocena: Ćwiczenie 8.4",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_08_04",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "8.4"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Ćwiczenie 8.5",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_08_05",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "8.5"
-            }
-        ]
-    }
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 8.4",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_08_04",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "8.4"
+                }
+            ]
+        },
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 8.5",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_08_05",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "8.5"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Listy",
+            "launch" : "mod/gift/?quiz=Py4Inf-08-Lists.txt",
+            "resource_link_id" : "py4e_08_list_quiz"
+        }
     ]
 },
 {
@@ -585,17 +630,24 @@
             "href" : "https://www.youtube.com/watch?v=EHJ9uYx5L58"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 9.4",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_09_04",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "9.4"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 9.4",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_09_04",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "9.4"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Słowniki",
+            "launch" : "mod/gift/?quiz=Py4Inf-09-Dictionaries.txt",
+            "resource_link_id" : "py4e_09_dict_quiz"
+        }
+    ]
 },
 {
     "title": "Krotki",
@@ -624,17 +676,24 @@
             "youtube" : "hMJpet-gtc0"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 10.2",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_10_02",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "10.2"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Ćwiczenie 10.2",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_10_02",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "10.2"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Krotki",
+            "launch" : "mod/gift/?quiz=Py4Inf-10-Tuples.txt",
+            "resource_link_id" : "py4e_10_tup_quiz"
+        }
+    ]
 },
 {
     "title": "Wyrażenia regularne",
@@ -666,17 +725,24 @@
             "href" : "lectures3/Pythonlearn-11-Regex-Handout.txt"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Wyrażenia regularne",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_01_regex",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "regex_sum.php"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Automatyczna ocena: Wyrażenia regularne",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_01_regex",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "regex_sum.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Wyrażenia regularne",
+            "launch" : "mod/gift/?quiz=Py4Inf-11-Regex.txt",
+            "resource_link_id" : "py4e_11_reg_quiz"
+        }
+    ]
 },
 {
     "title": "Programy sieciowe",
@@ -738,39 +804,44 @@
         }
     ],
     "lti" : [
-    {
-        "title" : "Automatyczna ocena: Cykl żądanie-odpowiedź",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_02_rrc",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "http_headers.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Parsowanie danych HTML przy pomocy BeautifulSoup",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_03_html",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "comment_html.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Przechodzenie po linkach przy pomocy BeautifulSoup",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_04_links",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "knows.php"
-            }
-        ]
-    }
+        {
+            "title" : "Automatyczna ocena: Cykl żądanie-odpowiedź",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_02_rrc",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "http_headers.php"
+                }
+            ]
+        },
+        {
+            "title" : "Automatyczna ocena: Parsowanie danych HTML przy pomocy BeautifulSoup",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_03_html",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "comment_html.php"
+                }
+            ]
+        },
+        {
+            "title" : "Automatyczna ocena: Przechodzenie po linkach przy pomocy BeautifulSoup",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_04_links",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "knows.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: HTTP",
+            "launch" : "mod/gift/?quiz=Py4Inf-12-HTTP.txt",
+            "resource_link_id" : "py4e_12_http_quiz"
+        }
     ]
 },
 {
@@ -841,39 +912,49 @@
         }
     ],
     "lti" : [
-    {
-        "title" : "Automatyczna ocena: Wydobywanie danych z XMLa",
-        "resource_link_id": "pythondata_05_xml",
-        "launch" : "tools/python-data/",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "comment_xml.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Wydobywanie danych z JSONa",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_06_json",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "comment_json.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Używanie API GeoJSON",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_07_geo",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "geo_json.php"
-            }
-        ]
-    }
+        {
+            "title" : "Automatyczna ocena: Wydobywanie danych z XMLa",
+            "resource_link_id": "pythondata_05_xml",
+            "launch" : "tools/python-data/",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "comment_xml.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: XML",
+            "launch" : "mod/gift/?quiz=Py4Inf-13-WebServices-XML.txt",
+            "resource_link_id" : "py4e_13_xml_quiz"
+        },
+        {
+            "title" : "Automatyczna ocena: Wydobywanie danych z JSONa",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_06_json",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "comment_json.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: JSON",
+            "launch" : "mod/gift/?quiz=Py4Inf-13-WebServices-JSON.txt",
+            "resource_link_id" : "py4e_13_json_quiz"
+        },
+        {
+            "title" : "Automatyczna ocena: Używanie API GeoJSON",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_07_geo",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "geo_json.php"
+                }
+            ]
+        }
     ]
 },
 {
@@ -982,50 +1063,65 @@
         }
     ],
     "lti" : [
-    {
-        "title" : "Automatyczna ocena: Pojedyncza tabela SQL",
-        "launch" : "tools/sql-intro/",
-        "resource_link_id": "pythonsql_01_single",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "single_lite.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Zliczanie e-maili w bazie",
-        "launch" : "tools/sql-intro/",
-        "resource_link_id": "pythonsql_02_email",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "count_lite.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Baza z kilkoma tabelami – Utwory",
-        "launch" : "tools/sql-intro/",
-        "resource_link_id": "pythonsql_03_tracks",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "many_one_lite.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Wielu studentów na wielu kursach",
-        "launch" : "tools/sql-intro/",
-        "resource_link_id": "pythonsql_04_many",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "many_many_lite.php"
-            }
-        ]
-    }
+        {
+            "title" : "Automatyczna ocena: zapytania SQL na pojedynczej tabeli",
+            "launch" : "tools/sql-intro/",
+            "resource_link_id": "pythonsql_01_single",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "single_lite.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: zapytania SQL na pojedynczej tabeli",
+            "launch" : "mod/gift/?quiz=Py4Inf-15-Database-Single.txt",
+            "resource_link_id" : "py4e_15_one_quiz"
+        },
+        {
+            "title" : "Automatyczna ocena: Zliczanie e-maili w bazie",
+            "launch" : "tools/sql-intro/",
+            "resource_link_id": "pythonsql_02_email",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "count_lite.php"
+                }
+            ]
+        },
+        {
+            "title" : "Automatyczna ocena: Baza z kilkoma tabelami – Utwory",
+            "launch" : "tools/sql-intro/",
+            "resource_link_id": "pythonsql_03_tracks",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "many_one_lite.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Modelowanie danych",
+            "launch" : "mod/gift/?quiz=Py4Inf-15-Database-Model.txt",
+            "resource_link_id" : "py4e_15_mod_quiz"
+        },
+        {
+            "title" : "Automatyczna ocena: Wielu studentów na wielu kursach",
+            "launch" : "tools/sql-intro/",
+            "resource_link_id": "pythonsql_04_many",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "many_many_lite.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Wiele do wielu",
+            "launch" : "mod/gift/?quiz=Py4Inf-15-Database-Many.txt",
+            "resource_link_id" : "py4e_15_many_quiz"
+        }
     ]
 },
 {
