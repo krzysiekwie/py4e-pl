@@ -20,7 +20,7 @@ słowo <b>python</b> w celu uruchomienia Pythona.</p>
 
 <h4>Inne opcje instalacji</h4>
 
-<p>W systemie Windows 10 można zainstalować Pythona poprzez <a href="https://www.microsoft.com/en-us/store" target="_blank">Sklep (Microsoft Store)</a>. Wystarczy wyszukać odpowiednią aplikację wpisując nazwę "python", a następnie wybrać interesującą nas wersję.</p>
+<p>W systemie Windows 10 można zainstalować Pythona poprzez <a href="https://www.microsoft.com/pl-pl/search/shop/apps?q=python" target="_blank">Sklep (Microsoft Store)</a>, gdzie można wybrać interesującą nas wersję.</p>
 
 <p>Jeśli na Twoim komputerze z Windowsem 10 wolisz pracę zbliżoną do takiej jak
 na Linuxie, to możesz zainstalować i skonfigurować Pythona poprzez 

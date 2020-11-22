@@ -256,7 +256,7 @@ nowe umiejętności językowe.
 Zanim będziesz mógł rozmawiać z Pythonem, musisz najpierw zainstalować na swoim
 komputerze oprogramowanie Pythona oraz nauczyć się, jak je uruchomić. Jest to 
 zbyt wiele szczegółów jak na ten rozdział, więc proponuję zajrzeć na stronę
-<https://py4e.pl>, gdzie umieściłem instrukcje dotyczące konfiguracji i 
+<https://py4e.pl/install>, gdzie umieściłem instrukcje dotyczące konfiguracji i 
 uruchamiania Pythona na systemach Windows i macOS oraz w środowisku chmurowym PythonAnywhere.
 W każdym z przypadków w pewnym momencie znajdziesz się w oknie wiersza poleceń lub w terminalu, wpiszesz `python3`,
 potwierdzisz klawiszem `Enter`, a interpreter Pythona rozpocznie pracę w trybie interaktywnym,
