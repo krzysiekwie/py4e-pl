@@ -990,8 +990,8 @@
     "lti" : [
         {
             "title" : "Quiz: Programowanie obiektowe",
-            "launch" : "mod/gift/?quiz=16-Python-Objects.txt",
-            "resource_link_id" : "py4e_16_oo_quiz"
+            "launch" : "mod/gift/?quiz=Py4Inf-14-Objects.txt",
+            "resource_link_id" : "py4e_14_oo_quiz"
         }
     ]
 },
