@@ -20,7 +20,7 @@ BACK COVER
     Ta książka ma na celu nauczyć programowania nawet te osoby, które nie miały z nim wcześniej kontaktu.
     Dzięki niej można nauczyć programowania każdego!
 
-    „Python dla każdego” ma na celu wprowadzenie czytelnika w tematykę programowania i rozwoju oprogramowania przez pryzmat odkrywania danych. Możesz myśleć o języku programowania Python jako o narzędziu do rozwiązywania problemów dotyczących danych, które wykraczają poza możliwości arkusza kalkulacyjnego.
+    „Python dla wszystkich” ma na celu wprowadzenie czytelnika w tematykę programowania i rozwoju oprogramowania przez pryzmat odkrywania danych. Możesz myśleć o języku programowania Python jako o narzędziu do rozwiązywania problemów dotyczących danych, które wykraczają poza możliwości arkusza kalkulacyjnego.
 
     Python jest językiem programowania, który jest prosty w użyciu i łatwo się go nauczyć. Jest on dostępny bezpłatnie na systemach macOS, Windows i Linux. Dzięki temu, gdy już nauczysz się Pythona, będziesz mógł go używać do końca swojej kariery zawodowej bez konieczności zakupu jakiegokolwiek dodatkowego oprogramowania.
 
