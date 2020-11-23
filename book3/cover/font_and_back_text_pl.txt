@@ -1,0 +1,27 @@
+FRONT COVER
+
+    PYTHON
+    DLA WSZYSTKICH
+    ODKRYWANIE DANYCH Z PYTHON 3
+
+    Ta książka ma na celu nauczyć programowania nawet te osoby, które nie miały z nim wcześniej kontaktu.
+    Z tą książką można nauczyć programowania każdą osobę.
+
+    CHARLES SEVERANCE
+
+SPINE
+
+    CHARLES SEVERANCE
+    PYTHON DLA WSZYSTKICH | ODKRYWANIE DANYCH Z PYTHON 3
+
+BACK COVER
+
+    PYTHON DLA WSZYSTKICH: ODKRYWANIE DANYCH Z PYTHON 3
+    Ta książka ma na celu nauczyć programowania nawet te osoby, które nie miały z nim wcześniej kontaktu.
+    Z tą książką można nauczyć programowania każdą osobę.
+
+    „Python dla każdego” ma na celu wprowadzenie czytelnika w tematykę programowania i rozwoju oprogramowania przez pryzmat odkrywania danych. Możesz myśleć o języku programowania Python jako o narzędziu do rozwiązywania problemów dotyczących danych, które wykraczają poza możliwości arkusza kalkulacyjnego.
+
+    Python jest językiem programowania, który jest prosty w użyciu i łatwo się go nauczyć. Jest on dostępny bezpłatnie na systemach macOS, Windows i Linux. Dzięki temu, gdy już nauczysz się Pythona, będziesz mógł go używać końca swojej kariery zawodowej bez konieczności zakupu jakiegokolwiek dodatkowego oprogramowania.
+
+    Na stronie www.py4e.pl możesz bezpłatnie pobrać dostępne w różnych formatach elektroniczne kopie tej książki oraz materiały pomocnicze. Materiały do kursu są dostępne na licencji Creative Commons, więc możesz je dostosować do swoich potrzeb i wykorzystać do prowadzenia własnego kursu z Pythona.
