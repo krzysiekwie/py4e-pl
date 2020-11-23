@@ -22,7 +22,7 @@ rm tmp-1.* tmp-2.* *.tmp *.aux 2> /dev/null
 pandoc A0-preface.mkd -o tmp-1.prefacex.tex
 sed < tmp-1.prefacex.tex 's/section{/section*{/' > tmp-1.preface.tex
 
-cat [0-9]*.mkd | python2 verbatim.py | tee tmp-1.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V pdfversionprint -V fontsize:10pt -V documentclass:book -V lang:pl-PL -V langbabel:polish -V "author:Dr Charles R. Severance" -V "title:Python dla wszystkich" -V "subtitle:Odkrywanie danych z Python 3" -V numbersections --template=template.latex -o tmp-1.tex
+cat [0-9]*.mkd | python2 verbatim.py | tee tmp-1.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V pdfversionprint -V fontsize:10pt -V documentclass:book -V lang:pl-PL -V langbabel:polish -V "author:Dr Charles R. Severance" -V "title:Python dla wszystkich" -V "subtitle:Odkrywanie danych z Python 3" -V colorlinks:false -V citecolor:black -V urlcolor:black -V linkcolor:black -V numbersections --template=template.latex -o tmp-1.tex
 pandoc [A-Z][A-Z]*.mkd -o tmp-1.app.tex
 
 sed < tmp-1.app.tex -e 's/subsubsection{/xyzzy{/' -e 's/subsection{/plugh{/' -e 's/section{/chapter{/' -e 's/xyzzy{/subsection{/' -e 's/plugh{/section{/'  > tmp-1.appendix.tex

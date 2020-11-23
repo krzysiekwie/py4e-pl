@@ -155,7 +155,7 @@ $endif$
             bookmarksnumbered,
             pdfauthor={$author-meta$},
             pdftitle={$title-meta$},
-            colorlinks=true,
+            colorlinks=$if(colorlinks)$$colorlinks$$else$true$endif$,
             citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
             urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
             linkcolor=$if(linkcolor)$$linkcolor$$else$blue$endif$,
