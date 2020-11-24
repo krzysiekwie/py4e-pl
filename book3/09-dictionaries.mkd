@@ -115,7 +115,7 @@ Operator `in` używa różnych algorytmów dla list i słowników. W przypadku l
 \index{tablica z haszowaniem}
 \index{tablica mieszająca}
 \index{funkcja haszująca}
-\index{zbiór!przynależność}
+\index{zbiór, przynależność}
 \index{przynależność!zbiór}
 
 #### Ćwiczenie 1

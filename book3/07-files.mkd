@@ -9,7 +9,7 @@ Pamięć nieulotna
 ----------------
 
 \index{pamięć nieulotna}
-\index{pamięć pomocnicza}
+\index{pamięć pomocnicza}
 
 Do tej pory uczyliśmy się pisać programy i komunikować *procesorowi* nasze zamiary za pomocą instrukcji warunkowych, funkcji i iteracji. Nauczyliśmy się, jak tworzyć i wykorzystywać struktury danych w *pamięci głównej*. Procesor i pamięć główna są miejscem, w którym działa i uruchamia się nasze oprogramowanie. To właśnie tam odbywa się całe "myślenie".
 
@@ -84,7 +84,7 @@ Pliki te są w standardowym formacie pliku zawierającego wiele wiadomości pocz
 Aby podzielić plik na linie, istnieje specjalny znak, który reprezentuje "koniec linii", zwany nomen omen znakiem *końca linii*.
 
 \index{nowa linia}
-\index{znak końca linii}
+\index{znak!końca linii}
 
 W ciągach znaków Pythona znak *końca linii* reprezentujemy jako lewy ukośnik-n. Nawet jeśli wygląda to jak dwa znaki, to w rzeczywistości jest to pojedynczy znak. W poniższym przykładzie, gdy patrzymy na zmienną `stuff`, po wpisaniu jej w interpreterze, pokazuje nam ona `\n` w ciągu znaków, ale gdy używamy `print()` do wyświetlenia ciągu znaków, widzimy go rozbitego na dwie linie przez znak końca linii.
 
@@ -353,7 +353,7 @@ Metoda `write()` obiektu uchwytu pliku umieszcza dane w pliku, zwracając liczb�
 ~~~~
 
 \index{nowa linia}
-\index{znak końca linii}
+\index{znak!końca linii}
 
 Obiekt pliku śledzi, gdzie się obecnie znajduje, więc jeśli ponownie wywołasz metodę `write()`, to nowe dane zostaną umieszczone na końcu pliku.
 
@@ -513,7 +513,7 @@ Może to być pomocne przy debugowaniu.
 Innym problemem, na który możesz się natknąć, jest to, że różne systemy używają różnych znaków, by oznaczyć koniec linii. Niektóre systemy (np. Linux i macOS) używają znaku końca linii, reprezentowanego przez `\n`. Inne używają zamiast niego znaku powrotu karetki, reprezentowanego przez `\r`. Jeszcze inne (np. Windows) używają obu tych znaków, tj. `\r\n`. Jeśli przenosisz pliki między różnymi systemami, te niespójności mogą powodować problemy.^[Jeśli korzystamy np. z edytora Atom, to po otwarciu interesującego nas pliku informację o użytym sposobie zapisu oznaczenia końca linii możemy znaleźć na dolnej belce w prawym dolnym rogu aplikacji. LF (ang. *line feed*) oznacza `\n`, a CR (ang. *carriage return*) oznacza `\r`.]
 
 \index{nowa linia}
-\index{znak końca linii}
+\index{znak!końca linii}
 \index{kodowanie pliku}
 \index{plik!kodowanie}
 
@@ -547,7 +547,7 @@ Quality Assurance
 znak końca linii
 :   Specjalny znak używany w plikach i ciągach znaków do wskazywania końca linii.
 \index{nowa linia}
-\index{znak końca linii}
+\index{znak!końca linii}
 
 Ćwiczenia
 ---------

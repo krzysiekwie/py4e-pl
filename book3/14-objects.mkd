@@ -95,7 +95,7 @@ Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której kor
 
 \index{BeautifulSoup, biblioteka}
 \index{HTML}
-\index{parsowanie HTML}
+\index{parsowanie!HTML}
 
 \VerbatimInput{../code3/urllinks.py}
 

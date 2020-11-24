@@ -157,8 +157,6 @@ Pierwsza pętla buduje listę krotek, gdzie każda krotka jest wyrazem poprzedzo
 
 Funkcja `sort()` porównuje najpierw pierwsze elementy krotek, czyli długości wyrazów, a drugie elementy rozpatruje tylko w przypadku takich samych długości wyrazów. Argument z podaną nazwą `reverse=True` wskazuje funkcji `sort()`, by sortować w kolejności malejącej.
 
-\index{słowo kluczowe, argument}
-\index{argument!słowo kluczowe}
 \index{przejście}
 
 Druga pętla przechodzi przez listę krotek i tworzy listę wyrazów według ich malejącej długości. Czteroznakowe wyrazy są posortowane w odwrotnej kolejności alfabetycznej, więc słowo "what" pojawia się przed słowem "soft".

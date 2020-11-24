@@ -925,7 +925,7 @@ tryb interaktywny
 znak zachęty
 :   Pojawia się, gdy program wyświetla wiadomość, i wstrzymuje swoje działanie,
     by użytkownik mógł wprowadzić dane wejściowe do programu.
-\index{znak zachęty}
+\index{znak!zachęty}
 
 Ćwiczenia
 ---------

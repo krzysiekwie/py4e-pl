@@ -93,8 +93,8 @@ Pobieranie obrazu przez HTTP
 ----------------------------
 
 \index{urllib!obraz}
-\index{obraz!jpg}
-\index{jpg}
+\index{obraz JPG}
+\index{JPG}
 
 W poprzednim przykładzie pobraliśmy zwykły plik tekstowy, który zawierał znaki końca linii i po prostu wyświetliliśmy te dane na ekranie w trakcie działania programu. Podobnego programu możemy użyć do odtworzenia obrazu za pomocą HTTP. Zamiast wyświetlać dane na ekranie w trakcie działania programu, zgromadzimy je w obiekcie bajtowym, usuniemy nagłówki, a następnie zapiszemy dane obrazu do pliku:
 
@@ -176,7 +176,10 @@ Pomiędzy serwerem wykonującym żądania `send()` a naszą aplikacją wykonują
 Pobieranie stron internetowych przy pomocy `urllib`
 ---------------------------------------------------
 
-Choć możemy ręcznie wysyłać i odbierać dane za pomocą protokołu HTTP przy użyciu biblioteki gniazd, istnieje  w Pythonie znacznie prostszy sposób na wykonanie tego zadania przy użyciu biblioteki `urllib`.
+Choć możemy ręcznie wysyłać i odbierać dane za pomocą protokołu HTTP przy użyciu biblioteki gniazd, istnieje w Pythonie znacznie prostszy sposób na wykonanie tego zadania przy użyciu biblioteki `urllib`.
+
+\index{urllib!moduł}
+\index{moduł!urllib}
 
 Kiedy używasz `urllib`, możesz traktować stronę internetową jak plik. Po prostu wskazujesz stronę internetową do pobrania, a `urllib` obsługuje wszystkie szczegóły dotyczące protokołu HTTP i nagłówka.
 
@@ -232,7 +235,7 @@ Parsowanie HTMLa, roboty internetowe i web scraping
 
 \index{web scraping}
 \index{robot internetowy}
-\index{parsowanie HTML}
+\index{parsowanie!HTML}
 
 Jednym z częstych zastosowań `urllib` jest tzw. *web scraping* (dosł. wyłuskiwanie danych z sieci). Mamy z nim do czynienia wtedy, gdy piszemy program, który udaje przeglądarkę internetową i pobiera strony, a następnie analizujemy dane zawarte na tych stronach w poszukiwaniu interesujących nas wzorców.
 
@@ -329,7 +332,7 @@ Użyjemy `urllib` do odczytania strony, a następnie użyjemy `BeautifulSoup` do
 
 \index{BeautifulSoup, biblioteka}
 \index{HTML}
-\index{parsowanie HTML}
+\index{parsowanie!HTML}
 
 \VerbatimInput{../code3/urllinks.py}
 

@@ -646,7 +646,7 @@ Debugowanie
 -----------
 
 \index{przeglądarka bazy danych}
-\index{bazy danych!przeglądarka}
+\index{baza danych!przeglądarka}
 
 Jednym z powszechnych schematów postępowania podczas tworzenia w Pythonie programu do łączenia się z bazą danych SQLite jest uruchomienie programu i sprawdzenie wyników za pomocą przeglądarki bazy danych SQLite. Przeglądarka pozwala na szybkie sprawdzenie, czy Twój program działa poprawnie.
 

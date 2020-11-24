@@ -211,7 +211,7 @@ są gałęziami w przepływie wykonania programu.
 Warunki powiązane
 -----------------
 
-\index{powiązanie, warunki}
+\index{powiązane, warunki}
 \index{warunki!powiązane}
 
 Czasami mamy więcej niż dwie możliwości i potrzebujemy więcej niż dwóch
@@ -335,7 +335,7 @@ Oto przykładowy program do konwersji temperatury Fahrenheita na temperaturę
 Celsjusza:
 
 \index{fahrenheit}
-\index{celsius}
+\index{celsjusz}
 \index{konwersja temperatury}
 \index{temperatura, konwersja}
 
@@ -533,7 +533,7 @@ instrukcja warunkowa
 instrukcja złożona
 :   Instrukcja składająca się z nagłówka i ciała. Nagłówek kończy się
     dwukropkiem (:). Ciało jest wcięte w stosunku do nagłówka.
-\index{złożona, instrukcja}
+\index{złożona, instrukcja}
 \index{instrukcja!złożona}
 
 minimalna ewaluacja

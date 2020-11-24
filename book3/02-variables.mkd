@@ -165,7 +165,7 @@ nazwach zawierających wiele słów, takich jak `moje_imie` lub
 podkreślenia, ale generalnie unikamy tego, chyba że piszemy kod biblioteki, która 
 docelowo będzie używana przez inne osoby.
 
-\index{znak podkreślenia}
+\index{znak!podkreślenia}
 
 Jeśli nadasz zmiennej niepoprawną nazwę, otrzymasz błąd składniowy:
 
@@ -185,7 +185,7 @@ Okazuje się, że `class` jest jednym ze *słów kluczowych* Pythona. Interprete
 używa słów kluczowych do rozpoznania struktury programu, przez co nie można ich
 używać jako nazw zmiennych.
 
-\index{słowo kluczowe}
+\index{słowo kluczowe}
 
 Python ma zarezerwowanych 35 słów kluczowych:
 
@@ -295,7 +295,7 @@ wyrażenie na kalkulatorze.
 \index{Python 3.x}
 \index{Python 2.x}
 \index{zmiennoprzecinkowe, dzielenie}
-\index{dzielenie!zmiennoprzecinkowe}
+\index{dzielenie zmiennoprzecinkowe}
 
 Wyrażenia
 ---------
@@ -452,7 +452,7 @@ lub `<Enter>`, program wznawia działanie, a `input()` zwraca to, co użytkownik
 wpisał jako ciąg znaków.
 
 
-\index{Python 2.0}
+\index{Python 2.x}
 
 ~~~~ {.python}
 >>> inp = input()
@@ -466,7 +466,7 @@ komunikat informujący użytkownika o tym, co należy wprowadzić. Możesz przek
 ciąg znaków do `input()`, który zostanie wyświetlony użytkownikowi przed
 wstrzymaniem działania na czas wprowadzania danych:
 
-\index{znak zachęty}
+\index{znak!zachęty}
 
 ~~~~ {.python}
 >>> name = input('Jak masz na imię?\n')
@@ -480,7 +480,7 @@ Sekwencja `\n` na końcu komunikatu reprezentuje *nową linię*, specjalny znak,
 wprowadzane przez użytkownika znajdują się pod komunikatem.
 
 \index{nowa linia}
-\index{znak końca linii}
+\index{znak!końca linii}
 
 Jeśli oczekujesz od użytkownika wprowadzenia liczby całkowitej, możesz spróbować
 przekonwertować zwracaną wartość na `int`, używając funkcji `int()`:
@@ -784,7 +784,7 @@ liczba zmiennoprzecinkowa
 mnemonika
 :   Pomoc pamięciowa. Często nadajemy zmiennym nazwy mnemoniczne, tak aby łatwiej zapamiętać, co jest przechowywane w zmiennej. 
 \index{mnemonika}
-\index{mnemoniczne nazwy zmiennych}
+\index{mnemoniczne nazwy zmiennych}
 
 operand
 :   Jedna z wartości, na której działa operator.

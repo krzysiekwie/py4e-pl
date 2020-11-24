@@ -131,6 +131,8 @@ Funkcje matematyczne
 \index{matematyczna, funkcja}
 \index{funkcja matematyczna}
 \index{moduł}
+\index{moduł!math}
+\index{math, moduł}
 \index{obiekt modułu}
 \index{import, instrukcja}
 \index{instrukcja!import}
@@ -338,7 +340,7 @@ argumentów. Później zbudujemy funkcje, które przyjmują argumenty jako swoje
 dane wejściowe.
 
 \index{nawiasy okrągłe!puste}
-\index{nagłówek!funkcji}
+\index{nagłówek funkcji}
 \index{funkcja!nagłówek}
 \index{ciało!funkcji}
 \index{funkcja!ciało}

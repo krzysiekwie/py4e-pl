@@ -87,7 +87,8 @@ By zobaczyć lokalizacje na mapie, otwórz plik `where.html` w przeglądarce int
 Wizualizacja sieci i połączeń
 -----------------------------
 
-\index{Google!PageRank}
+\index{Google PageRank}
+\index{PageRank}
 \index{wizualizacja!sieci}
 \index{wizualizacja!PageRank}
 
