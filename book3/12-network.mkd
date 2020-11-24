@@ -223,7 +223,7 @@ W powyższym przykładzie odczytujemy jednocześnie tylko 100 000 znaków, a nas
 Program działa następująco:
 
 ~~~~
-python curl2.py
+$ python curl2.py
 Skopiowano 230210 znaków.
 ~~~~
 
@@ -391,7 +391,7 @@ Możesz również użyć BeautifulSoup do wyciągnięcia różnych elementów zw
 \VerbatimInput{../code3/urllink2.py}
 
 ~~~~
-python urllink2.py
+$ python urllink2.py
 Podaj link - http://www.dr-chuck.com/page1.htm
 TAG: <a href="http://www.dr-chuck.com/page2.htm">
 Second Page</a>

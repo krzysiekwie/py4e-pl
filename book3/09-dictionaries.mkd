@@ -236,7 +236,7 @@ W naszej instrukcji `else` używamy zwięzłej alternatywy dla inkrementacji zmi
 Kiedy uruchamiamy program, widzimy surowy zrzut wszystkich zliczeń w nieposortowanej kolejności tablicy haszującej. (Plik *romeo.txt* jest dostępny pod adresem <https://py4e.pl/code3/romeo.txt>).
 
 ~~~~
-python count1.py
+$ python count1.py
 Podaj nazwę pliku: romeo.txt
 {'and': 3, 'envious': 1, 'already': 1, 'fair': 1,
 'is': 3, 'through': 1, 'pale': 1, 'yonder': 1,
