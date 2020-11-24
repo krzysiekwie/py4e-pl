@@ -836,6 +836,8 @@ fred()
 jane()
 ~~~~
 
+(Dla uproszenia zapisu każda odpowiedź jest podana w jednej linii.)
+
 a. Zap ABC jane fred jane
 b. Zap ABC Zap
 c. ABC Zap jane
