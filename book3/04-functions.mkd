@@ -143,7 +143,7 @@ zaimportować:
 >>> import math
 ~~~~
 
-Powyższa instrukcja tworzy *obiekt modułu* o nazwie math. Jeśli spróbujesz 
+Powyższa instrukcja tworzy *obiekt modułu* o nazwie `math`. Jeśli spróbujesz 
 wydrukować na ekranie obiekt modułu, otrzymasz kilka informacji na jego temat: 
 
 ~~~~ {.python}

@@ -964,7 +964,7 @@ separator
 
 #### Ćwiczenie 4
 
-Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Każdą z nich podziel na listę słów za pomocą metody `split()`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli go nie ma, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
+Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik `romeo.txt` i czyta go linia po linii. Każdą z nich podziel na listę słów za pomocą metody `split()`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli go nie ma, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
 
 ~~~~
 Podaj nazwę pliku: romeo.txt

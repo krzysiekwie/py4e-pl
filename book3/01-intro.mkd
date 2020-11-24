@@ -417,10 +417,10 @@ Etykiety, których używamy, odnosząc się do przechowywanych danych, nazywamy 
 ~~~~
 
 W tym przykładzie prosimy Pythona, aby zapamiętał wartość sześć i użył etykiety
-*x*, abyśmy mogli później pobrać tę wartość. Sprawdzamy za pomocą funkcji `print()`, czy 
-Python faktycznie zapamiętał tę wartość. Następnie prosimy Pythona o pobranie *x*,
-pomnożenie przez siedem i umieszczenie nowo obliczonej wartości w *y*. Następnie
-prosimy Pythona o wyświetlenie aktualnej wartości znajdującej się w *y*.
+`x`, abyśmy mogli później pobrać tę wartość. Sprawdzamy za pomocą funkcji `print()`, czy 
+Python faktycznie zapamiętał tę wartość. Następnie prosimy Pythona o pobranie `x`,
+pomnożenie przez siedem i umieszczenie nowo obliczonej wartości w `y`. Następnie
+prosimy Pythona o wyświetlenie aktualnej wartości znajdującej się w `y`.
 
 Mimo że wpisujemy te polecenia w Pythonie po jednym wierszu na raz, Python
 traktuje je jako uporządkowaną sekwencję instrukcji, przez co późniejsze

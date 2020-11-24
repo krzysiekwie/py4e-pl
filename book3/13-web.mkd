@@ -21,7 +21,7 @@ XML wygląda bardzo podobnie do HTMLa, ale jest bardziej uporządkowany. Oto fra
 </osoba>
 ~~~~
 
-Każda para znaczników: otwierający (np. `<osoba>`) i zamykający (np. `</osoba>`), reprezentuje *element* lub *węzeł* (ang. node) o tej samej nazwie co znacznik (np. `osoba`). Każdy element może zawierać jakiś tekst, pewne atrybuty (np. `ukryty`) i inne zagnieżdżone elementy. Jeśli element XML jest pusty (tzn. nie ma treści), to może być przedstawiony za pomocą samozamykającego się tagu (np. `<email />`).
+Każda para znaczników: otwierający (np. `<osoba>`) i zamykający (np. `</osoba>`), reprezentuje *element* lub *węzeł* (ang. *node*) o tej samej nazwie co znacznik (np. `osoba`). Każdy element może zawierać jakiś tekst, pewne atrybuty (np. `ukryty`) i inne zagnieżdżone elementy. Jeśli element XML jest pusty (tzn. nie ma treści), to może być przedstawiony za pomocą samozamykającego się tagu (np. `<email />`).
 
 Często pomocne jest myślenie o dokumencie XML jako o strukturze drzewa, w którym znajduje się najwyższy element (tutaj: `osoba`), a inne znaczniki (np. `telefon`) są oznaczane jako *dzieci* elementów będących ich *rodzicami*.
 
@@ -178,7 +178,7 @@ Podczas korzystania z sieci widzimy wiele przykładów SOA. Możemy wejść na s
 
 Architektura usługowa ma wiele zalet, w tym: (1) zawsze przechowujemy tylko jedną kopię danych (jest to szczególnie ważne w przypadku rezerwacji hotelowych, w których nie chcemy wykonywać nadmiernych i niewykonalnych zobowiązań) oraz (2) właściciele danych mogą ustalić zasady korzystania z nich. Z tego powodu system SOA musi być starannie zaprojektowany, tak aby działał wydajnie i spełniał potrzeby użytkownika.
 
-Kiedy aplikacja udostępnia przez internet zestaw usług w swoim API, nazywamy to *usługą sieciową* (ang. web service).
+Kiedy aplikacja udostępnia przez internet zestaw usług w swoim API, nazywamy to *usługą sieciową* (ang. *web service*).
 
 Bezpieczeństwo i korzystanie z API
 ----------------------------------
@@ -313,9 +313,9 @@ Aplikacja nr 2: Twitter
 
 Od czasu, gdy API Twittera stało się bardziej wartościowe, Twitter przeszedł z otwartego i publicznego API do takiego, które przy każdym zapytaniu wymaga użycia OAuth. 
 
-Oba nasze przykłady opierają się na plikach *twurl.py*, *hidden.py*, *oauth.py*, *twitter1.py* i *twitter2.py*, które możesz pobrać z <https://py4e.pl/code3>. Po pobraniu plików umieść je wszystkie w jednym katalogu.
+Oba nasze przykłady opierają się na plikach `twurl.py`, `hidden.py`, `oauth.py`, `twitter1.py` i `twitter2.py`, które możesz pobrać z <https://py4e.pl/code3>. Po pobraniu plików umieść je wszystkie w jednym katalogu.
 
-Aby móc korzystać z tych programów, musisz mieć konto na Twitterze i autoryzować swój kod Pythona jako aplikację, ustawić klucz, sekret, token i sekret tokena. Wyedytuj plik *hidden.py* i umieść w nim cztery ciągi znaków w odpowiednich miejscach:
+Aby móc korzystać z tych programów, musisz mieć konto na Twitterze i autoryzować swój kod Pythona jako aplikację, ustawić klucz, sekret, token i sekret tokena. Wyedytuj plik `hidden.py` i umieść w nim cztery ciągi znaków w odpowiednich miejscach:
 
 \VerbatimInput{../code3/hidden.py} 
 
@@ -335,7 +335,7 @@ https://api.twitter.com/1.1/statuses/user_timeline.json?count=2
 
 Jeśli chcesz dowiedzieć więcej o znaczeniu różnych parametrów, które są dodawane w celu spełnienia wymogów bezpieczeństwa OAuth, to możesz przeczytać specyfikację OAuth.
 
-W naszych programach korzystających z Twittera wszystkie skomplikowane mechanizmy będą ukryte w plikach *oauth.py* i *twurl.py*. Po prostu ustawiamy sekrety w *hidden.py*, następnie wysyłamy żądany adres URL do funkcji *twurl.augment()*, a kod biblioteki dodaje za nas wszystkie niezbędne parametry do adresu URL.
+W naszych programach korzystających z Twittera wszystkie skomplikowane mechanizmy będą ukryte w plikach `oauth.py` i `twurl.py`. Po prostu ustawiamy sekrety w `hidden.py`, następnie wysyłamy żądany adres URL do funkcji `twurl.augment()`, a kod biblioteki dodaje za nas wszystkie niezbędne parametry do adresu URL.
 
 Poniższy program pobiera oś czasu dla konkretnego użytkownika Twittera i zwraca go nam w formacie JSON w postaci ciągu znaków. Po uzyskaniu danych po prostu wypisujemy pierwsze 250 znaków ciągu:
 
@@ -434,6 +434,6 @@ scweeker
 Podaj nazwę konta na Twitterze:
 ~~~~
 
-W ostatnim fragmencie wyniku programu widzimy pętlę `for`,która odczytuje pięciu ostatnich "znajomych" konta *@drchuck* na Twitterze i wypisuje najnowszy status dla każdego z nich. W zwróconym JSONie znajduje się dużo więcej danych. Jeśli spojrzysz na wynik programu, to zobaczysz również, że operacja "znalezienia znajomych" danego konta ma inny limit wywołań niż dozwolona liczba zapytań dotycząca osi czasu.
+W ostatnim fragmencie wyniku programu widzimy pętlę `for`, która odczytuje pięciu ostatnich "znajomych" konta *@drchuck* na Twitterze i wypisuje najnowszy status dla każdego z nich. W zwróconym JSONie znajduje się dużo więcej danych. Jeśli spojrzysz na wynik programu, to zobaczysz również, że operacja "znalezienia znajomych" danego konta ma inny limit wywołań niż dozwolona liczba zapytań dotycząca osi czasu.
 
 Korzystanie z bezpiecznych kluczy API daje Twitterowi pewność, kto i w jakim zakresie korzysta z jego API i danych. Podejście oparte na ustanawianiu limitów zapytań pozwala na proste wyszukiwanie danych osobowych, ale nie na zbudowanie produktu, który pobierałby przez API Twittera jakieś dane miliony razy dziennie.

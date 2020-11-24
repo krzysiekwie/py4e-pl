@@ -133,7 +133,7 @@ Wyrażenie regularne pasuje dwukrotnie (csev@umich.edu i cwen@iupui.edu), ale ni
 
 Czytamy każdą linię, a następnie wyodrębniamy wszystkie podciągi, które pasują do naszego wyrażenia regularnego. Ponieważ `findall()` zwraca listę, po prostu sprawdzamy, czy liczba elementów na tej liście jest większa od zera, tak by wypisać tylko te linie, w których znaleźliśmy przynajmniej jeden podciąg wyglądający jak adres e-mail.
 
-Jeśli uruchomimy program na pliku *mbox.txt*, otrzymamy następujący wynik:
+Jeśli uruchomimy program na pliku `mbox.txt`, otrzymamy następujący wynik:
 
 ~~~~
 ['wagnermr@iupui.edu']
@@ -399,7 +399,7 @@ From: zqian@umich.edu
 From: rjlowe@iupui.edu
 ~~~~
 
-Powyższe polecenie mówi programowi `grep`, żeby pokazał Ci linie, które zaczynają się od ciągu znaków "From:" w pliku *mbox-short.txt*. Jeśli trochę poeksperymentujesz z komendą `grep` i przeczytasz dokumentację tego programu, znajdziesz kilka subtelnych różnic między obsługą wyrażeń regularnych w Pythonie a obsługą wyrażeń regularnych w `grep`. Na przykład `grep` nie obsługuje `\S` oznaczającego niebiały znak, więc będziesz musiał użyć nieco bardziej złożonego zapisu (w uproszczeniu) `[^ \n\r\t]`, co po prostu oznacza dopasowanie znaku, który jest czymś innym niż spacja, znaki końca linii lub tabulacja.
+Powyższe polecenie mówi programowi `grep`, żeby pokazał Ci linie, które zaczynają się od ciągu znaków "From:" w pliku `mbox-short.txt`. Jeśli trochę poeksperymentujesz z komendą `grep` i przeczytasz dokumentację tego programu, znajdziesz kilka subtelnych różnic między obsługą wyrażeń regularnych w Pythonie a obsługą wyrażeń regularnych w `grep`. Na przykład `grep` nie obsługuje `\S` oznaczającego niebiały znak, więc będziesz musiał użyć nieco bardziej złożonego zapisu (w uproszczeniu) `[^ \n\r\t]`, co po prostu oznacza dopasowanie znaku, który jest czymś innym niż spacja, znaki końca linii lub tabulacja.
 
 Debugowanie
 -----------

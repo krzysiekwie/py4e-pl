@@ -72,7 +72,7 @@ Who is already sick and pale with grief
 
 Wyjście zaczyna się od nagłówków, które serwer WWW wysyła w celu opisania dokumentu. Na przykład nagłówek `Content-Type` wskazuje, że dokument jest zwykłym dokumentem tekstowym (`text/plain`).
 
-Po wysłaniu przez serwer nagłówków dodaje on pustą linię wskazującą koniec nagłówków, a następnie wysyła dane rzeczywiście zawarte w pliku *romeo.txt*.
+Po wysłaniu przez serwer nagłówków dodaje on pustą linię wskazującą koniec nagłówków, a następnie wysyła dane rzeczywiście zawarte w pliku `romeo.txt`.
 
 Powyższy przykład pokazuje, jak przy pomocy gniazd wykonać niskopoziomowe połączenie sieciowe. Gniazda mogą być używane do komunikacji z serwerem WWW, z serwerem pocztowym albo z różnymi innymi rodzajami serwerów. Wystarczy znaleźć dokument, który opisuje protokół, i napisać kod do wysłania i odbioru danych zgodnie z tym protokołem.
 
@@ -180,7 +180,7 @@ Choć możemy ręcznie wysyłać i odbierać dane za pomocą protokołu HTTP prz
 
 Kiedy używasz `urllib`, możesz traktować stronę internetową jak plik. Po prostu wskazujesz stronę internetową do pobrania, a `urllib` obsługuje wszystkie szczegóły dotyczące protokołu HTTP i nagłówka.
 
-Równoważny kod odczytujący z sieci plik *romeo.txt* przy użyciu `urllib` jest następujący:
+Równoważny kod odczytujący z sieci plik `romeo.txt` przy użyciu `urllib` jest następujący:
 
 \VerbatimInput{../code3/urllib1.py}
 
