@@ -49,7 +49,7 @@ Bez przecinka Python traktuje `('a')` jako wyrażenie z ciągiem znaków w nawia
 <type 'str'>
 ~~~~
 
-Innym sposobem na skonstruowanie krotki jest wbudowana funkcja `tuple`. Bez żadnego argumentu, tworzy ona pustą krotkę:
+Innym sposobem na skonstruowanie krotki jest wbudowana funkcja `tuple()`. Bez żadnego argumentu, tworzy ona pustą krotkę:
 
 \index{tuple, funkcja}
 \index{funkcja!tuple}
@@ -60,7 +60,7 @@ Innym sposobem na skonstruowanie krotki jest wbudowana funkcja `tuple`. Bez żad
 ()
 ~~~~
 
-Jeśli argumentem jest sekwencja (ciąg znaków, lista lub krotka), to wynikiem wywołania funkcji `tuple` jest krotka z elementami podanej sekwencji:
+Jeśli argumentem jest sekwencja (ciąg znaków, lista lub krotka), to wynikiem wywołania funkcji `tuple()` jest krotka z elementami podanej sekwencji:
 
 ~~~~ {.python .trinket}
 >>> t = tuple('lupins')
@@ -130,7 +130,7 @@ True
 True
 ~~~~
 
-Funkcja `sort` działa w ten sam sposób. Sortuje przede wszystkim według pierwszego elementu, ale w przypadku takich samych wartości sortuje według drugiego elementu itd.
+Funkcja `sort()` działa w ten sam sposób. Sortuje przede wszystkim według pierwszego elementu, ale w przypadku takich samych wartości sortuje według drugiego elementu itd.
 
 Powyższa własność prowadzi do schematu zwanego *DSU* oznaczającego
 
@@ -138,7 +138,7 @@ Dekorowanie
 :   sekwencji poprzez zbudowanie listy krotek z jednym lub wieloma kluczami sortowania, które poprzedzają elementy sekwencji,
 
 Sortowanie
-:   listy krotek przy pomocy funkcji wbudowanej `sort`,
+:   listy krotek przy pomocy funkcji wbudowanej `sort()`,
 
 Usunięcie dekorowania
 :   poprzez wyodrębnienie posortowanych elementów sekwencji.
@@ -155,7 +155,7 @@ Załóżmy, że masz listę wyrazów i chcesz je posortować od najdłuższego d
 
 Pierwsza pętla buduje listę krotek, gdzie każda krotka jest wyrazem poprzedzonym jego długością.
 
-Funkcja `sort` porównuje najpierw pierwsze elementy krotek, czyli długości wyrazów, a drugie elementy rozpatruje tylko w przypadku takich samych długości wyrazów. Argument z podaną nazwą `reverse=True` wskazuje funkcji `sort`, by sortować w kolejności malejącej.
+Funkcja `sort()` porównuje najpierw pierwsze elementy krotek, czyli długości wyrazów, a drugie elementy rozpatruje tylko w przypadku takich samych długości wyrazów. Argument z podaną nazwą `reverse=True` wskazuje funkcji `sort()`, by sortować w kolejności malejącej.
 
 \index{słowo kluczowe, argument}
 \index{argument!słowo kluczowe}
@@ -250,7 +250,7 @@ Ogólnie rzecz biorąc, prawa strona może być dowolną sekwencją (ciągiem, l
 >>> uname, domain = addr.split('@')
 ~~~~
 
-Wartość zwracana przez `split` jest listą z dwoma elementami; pierwszy element jest przypisany do `uname`, a drugi – do `domain`.
+Wartość zwracana przez `split()` jest listą z dwoma elementami; pierwszy element jest przypisany do `uname`, a drugi – do `domain`.
 
 ~~~~ {.python}
 >>> print(uname)
@@ -267,7 +267,7 @@ Słowniki i krotki
 \index{metoda!items}
 \index{para klucz-wartość}
 
-Słowniki posiadają metodę zwaną `items`, która zwraca listę krotek, gdzie każda krotka jest parą klucz-wartość:
+Słowniki posiadają metodę o nazwie `items()`, która zwraca listę krotek, gdzie każda krotka jest parą klucz-wartość:
 
 ~~~~ {.python .trinket}
 >>> d = {'a':10, 'b':1, 'c':22}
@@ -298,14 +298,14 @@ Wielokrotne przypisanie w słownikach
 \index{przejście!słownik}
 \index{słownik!przejście}
 
-Używając razem `items`, przypisania krotki oraz `for`, możesz zobaczyć ciekawy schemat kodu do przechodzenia po kluczach i wartościach słownika w jednej pętli:
+Używając razem `items()`, przypisania krotki oraz `for`, możesz zobaczyć ciekawy schemat kodu do przechodzenia po kluczach i wartościach słownika w jednej pętli:
 
 ~~~~ {.python}
 for key, val in list(d.items()):
     print(val, key)
 ~~~~
 
-Powyższa pętla ma dwie *zmienne iteracyjne*, ponieważ `items` zwraca listę krotek, a `key, val` jest przypisaniem krotki, które kolejno iteruje przez każdą z par klucz-wartość w słowniku.
+Powyższa pętla ma dwie *zmienne iteracyjne*, ponieważ `items()` zwraca listę krotek, a `key, val` jest przypisaniem krotki, które kolejno iteruje przez każdą z par klucz-wartość w słowniku.
 
 W każdej kolejnej iteracji pętli zarówno `key`, jak i `val` posuwają się naprzód do kolejnej pary klucz-wartość w słowniku (nadal w kolejności haszy).
 
@@ -321,7 +321,7 @@ I ponownie mamy tutaj kolejności kluczy po haszach (tzn. bez żadnej konkretnej
 
 Jeżeli połączymy te dwie techniki, możemy wypisać zawartość słownika posortowaną po *wartościach* zapisanych w każdej parze klucz-wartość.
 
-Aby to zrobić, najpierw sporządzamy listę krotek, gdzie każda krotka to `(value, key)`. Metoda `items` zwróci nam listę `(key, value)` krotek, ale tym razem chcemy sortować według wartości, a nie klucza. Po skonstruowaniu listy z parami klucz-wartość, możemy łatwo posortować listę w odwrotnej kolejności i wypisać nową, posortowaną listę.
+Aby to zrobić, najpierw sporządzamy listę krotek, gdzie każda krotka to `(value, key)`. Metoda `items()` zwróci nam listę `(key, value)` krotek, ale tym razem chcemy sortować według wartości, a nie klucza. Po skonstruowaniu listy z parami klucz-wartość, możemy łatwo posortować listę w odwrotnej kolejności i wypisać nową, posortowaną listę.
 
 ~~~~ {.python}
 >>> d = {'a':10, 'b':1, 'c':22}
@@ -449,7 +449,7 @@ Listy są popularniejsze w użyciu niż krotki, głównie dlatego, że są zmien
 
 3.  Jeżeli przekazujesz sekwencję jako argument do funkcji, używanie krotek zmniejsza możliwość nieoczekiwanego działania kodu spowodowanego aliasowaniem.
 
-Ponieważ krotki są niezmienne, nie dostarczają metod takich jak `sort` i `reverse`, które modyfikują istniejące listy. Jednakże Python dostarcza wbudowane funkcje `sorted` i `reversed`, które przyjmują każdą sekwencję jako parametr i zwracają nową sekwencję z tymi samymi elementami w innej kolejności.
+Ponieważ krotki są niezmienne, nie dostarczają metod takich jak `sort()` i `reverse()`, które modyfikują istniejące listy. Jednakże Python dostarcza wbudowane funkcje `sorted()` i `reversed()`, które przyjmują każdą sekwencję jako parametr i zwracają nową sekwencję z tymi samymi elementami w innej kolejności.
 
 \index{sorted, funkcja}
 \index{funkcja!sorted}

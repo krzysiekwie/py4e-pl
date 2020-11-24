@@ -40,7 +40,7 @@ Oto prosta aplikacja, która przetwarza część XMLa i wyodrębnia z niego niek
 
 Potrójny apostrof (`'''`), jak również potrójny cudzysłów (`"""`) pozwalają na tworzenie napisów, które obejmują wiele linii.
 
-Wywołanie `fromstring` zamienia reprezentację XMLa z ciągu znaków na "drzewo" elementów XML. Gdy element XML znajduje się w drzewie, mamy wiele metod, które możemy wywołać, by wyodrębnić interesujące nas dane z ciągu znaków w XMLu. Funkcja `find` przeszukuje drzewo XML i wyciąga element, który pasuje do określonego znacznika.
+Wywołanie `fromstring()` zamienia reprezentację XMLa z ciągu znaków na "drzewo" elementów XML. Gdy element XML znajduje się w drzewie, mamy wiele metod, które możemy wywołać, by wyodrębnić interesujące nas dane z ciągu znaków w XMLu. Funkcja `find()` przeszukuje drzewo XML i wyciąga element, który pasuje do określonego znacznika.
 
 ~~~~
 Imię: Chuck
@@ -59,7 +59,7 @@ Często XML ma wiele węzłów i musimy napisać pętlę, żeby je wszystkie prz
 
 \VerbatimInput{../code3/xml2.py}
 
-Metoda `findall` zwraca Pythonową listę poddrzew, które reprezentują struktury `user` w drzewie XML. Następnie możemy napisać pętlę `for`, która analizuje każdy węzeł o nazwie `user` i wypisuje jego elementy tekstowe `name` i `id` oraz atrybut `x`.
+Metoda `findall()` zwraca Pythonową listę poddrzew, które reprezentują struktury `user` w drzewie XML. Następnie możemy napisać pętlę `for`, która analizuje każdy węzeł o nazwie `user` i wypisuje jego elementy tekstowe `name` i `id` oraz atrybut `x`.
 
 ~~~~
 Liczba użytkowników: 2
@@ -71,7 +71,7 @@ Id 009
 Attribute 7
 ~~~~
 
-W instrukcji `findall` należy uwzględnić wszystkie elementy poziomu nadrzędnego z wyjątkiem elementu najwyższego poziomu (np. `users/user`). W przeciwnym razie Python nie znajdzie żadnych szukanych przez nas węzłów.
+W funkcji `findall()` należy uwzględnić wszystkie elementy poziomu nadrzędnego z wyjątkiem elementu najwyższego poziomu (np. `users/user`). W przeciwnym razie Python nie znajdzie żadnych szukanych przez nas węzłów.
 
 ~~~~ {.python}
 import xml.etree.ElementTree as ET
@@ -140,7 +140,7 @@ Parsowanie JSONa
 
 Budujemy naszego JSONa poprzez dowolne zagnieżdżanie słowników i list. W poniższym przykładzie przedstawiamy listę użytkowników, gdzie każdy użytkownik jest zestawem par klucz-wartość (czyli słownikiem). Mamy więc listę słowników.
 
-W poniższym programie wykorzystujemy wbudowaną bibliotekę `json` do parsowania JSONa i odczytywania z niego danych. Porównaj kod z wcześniejszym przykładem pracującym na XMLu. JSON ma mniej detali, więc musimy z góry wiedzieć, że otrzymujemy listę, i że lista ta składa się z użytkowników, a każdy użytkownik jest zestawem par klucz-wartość. JSON jest bardziej zwięzły (zaleta), ale mniej samoopisowy (wada).
+W poniższym programie wykorzystujemy wbudowany w Pythona moduł `json` do parsowania JSONa i odczytywania z niego danych. Porównaj kod z wcześniejszym przykładem pracującym na XMLu. JSON ma mniej detali, więc musimy z góry wiedzieć, że otrzymujemy listę, i że lista ta składa się z użytkowników, a każdy użytkownik jest zestawem par klucz-wartość. JSON jest bardziej zwięzły (zaleta), ale mniej samoopisowy (wada).
 
 \VerbatimInput{../code3/json2.py}
 
@@ -249,7 +249,7 @@ Poniżej znajduje się prosta aplikacja wyszukująca informacje geograficzne na 
 
 Program pobiera ciąg znaków i konstruuje adres URL zawierający wprowadzony ciąg wyszukiwania jako prawidłowo zakodowany parametr adresu URL, a następnie używa `urllib` do pobrania tekstu z API geokodowania OpenStreetMap. W przeciwieństwie do stałej/niezmiennej strony internetowej, otrzymywane dane zależą od parametrów, które wysyłamy, oraz od danych geograficznych przechowywanych na serwerach OpenStreetMap.
 
-Kiedy pobierzemy dane JSON, parsujemy je za pomocą biblioteki `json` i sprawdzamy kilka rzeczy, tak aby upewnić się, że otrzymaliśmy dobre dane, a następnie pobieramy informacje, których szukamy.
+Kiedy pobierzemy dane JSON, parsujemy je za pomocą modułu `json` i sprawdzamy kilka rzeczy, tak aby upewnić się, że otrzymaliśmy dobre dane, a następnie pobieramy informacje, których szukamy.
 
 Wynik działania programu jest następujący (część zwróconych danych JSON została usunięta):
 

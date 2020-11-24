@@ -243,7 +243,7 @@ wymagane).
 if choice == 'a':
     print('Zła odpowiedź')
 elif choice == 'b':
-    print('Dobra odpoiwedź')
+    print('Dobra odpowiedź')
 elif choice == 'c':
     print('Blisko, ale źle')
 ~~~~
@@ -294,7 +294,7 @@ if 0 < x:
         print('x jest jednocyfrową dodatnią liczbą.')
 ~~~~
 
-Instrukcja `print` jest wykonywana tylko wtedy, gdy spełnimy oba warunki, więc
+Funkcja `print()` jest wywoływana tylko wtedy, gdy spełnimy oba warunki, więc
 możemy uzyskać ten sam efekt z operatorem `and`:
 
 ~~~~ {.python}
@@ -305,7 +305,7 @@ if 0 < x and x < 10:
 Łapanie wyjątków przy użyciu try i except
 -----------------------------------------
 
-Wcześniej widzieliśmy fragment kodu, w którym używaliśmy funkcji `input` i `int`
+Wcześniej widzieliśmy fragment kodu, w którym używaliśmy funkcji `input()` i `int()`
 do odczytania i przetworzenia liczby całkowitej wprowadzonej przez użytkownika.
 Widzieliśmy też, jak takie podejście może być zdradzieckie:
 
@@ -553,7 +553,7 @@ operator porównania
 :   Jeden z następujących operatorów, który porównuje swoje operandy: `==`,
     `!=`, `>`, `<`, `>=` i `<=`.
 \index{porównanie, operator}
-\index{operator!porówania}
+\index{operator!porównania}
 
 traceback
 :   Lista funkcji, które są wykonywane; pojawia się, gdy wystąpi wyjątek.

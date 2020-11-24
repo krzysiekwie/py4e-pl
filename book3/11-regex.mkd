@@ -2,7 +2,7 @@
 Wyrażenia regularne
 ===================
 
-Do tej pory odczytywaliśmy dane poprzez pliki, szukaliśmy wzorców i wyodrębnialiśmy różne fragmenty linii, które wydawały nam się interesujące. Używaliśmy metod związanych z ciągami znaków, takich jak `split` i `find`, a także używaliśmy list i wycinania fragmentów napisów do wyodrębnienia części linii.
+Do tej pory odczytywaliśmy dane poprzez pliki, szukaliśmy wzorców i wyodrębnialiśmy różne fragmenty linii, które wydawały nam się interesujące. Używaliśmy metod związanych z ciągami znaków, takich jak `split()` i `find()`, a także używaliśmy list i wycinania fragmentów napisów do wyodrębnienia części linii.
 
 \index{wyrażenia regularne}
 \index{regex}
@@ -222,7 +222,7 @@ X-DSPAM-Confidence: 0.6178
 X-DSPAM-Probability: 0.0000
 ~~~~
 
-Teraz musimy rozwiązać problem wyodrębniania liczb. Chociaż da się to zrobić bardzo prosto przy użyciu `split`, to jednak możemy użyć kolejnej cechy wyrażeń regularnych, tak by w tym samym czasie zarówno wyszukać, jak i przetworzyć linię.
+Teraz musimy rozwiązać problem wyodrębniania liczb. Chociaż da się to zrobić bardzo prosto przy użyciu `split()`, to jednak możemy użyć kolejnej cechy wyrażeń regularnych, tak by w tym samym czasie zarówno wyszukać, jak i przetworzyć linię.
 
 \index{ciąg znaków!split}
 
@@ -287,7 +287,7 @@ Teraz możemy użyć wyrażeń regularnych, aby powtórzyć ćwiczenie z wcześn
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 ~~~~
 
-i dla każdej linii chcieliśmy wyodrębnić godzinę. Wcześniej robiliśmy to za pomocą dwóch wywołań `split`. Najpierw linia była dzielona na słowa, a następnie wyciągaliśmy piąte słowo i ponownie dzieliliśmy je po znaku dwukropka, tak aby wyciągnąć pierwsze dwa znaki, które nas interesowały.
+i dla każdej linii chcieliśmy wyodrębnić godzinę. Wcześniej robiliśmy to za pomocą dwóch wywołań `split()`. Najpierw linia była dzielona na słowa, a następnie wyciągaliśmy piąte słowo i ponownie dzieliliśmy je po znaku dwukropka, tak aby wyciągnąć pierwsze dwa znaki, które nas interesowały.
 
 \index{kruchy kod}
 
@@ -426,7 +426,7 @@ Jeśli wiesz, jakiego modułu chcesz użyć, możesz użyć polecenia `dir()` w 
 'sre_parse', 'sub', 'subn', 'sys', 'template']
 ~~~~
 
-Możesz również uzyskać niewielką część dokumentacji na temat określonej metody za pomocą polecenia `help`.
+Możesz również uzyskać niewielką część dokumentacji na temat określonej metody za pomocą polecenia `help()`.
 
 ~~~~ {.python}
 >>> help(re.search)

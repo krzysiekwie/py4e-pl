@@ -85,7 +85,7 @@ Kod tworzący plik bazy danych i tabelę o nazwie `Utwory` z dwiema kolumnami je
 \index{cursor, funkcja}
 \index{funkcja!cursor}
 
-Operacja `connect` nawiązuje "połączenie" z bazą danych przechowywaną w pliku `muzyka.sqlite`, który znajduje się w bieżącym katalogu. Jeśli plik ten nie istnieje, to zostanie utworzony. Nazywa się to "połączeniem", ponieważ czasami baza danych przechowywana jest na "serwerze baz danych", czyli na innym komputerem niż ten, na którym uruchamiamy aplikację. W naszych prostych przykładach baza danych będzie po prostu plikiem lokalnym w tym samym katalogu co uruchamiany przez nas kod Pythona.
+Funkcja `connect()` nawiązuje "połączenie" z bazą danych przechowywaną w pliku `muzyka.sqlite`, który znajduje się w bieżącym katalogu. Jeśli plik ten nie istnieje, to zostanie utworzony. Nazywa się to "połączeniem", ponieważ czasami baza danych przechowywana jest na "serwerze baz danych", czyli na innym komputerem niż ten, na którym uruchamiamy aplikację. W naszych prostych przykładach baza danych będzie po prostu plikiem lokalnym w tym samym katalogu co uruchamiany przez nas kod Pythona.
 
 \index{kursor}
 \index{baza danych!kursor}

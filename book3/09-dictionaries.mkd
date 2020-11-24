@@ -17,7 +17,7 @@ Możesz myśleć o słowniku jako o mapowaniu pomiędzy zestawem indeksów (któ
 
 Jako przykład zbudujemy słownik, który mapuje słowa angielskie na hiszpańskie, więc klucze i wartości będą ciągami znaków.
 
-Funkcja `dict` tworzy nowy słownik bez żadnych elementów. Ponieważ `dict` jest nazwą wbudowanej funkcji, powinieneś unikać używania jej jako nazwy zmiennej.
+Funkcja `dict()` tworzy nowy słownik bez żadnych elementów. Ponieważ `dict()` jest nazwą wbudowanej funkcji, powinieneś unikać używania jej jako nazwy zmiennej.
 
 \index{dict, funkcja}
 \index{funkcja!dict}
@@ -37,14 +37,14 @@ Nawiasy klamrowe, `{}`, reprezentują pusty słownik. Aby dodać elementy do sł
 >>> eng2sp['one'] = 'uno'
 ~~~~
 
-Powyższa linia tworzy element, który mapuje klucz `'one'` do wartości "uno". Jeśli ponownie wyświetlimy słownik, to zobaczymy parę klucz-wartość z dwukropkiem pomiędzy kluczem a wartością:
+Powyższa linia tworzy element, który mapuje klucz `'one'` do wartości `'uno'`. Jeśli ponownie wyświetlimy słownik, to zobaczymy parę klucz-wartość z dwukropkiem pomiędzy kluczem a wartością:
 
 ~~~~ {.python}
 >>> print(eng2sp)
 {'one': 'uno'}
 ~~~~
 
-Widoczny powyżej format wyjściowy jest również formatem wejściowym. Na przykład możesz utworzyć nowy słownik z trzema elementami. Ale jeśli wydrukujesz `eng2sp`, możesz być zaskoczony:
+Widoczny powyżej format wyjściowy jest również formatem wejściowym. Na przykład możesz utworzyć nowy słownik z trzema elementami. Ale jeśli wypiszesz zawartość `eng2sp`, możesz być zaskoczony:
 
 ~~~~ {.python}
 >>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
@@ -63,7 +63,7 @@ Jednak nie jest to problem, ponieważ elementy słownika nigdy nie są indeksowa
 'dos'
 ~~~~
 
-Klucz `'two'` zawsze mapuje się do wartości "dos", więc kolejność elementów nie ma znaczenia.
+Klucz `'two'` zawsze mapuje się do wartości `'dos'`, więc kolejność elementów nie ma znaczenia.
 
 Jeśli klucza nie ma w słowniku, otrzymasz wyjątek:
 
@@ -75,7 +75,7 @@ Jeśli klucza nie ma w słowniku, otrzymasz wyjątek:
 KeyError: 'four'
 ~~~~
 
-Funkcja `len` działa również na słownikach i zwraca liczbę par klucz-wartość:
+Funkcja `len()` działa również na słownikach i zwraca liczbę par klucz-wartość:
 
 \index{len, funkcja}
 \index{funkcja!len}
@@ -99,7 +99,7 @@ True
 False
 ~~~~
 
-Aby sprawdzić, czy coś pojawia się w słowniku jako wartość, możesz użyć metody `values`, zwracającą wartości jako typ, który może być skonwertowany na listę, a następnie użyć operatora `in`:
+Aby sprawdzić, czy coś pojawia się w słowniku jako wartość, możesz użyć metody `values()`, zwracającą wartości jako typ, który może być skonwertowany na listę, a następnie użyć operatora `in`:
 
 \index{values, metoda}
 \index{metoda!values}
@@ -133,7 +133,7 @@ Załóżmy, że otrzymałeś ciąg znaków zawierający angielski wyraz i chcesz
 
 1.  Mógłbyś utworzyć 26 zmiennych, po jednej dla każdej litery alfabetu. Następnie mógłbyś przejść po napisie i dla każdego znaku zwiększyć odpowiedni licznik, prawdopodobnie używając połączonych wyrażeń warunkowych.
 
-2.  Mógłbyś utworzyć listę z 26 elementami. Następnie mógłbyś przekonwertować każdy znak na liczbę (używając wbudowanej funkcji `ord`), użyć liczby jako indeksu do listy i zwiększyć odpowiedni licznik.
+2.  Mógłbyś utworzyć listę z 26 elementami. Następnie mógłbyś przekonwertować każdy znak na liczbę (używając wbudowanej funkcji `ord()`), użyć liczby jako indeksu do listy i zwiększyć odpowiedni licznik.
 
 3.  Mógłbyś utworzyć słownik, w którym znaki byłyby kluczami, a liczniki odpowiednimi wartościami. Za pierwszym razem, gdy natrafisz na znak, dodasz element do słownika. Następnie zwiększałbyś wartość istniejącej wartości.
 
@@ -177,7 +177,7 @@ Histogram wskazuje, że litery "a" i "b" pojawiają się raz; "o" pojawia się d
 \index{get, metoda}
 \index{metoda!get}
 
-Słowniki posiadają metodę `get`, która przyjmuje klucz i domyślną wartość. Jeśli klucz pojawia się w słowniku, `get` zwraca odpowiednią wartość; w przeciwnym razie zwraca wartość domyślną. Na przykład:
+Słowniki posiadają metodę `get()`, która przyjmuje klucz i domyślną wartość. Jeśli klucz pojawia się w słowniku, `get()` zwraca odpowiednią wartość; w przeciwnym razie zwraca wartość domyślną. Na przykład:
 
 ~~~~ {.python .trinket}
 >>> counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
@@ -187,7 +187,7 @@ Słowniki posiadają metodę `get`, która przyjmuje klucz i domyślną wartoś�
 0
 ~~~~
 
-Możemy użyć `get` do bardziej zwięzłego napisania naszej pętli z histogramem. Ponieważ metoda `get` automatycznie zajmuje się przypadkiem, gdy danego klucza nie ma w słowniku, możemy zredukować cztery linie do jednej i wyeliminować instrukcję `if`.
+Możemy użyć `get()` do bardziej zwięzłego napisania naszej pętli z histogramem. Ponieważ metoda `get()` automatycznie zajmuje się przypadkiem, gdy danego klucza nie ma w słowniku, możemy zredukować cztery linie do jednej i wyeliminować instrukcję `if`.
 
 ~~~~ {.python}
 word = 'brontosaurus'
@@ -197,7 +197,7 @@ for c in word:
 print(d)
 ~~~~
 
-Użycie metody `get` do uproszczenia tej pętli zliczania kończy się bardzo często używanym "idiomem" w Pythonie i będziemy go używać wiele razy w pozostałej części książki. Powinieneś poświęcić chwilę na porównanie pętli przy użyciu instrukcji `if` i operatora `in` z pętlą przy użyciu metody `get`. Robią dokładnie to samo, ale drugi sposób jest bardziej zwięzły.
+Użycie metody `get()` do uproszczenia tej pętli zliczania kończy się bardzo często używanym "idiomem" w Pythonie i będziemy go używać wiele razy w pozostałej części książki. Powinieneś poświęcić chwilę na porównanie pętli przy użyciu instrukcji `if` i operatora `in` z pętlą przy użyciu metody `get()`. Robią dokładnie to samo, ale drugi sposób jest bardziej zwięzły.
 
 \index{idiom}
 
@@ -296,7 +296,7 @@ Widzimy teraz tylko te elementy, które mają wartość powyżej 10.
 \index{keys, metoda}
 \index{metoda!keys}
 
-Jeżeli chcesz wyświetlić klucze w porządku alfabetycznym, to – korzystając z metody `keys` dostępnej w obiektach słownikowych – sporządzasz listę kluczy występujących w słowniku, a następnie sortujesz ją i przechodzisz w pętli po tej posortowanej liście, przeglądając każdy klucz i wyświetlając pary klucz-wartość w posortowanej kolejności, tak jak pokazano poniżej:
+Jeżeli chcesz wyświetlić klucze w porządku alfabetycznym, to – korzystając z metody `keys()` dostępnej w obiektach słownikowych – sporządzasz listę kluczy występujących w słowniku, a następnie sortujesz ją i przechodzisz w pętli po tej posortowanej liście, przeglądając każdy klucz i wyświetlając pary klucz-wartość w posortowanej kolejności, tak jak pokazano poniżej:
 
 ~~~~ {.python}
 counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
@@ -316,7 +316,7 @@ chuck 1
 jan 100
 ~~~~
 
-Najpierw widzisz listę kluczy w nieposortowanej kolejności, które otrzymujemy z metody `keys`. Następnie widzimy uporządkowane pary klucz-wartość, wyświetlane w pętli `for`.
+Najpierw widzisz listę kluczy w nieposortowanej kolejności, które otrzymujemy z metody `keys()`. Następnie widzimy uporządkowane pary klucz-wartość, wyświetlane w pętli `for`.
 
 Zaawansowane parsowanie tekstu
 -------------------------------
@@ -332,11 +332,11 @@ Arise, fair sun, and kill the envious moon,
 Who is already sick and pale with grief,
 ~~~~
 
-Ponieważ funkcja `split` szuka spacji i traktuje słowa jako tokeny oddzielone spacjami, traktowalibyśmy słowa "soft!" i "soft" jako *różne* słówa i dla każdego z nich tworzylibyśmy osobny wpis w słowniku.
+Ponieważ funkcja `split()` szuka spacji i traktuje słowa jako tokeny oddzielone spacjami, traktowalibyśmy słowa "soft!" i "soft" jako *różne* słówa i dla każdego z nich tworzylibyśmy osobny wpis w słowniku.
 
 Również ze względu na to, że plik ma tekst pisany dużymi literami, traktowalibyśmy "who" i "Who" jako różne słowa o różnej liczności.
 
-Oba te problemy możemy rozwiązać za pomocą metod związanych z obiektami ciągów znaków: `lower`, `punctuation` i `translate`. Metoda `translate` jest najbardziej wyrafinowaną z tych metod. Oto dokumentacja dla tej metody:
+Oba te problemy możemy rozwiązać za pomocą metod związanych z obiektami ciągów znaków: `lower()`, `punctuation()` i `translate()`. Metoda `translate()` jest najbardziej wyrafinowaną z tych metod. Oto dokumentacja dla tej metody:
 
 `line.translate(str.maketrans(fromstr, tostr, deletestr))`
 
@@ -350,7 +350,7 @@ Nie będziemy określać parametru `tostr`, ale użyjemy parametru `deletestr` d
 '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 ~~~~
 
-Parametry używane przez `translate` były inne w Pythonie 2.0.
+Parametry używane przez `translate()` były inne w Pythonie 2.0.
 
 Dokonujemy następujących zmian w naszym programie:
 

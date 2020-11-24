@@ -129,7 +129,7 @@ for cheese in cheeses:
     print(cheese)
 ~~~~
 
-Jest to dobre rozwiązanie, jeśli musisz tylko odczytać elementy z listy. Ale jeśli chcesz coś w niej dopisać lub zaktualizować, to potrzebujesz indeksów. W takiej sytuacji najczęściej wykorzystuje się połączenie funkcji `range` i `len`:
+Jest to dobre rozwiązanie, jeśli musisz tylko odczytać elementy z listy. Ale jeśli chcesz coś w niej dopisać lub zaktualizować, to potrzebujesz indeksów. W takiej sytuacji najczęściej wykorzystuje się połączenie funkcji `range()` i `len()`:
 
 \index{przechodzenie w pętli!po indeksach}
 \index{indeks!przechodzenie w pętli}
@@ -139,7 +139,7 @@ for i in range(len(numbers)):
     numbers[i] = numbers[i] * 2
 ~~~~
 
-Powyższa pętla przechodzi przez listę i aktualizuje każdy element. `len` zwraca liczbę elementów na liście. `range` zwraca listę indeksów od 0 do $n-1$, gdzie $n$ jest długością listy. Przy każdej iteracji pętli `i` kolejno uzyskuje indeks elementu. Instrukcja przypisania w ciele pętli używa `i` do odczytania starej wartości elementu i przypisania nowej wartości.
+Powyższa pętla przechodzi przez listę i aktualizuje każdy element. `len()` zwraca liczbę elementów na liście. `range()` zwraca listę indeksów od 0 do $n-1$, gdzie $n$ jest długością listy. Przy każdej iteracji pętli `i` kolejno uzyskuje indeks elementu. Instrukcja przypisania w ciele pętli używa `i` do odczytania starej wartości elementu i przypisania nowej wartości.
 
 \index{element, aktualizacja}
 \index{aktualizacja!element}
@@ -248,7 +248,7 @@ Metody obiektów będących listami
 \index{lista!metoda}
 \index{metoda listy}
 
-Python udostępnia metody, które działają na listach. Na przykład `append` dodaje nowy element na końcu listy:
+Python udostępnia metody, które działają na listach. Na przykład metoda `append()` dodaje nowy element na końcu listy:
 
 \index{append, metoda}
 \index{metoda!append}
@@ -260,7 +260,7 @@ Python udostępnia metody, które działają na listach. Na przykład `append` d
 ['a', 'b', 'c', 'd']
 ~~~~
 
-`extend` działa podobnie, z tym że przyjmuje jako argument listę elementów do dopisania:
+Metoda `extend()` działa podobnie, z tym że przyjmuje jako argument listę elementów do dopisania:
 
 \index{extend, metoda}
 \index{metoda!extend}
@@ -275,7 +275,7 @@ Python udostępnia metody, które działają na listach. Na przykład `append` d
 
 W powyższym przykładzie lista `t2` pozostaje niezmieniona.
 
-`sort` układa elementy listy od najmniejszego do największego:
+Metoda `sort()` układa elementy listy od najmniejszego do największego:
 
 \index{sort, metoda}
 \index{metoda!sort}
@@ -301,7 +301,7 @@ Usuwanie elementów
 \index{element, usuwanie}
 \index{usuwanie elementu}
 
-Istnieje kilka sposobów na usunięcie elementów z listy. Jeśli znasz indeks elementu, który chcesz usunąć, możesz użyć metody `pop`:
+Istnieje kilka sposobów na usunięcie elementów z listy. Jeśli znasz indeks elementu, który chcesz usunąć, możesz użyć metody `pop()`:
 
 \index{pop, metoda}
 \index{metoda!pop}
@@ -315,7 +315,7 @@ Istnieje kilka sposobów na usunięcie elementów z listy. Jeśli znasz indeks e
 b
 ~~~~
 
-`pop` modyfikuje listę i zwraca element, który został usunięty. Jeśli nie podasz indeksu, to usunie on i zwróci ostatni element listy.
+Metoda `pop()` modyfikuje listę i zwraca element, który został usunięty. Jeśli nie podasz indeksu, to usunie on i zwróci ostatni element listy.
 
 Jeśli nie potrzebujesz usuniętej wartości, możesz użyć operatora `del`:
 
@@ -329,7 +329,7 @@ Jeśli nie potrzebujesz usuniętej wartości, możesz użyć operatora `del`:
 ['a', 'c']
 ~~~~
 
-Jeśli znasz element, który chcesz usunąć (ale nie jego indeks), możesz użyć `remove`:
+Jeśli znasz element, który chcesz usunąć (ale nie jego indeks), możesz użyć metody `remove()`:
 
 \index{remove, metoda}
 \index{metoda!remove}
@@ -341,7 +341,7 @@ Jeśli znasz element, który chcesz usunąć (ale nie jego indeks), możesz uży
 ['a', 'c']
 ~~~~
 
-Wartością zwracaną przez `remove` jest `None`.
+Wartością zwracaną przez `remove()` jest `None`.
 
 \index{None, wartość specjalna}
 \index{wartość specjalna!None}
@@ -401,7 +401,7 @@ Listy i ciągi znaków
 \index{łańcuch znaków}
 \index{sekwencja}
 
-Ciąg znaków jest sekwencją znaków, a lista jest sekwencją wartości, ale lista znaków i ciąg znaków to nie to samo. Aby przekonwertować ciąg znaków na listę znaków, możesz użyć funkcji `list`:
+Ciąg znaków jest sekwencją znaków, a lista jest sekwencją wartości, ale lista znaków i ciąg znaków to nie to samo. Aby przekonwertować ciąg znaków na listę znaków, możesz użyć funkcji `list()`:
 
 \index{list, funkcja}
 \index{funkcja!list}
@@ -413,9 +413,9 @@ Ciąg znaków jest sekwencją znaków, a lista jest sekwencją wartości, ale li
 ['s', 'p', 'a', 'm']
 ~~~~
 
-Ponieważ `list` jest nazwą wbudowanej funkcji, powinieneś unikać używania jej jako nazwy zmiennej. Unikam również litery "l", ponieważ w wyglądzie jest zbyt podobna do liczby "1". Właśnie dlatego używam "t".
+Ponieważ `list()` jest nazwą wbudowanej funkcji, powinieneś unikać używania jej jako nazwy zmiennej. Unikam również litery "l", ponieważ w wyglądzie jest zbyt podobna do liczby "1". Właśnie dlatego używam "t".
 
-Funkcja `list` rozbija ciąg znaków na pojedyncze litery. Jeśli chcesz rozbić ciąg znaków na słowa, możesz użyć metody `split`:
+Funkcja `list()` rozbija ciąg znaków na pojedyncze litery. Jeśli chcesz rozbić ciąg znaków na słowa, możesz użyć metody `split()`:
 
 \index{split, metoda}
 \index{metoda!split}
@@ -429,9 +429,9 @@ Funkcja `list` rozbija ciąg znaków na pojedyncze litery. Jeśli chcesz rozbić
 tęsknoty
 ~~~~
 
-Gdy już użyjesz `split`, aby rozbić ciąg znaków na listę słów, możesz użyć operatora indeksu (nawias kwadratowy), żeby przyjrzeć się konkretnemu słowu na liście.
+Gdy już użyjesz `split()`, aby rozbić ciąg znaków na listę słów, możesz użyć operatora indeksu (nawias kwadratowy), żeby przyjrzeć się konkretnemu słowu na liście.
 
-Możesz wywołać `split` z opcjonalnym argumentem zwanym *separatorem*, który określa, jakie znaki mają być użyte do określania granic słów. Poniższy przykład używa myślnika jako separatora:
+Możesz wywołać `split()` z opcjonalnym argumentem zwanym *separatorem*, który określa, jakie znaki mają być użyte do określania granic słów. Poniższy przykład używa myślnika jako separatora:
 
 \index{opcjonalny argument}
 \index{argument!opcjonalny}
@@ -444,7 +444,7 @@ Możesz wywołać `split` z opcjonalnym argumentem zwanym *separatorem*, który 
 ['spam', 'spam', 'spam']
 ~~~~
 
-Metoda `join` jest odwrotnością `split`. Przyjmuje ona listę ciągów znaków i konkatenuje jej elementy. `join` jest metodą obiektów będących ciągami znaków, więc musisz wywołać ją na separatorze i przekazać listę jako argument:
+Metoda `join()` jest odwrotnością `split()`. Przyjmuje ona listę ciągów znaków i konkatenuje jej elementy. `join()` jest metodą obiektów będących ciągami znaków, więc musisz wywołać ją na separatorze i przekazać listę jako argument:
 
 \index{join, metoda}
 \index{metoda!join}
@@ -457,7 +457,7 @@ Metoda `join` jest odwrotnością `split`. Przyjmuje ona listę ciągów znaków
 'usycham z tęsknoty za fiordami'
 ~~~~
 
-W tym przypadku separator jest znakiem spacji, więc `join` umieszcza spację między słowami. Aby połączyć ciągi znaków bez spacji, możesz użyć pustego ciągu znaków, "", jako separatora.
+W tym przypadku separator jest znakiem spacji, więc `join()` umieszcza spację między słowami. Aby połączyć ciągi znaków bez spacji, możesz użyć pustego ciągu znaków (`''` lub `""`) jako separatora.
 
 \index{pusty ciąg znaków}
 \index{ciąg znaków!pusty}
@@ -471,7 +471,7 @@ Zwykle gdy czytamy z pliku, chcemy zrobić coś innego, niż tylko wyświetlić 
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 ~~~~
 
-Metoda `split` jest bardzo skuteczna, gdy ma do czynienia z tego rodzaju problemem. Możemy napisać mały program, który szuka linii zaczynających się od "From ", rozdzielić te linie przy pomocy `split`, a następnie wyświetlić trzecie słowo występujące w danej linii:
+Metoda `split()` jest bardzo skuteczna, gdy ma do czynienia z tego rodzaju problemem. Możemy napisać mały program, który szuka linii zaczynających się od "From ", rozdzielić te linie przy pomocy `split()`, a następnie wyświetlić trzecie słowo występujące w danej linii:
 
 \VerbatimInput{../code3/search5.py}
 \begin{trinketfiles}
@@ -595,7 +595,7 @@ Argumenty będące listami
 \index{referencja}
 \index{parametr}
 
-Kiedy przekazujesz listę do funkcji, funkcja ta otrzymuje referencję do listy. Jeżeli funkcja modyfikuje parametr będący listą, to z poziomu wywoływania funkcji zauważymy tę zmianę. Na przykład `delete_head` usuwa pierwszy element z listy:
+Kiedy przekazujesz listę do funkcji, funkcja ta otrzymuje referencję do listy. Jeżeli funkcja modyfikuje parametr będący listą, to z poziomu wywoływania funkcji zauważymy tę zmianę. Na przykład `delete_head()` usuwa pierwszy element z listy:
 
 ~~~~ {.python}
 def delete_head(t):
@@ -613,7 +613,7 @@ Oto jak możemy jej użyć:
 
 Parametr `t` i zmienna `letters` są aliasami dla tego samego obiektu.
 
-Ważne jest, by odróżniać operacje, które modyfikują listy, od operacji, które tworzą nowe listy. Na przykład, metoda `append` modyfikuje listę, ale operator `+` tworzy nową listę:
+Ważne jest, by odróżniać operacje, które modyfikują listy, od operacji, które tworzą nowe listy. Na przykład, metoda `append()` modyfikuje listę, ale operator `+` tworzy nową listę:
 
 \index{append, metoda}
 \index{metoda!append}
@@ -648,7 +648,7 @@ Operator wycinania tworzy nową listę, a przypisanie sprawia, że zmienna `t` o
 \index{wycinanie, operator}
 \index{operator!wycinanie}
 
-Zamiast tego można napisać funkcję, która tworzy i zwraca nową listę. Na przykład `tail` zwraca wszystko oprócz pierwszego elementu listy:
+Zamiast tego można napisać funkcję, która tworzy i zwraca nową listę. Na przykład `tail()` zwraca wszystko oprócz pierwszego elementu listy:
 
 ~~~~ {.python}
 def tail(t):
@@ -666,7 +666,7 @@ Funkcja ta pozostawia pierwotną listę bez zmian. Poniżej pokazano, jak można
 
 #### Ćwiczenie 1
 
-Napisz funkcję o nazwie `chop`, która przyjmuje listę i modyfikuje ją, usuwając pierwszy i ostatni element, a następnie zwraca `None`. Potem napisz funkcję o nazwie `middle`, która przyjmuje listę i zwraca nową, która zawiera wszystkie oprócz pierwszego i ostatniego elementu.
+Napisz funkcję o nazwie `chop()`, która przyjmuje listę i modyfikuje ją, usuwając pierwszy i ostatni element, a następnie zwraca `None`. Potem napisz funkcję o nazwie `middle()`, która przyjmuje listę i zwraca nową, która zawiera wszystkie oprócz pierwszego i ostatniego elementu.
 
 Debugowanie
 -----------
@@ -695,7 +695,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     \index{sort, metoda}
     \index{metoda!sort}
 
-    Metoda `sort` zwraca `None`, więc następna operacja, którą wykonasz 
+    Metoda `sort()` zwraca `None`, więc następna operacja, którą wykonasz 
     z `t`, może się nie udać.
 
     Przed użyciem metod i operatorów dla list powinieneś dokładnie
@@ -716,9 +716,9 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
     Częścią problemu z listami jest to, że jest zbyt wiele sposobów
     na wykonanie jakiejś rzeczy. Na przykład, aby usunąć element z
-    listy, możesz użyć `pop`, `remove`, `del`, a nawet użyć przypisania poprzez wycinanie.
+    listy, możesz użyć `pop()`, `remove()`, `del`, a nawet użyć przypisania poprzez wycinanie.
 
-    Aby dodać element, możesz użyć metody `append` lub operatora `+`.
+    Aby dodać element, możesz użyć metody `append()` lub operatora `+`.
     Ale nie zapomnij, że poniższe sposoby są prawidłowe:
 
     ~~~~ {.python}
@@ -745,7 +745,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     \index{aliasowanie!kopiowanie by zapobiec}
     \index{kopiowanie!by zapobiec aliasowaniu}
 
-    Jeśli chcesz użyć metody takiej jak `sort`, która modyfikuje
+    Jeśli chcesz użyć metody takiej jak `sort()`, która modyfikuje
     argument, ale musisz także zachować oryginalną listę, to możesz
     uprzednio zrobić jej kopię.
 
@@ -755,10 +755,10 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     ~~~~
 
     W powyższym przykładzie możesz również użyć wbudowanej funkcji
-    `sorted`, która zwraca nową, posortowaną listę, a oryginał pozostawia nienaruszony. Jednak w tym przypadku powinieneś unikać
+    `sorted()`, która zwraca nową, posortowaną listę, a oryginał pozostawia nienaruszony. Jednak w tym przypadku powinieneś unikać
     używania `sorted` jako nazwy dla zmiennej!
 
-4.  Listy, `split` i pliki
+4.  Listy, `split()` i pliki
 
     Kiedy odczytujemy i analizujemy pliki, pojawia się wiele okazji, by trafić 
     na takie dane wejściowe, które mogą wysypać nasz program, więc 
@@ -774,7 +774,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     ~~~~
 
     Ponieważ rozbijamy linijkę na słowa, możemy zrezygnować z użycia
-    `startswith` i po prostu spojrzeć na pierwsze słowo linii, aby
+    `startswith()` i po prostu spojrzeć na pierwsze słowo linii, aby
     określić, czy w ogóle jesteśmy zainteresowani tym wierszem. Możemy 
     użyć `continue` do pominięcia linii, które zaczynają się od słowa "From", 
     tak jak w przykładzie poniżej:
@@ -787,10 +787,9 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
         print(words[2])
     ~~~~
 
-    Wygląda to znacznie prościej i nawet nie musimy używać `rstrip` do usunięcia znaku końca linii. Ale czy to jest faktycznie lepsze rozwiązanie?
+    Wygląda to znacznie prościej i nawet nie musimy używać `rstrip()` do usunięcia znaku końca linii. Ale czy to jest faktycznie lepsze rozwiązanie? Spójrzmy na wynik uruchomienia skryptu
 
     ~~~~
-    python search8.py
     Sat
     Traceback (most recent call last):
       File "search8.py", line 5, in <module>
@@ -806,7 +805,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
     Mógłbyś się na ten kod długo gapić i zachodzić w głowę lub poprosić 
     kogoś o pomoc, ale szybsze i mądrzejsze podejście to dodanie 
-    instrukcji `print`. Najlepszym miejscem na dodanie wyświetlania 
+    funkcji `print()`. Najlepszym miejscem na dodanie wyświetlania 
     danych jest tuż przed wierszem, w którym program się wysypał i 
     pokazanie tych danych, które wydają się być przyczyną 
     niepowodzenia.
@@ -842,7 +841,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     ~~~~
 
     Dla każdego wiersza wypisujemy listę słów, które otrzymujemy z 
-    metody `split` podczas dzielenia linii na słowa. Gdy program się 
+    metody `split()` podczas dzielenia linii na słowa. Gdy program się 
     wysypie, lista słów jest pusta `[]`. Jeśli otworzymy plik w 
     edytorze tekstu i spojrzymy na niego, to zobaczymy następujący 
     widok:
@@ -965,7 +964,7 @@ separator
 
 #### Ćwiczenie 4
 
-Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Każdą z nich podziel na listę słów za pomocą metody `split`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli go nie ma, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
+Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik *romeo.txt* i czyta go linia po linii. Każdą z nich podziel na listę słów za pomocą metody `split()`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli go nie ma, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
 
 ~~~~
 Podaj nazwę pliku: romeo.txt
@@ -978,7 +977,7 @@ Podaj nazwę pliku: romeo.txt
 
 #### Ćwiczenie 5
 
-Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z metody `split`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".
+Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z metody `split()`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008

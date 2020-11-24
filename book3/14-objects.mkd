@@ -99,7 +99,7 @@ Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której kor
 
 \VerbatimInput{../code3/urllinks.py}
 
-Wczytujemy adres URL do zmiennej przechowującej ciąg znaków, a następnie przekazujemy ją do `urllib`, tak aby pobrać dane z sieci. Biblioteka `urllib` wykorzystuje w rzeczywistości bibliotekę `socket` do nawiązania połączenia z siecią w celu pobrania danych. Bierzemy ciąg znaków, który zwraca `urllib`, i przekazujemy go do BeautifulSoup do dalszej analizy. BeautifulSoup korzysta z obiektu `html.parser`^[<https://docs.python.org/3/library/html.parser.html>] i w wyniku też zwraca nam obiekt. Na zwróconym obiekcie wywołujemy metodę `tags()`, która zwraca słownik obiektów będących znacznikami. Przechodzimy w pętli po znacznikach i dla każdego znacznika wywołujemy metodę `get()`, tak aby wypisać jego atrybut `href`.
+Wczytujemy adres URL do zmiennej przechowującej ciąg znaków, a następnie przekazujemy ją do `urllib`, tak aby pobrać dane z sieci. Moduł `urllib` wykorzystuje w rzeczywistości moduł `socket` do nawiązania połączenia z siecią w celu pobrania danych. Bierzemy ciąg znaków, który zwraca `urllib`, i przekazujemy go do BeautifulSoup do dalszej analizy. BeautifulSoup korzysta z obiektu `html.parser`^[<https://docs.python.org/3/library/html.parser.html>] i w wyniku też zwraca nam obiekt. Na zwróconym obiekcie wywołujemy metodę `tags()`, która zwraca słownik obiektów będących znacznikami. Przechodzimy w pętli po znacznikach i dla każdego znacznika wywołujemy metodę `get()`, tak aby wypisać jego atrybut `href`.
 
 Możemy narysować dla tego programu diagram z oznaczeniem, jak te obiekty ze sobą współpracują.
 
@@ -133,7 +133,7 @@ Zawsze gdy tworzymy obiekt, używamy słowa kluczowego `class` do zdefiniowania 
 
 \VerbatimInput{../code3/party2.py}
 
-Każda metoda wygląda jak funkcja. Zaczyna się od słowa kluczowego `def` i składa się z wciętego bloku kodu. Nasz obiekt ma jeden atrybut (`x`) i jedną metodę (`party`). Metody mają specjalny pierwszy parametr, który nazywamy umownie `self`.
+Każda metoda wygląda jak funkcja. Zaczyna się od słowa kluczowego `def` i składa się z wciętego bloku kodu. Nasz obiekt ma jeden atrybut (`x`) i jedną metodę (`party()`). Metody mają specjalny pierwszy parametr, który nazywamy umownie `self`.
 
 Tak jak słowo kluczowe `def` nie powoduje wykonania kodu funkcji, tak samo słowo kluczowe `class` nie tworzy obiektu. Zamiast tego definiuje ono szablon mówiący o tym, jakie dane i kod będą zawarte w każdym obiekcie typu `PartyAnimal`. Klasa jest jak foremka do wykrawania ciastek, a obiekty tworzone przy jej użyciu to ciasteczka^[Prawa autorskie do obrazu ciasteczka: CC-BY
 <https://www.flickr.com/photos/dinnerseries/23570475099>]. Nie umieszczasz lukru na foremce do wykrawania ciastek – lukier umieszczasz na ciasteczkach. A na każdym ciasteczku możesz umieścić inny lukier!
@@ -161,13 +161,13 @@ Tutaj instruujemy Pythona, by skonstruował obiekt przy użyciu szablonu `dict` 
 
 Klasa `PartyAnimal` jest używana do konstruowania obiektu, natomiast zmienna `an` jest używana do wskazywania tego obiektu. Używamy `an`, żeby mieć dostęp do kodu i danych dla tej konkretnej instancji klasy `PartyAnimal`.
 
-Każdy obiekt/instancja `PartyAnimal` zawiera w sobie zmienną `x` oraz metodę/funkcję o nazwie `party`. W tej linii wywołujemy metodę `party`:
+Każdy obiekt/instancja `PartyAnimal` zawiera w sobie zmienną `x` oraz metodę/funkcję o nazwie `party()`. W tej linii wywołujemy metodę `party()`:
 
 ~~~~ {.python}
 an.party()
 ~~~~
 
-Kiedy metoda `party` jest wywoływana, pierwszy parametr (który nazywamy umownie `self`) wskazuje konkretną instancję obiektu `PartyAnimal`, z której wywoływana jest metoda `party`. W obrębie metody `party` widzimy linię:
+Kiedy metoda `party()` jest wywoływana, pierwszy parametr (który nazywamy umownie `self`) wskazuje konkretną instancję obiektu `PartyAnimal`, z której wywoływana jest metoda `party()`. W obrębie metody `party()` widzimy linię:
 
 ~~~~ {.python}
 self.x = self.x + 1
@@ -175,7 +175,7 @@ self.x = self.x + 1
 
 Składnia ta, używająca operatora *kropki*, mówi '`x` wewnątrz `self`'. Przy każdym wywołaniu `party()` wewnętrzna wartość `x` jest zwiększana o 1 (a później wartość ta jest wypisywana na ekran przy pomocy `print()`).
 
-Poniższa linia przedstawia inny sposób wywołania metody `party` wewnątrz obiektu `an`:
+Poniższa linia przedstawia inny sposób wywołania metody `party()` wewnątrz obiektu `an`:
 
 ~~~~ {.python}
 PartyAnimal.party(an)
@@ -192,7 +192,7 @@ Jak na razie 3
 Jak na razie 4
 ~~~~
 
-Konstruujemy obiekt i czterokrotnie wywołujemy metodę `party` zarówno zwiększając, jak i wypisując wartość `x` będącą wewnątrz obiektu `an`.
+Konstruujemy obiekt i czterokrotnie wywołujemy metodę `party()` zarówno zwiększając, jak i wypisując wartość `x` będącą wewnątrz obiektu `an`.
 
 Klasy i typy
 ------------
@@ -202,7 +202,7 @@ Klasy i typy
 \index{type, funkcja}
 \index{funkcja!type}
 
-Jak już widzieliśmy, w Pythonie wszystkie zmienne mają określony typ. Możemy użyć wbudowanej funkcji `dir` do zbadania możliwości danej zmiennej. Możemy również użyć `type` i `dir` z tworzonymi klasami.
+Jak już widzieliśmy, w Pythonie wszystkie zmienne mają określony typ. Możemy użyć wbudowanej funkcji `dir()` do zbadania możliwości danej zmiennej. Możemy również użyć `type()` i `dir()` z tworzonymi klasami.
 
 \VerbatimInput{../code3/party3.py}
 
@@ -217,7 +217,7 @@ Type <class 'int'>
 Type <class 'method'>
 ~~~~
 
-Możesz zauważyć, że przy użyciu słowa kluczowego `class` stworzyliśmy nowy typ. Używając `dir` możesz zobaczyć, że w obiekcie jest dostępny zarówno atrybut całkowitoliczbowy `x`, jak i metoda `party`.
+Możesz zauważyć, że przy użyciu słowa kluczowego `class` stworzyliśmy nowy typ. Używając `dir()` możesz zobaczyć, że w obiekcie jest dostępny zarówno atrybut całkowitoliczbowy `x`, jak i metoda `party()`.
 
 Cykl życia obiektu
 ------------------
@@ -243,13 +243,13 @@ Jestem niszczony 2
 an zawiera 42
 ~~~~
 
-Gdy Python tworzy nasz obiekt, to wywołuje metodę `__init__`, tak aby dać nam szansę na ustawienie pewnych domyślnych lub początkowych wartości dla tego obiektu. Kiedy Python natrafi na linię:
+Gdy Python tworzy nasz obiekt, to wywołuje metodę `__init__()`, tak aby dać nam szansę na ustawienie pewnych domyślnych lub początkowych wartości dla tego obiektu. Kiedy Python natrafi na linię:
 
 ~~~~
 an = 42
 ~~~~
 
-to w rzeczywistości "odrzuca nasz obiekt", żeby móc ponownie użyć zmiennej `an` do przechowywania wartości `42`. Właśnie w tym momencie, w którym nasz obiekt `an` jest "niszczony", wywoływany jest nasz kod destruktora (`__del__`). Nie możemy powstrzymać zniszczenia naszej zmiennej, ale możemy dokonać niezbędnego czyszczenia, tuż zanim nasz obiekt zostanie zniszczony.
+to w rzeczywistości "odrzuca nasz obiekt", żeby móc ponownie użyć zmiennej `an` do przechowywania wartości `42`. Właśnie w tym momencie, w którym nasz obiekt `an` jest "niszczony", wywoływany jest nasz kod destruktora (`__del__()`). Nie możemy powstrzymać zniszczenia naszej zmiennej, ale możemy dokonać niezbędnego czyszczenia, tuż zanim nasz obiekt zostanie zniszczony.
 
 Często podczas prac nad kodem obiektu zapada decyzja, by dodać do niego konstruktor, tak aby ustawić jego początkowe wartości. Natomiast stosunkowo rzadko się zdarzy, byśmy potrzebowali destruktora dla danego obiektu.
 
@@ -301,7 +301,7 @@ Następnie w nowym pliku możemy "zaimportować" klasę `PartyAnimal` i rozszerz
 
 \VerbatimInput{../code3/party6.py}
 
-Kiedy definiujemy klasę `CricketFan`, wskazujemy, że rozszerzamy klasę `PartyAnimal`. Oznacza to, że wszystkie zmienne (`x`) i metody (`party`) z klasy `PartyAnimal` są *dziedziczone* przez klasę `CricketFan`. Na przykład w ramach metody `six` klasy `CricketFan` wywołujemy metodę `party` z klasy `PartyAnimal`.
+Kiedy definiujemy klasę `CricketFan`, wskazujemy, że rozszerzamy klasę `PartyAnimal`. Oznacza to, że wszystkie zmienne (`x`) i metody (`party()`) z klasy `PartyAnimal` są *dziedziczone* przez klasę `CricketFan`. Na przykład w ramach metody `six()` klasy `CricketFan` wywołujemy metodę `party()` z klasy `PartyAnimal`.
 
 Podczas uruchomienia programu tworzymy zmienne `s` i `j` jako niezależne instancje `PartyAnimal` i `CricketFan`. Obiekt `j` ma dodatkowe możliwości w porównaniu do obiektu `s`.
 
@@ -316,7 +316,7 @@ Jim - punkty - 6
 'name', 'party', 'points', 'six', 'x']
 ~~~~
 
-W wyniku funkcji `dir` na obiekcie `j` (instancja klasy `CricketFan`) widzimy, że obiekt ten ma atrybuty i metody klasy nadrzędnej, a ponadto atrybuty i metody, które zostały dodane poprzez rozszerzoną klasę `CricketFan`.
+W wyniku funkcji `dir()` na obiekcie `j` (instancja klasy `CricketFan`) widzimy, że obiekt ten ma atrybuty i metody klasy nadrzędnej, a ponadto atrybuty i metody, które zostały dodane poprzez rozszerzoną klasę `CricketFan`.
 
 Podsumowanie
 ------------
@@ -325,13 +325,13 @@ Powyższy rozdział jest bardzo szybkim wprowadzeniem do programowania obiektowe
 
 \VerbatimInput{../code3/party1.py}
 
-Pierwsza linia tworzy *obiekt* typu `list`. Gdy Python tworzy obiekt typu `list`, to wywołuje metodę *konstruktora* (o nazwie `__init__`), tak by ustawić wewnętrzne atrybuty, które będą używane do przechowywania danych listy. Nie przekazaliśmy żadnych parametrów do *konstruktora*. Gdy konstruktor zakończy działanie, używamy zmiennej `stuff`, aby móc wskazywać na zwróconą instancję klasy `list`.
+Pierwsza linia tworzy *obiekt* typu `list`. Gdy Python tworzy obiekt typu `list`, to wywołuje metodę *konstruktora* (o nazwie `__init__()`), tak by ustawić wewnętrzne atrybuty, które będą używane do przechowywania danych listy. Nie przekazaliśmy żadnych parametrów do *konstruktora*. Gdy konstruktor zakończy działanie, używamy zmiennej `stuff`, aby móc wskazywać na zwróconą instancję klasy `list`.
 
-Druga i trzecia linia wywołują metodę `append` z jednym parametrem, żeby dodać nową pozycję na końcu listy, aktualizując atrybuty w ramach obiektu `stuff`. Następnie w czwartej linii wywołujemy metodę `sort` bez parametrów, by posortować dane wewnątrz obiektu `stuff`.
+Druga i trzecia linia wywołują metodę `append()` z jednym parametrem, żeby dodać nową pozycję na końcu listy, aktualizując atrybuty w ramach obiektu `stuff`. Następnie w czwartej linii wywołujemy metodę `sort()` bez parametrów, by posortować dane wewnątrz obiektu `stuff`.
 
-W kolejnym kroku wypisujemy pierwszą pozycję z listy za pomocą nawiasów kwadratowych, które są skrótem do wywołania metody `__getitem__` w ramach `stuff`. Jest to równoważne z wywołaniem metody `__getitem__` w ramach *klasy* `list` oraz przekazaniem obiektu `stuff` jako pierwszego, a szukanej pozycji jako drugiego parametru.
+W kolejnym kroku wypisujemy pierwszą pozycję z listy za pomocą nawiasów kwadratowych, które są skrótem do wywołania metody `__getitem__()` w ramach `stuff`. Jest to równoważne z wywołaniem metody `__getitem__()` w ramach *klasy* `list` oraz przekazaniem obiektu `stuff` jako pierwszego, a szukanej pozycji jako drugiego parametru.
 
-Na końcu programu obiekt `stuff` jest porzucany, ale nie przed wywołaniem *destruktora* (o nazwie `__del__`), żeby obiekt, o ile jest to konieczne, mógł pod koniec swego istnienia wyczyścić wszystkie niepotrzebne już elementy.
+Na końcu programu obiekt `stuff` jest porzucany, ale nie przed wywołaniem *destruktora* (o nazwie `__del__()`), żeby obiekt, o ile jest to konieczne, mógł pod koniec swego istnienia wyczyścić wszystkie niepotrzebne już elementy.
 
 Omówiliśmy tutaj podstawy programowania obiektowego. Jest wiele innych dodatkowych tematów, np. jak najlepiej używać podejścia obiektowego podczas tworzenia dużych aplikacji i bibliotek, jednak wykraczają one poza temat tego rozdziału.^[Jeśli jesteś ciekaw, gdzie jest zdefiniowana klasa `list`, to zajrzyj pod adres (miejmy nadzieję, że adres URL się nie zmieni) <https://github.com/python/cpython/blob/master/Objects/listobject.c> – klasa listy jest napisana w języku "C". Jeśli przejrzysz wspomniany kod źródłowy i okaże się on dla Ciebie interesujący, to być może powinieneś zrobić dodatkowo kilka kursów z dziedziny informatyki.].
 
@@ -343,7 +343,7 @@ atrybut
 \index{atrybut}
 
 destruktor
-:   Opcjonalna, specjalnie nazwana metoda (`__del__`), która jest wywoływana w momencie, gdy obiekt jest niszczony. Destruktory są rzadko używane.
+:   Opcjonalna, specjalnie nazwana metoda (`__del__()`), która jest wywoływana w momencie, gdy obiekt jest niszczony. Destruktory są rzadko używane.
 \index{destruktor}
 
 dziedziczenie
@@ -363,7 +363,7 @@ klasa pochodna
 \index{klasa pochodna}
 
 konstruktor
-:   Opcjonalna, specjalnie nazwana metoda (`__init__`), która jest wywoływana w momencie, gdy klasa jest używana do tworzenia obiektu. Zazwyczaj jest ona używana do ustawienia początkowych wartości obiektu.
+:   Opcjonalna, specjalnie nazwana metoda (`__init__()`), która jest wywoływana w momencie, gdy klasa jest używana do tworzenia obiektu. Zazwyczaj jest ona używana do ustawienia początkowych wartości obiektu.
 \index{konstruktor}
 
 metoda

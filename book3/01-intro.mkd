@@ -259,15 +259,15 @@ zbyt wiele szczegółów jak na ten rozdział, więc proponuję zajrzeć na stro
 <https://py4e.pl/install>, gdzie umieściłem instrukcje dotyczące konfiguracji i 
 uruchamiania Pythona na systemach Windows i macOS oraz w środowisku chmurowym PythonAnywhere.
 W każdym z przypadków w pewnym momencie znajdziesz się w oknie wiersza poleceń lub w terminalu, wpiszesz `python3`,
-potwierdzisz klawiszem `Enter`, a interpreter Pythona rozpocznie pracę w trybie interaktywnym,
+potwierdzisz klawiszem `<Enter>`, a interpreter Pythona rozpocznie pracę w trybie interaktywnym,
 pojawiając się i wyglądając mniej więcej tak:
 
 \index{tryb interaktywny}
 
 ~~~~ {.python}
-Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25)
-[MSC v.1900 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more
+Python 3.8.6 (tags/v3.8.6:db45529, Sep 23 2020, 15:52:53)
+[MSC v.1927 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more 
 information.
 >>>
 ~~~~
@@ -435,7 +435,7 @@ maszynowy, a następnie kompilator umieszcza w pliku wynikowy język maszynowy,
 aby go później wykonać.
 
 Jeśli masz system Windows, często te wykonywalne programy maszynowe mają
-przyrostek ".exe" lub ".dll", które oznaczają odpowiednio "plik wykonywalny" i 
+przyrostek `.exe` lub `.dll`, które oznaczają odpowiednio "plik wykonywalny" i 
 "bibliotekę łączoną dynamicznie". W systemach Linux i macOS nie ma
 przyrostka, który jednoznacznie określałby plik jako wykonywalny.
 
@@ -457,7 +457,7 @@ poziomu, takich jak Python czy C.
 
 W tym miejscu w naszej dyskusji o kompilatorach i interpreterach powinieneś już się
 trochę zastanawiać nad samym interpreterem Pythona. W jakim języku jest on
-napisany? Czy jest napisany w języku kompilowanym? Gdy wpisujemy w terminalu "python3", to co 
+napisany? Czy jest napisany w języku kompilowanym? Gdy wpisujemy w terminalu `python3`, to co 
 się właściwie dzieje?
 
 Interpreter Pythona jest napisany w języku wysokiego poziomu o nazwie "C".
@@ -470,7 +470,7 @@ programu Python przetłumaczonego na kod maszynowy. W systemie Windows wykonywal
 kod maszynowy samego Pythona prawdopodobnie znajduje się w pliku o nazwie:
 
 ~~~~
-C:\Python39\python.exe
+C:\Python38\python.exe
 ~~~~
 
 Powyższe informacje to wiedza głębsza od tej, która wystarcza do zostania programistą Pythona.
@@ -801,7 +801,8 @@ razem przedstawiane koncepcje nie będą się wydawały tworzyć logicznej cało
 uczyłeś się mówić, to przez kilka pierwszych lat dla nikogo nie stanowiło problemu, że po
 prostu wydawałeś słodkie odgłosy chichotania. I nie był to problem, że przejście
 od prostego słownictwa do prostych zdań zajęło ci sześć miesięcy, a przejście od
-zdań do akapitów jeszcze 5-6 lat, a potem jeszcze kilka dodatkowych zajęło samodzielne pisanie  interesujących i spójnych opowiadań.
+zdań do akapitów jeszcze 5-6 lat, a potem jeszcze kilka dodatkowych zajęło samodzielne pisanie 
+interesujących i spójnych opowiadań.
 
 Chcemy, abyś nauczył się języka Python znacznie szybciej, więc w następnych
 kilku rozdziałach uczymy wszystkiego po trochu w tym samym czasie. Ale to jest
@@ -970,7 +971,7 @@ SyntaxError: invalid syntax
 
 #### Ćwiczenie 6
 
-Gdzie w komputerze będzie przechowywana zmienna "x" po wykonaniu poniższej linijki kodu Pythona?
+Gdzie w komputerze będzie przechowywana zmienna `x` po wykonaniu poniższej linijki kodu Pythona?
 
 ~~~~ {.python}
 x = 123
@@ -992,10 +993,10 @@ x = x + 1
 print(x)
 ~~~~
 
-a. 43
-b. 44
-c. x + 1
-d. Błąd, ponieważ x = x + 1 łamie reguły matematyki.
+a. `43`
+b. `44`
+c. `x + 1`
+d. Błąd, ponieważ `x = x + 1` łamie reguły matematyki.
 
 #### Ćwiczenie 8
 

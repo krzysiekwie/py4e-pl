@@ -50,7 +50,7 @@ Instrukcja `while`
 
 Komputery są często używane do automatyzacji powtarzalnych zadań. Powtarzanie identycznych lub podobnych zadań bez popełniania błędów jest czymś, co komputery robią dobrze, a ludzie źle. Ponieważ iteracja często występuje w programach, Python oferuje kilka elementów, które ułatwiają pracę z nią.
 
-Jedną z form iteracji w Pythonie jest instrukcja `while`. Poniżej znajduje się prosty program, który odlicza od pięciu, a następnie wyświetla "Odpalamy!".^[Kopiując kod do interaktywnej sesji interpretera Pythona, należy pamiętać, że wcięty blok musi zakończyć się nową linią. W przeciwnym razie, w tym programie przy funkcji `print` zostanie zgłoszony błąd "SyntaxError".]
+Jedną z form iteracji w Pythonie jest instrukcja `while`. Poniżej znajduje się prosty program, który odlicza od pięciu, a następnie wyświetla "Odpalamy!".^[Kopiując kod do interaktywnej sesji interpretera Pythona, należy pamiętać, że wcięty blok musi zakończyć się nową linią. W przeciwnym razie, w tym programie przy funkcji `print()` zostanie zgłoszony błąd "SyntaxError".]
 
 ~~~~ {.python}
 n = 5
@@ -128,7 +128,7 @@ Zrobione!
 Taki sposób pisania pętli `while` jest dość częsty, ponieważ można sprawdzić warunek w dowolnym miejscu pętli (nie tylko na górze) i można wyrazić warunek stopu w sposób twierdzący ("stop, gdy to się stanie"), a nie w sposób zaprzeczający ("nie przestawaj, dopóki to się nie stanie.").
 
 Jeżeli chcemy natychmiast przerwać taką pętlę, to możemy wysłać sygnał do naszego
-programu kombinacją klawiszy `Ctrl+C`.
+programu kombinacją klawiszy `<Ctrl+C>`.
 
 ~~~~
 $ python3 copytildone1.py
@@ -168,7 +168,7 @@ wyświetl to!
 Zrobione!
 ~~~~
 
-Wszystkie linie są ponownie wyświetlane na ekranie z wyjątkiem tej, która zaczyna się znakiem haszu, ponieważ kiedy wykonywana jest instrukcja `continue`, kończy to bieżącą iterację i przeskakuje z powrotem do instrukcji `while`, tak aby rozpocząć następną iterację, pomijając tym samym instrukcję `print`.
+Wszystkie linie są ponownie wyświetlane na ekranie z wyjątkiem tej, która zaczyna się znakiem haszu, ponieważ kiedy wykonywana jest instrukcja `continue`, kończy to bieżącą iterację i przeskakuje z powrotem do instrukcji `while`, tak aby rozpocząć następną iterację, pomijając tym samym funkcję `print()`.
 
 Definiowanie pętli przy użyciu `for` 
 --------------------------------------
@@ -326,7 +326,7 @@ def min(values):
     return smallest
 ~~~~
 
-W powyższej wersji usunęliśmy wszystkie polecenia `print`, tak aby były równoważne z funkcją `min`, która jest już wbudowana w Pythona.
+W powyższej wersji usunęliśmy wszystkie polecenia `print()`, tak aby były równoważne z funkcją `min()`, która jest już wbudowana w Pythona.
 
 Debugowanie
 -----------
@@ -338,7 +338,7 @@ Kiedy zaczniesz pisać większe programy, być może będziesz spędzać więcej
 
 Jednym ze sposobów na skrócenie czasu debugowania jest "debugowanie przez dzielenie na części". Na przykład, jeśli w Twoim programie jest 100 linii i sprawdzasz je po kolei, zajmie to 100 kroków.
 
-Zamiast tego spróbuj podzielić problem na pół. Spójrz na środek programu lub w jego pobliżu, tak aby sprawdzić jakąś wartość pośrednią. Dodaj instrukcję `print` (lub coś innego, co ma sprawdzalny efekt) i uruchom program.
+Zamiast tego spróbuj podzielić problem na pół. Spójrz na środek programu lub w jego pobliżu, tak aby sprawdzić jakąś wartość pośrednią. Dodaj funkcję `print()` (lub coś innego, co ma sprawdzalny efekt) i uruchom program.
 
 Jeśli sprawdzenie w środku programu jest nieprawidłowe, problem musi być w pierwszej połowie programu. Natomiast jeśli jest poprawne, to problem jest w drugiej połowie.
 

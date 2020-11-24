@@ -18,9 +18,9 @@ Widzieliśmy już jeden przykład *wywołania funkcji*:
 <class 'int'>
 ~~~~
 
-Nazwa funkcji to `type`. Wyrażenie w nawiasach nazywane jest *argumentem* 
+Nazwa funkcji to `type()`. Wyrażenie w nawiasach nazywane jest *argumentem* 
 funkcji. Argument jest wartością lub zmienną, którą przekazujemy do funkcji jako 
-jej dane wejściowe. Wynikiem dla funkcji `type` jest typ przekazanego 
+jej dane wejściowe. Wynikiem dla funkcji `type()` jest typ przekazanego 
 argumentu. 
 
 \index{nawiasy okrągłe!argument}
@@ -39,7 +39,7 @@ bez konieczności podawania definicji tych funkcji. Twórcy Pythona napisali
 zestaw funkcji do rozwiązywania popularnych problemów i dołączyli je do Pythona, 
 tak abyśmy mogli z nich korzystać. 
 
-Funkcje `max` i `min` dają nam odpowiednio największe i najmniejsze wartości 
+Funkcje `max()` i `min()` dają nam odpowiednio największe i najmniejsze wartości 
 występujące w liście: 
 
 ~~~~ {.python}
@@ -50,13 +50,13 @@ występujące w liście:
 >>>
 ~~~~
 
-Funkcja `max` mówi nam o "największym znaku" w ciągu znaków (który okazuje się 
-być literą "w"), a funkcja `min` pokazuje nam najmniejszy znak (który okazuje 
+Funkcja `max()` mówi nam o "największym znaku" w ciągu znaków (który okazuje się 
+być literą "w"), a funkcja `min()` pokazuje nam najmniejszy znak (który okazuje 
 się być spacją). 
 
-Inną bardzo często używaną funkcją jest funkcja `len`, która mówi nam, ile 
-elementów znajduje się w przekazanym argumencie. Jeśli argument `len` jest 
-ciągiem znaków, to zwraca liczbę znaków w tym ciągu. 
+Inną bardzo często używaną funkcją jest funkcja `len()`, która mówi nam, ile 
+elementów znajduje się w przekazanym argumencie. Jeśli argument przekazany do funkcji
+`len()` jest ciągiem znaków, to zwraca liczbę znaków w tym ciągu. 
 
 ~~~~ {.python}
 >>> len('Hello world')
@@ -69,7 +69,7 @@ one działać na dowolnym zestawie wartości, jak zobaczymy w późniejszych
 rozdziałach.
 
 Nazwy wbudowanych funkcji należy traktować jako słowa zastrzeżone (tzn. unikać 
-używania "max" jako nazwy zmiennej). 
+używania `max` jako nazwy zmiennej). 
 
 Funkcje konwersji typu
 ----------------------
@@ -78,7 +78,7 @@ Funkcje konwersji typu
 \index{konwersja typu}
 
 Python oferuje również funkcje wbudowane, które konwertują wartości z jednego 
-typu na drugi. Funkcja `int` przyjmuje dowolną wartość i konwertuje ją na liczbę 
+typu na drugi. Funkcja `int()` przyjmuje dowolną wartość i konwertuje ją na liczbę 
 całkowitą, jeśli może, lub skarży się, jeśli nie:
 
 \index{int, funkcja}
@@ -91,7 +91,7 @@ całkowitą, jeśli może, lub skarży się, jeśli nie:
 ValueError: invalid literal for int() with base 10: 'Halo'
 ~~~~
 
-`int` może zamieniać wartości zmiennoprzecinkowe na liczby całkowite, ale nie 
+Funkcja `int()` może zamieniać wartości zmiennoprzecinkowe na liczby całkowite, ale nie 
 zaokrągla ich (ucina część ułamkową): 
 
 ~~~~ {.python}
@@ -101,7 +101,7 @@ zaokrągla ich (ucina część ułamkową):
 -2
 ~~~~
 
-`float` konwertuje liczby całkowite i ciągi znaków na liczby zmiennoprzecinkowe:
+Funkcja `float()` konwertuje liczby całkowite i ciągi znaków na liczby zmiennoprzecinkowe:
 
 \index{float, funkcja}
 \index{funkcja!float}
@@ -113,7 +113,7 @@ zaokrągla ich (ucina część ułamkową):
 3.14159
 ~~~~
 
-Natomiast `str` konwertuje swój argument na ciąg znaków:
+Natomiast funkcja `str()` konwertuje swój argument na ciąg znaków:
 
 \index{str, funkcja}
 \index{funkcja!str}
@@ -167,7 +167,7 @@ oddzielone kropką. Format ten nazywa się *notacją kropkową*.
 
 Pierwszy przykład oblicza logarytm przy podstawie 10 ze stosunku sygnału 
 (`signal_power`) do szumu (`noise_power`) przemnożony przez 10. Moduł 
-matematyczny udostępnia również funkcję o nazwie `log`, która oblicza logarytm 
+matematyczny udostępnia również funkcję o nazwie `log()`, która oblicza logarytm 
 naturalny. 
 
 \index{log, funkcja}
@@ -178,7 +178,7 @@ naturalny.
 \index{trygonometryczna, funkcja}
 
 Drugi przykład znajduje sinus z wartości w zmiennej `radians`. Nazwa zmiennej 
-jest podpowiedzią, że `sin` i inne funkcje trygonometryczne (`cos`, `tan` itp.) 
+jest podpowiedzią, że `sin()` i inne funkcje trygonometryczne (`cos()`, `tan()` itp.) 
 przyjmują argumenty w radianach. Aby przeliczyć wartość ze stopni na radiany, 
 należy ją podzielić przez 360 i pomnożyć przez $2 \pi$:
 
@@ -236,8 +236,8 @@ chwili będę po prostu nazywał "losowymi").
 \index{random, funkcja}
 \index{funkcja!random}
 
-Funkcja `random` zwraca losową liczbę pomiędzy 0.0 a 1.0 (włączając w to 0.0, 
-ale nie 1.0). Za każdym razem, gdy wywołujesz `random`, otrzymujesz następną 
+Funkcja `random()` zwraca losową liczbę pomiędzy 0.0 a 1.0 (włączając w to 0.0, 
+ale nie 1.0). Za każdym razem, gdy wywołujesz funkcję `random()`, otrzymujesz następną 
 liczbę. Aby zobaczyć krótki przykład, uruchom poniższą pętlę: 
 
 ~~~~ {.python}
@@ -272,8 +272,8 @@ liczby.
 
 ----
 
-Funkcja `random` jest tylko jedną z wielu funkcji, które obsługują liczby 
-losowe. Funkcja `randint` pobiera parametry `low` oraz `high` i zwraca liczbę 
+Funkcja `random()` jest tylko jedną z wielu funkcji, które obsługują liczby 
+losowe. Funkcja `randint()` pobiera parametry `low` oraz `high` i zwraca liczbę 
 całkowitą pomiędzy `low` i `high` (włączając w to obydwie te liczby). 
 
 \index{randint, funkcja}
@@ -286,7 +286,7 @@ całkowitą pomiędzy `low` i `high` (włączając w to obydwie te liczby).
 9
 ~~~~
 
-Aby wybrać losowo element z jakiejś sekwencji, możesz użyć `choice`: 
+Aby wybrać losowo element z jakiejś sekwencji, możesz użyć `choice()`: 
 
 \index{choice, funkcja}
 \index{funkcja!choice}
@@ -324,7 +324,7 @@ def print_lyrics():
 ~~~~
 
 `def` to słowo kluczowe, które wskazuje, że jest to definicja funkcji. Nazwa 
-funkcji to `print_lyrics`. Zasady dotyczące nazw funkcji są takie same jak dla 
+funkcji to `print_lyrics()`. Zasady dotyczące nazw funkcji są takie same jak dla 
 nazw zmiennych: litery, cyfry i niektóre znaki interpunkcyjne są dozwolone, ale 
 pierwszy znak nie może być liczbą. Nie możesz używać słowa kluczowego jako nazwy 
 funkcji i powinieneś unikać zmiennej i funkcji o tej samej nazwie. 
@@ -354,7 +354,7 @@ zawierać dowolną liczbę instrukcji.
 \index{trzy kropki}
 
 Jeżeli wpiszesz definicję funkcji w trybie interaktywnym, interpreter wypisze 
-trzy kropki (*...*), aby dać Ci znać, że definicja nie jest kompletna:
+trzy kropki (`...`), aby dać Ci znać, że definicja nie jest kompletna:
 
 ~~~~ {.python}
 >>> def print_lyrics():
@@ -375,7 +375,7 @@ Zdefiniowanie funkcji tworzy zmienną o tej samej nazwie.
 <class 'function'>
 ~~~~
 
-Wartość `print_lyrics` to *obiekt funkcji* o typie "function".
+Wartość `print_lyrics` to *obiekt funkcji* o typie `function`.
 
 \index{funkcja, obiekt}
 \index{obiekt funkcji}
@@ -390,7 +390,7 @@ Pracuję w dzień i śpię całą noc.
 
 Po zdefiniowaniu funkcji, możemy jej używać wewnątrz innej funkcji. Na przykład, 
 aby powtórzyć poprzednią zwrotkę, możemy napisać funkcję o nazwie 
-`repeat_lyrics`:
+`repeat_lyrics()`:
 
 ~~~~ {.python}
 def repeat_lyrics():
@@ -398,7 +398,7 @@ def repeat_lyrics():
     print_lyrics()
 ~~~~
 
-Następnie wywołujemy `repeat_lyrics`:
+Następnie wywołujemy `repeat_lyrics()`:
 
 ~~~~ {.python}
 >>> repeat_lyrics()
@@ -421,7 +421,7 @@ następująco:
 
 \VerbatimInput{../code3/lyrics.py}
 
-Program ten zawiera dwie definicje funkcji: `print_lyrics` i `repeat_lyrics`. 
+Program ten zawiera dwie definicje funkcji: `print_lyrics()` i `repeat_lyrics()`. 
 Definicje funkcji wykonywane są tak samo jak inne polecenia, ale efektem jest 
 tworzenie obiektów funkcji. Polecenia wewnątrz funkcji są wykonywane dopiero po 
 jej wywołaniu, a definicja funkcji nie generuje danych wyjściowych.
@@ -441,7 +441,7 @@ komunikat o błędzie otrzymasz.
 #### Ćwiczenie 3
 
 Przesuń wywołanie funkcji na sam dół i przenieś definicję 
-`print_lyrics` po definicji `repeat_lyrics`. Co się stanie, gdy uruchomisz
+`print_lyrics()` po definicji `repeat_lyrics()`. Co się stanie, gdy uruchomisz
 taki program?
 
 Przepływ sterowania
@@ -488,8 +488,8 @@ Parametry i argumenty
 \index{funkcja, argument}
 
 Niektóre z wbudowanych funkcji, które widzieliśmy, wymagają argumentów. Na 
-przykład, gdy wywołujesz `math.sin`, podajesz liczbę jako argument. Niektóre 
-funkcje przyjmują więcej niż jeden argument: `math.pow` przyjmuje dwa, tj. 
+przykład, gdy wywołujesz `math.sin()`, podajesz liczbę jako argument. Niektóre 
+funkcje przyjmują więcej niż jeden argument: `math.pow()` przyjmuje dwa, tj. 
 podstawę i wykładnik.
 
 Wewnątrz funkcji argumenty są przypisane do zmiennych nazywanych *parametrami*. 
@@ -523,7 +523,7 @@ Spam
 
 Te same zasady składania wyrażeń lub instrukcji, które odnoszą się do funkcji 
 wbudowanych, dotyczą także funkcji zdefiniowanych przez użytkownika, więc 
-możemy użyć dowolnego rodzaju wyrażenia jako argumentu w `print_twice`:
+możemy użyć dowolnego rodzaju wyrażenia jako argumentu w `print_twice()`:
 
 \index{składanie}
 
@@ -552,7 +552,7 @@ Eryk Pół-Ćma.
 
 Nazwa zmiennej, którą przekazujemy jako argument (`michael`), nie ma nic 
 wspólnego z nazwą parametru (`bruce`). Nie ma znaczenia, jak na tę wartość 
-wołano w domu (w miejscu wywoływania); tutaj w `print_twice` wszystkich 
+wołano w domu (w miejscu wywoływania); tutaj w `print_twice()` wszystkich 
 nazywamy `bruce`.
 
 Funkcje owocne i funkcje puste
@@ -565,7 +565,7 @@ Funkcje owocne i funkcje puste
 
 Niektóre z używanych przez nas funkcji to np. funkcje matematyczne, które 
 zwracają wyniki; z braku lepszej nazwy nazywam je *funkcjami owocnymi* 
-(ang. *fruitful functions*). Inne funkcje, takie jak `print_twice`, wykonują 
+(ang. *fruitful functions*). Inne funkcje, takie jak `print_twice()`, wykonują 
 jakąś akcję, ale nie zwracają wartości. Nazywa się je *pustymi funkcjami*^[W niektórych językach programowania tego typu 
 funkcje nazywa się procedurami.] (ang. *void functions*).
 
@@ -629,13 +629,13 @@ wartość, która ma swój własny typ:
 \index{słowo kluczowe!return}
 
 Aby zwrócić wynik z funkcji, używamy w niej instrukcji `return`. Na przykład 
-możemy napisać bardzo prostą funkcję o nazwie `addtwo`, która dodaje dwie 
+możemy napisać bardzo prostą funkcję o nazwie `addtwo()`, która dodaje dwie 
 liczby i zwraca wynik dodawania.
 
 \VerbatimInput{../code3/addtwo.py}
 
-Gdy powyższy skrypt zostanie wykonany, instrukcja `print` wypisze "8", 
-ponieważ funkcja `addtwo` została wywołana z argumentami 3 i 5. Wewnątrz 
+Gdy powyższy skrypt zostanie wykonany, funkcja `print()` wypisze `8`, 
+ponieważ funkcja `addtwo()` została wywołana z argumentami 3 i 5. Wewnątrz 
 funkcji parametry `a` i `b` miały wartości odpowiednio 3 i 5. Funkcja 
 obliczyła sumę tych dwóch liczb i umieściła ją w zmiennej lokalnej o nazwie 
 `added`. Następnie użyła instrukcji `return`, by wysłać wyliczoną wartość z 
@@ -669,7 +669,7 @@ wyjaśnić pewne pojęcie. Częścią umiejętności tworzenia i korzystania z f
 jest posiadanie funkcji, która właściwie uchwyci cel, taki jak "znajdź
 najmniejszą wartość na liście wartości". Później pokażemy Ci kod, który znajduje
 najmniejszą wartość na liście i przedstawimy go jako funkcję o nazwie
-`min`, która przyjmuje listę wartości jako swój argument i zwraca najmniejszą
+`min()`, która przyjmuje listę wartości jako swój argument i zwraca najmniejszą
 wartość występującą na tej liście.
 
 Debugowanie
@@ -812,7 +812,7 @@ wywołanie funkcji
 
 #### Ćwiczenie 4
 
-Jaki jest cel słowa kluczowego "def" w Pythonie?
+Jaki jest cel słowa kluczowego `def` w Pythonie?
 
 a. Jest to slang, który oznacza: "następujący kod jest naprawdę fajny".
 b. Oznacza początek funkcji.
@@ -845,7 +845,7 @@ e. Zap Zap Zap
 #### Ćwiczenie 6
 
 Przepisz ponownie swoje obliczenie wynagrodzenia z dodatkiem za
-nadgodziny i stwórz funkcję o nazwie `computepay`, która przyjmuje dwa
+nadgodziny i stwórz funkcję o nazwie `computepay()`, która przyjmuje dwa
 parametry (`hours` i `rate`).
 
 ~~~~
@@ -857,7 +857,7 @@ Wynagrodzenie: 475.0
 #### Ćwiczenie 7
 
 Napisz ponownie program z poprzedniego rozdziału do wyliczania
-ocen za pomocą funkcji o nazwie `computegrade`, która przyjmuje jako parametr
+ocen za pomocą funkcji o nazwie `computegrade()`, która przyjmuje jako parametr
 wartość i zwraca ocenę jako ciąg znaków.
 
 ~~~~

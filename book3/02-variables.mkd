@@ -445,10 +445,10 @@ Proszenie użytkownika o wprowadzenie danych
 
 Czasami chcielibyśmy ustawić wartość zmiennej poprzez pobranie tej wartości od
 użytkownika za pomocą jego klawiatury. Python udostępnia wbudowaną funkcję o
-nazwie `input`, która pobiera dane z klawiatury^[W Pythonie 2.0 funkcja ta 
-nazywa się `raw_input`.]. Kiedy funkcja ta jest wywoływana, program zatrzymuje
-się i czeka, aż użytkownik coś wpisze. Gdy użytkownik naciśnie przycisk `Return`
-lub `Enter`, program wznawia działanie, a `input` zwraca to, co użytkownik
+nazwie `input()`, która pobiera dane z klawiatury^[W Pythonie 2.0 funkcja ta 
+nazywa się `raw_input()`.]. Kiedy funkcja ta jest wywoływana, program zatrzymuje
+się i czeka, aż użytkownik coś wpisze. Gdy użytkownik naciśnie klawisz `<Return>`
+lub `<Enter>`, program wznawia działanie, a `input()` zwraca to, co użytkownik
 wpisał jako ciąg znaków.
 
 
@@ -463,7 +463,7 @@ Jakieś bzdury
 
 Przed otrzymaniem danych wejściowych od użytkownika dobrze jest wyświetlić
 komunikat informujący użytkownika o tym, co należy wprowadzić. Możesz przekazać
-ciąg znaków do `input`, który zostanie wyświetlony użytkownikowi przed
+ciąg znaków do `input()`, który zostanie wyświetlony użytkownikowi przed
 wstrzymaniem działania na czas wprowadzania danych:
 
 \index{znak zachęty}
@@ -622,9 +622,9 @@ for word in words:
     print(word)
 ~~~~
 
-Co tu się dzieje? Które z tokenów (for, word, in, itp.) są słowami
+Co tu się dzieje? Które z tokenów (`for`, `word`, `in` itp.) są słowami
 zastrzeżonymi, a które są tylko nazwami zmiennych? Czy Python rozumie zapis
-"words" na poziomie fundamentalnym? Początkujący programiści mają problem z
+`words` na poziomie fundamentalnym? Początkujący programiści mają problem z
 oddzieleniem tych części kodu, które *muszą* być takie same jak w tym
 przykładzie, od tych, które po prostu są wyborem dokonywanym przez programistę.
 
@@ -654,7 +654,8 @@ jak Cię atakują:
 </pre>
 
 Części kodu, które są zdefiniowane przez Pythona (`for`, `in`, `print` i `:`) 
-są tutaj pogrubione, a zmienne wybrane przez programistę (`word` i `words`) – nie. Wiele edytorów tekstu jest świadomych składni Pythona i inaczej
+są tutaj pogrubione, a zmienne wybrane przez programistę (`word` i `words`) – nie.
+Wiele edytorów tekstu jest świadomych składni Pythona i inaczej
 pokoloruje zastrzeżone słowa, tak aby pomóc ci odróżnić zmienne od
 zastrzeżonych słów. Po pewnym czasie zaczniesz biegle czytać kod Pythona i
 będziesz szybko określać, co jest zmienną, a co słowem zastrzeżonym.^[Dodatkowo
@@ -835,7 +836,7 @@ zmienna
 
 #### Ćwiczenie 2
 
-Napisz program, który wykorzystuje funkcję `input` do 
+Napisz program, który wykorzystuje funkcję `input()` do 
 poproszenia użytkownika o jego imię, a następnie przywita go, używając jego
 imienia.
 
@@ -857,7 +858,7 @@ Wynagrodzenie: 1121.25
 
 Na razie nie będziemy się martwić o to, by nasze wynagrodzenie miało dokładnie
 dwie cyfry po przecinku. Jeśli chcesz, możesz pobawić się wbudowaną funkcją
-Pythona `round`, tak aby prawidłowo zaokrąglić wynagrodzenie do dwóch miejsc po
+Pythona `round()`, tak aby prawidłowo zaokrąglić wynagrodzenie do dwóch miejsc po
 przecinku.
 
 #### Ćwiczenie 4

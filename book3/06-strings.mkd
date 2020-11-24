@@ -305,7 +305,7 @@ Metody obiektów będących ciągami znaków
 
 Ciągi znaków są przykładem *obiektów* Pythona. Obiekt zawiera zarówno dane (zasadniczy ciąg znaków), jak i *metody*, które w praktyce są funkcjami wbudowanymi w obiekt i dostępnymi dla każdej *instancji* obiektu.
 
-Python posiada funkcję o nazwie `dir`, która zawiera listę metod dostępnych dla danego obiektu. Funkcja `type` pokazuje typ obiektu, a funkcja `dir` pokazuje dostępne dla niego metody.
+Python posiada funkcję o nazwie `dir()`, która zawiera listę metod dostępnych dla danego obiektu. Funkcja `type()` pokazuje typ obiektu, a funkcja `dir()` pokazuje dostępne dla niego metody.
 
 ~~~~ {.python}
 >>> stuff = 'Witaj świecie'
@@ -332,11 +332,11 @@ capitalize(...)
 >>>
 ~~~~
 
-Podczas gdy funkcja `dir` wyświetla listę metod, a Ty możesz użyć `help`, by uzyskać prostą dokumentację jakiejś metody, w przypadku metod ciągów znaków lepszym źródłem dokumentacji jest <https://docs.python.org/library/stdtypes.html#string-methods>.
+Podczas gdy funkcja `dir()` wyświetla listę metod, a Ty możesz użyć `help()`, by uzyskać prostą dokumentację jakiejś metody, w przypadku metod ciągów znaków lepszym źródłem dokumentacji jest <https://docs.python.org/library/stdtypes.html#string-methods>.
 
 Wywołanie *metody* jest podobne do wywołania funkcji (przyjmuje ona argumenty i zwraca wartość), ale składnia jest nieco inna. Metodę wywołujemy poprzez dołączenie nazwy metody do nazwy zmiennej, używając przy tym kropki jako separatora.
 
-Na przykład metoda `upper` bierze ciąg znaków i zwraca nowy ciąg znaków, w którym wszystkie litery zostały zamienione na duże litery.
+Na przykład metoda `upper()` bierze ciąg znaków i zwraca nowy ciąg znaków, w którym wszystkie litery zostały zamienione na duże litery.
 
 \index{metoda}
 \index{ciąg znaków!metoda}
@@ -352,15 +352,15 @@ Zamiast składni funkcji `upper(word)` używa ona składni metody `word.upper()`
 BANAN
 ~~~~
 
-Taka forma notacji kropkowej określa nazwę metody (`upper`) oraz nazwę ciągu znaków, do którego metoda ma zostać zastosowana (`word`). Puste nawiasy wskazują, że metoda ta nie przyjmuje żadnego argumentu.
+Taka forma notacji kropkowej określa nazwę metody (`upper()`) oraz nazwę ciągu znaków, do którego metoda ma zostać zastosowana (`word`). Puste nawiasy wskazują, że metoda ta nie przyjmuje żadnego argumentu.
 
 \index{nawiasy okrągłe!puste}
 
-W tym przypadku powiedzielibyśmy, że *wywołujemy metodę* `upper` na `word`.
+W tym przypadku powiedzielibyśmy, że *wywołujemy metodę* `upper()` na `word`.
 
 \index{wywołanie metody}
 
-Na przykład dla ciągów znaków istnieje metoda o nazwie `find`, która szuka pozycji jednego ciągu w drugim:
+Na przykład dla ciągów znaków istnieje metoda o nazwie `find()`, która szuka pozycji jednego ciągu w drugim:
 
 ~~~~ {.python}
 >>> word = 'banan'
@@ -369,9 +369,9 @@ Na przykład dla ciągów znaków istnieje metoda o nazwie `find`, która szuka 
 1
 ~~~~ 
 
-W powyższym przykładzie wywołujemy metodę `find` na `word` i przekazujemy szukaną literę jako argument.
+W powyższym przykładzie wywołujemy metodę `find()` na `word` i przekazujemy szukaną literę jako argument.
 
-Metoda `find` może znaleźć zarówno podciągi, jak i znaki:
+Metoda `find()` może znaleźć zarówno podciągi, jak i znaki:
 
 ~~~~ {.python}
 >>> word.find('an')
@@ -388,7 +388,7 @@ Jako drugi argument może przyjąć indeks, od którego powinien zacząć szuka�
 3
 ~~~~
 
-Jednym z częstych zadań jest usunięcie białych znaków (spacji, tabulatorów lub znaków nowej linii) z początku i końca ciągu znaków przy użyciu metody `strip`:
+Jednym z częstych zadań jest usunięcie białych znaków (spacji, tabulatorów lub znaków nowej linii) z początku i końca ciągu znaków przy użyciu metody `strip()`:
 
 ~~~~ {.python}
 >>> line = '  Proszę bardzo  '
@@ -396,7 +396,7 @@ Jednym z częstych zadań jest usunięcie białych znaków (spacji, tabulatorów
 'Proszę bardzo'
 ~~~~
 
-Niektóre metody, takie jak *startswith*, zwracają wartości logiczne.
+Niektóre metody, takie jak `startswith()`, zwracają wartości logiczne.
 
 ~~~~ {.python}
 >>> line = 'Miłego dnia'
@@ -406,7 +406,7 @@ True
 False
 ~~~~
 
-Możesz zauważyć, że `startswith` wymaga dopasowania wielkości liter, więc czasami zanim zrobimy jakiekolwiek sprawdzenie, konwertujemy wszystkie znaki w linii na małe litery przy użyciu metody `lower`.
+Możesz zauważyć, że `startswith()` wymaga dopasowania wielkości liter, więc czasami zanim zrobimy jakiekolwiek sprawdzenie, konwertujemy wszystkie znaki w linii na małe litery przy użyciu metody `lower()`.
 
 ~~~~ {.python}
 >>> line = 'Miłego dnia'
@@ -418,7 +418,7 @@ False
 True
 ~~~~
 
-W ostatnim przykładzie metoda "lower" jest wywoływana, a następnie używamy `startswith` by sprawdzić, czy wynikowy ciąg małych liter zaczyna się od litery "m". Tak długo jak pilnujemy właściwiej kolejności, w jednym wyrażeniu możemy wykonywać wiele wywołań metod.
+W ostatnim przykładzie metoda `lower()` jest wywoływana, a następnie używamy `startswith()` by sprawdzić, czy wynikowy ciąg małych liter zaczyna się od litery "m". Tak długo jak pilnujemy właściwiej kolejności, w jednym wyrażeniu możemy wykonywać wiele wywołań metod.
 
 \index{count, metoda}
 \index{metoda!count}
@@ -438,7 +438,7 @@ Często chcemy zajrzeć do ciągu znaków i znaleźć pewien podciąg. Na przyk�
 
 `From stephen.marquard@`*` uct.ac.za`*` Sat Jan  5 09:14:16 2008`
 
-i chcielibyśmy z każdej linii wyciągnąć tylko drugą połowę adresu e-mail (tj. `uct.ac.za`), to możemy to zrobić za pomocą metody `find` i operacji wyciągania wycinków z ciągów znaków.
+i chcielibyśmy z każdej linii wyciągnąć tylko drugą połowę adresu e-mail (tj. `uct.ac.za`), to możemy to zrobić za pomocą metody `find()` i operacji wyciągania wycinków z ciągów znaków.
 
 Najpierw znajdziemy w ciągu znaków pozycję znaku `@`. Następnie znajdziemy pozycję pierwszej spacji *po* znaku `@`. Na końcu użyjemy wycinków, by wyodrębnić część ciągu znaków, której szukamy.
 
@@ -456,9 +456,9 @@ uct.ac.za
 >>>
 ~~~~
 
-Używamy wersji metody `find` pozwalającej nam określić pozycję w łańcuchu, od której `find` ma zacząć szukać. Wyodrębniamy znaki od "znaku będącego zaraz za @ aż do *ale nie włączając w to* znaku spacji".
+Używamy wersji metody `find()` pozwalającej nam określić pozycję w łańcuchu, od której `find()` ma zacząć szukać. Wyodrębniamy znaki od "znaku będącego zaraz za @ aż do *ale nie włączając w to* znaku spacji".
 
-Dokumentacja dotycząca metody `find` jest dostępna na stronie:
+Dokumentacja dotycząca metody `find()` jest dostępna na stronie:
 
 <https://docs.python.org/library/stdtypes.html#string-methods>
 
@@ -476,7 +476,7 @@ Pierwszy operand jest *ciągiem formatującym*, który zawiera jedną lub więce
 
 \index{sekwencja formatująca}
 
-Na przykład sekwencja formatująca `%d` oznacza, że drugi operand powinien być sformatowany jako liczba całkowita ("d" oznacza po angielsku "decimal, czyli "dziesiętny"):
+Na przykład sekwencja formatująca `%d` oznacza, że drugi operand powinien być sformatowany jako liczba całkowita ("d" oznacza po angielsku "decimal", czyli "dziesiętny"):
 
 ~~~~ {.python}
 >>> camels = 42
@@ -484,7 +484,7 @@ Na przykład sekwencja formatująca `%d` oznacza, że drugi operand powinien by�
 '42'
 ~~~~
 
-Wynikiem jest ciąg znaków '42', którego nie należy mylić z liczbą całkowitą o wartości 42.
+Wynikiem jest ciąg znaków `'42'`, którego nie należy mylić z liczbą całkowitą o wartości `42`.
 
 Sekwencja formatowania może pojawić się w dowolnym miejscu łańcucha, więc możesz osadzić jakąś wartość w zdaniu:
 
@@ -549,7 +549,7 @@ IndexError: string index out of range
 
 Kod działa dobrze, dopóki nie zostanie mu podsunięty pusty wiersz. Nie można wtedy odnaleźć znaku zerowego, więc otrzymujemy komunikat mechanizmu traceback. Są na to dwa rozwiązania, które sprawiają, że trzeci wiersz jest "bezpieczny", nawet jeśli jest on pusty.
 
-Jedną z możliwości jest po prostu użycie metody `startswith`, która zwraca `False`, jeśli ciąg znaków jest pusty.
+Jedną z możliwości jest po prostu użycie metody `startswith()`, która zwraca `False`, jeśli ciąg znaków jest pusty.
 
 ~~~~ {.python}
 if line.startswith('#'):
@@ -631,13 +631,13 @@ Mamy następujący kod Pythona, który przechowuje ciąg znaków:
 
 `text = 'X-DSPAM-Confidence: 0.8475'`
 
-Użyj `find` i wycinków ciągów znaków, tak aby wyodrębnić część ciągu po znaku dwukropka, a następnie użyj funkcji `float`, żeby przekształcić wyodrębniony ciąg znaków na liczbę zmiennoprzecinkową.
+Użyj `find()` i wycinków ciągów znaków, tak aby wyodrębnić część ciągu po znaku dwukropka, a następnie użyj funkcji `float()`, żeby przekształcić wyodrębniony ciąg znaków na liczbę zmiennoprzecinkową.
 
 \index{ciąg znaków, metody}
 \index{metoda!ciąg znaków}
 
 #### Ćwiczenie 6
 
-Przeczytaj dokumentację metod związanych z ciągami znaków na stronie <https://docs.python.org/library/stdtypes.html#string-methods>. Możesz poeksperymentować z niektórymi z nich, aby upewnić się, że rozumiesz, jak one działają. Szczególnie przydatne są `strip` i `replace`.
+Przeczytaj dokumentację metod związanych z ciągami znaków na stronie <https://docs.python.org/library/stdtypes.html#string-methods>. Możesz poeksperymentować z niektórymi z nich, aby upewnić się, że rozumiesz, jak one działają. Szczególnie przydatne są `strip()` i `replace()`.
 
 Dokumentacja używa składni, która może być nieco myląca. Na przykład w `find(sub[, start[, end]])` nawiasy kwadratowe wskazują opcjonalne argumenty. Tak więc `sub` jest wymagany, ale `start` jest opcjonalny, a jeśli dodasz `start`, to `end` jest opcjonalny.
