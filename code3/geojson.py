@@ -23,7 +23,7 @@ while True:
     print('Pobieranie', url)
     uh = urllib.request.urlopen(url, context=ctx)
     data = uh.read().decode()
-    print('Pobrano', len(data), 'znaków')
+    print('Pobrano:', len(data))
 
     try:
         js = json.loads(data)

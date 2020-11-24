@@ -249,7 +249,7 @@ Zmienna `count` jest inicjalizowana z wartością 0, a następnie zwiększana za
 
 #### Ćwiczenie 3
 
-Hermetyzacja to styl programowania, w którym szczegóły danej implementacji są ukryte.^[W węższym znaczeniu hermetyzacja jest jednym z założeń programowania obiektowego, ale na razie nie wchodźmy za bardzo w szczegóły tego zagadnienia.] Dokonaj hermetyzacji powyższego kodu poprzez zamknięcie go w funkcji o nazwie `count` i uogólnij ten kod tak, by przyjmował jako argumenty ciąg znaków lub literę.
+Hermetyzacja to styl programowania, w którym szczegóły danej implementacji są ukryte.^[W węższym znaczeniu hermetyzacja jest jednym z założeń programowania obiektowego, ale na razie nie wchodźmy za bardzo w szczegóły tego zagadnienia.] Dokonaj hermetyzacji powyższego kodu poprzez zamknięcie go w funkcji o nazwie `count()` i uogólnij ten kod tak, by przyjmował jako argumenty ciąg znaków lub literę.
 
 Operator `in`
 -------------
@@ -313,14 +313,14 @@ Python posiada funkcję o nazwie `dir()`, która zawiera listę metod dostępnyc
 <class 'str'>
 >>> dir(stuff)
 ['capitalize', 'casefold', 'center', 'count', 'encode',
-'endswith', 'expandtabs', 'find', 'format', 'format_map',
-'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit',
-'isidentifier', 'islower', 'isnumeric', 'isprintable',
-'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower',
-'lstrip', 'maketrans', 'partition', 'replace', 'rfind',
-'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip',
-'split', 'splitlines', 'startswith', 'strip', 'swapcase',
-'title', 'translate', 'upper', 'zfill']
+ 'endswith', 'expandtabs', 'find', 'format', 'format_map',
+ 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit',
+ 'isidentifier', 'islower', 'isnumeric', 'isprintable',
+ 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower',
+ 'lstrip', 'maketrans', 'partition', 'replace', 'rfind',
+ 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip',
+ 'split', 'splitlines', 'startswith', 'strip', 'swapcase',
+ 'title', 'translate', 'upper', 'zfill']
 >>> help(str.capitalize)
 Help on method_descriptor:
 
@@ -425,7 +425,7 @@ W ostatnim przykładzie metoda `lower()` jest wywoływana, a następnie używamy
 
 #### Ćwiczenie 4
 
-Istnieje metoda dla ciągu znaków o nazwie `count`, która jest podobna do funkcji z poprzedniego ćwiczenia. Przeczytaj dokumentację tej metody pod adresem:
+Istnieje metoda dla ciągu znaków o nazwie `count()`, która jest podobna do funkcji z poprzedniego ćwiczenia. Przeczytaj dokumentację tej metody pod adresem:
 
 <https://docs.python.org/library/stdtypes.html#string-methods>
 

@@ -257,7 +257,7 @@ Wynik działania programu jest następujący (część zwróconych danych JSON z
 $ python3 geojson.py 
 Podaj nazwę miejsca: Ann Arbor, MI
 Pobieranie https://nominatim.openstreetmap.org/search.php?q=...
-Pobrano 587 znaków
+Pobrano: 587
 ~~~~
 
 ~~~~ {.json}
