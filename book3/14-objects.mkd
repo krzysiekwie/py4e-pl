@@ -91,7 +91,7 @@ Jeśli zastanowimy się trochę dłużej nad tym programem, to zauważymy, że i
 
 Jednym ze sposobów na myślenie o programowaniu obiektowym jest rozdzielenie naszego programu na wiele "stref". Każda strefa zawiera pewien kod i dane (tak jak program) oraz ma dobrze zdefiniowane interakcje ze światem zewnętrznym i innymi strefami w programie.
 
-Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której korzystaliśmy z biblioteki BeautifulSoup, to możemy zobaczyć program, który jest skonstruowany poprzez złączenie różnych obiektów w celu wykonania tego zadania:
+Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której korzystaliśmy z biblioteki `BeautifulSoup`, to możemy zobaczyć program, który jest skonstruowany poprzez złączenie różnych obiektów w celu wykonania tego zadania:
 
 \index{BeautifulSoup, biblioteka}
 \index{HTML}
@@ -99,7 +99,7 @@ Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której kor
 
 \VerbatimInput{../code3/urllinks.py}
 
-Wczytujemy adres URL do zmiennej przechowującej ciąg znaków, a następnie przekazujemy ją do `urllib`, tak aby pobrać dane z sieci. Moduł `urllib` wykorzystuje w rzeczywistości moduł `socket` do nawiązania połączenia z siecią w celu pobrania danych. Bierzemy ciąg znaków, który zwraca `urllib`, i przekazujemy go do BeautifulSoup do dalszej analizy. BeautifulSoup korzysta z obiektu `html.parser`^[<https://docs.python.org/3/library/html.parser.html>] i w wyniku też zwraca nam obiekt. Na zwróconym obiekcie wywołujemy metodę `tags()`, która zwraca słownik obiektów będących znacznikami. Przechodzimy w pętli po znacznikach i dla każdego znacznika wywołujemy metodę `get()`, tak aby wypisać jego atrybut `href`.
+Wczytujemy adres URL do zmiennej przechowującej ciąg znaków, a następnie przekazujemy ją do `urllib`, tak aby pobrać dane z sieci. Moduł `urllib` wykorzystuje w rzeczywistości moduł `socket` do nawiązania połączenia z siecią w celu pobrania danych. Bierzemy ciąg znaków, który zwraca `urllib`, i przekazujemy go do `BeautifulSoup` do dalszej analizy. `BeautifulSoup` korzysta z obiektu `html.parser`^[<https://docs.python.org/3/library/html.parser.html>] i w wyniku też zwraca nam obiekt. Na zwróconym obiekcie wywołujemy metodę `tags()`, która zwraca słownik obiektów będących znacznikami. Przechodzimy w pętli po znacznikach i dla każdego znacznika wywołujemy metodę `get()`, tak aby wypisać jego atrybut `href`.
 
 Możemy narysować dla tego programu diagram z oznaczeniem, jak te obiekty ze sobą współpracują.
 
@@ -110,11 +110,11 @@ W tym przypadku kluczowe nie jest idealne zrozumienie jak ten program działa, a
 Dzielenie problemu na mniejsze podproblemy
 ------------------------------------------
 
-Jedną z zalet podejścia obiektowego jest to, że może ono ukryć złożoność jakiegoś problemu. Na przykład, o ile musimy wiedzieć, jak używać biblioteki `urllib` i BeautifulSoup, to nie musimy wiedzieć, jak one działają w środku. Pozwala nam to skupić się na tej części problemu, którą musimy rozwiązać, i pominąć pozostałe części programu.
+Jedną z zalet podejścia obiektowego jest to, że może ono ukryć złożoność jakiegoś problemu. Na przykład, o ile musimy wiedzieć, jak używać biblioteki `urllib` i `BeautifulSoup`, to nie musimy wiedzieć, jak one działają w środku. Pozwala nam to skupić się na tej części problemu, którą musimy rozwiązać, i pominąć pozostałe części programu.
 
 ![Pomijanie szczegółów podczas używania obiektu](height=1.50in@../images/program-oo-code)
 
-Możliwość skupienia się wyłącznie na tej części programu, na której nam zależy, i pominięcia reszty jest również pomocna dla twórców używanych przez nas obiektów. Na przykład programiści tworzący BeautifulSoup nie muszą wiedzieć ani dbać o to, w jaki sposób pobieramy naszą stronę HTML, jakie części chcemy przeczytać lub co planujemy zrobić z danymi, które pobieramy ze strony.
+Możliwość skupienia się wyłącznie na tej części programu, na której nam zależy, i pominięcia reszty jest również pomocna dla twórców używanych przez nas obiektów. Na przykład programiści tworzący `BeautifulSoup` nie muszą wiedzieć ani dbać o to, w jaki sposób pobieramy naszą stronę HTML, jakie części chcemy przeczytać lub co planujemy zrobić z danymi, które pobieramy ze strony.
 
 ![Pomijanie szczegółów podczas budowania obiektu](height=1.50in@../images/program-oo-bs4)
 

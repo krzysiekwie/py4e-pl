@@ -311,14 +311,14 @@ Nawet jeśli HTML wygląda jak XML^[Format XML jest opisany w następnym rozdzia
 
 Istnieje wiele bibliotek Pythona, które mogą pomóc Ci w parsowaniu HTMLa i wyodrębnieniu danych ze stron. Każda z tych bibliotek ma swoje mocne i słabe strony, a Ty możesz wybrać jedną z nich w zależności od swoich potrzeb.
 
-Jako przykład przetworzymy trochę danych HTML i wyodrębnimy linki za pomocą biblioteki *BeautifulSoup*. Ta biblioteka toleruje bardzo wadliwy kod HTML i nadal pozwala na łatwe wyodrębnienie potrzebnych danych. Możesz pobrać i zainstalować kod BeautifulSoup ze strony:
+Jako przykład przetworzymy trochę danych HTML i wyodrębnimy linki za pomocą biblioteki `BeautifulSoup`. Ta biblioteka toleruje bardzo wadliwy kod HTML i nadal pozwala na łatwe wyodrębnienie potrzebnych danych. Możesz pobrać i zainstalować kod `BeautifulSoup` ze strony:
 
 <https://pypi.org/project/beautifulsoup4/>
 
 Bibliotekę możemy zainstalować poprzez wiersz linii poleceń, wydając komendę:
 
 ~~~~
-pip3 install beautifulsoup4
+$ pip3 install beautifulsoup4
 ~~~~
 
 Bardziej szczegółowe informacje na temat instalacji bibliotek za pomocą narzędzia *Python Package Index* `pip` są dostępne na stronie internetowej:
@@ -333,7 +333,7 @@ Użyjemy `urllib` do odczytania strony, a następnie użyjemy `BeautifulSoup` do
 
 \VerbatimInput{../code3/urllinks.py}
 
-Program pyta o adres internetowy, po czym otwiera stronę, odczytuje dane i przekazuje je do parsera BeautifulSoup, a następnie pobiera wszystkie znaczniki hiperłączy i dla każdego z nich wypisuje atrybut `href`.
+Program pyta o adres internetowy, po czym otwiera stronę, odczytuje dane i przekazuje je do parsera `BeautifulSoup`, a następnie pobiera wszystkie znaczniki hiperłączy i dla każdego z nich wypisuje atrybut `href`.
 
 Po uruchomieniu programu uzyskamy mniej więcej następujący wynik:
 
@@ -386,7 +386,7 @@ http://sphinx.pocoo.org/
 
 Tym razem lista jest o wiele dłuższa, ponieważ niektóre znaczniki hiperłączy są ścieżkami względnymi (np. "tutorial/index.html") lub odniesieniami wewnątrz strony (np. "#"), które nie zawierają "http://" lub "https://", co było wymogiem w naszym podejściu z wyrażeniem regularnym.
 
-Możesz również użyć BeautifulSoup do wyciągnięcia różnych elementów związanych ze znacznikiem HTML:
+Możesz również użyć `BeautifulSoup` do wyciągnięcia różnych elementów związanych ze znacznikiem HTML:
 
 \VerbatimInput{../code3/urllink2.py}
 
@@ -404,7 +404,7 @@ Attrs: [('href', 'http://www.dr-chuck.com/page2.htm')]
 
 <https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser>
 
-Powyższe przykłady są tylko namiastką możliwości, jakie daje BeautifulSoup, jeśli chodzi o parsowanie HTMLa.
+Powyższe przykłady są tylko namiastką możliwości, jakie daje `BeautifulSoup`, jeśli chodzi o parsowanie HTMLa.
 
 Dodatek dla użytkowników systemu Unix / Linux
 ---------------------------------------------
@@ -433,7 +433,7 @@ Słowniczek
 ----------
 
 BeautifulSoup
-:   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, zazwyczaj ignorowanych przez przeglądarki internetowe. Biblioteka BeautifulSoup ma swoją stronę pod adresem <https://www.crummy.com/software/BeautifulSoup>.
+:   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, zazwyczaj ignorowanych przez przeglądarki internetowe. Biblioteka `BeautifulSoup` ma swoją stronę pod adresem <https://www.crummy.com/software/BeautifulSoup>.
 \index{BeautifulSoup, biblioteka}
 
 gniazdo
