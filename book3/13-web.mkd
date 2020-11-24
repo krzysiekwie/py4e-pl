@@ -165,12 +165,12 @@ API – Interfejsy programowania aplikacji
 
 Mamy teraz możliwość wymiany danych pomiędzy aplikacjami przy użyciu protokołu HTTP oraz sposób na reprezentowanie skomplikowanych danych, które wysyłamy tam i z powrotem między aplikacjami przy użyciu XMLa lub JSONa.
 
-Następnym krokiem jest rozpoczęcie definiowania i dokumentowania "umów" pomiędzy aplikacjami wykorzystującymi powyższe techniki. Ogólna nazwa takiej umowy to *interfejsy programowania aplikacji* (ang. Application Program Interfaces, API). Kiedy używamy API, zazwyczaj jeden z programów udostępnia zestaw *usług* do wykorzystania przez inne aplikacje i publikuje API (tzn. "zasady"), których należy przestrzegać, by uzyskać dostęp do tych usług.
+Następnym krokiem jest rozpoczęcie definiowania i dokumentowania "umów" pomiędzy aplikacjami wykorzystującymi powyższe techniki. Ogólna nazwa takiej umowy to *interfejsy programowania aplikacji* (ang. *Application Program Interfaces*, API). Kiedy używamy API, zazwyczaj jeden z programów udostępnia zestaw *usług* do wykorzystania przez inne aplikacje i publikuje API (tzn. "zasady"), których należy przestrzegać, by uzyskać dostęp do tych usług.
 
 \index{SOA}
 \index{architektura usługowa}
 
-Gdy zaczynamy budować nasze programy, których działanie obejmuje dostęp do usług świadczonych przez inne programy, nazywamy to podejście *architekturą usługową* (ang. Service-Oriented Architecture, SOA). Podejście SOA to takie, w którym cała nasza aplikacja korzysta z usług innych aplikacji. Podejście inne niż SOA to takie, w którym aplikacja jest pojedyncza i samodzielna – zawiera cały kod niezbędny do jej implementacji i wdrożenia.
+Gdy zaczynamy budować nasze programy, których działanie obejmuje dostęp do usług świadczonych przez inne programy, nazywamy to podejście *architekturą usługową* (ang. *Service-Oriented Architecture*, SOA). Podejście SOA to takie, w którym cała nasza aplikacja korzysta z usług innych aplikacji. Podejście inne niż SOA to takie, w którym aplikacja jest pojedyncza i samodzielna – zawiera cały kod niezbędny do jej implementacji i wdrożenia.
 
 Podczas korzystania z sieci widzimy wiele przykładów SOA. Możemy wejść na stronę internetową i zarezerwować podróże lotnicze, hotele i wypożyczyć samochody, a wszystko to z poziomu jednej strony. Dane dotyczące hoteli nie są przechowywane na serwerach linii lotniczych. Zamiast tego serwery linii lotniczych kontaktują się z usługami znajdującymi się na serwerach rezerwacji hotelowych, pobierają dane dotyczące hoteli i przedstawiają je użytkownikowi. Kiedy użytkownik wyraża zgodę na dokonanie rezerwacji hotelowej za pomocą strony internetowej linii lotniczych, strona ta korzysta z innej usługi internetowej w systemach hotelowych, tak aby faktycznie dokonać tej rezerwacji. A gdy przychodzi czas, by obciążyć kartę płatniczą za całą transakcję, w proces ten włączają się jeszcze inne serwery.
 

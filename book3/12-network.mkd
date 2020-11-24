@@ -42,7 +42,7 @@ Być może najprostszym sposobem na pokazanie, jak działa protokół HTTP, jest
 
 \VerbatimInput{../code3/socket1.py}
 
-Najpierw program nawiązuje połączenie z serwerem na porcie 80 [data.pr4e.org](http://data.pr4e.org). Ponieważ nasz program pełni rolę "przeglądarki internetowej", protokół HTTP mówi, że musimy wysłać polecenie GET, a następnie pustą linię. `\r\n` oznacza EOL (ang. end of line, czyli koniec linii), a więc `\r\n\r\n` oznacza pustkę pomiędzy dwiema sekwencjami EOL. Jest to odpowiednik pustego wiersza.
+Najpierw program nawiązuje połączenie z serwerem na porcie 80 [data.pr4e.org](http://data.pr4e.org). Ponieważ nasz program pełni rolę "przeglądarki internetowej", protokół HTTP mówi, że musimy wysłać polecenie GET, a następnie pustą linię. `\r\n` oznacza EOL (ang. *end of line*, czyli koniec linii), a więc `\r\n\r\n` oznacza pustkę pomiędzy dwiema sekwencjami EOL. Jest to odpowiednik pustego wiersza.
 
 ![Połączenie przez gniazdo](height=2.0in@../images/socket)
 

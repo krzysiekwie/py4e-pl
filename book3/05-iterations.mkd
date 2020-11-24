@@ -136,7 +136,7 @@ $ python3 copytildone1.py
 halo
 > nie wiem jak wyjść
 nie wiem jak wyjść
-> ^CTraceback (most recent call last):            # tutaj wciśnięto Ctrl+C
+> ^CTraceback (most recent call last):            # tutaj wciśnięto <Ctrl+C>
   File "copytildone1.py", line 2, in <module>
     line = input('> ')
 KeyboardInterrupt

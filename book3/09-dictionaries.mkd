@@ -395,9 +395,9 @@ Sprawdź podsumowania i typy
 \index{sprawdzenie spójności}
 
 Napisz mechanizm do samokontroli
-:   Czasami warto napisać kod do automatycznego sprawdzania błędów. Na przykład, jeśli obliczasz średnią z listy liczb, możesz sprawdzić, czy wynik nie jest większy od największego elementu na liście lub mniejszy od najmniejszego. Nazywa się to "sprawdzaniem poczytalności" (ang. sanity check), ponieważ wykrywa wyniki, które są "zupełnie nielogiczne".
+:   Czasami warto napisać kod do automatycznego sprawdzania błędów. Na przykład, jeśli obliczasz średnią z listy liczb, możesz sprawdzić, czy wynik nie jest większy od największego elementu na liście lub mniejszy od najmniejszego. Nazywa się to "sprawdzaniem poczytalności" (ang. *sanity check*), ponieważ wykrywa wyniki, które są "zupełnie nielogiczne".
 
-    Inny rodzaj sprawdzenia porównuje wyniki dwóch różnych obliczeń, tak aby sprawdzić czy są one spójne. Nazywa się to "sprawdzaniem spójności" (ang. consistency check).
+    Inny rodzaj sprawdzenia porównuje wyniki dwóch różnych obliczeń, tak aby sprawdzić czy są one spójne. Nazywa się to "sprawdzaniem spójności" (ang. *consistency check*).
 
 Ładne wyświetlenie wyniku
 :   Czytelne sformatowanie wyników debugowania może ułatwić wykrycie błędu.
