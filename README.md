@@ -32,8 +32,9 @@ Polish translation
 | `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☒    |
 | `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
-| Functions and methods with `()` |         |            |       |
-| Inline code within grave accents |         |            |       |
+| File names within grave accents |         |            |       |
+| `$ python script.py` in exercises |         |            |       |
+| Images: flow control, fonts |         |            |       |
 | `unit.sh` check |         |            |       |
 
 (*) moved `book3/figs2` to `images`.

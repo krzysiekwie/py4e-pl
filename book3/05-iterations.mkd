@@ -200,7 +200,7 @@ Zrobione!
 
 Tłumaczenie tej pętli `for` na ludzki język nie jest tak bezpośrednie jak w przypadku `while`, ale jeśli myślisz o zmiennej friends jako o *zbiorze*, to idzie to tak: "Uruchom instrukcje w ciele pętli *for* raz dla każdego przyjaciela (friend) znajdującego się *w* (in) zbiorze przyjaciół (friends)".
 
-Patrząc na pętlę `for`, słowa *for* i *in* są zastrzeżonymi słowami kluczowymi Pythona, a `friend` i `friends` są zmiennymi.
+Patrząc na poniższą pętlę, słowa `for` i `in` są zastrzeżonymi słowami kluczowymi Pythona, a `friend` i `friends` są zmiennymi.
 
 ~~~~ {.python}
 for friend in friends:
