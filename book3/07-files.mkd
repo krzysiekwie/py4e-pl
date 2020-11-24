@@ -302,7 +302,7 @@ Zespół QA jest odpowiedzialny za znalezienie wad w programach, zanim dostarczy
 \index{funkcja!open}
 \index{wyjątek!IOError}
 \index{IOError}
-\index{łapanie wyjątku}
+\index{lzapanie wyjatkow@łapanie wyjątku}
 
 Więc teraz, gdy widzimy wadę w programie, możemy ją elegancko naprawić, używając struktury `try`/`except`. Musimy przyjąć, że `open()` może się nie powieść, więc dodamy kod naprawczy, który zadziała, gdy tak się stanie:
 
@@ -528,7 +528,7 @@ krzaki
 
 łapanie wyjątku
 :   Uniemożliwienie wyjątkowi zakończenia programu przy użyciu instrukcji `try` i `except`.
-\index{łapanie wyjątku}
+\index{lzapanie wyjatkow@łapanie wyjątku}
 
 plik tekstowy
 :   Sekwencja znaków zapisana na nośniku do trwałego przechowywania, np. na dysku twardym.

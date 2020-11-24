@@ -9,7 +9,7 @@ Wartości i typy
 \index{typ}
 \index{ciąg znaków}
 \index{napis}
-\index{łańcuch znaków}
+\index{lzancuch znakow@łańcuch znaków}
 
 *Wartość* jest jedną z podstawowych rzeczy, z którymi pracuje program. Wartości, takie jak litery czy cyfry, które widzieliśmy do tej pory, to np. 6 i "Witaj
 świecie!".
@@ -745,7 +745,7 @@ ciąg znaków
 :   Typ danych `str`, który reprezentuje sekwencje znaków; inaczej napis lub łańcuch znaków.
 \index{ciąg znaków}
 \index{napis}
-\index{łańcuch znaków}
+\index{lzancuch znakow@łańcuch znaków}
 
 ewaluacja
 :   Uproszczenie wyrażenia poprzez wykonanie operacji w celu uzyskania

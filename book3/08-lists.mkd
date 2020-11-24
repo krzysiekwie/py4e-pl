@@ -169,7 +169,7 @@ Operacje na listach
 Operator `+` konkatenuje (łączy) listy:
 
 \index{konkatenacja list}
-\index{łączenie list}
+\index{lzaczenie list@łączenie list}
 \index{lista!konkatenacja}
 
 ~~~~ {.python .trinket}
@@ -398,7 +398,7 @@ Listy i ciągi znaków
 \index{lista}
 \index{ciąg znaków}
 \index{napis}
-\index{łańcuch znaków}
+\index{lzancuch znakow@łańcuch znaków}
 \index{sekwencja}
 
 Ciąg znaków jest sekwencją znaków, a lista jest sekwencją wartości, ale lista znaków i ciąg znaków to nie to samo. Aby przekonwertować ciąg znaków na listę znaków, możesz użyć funkcji `list()`:
@@ -619,7 +619,7 @@ Ważne jest, by odróżniać operacje, które modyfikują listy, od operacji, kt
 \index{metoda!append}
 \index{lista!konkatenacja}
 \index{konkatenacja list}
-\index{łączenie list}
+\index{lzaczenie list@łączenie list}
 
 ~~~~ {.python .trinket}
 >>> t1 = [1, 2]

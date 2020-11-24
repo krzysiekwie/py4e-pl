@@ -431,7 +431,7 @@ W wielu kontekstach różne rodzaje sekwencji (ciągów znaków, list i krotek) 
 
 \index{ciąg znaków}
 \index{napis}
-\index{łańcuch znaków}
+\index{lzancuch znakow@łańcuch znaków}
 \index{lista}
 \index{krotka}
 \index{zmienność}
