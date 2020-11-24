@@ -124,7 +124,7 @@ Napisz pętlę `while`, która zaczyna się od ostatniego znaku w ciągu i dzia�
 
 ----
 
-Innym sposobem na napisanie przejścia jest użycie pętli `for`:
+Innym sposobem na napisanie przejścia przez ciąg znaków jest użycie pętli `for`:
 
 ~~~~ {.python}
 for char in fruit:
