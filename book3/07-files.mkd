@@ -334,7 +334,7 @@ Pisanie do plików
 
 \index{plik!pisanie}
 
-Aby móc zapisywać dane do pliku, musisz otworzyć go w trybie `w`, podanym jako drugi argument:
+Aby móc zapisywać dane do pliku, musisz otworzyć go w trybie `w` (skrót z ang. *write*), podanym jako drugi argument:
 
 ~~~~ {.python}
 >>> fout = open('output.txt', 'w')
