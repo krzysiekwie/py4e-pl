@@ -476,15 +476,16 @@ wyrażenie regularne
 Napisz prosty program symulujący działanie unixowej komendy `grep`. Poproś użytkownika o wpisanie wyrażenia regularnego i zlicz linie, które do niego pasują:
 
 ~~~~
-$ python grep.py
 Podaj wyrażenie regularne: ^Author
 mbox.txt ma 1798 linii, które pasują do ^Author
+~~~~
 
-$ python grep.py
+~~~~
 Podaj wyrażenie regularne: ^X-
 mbox.txt ma 14368 linii, które pasują do ^X-
+~~~~
 
-$ python grep.py
+~~~~
 Podaj wyrażenie regularne: java$
 mbox.txt ma 4175 linii, które pasują do java$
 ~~~~

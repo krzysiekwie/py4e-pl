@@ -227,7 +227,7 @@ else:
     print('x i y są równe')
 ~~~~
 
-`elif` jest skrótem od "else if". Tutaj również wykonana zostanie 
+`elif` jest skrótem od *else if*. Tutaj również wykonana zostanie 
 dokładnie jedna gałąź.
 
 ![Logika if-elif](height=2.0in@../images/elif)
@@ -345,13 +345,11 @@ Jeśli uruchomimy ten kod i podamy mu błędne dane wejściowe, to program po
 prostu zakończy się niepowodzeniem z niemiłym komunikatem o błędzie:
 
 ~~~~
-$ python fahren.py
 Podaj temperaturę w skali Fahrenheita: 72
 22.22222222222222
 ~~~~
 
 ~~~~
-$ python fahren.py
 Podaj temperaturę w skali Fahrenheita: fred
 Traceback (most recent call last):
   File "fahren.py", line 2, in <module>
@@ -378,13 +376,11 @@ w bloku `try`, Python wyskakuje z bloku `try` i wykonuje sekwencję instrukcji
 w bloku `except`.
 
 ~~~~
-$ python fahren2.py
 Podaj temperaturę w skali Fahrenheita: 72
 22.22222222222222
 ~~~~
 
 ~~~~
-$ python fahren2.py
 Podaj temperaturę w skali Fahrenheita: fred
 Musisz wprowadzić liczbę
 ~~~~

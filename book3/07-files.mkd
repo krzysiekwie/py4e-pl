@@ -40,7 +40,7 @@ Kiedy chcemy odczytać lub zapisać plik (np. na dysku twardym), musimy najpierw
 
 Jeśli funkcja `open()` się powiedzie, system operacyjny zwróci nam  *uchwyt pliku*. Uchwyt pliku nie jest rzeczywistymi danymi zawartymi w tym pliku, lecz "uchwytem", który możemy użyć do odczytania danych. Otrzymujesz uchwyt, jeśli żądany plik istnieje i masz odpowiednie uprawnienia do jego odczytania.
 
-![A File Handle](height=2.0in@../images/handle)
+![Uchwyt pliku](height=2.0in@../images/handle)
 
 Jeśli plik nie istnieje, `open()` się nie powiedzie, a Ty nie będziesz mógł uzyskać dostępu do jego zawartości:
 
@@ -254,11 +254,11 @@ Jest to dość proste do zrobienia poprzez odczytanie nazwy pliku od użytkownik
 Odczytujemy nazwę pliku wprowadzoną przez użytkownika, umieszczamy ją w zmiennej o nazwie `fname` i otwieramy ten plik. Teraz możemy uruchamiać program wielokrotnie na różnych plikach.
 
 ~~~~
-$ python search6.py
 Podaj nazwę pliku: mbox.txt
 Mamy 1797 linii z tematem wiadomości w pliku mbox.txt
+~~~~
 
-$ python search6.py
+~~~~
 Podaj nazwę pliku: mbox-short.txt
 Mamy 27 linii z tematem wiadomości w pliku mbox-short.txt
 ~~~~
@@ -273,14 +273,14 @@ Mówiłem Ci, żebyś nie podglądał. To Twoja ostatnia szansa.
 A co, jeśli nasz użytkownik wpisze coś, co nie jest nazwą pliku?
 
 ~~~~
-$ python search6.py
 Podaj nazwę pliku: missing.txt
 Traceback (most recent call last):
   File "search6.py", line 2, in <module>
     fhand = open(fname)
 FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
+~~~~
 
-$ python search6.py
+~~~~
 Podaj nazwę pliku: szurum-burum
 Traceback (most recent call last):
   File "search6.py", line 2, in <module>
@@ -314,11 +314,11 @@ Więc teraz, gdy widzimy wadę w programie, możemy ją elegancko naprawić, uż
 Funkcja `exit()` kończy program. Jest to funkcja, którą wywołujemy, ale która nigdy nie wraca do miejsca wywołania. Teraz, gdy nasz użytkownik (lub zespół QA) wpisze jakieś głupie lub złe nazwy plików, "łapiemy" je i elegancko przywracamy normalne działanie:
 
 ~~~~
-$ python search7.py
 Podaj nazwę pliku: mbox.txt
 Mamy 1797 linii z tematem wiadomości w pliku mbox.txt
+~~~~
 
-$ python search7.py
+~~~~
 Podaj nazwę pliku: szurum-burum
 Nie można otworzyć pliku: szurum-burum
 ~~~~
@@ -558,7 +558,6 @@ znak końca linii
 Napisz program odczytujący plik i wypisz zawartość pliku (wiersz po wierszu), ale dużymi literami. Uruchomienie programu będzie wyglądało następująco:
 
 ~~~~
-$ python shout.py
 Podaj nazwę pliku: mbox-short.txt
 FROM STEPHEN.MARQUARD@UCT.AC.ZA SAT JAN  5 09:14:16 2008
 RETURN-PATH: <POSTMASTER@COLLAB.SAKAIPROJECT.ORG>
@@ -580,11 +579,11 @@ X-DSPAM-Confidence: 0.8475
 Gdy trafisz na linię, która zaczyna się od "X-DSPAM-Confidence:", podziel linię tak, by wyodrębnić z niej liczbę zmiennoprzecinkową. Zliczaj te linie i sumuj wartości oznaczające pewność, że mamy do czynienia ze spamem. Kiedy dotrzesz do końca pliku, wydrukuj średnią wartość pewności.
 
 ~~~~
-$ python spamconf.py
 Podaj nazwę pliku: mbox.txt
 Średni poziom pewności spamu: 0.894128046745
+~~~~
 
-$ python spamconf.py
+~~~~
 Podaj nazwę pliku: mbox-short.txt
 Średni poziom pewności spamu: 0.750718518519
 ~~~~
@@ -596,15 +595,16 @@ Przetestuj swój program na plikach `mbox.txt` i `mbox-short.txt`.
 Czasami, gdy programiści się nudzą lub chcą się trochę zabawić, dodają do swojego programu nieszkodliwy tzw. *Easter Egg*^[<https://pl.wikipedia.org/wiki/Easter_egg>] (dosł. z ang. *jajko wielkanocne*). Zmodyfikuj swój program, który pyta użytkownika o nazwę pliku tak, by wypisał zabawną wiadomość, gdy użytkownik wpisze w nim nazwę pliku "trele morele". Program powinien zachowywać się normalnie dla wszystkich innych plików, które istnieją lub nie. Oto przykładowe wykonanie programu:
 
 ~~~~
-$ python egg.py
 Podaj nazwę pliku: mbox.txt
 Mamy 1797 linii z tematem wiadomości w pliku mbox.txt
+~~~~
 
-$ python egg.py
-Podaj nazwę pliku: missing.tyxt
-Nie można otworzyć pliku: missing.tyxt
+~~~~
+Podaj nazwę pliku: missing.txt
+Nie można otworzyć pliku: missing.txt
+~~~~
 
-$ python egg.py
+~~~~
 Podaj nazwę pliku: trele morele
 TRELE MORELE - co za bzdury!
 ~~~~

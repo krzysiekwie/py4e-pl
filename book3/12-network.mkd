@@ -103,7 +103,6 @@ W poprzednim przykładzie pobraliśmy zwykły plik tekstowy, który zawierał zn
 Po uruchomieniu programu generuje on następujące wyjście:
 
 ~~~~
-$ python urljpeg.py
 5120 5120
 5120 10240
 4240 14480
@@ -143,7 +142,6 @@ W zależności od szybkości Twojej sieci te wartości mogą być jeszcze inne. 
 Możemy spowolnić nasze kolejne wywołania `recv()` przez odkomentowanie wywołania `time.sleep()`. W ten sposób czekamy ćwierć sekundy po każdym wywołaniu, tak aby serwer mógł "wyprzedzić" nas i przesłać nam więcej danych, zanim ponownie wywołamy `recv()`. Z włączonym opóźnieniem program wykonuje się w następujący sposób:
 
 ~~~~
-$ python urljpeg.py
 5120 5120
 5120 10240
 5120 15360
@@ -226,7 +224,6 @@ W powyższym przykładzie odczytujemy jednocześnie tylko 100 000 znaków, a nas
 Program działa następująco:
 
 ~~~~
-$ python curl2.py
 Skopiowano 230210 znaków.
 ~~~~
 
@@ -394,7 +391,6 @@ Możesz również użyć `BeautifulSoup` do wyciągnięcia różnych elementów 
 \VerbatimInput{../code3/urllink2.py}
 
 ~~~~
-$ python urllink2.py
 Podaj link - http://www.dr-chuck.com/page1.htm
 TAG: <a href="http://www.dr-chuck.com/page2.htm">
 Second Page</a>
