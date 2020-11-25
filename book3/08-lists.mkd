@@ -799,7 +799,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
     Niby działa i widzimy dzień tygodnia dla pierwszej linii (Sat), ale 
     potem program się wysypuje i widzimy błąd razem ze zrzutem z 
-    mechanizmu traceback. Co poszło nie tak? Jakie pomyłki w danych 
+    mechanizmu *traceback*. Co poszło nie tak? Jakie pomyłki w danych 
     spowodowały, że nasz elegancki, pomysłowy i bardzo pythonowy 
     program zawiódł?
 
@@ -827,7 +827,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
     Kiedy uruchomimy program, przez ekran przewinie się duża ilość 
     danych, ale na końcu zobaczymy nasze debugowane dane 
-    wyjściowe i zrzut z mechanizmu traceback, więc wiemy, co się 
+    wyjściowe i zrzut z mechanizmu *traceback*, więc wiemy, co się 
     wydarzyło tuż przed błędem.
 
     ~~~~

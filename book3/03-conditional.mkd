@@ -302,8 +302,8 @@ if 0 < x and x < 10:
     print('x jest jednocyfrową dodatnią liczbą.')
 ~~~~
 
-Łapanie wyjątków przy użyciu try i except
------------------------------------------
+Łapanie wyjątków przy użyciu `try` i `except`
+---------------------------------------------
 
 Wcześniej widzieliśmy fragment kodu, w którym używaliśmy funkcji `input()` i `int()`
 do odczytania i przetworzenia liczby całkowitej wprowadzonej przez użytkownika.

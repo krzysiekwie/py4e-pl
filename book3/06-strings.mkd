@@ -547,7 +547,7 @@ Traceback (most recent call last):
 IndexError: string index out of range
 ~~~~
 
-Kod działa dobrze, dopóki nie zostanie mu podsunięty pusty wiersz. Nie można wtedy odnaleźć znaku zerowego, więc otrzymujemy komunikat mechanizmu traceback. Są na to dwa rozwiązania, które sprawiają, że trzeci wiersz jest "bezpieczny", nawet jeśli jest on pusty.
+Kod działa dobrze, dopóki nie zostanie mu podsunięty pusty wiersz. Nie można wtedy odnaleźć znaku zerowego, więc otrzymujemy komunikat mechanizmu *traceback*. Są na to dwa rozwiązania, które sprawiają, że trzeci wiersz jest "bezpieczny", nawet jeśli jest on pusty.
 
 Jedną z możliwości jest po prostu użycie metody `startswith()`, która zwraca `False`, jeśli ciąg znaków jest pusty.
 

@@ -171,8 +171,8 @@ Pomiędzy serwerem wykonującym żądania `send()` a naszą aplikacją wykonują
 
 \index{kontrola przepływu}
 
-Pobieranie stron internetowych przy pomocy `urllib`
----------------------------------------------------
+Pobieranie stron internetowych za pomocą `urllib`
+-------------------------------------------------
 
 Choć możemy ręcznie wysyłać i odbierać dane za pomocą protokołu HTTP przy użyciu biblioteki gniazd, istnieje w Pythonie znacznie prostszy sposób na wykonanie tego zadania przy użyciu biblioteki `urllib`.
 
@@ -302,8 +302,8 @@ Wyrażenia regularne działają bardzo dobrze wtedy, gdy analizowany kod HTML je
 
 Problem ten można rozwiązać za pomocą solidnej i stabilnej biblioteki do parsowania HTMLa.
 
-Parsowanie HTMLa przy użyciu BeautifulSoup
-------------------------------------------
+Parsowanie HTMLa przy użyciu `BeautifulSoup`
+--------------------------------------------
 
 \index{BeautifulSoup, moduł}
 

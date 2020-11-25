@@ -263,9 +263,9 @@ Podaj nazwę pliku: mbox-short.txt
 Mamy 27 linii z tematem wiadomości w pliku mbox-short.txt
 ~~~~
 
-Zanim przejdziemy do następnej sekcji, spójrzmy na powyższy program i zadajmy sobie pytanie: "Co tu się może nie udać?" lub "Co mógłby zrobić nasz miły użytkownik, żeby nasz mały program zakończył się błędem z komunikatem traceback, co sprawiłoby, że wyjdziemy na kiepskich programistów?".
+Zanim przejdziemy do następnej sekcji, spójrzmy na powyższy program i zadajmy sobie pytanie: "Co tu się może nie udać?" lub "Co mógłby zrobić nasz miły użytkownik, żeby nasz mały program zakończył się błędem z komunikatem mechanizmu *traceback*, co sprawiłoby, że wyjdziemy na kiepskich programistów?".
 
-Używanie `try`, `except` i `open`
+Używanie `try`, `except` i `open()`
 ---------------------------------
 
 Mówiłem Ci, żebyś nie podglądał. To Twoja ostatnia szansa.
