@@ -465,7 +465,8 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "C:\Python3\lib\encodings\cp1252.py", line 19, in encode
     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
-UnicodeEncodeError: 'charmap' codec can't encode character '\u017c' in position 0: character maps to <undefined>
+UnicodeEncodeError: 'charmap' codec can't encode character '\u017c' in position 0:
+                    character maps to <undefined>
 >>> fhand_pl1.close()
 ~~~~
 

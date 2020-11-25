@@ -263,7 +263,7 @@ Pobrano: 587
 ~~~~ {.json}
 {
     "type": "FeatureCollection",
-    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. ...",
     "features": [
         {
             "type": "Feature",
@@ -271,7 +271,7 @@ Pobrano: 587
                 "place_id": 146750,
                 "osm_type": "node",
                 "osm_id": 27023455,
-                "display_name": "Ann Arbor, Washtenaw County, Michigan, 48104, United States of America",
+                "display_name": "Ann Arbor, Washtenaw County, Michigan, 48104, ...",
                 "place_rank": 16,
                 "category": "place",
                 "type": "city",

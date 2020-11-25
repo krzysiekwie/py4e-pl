@@ -30,7 +30,9 @@
 #    cudzysłowami, łącznie z nawiasami ostrokątnymi)
 
 def oauth():
-    return {"consumer_key":    "<tutaj umieść Consumer Keys - API key>",
-            "consumer_secret": "<tutaj umieść Consumer Keys - API key secret>",
-            "token_key":       "<tutaj umieść Authentication Tokens - Access Token & Secret - Access token>",
-            "token_secret":    "<tutaj umieść Authentication Tokens - Access Token & Secret - Access token secret>"}
+    return {# Consumer Keys
+            "consumer_key":    "<tutaj umieść API key>",
+            "consumer_secret": "<tutaj umieść API key secret>",
+            # Authentication Tokens - Access Token & Secret
+            "token_key":       "<tutaj umieść Access token>",
+            "token_secret":    "<tutaj umieść Access token secret>"}
