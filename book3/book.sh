@@ -2,7 +2,7 @@
 
 # EPUB and MOBI versions
 
-cat epub-metadata.txt A0*.mkd 0*.mkd 1*.mkd AA*.mkd AB*.mkd | grep -v '^%' | python2 pre-html.py | python2 verbatim.py | pandoc --default-image-extension=svg --css=stylesheet.css -o x.epub
+cat epub-metadata.txt  <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) 0*.mkd 1*.mkd AA*.mkd AB*.mkd | grep -v '^%' | python2 pre-html.py | python2 verbatim.py | pandoc --default-image-extension=svg --css=stylesheet.css -o x.epub
 
 # make the mobi if it works (add verbose for debugging)
 if hash ebook-convert 2>/dev/null; then
