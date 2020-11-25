@@ -271,7 +271,7 @@ Pobrano: 587
                 "place_id": 146750,
                 "osm_type": "node",
                 "osm_id": 27023455,
-                "display_name": "Ann Arbor, Washtenaw County, Michigan, 48104, ...",
+                "display_name": "Ann Arbor, Washtenaw County, ...",
                 "place_rank": 16,
                 "category": "place",
                 "type": "city",
