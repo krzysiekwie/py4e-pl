@@ -19,7 +19,7 @@ rm tmp-1.* tmp-2.* tmp-3.* *.tmp *.aux 2> /dev/null
 
 # PDF print color version
 
-pandoc A0-preface.mkd -o tmp-1.prefacex.tex
+pandoc <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) -o tmp-1.prefacex.tex
 sed < tmp-1.prefacex.tex 's/section{/section*{/' > tmp-1.preface.tex
 
 cat [0-9]*.mkd | python2 verbatim.py | tee tmp-1.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V pdfversionprint -V fontsize:10pt -V documentclass:book -V lang:pl-PL -V langbabel:polish -V "author:Dr Charles R. Severance" -V "title:Python dla wszystkich" -V "subtitle:Odkrywanie danych z Python 3" -V colorlinks:false -V citecolor:black -V urlcolor:black -V linkcolor:black -V numbersections --template=template.latex -o tmp-1.tex
@@ -39,7 +39,7 @@ mv tmp-1.pdf x-1.pdf
 
 # PDF A4
 
-pandoc A0-preface.mkd -o tmp-2.prefacex.tex
+pandoc <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) -o tmp-2.prefacex.tex
 sed < tmp-2.prefacex.tex 's/section{/section*{/' > tmp-2.preface.tex
 
 cp 01-intro.mkd 01-intro.mkd.orig
@@ -62,7 +62,7 @@ mv tmp-2.pdf x-2.pdf
 
 # PDF print b/w version (disabled color syntax highlighting)
 
-pandoc A0-preface.mkd -o tmp-3.prefacex.tex
+pandoc <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) -o tmp-3.prefacex.tex
 sed < tmp-3.prefacex.tex 's/section{/section*{/' > tmp-3.preface.tex
 
 cat [0-9]*.mkd | python2 verbatim.py | tee tmp-3.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V pdfversionprint -V fontsize:10pt -V documentclass:book -V lang:pl-PL -V langbabel:polish -V "author:Dr Charles R. Severance" -V "title:Python dla wszystkich" -V "subtitle:Odkrywanie danych z Python 3" -V colorlinks:false -V citecolor:black -V urlcolor:black -V linkcolor:black -V numbersections --no-highlight --template=template.latex -o tmp-3.tex
