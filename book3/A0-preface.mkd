@@ -79,3 +79,5 @@ Książka "Python dla wszystkich", w odniesieniu do swojego oryginału "Python f
 W rozdziale 7 dodano sekcję o przetwarzaniu plików zawierających polski tekst. Rozdziały 13 i 16 korzystają z usługi Nominatim dostarczanej przez OpenStreetMap (zamiast z płatnego GoogleAPI). Indeks został poprawiony, usunięto zbędne i dodano nowe odniesienia w celu łatwiejszego wyszukiwania treści. W tekście dodano przypisy w celu rozjaśnienia polskiej terminologii. W kodach programów nie tłumaczono nazw zmiennych – jest to pewna ogólna konwencja programistyczna, która powinna również pomóc w sprawniejszym operowaniu pojęciami programistycznymi (może to być szczególnie przydatne podczas wyszukiwania w internecie treści na zadany problem).
 
 Na stronie internetowej, będącej uzupełnieniem tej książki, rozwinięto i uporządkowano sekcje dotyczące instalacji Pythona. 
+
+Korekta polskiego tłumaczenia została sfinansowana przez Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza w Poznaniu.

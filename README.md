@@ -32,7 +32,6 @@ Polish translation
 | `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☒    |
 | `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
-| Images: flow control, fonts |         |            |       |
 | `unit.sh` check |         |            |       |
 
 (*) moved `book3/figs2` to `images`.
