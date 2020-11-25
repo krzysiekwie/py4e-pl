@@ -618,7 +618,7 @@ Ping
 None
 ~~~~
 
-Wartość `None` nie jest taka sama jak ciąg znaków "None". Jest to specjalna 
+Wartość `None` nie jest taka sama jak ciąg znaków `'None'`. Jest to specjalna 
 wartość, która ma swój własny typ:
 
 ~~~~ {.python}
