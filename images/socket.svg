@@ -1,180 +1,97 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 518.66669 273.33334"
-   height="273.33334"
-   width="518.66669"
-   xml:space="preserve"
-   id="svg2"
-   version="1.1"><metadata
-     id="metadata8"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-     id="defs6" /><g
-     transform="matrix(1.3333333,0,0,-1.3333333,0,273.33333)"
-     id="g10"><g
-       transform="scale(0.1)"
-       id="g12"><path
-         id="path14"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 0,0 H 3890 V 2050 H 0 Z" /><path
-         id="path16"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 0,0 H 4610 V 2220 H 0 Z" /><path
-         id="path18"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 10,150 H 1360 V 2040 H 10 Z" /><path
-         id="path20"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 10,150 H 1360 V 2040 H 10 Z" /><g
-         transform="scale(10)"
-         id="g22"><text
-           id="text26"
-           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,19.9078,184)"><tspan
-             id="tspan24"
-             y="0"
-             x="0 7.408 19.535999 28.704 32.271999 36.720001 46.208 51.248001 60.431999 69.615997 74.944 83.536003">Twój program</tspan></text>
-</g><path
-         id="path28"
-         style="fill:#00c9cc;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1180,240 h 270 v 1260 h -270 z" /><path
-         id="path30"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1180,240 h 270 v 1260 h -270 z" /><g
-         transform="scale(10)"
-         id="g32"><text
-           id="text48"
-           style="font-variant:normal;font-weight:normal;font-size:14px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,126.187,131.372)"><tspan
-             id="tspan34"
-             y="0"
-             x="0">G</tspan><tspan
-             id="tspan36"
-             y="16.3918"
-             x="0.258984">N</tspan><tspan
-             id="tspan38"
-             y="32.784"
-             x="3.5000041">I</tspan><tspan
-             id="tspan40"
-             y="49.1758"
-             x="0.776954">A</tspan><tspan
-             id="tspan42"
-             y="65.568001"
-             x="1.035938">Z</tspan><tspan
-             id="tspan44"
-             y="81.959801"
-             x="0.38476601">D</tspan><tspan
-             id="tspan46"
-             y="98.351997"
-             x="-0.0070310002">O</tspan></text>
-</g><path
-         id="path50"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 460,1185 h 720 v 315 H 460 Z" /><path
-         id="path52"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 460,1185 h 720 v 315 H 460 Z" /><g
-         transform="scale(10)"
-         id="g54"><text
-           id="text58"
-           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,58.1441,128.474)"><tspan
-             id="tspan56"
-             y="0"
-             x="0 8 17.184 25.775999 34.080002 42.672001">socket</tspan></text>
-</g><path
-         id="path60"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 460,870 h 720 v 315 H 460 Z" /><path
-         id="path62"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 460,870 h 720 v 315 H 460 Z" /><g
-         transform="scale(10)"
-         id="g64"><text
-           id="text68"
-           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,53.1039,96.9738)"><tspan
-             id="tspan66"
-             y="0"
-             x="0 8.592 17.775999 26.672001 35.568001 44.16 52.751999">connect</tspan></text>
-</g><path
-         id="path70"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 460,555 h 720 V 870 H 460 Z" /><path
-         id="path72"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 460,555 h 720 V 870 H 460 Z" /><g
-         transform="scale(10)"
-         id="g74"><text
-           id="text78"
-           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,64.5121,65.4738)"><tspan
-             id="tspan76"
-             y="0"
-             x="0 8 16.591999 25.488001">send</tspan></text>
-</g><path
-         id="path80"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 460,240 h 720 V 555 H 460 Z" /><path
-         id="path82"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 460,240 h 720 V 555 H 460 Z" /><g
-         transform="scale(10)"
-         id="g84"><text
-           id="text88"
-           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,66.8879,33.9738)"><tspan
-             id="tspan86"
-             y="0"
-             x="0 5.04 13.632 22.224001">recv</tspan></text>
-</g><path
-         id="path90"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 2079.87,943.652 C 1745.31,1050 1878.72,1945.26 2412.41,1792.5 c 49.52,297.77 670.12,249.44 666.07,0 389.13,319.04 886.43,-317.12 552.87,-636.15 400.26,-154.68 -5.05,-988.065 -333.54,-848.85 -26.29,-232.0352 -613.52,-313.23438 -665.07,0 -332.52,-334.5195 -1025.89,179.824 -552.87,636.152 z" /><path
-         id="path92"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 2079.87,943.652 C 1745.31,1050 1878.72,1945.26 2412.41,1792.5 c 49.52,297.77 670.12,249.44 666.07,0 389.13,319.04 886.43,-317.12 552.87,-636.15 400.26,-154.68 -5.05,-988.065 -333.54,-848.85 -26.29,-232.0352 -613.52,-313.23438 -665.07,0 -332.52,-334.5195 -1025.89,179.824 -552.87,636.152 z" /><g
-         transform="scale(10)"
-         id="g94"><text
-           id="text108"
-           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,229.1,149)"><tspan
-             id="tspan96"
-             y="0"
-             x="0 12.128 24.256001 35.504002 39.952 49.439999 57.439999 66.335999 74.928001 79.375999 87.968002 97.152">www.py4e.com</tspan><tspan
-             id="tspan98"
-             y="36.448002"
-             x="32.135899 42.503899 47.5439 52.5839 61.767899 70.663902 78.663902">Strony </tspan><tspan
-             id="tspan100"
-             y="54.896"
-             x="13.3359 16.887899 25.783899 30.8239 39.415901 45.031898 53.927898 62.519901 67.559898 76.743896 88.871902">internetowe</tspan><tspan
-             id="tspan102"
-             y="73.344002"
-             x="53.176102">.</tspan><tspan
-             id="tspan104"
-             y="91.791702"
-             x="53.176102">.</tspan><tspan
-             id="tspan106"
-             y="110.2394"
-             x="53.176102">.</tspan></text>
-</g><path
-         id="path110"
-         style="fill:#00c9cc;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1450,870 h 810 v 270 h -810 z" /><path
-         id="path112"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1450,870 h 810 v 270 h -810 z" /><g
-         transform="scale(10)"
-         id="g114"><text
-           id="text118"
-           style="font-variant:normal;font-weight:normal;font-size:16px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,168.84,94.7238)"><tspan
-             id="tspan116"
-             y="0"
-             x="0 10.368 19.552 24.879999 29.92 34.368 43.264">Port 80</tspan></text>
-</g></g></g></svg>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="17.5 17.5 388 199" width="388" height="199">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="14" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18\n2020-11-25 13:48:37 +0000</metadata>
+  <g id="Canvas_1" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" fill="none" stroke="none">
+    <title>Canvas 1</title>
+    <rect fill="white" x="17.5" y="17.5" width="388" height="199"/>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_11">
+        <rect x="18" y="18" width="135" height="189" fill="white"/>
+        <rect x="18" y="18" width="135" height="189" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(23 23)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="13.908" y="15">Twój program</tspan>
+        </text>
+      </g>
+      <g id="Graphic_14">
+        <rect x="135" y="72" width="27" height="126" fill="#00c9cc"/>
+        <rect x="135" y="72" width="27" height="126" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(140 77.62801)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="3.187" y="13">G</tspan>
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="3.446" y="29.392">N</tspan>
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="6.687" y="45.783997">I</tspan>
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="3.964" y="62.175995">A</tspan>
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="4.223" y="78.56799">Z</tspan>
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="3.572" y="94.95999">D</tspan>
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="3.18" y="111.35199">O</tspan>
+        </text>
+      </g>
+      <g id="Group_30">
+        <g id="Graphic_34">
+          <rect x="63" y="72" width="72" height="31.5" fill="white"/>
+          <rect x="63" y="72" width="72" height="31.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(68 78.526)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="7.144" y="15">socket</tspan>
+          </text>
+        </g>
+        <g id="Graphic_33">
+          <rect x="63" y="103.5" width="72" height="31.5" fill="white"/>
+          <rect x="63" y="103.5" width="72" height="31.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(68 110.026)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="2.104" y="15">connect</tspan>
+          </text>
+        </g>
+        <g id="Graphic_32">
+          <rect x="63" y="135" width="72" height="31.5" fill="white"/>
+          <rect x="63" y="135" width="72" height="31.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(68 141.526)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="13.512" y="15">send</tspan>
+          </text>
+        </g>
+        <g id="Graphic_31">
+          <rect x="63" y="166.5" width="72" height="31.5" fill="white"/>
+          <rect x="63" y="166.5" width="72" height="31.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(68 173.026)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="15.888" y="15">recv</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_40">
+        <g id="Graphic_42">
+          <path d="M 224.9866 127.63458 C 191.53125 117 204.8724 27.4743 258.24114 42.75 C 263.19258 12.97278 325.25325 17.80596 324.84753 42.75 C 363.76146 10.84626 413.49114 74.46168 380.13516 106.36542 C 420.1607 121.83318 379.6301 205.17138 346.78125 191.25 C 344.15235 214.45362 285.42852 222.5736 280.27422 191.25 C 247.02174 224.7021 177.68502 173.26764 224.9866 127.63458 Z" fill="white"/>
+          <path d="M 224.9866 127.63458 C 191.53125 117 204.8724 27.4743 258.24114 42.75 C 263.19258 12.97278 325.25325 17.80596 324.84753 42.75 C 363.76146 10.84626 413.49114 74.46168 380.13516 106.36542 C 420.1607 121.83318 379.6301 205.17138 346.78125 191.25 C 344.15235 214.45362 285.42852 222.5736 280.27422 191.25 C 247.02174 224.7021 177.68502 173.26764 224.9866 127.63458 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_41">
+          <text transform="translate(212 58)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="41.42" y="15">data.pr4e.org</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="66.236" y="51.448">Strony </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="47.436" y="69.896">internetowe</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="87.276" y="88.34399">.</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="87.276" y="106.79199">.</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="87.276" y="125.23999">.</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Graphic_39">
+        <rect x="162" y="108" width="81" height="27" fill="#00c9cc"/>
+        <rect x="162" y="108" width="81" height="27" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(167 112.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="18.84" y="15">Port 80</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

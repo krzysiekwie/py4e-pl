@@ -1,374 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   viewBox="0 0 706.66669 325.33334"
-   height="325.33334"
-   width="706.66669"
-   xml:space="preserve"
-   id="svg2"
-   version="1.1"><metadata
-     id="metadata8"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-     id="defs6" /><g
-     transform="matrix(1.3333333,0,0,-1.3333333,0,325.33333)"
-     id="g10"><g
-       transform="scale(0.1)"
-       id="g12"><path
-         id="path14"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 0,0 H 5300 V 2440 H 0 Z" /><path
-         id="path16"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 0,0 H 6020 V 2520 H 0 Z" /><g
-         transform="matrix(1240,0,0,20,1800,910)"
-         id="g18"><image
-           id="image20"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAGCAYAAADT/mUtAAAABHNCSVQICAgIfAhkiAAAAHJJREFUaIHt2LkKgDAQRVHNQsj/f2wI2eweChER1ELuqW4RhqmmyDrGGMtErVWdc1anlNSlFHVrbTYGAHCDtVbtvVfHGNUhBLVzTm1e3g0A8BEOOgD8xHr25bLXe79sAMCzjDGXfXj/+kYAgE9w0AHgJzY5vCADwk3aMgAAAABJRU5ErkJggg=="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,160,1800,930)"
-         id="g22"><image
-           id="image24"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAwCAYAAAAB3YGdAAAABHNCSVQICAgIfAhkiAAAAW5JREFUeJzt2rttAkEYhVHMa4VEAggagP47ogE6WAjGiT38liCycXA5J7oSCE30aXfER2utTb5cr9fvOblcLn2fz+eHu35nHMcJAL8zDEPf+/2+79Pp1PfxeOz7cDj0PX3x2QD4J4IOEELQAUIIOkAIQQcIIegAIQQdIISgA4QQdIAQgg4QQtABQgg6QAhBBwgh6AAhBB0ghKADhBB0gBCCDhBC0AFCCDpACEEHCCHoACEEHSCEoAOEEHSAEIIOEELQAUIIOkAIQQcIIegAIQQdIISgA4QQdIAQgg4QQtABQgg6QAhBBwgh6AAh5s8+mM1mfS8Wi76Xy2XfwzC86FgA76l2te75/J7r2ufKEzpACEEHCPHjymU6vfe9XrOs1+u+N5vNwx8ax/Gvzwbwduo1S+1t7XDtc+22J3SAEIIOEOLplctqtep7u9323Vrru74O3G63lxwQ4J3Uf7PUa5bdbtd37bMrF4BAgg4Q4hNRMyGo9hIm/QAAAABJRU5ErkJggg=="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,160,4050,930)"
-         id="g26"><image
-           id="image28"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAwCAYAAAAB3YGdAAAABHNCSVQICAgIfAhkiAAAAaRJREFUeJzt20tqAkEARVHjrxGcqOgGdP87cgNuQNpfZ5JUSkiTQdIZPM8ZPYiEGl3aon3ruq4bfbhcLp9zdDqdyj4ej9/u+jNt244A+J2macrebrdlHw6Hsvf7fdm73a7s8cBnA+CfCDpACEEHCCHoACEEHSCEoAOEEHSAEIIOEELQAUIIOkAIQQcIIegAIQQdIISgA4QQdIAQgg4QQtABQgg6QAhBBwgh6AAhBB0ghKADhBB0gBCCDhBC0AFCCDpACEEHCCHoACEEHSCEoAOEEHSAEIIOEGLa94fJZFL2bDYrez6fl900zUDHAnhNdVfrPZ1+5bruc80TOkAIQQcI8XTlMh5/9b2+Zlkul2WvVqtv/1Hbtn99NoCXU1+z1L2tO1z3ue62J3SAEIIOEKL3ymWxWJS9Xq/L7rqu7PrrwPV6HeSAAK+kfpulvmbZbDZl13125QIQSNABQrx19R1K5Xa7lV2/wXI+n8uur1nu9/sQ5wN4KX0/6qyvWfp+cOQJHSCEoAOE6L1yqT0ejx83AH/r6Q2Wnv30+cFPBMC/EHSAEO89Z0Ge4QpS4gAAAABJRU5ErkJggg=="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,200,0,1090)"
-         id="g30"><image
-           id="image32"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAA8CAYAAAB2H0HmAAAABHNCSVQICAgIfAhkiAAAAdBJREFUeJzt20tqAkEARVHjrxGcqOgGdP87cgNuQNpfZ5JUSkiTQdIZPM8ZPYiEGl3aon3ruq4bfbhcLp9zdDqdyj4ej9/u+jNt244A+J2macrebrdlHw6Hsvf7fdm73a7s8cBnA+CfCDpACEEHCCHoACEEHSCEoAOEEHSAEIIOEELQAUIIOkAIQQcIIegAIQQdIISgA4QQdIAQgg4QQtABQgg6QAhBBwgh6AAhBB0ghKADhBB0gBCCDhBC0AFCCDpACEEHCCHoACEEHSCEoAOEEHSAEIIOEELQAUIIOkAIQQcIIegAIQQdIISgA4QQdIAQgg4QQtABQgg6QAhBBwgh6AAhpn1/mEwmZc9ms7Ln83nZTdMMdCyA11R3td7T6Veu6z7XPKEDhBB0gBBPVy7j8Vff62uW5XJZ9mq1+vYftW3712cDeDn1NUvd27rDdZ/rbntCBwgh6AAheq9cFotF2ev1uuyu68quvw5cr9dBDgjwSuq3Weprls1mU3bdZ1cuAIEEHSDEW1ffoVRut1vZ9Rss5/O57Pqa5X6/D3E+gJfS96PO+pql7wdHntABQgg6QIjeK5fa4/H4cQPwt57eYOnZT58f/EQA/AtBBwjxDtkUQbbbL4/sAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,200,1800,1090)"
-         id="g34"><image
-           id="image36"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAA8CAYAAAB2H0HmAAAABHNCSVQICAgIfAhkiAAAAU9JREFUeJzt2L1pw1AYhlEnBDSA8AD2/jPZAxgNIBsjN8lFTar8FA/nVC+oudWD+N62bdsOn+73+9c8LMsy9vV6HftyuYx9u93GXtf1AMDPTNM09vF4HPt8Po99Op3Gnud57Pc/fhsA/0TQASI+vvvwfD7HfjweY+/PMvszi5MLwO/ad3Xf4X2f9/yhA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkDEC0GKLePZ9wrGAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,200,4050,1090)"
-         id="g38"><image
-           id="image40"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAA8CAYAAAB2H0HmAAAABHNCSVQICAgIfAhkiAAAAShJREFUeJzt1KFxhVAURVESQwXQAPTfEQ3QARhikjcRcZn/xZ611BFXXLU/nud5pm/3ff/M6TzPsY/j+HP/vrmuawLgf+Z5HntZlrH3fR9727ax13Ud+/PFvwHwJoIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARgg4QIegAEYIOECHoABGCDhAh6AARX6LBFmLZTAlKAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,50,0,1290)"
-         id="g42"><image
-           id="image44"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAPCAYAAAD08TTlAAAABHNCSVQICAgIfAhkiAAAAIlJREFUeJzt1KERAjEURdGA2Qo2DST9d7QNpINdEwxkEDgGxJtz1BNffHVvc85Znq7res0yxlj7OI6P+/3mPM8CwHe2bVt73/e1e+9rt9bWrrWuff/xbwD8iaADhBB0gBCCDhBC0AFCCDpACEEHCCHoACEEHSCEoAOEEHSAEIIOEELQAUIIOkCIB9oqFgjp+Fw3AAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,50,1800,1290)"
-         id="g46"><image
-           id="image48"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAPCAYAAAD08TTlAAAABHNCSVQICAgIfAhkiAAAAOxJREFUeJzt3LsKg0AQRuHEu2Cj7/929toI4j3dn7EQQ1BD1vNVp7DYaliGxeeyLMsDAPD3vF8fAABwDAY6ADgi+OSjeZ53GwBwLM/zdnv1/eknAgBcgoEOAI7YXLmM46juuk7dtq16GAb1NE1Hnw0Absf3fXUYhuo0TdVxHKuD4D3GuaEDgCMY6ADgiNXKxb5asWuWuq7VVVWpm6ZR2/ULAOA7ds2SZZm6KAp1nufq1euXk88GALgIAx0AHLG5crGvWeyapSxLtV3F9H1/ygEB4E6iKFLb1Yr97VaSJGr74oUbOgA4goEOAI54AU4zQonu0nVhAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(970,0,0,50,3060,1290)"
-         id="g50"><image
-           id="image52"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAAAPCAYAAACvOanUAAAABHNCSVQICAgIfAhkiAAAARpJREFUeJzt2cmKg1AQRuF2nvX9H9N51uyKarhCmt5Uus+3OoQQBMPFH737vu8vfKTruqTP85Tetk16WRbpcRylh2GQbtvW2V3XOb8/z7P0vu/Oa4uiSDrLMumyLKXrupZumsb5eVVV0kVRSKdpKh3HsXQQBNK+7zuvDTZxtwCYwGEEwASPmfb36Fuqp5yeVOu6SuvZpedY3/fST/NNz0BNzyg9u55azzc965IkkdbTT08wz/Oc14DPwpMRABM4jACYwEz7p37zJm6aJmk99zQ9r/I8l+aNGJ5wpwGYwGEEwARmGr55502cnnLHcTh/JwxDaT3BeCOGJzwZATCBwwiACcw0/Jj+yzz9ffTsYoLhHTwZATCBwwiACS8WVYAGoWkA8wAAAABJRU5ErkJggg=="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,50,4050,1290)"
-         id="g54"><image
-           id="image56"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAPCAYAAAD08TTlAAAABHNCSVQICAgIfAhkiAAAAQ1JREFUeJzt3LtqhFAUheFEjzew0fd/O0tBG0G8p1tZxQiTIZPi5P+qNQiD1Waz2Ph5Xdf18cC+78rLsijP86y8bZvycRyP/gYA8ANpmipnWaZcVZVyURTKIQTl5M3vBgD4Iwx0AIhE8B/neSp7zTKOo/IwDMrTNCl7/QIAeI3XLHVdK7dtq9w0jXKSfO/lbOgAEAkGOgBE4rZy8WsWr1m6rlP2KmZd17e8IAD8J3meK3u14geJZVkq+8ULGzoARIKBDgCRuK1c/GrFr1m8Zun7XtmvYgAAr/EKxXn94vPZ5zYbOgBEgoEOAJEIdw/82yy+3vs1i9csVC4A8Lt8rj7z7Sw2dACIBAMdACLxBUPhaHt3F8eIAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,20,0,1340)"
-         id="g58"><image
-           id="image60"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAGCAYAAADT/mUtAAAABHNCSVQICAgIfAhkiAAAAGZJREFUaIHt1KERgDAMRuGC6QTpAu3+G3WBbNCYYCCHwHEgcu9TT0RE/Zu7ezmZ2ZVFVaPnnI99v1lrFQDAO7XWaBGJHmNE996jW2vR+8e/AQB+wqADQBIMOgAkwaADQBIMOgAkcQDwqhX25uIKGQAAAABJRU5ErkJggg=="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(970,0,0,20,3060,1340)"
-         id="g62"><image
-           id="image64"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAAAGCAYAAACINvgcAAAABHNCSVQICAgIfAhkiAAAAOBJREFUWIXtlzkOgzAABGPum/8/k/vG6VZbOFJSRLjYqUYIbA7LYoy11r7EY9z3Db+uC77vO3xdV/g0TfBxHOFd1zm973vn+fM8O8c/jgN+niecl8mvS8YY4/QoiuBxHMOzLIMXRQGvqgreNA28bVvn8bqu4WVZOsdPkgQehiE8CIKPzyP+g964EMILtBkJIbzAKNP8hD8Lpxxn1LZt8GVZ4JxjnGnsnHLDMDiv5XzjuTjf+N4YzhzOsTRN4ZxLnGCcV9/kGF+b57lzLs5AvjfORvEs+jMSQniBNiMhhBe8AbAFZQPFYF+SAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,20,4050,1340)"
-         id="g66"><image
-           id="image68"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAGCAYAAADT/mUtAAAABHNCSVQICAgIfAhkiAAAAEZJREFUaIHt1CESwCAQA8By0/8/+a66CgTQKbOrIiKi0qqqLgB+L74eAMAcDh3gEPdIKTO7GYC5IqKbX/3liwDYwqEDHOIBETMNCsMscdMAAAAASUVORK5CYII="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,160,0,1360)"
-         id="g70"><image
-           id="image72"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAwCAYAAAAB3YGdAAAABHNCSVQICAgIfAhkiAAAAZ9JREFUeJzt3LuKYlEQhtEZ74KJvv/bGQqaCOJ9spoykG4a7WH+Xiuq4AQ7+tgUm/P7fr/ffwHw3xv86wMA8BqCDhBi9JmPbrfbhzMArzUYDD6cH75/+4kA+BaCDhDi6crlcrnUfDweaz4cDjWfz+ear9frq88G8OMMh8Oax+NxzfP5vObpdFrzaPQ3427oACEEHSDEw8qlv1rpa5bdblfzdruteb/f19zXLwB8TV+zLBaLmlerVc3L5bLmh9cvbz4bAN9E0AFCPF259Ncsfc2yXq9r7quY0+n0lgMC/CSTyaTmvlrpv92azWY19xcvbugAIQQdIMTTlUt/tdJfs/Q1y2azqbm/igHga/oKpevrl97n3m03dIAQgg4Q4um/XPq/Wfr1vr9m6WsWKxeA1+pd/cy/s9zQAUIIOkAIQQcIIegAIQQdIISgA4QQdIAQgg4QQtABQgg6QAhBBwgh6AAhBB0ghKADhBB0gBCCDhBC0AFCCDpACEEHCCHoACEEHSCEoAOEEHSAEIIOEELQAUIIOkAIQQcIIegAIQQdIMQfm4RxweVL74EAAAAASUVORK5CYII="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(970,0,0,160,3060,1360)"
-         id="g74"><image
-           id="image76"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAAAwCAYAAABaFRysAAAABHNCSVQICAgIfAhkiAAAAuNJREFUeJzt3Mlu4lAQheEwhclM4v0fkAVCzDNkV31acQXT2Oky/r9ViSS2k8ile6iLa/f7/f6R4nK5WL3b7axeLBYP69VqZfV6vbZ6s9lYfTgcrD4ej6nnvV6vVjuXCeCBWq2W+nqj0bC62Wxa3W63re50OlYnSWL1YDCwejgcWj2ZTB7WvV4v9bz1H34HAPg1NCMAITS9L2hE2u/3Vs/nc6tns1nq6xrNNOKdTierNY5pBCOOAfny7invLRG9T/Xe3263Vus9rrW+/XK73azWuKcxkJgGIByaEYAQ3JgGAFnk9dYKKyMAIdCMAITgxjTdENXtdq2eTqdW1+t/epm+W17EpkfFxA34N7oB0tv0+Pn5abXe+/1+32rd9Dgajaz2NjrqcfS8ipURgBBoRgBCqHmfTdOXNS5ppNINUbq5UaOZRrblcpn6usY3PY5GufP5bDUbJoHvNIJ5cUwjmG4+1M+LaQTTejweW62fR9Pv0eNoNNNz6fXodbIyAhACzQhACG5M8+i362dPNEZ5UU7jmMY0L8oxiQO+K3oiprXGMf1ZjWMawVqtltU6bfceY6JYGQEIgWYEIISnY1oWGt+8RxNo1NJHE2gc08jGJA5V8OxETDcbaxzznsToRTBvIqbH1/P+9eiPej5rGlZGAEKgGQEIoZCY5mEShyrL68H4kSdir2BlBCAEmhGAEH41pmXBJA5lF20ipsfU8+r15DURe8X/vwIA+KAZAQgiXEzzMIlDBEzEisPKCEAINCMAIZQmpmXBJA55eWUiptEpSRKrqzARe0W5rx7A26AZAQjhrWKah0kcVBETMY1aWeKYxjfvwfVlnIi9gpURgBBoRgBCqERMy4JJ3PthIlYu1f3NAYRCMwIQAjHtgTJO4qrwL2Ui9n5YGQEIgWYEIARiWg6YxBXHm4hpBNMoxESsvPirAQiBZgQgBGJagZjE/SyviZhGsGcfYs9ELA5WRgBCoBkBCOELrdL0aVo1sysAAAAASUVORK5CYII="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(970,0,0,200,3060,1520)"
-         id="g78"><image
-           id="image80"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAAA8CAYAAAAt19zXAAAABHNCSVQICAgIfAhkiAAAArFJREFUeJzt3NlOG0EQBVCbfff/fyb7jvOQqLmR3IlZzJRnznkqITEMNir6crHny+VyOQMY2M7QNwAwm1lGQBF7Q98A2yeTfS/lz+fzlTP0OBkBJVhGQAliGn/J2PX29tbm5+fnlfPLy8vK6+zu7rb54OCgzfv7+23e2Xn/XSjK4WQElGAZASWIaROVEez19bXNT09PbX54eGjz3d1dm29vb9v8+Pi48vqHh4dtPjk5afPp6Wmbj46O2pxRLiNeRjnGzTMNlGAZASWIaSO0TiOW8er+/r7NNzc3bb6+vm7z5eXlyo9nlEsZ087Pz9u8WCzafHFx0eazs7M2Hx8fr7yOJm7cnIyAEiwjoAQxbYt9pRHrRbCcr66u2pzxLWNdRr+UkSpjV8axjGm9+JYRTxM3bp4toATLCChh7p0ea9p0I9Zrx/IfGvOa+bXy9Wh5bykj0t7e+18Dsh3LqJXxLaPZOlFOEzcOTkZACZYRUIKYNrChGrG8Tl6/9/Yg67y7Y0/vXR8zvmWMyviWr2vTxI2bRxwowTICShDTNmhbGrGMhz/549BrsjIuaeKmw8kIKMEyAkoQ077BRxuxjFEZxyo3YkPRxE2HRw0owTICShDT/kMjVpMmbnycjIASLCOgBDHtD43Y+Gjitst0v3OgFMsIKGESMU0jRtLE1eRkBJRgGQEljCqmacT4Lpq4n7fddw+MhmUElLA1MW2oRiw/NyOYRmyaNHGb42QElGAZASWUi2kaMbadJu5zhr8DgJllBBTxozHtuxqxjFo5a8SoTBP3b05GQAmWEVDCRmKaRgw+p9fEZZTLRmxMTZyTEVCCZQSU8OGYtolGrBfBNGLw2xSaOCcjoATLCCihG9Pywxl5ehEsm6yMV+vEMY0YfF2FJi6v04tyeT95n05GQAmWEVDCLwTMRWWXXHQfAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(970,0,0,430,1260,1740)"
-         id="g82"><image
-           id="image84"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAACBCAYAAACLg9x8AAAABHNCSVQICAgIfAhkiAAABWZJREFUeJzt3dtuE0kUBdDcQyA3lP//wDwgxCWQQC48zKjYSC5iY7d9unutp1IQThOPz9T2dlf2X15eXvYAduxg1xcAsLdnGAFFHO36AhifTPa9lL+/v79wDT12RkAJhhFQgpjGHzJ2PT8/t/XPnz8Xrh8fHxc+zuHhYVufnJy09fHxcVsfHPz+f6Eoh50RUIJhBJQgps1URrCnp6e2/vHjR1vf39+39bdv39r67u6urR8eHhY+/unpaVu/ffu2rd+9e9fWb968aeuMchnxMsoxbZ5poATDCChBTJugZRqxjFffv39v669fv7b1ly9f2vrTp08Lv55RLmVMu7i4aOurq6u2vry8bOvz8/O2Pjs7W/g4mrhpszMCSjCMgBLEtBFbpxHrRbBcf/78ua0zvmWsy+iXMlJl7Mo4ljGtF98y4mnips2zBZRgGAEl7DvpsaahG7FeO5YfaMzHzO+V96PltaWMSEdHv98NyHYso1bGt4xmy0Q5Tdw02BkBJRhGQAli2o7tqhHLx8nH7x0Psszpjj29Ux8zvmWMyviW97Vp4qbNTxwowTACShDTBjSWRizj4Tb/c+g1WRmXNHHzYWcElGAYASWIaRuwaiOWMSrjWOVGbFc0cfPhpwaUYBgBJYhpr9CI1aSJmx47I6AEwwgoQUz7n0ZsejRx4zLffzlQimEElDCLmKYRI2niarIzAkowjIASJhXTNGJsiiZu+8Z99cBkGEZACaOJabtqxPLvZgTTiM2TJm44dkZACYYRUEK5mKYRY+w0cf9m91cAsGcYAUVsNaZtqhHLqJVrjRiVaeL+zs4IKMEwAkoYJKZpxODf9Jq4jHLZiE2pibMzAkowjIASVo5pQzRivQimEYP/zKGJszMCSjCMgBK6MS2/nJGnF8Gyycp4tUwc04jB+io0cfk4vSiX15PXaWcElGAYASV0Y1pGoYxOHz9+fHWtEYM6ttnEvX///tV1Rrn8vnZGQAmGEVDCUe8PMiJla/bhw4e2vr29Xfj1jGYZ8fLeNI0YbEfvNdV7SyRfp/naz3tI8zWe63z7JT8UnXEvY6CYBpRjGAEldGMawDI29daKnRFQgmEElNCNafmBqLzH5Obmpq3ziIB8t3yIDz0mjRv8m949a9lq5f1r+drPEyDzQ495z1rvg475OPl9k50RUIJhBJTgCBGYiFWPEMkPH+b9YhnBcn19fd3WjhABJsswAkoocSD/0L+iunf9MEZDN2K9Ex3z72YccyA/MCmGEVCCX2+9YA27ss6h+hnHVv2daL1GrPfrrf84+sOvtwamxDACShgkpvVo4pizTR2MX7kRW4edEVCCYQSUsNWYtgxNHGNXrRHLx8zvm9ezqUZsHbu/AoA9wwgoolxM69HEUYFGbDh2RkAJhhFQwmhi2jI0cWzKOo1YRqfz8/O2nkMjto5xXz0wGYYRUMKkYlqPJo40RCOWUWuZOJbxrXdw/RgbsXXYGQElGEZACbOIacvQxE2PRmxc5vsvB0oxjIASxLRXjLGJm8NTqhGbHjsjoATDCChBTNsATdxweo1YRrCMQhqx8fJTA0owjIASxLQBaeL+blONWEawVQ+x14jVYWcElGAYASWIaTs2hyauQiOWH27Mx9eI1eEnDpRgGAEliGlFjaWJy2tLGXM0YizDzggowTACShDTRmxXTVxGwoyNKWNRRieNGD2eLaAEwwgoQUyboE01cdmy9eJbxsCUMap3gqJGjGRnBJRgGAEliGkztU4Tl/e1ZdxLGa/y/jKNGD2eaaAEwwgoQUzjD8s0cRnl8j61lPejZQTTiNFjZwSUYBgBJYhprGyZUx97pztCj50RUIJhBJTwC07UHvJkuMVzAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><path
-         id="path86"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1750,2160 450,-180 -450,-180 -450,180 z" /><path
-         id="path88"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1750,2160 450,-180 -450,-180 -450,180 z" /><g
-         transform="scale(10)"
-         id="g90"><text
-           id="text94"
-           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,162.282,194.36)"><tspan
-             id="tspan92"
-             y="0"
-             x="0 5 7.7783155 13.618316 19.458315 22.236631">x == y</tspan></text>
-</g><path
-         id="path96"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 1750,2430 V 2289" /><path
-         id="path98"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1750,2193 36,96 h -72 z" /><path
-         id="path100"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1750,2193 36,96 h -72 z" /><path
-         id="path102"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 1750,360 V 139" /><path
-         id="path104"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1750,43 36,96 h -72 z" /><path
-         id="path106"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1750,43 36,96 h -72 z" /><g
-         transform="scale(10)"
-         id="g108"><text
-           id="text112"
-           style="font-variant:normal;font-weight:normal;font-size:13px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,237.373,205)"><tspan
-             id="tspan110"
-             y="0"
-             x="0 9.3859997 12.272">Nie</tspan></text>
-</g><path
-         id="path114"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 40,1150 h 1170 v 360 H 40 Z" /><path
-         id="path116"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 40,1150 h 1170 v 360 H 40 Z" /><g
-         transform="scale(10)"
-         id="g118"><text
-           id="text122"
-           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,33.6035,129)"><tspan
-             id="tspan120"
-             y="0"
-             x="0 5.561523 8.8915224 11.113201 16.674725 19.453045 22.783045 25.004725 28.334724 33.896252 41.117928 46.679455 52.240982 54.462658">print(‘równe’)</tspan></text>
-</g><path
-         id="path124"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 1300,1980 H 625 v -470 159 -30" /><path
-         id="path126"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 625,1543 36,96 h -72 z" /><path
-         id="path128"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 625,1543 36,96 h -72 z" /><path
-         id="path130"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 625,1150 V 360 h 996" /><path
-         id="path132"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1717,360 -96,36 v -72 z" /><path
-         id="path134"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1717,360 -96,36 v -72 z" /><g
-         transform="scale(10)"
-         id="g136"><text
-           id="text140"
-           style="font-variant:normal;font-weight:normal;font-size:13px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,99.6266,208)"><tspan
-             id="tspan138"
-             y="0"
-             x="0 6.0190001 13">Tak</tspan></text>
-</g><path
-         id="path142"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 3550,1710 450,-180 -450,-180 -450,180 z" /><path
-         id="path144"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3550,1710 450,-180 -450,-180 -450,180 z" /><g
-         transform="scale(10)"
-         id="g146"><text
-           id="text150"
-           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,345.202,149.36)"><tspan
-             id="tspan148"
-             y="0"
-             x="0 5 7.7783155 13.618316 16.396631">x &lt; y</tspan></text>
-</g><path
-         id="path152"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 4090,990 h 1170 v 360 H 4090 Z" /><path
-         id="path154"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 4090,990 h 1170 v 360 H 4090 Z" /><g
-         transform="scale(10)"
-         id="g156"><text
-           id="text160"
-           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,434.993,113)"><tspan
-             id="tspan158"
-             y="0"
-             x="0 5.5615139 8.8915138 11.113173 16.674688 19.453028 21.674688 23.896347 31.118008 33.339668 38.90118 43.90118 48.90118 53.90118 59.462696 61.684357">print(‘większa’)</tspan></text>
-</g><path
-         id="path162"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 4000,1530 h 675 v -180 159 -30" /><path
-         id="path164"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 4675,1383 36,96 h -72 z" /><path
-         id="path166"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 4675,1383 36,96 h -72 z" /><path
-         id="path168"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 2200,1980 h 1350 v -270 159 -30" /><path
-         id="path170"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 3550,1743 36,96 h -72 z" /><path
-         id="path172"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3550,1743 36,96 h -72 z" /><path
-         id="path174"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 3550,360 H 1879" /><path
-         id="path176"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1783,360 96,-36 v 72 z" /><path
-         id="path178"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1783,360 96,-36 v 72 z" /><path
-         id="path180"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 4675,990 V 775.5 H 3666.45" /><path
-         id="path182"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 3579.79,734.199 102.15,8.805 -30.98,64.992 z" /><path
-         id="path184"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3579.79,734.199 102.15,8.805 -30.98,64.992 z" /><g
-         transform="scale(10)"
-         id="g186"><text
-           id="text190"
-           style="font-variant:normal;font-weight:normal;font-size:13px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,417.373,160)"><tspan
-             id="tspan188"
-             y="0"
-             x="0 9.3859997 12.272">Nie</tspan></text>
-</g><path
-         id="path192"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1840,970 h 1170 v 360 H 1840 Z" /><path
-         id="path194"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1840,970 h 1170 v 360 H 1840 Z" /><g
-         transform="scale(10)"
-         id="g196"><text
-           id="text200"
-           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,207.493,111)"><tspan
-             id="tspan198"
-             y="0"
-             x="0 5.5615139 8.8915138 11.113198 16.674711 19.453028 22.783028 25.004711 33.334713 38.896225 41.117908 46.674541 48.901108 53.901108 58.901108 64.462624 66.684303">print(‘mniejsza’)</tspan></text>
-</g><path
-         id="path202"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3100,1530 h -675 v -200 159 -30" /><path
-         id="path204"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 2425,1363 36,96 h -72 z" /><path
-         id="path206"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 2425,1363 36,96 h -72 z" /><path
-         id="path208"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 2425,970 V 765.5 h 1004.29" /><path
-         id="path210"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 3519.12,731.641 -77.13,67.547 -25.4,-67.375 z" /><path
-         id="path212"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3519.12,731.641 -77.13,67.547 -25.4,-67.375 z" /><g
-         transform="scale(10)"
-         id="g214"><text
-           id="text218"
-           style="font-variant:normal;font-weight:normal;font-size:13px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,279.627,163)"><tspan
-             id="tspan216"
-             y="0"
-             x="0 6.0189872 12.999987">Tak</tspan></text>
-</g><path
-         id="path220"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 3540,710 V 489" /><path
-         id="path222"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 3540,393 36,96 h -72 z" /><path
-         id="path224"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3540,393 36,96 h -72 z" /></g></g></svg>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="14.5 8 538 244" width="538" height="244">
+  <defs>
+    <filter id="Shadow" filterUnits="userSpaceOnUse" x="-39.3" y="-16.4">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="1.308"/>
+      <feOffset in="blur" result="offset" dx="0" dy="2"/>
+      <feFlood flood-color="black" flood-opacity=".5" result="flood"/>
+      <feComposite in="flood" in2="offset" operator="in"/>
+    </filter>
+    <font-face font-family="Helvetica" font-size="10" units-per-em="1000" underline-position="-75.68359" underline-thickness="49.316406" slope="0" x-height="522.9492" cap-height="717.28516" ascent="770.0195" descent="-229.98047" font-weight="400">
+      <font-face-src>
+        <font-face-name name="Helvetica"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 7 6" markerWidth="7" markerHeight="6" color="black">
+      <g>
+        <path d="M 4.8 0 L 0 -1.8 L 0 1.8 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <font-face font-family="Helvetica Neue" font-size="13" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18\n2020-11-25 13:44:29 +0000</metadata>
+  <g id="Canvas_1" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" fill="none" stroke="none">
+    <title>Canvas 1</title>
+    <rect fill="white" x="14.5" y="8" width="538" height="244"/>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_3_shadow" filter="url(#Shadow)">
+        <path d="M 189 36 L 234 54 L 189 72 L 144 54 Z" fill="white"/>
+        <path d="M 189 36 L 234 54 L 189 72 L 144 54 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_27_shadow" filter="url(#Shadow)">
+        <rect x="18" y="101" width="117" height="36" fill="white"/>
+        <rect x="18" y="101" width="117" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_40_shadow" filter="url(#Shadow)">
+        <path d="M 369 81 L 414 99 L 369 117 L 324 99 Z" fill="white"/>
+        <path d="M 369 81 L 414 99 L 369 117 L 324 99 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_41_shadow" filter="url(#Shadow)">
+        <rect x="414" y="117" width="135" height="36" fill="white"/>
+        <rect x="414" y="117" width="135" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_47_shadow" filter="url(#Shadow)">
+        <rect x="189" y="119" width="135" height="36" fill="white"/>
+        <rect x="189" y="119" width="135" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_3">
+        <path d="M 189 36 L 234 54 L 189 72 L 144 54 Z" fill="white"/>
+        <path d="M 189 36 L 234 54 L 189 72 L 144 54 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(161.15 47.64)" fill="black">
+          <tspan font-family="Helvetica" font-size="10" font-weight="400" fill="black" x="15.131836" y="10">x == y</tspan>
+        </text>
+      </g>
+      <g id="Line_22">
+        <path d="M 189 9 L 189 14.55 L 189 20.1 L 189 23.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_34">
+        <path d="M 189 216 L 189 233.5 L 189 238.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Graphic_26">
+        <text transform="translate(251.3735 35)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="30375702e-20" y="12">Nie</tspan>
+        </text>
+      </g>
+      <g id="Graphic_27">
+        <rect x="18" y="101" width="117" height="36" fill="white"/>
+        <rect x="18" y="101" width="117" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(23 113)" fill="black">
+          <tspan font-family="Helvetica" font-size="10" font-weight="400" fill="black" x="7.655273" y="10">print(‘x i y są równe’)</tspan>
+        </text>
+      </g>
+      <g id="Line_28">
+        <path d="M 144 54 L 128.1 54 L 76.5 54 L 76.5 101 L 76.5 85.1 L 76.5 88.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_35">
+        <path d="M 76.5 137 L 76.5 216 L 176.1 216" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Graphic_30">
+        <text transform="translate(113.6265 32)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="0" y="12">Tak</tspan>
+        </text>
+      </g>
+      <g id="Graphic_40">
+        <path d="M 369 81 L 414 99 L 369 117 L 324 99 Z" fill="white"/>
+        <path d="M 369 81 L 414 99 L 369 117 L 324 99 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(341.15 92.64)" fill="black">
+          <tspan font-family="Helvetica" font-size="10" font-weight="400" fill="black" x="18.051758" y="10">x &lt; y</tspan>
+        </text>
+      </g>
+      <g id="Graphic_41">
+        <rect x="414" y="117" width="135" height="36" fill="white"/>
+        <rect x="414" y="117" width="135" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(419 129)" fill="black">
+          <tspan font-family="Helvetica" font-size="10" font-weight="400" fill="black" x="4.7094727" y="10">print(‘x jest większa niż y’)</tspan>
+        </text>
+      </g>
+      <g id="Line_42">
+        <path d="M 414 99 L 429.9 99 L 481.5 99 L 481.5 117 L 481.5 101.1 L 481.5 104.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_43">
+        <path d="M 234 54 L 249.9 54 L 369 54 L 369 81 L 369 65.1 L 369 68.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_44">
+        <path d="M 369 216 L 279 216 L 201.9 216" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_45">
+        <path d="M 481.5 153 L 481.5 168.9 L 481.5 174.45 L 425.25 174.45 L 380.64506 174.45" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Graphic_46">
+        <text transform="translate(431.3735 80)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="30375702e-20" y="12">Nie</tspan>
+        </text>
+      </g>
+      <g id="Graphic_47">
+        <rect x="189" y="119" width="135" height="36" fill="white"/>
+        <rect x="189" y="119" width="135" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(194 131)" fill="black">
+          <tspan font-family="Helvetica" font-size="10" font-weight="400" fill="black" x="2.763672" y="10">print(‘x jest mniejsza niż y’)</tspan>
+        </text>
+      </g>
+      <g id="Line_48">
+        <path d="M 324 99 L 308.1 99 L 256.5 99 L 256.5 119 L 256.5 103.1 L 256.5 106.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_49">
+        <path d="M 256.5 155 L 256.5 170.9 L 256.5 175.45 L 312.75 175.45 L 356.92906 175.45" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Graphic_50">
+        <text transform="translate(293.6265 77)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="0" y="12">Tak</tspan>
+        </text>
+      </g>
+      <g id="Line_51">
+        <path d="M 368 181 L 368 198.5 L 368 203.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

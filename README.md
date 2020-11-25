@@ -32,8 +32,6 @@ Polish translation
 | `AB-copyright.mkd`     | ☒    |      |      |       |         |          |         |            | ☒    |
 | `verbatim.py`          | ☒    |      |      |       |         |          |         |            |       |
 | remaining website...   |      |      |       |      |         |          |         |            |       |
-| File names within grave accents |         |            |       |
-| `$ python script.py` in exercises |         |            |       |
 | Images: flow control, fonts |         |            |       |
 | `unit.sh` check |         |            |       |
 

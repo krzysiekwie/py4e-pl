@@ -1,135 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   viewBox="0 0 298.66666 194.66667"
-   height="194.66667"
-   width="298.66666"
-   xml:space="preserve"
-   id="svg2"
-   version="1.1"><metadata
-     id="metadata8"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-     id="defs6" /><g
-     transform="matrix(1.3333333,0,0,-1.3333333,0,194.66667)"
-     id="g10"><g
-       transform="scale(0.1)"
-       id="g12"><path
-         id="path14"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 0,0 H 2240 V 1460 H 0 Z" /><path
-         id="path16"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 0,0 H 2960 V 1540 H 0 Z" /><g
-         transform="matrix(1240,0,0,360,990,400)"
-         id="g18"><image
-           id="image20"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAABsCAYAAAB6kUkRAAAABHNCSVQICAgIfAhkiAAAAn1JREFUeJzt20tKY0EAhlHfIeBERTeg+9+RG8gGJL5uT7rLEgwO2jj4cs7oB4PU6OOmuDlelmU5+uv5+fnfPNpsNmM/Pj5+uefPbLfbIwD+z2q1Gvv29nbsh4eHse/v78e+u7sb+2TPZwPglwg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QISgA0QIOkCEoANECDpAhKADRAg6QMTZrj+cnp6OfX5+PvbFxcXYq9VqT8cCOExzV+d9dvaR67nPM0/oABGCDhDx6crl5OSj7/M1y+Xl5dhXV1df/qPtdvvTZwM4OPM1y9zbucNzn+due0IHiBB0gIidVy7r9Xrs6+vrsZdlGXv+OvDy8rKXAwIckvltlvma5ebmZuy5z65cAIIEHSDieJnvUCavr69jz2+wPD09jT1fs7y9ve3jfAAHZdePOudrll0/OPKEDhAh6AARO69cZu/v799uAH7WpzdYduxPn9/7iQD4FYIOEPEHuwRCFtZsn6MAAAAASUVORK5CYII="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(970,0,0,70,0,760)"
-         id="g22"><image
-           id="image24"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAAAVCAYAAAANdIgpAAAABHNCSVQICAgIfAhkiAAAAXxJREFUeJzt3NtuglAUhOECnhDR939MFJQz3q1Mk70TTduw2v7f1cQIqJAdJiuYLMuyfGA18zxbnqbJct/3ltu2tdw0jeW6ri1XVRXM1+s1+P77/R7c/zAMlsdxtKyXybuXTJIkwbzZbCxvt1vLh8PB8vF4tHw6nSyfz2fLl8sl+HpZlpaLogjuf7fbWc6yzHKaptHvg5/BLw7ABRYjAC4k1DSf9LRoldMa1XWd5cfjYVnrmNY0zVrlbrdbcFutb3osrW/62ZTWHK1j+/3estYlrWBar16pY7ptnufBY2kN1M+mtRHr4s4IgAssRgBcoKb9YmtN4rQSam1UWou0OjERQwxnC4ALLEYAXKCm/UHfNYnTKVusvmkNVFqjtHbFMhMxcGcEwAUWIwAuUNP+qa9M4vS5Nq17SuuVPl/GRAwxnGkALrAYAXCBmoZPXpnEaZXT59SUPo+mFYyJGGK4MwLgAosRABeoaXjbK//6GPt3RyCGOyMALrAYAXDhCVH/5QgKIbIBAAAAAElFTkSuQmCC"
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(1240,0,0,70,990,760)"
-         id="g26"><image
-           id="image28"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAAVCAYAAABWvBUYAAAABHNCSVQICAgIfAhkiAAAAThJREFUeJzt3L2KwkAUBtDd+BfBRt//7SwD2ghioma7u9ciKBJddjyn+oopproMH5f57vu+/wLg36v++gIAjMNAByjE9JFD1+v1bgZgXFVV3c03519+IwDewkAHKMRg5XI+nyOfTqfIx+Mxctd1kS+Xy9h3A/g4k8kk8mw2i7xcLiMvFovI0+nvGPdCByiEgQ5QiJvKJW+t5Jplv99H3u12kQ+HQ+RcvwDwnFyzrFaryJvNJvJ6vY58s/3y4rsB8CYGOkAhBiuXvM2Sa5btdhs5VzFt277kggCfZD6fR87VSv52q67ryHnjxQsdoBAGOkAhBiuXvLWSt1lyzdI0TeS8FQPAc3KFkuX6Jc/nPLe90AEKYaADFGLwL5f8N0t+3udtllyzqFwAxpXn6iN/Z3mhAxTCQAcoxA84U3GLBFNaSQAAAABJRU5ErkJggg=="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><g
-         transform="matrix(970,0,0,360,0,830)"
-         id="g30"><image
-           id="image32"
-           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAABsCAYAAAAhWdQgAAAABHNCSVQICAgIfAhkiAAABLRJREFUeJzt3dtSE1sUBVBQLgoBsfz/D/SBorjfBHw4p7bTqmwJJE1Wd8Z42oVlpwGz3DMz3dl+eXl52QJYs0/rPgGArS3DCChiZ90nwPhksu+l/O3t7blr6LEzAkowjIASxDT+krHr+fm5rR8fH+euf/36Nfc4nz9/buu9vb223t3dbetPn/78XyjKYWcElGAYASWIaRsqI9jT01NbPzw8tPXd3V1b39zctPX19XVb39/fzz3+/v5+Wx8cHLT14eFhW3/58qWtM8plxMsox7T5TQMlGEZACWLaBC3SiGW8ur29beurq6u2vry8bOvz8/O5X88olzKmHR0dtfW3b9/a+vj4uK1ns1lbf/36de5xNHHTZmcElGAYASWIaSO2TCPWi2C5vri4aOuMbxnrMvqljFQZuzKOZUzrxbeMeJq4afPbAkowjIAStt3psaahG7FeO5ZvaMxj5mPl9Wh5bikj0s7On1cDsh3LqJXxLaPZIlFOEzcNdkZACYYRUIKYtmbrasTyOHn83u1BFrm7Y0/vro8Z3zJGZXzL69o0cdPmJw6UYBgBJYhpAxpLI5bx8CP/OfSarIxLmrjNYWcElGAYASWIaSvw1kYsY1TGscqN2Lpo4jaHnxpQgmEElCCmvUIjVpMmbnrsjIASDCOgBDHtfxqx6dHEjcvmfudAKYYRUMJGxDSNGEkTV5OdEVCCYQSUMKmYphFjVTRxH2/cZw9MhmEElDCamLauRiz/bkYwjdhm0sQNx84IKMEwAkooF9M0YoydJu591n8GAFuGEVDEh8a0VTViGbVyrRGjMk3cv9kZASUYRkAJg8Q0jRi8T6+JyyiXjdiUmjg7I6AEwwgo4c0xbYhGrBfBNGLwn01o4uyMgBIMI6CEbkzLL2fk6UWwbLIyXi0SxzRisLwKTVwepxfl8nzyPO2MgBIMI6CEbkzLKJTR6ezs7NW1Rgzq+Mgm7vv376+uM8rl49oZASUYRkAJO70/yIiUrdnp6Wlb//z5c+7XM5plxMtr0zRi8DF6z6neSyL5PM3nfl5Dms/xXOfLL/mm6Ix7GQPFNKAcwwgooRvTABaxqpdW7IyAEgwjoIRuTMs3ROU1Jj9+/GjrvEVAvlo+xJsek8YN3qd3zVq2Wnn9Wj738w6Q+abHvGat90bHPE4+brIzAkowjIAS3EIEJuKttxDJNx/m9WIZwXJ9cnLS1m4hAkyWYQSUUOKG/EN/RHXv/GGMhm7Eend0zL+bccwN+YFJMYyAEny89Zw1rMsyN9XPOPbWz0TrNWK9j7f+69YfPt4amBLDCChhkJjWo4ljk63qxviVG7Fl2BkBJRhGQAkfGtMWoYlj7Ko1YnnMfNw8n1U1YstY/xkAbBlGQBHlYlqPJo4KNGLDsTMCSjCMgBJGE9MWoYljVZZpxDI6zWaztt6ERmwZ4z57YDIMI6CEScW0Hk0caYhGLKPWInEs41vvxvVjbMSWYWcElGAYASVsRExbhCZuejRi47K53zlQimEElCCmvWKMTdwm/Eo1YtNjZwSUYBgBJYhpK6CJG06vEcsIllFIIzZefmpACYYRUIKYNiBN3L+tqhHLCPbWm9hrxOqwMwJKMIyAEn4DrrU53O4dXX8AAAAASUVORK5CYII="
-           transform="matrix(1,0,0,-1,0,1)"
-           preserveAspectRatio="none"
-           height="1"
-           width="1" /></g><path
-         id="path34"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 490,1180 940,1000 490,820 40,1000 Z" /><path
-         id="path36"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 490,1180 940,1000 490,820 40,1000 Z" /><g
-         transform="scale(10)"
-         id="g38"><text
-           id="text42"
-           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,38.9211,96.3602)"><tspan
-             id="tspan40"
-             y="0"
-             x="0 5 7.7783217 13.618321 16.396643">x &gt; 0</tspan></text>
-</g><path
-         id="path44"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="M 1030,460 H 2200 V 820 H 1030 Z" /><path
-         id="path46"
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 1030,460 H 2200 V 820 H 1030 Z" /><g
-         transform="scale(10)"
-         id="g48"><text
-           id="text52"
-           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,113.978,60)"><tspan
-             id="tspan50"
-             y="0"
-             x="0 5.5615258 8.8915262 11.113211 16.674736 19.453053 22.783052 25.004736 30.004736 32.778168 35.004738 40.566261 45.566261 48.344578 51.122894 56.684418 62.245945 67.807472 73.368996 76.147308 81.708839 83.930519 89.49205 91.71373">print(‘x jest dodatnia’)</tspan></text>
-</g><path
-         id="path54"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 940,1000 h 675 V 820 979 949" /><path
-         id="path56"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 1615,853 36,96 h -72 z" /><path
-         id="path58"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1615,853 36,96 h -72 z" /><path
-         id="path60"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 490,1450 V 1309" /><path
-         id="path62"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 490,1213 36,96 h -72 z" /><path
-         id="path64"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 490,1213 36,96 h -72 z" /><path
-         id="path66"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 490,820 V 139" /><path
-         id="path68"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 490,43 36,96 h -72 z" /><path
-         id="path70"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 490,43 36,96 h -72 z" /><path
-         id="path72"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="M 1615,460 V 300 H 619" /><path
-         id="path74"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 523,300 96,-36 v 72 z" /><path
-         id="path76"
-         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         d="m 523,300 96,-36 v 72 z" /><g
-         transform="scale(10)"
-         id="g78"><text
-           id="text82"
-           style="font-variant:normal;font-weight:normal;font-size:13px;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,111.127,107)"><tspan
-             id="tspan80"
-             y="0"
-             x="0 6.0190001 13">Tak</tspan></text>
-</g></g></g></svg>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="5.5 8 223 146" width="223" height="146">
+  <defs>
+    <filter id="Shadow" filterUnits="userSpaceOnUse" x="-16.8" y="-6.6">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="1.308"/>
+      <feOffset in="blur" result="offset" dx="0" dy="2"/>
+      <feFlood flood-color="black" flood-opacity=".5" result="flood"/>
+      <feComposite in="flood" in2="offset" operator="in"/>
+    </filter>
+    <font-face font-family="Helvetica" font-size="10" units-per-em="1000" underline-position="-75.68359" underline-thickness="49.316406" slope="0" x-height="522.9492" cap-height="717.28516" ascent="770.0195" descent="-229.98047" font-weight="400">
+      <font-face-src>
+        <font-face-name name="Helvetica"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 7 6" markerWidth="7" markerHeight="6" color="black">
+      <g>
+        <path d="M 4.8 0 L 0 -1.8 L 0 1.8 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <font-face font-family="Helvetica Neue" font-size="13" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18\n2020-11-25 13:39:52 +0000</metadata>
+  <g id="Canvas_1" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" fill="none" stroke="none">
+    <title>Canvas 1</title>
+    <rect fill="white" x="5.5" y="8" width="223" height="146"/>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_3_shadow" filter="url(#Shadow)">
+        <path d="M 54 36 L 99 54 L 54 72 L 9 54 Z" fill="white"/>
+        <path d="M 54 36 L 99 54 L 54 72 L 9 54 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_19_shadow" filter="url(#Shadow)">
+        <rect x="108" y="72" width="117" height="36" fill="white"/>
+        <rect x="108" y="72" width="117" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_3">
+        <path d="M 54 36 L 99 54 L 54 72 L 9 54 Z" fill="white"/>
+        <path d="M 54 36 L 99 54 L 54 72 L 9 54 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(26.15 47.64)" fill="black">
+          <tspan font-family="Helvetica" font-size="10" font-weight="400" fill="black" x="17.770996" y="10">x &gt; 0</tspan>
+        </text>
+      </g>
+      <g id="Graphic_19">
+        <rect x="108" y="72" width="117" height="36" fill="white"/>
+        <rect x="108" y="72" width="117" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(113 84)" fill="black">
+          <tspan font-family="Helvetica" font-size="10" font-weight="400" fill="black" x="5.978027" y="10">print(‘x jest dodatnia’)</tspan>
+        </text>
+      </g>
+      <g id="Line_21">
+        <path d="M 99 54 L 114.9 54 L 166.5 54 L 166.5 72 L 166.5 56.1 L 166.5 59.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_22">
+        <path d="M 54 9 L 54 14.55 L 54 20.1 L 54 23.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_23">
+        <line x1="54" y1="72" x2="54" y2="140.1" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_24">
+        <path d="M 166.5 108 L 166.5 124 L 66.9 124" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Graphic_26">
+        <text transform="translate(116.1265 35)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="0" y="12">Tak</tspan>
+        </text>
+      </g>
+      <g id="Graphic_27">
+        <text transform="translate(23.247 86)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="13" font-weight="400" fill="black" x="30375702e-20" y="12">Nie</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
