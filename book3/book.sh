@@ -65,7 +65,7 @@ mv tmp-2.pdf x-2.pdf
 pandoc <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) -o tmp-3.prefacex.tex
 sed < tmp-3.prefacex.tex 's/section{/section*{/' > tmp-3.preface.tex
 
-cat [0-9]*.mkd | python2 verbatim.py | tee tmp-3.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V pdfversionprint -V fontsize:10pt -V documentclass:book -V lang:pl-PL -V langbabel:polish -V "author:Dr Charles R. Severance" -V "title:Python dla wszystkich" -V "subtitle:Odkrywanie danych z Python 3" -V colorlinks:false -V citecolor:black -V urlcolor:black -V linkcolor:black -V numbersections --no-highlight --template=template.latex -o tmp-3.tex
+cat [0-9]*.mkd | python2 verbatim.py | tee tmp-3.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V pdfversionprint -V fontsize:10pt -V documentclass:book -V lang:pl-PL -V langbabel:polish -V "author:Dr Charles R. Severance" -V "title:Python dla wszystkich" -V "subtitle:Odkrywanie danych z Python 3" -V colorlinks:false -V citecolor:black -V urlcolor:black -V linkcolor:black -V numbersections --highlight-style=monochrome --template=template.latex -o tmp-3.tex
 pandoc [A-Z][A-Z]*.mkd -o tmp-3.app.tex
 
 sed < tmp-3.app.tex -e 's/subsubsection{/xyzzy{/' -e 's/subsection{/plugh{/' -e 's/section{/chapter{/' -e 's/xyzzy{/subsection{/' -e 's/plugh{/section{/'  > tmp-3.appendix.tex
@@ -79,17 +79,6 @@ mv tmp-3.patch tmp-3.tex
 pdflatex -shell-escape tmp-3.tex # first, TOC
 pdflatex -shell-escape tmp-3.tex # second, add TOC
 mv tmp-3.pdf x-3.pdf
-gs \
- -sOutputFile=x-3-bw.pdf \
- -sDEVICE=pdfwrite \
- -sColorConversionStrategy=Gray \
- -dProcessColorModel=/DeviceGray \
- -dAutoRotatePages=/None \
- -dCompatibilityLevel=1.4 \
- -dNOPAUSE \
- -dBATCH \
- x-3.pdf
-mv x-3-bw.pdf x-3.pdf
 
 # cleanup
 
