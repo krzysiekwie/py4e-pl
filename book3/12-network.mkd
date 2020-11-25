@@ -308,7 +308,7 @@ Problem ten można rozwiązać za pomocą solidnej i stabilnej biblioteki do par
 Parsowanie HTMLa przy użyciu BeautifulSoup
 ------------------------------------------
 
-\index{BeautifulSoup, biblioteka}
+\index{BeautifulSoup, moduł}
 
 Nawet jeśli HTML wygląda jak XML^[Format XML jest opisany w następnym rozdziale.] i niektóre strony faktycznie są starannie skonstruowane jako XML, to niestety większość stron HTML jest zazwyczaj popsuta do tego stopnia, że parser XMLa odrzuca całą stronę HTML jako nieprawidłowo sformatowany dokument.
 
@@ -330,7 +330,7 @@ Bardziej szczegółowe informacje na temat instalacji bibliotek za pomocą narz�
 
 Użyjemy `urllib` do odczytania strony, a następnie użyjemy `BeautifulSoup` do wyodrębnienia atrybutów `href` ze znacznika hiperłącza (`a`).
 
-\index{BeautifulSoup, biblioteka}
+\index{BeautifulSoup, moduł}
 \index{HTML}
 \index{parsowanie!HTML}
 
@@ -437,7 +437,7 @@ Słowniczek
 
 BeautifulSoup
 :   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, zazwyczaj ignorowanych przez przeglądarki internetowe. Biblioteka `BeautifulSoup` ma swoją stronę pod adresem <https://www.crummy.com/software/BeautifulSoup>.
-\index{BeautifulSoup, biblioteka}
+\index{BeautifulSoup, moduł}
 
 gniazdo
 :   Połączenie sieciowe pomiędzy dwiema aplikacjami, w którym aplikacje mogą wysyłać i odbierać dane w obu kierunkach.

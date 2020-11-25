@@ -93,7 +93,7 @@ Jednym ze sposobów na myślenie o programowaniu obiektowym jest rozdzielenie na
 
 Jeśli spojrzymy ponownie na aplikację do wyodrębniania linków, w której korzystaliśmy z biblioteki `BeautifulSoup`, to możemy zobaczyć program, który jest skonstruowany poprzez złączenie różnych obiektów w celu wykonania tego zadania:
 
-\index{BeautifulSoup, biblioteka}
+\index{BeautifulSoup, moduł}
 \index{HTML}
 \index{parsowanie!HTML}
 

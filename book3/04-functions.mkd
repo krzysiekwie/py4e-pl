@@ -131,13 +131,14 @@ Funkcje matematyczne
 \index{matematyczna, funkcja}
 \index{funkcja matematyczna}
 \index{moduł}
+\index{biblioteka}
 \index{moduł!math}
 \index{math, moduł}
 \index{obiekt modułu}
 \index{import, instrukcja}
 \index{instrukcja!import}
 
-Python posiada moduł `math`, który dostarcza większość znanych funkcji 
+Python posiada moduł (bibliotekę) `math`, który dostarcza większość znanych funkcji 
 matematycznych. Zanim będziemy mogli skorzystać z tego modułu, musimy go 
 zaimportować: 
 
@@ -717,6 +718,10 @@ argument
     przypisana do odpowiadającego jej parametru w funkcji.
 \index{argument}
 \index{funkcja, argument}
+
+biblioteka
+:   Inaczej moduł.
+\index{biblioteka}
 
 ciało funkcji
 :   Sekwencja instrukcji wewnątrz definicji funkcji.
