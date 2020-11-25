@@ -30,4 +30,8 @@ for fn in [0-9]*.mkd; do
     i=$i+1
 done
 
+sed -i 's~alt="Klasa i dwa obiekty"~alt="Klasa i dwa obiekty" style="width: 50%"~' ../html3/14-objects.php
+sed -i 's~alt="Związki między tabelami"~alt="Związki między tabelami" style="width: 50%"~' ../html3/15-database.php
+sed -i 's~alt="Łączenie tabel przy pomocy JOIN"~alt="Łączenie tabel przy pomocy JOIN" style="width: 50%"~' ../html3/15-database.php
+
 rm tmp.*
