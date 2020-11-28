@@ -141,7 +141,7 @@ if ( $dueDate->message ) {
 Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i prześlij poniżej plik z bazą SQLite3:<br/>
 <input name="database" type="file"> 
 (Plik musi mieć rozszerzenie .sqlite)<br/>
-Wskazówka: The top organizational count is <?= $answer['iupui.edu'] ?>.<br/>
+Wskazówka: największa liczba wysłanych e-maili przez organizację wynosi <?= $answer['iupui.edu'] ?>.<br/>
 <input type="submit" value="Wyślij rozwiązanie">
 <p>
 Nie musisz eksportować ani konwertować bazy - po prostu wyślij utworzony przez Twój program plik <b>.sqlite</b>.

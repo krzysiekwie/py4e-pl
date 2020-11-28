@@ -1064,7 +1064,7 @@
     ],
     "lti" : [
         {
-            "title" : "Automatyczna ocena: zapytania SQL na pojedynczej tabeli",
+            "title" : "Automatyczna ocena: Zapytania SQL na pojedynczej tabeli",
             "launch" : "tools/sql-intro/",
             "resource_link_id": "pythonsql_01_single",
             "custom" : [
