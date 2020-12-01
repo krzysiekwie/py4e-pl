@@ -599,7 +599,7 @@ Powyższy skrypt oblicza pierwiastek kwadratowy z 5, ale ponieważ nie zapisuje
 wyniku w zmiennej ani nie wyświetla zwróconego wyniku, nie jest on zbyt 
 użyteczny.
 
-\index{tryb interaktywny}
+\index{tryb interaktywny}
 \index{tryb skryptowy}
 
 Funkcje puste mogą wyświetlać coś na ekranie lub mieć jakiś 

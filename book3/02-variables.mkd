@@ -210,7 +210,7 @@ Instrukcje
 Widzieliśmy ich dwa rodzaje: `print()` jako wyrażenie oraz przypisanie.
 
 \index{instrukcja}
-\index{tryb interaktywny}
+\index{tryb interaktywny}
 \index{tryb skryptowy}
 
 Gdy w trybie interaktywnym wpiszesz jakąś instrukcję, to interpreter ją wykona i
