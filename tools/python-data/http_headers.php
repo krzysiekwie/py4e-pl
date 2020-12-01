@@ -67,7 +67,7 @@ unset($_SESSION['postdata']);
 <p>
 <b>Eksploracja protokołu HTTP</b>
 <p>
-Będziesz musiał pobrać następujący dokument za pomocą protokołu HTTP w taki sposób, tak abyś mógł sprawdzić nagłówki odpowiedzi HTTP.
+W poniższym zadaniu będziesz musiał pobrać następujący dokument za pomocą protokołu HTTP w taki sposób, abyś mógł sprawdzić nagłówki odpowiedzi HTTP.
 <ul>
 <li><a href="<?= $getUrl ?>" target="_blank"><?= $getUrl ?></a></li>
 </ul>

@@ -56,7 +56,7 @@ if ( $dueDate->message ) {
 }
 ?>
 <p>
-<b>Wydobywanie danych z XMLa</b>
+<b>Wyodrębnianie danych z XMLa</b>
 <p>
 W poniższym zadaniu napiszesz program w Pythonie podobny do
 <a href="https://py4e.pl/code3/geoxml.py" target="_blank">https://py4e.pl/code3/geoxml.py</a>.
@@ -69,7 +69,7 @@ Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w
 <ul>
 <li> Dane przykładowe: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a>
 (Suma wynosi <?= $sum_sample ?>) </li>
-<li> Actual data: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a>
+<li> Dane do zadania: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a>
 (Suma kończy się cyframi <?= $sum%100 ?>)<br/> </li>
 </ul>
 Nie musisz zapisywać tych plików w swoim katalogu, ponieważ Twój program odczyta dane bezpośrednio z adresu URL.

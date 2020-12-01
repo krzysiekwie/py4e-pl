@@ -101,7 +101,7 @@ Jeśli nie masz jeszcze zainstalowanej aplikacji SQLite Browser, to możesz ją 
 https://sqlitebrowser.org/</a>.
 <p>
 Następnie utwórz bazę danych SQLite lub użyj jakiejś istniejącej bazy i utwórz
-w niej tabele tabelę o nazwie "Ages":
+w niej tabelę o nazwie "Ages":
 
 <pre>
 CREATE TABLE Ages
@@ -111,8 +111,8 @@ CREATE TABLE Ages
 );
 </pre>
 <p>
-Następnie upewnij się że tabela jest pusta poprzez usunięcie poprzednio wstawionych
-wierszy, a potem umieść w tabeli tylko i wyłącznie poniże wiersze:
+Następnie upewnij się, że tabela jest pusta, tj. usuń poprzednio wstawione
+wiersze, a następnie umieść w tabeli tylko i wyłącznie poniższe wiersze:
 <pre>
 <?php
 echo("DELETE FROM Ages;\n");
@@ -121,17 +121,17 @@ foreach($database as $row) {
 }
 ?>
 </pre>
-Po wstawieniu wierszy do tabeli, uruchom poniższe polecenie SQL:
+Po wstawieniu do tabeli powyższych wierszy, uruchom poniższe polecenie SQL:
 <pre>
 SELECT hex(name || age) AS X 
 FROM   Ages
 ORDER BY X;
 </pre>
 Znajdź <b>pierwszy</b> wynikowy wiersz i jako odpowiedź do zadania wprowadź ciąg
-znaków który wygląda jak <b>53656C696E613333</b>.
+znaków, który wygląda mniej więcej jak <b>53656C696E613333</b>.
 </p>
 <p>
 <b>Uwaga:</b> Zadanie musi być wykonane przy użyciu SQLite. W szczególności powyższe polecenie
 <code>SELECT</code> może nie działać na innych silnikach bazodanowych, więc nie
-korzystaj w tym zadaniu np. z baz MySQL lub Oracle.
+korzystaj w tym zadaniu z np. MySQL lub Oracle.
 </p>

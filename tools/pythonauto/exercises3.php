@@ -66,7 +66,7 @@ hrs = input("Podaj liczbę godzin: ")',
 
 
 "3.1" => Array(
-"qtext" => "<b>3.1</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin. Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10,50 za godzinę (wynagrodzenie powinno wynosić 498,75). Powinieneś użyć <b>input()</b> aby odczytać wprowadzane dane oraz <b>float()</b>, aby przekonwertować wprowadzony ciąg znaków na liczbę. Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
+"qtext" => "<b>3.1</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin. Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10.50 za godzinę (wynagrodzenie powinno wynosić 498.75). Powinieneś użyć <b>input()</b> aby odczytać wprowadzane dane oraz <b>float()</b>, aby przekonwertować wprowadzony ciąg znaków na liczbę. Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
 ",
 "desired" => "498.75",
 "desired2" => "Wynagrodzenie: 498.75",
@@ -106,7 +106,7 @@ Do przetestowania działania wprowadź wartość 0.75.
 "4.6" => Array(
 "qtext" => "<b>4.6</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin.
 Umieść logikę obliczenia wynagrodzenia w funkcji o nazwie <b>computepay()</b>, a następnie użyj tej funkcji. Funkcja powinna zwrócić wartość.
-Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10,50 za godzinę (wynagrodzenie powinno wynosić 498,75). Powinieneś użyć <b>input()</b> aby odczytać wprowadzane dane oraz <b>float()</b>, aby przekonwertować wprowadzony ciąg znaków na liczbę. Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
+Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10.50 za godzinę (wynagrodzenie powinno wynosić 498.75). Powinieneś użyć <b>input()</b> aby odczytać wprowadzane dane oraz <b>float()</b>, aby przekonwertować wprowadzony ciąg znaków na liczbę. Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
 Nie nazywaj swojej zmiennej sum ani nie używaj funkcji sum().
 ",
 "desired" => "Wynagrodzenie: 498.75",
@@ -304,9 +304,9 @@ print(lst)
 "!extend" => "Nie powinieneś używać extend() w tym ćwiczeniu.",
 "open" => "Powinieneś użyć funkcji open() aby otworzyć plik.",
 "sort" => "Zanim wypiszesz listę, powinieneś użyć metody sort() aby ją posortować.",
-"!'yonder'" => "Nie powinieneś umieszzać wynikowych danych w zmiennych znakowych.",
+"!'yonder'" => "Nie powinieneś umieszczać wynikowych danych w zmiennych znakowych.",
 "!.remove(" => "Nie powinieneś używać metody remove().",
-"!.set(" => "Nie powinieś używać metody set()",
+"!.set(" => "Nie powinieneś używać metody set()",
 "for" => "Potrzebujesz dwie pętle for. Jedna będzie dla obsługi linii, a druga dla każdego słowa w danej linii.")
 ),
 
@@ -415,7 +415,7 @@ print(bigname, bigcount)
 ),
 
 "10.2" => Array(
-"qtext" => "<b>10.2</b> Napisz program, który odczytuje zawartość pliku <b>mbox-short.txt</b> i dla każdej wiadomości zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z linii \"From \", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten napis na części za pomocą znaku dwukropka. 
+"qtext" => "<b>10.2</b> Napisz program, który odczytuje zawartość pliku <b>mbox-short.txt</b> i analizując każdą wiadomość zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z linii \"From \", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten napis na części za pomocą znaku dwukropka. 
 <pre>
 From stephen.marquard@uct.ac.za Sat Jan  5 <b>09</b>:14:16 2008
 </pre>

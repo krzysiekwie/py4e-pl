@@ -158,7 +158,7 @@ Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <b>connec
 <h1>Baza danych dotycząca utworów muzycznych</h1>
 <p>
 Aplikacja będzie miała za zadanie odczytać wyeksportowany plik iTunes w formacie XML,
-a następnie będzie musiała utworzyć poprawnie znormalizowaną bazę danych o następującej stukturze:
+a następnie będzie musiała utworzyć poprawnie znormalizowaną bazę danych o następującej strukturze:
 <pre>
 CREATE TABLE Artist
 (
@@ -192,15 +192,15 @@ CREATE TABLE Track
 </pre>
 </p>
 <p>
-Jeśli będzie uruchamiał program kilka razy lub jeśli będziesz używał różnych plików wejściowych,
-to pamiętaj aby za każdym razem wyczyścić bazę danych.
+Jeśli będziesz uruchamiać swój program kilka razy lub będziesz używać różnych plików wejściowych,
+to pamiętaj aby za każdym razem wyczyścić swoją bazę danych.
 <p>
-ożesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu zawartego w 
+Możesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu zawartego w 
 <a href="https://py4e.pl/code3/tracks.zip" target="_blank">
 https://py4e.pl/code3/tracks.zip</a>.  
 Plik .zip zawiera również plik <b>Library.xml</b>, który jest używany do oceniania poprawności przesyłanych rozwiązań.
 Możesz wyeksportować swoje własne utwory z iTunes i utworzyć bazę, ale w celach
-rozliczeniowych tego zadania użyj pliku <b>Library.xml</b>, który jest w pliku .zip.
+zaliczeniowych tego zadania użyj pliku <b>Library.xml</b>, który jest w pliku .zip.
 </p>
 <p>
 Podczas oceny poprawności Twojego rozwiązania, na przesłanej przez Ciebie bazie danych zostanie wywołane poniższe zapytanie SQL, tak aby porównać otrzymane wyniki ze spodziewanymi wynikami:
@@ -215,7 +215,7 @@ FROM   Track JOIN Genre JOIN Album JOIN Artist
           AND Album.artist_id = Artist.id
 ORDER BY Artist.name LIMIT 3;
 </pre>
-Spodziewany wynik zapytania na Twojej bazie danych jest następujący (tutaj jest to wyświetlone jako prosta tabela HTML z nagłówkiem):
+Spodziewany wynik zapytania na Twojej bazie danych jest następujący (tutaj wyświetlamy to jako prostą tabelę HTML z nagłówkiem):
 <table border="2">
 <tr>
 <th>Track</th><th>Artist</th><th>Album</th><th>Genre</th>

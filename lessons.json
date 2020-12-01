@@ -146,7 +146,7 @@
                 "json": 
 
 {
-  "title":"Recenzja współuczestników kursu: zrzuty ekranu dokumentujące instalację i uruchomienia Pythona",
+  "title":"Ocena współuczestników kursu: Zrzuty ekranu pokazujące instalację i uruchomienia Pythona",
   "description":"Zainstaluj Pythona i programistyczny edytor tekstu oraz napisz program, który wypisuje jedną linię inną niż \"Witaj świecie!\", a następnie zrób dwa zrzuty ekranu i wgraj je poniżej. Powinieneś użyć wiersza poleceń do wykonania programu Pythona, który napisałeś w edytorze tekstowym. *Nie używaj* edytora IDLE Python Shell, interpretera Pythona (>>>), ani też skrótu w edytorze tekstu, który uruchamia kod. Później podczas kursu, gdy zaczniemy wczytywać pliki, będziemy musieli mieć możliwość uruchamiania programów z poszczególnych katalogów. Możesz obejrzeć filmy aby więcej się dowiedzieć na ten temat.",
   "grading":"Jest to stosunkowo proste zadanie. Celem jest po prostu pokazanie, że każdy kursant ma zainstalowanego Pythona na swoim komputerze stacjonarnym lub laptopie i może wykonać zrzuty ekranu. Aby pomóc kursantowi, który będzie recenzentem Twojego zadania, dodaj również komentarze.",
   "assignment":"https://py4e.pl/install",
@@ -913,7 +913,7 @@
     ],
     "lti" : [
         {
-            "title" : "Automatyczna ocena: Wydobywanie danych z XMLa",
+            "title" : "Automatyczna ocena: Wyodrębnianie danych z XMLa",
             "resource_link_id": "pythondata_05_xml",
             "launch" : "tools/python-data/",
             "custom" : [
@@ -929,7 +929,7 @@
             "resource_link_id" : "py4e_13_xml_quiz"
         },
         {
-            "title" : "Automatyczna ocena: Wydobywanie danych z JSONa",
+            "title" : "Automatyczna ocena: Wyodrębnianie danych z JSONa",
             "launch" : "tools/python-data/",
             "resource_link_id": "pythondata_06_json",
             "custom" : [
@@ -1080,7 +1080,7 @@
             "resource_link_id" : "py4e_15_one_quiz"
         },
         {
-            "title" : "Automatyczna ocena: Zliczanie e-maili w bazie",
+            "title" : "Automatyczna ocena: Zliczanie e-maili",
             "launch" : "tools/sql-intro/",
             "resource_link_id": "pythonsql_02_email",
             "custom" : [

@@ -165,8 +165,8 @@ CREATE TABLE Counts
 Po uruchomieniu programu na pliku <b>mbox.txt</b>, jako rozwiązanie wgraj tutaj wynikową bazą danę. 
 </p>
 <p>
-Jeśli będzie uruchamiał program kilka razy lub jeśli będziesz używał różnych plików wejściowych,
-to pamiętaj aby za każdym razem wyczyścić bazę danych.
+Jeśli będziesz uruchamiać swój program kilka razy lub będziesz używać różnych plików wejściowych,
+to pamiętaj aby za każdym razem wyczyścić swoją bazę danych.
 <p>
 
 Możesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu <a href="https://py4e.pl/code3/emaildb.py" target="_blank">
@@ -177,7 +177,7 @@ Dane do tego zdania dostępne są w pliku <a href="https://py4e.pl/code3/mbox.tx
 https://py4e.pl/code3/mbox.txt</a>.
 </p>
 <p>
-Ponieważ przykładowy kod podczas odczytywania każdego rekordu w pętli używa instrukcji <b>UPDATE</b> i przekazuje wyniki do bazy danych, przetworzenie wszystkich danych może zająć nawet kilka minut. Metoda <b>commit()</b> powoduje, że nowe dane są zapisywane na dysku za każdym wywołaniem tej metody.
+Przykładowy kod w pętli podczas odczytywania każdego rekordu używa instrukcji <b>UPDATE</b> i przekazuje wyniki do bazy danych. W związku z tym przetworzenie wszystkich danych może zająć nawet kilka minut. Metoda <b>commit()</b> powoduje, że nowe dane są zapisywane na dysku za każdym razem gdy zostanie wywołana ta metoda.
 </p>
 <p>
 Program można znacznie przyspieszyć przenosząc poza pętlę operację <b>commit()</b>. W każdym programie bazodanowym istnieje równowaga między liczbą wykonywanych operacji zapisywania danych a troską o to aby nie utracić wyników operacji, które nie zostały jeszcze zapisane.

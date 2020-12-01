@@ -74,7 +74,7 @@ if ( isset($_POST['name']) && isset($_POST['code']) ) {
     $RESULT->setJsonKey('code', $_POST['code']);
 
     if ( $_POST['name'] != $actual_last ) {
-        $_SESSION['error'] = "Podana przez Ciebie nazwa nie pasuje do oczekiwanego wyniku";
+        $_SESSION['error'] = "Podane przez Ciebie imię nie pasuje do oczekiwanego wyniku";
         header('Location: '.addSession('index.php'));
         return;
     }
@@ -103,19 +103,18 @@ $sample_url = dataUrl('known_by_'.$sample_names[0].'.html');
 $actual_url = dataUrl('known_by_'.$actual_names[0].'.html');
 ?>
 <p>
-<b>Przechodzenie po linkach w Pythonie</b>
+<b>Przechodzenie po linkach</b>
 <p>
-W poniższym zadaniu napiszesz program w języku Python, który poszerza możliwości programu
+W poniższym zadaniu napiszesz program, który poszerza możliwości programu
 <a href="https://py4e.pl/code3/urllinks.py" target="_blank">https://py4e.pl/code3/urllinks.py</a>.
-Program będzie używał modułu <b>urllib</b> do odczytania kodu HTML z poniższych plików, wyodrębni wartości "href" ze znaczników hiperłączy, przeskanuje dane w poszukiwaniu znacznika będącego w określonej pozycji względem pierwszego imienia na liście, przejdzie do kolejnej strony i powtórzy cały proces wiele tak aż na końcy wyświetli ostatnie znalezione imię.
+Program będzie używał modułu <b>urllib</b> do odczytania kodu HTML z poniższych plików, wyodrębni wartości "href" ze znaczników hiperłączy, przeskanuje dane w poszukiwaniu znacznika na określonej pozycji listy, przejdzie do kolejnej strony i powtórzy cały proces podaną liczbę razy, a na końcu wyświetli ostatnie znalezione imię.
 </p>
 <p>
-Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w którym podajemy również wynikową sumę, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
+Dostępne są dwa pliki. Pierwszy z nich to przykładowy plik, dla którego podano również wynikowe imię, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
 <ul>
 <li> Dane przykładowe: Rozpocznij od
 <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a> <br/>
-Znajdź link na pozycji <b><?= $sample_pos+1 ?></b> (pierwsze imię jest 1).
-Przejdź dalej po tym linku. Powtórz cały proces <b><?= $sample_pages ?></b> razy. 
+Pierwsze imię znajduje się w adresie URL między "known_by_" a ".html". Pod wskazanym adresem URL znajdź na liście link na pozycji <b><?= $sample_pos+1 ?></b>. Przejdź dalej po tym linku. Powtórz cały proces <b><?= $sample_pages ?></b> razy. 
 Odpowiedzią jest ostatnie imię, które odnalazłeś.
 <br/>
 Sekwencja imion:
@@ -128,8 +127,7 @@ Sekwencja imion:
 Ostatnie imię w sekwencji: <?= $sample_last ?><br/>
 </li>
 <li> Dane do zadania: Rozpocznij od <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a> <br/>
-Znajdź link na pozycji <b><?= $actual_pos+1 ?></b> (pierwsze imię jest 1).
-Przejdź dalej po tym linku. Powtórz cały proces <b><?= $actual_pages ?></b> razy.
+Pierwsze imię znajduje się w adresie URL między "known_by_" a ".html". Pod wskazanym adresem URL znajdź na liście link na pozycji <b><?= $actual_pos+1 ?></b>. Przejdź dalej po tym linku. Powtórz cały proces <b><?= $actual_pages ?></b> razy.
 Odpowiedzią jest ostatnie imię, które odnalazłeś.<br/>
 Wskazówka: Pierwszą literą imienia z ostatniej strony do przetworzenia jest: <?= substr($actual_last,0,1) ?><br/>
 <?php
@@ -146,11 +144,11 @@ if ( isset($_SESSION['debug']) ) {
 </ul>
 <b>Strategia</b>
 <p>
-Przetwarzane przez Ciebie strony internetowe będą dostosowywać odstępy między linkami i będą ukrywały zawartość strony po kilku sekundach, tak aby utrudnić wykonanie zadania bez napisania programu. Jednak szczerze mówiąc, przy odrobinie wysiłku i cierpliwości będziesz w stanie pokonać te utrudnienia. Ale to nie o to tutaj chodzi. Celem tego zadania jest by napisać sprytny program w Pythonie do rozwiązania powyższego problemu.
+Przetwarzane przez Ciebie strony internetowe będą dostosowywać odstępy między linkami i będą ukrywały zawartość strony po kilku sekundach, tak aby utrudnić wykonanie zadania bez napisania programu. Jednak szczerze mówiąc, przy odrobinie wysiłku i cierpliwości będziesz w stanie pokonać te utrudnienia. Ale nie o to tutaj chodzi. Celem tego zadania jest by napisać w Pythonie sprytny program, który rozwiąże powyższy problem.
 </p>
-<p><b>Przykładowe wykonanie</b>
+<p><b>Przykładowe uruchomienie</b>
 <p>
-Oto przykładowe wykonanie rozwiązania:
+Oto przykładowe uruchomienie programu:
 <pre>
 Podaj adres URL: <?= dataUrl('known_by_Fikret.html')."\n"; ?>
 Podaj liczbę powtórzeń: 4
@@ -166,7 +164,7 @@ Rozwiązaniem zadania jest "Anayah".
 <?php httpsWarning($sample_url); ?>
 <p><b>Rozwiązanie zadania</b>
 <form method="post">
-Umieść poniżej ostatnie pobrane imię oraz kod Pythona:<br/>
+Umieść poniżej ostatnie pobrane imię oraz kod programu:<br/>
 Imię: <input type="text" size="20" name="name">
 (imię zaczyna się na literę <?= substr($actual_last,0,1) ?>)
 <input type="submit" value="Wyślij rozwiązanie"><br/>
@@ -175,6 +173,6 @@ if ( $USER->instructor ) {
     echo("<b>Wskazówki dla instruktora:</b> Jeśli chcesz sprawdzić kod kursanta, wprowadź '42,Viki' z imieniem od którego kursant ma rozpocząć działanie.<br/>");
 }
 ?>
-Kod Pythona:<br/>
+Kod programu:<br/>
 <textarea rows="20" style="width: 90%" name="code"></textarea><br/>
 </form>

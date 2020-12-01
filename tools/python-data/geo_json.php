@@ -68,11 +68,11 @@ if ( $dueDate->message ) {
 <p>
 <b>Używanie API GeoJSON</b>
 </p>
-W poniższym zadaniu napiszesz program w Pythonie podobny do
+W poniższym zadaniu napiszesz program podobny do
 <a href="https://py4e.pl/code3/geojson.py" target="_blank">https://py4e.pl/code3/geojson.py</a>.
-Program będzie prosił o podanie lokalizacji, połączy się z usługą sieciową Google Maps, 
+Program będzie prosił o podanie lokalizacji, połączy się z usługą sieciową zawierającą dane Google Maps, 
 pobierze dane w formacie JSON, przeparsuje dane i wyświetli element <b>place_id</b>,
-który jest tekstowym identyfikatorem unikalnie identyfikującym jakieś miejsce.
+który jest tekstowym identyfikatorem identyfikującym jakieś miejsce.
 </p>
 <p>
 <b>Adresy API</b>
@@ -84,7 +84,7 @@ danych Google:
 <a href="<?= deHttps($api_url).'?' ?>" target="_blank"><?= deHttps($api_url) ?>?</a>
 </pre>
 API przyjmuje taki sam parametr (adresy) jak API Google.
-API nie posiada również limitów wywołać, zatem możesz je testować tyle razy ile chcesz.
+API nie posiada również limitów wywołań, zatem możesz je testować tyle razy ile chcesz.
 Jeśli wywołasz adres URL bez podanych parametrów, uzyskasz odpowiedź "No address...".
 </p>
 <p>
@@ -99,7 +99,7 @@ wyniki korzystając z adresów API <b>geojson</b> i <b>json</b>, więc upewnij s
 że korzystasz z tych samych adresów API co mechanizm sprawdzarkowy tego zadania.
 <p>
 <?php httpsWarning($api_url); ?>
-<p><b>Dane testowe / Przykładowe uruchomienie</b></p>
+<p><b>Dane testowe i przykładowe uruchomienie</b></p>
 <p>
 Możesz sprawdzić czy Twój program działa poprawnie podając lokalizację
  "<?= $sample_location ?>", której <b>place_id</b> wynosi "<?= $sample_place ?>".
@@ -123,12 +123,12 @@ to "<?= substr($actual_place,0,7) ?> ..."<br/>
 </p>
 <p>
 Upewnij się, że pobierasz dane przy pomocy adresu URL podanego powyżej, a nie
-przy pomocy zwykłego Google API. Twój program powinien działać również z Google API,
+przy pomocy zwykłego Google API. Twój program powinien działać również z płatnego Google API,
 ale uzyskiwane <b>place_id</b> może być różne od tego, które jest wykorzystywane w tym zadaniu.
 </p>
 <form method="post">
 place_id: <input type="text" size="40" name="place_id">
 <input type="submit" value="Wyślij rozwiązanie"><br/>
-Kod Pythona:<br/>
+Kod programu:<br/>
 <textarea rows="20" style="width: 90%" name="code"></textarea><br/>
 </form>
