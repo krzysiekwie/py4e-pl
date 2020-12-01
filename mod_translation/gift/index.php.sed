@@ -9,3 +9,11 @@
 This quiz has not yet been configured;Quiz nie został jeszcze skonfigurowany
 Your current grade on this assignment is:;Twój aktualny wynik za to zadanie to:
 <input type="submit">;<input type="submit" value="Wyślij">
+'Student Data';'Dane kursantów'
+'Export';'Eksport'
+'Analytics';'Analiza'
+'Settings';'Konfiguracja'
+'Load Quiz';'Załaduj quiz'
+'Edit Quiz';'Edytuj quiz'
+'The number of tries allowed for this quiz.  Leave blank or set to 1 for a single try.';'Liczba dozwolonych podejść do tego quizu. Aby umożliwić tylko jedno podejście, pozostaw puste pole lub wpisz 1.'
+'The number of seconds between retries.  Leave blank or set to zero to allow immediate retries.';'Liczba sekund pomiędzy kolejnym podejście do quizu. Aby od razu można było ponownie podejść do quizu, pozostaw puste pole lub wpisz 0.'

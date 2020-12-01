@@ -152,11 +152,11 @@
   "assignment":"https://py4e.pl/install",
   "parts":[
     {
-      "title":"Obraz edytowanego programu w edytorze tekstowym",
+      "title":"Obraz edytowanego programu w edytorze tekstowym:",
       "type":"image"
     },
     {
-      "title":"Obraz programu wykonywanego w wierszu poleceń lub terminalu",
+      "title":"Obraz programu wykonywanego w wierszu poleceń lub terminalu:",
       "type":"image"
     }
   ],
