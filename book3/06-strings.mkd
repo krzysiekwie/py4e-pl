@@ -305,13 +305,15 @@ Metody obiektów będących ciągami znaków
 
 Ciągi znaków są przykładem *obiektów* Pythona. Obiekt zawiera zarówno dane (zasadniczy ciąg znaków), jak i *metody*, które w praktyce są funkcjami wbudowanymi w obiekt i dostępnymi dla każdej *instancji* obiektu.
 
-Python posiada funkcję o nazwie `dir()`, która zawiera listę metod dostępnych dla danego obiektu. Funkcja `type()` pokazuje typ obiektu, a funkcja `dir()` pokazuje dostępne dla niego metody.
+Python posiada funkcję o nazwie `dir()`, która zawiera listę metod dostępnych dla danego obiektu. Funkcja `type()` pokazuje typ obiektu:
 
 ~~~~ {.python}
 >>> stuff = 'Witaj świecie'
 >>> type(stuff)
 <class 'str'>
 ~~~~
+
+Natomiast funkcja `dir()` pokazuje dostępne dla niego metody:
 
 ~~~~
 >>> dir(stuff)
