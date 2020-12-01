@@ -436,7 +436,7 @@ Parsowanie ciągów znaków
 
 Często chcemy zajrzeć do ciągu znaków i znaleźć pewien podciąg. Na przykład, jeśli przedstawiono nam serię linii sformatowanych w następujący sposób:
 
-`From stephen.marquard@`*`uct.ac.za`*` Sat Jan  5 09:14:16 2008`
+`From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008`
 
 i chcielibyśmy z każdej linii wyciągnąć tylko drugą połowę adresu e-mail (tj. `uct.ac.za`), to możemy to zrobić za pomocą metody `find()` i operacji wyciągania wycinków z ciągów znaków.
 
