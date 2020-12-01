@@ -1,6 +1,6 @@
 # Wyszukaj linie zaczynające się od 'F',
 # po których następują 2 dowolne znaki,
-# a następnie  'm:'.
+# a następnie 'm:'.
 import re
 hand = open('mbox-short.txt')
 for line in hand:

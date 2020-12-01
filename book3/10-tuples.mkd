@@ -63,9 +63,9 @@ Innym sposobem na skonstruowanie krotki jest wbudowana funkcja `tuple()`. Bez ż
 Jeśli argumentem jest sekwencja (ciąg znaków, lista lub krotka), to wynikiem wywołania funkcji `tuple()` jest krotka z elementami podanej sekwencji:
 
 ~~~~ {.python .trinket}
->>> t = tuple('lupins')
+>>> t = tuple('łubin')
 >>> print(t)
-('l', 'u', 'p', 'i', 'n', 's')
+('ł', 'u', 'b', 'i', 'n')
 ~~~~
 
 Ponieważ słowo `tuple` jest nazwą konstruktora, powinieneś unikać używania go jako nazwy zmiennej.
@@ -181,37 +181,37 @@ Jedną z unikalnych cech syntaktycznych języka Python jest możliwość posiada
 W poniższym przykładzie mamy dwuelementową listę (która jest sekwencją) i w jednej instrukcji przypisujemy pierwszy i drugi element sekwencji do zmiennych `x` i `y`.
 
 ~~~~ {.python .trinket}
->>> m = [ 'have', 'fun' ]
+>>> m = [ 'miłej', 'zabawy' ]
 >>> x, y = m
 >>> x
-'have'
+'miłej'
 >>> y
-'fun'
+'zabawy'
 >>>
 ~~~~
 
 To nie jest magia, Python *z grubsza* tłumaczy składnię przypisania krotek na następującą:^[Python nie tłumaczy składni dosłownie. Na przykład, jeśli spróbujesz takiej operacji na słownikach, to nie będzie to działać tak, jak można by się tego spodziewać].
 
 ~~~~ {.python .trinket}
->>> m = [ 'have', 'fun' ]
+>>> m = [ 'miłej', 'zabawy' ]
 >>> x = m[0]
 >>> y = m[1]
 >>> x
-'have'
+'miłej'
 >>> y
-'fun'
+'zabawy'
 >>>
 ~~~~
 
 Stylistycznie rzecz ujmując, gdy używamy krotki po lewej stronie instrukcji przypisania, pomijamy nawiasy, ale poniższa składnia jest również poprawna:
 
 ~~~~ {.python}
->>> m = [ 'have', 'fun' ]
+>>> m = [ 'miłej', 'zabawy' ]
 >>> (x, y) = m
 >>> x
-'have'
+'miłej'
 >>> y
-'fun'
+'zabawy'
 >>>
 ~~~~
 

@@ -200,7 +200,7 @@ Kuszące jest skorzystanie z operatora przypisania z zamiarem zmiany znaku w ci�
 
 ~~~~ {.python}
 >>> greeting = 'Witaj świecie!'
->>> greeting[0] = 'J'
+>>> greeting[0] = 'V'
 TypeError: 'str' object does not support item assignment
 ~~~~
 
@@ -311,16 +311,19 @@ Python posiada funkcję o nazwie `dir()`, która zawiera listę metod dostępnyc
 >>> stuff = 'Witaj świecie'
 >>> type(stuff)
 <class 'str'>
+~~~~
+
+~~~~
 >>> dir(stuff)
 ['capitalize', 'casefold', 'center', 'count', 'encode',
- 'endswith', 'expandtabs', 'find', 'format', 'format_map',
- 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit',
- 'isidentifier', 'islower', 'isnumeric', 'isprintable',
- 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower',
- 'lstrip', 'maketrans', 'partition', 'replace', 'rfind',
- 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip',
- 'split', 'splitlines', 'startswith', 'strip', 'swapcase',
- 'title', 'translate', 'upper', 'zfill']
+'endswith', 'expandtabs', 'find', 'format', 'format_map',
+'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit',
+'isidentifier', 'islower', 'isnumeric', 'isprintable',
+'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower',
+'lstrip', 'maketrans', 'partition', 'replace', 'rfind',
+'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip',
+'split', 'splitlines', 'startswith', 'strip', 'swapcase',
+'title', 'translate', 'upper', 'zfill']
 >>> help(str.capitalize)
 Help on method_descriptor:
 

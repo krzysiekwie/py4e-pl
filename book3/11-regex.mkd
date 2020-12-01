@@ -418,17 +418,17 @@ Aby wyjść z systemu pomocy, wpisz `quit`.
 
 Jeśli wiesz, jakiego modułu chcesz użyć, możesz użyć polecenia `dir()` w następujący sposób, tak aby znaleźć metody dostępne w tym module:
 
-~~~~ {.python .trinket}
+~~~~
 >>> import re
 >>> dir(re)
-[.. 'compile', 'copy_reg', 'error', 'escape', 'findall',
+[..., 'compile', 'copy_reg', 'error', 'escape', 'findall',
 'finditer', 'match', 'purge', 'search', 'split', 'sre_compile',
 'sre_parse', 'sub', 'subn', 'sys', 'template']
 ~~~~
 
 Możesz również uzyskać niewielką część dokumentacji na temat określonej metody za pomocą polecenia `help()`.
 
-~~~~ {.python}
+~~~~
 >>> help(re.search)
 Help on function search in module re:
 

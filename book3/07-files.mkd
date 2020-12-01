@@ -402,14 +402,14 @@ Standardowo możemy otworzyć plik bez podawania żadnych argumentów:
 >>> fhand = open('polski.txt')
 ~~~~
 
-W zależności od systemu operacyjnego możemy zauważyć, że wydrukowanie informacji o zmiennej `fhand` nieco się różni w parametrze `encoding`. Np. w systemie Windows możemy otrzymać:
+W zależności od systemu operacyjnego możemy zauważyć, że wydrukowanie informacji o zmiennej `fhand` nieco się różni w parametrze `encoding`. Np. w angielskiej wersji systemu Windows możemy otrzymać informację o domyślnym kodowaniu CP-1252:
 
 ~~~~ {.python}
 >>> print(fhand)
 <_io.TextIOWrapper name='polski.txt' mode='r' encoding='cp1252'>
 ~~~~
 
-Z kolei w systemie Linux:
+Z kolei w systemie Linux domyślne kodowanie może być ustawione na UTF-8:
 
 ~~~~ {.python}
 >>> print(fhand)
@@ -418,7 +418,7 @@ Z kolei w systemie Linux:
 
 \index{krzaki}
 
-Jeśli w takiej sytuacji spróbujemy odczytać i wyświetlić zawartość pliku, to w przypadku Windowsa otrzymamy tzw. krzaki:
+Jeśli w takiej sytuacji spróbujemy odczytać i wyświetlić zawartość pliku, to w przypadku powyższej wersji Windowsa otrzymamy tzw. krzaki:
 
 ~~~~ {.python}
 >>> print(fhand.read())
@@ -454,7 +454,7 @@ i niemalże fanatyczne oddanie papieżowi...
 oraz piękne czerwone mundurki.
 ~~~~
 
-Próbując zapisać tekst "żółć" pod Windowsem w domyślnym kodowaniu, prawdopodobnie trafimy na błąd kodowania:
+Próbując zapisać tekst "żółć" pod Windowsem w domyślnym kodowaniu, prawdopodobnie trafimy na błąd kodowania^[W polskiej wersji systemu Windows domyślnym kodowaniem zapewne będzie CP-1250 i próba zapisu polskiego tekstu zakończy się powodzeniem.]:
 
 ~~~~ {.python}
 >>> fhand_pl1 = open('proba1.txt', 'w')
@@ -479,7 +479,7 @@ Na szczęście możemy użyć parametru `encoding`:
 >>> fhand_pl2.close()
 ~~~~
 
-Problemy z kodowaniem to szeroki temat i początkującemu programiście może to napsuć wiele krwi. Istnieje wiele sposobów na automatyczne wykrywanie kodowania i konwersji z jednego na drugie. Jednak na potrzeby tego kursu wystarczy, że w razie wątpliwości otworzysz plik np. w programistycznym edytorze tekstu Atom lub edytorze tekstu Notepad++ – informacja o kodowaniu pliku będzie w prawym dolnym rogu ekranu.
+Problemy z kodowaniem to szeroki temat i początkującemu programiście może to napsuć wiele krwi. Istnieje wiele sposobów na automatyczne wykrywanie kodowania i konwersji z jednego na drugie. Jednak na potrzeby tego kursu wystarczy, że w razie wątpliwości otworzysz plik np. w programistycznym edytorze tekstu Atom lub edytorze tekstu Notepad++ (informacja o kodowaniu pliku będzie w prawym dolnym rogu ekranu).
 
 Obecnie ogólnie przyjętym standardem kodowania plików jest UTF-8.
 
@@ -498,18 +498,26 @@ Kiedy odczytujesz dane lub zapisujesz dane do plików, możesz mieć problemy z 
  4
 ~~~~
 
+W trybie interaktywnym możemy wyświetlić zawartość takiej zmiennej po prostu poprzez wpisanie jej nazwy:
+
+~~~~ {.python}
+>>> s
+'1 2\t 3\n 4'
+~~~~
+
 \index{repr, funkcja}
 \index{funkcja!repr}
 \index{reprezentacja ciągu znaków}
 
-Wbudowana funkcja `repr()` może pomóc. Przyjmuje ona dowolny obiekt jako argument i zwraca jego reprezentację w postaci ciągu znaków. Jeśli obiektem jest właśnie ciąg znaków, to białe znaki są przedstawiane w postaci z lewym ukośnikiem:
+W przypadku skryptu możemy skorzystać z wbudowanej funkcji `repr()`. Przyjmuje ona dowolny obiekt jako argument i zwraca jego reprezentację w postaci ciągu znaków. Jeśli obiektem jest właśnie ciąg znaków, to białe znaki są przedstawiane w postaci z lewym ukośnikiem:
 
 ~~~~ {.python}
->>> print(repr(s))
-'1 2\t 3\n 4'
+print(repr(s))
 ~~~~
 
-Może to być pomocne przy debugowaniu.
+~~~~
+'1 2\t 3\n 4'
+~~~~
 
 Innym problemem, na który możesz się natknąć, jest to, że różne systemy używają różnych znaków, by oznaczyć koniec linii. Niektóre systemy (np. Linux i macOS) używają znaku końca linii, reprezentowanego przez `\n`. Inne używają zamiast niego znaku powrotu karetki, reprezentowanego przez `\r`. Jeszcze inne (np. Windows) używają obu tych znaków, tj. `\r\n`. Jeśli przenosisz pliki między różnymi systemami, te niespójności mogą powodować problemy.^[Jeśli korzystamy np. z edytora Atom, to po otwarciu interesującego nas pliku informację o użytym sposobie zapisu oznaczenia końca linii możemy znaleźć na dolnej belce w prawym dolnym rogu aplikacji. LF (ang. *line feed*) oznacza `\n`, a CR (ang. *carriage return*) oznacza `\r`.]
 
@@ -576,7 +584,7 @@ Napisz program proszący o podanie nazwy pliku, a następnie przeszukaj plik w c
 X-DSPAM-Confidence: 0.8475
 ~~~~
 
-Gdy trafisz na linię, która zaczyna się od "X-DSPAM-Confidence:", podziel linię tak, by wyodrębnić z niej liczbę zmiennoprzecinkową. Zliczaj te linie i sumuj wartości oznaczające pewność, że mamy do czynienia ze spamem. Kiedy dotrzesz do końca pliku, wydrukuj średnią wartość pewności.
+Gdy trafisz na linię, która zaczyna się od "X-DSPAM-Confidence:", podziel linię tak, by wyodrębnić z niej liczbę zmiennoprzecinkową. Zliczaj te linie i sumuj wartości oznaczające pewność, że mamy do czynienia ze spamem. Kiedy dotrzesz do końca pliku, wydrukuj średnią wartość pewności spamu.
 
 ~~~~
 Podaj nazwę pliku: mbox.txt
