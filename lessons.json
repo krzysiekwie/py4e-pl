@@ -1,6 +1,6 @@
 {
 "title": "Python dla wszystkich (PY4E-PL)",
-"description" : "Witaj na mojej stronie, na której nauczysz się Pythona, nawet jeśli nie masz doświadczenia w programowaniu.",
+"description" : "Witaj na stronie, na której nauczysz się Pythona, nawet jeśli nie masz doświadczenia w programowaniu.",
 "count": true,
 "required_modules": [
     "https://github.com/tsugitools/peer-grade"
