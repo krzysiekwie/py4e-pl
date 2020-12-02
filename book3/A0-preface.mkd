@@ -75,7 +75,7 @@ Informacja dotycząca polskiego wydania
 
 Książka "Python dla wszystkich", w odniesieniu do swojego oryginału "Python for Everybody", jest nie tylko jej tłumaczeniem, ale posiada również szereg poprawek, rozwinięć i nowych materiałów.
 
-W rozdziale 7 dodano sekcję o przetwarzaniu plików zawierających polski tekst. Rozdziały 13 i 16 korzystają z usługi Nominatim dostarczanej przez OpenStreetMap (zamiast z płatnego GoogleAPI). Indeks został poprawiony, usunięto zbędne i dodano nowe odniesienia w celu łatwiejszego wyszukiwania treści. W tekście dodano przypisy w celu rozjaśnienia polskiej terminologii. W kodach programów nie tłumaczono nazw zmiennych – jest to pewna ogólna konwencja programistyczna, która powinna również pomóc w sprawniejszym operowaniu pojęciami programistycznymi (może to być szczególnie przydatne podczas wyszukiwania w internecie treści na zadany problem).
+W rozdziale 7 dodano sekcję o przetwarzaniu plików zawierających polski tekst. Rozdziały 13 i 16 korzystają z usługi Nominatim dostarczanej przez OpenStreetMap (zamiast z płatnego GoogleAPI). Zaktualizowano opis korzystania z API Twittera. Indeks został poprawiony, usunięto zbędne i dodano nowe odniesienia w celu łatwiejszego wyszukiwania treści. W tekście dodano przypisy w celu rozjaśnienia polskiej terminologii. W kodach programów nie tłumaczono nazw zmiennych – jest to pewna ogólna konwencja programistyczna, która powinna również pomóc w sprawniejszym operowaniu pojęciami programistycznymi (może to być szczególnie przydatne podczas wyszukiwania w internecie treści na zadany problem).
 
 Na stronie internetowej, będącej uzupełnieniem tej książki, rozwinięto i uporządkowano sekcje dotyczące instalacji Pythona. 
 
