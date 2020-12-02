@@ -423,7 +423,7 @@ Po kolei zajmiemy się każdym z tych schematów.
 
 ### Ograniczenia w tabelach bazy danych
 
-\index{ograniczenie}
+\index{ograniczenie w tabeli bazy danych}
 \index{baza danych!ograniczenie}
 
 Projektując struktury naszych tabel, możemy powiedzieć systemowi bazy danych, że chcielibyśmy, aby egzekwował on od nas przestrzeganie kilku zasad. Reguły te pomagają nam uniknąć popełniania błędów i wprowadzania do naszych tabel błędnych danych. Kiedy tworzymy nasze tabele:
@@ -668,8 +668,8 @@ atrybut
 
 indeks
 :   Dodatkowe dane, które oprogramowanie bazy danych przechowuje w postaci wierszy i wstawia dodatkowo do tabeli, dzięki czemu wyszukiwanie informacji odbywa się bardzo szybko.
-\index{indeks}
-\index{baza danych!indeksy}
+\index{indeks w tabeli bazy danych}
+\index{baza danych!indeks w tabeli}
 \index{}
 
 klucz główny
@@ -701,18 +701,18 @@ kursor
 
 normalizacja
 :   Projektowanie modelu danych w taki sposób, aby żadne dane nie były powielone. Każdą porcję danych przechowujemy w bazie tylko w jednym miejscu i z innych miejsc odwołujemy się do niej za pomocą klucza obcego.
-\index{normalizacja}
+\index{normalizacja bazy danych}
 \index{baza danych!normalizacja}
 
 ograniczenie
 :   Gdy mówimy bazie danych, by egzekwowała jakąś regułę/zasadę w przypadku kolumny lub wiersza tabeli. Częstym ograniczeniem jest wymuszenie, by w danej kolumnie nie było zduplikowanych wartości (tzn. by wszystkie wartości były unikalne).
-\index{ograniczenie}
-\index{baza danych!ograniczenie}
+\index{ograniczenie w tabeli bazy danych}
+\index{baza danych!ograniczenie w tabeli}
 
 przeglądarka bazy danych
 :   Oprogramowanie, które pozwala na bezpośrednie połączenie z bazą danych i  zarządzanie nią bez konieczności pisania osobnego programu.
 \index{przeglądarka bazy danych}
-\index{bazy danych!przeglądarka}
+\index{baza danych!przeglądarka}
 
 relacja
 :   Obszar w obrębie bazy danych, który zawiera krotki i atrybuty. Częściej używa się określenia "tabela".

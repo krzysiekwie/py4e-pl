@@ -35,7 +35,7 @@ Korzystanie z obiektów
 
 Jak się okazuje, w tej książce przez cały czas używaliśmy obiektów. Python dostarcza nam wiele wbudowanych obiektów. Oto prosty kod, w którym kilka pierwszych linii powinno być już dla Ciebie bardzo naturalnych i zrozumiałych.
 
-\index{lista, obiekt}
+\index{lista!obiekt}
 \index{obiekt listy}
 
 \VerbatimInput{../code3/party1.py}

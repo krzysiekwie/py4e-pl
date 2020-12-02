@@ -161,6 +161,8 @@ oddzielone kropką. Format ten nazywa się *notacją kropkową*.
 \index{notacja kropkowa}
 
 ~~~~ {.python}
+>>> signal_power = 0.2
+>>> noise_power = 0.000001
 >>> ratio = signal_power / noise_power
 >>> decibels = 10 * math.log10(ratio)
 

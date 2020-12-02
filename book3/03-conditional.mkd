@@ -56,7 +56,7 @@ znaku równości (`=`) zamiast znaku podwójnej równości (`==`). Pamiętaj, ż
 jest operatorem przypisania, a `==` jest operatorem porównania. Nie ma znaków takich jak `=<` lub `=>`.
 
 \index{porównanie, operator}
-\index{operator!porówania}
+\index{operator!porównania}
 
 Operatory logiczne
 ------------------

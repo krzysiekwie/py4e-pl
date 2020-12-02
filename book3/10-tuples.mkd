@@ -461,7 +461,7 @@ Debugowanie
 \index{struktura danych}
 \index{kształt, błąd}
 \index{błąd!kształtu}
-\index{kształt}
+\index{kształt struktury danych}
 
 Listy, słowniki i krotki są ogólnie znane jako *struktury danych*; w tym rozdziale zaczęliśmy zauważać złożone struktury danych, takie jak listy krotek oraz słowniki, które zawierają krotki jako klucze i listy jako wartości. Złożone struktury danych są użyteczne, ale są podatne na to, co nazywam *błędami kształtu*, tzn. błędy spowodowane niewłaściwym typem, rozmiarem lub zawartością struktury danych; być może piszesz też jakiś kod i zapominasz o kształcie swoich danych, przez co nieświadomie umieszczasz błąd w swoim programie. Na przykład, jeśli oczekujesz listy składającej się z jednej liczby całkowitej, a ja daję Ci po prostu zwykłą liczbę całkowitą (która nie jest opakowana listą), Twój kod nie będzie działać.
 
@@ -485,7 +485,7 @@ krotka
 
 kształt (struktury danych)
 :   Podsumowanie typu, rozmiaru i zawartości struktury danych.
-\index{kształt}
+\index{kształt struktury danych}
 
 porównywalny
 :   Typ, w którym można sprawdzić, czy jedna wartość jest większa, mniejsza lub równa innej wartości tego samego typu. Typy, które są porównywalne, można umieścić na liście i posortować.

@@ -56,7 +56,6 @@ Studenci, których ta książka zainteresuje i będą chcieli dalej zgłębiać 
 
 \index{licencja Creative Commons}
 \index{CC-BY-SA}
-\index{BY-SA}
 
 Jako osoba posiadająca prawa autorskie do *Think Python*, Allen udzielił mi zgody na zmianę licencji na materiał pozostający w tej książce z licencji GNU Free Documentation License na nowszą licencję Creative Commons Uznanie autorstwa-Na tych samych warunkach. Jest to następstwem ogólnego przesunięcia licencji otwartej dokumentacji z GFDL na CC-BY-SA (np. Wikipedia). Korzystanie z licencji CC-BY-SA podtrzymuje silną tradycję tej książki w zakresie copyleft, jednocześnie jeszcze bardziej ułatwiając nowym autorom ponowne wykorzystanie tego materiału według ich własnego uznania.
 

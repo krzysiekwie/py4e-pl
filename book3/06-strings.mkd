@@ -638,7 +638,7 @@ Mamy następujący kod Pythona, który przechowuje ciąg znaków:
 
 Użyj `find()` i wycinków ciągów znaków, tak aby wyodrębnić część ciągu po znaku dwukropka, a następnie użyj funkcji `float()`, żeby przekształcić wyodrębniony ciąg znaków na liczbę zmiennoprzecinkową.
 
-\index{ciąg znaków, metody}
+\index{ciąg znaków!metoda}
 \index{metoda!ciąg znaków}
 
 #### Ćwiczenie 6

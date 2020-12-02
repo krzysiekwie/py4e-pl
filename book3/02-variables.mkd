@@ -247,7 +247,12 @@ Operatory i operandy
 
 *Operatory* są specjalnymi symbolami, które reprezentują obliczenia, takie jak
 dodawanie i mnożenie. Wartości, na których operator jest stosowany, są nazywane
-*operandami*.
+*operandami*. Przygotujmy dwie zmienne:
+
+~~~~ {.python}
+hour = 3
+minute = 40
+~~~~
 
 Operatory `+`, `-`, `*`, `/` i `**` wykonują odpowiednio dodawanie, odejmowanie,
 mnożenie, dzielenie i potęgowanie, jak w poniższych przykładach:
@@ -380,7 +385,7 @@ Operator modulo
 \index{operator!modulo}
 
 *Operator modulo* działa na liczbach całkowitych i zwraca resztę po podzieleniu
-pierwszego operanda przez drugi. W Pythonie operator modulo jest znakiem
+pierwszego operandu przez drugi. W Pythonie operator modulo jest znakiem
 procentu (`%`). Składnia jest taka sama jak w przypadku innych operatorów:
 
 ~~~~ {.python .trinket height="240"}
@@ -419,7 +424,7 @@ matematycznym. Zamiast tego wykonuje on *konkatenację*, co oznacza łączenie
 ~~~~ {.python}
 >>> first = 10
 >>> second = 15
->>> print(first+second)
+>>> print(first + second)
 25
 >>> first = '100'
 >>> second = '150'
@@ -525,6 +530,7 @@ co robi program, pisanych w języku naturalnym. Te notatki nazywane są
 *komentarzami*, a w Pythonie zaczynają się od symbolu `#`:
 
 ~~~~ {.python}
+minute = 30
 # oblicza procent godziny, która upłynęła
 percentage = (minute * 100) / 60
 ~~~~
@@ -724,8 +730,13 @@ tym samym co `latex`.
 \index{błąd!semantyczny}
 
 W tym momencie najbardziej prawdopodobną przyczyną błędu semantycznego jest
-kolejność operacji. Na przykład, aby obliczyć $1/2\pi$, można pokusić się o
-napisanie:
+kolejność operacji. Przygotujmy zmienną `pi`:
+
+~~~~ {.python}
+>>> pi = 3.14
+~~~~
+
+Na przykład, aby obliczyć $1/2\pi$, można pokusić się o napisanie:
 
 ~~~~ {.python}
 >>> 1.0 / 2.0 * pi

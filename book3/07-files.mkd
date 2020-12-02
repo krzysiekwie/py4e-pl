@@ -292,7 +292,6 @@ Nie śmiej się. Użytkownicy czasem robią wszystko, co w ich mocy, by wysypać
 
 \index{Quality Assurance}
 \index{zapewnianie jakości}
-\index{QA}
 
 Zespół QA jest odpowiedzialny za znalezienie wad w programach, zanim dostarczymy je użytkownikom końcowym, którzy mogą je zakupić lub zapłacić nam za napisanie programu. Tak więc zespół QA jest najlepszym przyjacielem programisty.
 
@@ -550,7 +549,6 @@ pythonowy
 Quality Assurance
 :   Osoba lub zespół skoncentrowany na zapewnieniu ogólnej jakości oprogramowania. QA są często zaangażowani w testowanie i identyfikowanie problemów, zanim produkt zostanie wydany.
 \index{Quality Assurance}
-\index{QA}
 \index{zapewnianie jakości}
 
 znak końca linii
