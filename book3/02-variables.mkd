@@ -266,8 +266,8 @@ minute/60
 (5+9)*(15-7)
 ~~~~
 
-Jeśli pisałeś programy w Pythonie 2.x, to musisz wiedzieć, że w Pythonie 3.x 
-nastąpiła zmiana w operatorze dzielenia. W Pythonie 3.x wynik takiego dzielenia
+Jeśli pisałeś programy w Pythonie 2, to musisz wiedzieć, że w Pythonie 3 
+nastąpiła zmiana w operatorze dzielenia. W Pythonie 3 wynik takiego dzielenia
 jest wynikiem zmiennoprzecinkowym:
 
 ~~~~ {.python .trinket height="160"}
@@ -276,7 +276,7 @@ jest wynikiem zmiennoprzecinkowym:
 0.9833333333333333
 ~~~~
 
-Operator dzielenia w Pythonie 2.x dzieliłby dwie liczby całkowite i obcinałby
+Operator dzielenia w Pythonie 2 dzieliłby dwie liczby całkowite i obcinałby
 wynik do liczby całkowitej:
 
 ~~~~ {.python}
@@ -285,7 +285,7 @@ wynik do liczby całkowitej:
 0
 ~~~~
 
-Aby uzyskać taki sam wynik w Pythonie 3.0, należy użyć dzielenia
+Aby uzyskać taki sam wynik w Pythonie 3, należy użyć dzielenia
 całkowitoliczbowego `//`, zaokrąglającego w dół:
 
 ~~~~ {.python .trinket  height="160"}
@@ -294,11 +294,11 @@ całkowitoliczbowego `//`, zaokrąglającego w dół:
 0
 ~~~~
 
-W Pythonie 3.x dzielenie liczb całkowitych działa tak, jakbyś wprowadził
+W Pythonie 3 dzielenie liczb całkowitych działa tak, jakbyś wprowadził
 wyrażenie na kalkulatorze.
 
-\index{Python 3.x}
-\index{Python 2.x}
+\index{Python 3}
+\index{Python 2}
 \index{zmiennoprzecinkowe, dzielenie}
 \index{dzielenie zmiennoprzecinkowe}
 
@@ -450,14 +450,13 @@ Proszenie użytkownika o wprowadzenie danych
 
 Czasami chcielibyśmy ustawić wartość zmiennej poprzez pobranie tej wartości od
 użytkownika za pomocą jego klawiatury. Python udostępnia wbudowaną funkcję o
-nazwie `input()`, która pobiera dane z klawiatury^[W Pythonie 2.0 funkcja ta 
+nazwie `input()`, która pobiera dane z klawiatury^[W Pythonie 2 funkcja ta 
 nazywa się `raw_input()`.]. Kiedy funkcja ta jest wywoływana, program zatrzymuje
-się i czeka, aż użytkownik coś wpisze. Gdy użytkownik naciśnie klawisz `<Return>`
-lub `<Enter>`, program wznawia działanie, a `input()` zwraca to, co użytkownik
+się i czeka, aż użytkownik coś wpisze. Gdy użytkownik naciśnie klawisz `<Enter>`, program wznawia działanie, a `input()` zwraca to, co użytkownik
 wpisał jako ciąg znaków.
 
 
-\index{Python 2.x}
+\index{Python 2}
 
 ~~~~ {.python}
 >>> inp = input()
