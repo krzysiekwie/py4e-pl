@@ -7,7 +7,8 @@ Wsparcie i współpraca nad książką
 Lista współtwórców "Python dla wszystkich"
 ------------------------------------------
 
-Andrzej Wójtowicz
+Andrzej Wójtowicz,
+Agata i Krzysztof Wierzbiccy
 
 Szczegóły dotyczące poszczególnego wkładu w tworzenie książki możesz znaleźć na stronie:
 
@@ -32,7 +33,6 @@ Alistair Walsh,
 Erica Brody,
 Jih-Sheng Huang,
 Louis Luangkesorn,
-oraz
 Michael Fudge
 
 Szczegóły dotyczące indywidualnego wkładu w tworzenie książki możesz znaleźć na stronie:
