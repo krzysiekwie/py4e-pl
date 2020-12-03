@@ -100,7 +100,7 @@ Po pierwsze i najważniejsze, dziękuję Jeffowi Elknerowi, który przetłumaczy
 
 Dziękuję również Chrisowi Meyersowi, który przyczynił się do powstania kilku sekcji w *How to Think Like a Computer Scientist*.
 
-I dziękuję Fundacji Wolnego Oprogramowania za opracowanie GNU Free
+Dziękuję Fundacji Wolnego Oprogramowania za opracowanie GNU Free
 Documentation License, co umożliwiło mi współpracę z Jeffem i Chrisem.
 
 \index{licencja GNU Free Documentation License}
