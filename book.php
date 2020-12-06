@@ -9,6 +9,7 @@
     <li>
         Polskie tłumaczenie:
         <ul class="menu vertical nested is-active">
+            <li class="menu-text">ostatnia aktualizacja: <?php exec('git log -1 --format="%at" | xargs -I{} date -d @{} "+%Y-%m-%d"', $commit_date); echo($commit_date[0]); ?></li>
             <li class="menu-text">
                 <a href="html3">HTML</a>, <a href="translations/PL/py4e-pl-a4-latest.pdf" target="_blank">PDF (format A4)</a>, <a href="translations/PL/py4e-pl-print-latest.pdf" target="_blank">PDF (format do druku w kolorze)</a>, <a href="translations/PL/py4e-pl-print-bw-latest.pdf" target="_blank">PDF (format do druku czarno-białego)</a>, <a href="translations/PL/py4e-pl-latest.epub" target="_blank">EPUB</a>, <a href="translations/PL/py4e-pl-latest.mobi" target="_blank">MOBI</a>
             </li>
