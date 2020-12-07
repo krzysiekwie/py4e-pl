@@ -13,7 +13,7 @@ Zadanie wyszukiwania i wyodrębniania jest tak często wykonywane, że Python ma
 
 Wyrażenia regularne (w skrócie z ang. *regex*) są prawie samodzielnym, małym językiem programowania do wyszukiwania i parsowania ciągów znaków. O wyrażeniach regularnych napisano już wiele książek. W tym rozdziale zajmiemy się tylko podstawami wyrażeń regularnych. Więcej szczegółów na ich temat znajdziesz na stronie:
 
-<https://pl.wikipedia.org/wiki/Wyrażenie_regularne>
+[https://pl.wikipedia.org/wiki/Wyrażenie_regularne](https://pl.wikipedia.org/wiki/Wyra%C5%BCenie_regularne)
 
 <https://docs.python.org/library/re.html>
 

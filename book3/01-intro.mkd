@@ -843,7 +843,7 @@ błąd semantyczny
     zakładał programista.
 \index{błąd!semantyczny}
 
-funkcja print
+funkcja print()
 :   Instrukcja, która powoduje, że interpreter Pythona wyświetla daną wartość
     na ekranie.
 \index{funkcja!print}

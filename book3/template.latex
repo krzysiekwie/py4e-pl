@@ -7,6 +7,11 @@ $if(pdfversiona4)$
 \usepackage[left=1in,right=1in,top=1in,bottom=1in,bindingoffset=0in]{geometry}
 $endif$
 
+$if(typeinclude_t4)$
+\renewcommand{\familydefault}{\sfdefault}
+$endif$
+
+\usepackage[labelsep=period]{caption} % period instead of colon
 
 \usepackage{alltt} % http://stackoverflow.com/a/11236836
 $if(fontfamily)$
@@ -23,8 +28,8 @@ $endif$
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
 $if(euro)$
   \usepackage{eurosym}
 $endif$
@@ -114,13 +119,22 @@ $if(graphics)$
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
 
+\usepackage{sectsty}         % sections in sans
+\allsectionsfont{\sffamily}
+
 \usepackage{emptypage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+$if(typeinclude_t4)$
+\fancyhf[roh,leh]{\sffamily\thepage}
+\fancyhf[reh]{\sffamily\nouppercase{\leftmark}}
+\fancyhf[loh]{\sffamily\nouppercase{\rightmark}}
+$else$
 \fancyhf[roh,leh]{\thepage}
 \fancyhf[reh]{\nouppercase{\leftmark}}
 \fancyhf[loh]{\nouppercase{\rightmark}}
+$endif$
 \fancypagestyle{plain}{
   \fancyhf{} 
   \fancyfoot[LE,RO]{} % same placement as with page style "fancy"
@@ -234,11 +248,17 @@ $include-before$
 
 $endfor$
 
-$if(pdfversionprint)$
+$if(typeinclude_t1)$
 \input{tmp-1.preface}
 $endif$
-$if(pdfversiona4)$
+$if(typeinclude_t2)$
 \input{tmp-2.preface}
+$endif$
+$if(typeinclude_t3)$
+\input{tmp-3.preface}
+$endif$
+$if(typeinclude_t4)$
+\input{tmp-4.preface}
 $endif$
 
 
@@ -291,11 +311,17 @@ $endfor$
 
 \appendix
 
-$if(pdfversionprint)$
+$if(typeinclude_t1)$
 \input{tmp-1.appendix}
 $endif$
-$if(pdfversiona4)$
+$if(typeinclude_t2)$
 \input{tmp-2.appendix}
+$endif$
+$if(typeinclude_t3)$
+\input{tmp-3.appendix}
+$endif$
+$if(typeinclude_t4)$
+\input{tmp-4.appendix}
 $endif$
 
 \normalsize
