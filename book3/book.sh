@@ -31,6 +31,9 @@ sed < tmp-1.tex '/includegraphics/s/jpg/eps/' | sed 's"includegraphics{../photos
 diff tmp-1.sed tmp-1.tex
 python2 texpatch.py < tmp-1.sed > tmp-1.patch
 
+perl -0777 -i -pe "s/\`\`(.+?)''/\\\\enquote{\1}/igs" tmp-1.preface.tex
+perl -0777 -i -pe "s/\`\`(.+?)''/\\\\enquote{\1}/igs" tmp-1.appendix.tex
+
 mv tmp-1.patch tmp-1.tex
 
 pdflatex -shell-escape tmp-1.tex # first, TOC
@@ -54,6 +57,9 @@ sed < tmp-2.tex '/includegraphics/s/jpg/eps/' | sed 's"includegraphics{../photos
 diff tmp-2.sed tmp-2.tex
 python2 texpatch.py < tmp-2.sed > tmp-2.patch
 
+perl -0777 -i -pe "s/\`\`(.+?)''/\\\\enquote{\1}/igs" tmp-2.preface.tex
+perl -0777 -i -pe "s/\`\`(.+?)''/\\\\enquote{\1}/igs" tmp-2.appendix.tex
+
 mv tmp-2.patch tmp-2.tex
 
 pdflatex -shell-escape tmp-2.tex # first, TOC
@@ -73,6 +79,9 @@ sed < tmp-3.app.tex -e 's/subsubsection{/xyzzy{/' -e 's/subsection{/plugh{/' -e 
 sed < tmp-3.tex '/includegraphics/s/jpg/eps/' | sed 's"includegraphics{../photos"includegraphics[height=3.0in]{../photos"' > tmp-3.sed
 diff tmp-3.sed tmp-3.tex
 python2 texpatch.py < tmp-3.sed > tmp-3.patch
+
+perl -0777 -i -pe "s/\`\`(.+?)''/\\\\enquote{\1}/igs" tmp-3.preface.tex
+perl -0777 -i -pe "s/\`\`(.+?)''/\\\\enquote{\1}/igs" tmp-3.appendix.tex
 
 mv tmp-3.patch tmp-3.tex
 

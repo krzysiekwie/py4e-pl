@@ -51,6 +51,7 @@ $if(mathfont)$
     \setmathfont(Digits,Latin,Greek){$mathfont$}
 $endif$
 \fi
+\usepackage[style=polish]{csquotes}
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
@@ -144,7 +145,7 @@ $endif$
               unicode=false, % unicode breaks when used with xetex
               xetex]{hyperref}
 \else
-  \usepackage[unicode=true]{hyperref}
+  \PassOptionsToPackage{hyphens}{url}\usepackage[unicode=true]{hyperref}
 \fi
 
 \hypersetup{breaklinks=true,
@@ -169,7 +170,7 @@ $endif$
 \g@addto@macro{\UrlBreaks}{\do\/\do\-}
 \makeatother
 
-\urlstyle{same}  % don't use monospace font for urls
+\urlstyle{sf}  % don't use monospace font for urls; https://tex.stackexchange.com/a/53963
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
@@ -215,6 +216,9 @@ $endfor$
 \makeindex
 
 \begin{document}
+$if(fontcode)$
+\fontfamily{$fontcode$}\selectfont
+$endif$
 \frontmatter
 $if(title)$
 \maketitle
