@@ -276,7 +276,7 @@ Do naszego wyrażenia regularnego dodajemy nawiasy, aby wskazać, którą częś
 
 \VerbatimInput{../code3/urlregex.py}
 
-Moduł `ssl` pozwala naszemu programowi na dostęp do stron internetowych, które ściśle wymuszają HTTPS. Metoda `read()` zwraca kod źródłowy HTML jako obiekt bajtowy, zamiast zwracać obiekt typu HTTPResponse. Metoda `findall()` daje nam listę wszystkich ciągów znaków, które pasują do naszego wyrażenia regularnego, zwracając tylko tekst linku zawarty pomiędzy cudzysłowami.
+Moduł `ssl` pozwala naszemu programowi na dostęp do stron internetowych, które ściśle wymuszają HTTPS. Metoda `read()` zwraca kod źródłowy HTML jako obiekt bajtowy, zamiast zwracać obiekt typu `HTTPResponse`. Metoda `findall()` daje nam listę wszystkich ciągów znaków, które pasują do naszego wyrażenia regularnego, zwracając tylko tekst linku zawarty pomiędzy cudzysłowami.
 
 Kiedy uruchomimy program i wprowadzimy adres URL, otrzymamy mniej więcej następujący wynik:
 
