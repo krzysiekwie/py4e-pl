@@ -66,21 +66,21 @@ Operatory logiczne
 
 Istnieją trzy *operatory logiczne*: `and`,
 `or` i `not`. Semantyka (znaczenie) tych operatorów jest podobna do ich
-znaczenia w języku angielskim. Na przykład
+znaczenia w języku angielskim. Na przykład wyrażenie
 
 `x > 0 and x < 10`
 
-jest prawdziwe tylko wtedy, gdy `x` jest większe niż 0 *i* mniejsze niż 10.
+jest prawdziwe tylko wtedy, gdy wartość zmiennej `x` jest większa niż 0 *i* mniejsza niż 10.
 
 \index{operator!and}
 \index{operator!or}
 \index{operator!not}
 
-`n%2 == 0 or n%3 == 0` jest prawdziwe, jeśli *którykolwiek* z tych warunków 
+Wyrażenie `n%2 == 0 or n%3 == 0` jest prawdziwe, jeśli *którykolwiek* z tych warunków 
 jest prawdziwy, tzn. jeśli liczba jest podzielna przez 2 *lub* 3.
 
 Operator `not` neguje wyrażenie logiczne, więc `not (x > y)` jest prawdziwe, 
-jeśli `x > y` jest fałszywe, tzn. jeśli `x` jest mniejsze lub równe `y`.
+jeśli `x > y` jest fałszywe, tzn. jeśli wartość `x` jest mniejsza lub równa `y`.
 
 Ściślej mówiąc, operandy operatorów logicznych powinny być wyrażeniami 
 logicznymi, ale Python nie jest tutaj bardzo restrykcyjny. Każda dodatnia 
