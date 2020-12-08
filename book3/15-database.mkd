@@ -14,9 +14,9 @@ Czym jest baza danych?
 
 Podobnie jak słownik, oprogramowanie bazodanowe jest zaprojektowane tak, aby dodawanie i odczyt były bardzo szybkie, nawet dla dużych ilości danych. Oprogramowanie bazodanowe utrzymuje swoją wydajność poprzez budowanie *indeksów*, kiedy dane są dodawane do bazy, co pozwala komputerowi na szybkie przejście do konkretnego wpisu.
 
-Istnieje wiele różnych systemów bazodanowych, które są wykorzystywane do rozmaitych celów, na przykład: Oracle, MySQL, Microsoft SQL Server, PostgreSQL i SQLite. W tej książce skupimy się na SQLite, ponieważ jest to bardzo popularna baza danych i jest już wbudowana w Pythona. SQLite jest przeznaczony do bycia *wbudowanym* (*osadzonym*) w innych aplikacjach, tak aby zapewnić obsługę bazy danych w obrębie tych aplikacji. Na przykład przeglądarka Firefox, podobnie jak wiele innych aplikacji, również korzysta wewnętrznie z bazy danych SQLite.
+Istnieje wiele różnych relacyjnych systemów bazodanowych, które są wykorzystywane do rozmaitych celów, na przykład: Oracle, MySQL, Microsoft SQL Server, PostgreSQL i SQLite. W tej książce skupimy się na SQLite, ponieważ jest to bardzo popularna baza danych i jest już wbudowana w Pythona. SQLite jest przeznaczony do bycia *wbudowanym* (*osadzonym*) w innych aplikacjach, tak aby zapewnić obsługę bazy danych w obrębie tych aplikacji. Na przykład przeglądarka Firefox, podobnie jak wiele innych aplikacji, również korzysta wewnętrznie z bazy danych SQLite.
 
-SQLite^[<https://sqlite.org/>] doskonale nadaje się do rozwiązywania niektórych informatycznych problemów z zarządzaniem danymi, takich jak robot internetowy do zbierania danych z Twittera, który opiszemy w tym rozdziale.
+SQLite^[<https://sqlite.org/>] doskonale nadaje się do rozwiązywania niektórych informatycznych problemów z zarządzaniem danymi, takich jak robot internetowy do zbierania danych z Twittera, który opiszemy w tym rozdziale. W kolejnych sekcjach poznamy kilka standardowych poleceń języka SQL, tj. `CREATE TABLE`, `DROP TABLE`, `INSERT`, `SELECT`, `UPDATE` i `DELETE`.
 
 Pojęcia związane z bazami danych
 --------------------------------
@@ -56,7 +56,7 @@ Przeglądarka bazy danych jest dość podobna do edytora tekstowego używanego p
 Tworzenie tabeli w bazie danych
 -------------------------------
 
-Bazy danych wymagają bardziej szczegółowo zdefiniowanej struktury niż listy czy słowniki w Pythonie^[SQLite faktycznie pozwala na pewną elastyczność w typie danych przechowywanych w kolumnie, ale w tym rozdziale nasze typy danych będą ściśle określone, dzięki czemu pokazane tutaj idee będą miały zastosowanie również w innych systemach baz danych, np. w MySQL.].
+Bazy danych wymagają bardziej szczegółowo zdefiniowanej struktury niż listy czy słowniki w Pythonie.
 
 \index{atrybut}
 \index{kolumna}
@@ -65,7 +65,7 @@ Bazy danych wymagają bardziej szczegółowo zdefiniowanej struktury niż listy 
 \index{baza danych!kolumna}
 \index{baza danych!pole}
 
-Kiedy w bazie danych tworzymy *tabelę*, musimy z wyprzedzeniem podać nazwę każdej *kolumny* występującej w tabeli oraz typ danych, który zamierzamy przechowywać w każdej z *kolumn*. Kiedy oprogramowanie bazy danych wie, jaki typ danych będzie użyty w każdej kolumnie, może dzięki temu wybrać najbardziej efektywny sposób przechowywania i wyszukiwania danych w oparciu o ich typ.
+Kiedy w bazie danych tworzymy *tabelę*, musimy z wyprzedzeniem podać nazwę każdej *kolumny* występującej w tabeli oraz typ danych, który zamierzamy przechowywać w każdej z *kolumn*^[SQLite faktycznie pozwala na pewną elastyczność w typie danych przechowywanych w kolumnie, ale w tym rozdziale nasze typy danych będą ściśle określone, dzięki czemu pokazane tutaj idee będą miały zastosowanie również w innych systemach baz danych, np. w MySQL.]. Kiedy oprogramowanie bazy danych wie, jaki typ danych będzie użyty w każdej kolumnie, może dzięki temu wybrać najbardziej efektywny sposób przechowywania i wyszukiwania danych w oparciu o ich typ.
 
 Możesz zapoznać się z różnymi typami danych obsługiwanymi przez SQLite pod następującym adresem URL:
 
@@ -112,9 +112,9 @@ Druga komenda tworzy tabelę o nazwie `Utwory` z kolumną tekstową o nazwie `ty
 cur.execute('CREATE TABLE Utwory (tytuł TEXT, odtworzenia INTEGER)')
 ~~~~
 
-Teraz, gdy stworzyliśmy tabelę o nazwie `Utwory`, możemy umieścić w niej pewne dane, używając operacji SQL `INSERT`. Tak jak wcześniej zaczynamy od nawiązania połączenia z bazą danych i uzyskania kursora. Następnie możemy wykonywać za jego pomocą polecenia SQL.
+Teraz, gdy stworzyliśmy tabelę o nazwie `Utwory`, możemy umieścić w niej pewne dane, używając polecenia `INSERT`. Tak jak wcześniej, zaczynamy od nawiązania połączenia z bazą danych i uzyskania kursora. Następnie możemy wykonywać za jego pomocą polecenia SQL.
 
-Polecenie SQL `INSERT` wskazuje na to, jakiej używamy tabeli, następnie definiuje nowy wiersz, wymieniając pola, które chcemy umieścić w nowym wierszu `(tytuł, odtworzenia)`, a potem w `VALUES` wartości, które umieszczamy w tym wierszu. Wartości określone jako znaki zapytania `(?, ?)` wskazują, że rzeczywiste wartości do wstawienia są przekazywane jako krotka `( 'My Way', 15 )` – drugi parametr wywołania `execute()`.
+Polecenie `INSERT` wskazuje na to, jakiej używamy tabeli, następnie definiuje nowy wiersz, wymieniając pola, które chcemy umieścić w nowym wierszu `(tytuł, odtworzenia)`, a potem w `VALUES` wartości, które umieszczamy w tym wierszu. Wartości określone jako znaki zapytania `(?, ?)` wskazują, że rzeczywiste wartości do wstawienia są przekazywane jako krotka `( 'My Way', 15 )` – drugi parametr wywołania `execute()`.
 
 \VerbatimInput{../code3/db2.py}
 
@@ -122,7 +122,7 @@ Najpierw wstawiamy poprzez `INSERT` dwa wiersze do naszej tabeli i używamy `com
 
 ![Wiersze w tabeli](height=1.5in@../images/tracks)
 
-Następnie używamy polecenia `SELECT` do pobrania wierszy, które właśnie wstawiliśmy w tabeli. W poleceniu `SELECT` wskazujemy, z których kolumn `(tytuł, odtworzenia)` oraz z której tabeli chcemy pobrać dane. Po wykonaniu polecenia `SELECT` możemy przejść po kursorze pętlą `for`. Aby zachować wydajność, kursor po wykonaniu instrukcji `SELECT` nie odczytuje od razu wszystkich danych z bazy danych. Zamiast tego dane są odczytywane na żądanie, czyli w tym wypadku, gdy idziemy kolejno przez wiersze w instrukcji `for`.
+Następnie używamy polecenia `SELECT` do pobrania wierszy, które właśnie wstawiliśmy w tabeli. W poleceniu `SELECT` wskazujemy, z których kolumn `(tytuł, odtworzenia)` oraz z której tabeli chcemy pobrać dane. Po wykonaniu polecenia `SELECT` możemy przejść po kursorze pętlą `for`. Aby zachować wydajność, kursor po wykonaniu polecenia `SELECT` nie odczytuje od razu wszystkich danych z bazy danych. Zamiast tego dane są odczytywane na żądanie, czyli w tym wypadku, gdy idziemy kolejno przez wiersze w instrukcji `for`.
 
 Wynik działania programu jest następujący:
 
@@ -138,7 +138,7 @@ Nasza pętla `for` znajduje dwa wiersze, a każdy z nich jest krotką Pythona, w
 
 *Uwaga: W innych książkach lub w internecie możesz zobaczyć ciągi znaków rozpoczynające się od `u'`. W Pythonie 2 była to wskazówka, że ciągi znaków są napisami z zestawem znaków Unicode, które są w stanie przechowywać niełacińskie znaki. W Pythonie 3 wszystkie ciągi znaków są domyślnie napisami z zestawem znaków Unicode.*
 
-Na samym końcu programu wykonujemy polecenie SQL `DELETE`, aby usunąć wiersze, które właśnie utworzyliśmy, co pozwala uruchamiać nasz program wielokrotnie bez wystąpienia błędu. Polecenie `DELETE` pokazuje użycie klauzuli `WHERE`, która wyraża kryterium wyboru, dzięki czemu możemy poprosić bazę danych o zastosowanie polecenia tylko do spełniających to kryterium wierszy. W tym przykładzie są to wszystkie wiersze, więc czyścimy całą tabelę i możemy program uruchamiać wielokrotnie. Po wykonaniu operacji `DELETE` wywołujemy również `commit()`, aby wymusić usunięcie danych z bazy.
+Na samym końcu programu wykonujemy polecenie `DELETE`, aby usunąć wiersze, które właśnie utworzyliśmy, co pozwala uruchamiać nasz program wielokrotnie bez wystąpienia błędu. Polecenie `DELETE` pokazuje użycie klauzuli `WHERE`, która wyraża kryterium wyboru, dzięki czemu możemy poprosić bazę danych o zastosowanie polecenia tylko do spełniających to kryterium wierszy. W tym przykładzie są to wszystkie wiersze, więc czyścimy całą tabelę i możemy program uruchamiać wielokrotnie. Po wykonaniu operacji `DELETE` wywołujemy również `commit()`, aby wymusić usunięcie danych z bazy.
 
 Podsumowanie języka SQL
 -----------------------
@@ -153,7 +153,7 @@ Relacyjna baza danych składa się z tabel, wierszy i kolumn. Typ danych w kolum
 CREATE TABLE Utwory (tytuł TEXT, odtworzenia INTEGER)
 ~~~~
 
-Aby wstawić wiersz do tabeli, używamy polecenia SQL `INSERT`:
+Aby wstawić wiersz do tabeli, używamy polecenia `INSERT`:
 
 ~~~~ {.sql}
 INSERT INTO Utwory (tytuł, odtworzenia) VALUES ('My Way', 15)
@@ -161,7 +161,7 @@ INSERT INTO Utwory (tytuł, odtworzenia) VALUES ('My Way', 15)
 
 Polecenie `INSERT` określa nazwę tabeli, potem listę pól/kolumn, które chcesz ustawić w nowym wierszu, a następnie słowo kluczowe `VALUES` i listę odpowiednich wartości dla każdego pola.
 
-Polecenie SQL `SELECT` jest używane do pobierania wierszy i kolumn z bazy danych. Pozwala ono określić, które kolumny chcesz pobrać, a także klauzulę `WHERE`, by wybrać tylko te wiersze, które chcesz zobaczyć. Polecenie to pozwala także na opcjonalną klauzulę `ORDER BY` kontrolującą sortowanie zwracanych wierszy.
+Polecenie `SELECT` jest używane do pobierania wierszy i kolumn z bazy danych. Pozwala ono określić, które kolumny chcesz pobrać, a także klauzulę `WHERE`, by wybrać tylko te wiersze, które chcesz zobaczyć. Polecenie to pozwala także na opcjonalną klauzulę `ORDER BY` kontrolującą sortowanie zwracanych wierszy.
 
 ~~~~ {.sql}
 SELECT * FROM Utwory WHERE tytuł = 'My Way'
@@ -169,7 +169,7 @@ SELECT * FROM Utwory WHERE tytuł = 'My Way'
 
 Użycie `*` między `SELECT` a `FROM` wskazuje, że chcesz, aby baza danych zwróciła wszystkie kolumny dla każdego wiersza, który pasuje do klauzuli `WHERE`.
 
-Zauważ, że w przeciwieństwie do Pythona, w klauzuli SQL `WHERE` wykorzystujemy pojedynczy znak `=` do wykonania testu na równość, a nie `==`. Inne operacje logiczne dozwolone w klauzuli `WHERE` obejmują `<`, `>`, `<=`, `>=`, `!=`, jak również `AND` i `OR` oraz nawiasy okrągłe do tworzenia wyrażeń logicznych.
+Zauważ, że w przeciwieństwie do Pythona, w klauzuli `WHERE` wykorzystujemy pojedynczy znak `=` do wykonania testu na równość, a nie `==`. Inne operacje logiczne dozwolone w klauzuli `WHERE` obejmują `<`, `>`, `<=`, `>=`, `!=`, jak również `AND` i `OR` oraz nawiasy okrągłe do tworzenia wyrażeń logicznych.
 
 Możesz zażądać, aby zwrócone wiersze były posortowane według którejś z kolumn:
 
@@ -177,13 +177,13 @@ Możesz zażądać, aby zwrócone wiersze były posortowane według którejś z 
 SELECT tytuł, odtworzenia FROM Utwory ORDER BY tytuł
 ~~~~
 
-Aby usunąć wiersz, potrzebna jest klauzula `WHERE` na instrukcji SQL `DELETE`. Klauzula `WHERE` określa, które wiersze mają zostać usunięte:
+Aby usunąć wiersz, w poleceniu `DELETE` potrzebna jest klauzula `WHERE`. Klauzula ta określa, które wiersze mają zostać usunięte:
 
 ~~~~ {.sql}
 DELETE FROM Utwory WHERE tytuł = 'My Way'
 ~~~~
 
-Przy użyciu polecenia SQL `UPDATE` możliwa jest aktualizacja kolumn w obrębie jednego lub wielu wierszy w tabeli:
+Przy użyciu polecenia `UPDATE` możliwa jest aktualizacja kolumn w obrębie jednego lub wielu wierszy w tabeli:
 
 ~~~~ {.sql}
 UPDATE Utwory SET odtworzenia = 16 WHERE tytuł = 'My Way'
@@ -204,7 +204,7 @@ Zaczniemy od pobrania z Twittera listy znajomych jakiegoś użytkownika i ich st
 
 Śledzimy również, ile razy widzieliśmy danego znajomego w bazie danych, aby uzyskać jakiś wskaźnik jego "popularności".
 
-Ponieważ przechowujemy na dysku komputera bazę dotyczącą znanych nam kont Twittera, informacji, czy już to konto odwiedziliśmy oraz jak bardzo jest popularne, możemy zatrzymać i uruchomić ponownie nasz program tyle razy, ile chcemy.
+Na dysku komputera przechowujemy bazę dotyczącą znanych nam kont Twittera, informacji o odwiedzonych kontach i popularności kont. Dzięki temu możemy nasz program zatrzymywać i uruchamiać ponownie tyle razy, ile chcemy.
 
 Poniższy program jest nieco bardziej skomplikowany. Opiera się na kodzie z ćwiczenia z wcześniejszej części książki, który korzysta z API Twittera.
 
@@ -241,11 +241,11 @@ print('Nowe konta=', countnew, ' widziane ponownie=', countold)
 conn.commit()
 ~~~~
 
-Gdy kursor wykona instrukcję `SELECT`, musimy pobrać wiersze. Możemy to zrobić za pomocą pętli `for`, ale ponieważ pobieramy tylko jeden wiersz (`LIMIT 1`), możemy użyć metody `fetchone()` do pobrania pierwszego (i jedynego) wiersza, który jest wynikiem operacji `SELECT`. Ponieważ metoda `fetchone()` zwraca wiersz jako *krotkę* (nawet jeśli jest tylko jedno pole), bierzemy pierwszą wartość z krotki, by uzyskać bieżące zliczenie znajomych i wstawić tę wartość do zmiennej `count`.
+Gdy kursor wykona instrukcję `SELECT`, musimy pobrać wiersze. Możemy to zrobić za pomocą pętli `for`, ale ponieważ pobieramy tylko jeden wiersz (`LIMIT 1`)^[Samo polecenie `LIMIT 1` bez `ORDER BY` będzie nam zwracało dowolny, pierwszy z brzegu wiersz.], możemy użyć metody `fetchone()` do pobrania pierwszego (i jedynego) wiersza, który jest wynikiem operacji `SELECT`. Ponieważ metoda `fetchone()` zwraca wiersz jako *krotkę* (nawet jeśli jest tylko jedno pole), bierzemy pierwszą wartość z krotki, by uzyskać bieżące zliczenie znajomych i wstawić tę wartość do zmiennej `count`.
 
-Jeśli to pobranie się powiedzie, używamy polecenia SQL `UPDATE` z klauzulą `WHERE`, tak aby dodać 1 do kolumny `friends` w wierszu, który pasuje do konta analizowanego znajomego. Zauważ, że w SQL są dwa symbole zastępcze (tzn. znaki zapytania), a drugi parametr `execute()` jest dwuelementową krotką, która przechowuje wartości, które mają być użyte w zapytaniu SQL zamiast znaków zapytania.
+Jeśli to pobranie się powiedzie, używamy polecenia `UPDATE` z klauzulą `WHERE`, tak aby dodać 1 do kolumny `friends` w wierszu, który pasuje do konta analizowanego znajomego. Zauważ, że w SQL są dwa symbole zastępcze (tzn. znaki zapytania), a drugi parametr `execute()` jest dwuelementową krotką, która przechowuje wartości, które mają być użyte w zapytaniu SQL zamiast znaków zapytania.
 
-Jeśli kod w bloku `try` się nie powiedzie, to prawdopodobnie dlatego, że w instrukcji `SELECT` żaden rekord nie pasuje do klauzuli `WHERE name = ?`. Tak więc w bloku `except` używamy polecenia `INSERT`, aby dodać do tabeli atrybut znajomego opisujący jego nazwę ekranową, tj. `screen_name`, ze wskazaniem, że nie pobraliśmy jeszcze `screen_name` i ustawić liczbę znajomych na jeden.
+Jeśli kod w bloku `try` się nie powiedzie, to prawdopodobnie dlatego, że w instrukcji `SELECT` żaden rekord nie pasuje do klauzuli `WHERE name = ?`. Tak więc w bloku `except` używamy polecenia `INSERT`, aby dodać do tabeli atrybut znajomego opisujący jego nazwę ekranową, tj. `screen_name`, ze wskazaniem, że nie pobraliśmy jeszcze `screen_name` i ustawić liczbę znajomych na jeden.^[Zasadniczo blok `try`/`except` służy do wychwytywania błędów, a nie do sterowania kodem aplikacji; tutaj znajduje się pewne uproszczenie tych zagadnień.]
 
 Podsumowując, przy pierwszym uruchomieniu programu i podaniu konta Twittera, program działa w następujący sposób:
 
@@ -306,7 +306,7 @@ if (len(acct) < 1):
         continue
 ~~~~
 
-Używamy polecenia SQL `SELECT`, aby pobrać nazwę pierwszego (`LIMIT 1`) użytkownika, który nadal ma ustawioną wartość "czy przetworzyliśmy już tego użytkownika?" na zero. Używamy także formuły `fetchone()[0]` w obrębie bloku `try`/`except` albo by wydobyć z pobranych danych `screen_name`, albo by wyświetlić informację o błędzie i wykonać ponownie pętlę.
+Używamy polecenia `SELECT`, aby pobrać nazwę pierwszego (`LIMIT 1`) użytkownika, który nadal ma ustawioną wartość "czy przetworzyliśmy już tego użytkownika?" na zero. Używamy także formuły `fetchone()[0]` w obrębie bloku `try`/`except` albo by wydobyć z pobranych danych `screen_name`, albo by wyświetlić informację o błędzie i wykonać ponownie pętlę.
 
 Jeśli udało nam się uzyskać ze `screen_name` nieprzetworzone jeszcze konto, to pobieramy dane z tego konta w następujący sposób:
 
@@ -365,7 +365,7 @@ Ponieważ każdy użytkownik potencjalnie będzie miał wiele kont, które go ś
 CREATE TABLE Znajomości (znajomy_od TEXT, znajomy_do TEXT)
 ~~~~
 
-Za każdym razem, gdy napotykamy osobę, którą śledzi użytkownik `drchuck`, wstawiamy do tabeli wiersz w postaci:
+Za każdym razem, gdy napotykamy osobę, którą śledzi użytkownik `drchuck` (np. `lhawthorn`), wstawiamy do tabeli wiersz w postaci:
 
 ~~~~ {.sql}
 INSERT INTO Znajomości (znajomy_od, znajomy_do) VALUES ('drchuck', 'lhawthorn')
@@ -373,7 +373,7 @@ INSERT INTO Znajomości (znajomy_od, znajomy_do) VALUES ('drchuck', 'lhawthorn')
 
 Ponieważ przetwarzamy na Twitterze 20 znajomych z kanału użytkownika `drchuck`, wstawimy 20 rekordów z "drchuckiem" jako pierwszym parametrem, przez co będziemy wielokrotnie duplikować ciąg w bazie danych.
 
-Tego typu powielanie danych ciągów znaków narusza jedną z najlepszych praktyk *normalizacji baz danych*, która w uproszczeniu stwierdza, że nigdy nie powinniśmy umieszczać w bazie danych więcej niż jeden raz tego samego ciągu znaków. Jeżeli potrzebujemy tych danych więcej niż jeden raz, tworzymy dla tych danych numeryczny *klucz* i odwołujemy się do rzeczywistych danych za pomocą tego klucza.
+Tego typu powielanie danych ciągów znaków narusza jedną z najlepszych praktyk *normalizacji baz danych*, która w dużym uproszczeniu stwierdza, że nigdy nie powinniśmy umieszczać w bazie danych więcej niż jeden raz tego samego ciągu znaków. Jeżeli potrzebujemy tych danych więcej niż jeden raz, tworzymy dla tych danych numeryczny *klucz* i odwołujemy się do rzeczywistych danych za pomocą tego klucza.^[Szersze i bardziej precyzyjnej omówienie zagadnienia normalizacji baz danych jest poza zakresem tej książki.]
 
 W praktyce ciąg znaków zajmuje na dysku i w pamięci naszego komputera dużo więcej miejsca niż liczba całkowita, a porównywanie i sortowanie zajmuje więcej czasu procesora w przypadku ciągów znaków. Jeśli mamy tylko kilkaset wpisów, to czas związany z dostępem i przetwarzaniem danych nie ma większego znaczenia. Ale jeśli mamy milion osób w naszej bazie danych i możliwość 100 milionów powiązań pomiędzy znajomymi, to ważne jest, aby móc jak najszybciej przetworzyć tego typu dane.
 
@@ -411,7 +411,7 @@ Napiszemy jeszcze raz kod robota internetowego do chodzenia po kontach użytkown
 
 \VerbatimInput{../code3/twfriends.py}
 
-Nasz program zaczyna się komplikować, ale ilustruje schematy programowania, których musimy użyć podczas korzystania z kluczy całkowitoliczbowych do łączenia tabel. Podstawowymi schematami są:
+Nasz program zaczyna się komplikować, ale ilustruje pewne problemy, które musimy rozwiązać podczas korzystania z kluczy całkowitoliczbowych do łączenia naszych tabel. Tymi problemami są:
 
 1.  Tworzenie tabel z kluczami głównymi i ograniczeniami.
 
@@ -419,7 +419,7 @@ Nasz program zaczyna się komplikować, ale ilustruje schematy programowania, kt
 
 3.  Wstawienie wiersza, który jest w stanie uchwycić związek "obserwuje".
 
-Po kolei zajmiemy się każdym z tych schematów.
+Po kolei zajmiemy się każdym z tych problemów.
 
 ### Ograniczenia w tabelach bazy danych
 
@@ -573,9 +573,16 @@ Teraz, gdy zaczęliśmy budować model danych, umieszczając nasze dane w wielu 
 
 -   *Klucz obcy* jest zazwyczaj liczbą, która wskazuje klucz główny powiązanego wiersza w innej tabeli. Przykładem klucza obcego w naszym modelu danych jest `id_od`.
 
-Używamy konwencji polegającej na wykorzystaniu `id` jako nazwy pola klucza głównego i dodawaniu przedrostka `id_` do nazwy każdego pola, które jest kluczem obcym.
+Używamy konwencji polegającej na wykorzystaniu `id` jako nazwy pola klucza głównego i dodawaniu przedrostka `id_` do nazwy każdego pola, które jest kluczem obcym. Ograniczenie klucza obcego moglibyśmy wcześniej ująć w kodzie tworzącym tabelę poprzez zastosowanie instrukcji `REFERENCES`:
 
-Używanie operacji JOIN do pozyskiwania danych
+~~~~ {.sql}
+CREATE TABLE Obserwuje
+    (id_od INTEGER REFERENCES Osoby(id),
+     id_do INTEGER REFERENCES Osoby(id),
+     UNIQUE(id_od, id_do))
+~~~~
+
+Używanie operacji `JOIN` do pozyskiwania danych
 ---------------------------------------------
 
 Teraz, gdy zastosowaliśmy się do zasad normalizacji baz danych i mamy dane rozdzielone na dwie tabele połączone kluczami głównymi i obcymi, musimy być w stanie skonstruować polecenie `SELECT`, które ponownie złoży dane zawarte w tabelach.
@@ -638,7 +645,7 @@ W każdym z "meta-wierszy" ostatniej operacji `SELECT` pierwsze dwie kolumny są
 Podsumowanie
 ------------
 
-Powyższy rozdział zawiera wiele informacji na temat podstaw korzystania z bazy danych w Pythonie. Pisanie kodu wykorzystującego bazy danych do przechowywania informacji jest bardziej skomplikowane niż używanie słowników Pythona lub zwykłych plików, więc o ile Twoja aplikacja naprawdę nie potrzebuje możliwości, jakie dają bazy danych, to nie warto z nich korzystać. Sytuacje, w których baza danych może być dość użyteczna, to: (1) gdy Twoja aplikacja musi dokonać niewielkiej liczby różnych aktualizacji w ramach dużego zbioru danych, (2) gdy Twoje dane są tak duże, że nie mieszczą się w słowniku, a musisz wielokrotnie je przeszukiwać, (3) gdy masz proces działający przez dłuższy czas i chcesz go zatrzymywać i ponownie uruchamiać, a jednocześnie zachować dane z jednego uruchomienia, aby były dostępne w kolejnym.
+Powyższy rozdział zawiera wiele informacji na temat podstaw korzystania z bazy danych SQLite w Pythonie. Pisanie kodu wykorzystującego bazy danych do przechowywania informacji jest bardziej skomplikowane niż używanie słowników Pythona lub zwykłych plików, więc o ile Twoja aplikacja naprawdę nie potrzebuje możliwości, jakie dają bazy danych, to nie warto z nich korzystać. Sytuacje, w których baza danych może być dość użyteczna, to: (1) gdy Twoja aplikacja musi dokonać niewielkiej liczby różnych aktualizacji w ramach dużego zbioru danych, (2) gdy Twoje dane są tak duże, że nie mieszczą się w słowniku, a musisz wielokrotnie je przeszukiwać, (3) gdy masz proces działający przez dłuższy czas i chcesz go zatrzymywać i ponownie uruchamiać, a jednocześnie zachować dane z jednego uruchomienia, aby były dostępne w kolejnym.
 
 Możesz zbudować prostą bazę danych z pojedynczą tabelą pasującą do wielu potrzeb Twojej aplikacji, jednak większość problemów będzie wymagała kilku tabel i połączeń/powiązań między ich wierszami. Kiedy zaczynasz tworzyć połączenia między tabelami, ważne by wcześniej zrobić przemyślany projekt tabel i postępować zgodnie z zasadami normalizacji bazy danych, żeby jak najlepiej wykorzystać jej możliwości. Ponieważ główną motywacją do korzystania z bazy danych jest to, że masz do czynienia z dużą ilością danych, ważne jest też, by modelować swoje dane efektywnie, tak aby Twoje programy działały jak najszybciej.
 

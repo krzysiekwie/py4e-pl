@@ -35,8 +35,8 @@ jak również wyłączenia licencyjne, można przeczytać w dodatku zatytułowan
 Przedmowa
 =========
 
-Remiksowanie otwartej książki
------------------------------
+Remiksowanie książki na otwartej licencji
+-----------------------------------------
 
 To całkiem naturalne, że naukowcy, którym ciągle się mówi "publikuj albo giń", ciągle chcą tworzyć coś zupełnie od podstaw; coś, co będzie ich własnym, świeżym dziełem. Poniższa książka nie powstała od zera, ale zamiast tego "remiksuje" książkę zatytułowaną *Think Python: How to Think Like a Computer Scientist*^[Polskie wydanie tej książki to *Myśl w języku Python! Nauka programowania*.] autorstwa Allena B. Downeya, Jeffa Elknera i innych.
 
