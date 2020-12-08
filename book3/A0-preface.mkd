@@ -10,7 +10,8 @@ Projekt okładki: Aimee Andrion
 Historia wydań
 --------------
 
-* 2020-09-27 – Pierwsza wersja robocza polskiej wersji językowej
+* 2020-12-08 – Pierwsza kompletna wersja polskiego wydania
+* 2020-09-27 – Pierwsza wersja robocza polskiego wydania
 * 2016-07-05 – Pierwsza kompletna wersja Pythona 3.0
 * 2015-12-20 – Pierwsza wstępna konwersja do Pythona 3.0
 
