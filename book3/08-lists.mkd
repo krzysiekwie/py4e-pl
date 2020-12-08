@@ -898,7 +898,7 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
 #### Ćwiczenie 2
 
-Sprawdź, która linia powyższego programu nie jest jeszcze właściwie zabezpieczona. Zobacz, czy potrafisz skonstruować taki plik tekstowy, który wysypie program, a następnie zmodyfikować program tak, by linia była odpowiednio zabezpieczona. Przetestuj poprawiony program, by upewnić się, że obsługuje Twój nowy plik tekstowy.
+Sprawdź, która linia powyższego programu nie jest jeszcze właściwie zabezpieczona. Skonstruuj taki plik tekstowy, który wysypie program, a następnie zmodyfikuj program tak, by był on odpowiednio zabezpieczony. Przetestuj poprawiony program, by upewnić się, że obsługuje Twój nowy plik tekstowy.
 
 #### Ćwiczenie 3
 
@@ -997,7 +997,7 @@ ray@media.berkeley.edu
 cwen@iupui.edu
 cwen@iupui.edu
 cwen@iupui.edu
-Mamy 27 linii w pliku, w których From jest pierwszym wyrazem
+Mamy 27 linii, w których From jest pierwszym wyrazem
 ~~~~
 
 #### Ćwiczenie 6
