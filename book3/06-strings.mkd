@@ -573,59 +573,43 @@ Słowniczek
 ----------
 
 ciąg formatujący
-:   Ciąg znaków, używany z operatorem formatowania, zawierający sekwencje formatowania.
-\index{ciąg formatujący}
+:   Ciąg znaków, używany z operatorem formatowania, zawierający sekwencje formatowania.\index{ciąg formatujący}
 
 element
-:   Jedna z wartości w sekwencji.
-\index{element}
+:   Jedna z wartości w sekwencji.\index{element}
 
 indeks
-:   Wartość całkowita używana do zaznaczenia elementu w sekwencji, np. znaku w ciągu znaków.
-\index{indeks}
-\index{}
+:   Wartość całkowita używana do zaznaczenia elementu w sekwencji, np. znaku w ciągu znaków.\index{indeks}\index{}
 
 metoda
-:   Funkcja, która jest związana z obiektem i jest wywoływana przy użyciu notacji kropkowej.
-\index{metoda}
+:   Funkcja, która jest związana z obiektem i jest wywoływana przy użyciu notacji kropkowej.\index{metoda}
 
 niezmienność
-:   Własność sekwencji, której elementy nie mogą być przypisywane.
-\index{niezmienność}
+:   Własność sekwencji, której elementy nie mogą być przypisywane.\index{niezmienność}
 
 obiekt
-:   Coś, do czego może odnosić się zmienna. Na razie możesz używać zamiennie słowa "obiekt" i "wartość".
-\index{obiekt}
+:   Coś, do czego może odnosić się zmienna. Na razie możesz używać zamiennie słowa "obiekt" i "wartość".\index{obiekt}
 
 operator formatowania
-:   Operator `%`, który bierze ciąg formatujący oraz krotkę i generuje nowy ciąg znaków, zawierający elementy krotki sformatowane zgodnie z opisem podanym w ciągu formatującym.
-\index{formatowanie, operator}
-\index{operator!formatowanie}
+:   Operator `%`, który bierze ciąg formatujący oraz krotkę i generuje nowy ciąg znaków, zawierający elementy krotki sformatowane zgodnie z opisem podanym w ciągu formatującym.\index{formatowanie, operator}\index{operator!formatowanie}
 
 przejście
-:   Iteracja po elementach sekwencji, wykonująca jakąś podobną operację na każdym z nich.
-\index{przejście}
+:   Iteracja po elementach sekwencji, wykonująca jakąś podobną operację na każdym z nich.\index{przejście}
 
 pusty ciąg znaków
-:   Ciąg bez żadnych znaków i o długości 0, reprezentowany przez dwa apostrofy.
-\index{pusty ciąg znaków}
-\index{ciąg znaków!pusty}
+:   Ciąg bez żadnych znaków i o długości 0, reprezentowany przez dwa apostrofy.\index{pusty ciąg znaków}\index{ciąg znaków!pusty}
 
 sekwencja
-:   Uporządkowany zbiór, czyli zbiór wartości, gdzie każda wartość jest identyfikowana przez indeks będący liczbą całkowitą.
-\index{sekwencja}
+:   Uporządkowany zbiór, czyli zbiór wartości, gdzie każda wartość jest identyfikowana przez indeks będący liczbą całkowitą.\index{sekwencja}
 
 sekwencja formatująca
-:   Sekwencja znaków w ciągu formatującym, np. `%d`, która określa, jak dana wartość powinna być sformatowana.
-\index{sekwencja formatująca}
+:   Sekwencja znaków w ciągu formatującym, np. `%d`, która określa, jak dana wartość powinna być sformatowana.\index{sekwencja formatująca}
 
 wycinek
-:   Część ciągu znaków określona przez zakres indeksów.
-\index{wycinek}
+:   Część ciągu znaków określona przez zakres indeksów.\index{wycinek}
 
 wywołanie metody
-:   Instrukcja, która wykonuje funkcję ściśle związaną z danym obiektem i jego instancjami.
-\index{wywołanie metody}
+:   Instrukcja, która wykonuje funkcję ściśle związaną z danym obiektem i jego instancjami.\index{wywołanie metody}
 
 Ćwiczenia
 ---------

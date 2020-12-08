@@ -531,30 +531,22 @@ Słowniczek
 ----------
 
 krzaki
-:   Niepoprawnie wyświetlane znaki tekstowe.
-\index{krzaki}
+:   Niepoprawnie wyświetlane znaki tekstowe.\index{krzaki}
 
 łapanie wyjątku
-:   Uniemożliwienie wyjątkowi zakończenia programu przy użyciu `try` i `except`.
-\index{lzapanie wyjatkow@łapanie wyjątku}
+:   Uniemożliwienie wyjątkowi zakończenia programu przy użyciu `try` i `except`.\index{lzapanie wyjatkow@łapanie wyjątku}
 
 plik tekstowy
-:   Sekwencja znaków zapisana na nośniku do trwałego przechowywania, np. na dysku twardym.
-\index{plik tekstowy}
+:   Sekwencja znaków zapisana na nośniku do trwałego przechowywania, np. na dysku twardym.\index{plik tekstowy}
 
 pythonowy
-:   Sposób rozwiązania problemu, który działa elegancko w Pythonie. Np. użycie `try` i `except` jest *pythonowym* sposobem na przywrócenie działania programu w przypadku nieistniejącego pliku.
-\index{pythonowy}
+:   Sposób rozwiązania problemu, który działa elegancko w Pythonie. Np. użycie `try` i `except` jest *pythonowym* sposobem na przywrócenie działania programu w przypadku nieistniejącego pliku.\index{pythonowy}
 
 Quality Assurance
-:   Osoba lub zespół skoncentrowany na zapewnieniu ogólnej jakości oprogramowania. QA są często zaangażowani w testowanie i identyfikowanie problemów, zanim produkt zostanie wydany.
-\index{Quality Assurance}
-\index{zapewnianie jakości}
+:   Osoba lub zespół skoncentrowany na zapewnieniu ogólnej jakości oprogramowania. QA są często zaangażowani w testowanie i identyfikowanie problemów, zanim produkt zostanie wydany.\index{Quality Assurance}\index{zapewnianie jakości}
 
 znak końca linii
-:   Specjalny znak używany w plikach i ciągach znaków do wskazywania końca linii.
-\index{nowa linia}
-\index{znak!końca linii}
+:   Specjalny znak używany w plikach i ciągach znaków do wskazywania końca linii.\index{nowa linia}\index{znak!końca linii}
 
 Ćwiczenia
 ---------

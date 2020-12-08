@@ -835,97 +835,77 @@ Słowniczek
 ----------
 
 błąd
-:   Pomyłka w programie.
-\index{błąd}
+:   Pomyłka w programie.\index{błąd}
 
 błąd semantyczny
 :   Błąd w programie, który zmusza go do zrobienia czegoś zupełnie innego, niż
-    zakładał programista.
-\index{błąd!semantyczny}
+    zakładał programista.\index{błąd!semantyczny}
 
 funkcja print()
 :   Instrukcja, która powoduje, że interpreter Pythona wyświetla daną wartość
-    na ekranie.
-\index{funkcja!print}
+    na ekranie.\index{funkcja!print}
 
 interpretowanie
 :   Uruchomienie programu napisanego w języku wysokiego poziomu poprzez
-    translację w danym momencie jednej linii kodu.
-\index{interpretowanie}
+    translację w danym momencie jednej linii kodu.\index{interpretowanie}
 
 język niskiego poziomu
 :   Język programowania, który jest zaprojektowany, by komputer mógł go łatwo
-    uruchomić; czasem nazywany "kodem maszynowym" lub "językiem asemblera".
-\index{język niskiego poziomu}
+    uruchomić; czasem nazywany "kodem maszynowym" lub "językiem asemblera".\index{język niskiego poziomu}
 
 język wysokiego poziomu
 :   Język programowania taki jak Python, który jest zaprojektowany, aby był łatwy
-    dla ludzi do czytania i pisania.
-\index{język wysokiego poziomu}
+    dla ludzi do czytania i pisania.\index{język wysokiego poziomu}
 
 kod maszynowy
 :   Język najniższego poziomu dla oprogramowania, który jest
-    bezpośrednio uruchamiany przez procesor (CPU).
-\index{kod maszynowy}
+    bezpośrednio uruchamiany przez procesor (CPU).\index{kod maszynowy}
 
 kod źródłowy
-:   Program napisany w języku wysokiego poziomu.
-\index{kod źródłowy}
+:   Program napisany w języku wysokiego poziomu.\index{kod źródłowy}
 
 kompilacja
 :   Tłumaczenie za jednym zamachem programu napisanego w języku wysokiego
-    poziomu do języka niskiego poziomu w celu jego późniejszego uruchomienia.
-\index{kompilacja}
+    poziomu do języka niskiego poziomu w celu jego późniejszego uruchomienia.\index{kompilacja}
 
 pamięć główna
 :   Przechowuje programy i dane. Pamięć główna traci wszystkie swoje informacje,
-    gdy komputer zostanie wyłączony.
-\index{pamięć główna}
+    gdy komputer zostanie wyłączony.\index{pamięć główna}
 
 pamięć pomocnicza
 :   Przechowuje programy i dane oraz zachowuje ich informacje, nawet gdy
     komputer zostanie wyłączony. Zasadniczo wolniejsza od pamięci głównej.
     Przykładami pamięci pomocniczej mogą być dyski twarde oraz pamięć flash
-    w pamięciach USB/pendrive.
-\index{pamięć pomocnicza}
+    w pamięciach USB/pendrive.\index{pamięć pomocnicza}
 
 parsowanie
-:   Sprawdzanie tekstu i analizowanie jego struktury składniowej.
-\index{parsowanie}
+:   Sprawdzanie tekstu i analizowanie jego struktury składniowej.\index{parsowanie}
 
 procesor
 :   Serce każdego komputera. Jest to to, co uruchamia oprogramowanie, które
-    piszemy; czasem występuje pod nazwą "CPU".
-\index{CPU}
-\index{procesor}
+    piszemy; czasem występuje pod nazwą "CPU".\index{CPU}\index{procesor}
 
 program
-:   Zbiór instrukcji, które określają obliczenia.
-\index{program}
+:   Zbiór instrukcji, które określają obliczenia.\index{program}
 
 przenoszalność
 :   Cecha programu, która pozawala na jego uruchomienia na więcej niż jednym
-    komputerze.
-\index{przenoszalność}
+    komputerze.\index{przenoszalność}
 
 rozwiązywanie problemów
 :   Proces formułowania problemu, znajdowania rozwiązania i wyrażania tego
-    rozwiązania.
-\index{rozwiązywanie problemów}
+    rozwiązania.\index{rozwiązywanie problemów}
 
 semantyka
-:   Znaczenie programu.
-\index{semantyka}
+:   Znaczenie programu.\index{semantyka}
 
 tryb interaktywny
 :   Sposób używania interpretera Pythona poprzez pisanie komend i wyrażeń w
-    wierszu poleceń za znakiem zachęty.
-\index{tryb interaktywny}
+    wierszu poleceń za znakiem zachęty.\index{tryb interaktywny}
 
 znak zachęty
 :   Pojawia się, gdy program wyświetla wiadomość, i wstrzymuje swoje działanie,
-    by użytkownik mógł wprowadzić dane wejściowe do programu.
-\index{znak!zachęty}
+    by użytkownik mógł wprowadzić dane wejściowe do programu.\index{znak!zachęty}
 
 Ćwiczenia
 ---------

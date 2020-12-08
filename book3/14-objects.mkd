@@ -339,38 +339,28 @@ Słowniczek
 ----------
 
 atrybut
-:   Zmienna, która jest częścią klasy.
-\index{atrybut}
+:   Zmienna, która jest częścią klasy.\index{atrybut}
 
 destruktor
-:   Opcjonalna, specjalnie nazwana metoda (`__del__()`), która jest wywoływana w momencie, gdy obiekt jest niszczony. Destruktory są rzadko używane.
-\index{destruktor}
+:   Opcjonalna, specjalnie nazwana metoda (`__del__()`), która jest wywoływana w momencie, gdy obiekt jest niszczony. Destruktory są rzadko używane.\index{destruktor}
 
 dziedziczenie
-:   Tworzenie nowej klasy poprzez rozszerzenie klasy już istniejącej. Klasa pochodna oprócz dodatkowych atrybutów i metod zdefiniowanych w niej posiada również wszystkie atrybuty i metody klasy bazowej.
-\index{dziedziczenie}
+:   Tworzenie nowej klasy poprzez rozszerzenie klasy już istniejącej. Klasa pochodna oprócz dodatkowych atrybutów i metod zdefiniowanych w niej posiada również wszystkie atrybuty i metody klasy bazowej.\index{dziedziczenie}
 
 klasa
-:   Szablon, który może być użyty do stworzenia obiektu. Definiuje atrybuty i metody, które będą składały się na obiekt.
-\index{klasa}
+:   Szablon, który może być użyty do stworzenia obiektu. Definiuje atrybuty i metody, które będą składały się na obiekt.\index{klasa}
 
 klasa bazowa
-:   Klasa, która jest rozszerzana, by utworzyć nową klasę pochodną. Klasa bazowa udostępnia klasie pochodnej wszystkie swoje metody i atrybuty.
-\index{klasa bazowa}
+:   Klasa, która jest rozszerzana, by utworzyć nową klasę pochodną. Klasa bazowa udostępnia klasie pochodnej wszystkie swoje metody i atrybuty.\index{klasa bazowa}
 
 klasa pochodna
-:   Nowa klasa utworzona w momencie rozszerzenia klasy bazowej. Klasa pochodna dziedziczy wszystkie atrybuty i metody klasy bazowej.
-\index{klasa pochodna}
+:   Nowa klasa utworzona w momencie rozszerzenia klasy bazowej. Klasa pochodna dziedziczy wszystkie atrybuty i metody klasy bazowej.\index{klasa pochodna}
 
 konstruktor
-:   Opcjonalna, specjalnie nazwana metoda (`__init__()`), która jest wywoływana w momencie, gdy klasa jest używana do tworzenia obiektu. Zazwyczaj jest ona używana do ustawienia początkowych wartości obiektu.
-\index{konstruktor}
+:   Opcjonalna, specjalnie nazwana metoda (`__init__()`), która jest wywoływana w momencie, gdy klasa jest używana do tworzenia obiektu. Zazwyczaj jest ona używana do ustawienia początkowych wartości obiektu.\index{konstruktor}
 
 metoda
-:   Funkcja zawarta w klasie i obiektach, które są z niej utworzone.
-\index{metoda}
+:   Funkcja zawarta w klasie i obiektach, które są z niej utworzone.\index{metoda}
 
 obiekt
-:   Utworzona instancja klasy. Obiekt zawiera wszystkie atrybuty i metody, które zostały zdefiniowane przez klasę. Niektóre dokumentacje obiektowe używają terminu "instancja" zamiennie z terminem "obiekt".
-\index{obiekt}
-\index{instancja}
+:   Utworzona instancja klasy. Obiekt zawiera wszystkie atrybuty i metody, które zostały zdefiniowane przez klasę. Niektóre dokumentacje obiektowe używają terminu "instancja" zamiennie z terminem "obiekt".\index{obiekt}\index{instancja}

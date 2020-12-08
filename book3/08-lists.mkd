@@ -85,15 +85,14 @@ Możesz myśleć o liście jako o relacji między indeksami i elementami. Ta rel
 
 \index{element, przypisanie}
 \index{przypisanie!element}
+\index{wyjątek!IndexError}
+\index{IndexError}
 
 Indeksy listy działają tak samo jak indeksy ciągów znaków:
 
 -   Każde wyrażenie będące liczbą całkowitą może być użyte jako indeks.
 
 -   Jeśli spróbujesz odczytać lub zapisać pozycję, która nie istnieje, otrzymasz `IndexError`.
-
-\index{wyjątek!IndexError}
-\index{IndexError}
 
 -   Jeśli indeks ma wartość ujemną, to oblicza się go wstecz od końca listy.
 
@@ -139,7 +138,7 @@ for i in range(len(numbers)):
     numbers[i] = numbers[i] * 2
 ~~~~
 
-Powyższa pętla przechodzi przez listę i aktualizuje każdy element. `len()` zwraca liczbę elementów na liście. `range()` zwraca listę indeksów od 0 do $n-1$, gdzie $n$ jest długością listy. Przy każdej iteracji pętli `i` kolejno uzyskuje indeks elementu. Instrukcja przypisania w ciele pętli używa `i` do odczytania starej wartości elementu i przypisania nowej wartości.
+Powyższa pętla przechodzi przez listę i aktualizuje każdy element. Funkcja `len()` zwraca liczbę elementów na liście. Natomiast funkcja `range()` zwraca listę indeksów od 0 do $n-1$, gdzie $n$ jest długością listy. Przy każdej iteracji pętli `i` kolejno uzyskuje indeks elementu. Instrukcja przypisania w ciele pętli używa `i` do odczytania starej wartości elementu i przypisania nowej wartości.
 
 \index{element, aktualizacja}
 \index{aktualizacja!element}
@@ -372,8 +371,8 @@ Istnieje szereg wbudowanych funkcji, które mogą być używane na listach, pozw
 3
 >>> print(sum(nums))
 154
->>> print(sum(nums)/len(nums))
-25
+>>> print(sum(nums) / len(nums))
+25.666666666666668
 ~~~~
 
 Funkcja `sum()` działa tylko wtedy, gdy elementy listy są liczbami. Pozostałe funkcje (`max()`, `len()` itp.) działają z listami ciągów znaków i innych typów, które mogą być porównywane.
@@ -390,7 +389,7 @@ W alternatywnym podejściu możemy po prostu zapamiętać każdą wprowadzoną l
 
 \VerbatimInput{../code3/avelist.py}
 
-Przed rozpoczęciem pętli tworzymy pustą listę, a następnie za każdym razem, gdy otrzymamy nową liczbę, dołączamy ją do listy. Na końcu programu po prostu obliczamy sumę liczb występujących na liście i dzielimy ją przez liczbę elementów listy, tak aby uzyskać średnią.
+Przed rozpoczęciem pętli tworzymy pustą listę, w tym przypadku przy pomocy funkcji `list()` (pustą listę moglibyśmy też utworzyć przy pomocy `[]`). Następnie za każdym razem, gdy otrzymamy nową liczbę, dołączamy ją do listy. Na końcu programu po prostu obliczamy sumę liczb występujących na liście i dzielimy ją przez liczbę elementów listy, tak aby uzyskać średnią.
 
 Listy i ciągi znaków
 --------------------
@@ -629,10 +628,11 @@ Ważne jest, by odróżniać operacje, które modyfikują listy, od operacji, kt
 >>> print(t2)
 None
 
+>>> t1 = [1, 2]
 >>> t3 = t1 + [3]
 >>> print(t3)
 [1, 2, 3]
->>> t2 is t3
+>>> t1 is t3
 False
 ~~~~
 
@@ -666,7 +666,7 @@ Funkcja ta pozostawia pierwotną listę bez zmian. Poniżej pokazano, jak można
 
 #### Ćwiczenie 1
 
-Napisz funkcję o nazwie `chop()`, która przyjmuje listę i modyfikuje ją, usuwając pierwszy i ostatni element, a następnie zwraca `None`. Potem napisz funkcję o nazwie `middle()`, która przyjmuje listę i zwraca nową, która zawiera wszystkie oprócz pierwszego i ostatniego elementu.
+Napisz funkcję o nazwie `chop()`, która przyjmuje listę i modyfikuje ją, usuwając z niej pierwszy i ostatni element; funkcja ma zwracać `None`. Następnie napisz funkcję o nazwie `middle()`, która przyjmuje listę i zwraca nową listę, która zawiera wszystkie elementy wejściowej listy za wyjątkiem pierwszego i ostatniego elementu.
 
 Debugowanie
 -----------
@@ -719,14 +719,14 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     listy, możesz użyć `pop()`, `remove()`, `del`, a nawet użyć przypisania poprzez wycinanie.
 
     Aby dodać element, możesz użyć metody `append()` lub operatora `+`.
-    Ale nie zapomnij, że poniższe sposoby są prawidłowe:
+    Ale nie zapomnij, że oba poniższe sposoby są prawidłowe:
 
     ~~~~ {.python}
     t.append(x)
     t = t + [x]
     ~~~~
 
-    Ale te są niepoprawne:
+    Natomiast te są niepoprawne:
 
     ~~~~ {.python}
     t.append([x])          # ŹLE!
@@ -785,14 +785,14 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
         words = line.split()
         if words[0] != 'From' : continue
         print(words[2])
-    ~~~~
+    ~~~~ 
 
-    Wygląda to znacznie prościej i nawet nie musimy używać `rstrip()` do usunięcia znaku końca linii. Ale czy to jest faktycznie lepsze rozwiązanie? Spójrzmy na wynik uruchomienia skryptu
+    Wygląda to znacznie prościej i nawet nie musimy używać `rstrip()` do usunięcia znaku końca linii. Ale czy to jest faktycznie lepsze rozwiązanie? Spójrzmy na wynik uruchomienia skryptu:
 
     ~~~~
     Sat
     Traceback (most recent call last):
-      File "search8.py", line 5, in <module>
+    File "search8.py", line 4, in <module>
         if words[0] != 'From' : continue
     IndexError: list index out of range
     ~~~~
@@ -818,12 +818,13 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     wyjścia związanego z debugowaniem.
 
     ~~~~ {.python}
+    fhand = open('mbox-short.txt')
     for line in fhand:
         words = line.split()
         print('Debug:', words)
         if words[0] != 'From' : continue
         print(words[2])
-    ~~~~
+    ~~~~ 
 
     Kiedy uruchomimy program, przez ekran przewinie się duża ilość 
     danych, ale na końcu zobaczymy nasze debugowane dane 
@@ -831,11 +832,12 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
     wydarzyło tuż przed błędem.
 
     ~~~~
+    (...)
     Debug: ['X-DSPAM-Confidence:', '0.8475']
     Debug: ['X-DSPAM-Probability:', '0.0000']
     Debug: []
     Traceback (most recent call last):
-      File "search9.py", line 6, in <module>
+    File "search9.py", line 5, in <module>
         if words[0] != 'From' : continue
     IndexError: list index out of range
     ~~~~
@@ -869,7 +871,6 @@ Nieostrożne korzystanie z list (i innych zmiennych obiektów) może prowadzić 
 
     ~~~~ {.python}
     fhand = open('mbox-short.txt')
-    count = 0
     for line in fhand:
         words = line.split()
         # print('Debug:', words)
@@ -902,60 +903,46 @@ Sprawdź, która linia powyższego programu nie jest jeszcze właściwie zabezpi
 
 #### Ćwiczenie 3
 
-Napisz ponownie kod ze strażnikiem z powyższego przykładu, ale bez dwóch instrukcji `if`. Zamiast tego użyj pojedynczej instrukcji `if` ze złożonym wyrażeniem logicznym używającym operatora logicznego.
+Napisz ponownie kod z powyższego przykładu, ale bez dwóch instrukcji `if`. Zamiast tego użyj pojedynczej instrukcji `if` ze złożonym wyrażeniem logicznym używającym operatora logicznego (zastosuj wzorzec strażnika).
 
 Słowniczek
 ----------
 
 aliasowanie
 :   Okoliczność, w której dwie lub więcej zmiennych odnosi się do tego
-    samego obiektu.
-\index{aliasowanie}
+    samego obiektu.\index{aliasowanie}
 
 element
 :   Jedna z wartości na liście (lub innej sekwencji); nazywana także
-    pozycją.
-\index{element}
+    pozycją.\index{element}
 
 identyczny
-:   Będący tym samym obiektem (co oznacza, że jest też równoważny).
-\index{identyczność}
+:   Będący tym samym obiektem (co oznacza, że jest też równoważny).\index{identyczność}
 
 indeks
-:   Wartość będąca liczbą całkowitą, która wskazuje element na liście.
-\index{indeks}
-\index{}
+:   Wartość będąca liczbą całkowitą, która wskazuje element na liście.\index{indeks}\index{}
 
 lista
-:   Sekwencja wartości.
-\index{lista}
+:   Sekwencja wartości.\index{lista}
 
 lista zagnieżdżona
-:   Lista, która jest elementem innej listy.
-\index{lista!zagnieżdżona}
-\index{zagnieżdżona lista}
+:   Lista, która jest elementem innej listy.\index{lista!zagnieżdżona}\index{zagnieżdżona lista}
 
 obiekt
-:   Coś, do czego może odnosić się zmienna. Obiekt ma typ i wartość.
-\index{obiekt}
+:   Coś, do czego może odnosić się zmienna. Obiekt ma typ i wartość.\index{obiekt}
 
 przejście po liście
-:   Sekwencyjny dostęp do każdego elementu listy.
-\index{przejście!lista}
-\index{lista!przejście}
+:   Sekwencyjny dostęp do każdego elementu listy.\index{przejście!lista}\index{lista!przejście}
 
 referencja
-:   Związek między zmienną a jej wartością.
-\index{referencja}
+:   Związek między zmienną a jej wartością.\index{referencja}
 
 równoważny
-:   Posiadający tę samą wartość.
-\index{równoważność}
+:   Posiadający tę samą wartość.\index{równoważność}
 
 separator
 :   Znak lub ciąg znaków używany do wskazania, gdzie ciąg znaków 
-    powinien zostać podzielony.
-\index{separator}
+    powinien zostać podzielony.\index{separator}
 
 Ćwiczenia
 ---------
@@ -964,7 +951,7 @@ separator
 
 #### Ćwiczenie 4
 
-Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który otwiera plik `romeo.txt` i czyta go linia po linii. Każdą z nich podziel na listę słów za pomocą metody `split()`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli go nie ma, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
+Pobierz kopię pliku <https://py4e.pl/code3/romeo.txt>. Napisz program, który będzie przechowywał listę wyrazów występujących w pliku. Na początku otwórz plik `romeo.txt` i czytaj go linia po linii. Każdą z nich podziel na listę słów za pomocą metody `split()`. Dla każdego słowa sprawdź, czy znajduje się ono już na liście. Jeśli go nie ma, to dodaj je do listy. Gdy program zakończy pracę, posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
 
 ~~~~
 Podaj nazwę pliku: romeo.txt
@@ -977,7 +964,7 @@ Podaj nazwę pliku: romeo.txt
 
 #### Ćwiczenie 5
 
-Napisz program, który czyta dane ze skrzynki pocztowej, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z metody `split()`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".
+Napisz program, który czyta dane mailowe z pliku w formacie Mbox, a gdy znajdzie wiersz zaczynający się od "From", niech podzieli go na słowa, korzystając z metody `split()`. Interesuje nas, kto wysłał wiadomość – informacja ta jest drugim słowem w wierszu zawierającym "From".
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008

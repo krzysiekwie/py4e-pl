@@ -350,34 +350,25 @@ Słowniczek
 ----------
 
 akumulator
-:   Zmienna używana w pętli do sumowania lub akumulowania wyniku.
-\index{akumulator}
+:   Zmienna używana w pętli do sumowania lub akumulowania wyniku.\index{akumulator}
 
 dekrementacja
-:   Aktualizacja, która zmniejsza wartość zmiennej (najczęściej o jeden).
-\index{dekrementacja}
+:   Aktualizacja, która zmniejsza wartość zmiennej (najczęściej o jeden).\index{dekrementacja}
 
 inicjalizacja
-:   Przypisanie nadające zmiennej wartość początkową, która później zostanie zaktualizowana.
-\index{inicjalizacja}
-\index{zmienna, inicjalizacja}
+:   Przypisanie nadające zmiennej wartość początkową, która później zostanie zaktualizowana.\index{inicjalizacja}\index{zmienna, inicjalizacja}
 
 inkrementacja
-:   Aktualizacja, która zwiększa wartość zmiennej (najczęściej o jeden).
-\index{inkrementacja}
+:   Aktualizacja, która zwiększa wartość zmiennej (najczęściej o jeden).\index{inkrementacja}
 
 iteracja
-:   Powtórne wykonanie zbioru instrukcji przy pomocy funkcji, która sama się wywołuje, lub przy pomocy pętli.
-\index{iteracja}
+:   Powtórne wykonanie zbioru instrukcji przy pomocy funkcji, która sama się wywołuje, lub przy pomocy pętli.\index{iteracja}
 
 licznik
-:   Zmienna używana w pętli do zliczania, ile razy coś się wydarzyło. Inicjalizujemy licznik jako zero, a następnie zwiększamy go za każdym razem, gdy chcemy coś "zliczyć".
-\index{licznik}
+:   Zmienna używana w pętli do zliczania, ile razy coś się wydarzyło. Inicjalizujemy licznik jako zero, a następnie zwiększamy go za każdym razem, gdy chcemy coś "zliczyć".\index{licznik}
 
 pętla nieskończona
-:   Pętla, w której warunek kończący nie jest nigdy spełniony lub dla której nie ma warunku kończącego.
-\index{nieskończona, pętla}
-\index{pętla!nieskończona}
+:   Pętla, w której warunek kończący nie jest nigdy spełniony lub dla której nie ma warunku kończącego.\index{nieskończona, pętla}\index{pętla!nieskończona}
 
 Ćwiczenia
 ---------

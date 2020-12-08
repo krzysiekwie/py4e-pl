@@ -469,36 +469,25 @@ Słowniczek
 ----------
 
 DSU
-:   Skrót od "dekorowanie-sortowanie-usunięcie dekorowania"; schemat, który polega na budowaniu listy krotek, sortowaniu i wyodrębnianiu części wyniku.
-\index{DSU, schemat}
-\index{dekorowanie-sortowanie-usunięcie dekorowania, schemat}
-\index{schemat!dekorowanie-sortowanie-usunięcie dekorowania}
-\index{schemat!DSU}
+:   Skrót od "dekorowanie-sortowanie-usunięcie dekorowania"; schemat, który polega na budowaniu listy krotek, sortowaniu i wyodrębnianiu części wyniku.\index{DSU, schemat}\index{dekorowanie-sortowanie-usunięcie dekorowania, schemat}\index{schemat!dekorowanie-sortowanie-usunięcie dekorowania}\index{schemat!DSU}
 
 haszowalny
-:   Typ, który posiada funkcję haszowania. Typy niezmienne, takie jak liczby całkowite, zmiennoprzecinkowe i ciągi znaków, są haszowalne; typy zmienne, takie jak listy i słowniki, nie są haszowalne.
-\index{haszowalny}
+:   Typ, który posiada funkcję haszowania. Typy niezmienne, takie jak liczby całkowite, zmiennoprzecinkowe i ciągi znaków, są haszowalne; typy zmienne, takie jak listy i słowniki, nie są haszowalne.\index{haszowalny}
 
 krotka
-:   Niezmienna sekwencja elementów.
-\index{krotka}
+:   Niezmienna sekwencja elementów.\index{krotka}
 
 kształt (struktury danych)
-:   Podsumowanie typu, rozmiaru i zawartości struktury danych.
-\index{kształt struktury danych}
+:   Podsumowanie typu, rozmiaru i zawartości struktury danych.\index{kształt struktury danych}
 
 porównywalny
-:   Typ, w którym można sprawdzić, czy jedna wartość jest większa, mniejsza lub równa innej wartości tego samego typu. Typy, które są porównywalne, można umieścić na liście i posortować.
-\index{porównywalny}
+:   Typ, w którym można sprawdzić, czy jedna wartość jest większa, mniejsza lub równa innej wartości tego samego typu. Typy, które są porównywalne, można umieścić na liście i posortować.\index{porównywalny}
 
 przypisanie do krotki
-:   Przypisanie z sekwencją po prawej stronie i krotką zmiennych po lewej. Prawa strona jest ewaluowana, a następnie jej elementy są przypisywane do zmiennych po lewej stronie.
-\index{krotka!przypisanie}
-\index{przypisanie!krotka}
+:   Przypisanie z sekwencją po prawej stronie i krotką zmiennych po lewej. Prawa strona jest ewaluowana, a następnie jej elementy są przypisywane do zmiennych po lewej stronie.\index{krotka!przypisanie}\index{przypisanie!krotka}
 
 struktura danych
-:   Kolekcja powiązanych ze sobą wartości, często zorganizowanych w listy, słowniki, krotki itp.
-\index{struktura danych}
+:   Kolekcja powiązanych ze sobą wartości, często zorganizowanych w listy, słowniki, krotki itp.\index{struktura danych}
 
 Ćwiczenia
 ---------

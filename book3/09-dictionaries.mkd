@@ -377,6 +377,8 @@ Debugowanie
 -----------
 
 \index{debugowanie}
+\index{sprawdzenie poczytalności}
+\index{sprawdzenie spójności}
 
 Podczas pracy z większymi zbiorami danych debugowanie poprzez wyświetlanie i ręczne sprawdzanie danych może okazać się niewygodne. Oto kilka sugestii dotyczących debugowania dużych zbiorów danych:
 
@@ -389,9 +391,6 @@ Sprawdź podsumowania i typy
 :   Zamiast wyświetlać i sprawdzać cały zbiór danych, spróbuj wyświetlić podsumowanie danych: na przykład liczbę pozycji w słowniku lub sumę liczb.
 
     Często błędy czasu wykonania powoduje wartość, która nie jest właściwego typu. Do debugowania tego typu błędów często wystarczy wydrukować typ wartości.
-
-\index{sprawdzenie poczytalności}
-\index{sprawdzenie spójności}
 
 Napisz mechanizm do samokontroli
 :   Czasami warto napisać kod do automatycznego sprawdzania błędów. Na przykład, jeśli obliczasz średnią z listy liczb, możesz sprawdzić, czy wynik nie jest większy od największego elementu na liście lub mniejszy od najmniejszego. Nazywa się to "sprawdzaniem poczytalności" (ang. *sanity check*), ponieważ wykrywa wyniki, które są "zupełnie nielogiczne".
@@ -407,50 +406,37 @@ Słowniczek
 ----------
 
 element słownika
-:   Inna nazwa dla pary klucz-wartość.
-\index{element!słownik}
+:   Inna nazwa dla pary klucz-wartość.\index{element!słownik}
 
 funkcja haszująca
-:   Funkcja używana przez tablice mieszające do obliczania lokalizacji dla danego klucza.
-\index{funkcja haszująca}
+:   Funkcja używana przez tablice mieszające do obliczania lokalizacji dla danego klucza.\index{funkcja haszująca}
 
 histogram
-:   Zbiór liczników.
-\index{histogram}
+:   Zbiór liczników.\index{histogram}
 
 implementacja
-:   Sposób przeprowadzenia obliczeń.
-\index{implementacja}
+:   Sposób przeprowadzenia obliczeń.\index{implementacja}
 
 klucz
-:   Obiekt, który pojawia się w słowniku jako pierwsza część pary klucz-wartość.
-\index{klucz}
+:   Obiekt, który pojawia się w słowniku jako pierwsza część pary klucz-wartość.\index{klucz}
 
 para klucz-wartość
-:   Reprezentacja mapowania z klucza do wartości.
-\index{para klucz-wartość}
+:   Reprezentacja mapowania z klucza do wartości.\index{para klucz-wartość}
 
 pętle zagnieżdżone
-:   Kiedy istnieje jedna lub więcej pętli "wewnątrz" innej pętli. Pętla wewnętrzna wykonuje się do końca za każdym razem, gdy pętla zewnętrzna iteruje się raz.
-\index{zagnieżdżone pętle}
-\index{pętla!zagnieżdżona}
+:   Kiedy istnieje jedna lub więcej pętli "wewnątrz" innej pętli. Pętla wewnętrzna wykonuje się do końca za każdym razem, gdy pętla zewnętrzna iteruje się raz.\index{zagnieżdżone pętle}\index{pętla!zagnieżdżona}
 
 słownik
-:   Mapowanie z zestawu kluczy do odpowiadających im wartości.
-\index{słownik}
+:   Mapowanie z zestawu kluczy do odpowiadających im wartości.\index{słownik}
 
 tablica mieszająca
-:   Algorytm używany do implementacji słowników Pythona; inaczej tablica z haszowaniem.
-\index{tablica z haszowaniem}
-\index{tablica mieszająca}
+:   Algorytm używany do implementacji słowników Pythona; inaczej tablica z haszowaniem.\index{tablica z haszowaniem}\index{tablica mieszająca}
 
 wartość
-:   Obiekt, który pojawia się w słowniku jako druga część pary klucz-wartość. Jest to bardziej szczegółowe określenie niż nasze poprzednie użycie słowa "wartość".
-\index{wartość}
+:   Obiekt, który pojawia się w słowniku jako druga część pary klucz-wartość. Jest to bardziej szczegółowe określenie niż nasze poprzednie użycie słowa "wartość".\index{wartość}
 
 wyszukiwanie
-:   Operacja słownikowa, która dla podanego klucza znajduje odpowiadającą mu wartość.
-\index{wyszukiwanie}
+:   Operacja słownikowa, która dla podanego klucza znajduje odpowiadającą mu wartość.\index{wyszukiwanie}
 
 Ćwiczenia
 ---------

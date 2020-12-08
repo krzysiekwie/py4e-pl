@@ -1,6 +1,6 @@
 total = 0
 count = 0
-while (True):
+while True:
     inp = input('Wprowadź liczbę: ')
     if inp == 'gotowe': break
     value = float(inp)

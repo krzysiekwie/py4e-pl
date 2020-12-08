@@ -444,29 +444,19 @@ Słowniczek
 ----------
 
 dopasowanie zachłanne
-:   Pojęcie oznaczające, że znaki `+` i `*` w wyrażeniu regularnym rozszerzają się na zewnątrz, tak aby dopasować jak największy możliwy ciąg znaków.
-\index{zachłanny}
-\index{dopasowanie zachłanne}
+:   Pojęcie oznaczające, że znaki `+` i `*` w wyrażeniu regularnym rozszerzają się na zewnątrz, tak aby dopasować jak największy możliwy ciąg znaków.\index{zachłanny}\index{dopasowanie zachłanne}
 
 grep
-:   Polecenie dostępne w większości systemów unixowych, które przeszukuje pliki tekstowe w poszukiwaniu linii pasujących do wyrażeń regularnych. Nazwa komendy oznacza "Generalized Regular Expression Parser", czyli uogólniony parser wyrażeń regularnych.
-\index{grep}
+:   Polecenie dostępne w większości systemów unixowych, które przeszukuje pliki tekstowe w poszukiwaniu linii pasujących do wyrażeń regularnych. Nazwa komendy oznacza "Generalized Regular Expression Parser", czyli uogólniony parser wyrażeń regularnych.\index{grep}
 
 kruchy kod
-:   Kod programu, który działa tylko wtedy, gdy dane wejściowe są w określonym formacie, ale jest podatny na wysypanie całego programu, jeśli wystąpią jakieś odchylenia od właściwego formatu. Nazywamy to "kruchym kodem", ponieważ można go łatwo zepsuć.
-\index{kruchy kod}
+:   Kod programu, który działa tylko wtedy, gdy dane wejściowe są w określonym formacie, ale jest podatny na wysypanie całego programu, jeśli wystąpią jakieś odchylenia od właściwego formatu. Nazywamy to "kruchym kodem", ponieważ można go łatwo zepsuć.\index{kruchy kod}
 
 wieloznacznik
-:   Znak specjalny, który pasuje do dowolnego znaku. W wyrażeniach regularnych znakiem wieloznacznika jest kropka.
-\index{wieloznacznik}
-\index{symbol wieloznaczny}
-\index{regex!wieloznacznik}
-\index{regex!symbol wieloznaczny}
+:   Znak specjalny, który pasuje do dowolnego znaku. W wyrażeniach regularnych znakiem wieloznacznika jest kropka.\index{wieloznacznik}\index{symbol wieloznaczny}\index{regex!wieloznacznik}\index{regex!symbol wieloznaczny}
 
 wyrażenie regularne
-:   Język służący do tworzenia bardziej złożonych ciągów wyszukiwania. Wyrażenie regularne może zawierać znaki specjalne, które wskazują, że szukane wyrażenie pasuje tylko do początku lub końca wiersza lub wielu innych podobnych możliwości.
-\index{wyrażenie regularne}
-\index{regex}
+:   Język służący do tworzenia bardziej złożonych ciągów wyszukiwania. Wyrażenie regularne może zawierać znaki specjalne, które wskazują, że szukane wyrażenie pasuje tylko do początku lub końca wiersza lub wielu innych podobnych możliwości.\index{wyrażenie regularne}\index{regex}
 
 Ćwiczenia
 ---------

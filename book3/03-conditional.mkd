@@ -477,9 +477,8 @@ Mechanizm *traceback* w Pythonie pojawia się w przypadku wystąpienia błędu;
 zawiera on wiele informacji, ale czasem może być przytłaczający. Najbardziej
 użyteczne są zazwyczaj informacje o tym:
 
--   jaki to był błąd,
-
--   gdzie ten błąd wystąpił.
+* jaki to był błąd,
+* gdzie ten błąd wystąpił.
 
 Błędy składniowe są zazwyczaj łatwe do znalezienia, ale jest kilka podstępnych
 przypadków. Błędy związane z tzw. białymi znakami^[Należą do nich spacje, znaki
@@ -511,76 +510,53 @@ Słowniczek
 ----------
 
 ciało instrukcji
-:   Sekwencja instrukcji zawarta w złożonej instrukcji.
-\index{ciało!instrukcji}
-\index{instrukcja!ciało}
+:   Sekwencja instrukcji zawarta w złożonej instrukcji.\index{ciało!instrukcji}\index{instrukcja!ciało}
 
 gałąź
 :   Jedna z alternatywnych sekwencji instrukcji występujących w instrukcji
-    warunkowej.
-\index{gałąź}
+    warunkowej.\index{gałąź}
 
 instrukcja warunkowa
 :   Instrukcja, która kontroluje przepływ wykonywania programu w zależności od
-    pewnego warunku.
-\index{warunkowa, instrukcja}
-\index{instrukcja!warunkowa}
+    pewnego warunku.\index{warunkowa, instrukcja}\index{instrukcja!warunkowa}
 
 instrukcja złożona
 :   Instrukcja składająca się z nagłówka i ciała. Nagłówek kończy się
-    dwukropkiem (:). Ciało jest wcięte w stosunku do nagłówka.
-\index{złożona, instrukcja}
-\index{instrukcja!złożona}
+    dwukropkiem (:). Ciało jest wcięte w stosunku do nagłówka.\index{złożona, instrukcja}\index{instrukcja!złożona}
 
 minimalna ewaluacja
 :   Kiedy Python jest w trakcie ewaluacji złożonego wyrażenia logicznego i
     przerywa dalszą ewaluację, ponieważ Python zna końcową wartość wyrażenia
-    bez potrzeby ewaluacji reszty wyrażenia.
-\index{minimalna ewaluacja}
-\index{ewaluacja, minimalna}
+    bez potrzeby ewaluacji reszty wyrażenia.\index{minimalna ewaluacja}\index{ewaluacja, minimalna}
 
 operator logiczny
 :   Jeden z operatorów, który łączy wyrażenia logiczne:
-    `and`, `or` lub `not`.
-\index{operator!logiczny}
-\index{logiczny, operator}
+    `and`, `or` lub `not`.\index{operator!logiczny}\index{logiczny, operator}
 
 operator porównania
 :   Jeden z następujących operatorów, który porównuje swoje operandy: `==`,
-    `!=`, `>`, `<`, `>=` i `<=`.
-\index{porównanie, operator}
-\index{operator!porównania}
+    `!=`, `>`, `<`, `>=` i `<=`.\index{porównanie, operator}\index{operator!porównania}
 
 traceback
-:   Lista funkcji, które są wykonywane; pojawia się, gdy wystąpi wyjątek.
-\index{traceback}
+:   Lista funkcji, które są wykonywane; pojawia się, gdy wystąpi wyjątek.\index{traceback}
 
 warunek
 :   Wyrażenie logiczne w instrukcji warunkowej określające która gałąź jest
-    wykonywana.
-\index{warunek}
+    wykonywana.\index{warunek}
 
 warunki powiązane
-:   Wyrażenie warunkowe z serią alternatywnych gałęzi.
-\index{powiązane, warunki}
-\index{warunki!powiązane}
+:   Wyrażenie warunkowe z serią alternatywnych gałęzi.\index{powiązane, warunki}\index{warunki!powiązane}
 
 warunki zagnieżdżone
 :   Instrukcja warunkowa, która pojawia się w jednej z gałęzi innej instrukcji
-    warunkowej.
-\index{zagnieżdżone, warunki}
-\index{warunki!zagnieżdżone}
+    warunkowej.\index{zagnieżdżone, warunki}\index{warunki!zagnieżdżone}
 
 wyrażenie logiczne
-:   Wyrażenie o wartości `True` lub `False`.
-\index{wyrażenie!logiczne}
-\index{logiczne, wyrażenie}
+:   Wyrażenie o wartości `True` lub `False`.\index{wyrażenie!logiczne}\index{logiczne, wyrażenie}
 
 wzorzec strażnika
 :   Miejsce, w którym konstruujemy wyrażenie logiczne z dodatkowymi
-    porównaniami, tak aby skorzystać z działania minimalnej ewaluacji.
-\index{strażnik, wzorzec}
-\index{wzorzec!strażnik}
+    porównaniami, tak aby skorzystać z działania minimalnej ewaluacji.\index{strażnik, wzorzec}\index{wzorzec!strażnik}
 
 Ćwiczenia
 ---------

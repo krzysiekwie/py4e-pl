@@ -432,24 +432,19 @@ Słowniczek
 ----------
 
 BeautifulSoup
-:   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, zazwyczaj ignorowanych przez przeglądarki internetowe. Biblioteka `BeautifulSoup` ma swoją stronę pod adresem <https://www.crummy.com/software/BeautifulSoup>.
-\index{BeautifulSoup, moduł}
+:   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, zazwyczaj ignorowanych przez przeglądarki internetowe. Biblioteka `BeautifulSoup` ma swoją stronę pod adresem <https://www.crummy.com/software/BeautifulSoup>.\index{BeautifulSoup, moduł}
 
 gniazdo
-:   Połączenie sieciowe pomiędzy dwiema aplikacjami, w którym aplikacje mogą wysyłać i odbierać dane w obu kierunkach.
-\index{gniazdo}
+:   Połączenie sieciowe pomiędzy dwiema aplikacjami, w którym aplikacje mogą wysyłać i odbierać dane w obu kierunkach.\index{gniazdo}
 
 port
-:   Liczba ogólnie wskazująca, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.
-\index{port}
+:   Liczba ogólnie wskazująca, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.\index{port}
 
 robot internetowy
-:   Działanie wyszukiwarek internetowych polegające na pobieraniu strony, a następnie wszystkich stron, do których prowadzą z niej linki itd., aż do momentu, gdy zgromadzą prawie wszystkie strony w internecie, których używają do zbudowania swojego indeksu wyszukiwania.
-\index{robot internetowy}
+:   Działanie wyszukiwarek internetowych polegające na pobieraniu strony, a następnie wszystkich stron, do których prowadzą z niej linki itd., aż do momentu, gdy zgromadzą prawie wszystkie strony w internecie, których używają do zbudowania swojego indeksu wyszukiwania.\index{robot internetowy}
 
 web scraping
-:   Sytuacja w której program podszywa się pod przeglądarkę internetową, pobiera stronę i przegląda jej zawartość. Często programy podążają za linkami na jednej stronie, by znaleźć następną, dzięki czemu mogą przemierzyć duże zbiory stron lub serwisy społecznościowe.
-\index{web scraping}
+:   Sytuacja w której program podszywa się pod przeglądarkę internetową, pobiera stronę i przegląda jej zawartość. Często programy podążają za linkami na jednej stronie, by znaleźć następną, dzięki czemu mogą przemierzyć duże zbiory stron lub serwisy społecznościowe.\index{web scraping}
 
 Ćwiczenia
 ---------

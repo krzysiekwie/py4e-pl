@@ -712,109 +712,76 @@ Słowniczek
 ----------
 
 algorytm
-:   Ogólny proces rozwiązywania pewnej kategorii problemów.
-\index{algorytm}
+:   Ogólny proces rozwiązywania pewnej kategorii problemów.\index{algorytm}
 
 argument
 :   Wartość przekazywana do funkcji w momencie jej wywołania. Wartość ta jest
-    przypisana do odpowiadającego jej parametru w funkcji.
-\index{argument}
-\index{funkcja, argument}
+    przypisana do odpowiadającego jej parametru w funkcji.\index{argument}\index{funkcja, argument}
 
 biblioteka
-:   Inaczej moduł.
-\index{biblioteka}
+:   Inaczej moduł.\index{biblioteka}
 
 ciało funkcji
-:   Sekwencja instrukcji wewnątrz definicji funkcji.
-\index{ciało!funkcji}
-\index{funkcja!ciało}
+:   Sekwencja instrukcji wewnątrz definicji funkcji.\index{ciało!funkcji}\index{funkcja!ciało}
 
 definicja funkcji
 :   Instrukcja, która tworzy nową funkcję, określająca jej nazwę, parametry i
-    polecenia, które wykonuje.
-\index{funkcja, definicja}
-\index{definicja funkcji}
+    polecenia, które wykonuje.\index{funkcja, definicja}\index{definicja funkcji}
 
 deterministyczny
 :   Dotyczy programu, który robi to samo za każdym razem, gdy dostarczy mu się
-    te same dane wejściowe.
-\index{deterministyczny}
+    te same dane wejściowe.\index{deterministyczny}
 
 funkcja
 :   Nazwany ciąg instrukcji wykonujący jakąś użyteczną operację. Funkcje mogą,
-    ale nie muszą, przyjmować argumenty i mogą, ale nie muszą, zwracać wyniki.
-\index{funkcja}
+    ale nie muszą, przyjmować argumenty i mogą, ale nie muszą, zwracać wyniki.\index{funkcja}
 
 funkcja pusta
-:   Funkcja, która nie posiada zwracanej wartości.
-\index{pusta, funkcja}
-\index{funkcja pusta}
+:   Funkcja, która nie posiada zwracanej wartości.\index{pusta, funkcja}\index{funkcja pusta}
 
 funkcja owocna
-:   Funkcja zwracająca wartość.
-\index{funkcja owocna}
-\index{owocna, funkcja}
+:   Funkcja zwracająca wartość.\index{funkcja owocna}\index{owocna, funkcja}
 
 instrukcja import
-:   Instrukcja, która wczytuje plik modułu i tworzy obiekt modułu.
-\index{import, instrukcja}
-\index{instrukcja!import}
+:   Instrukcja, która wczytuje plik modułu i tworzy obiekt modułu.\index{import, instrukcja}\index{instrukcja!import}
 
 obiekt modułu
 :   Wartość utworzona przez instrukcję `import`, która zapewnia dostęp do danych
-    i kodu zdefiniowanego w module.
-\index{moduł}
-\index{obiekt modułu}
+    i kodu zdefiniowanego w module.\index{moduł}\index{obiekt modułu}
 
 nagłówek funkcji
-:   Pierwszy wiersz definicji funkcji.
-\index{nagłówek funkcji}
-\index{funkcja!nagłówek}
+:   Pierwszy wiersz definicji funkcji.\index{nagłówek funkcji}\index{funkcja!nagłówek}
 
 notacja kropkowa
 :   Składnia do wywołania funkcji w innym module poprzez określenie nazwy
-    modułu, po której następuje kropka i nazwa funkcji.
-\index{notacja kropkowa}
+    modułu, po której następuje kropka i nazwa funkcji.\index{notacja kropkowa}
 
 obiekt funkcji
 :   Wartość utworzona przez definicję funkcji. Nazwa funkcji jest zmienną, która
-    odnosi się do obiektu funkcji.
-\index{obiekt funkcji}
-\index{funkcja, obiekt}
-\index{funkcja, definicja}
-\index{definicja funkcji}
+    odnosi się do obiektu funkcji.\index{obiekt funkcji}\index{funkcja, obiekt}\index{funkcja, definicja}\index{definicja funkcji}
 
 parametr
 :   Nazwa używana wewnątrz funkcji do odwoływania się do wartości przekazanej
-    jako argument.
-\index{parametr}
-\index{funkcja, parametr}
+    jako argument.\index{parametr}\index{funkcja, parametr}
 
 przepływ sterowania
-:   Kolejność, w której polecenia są wykonywane podczas uruchamiania programu.
-\index{przepływ sterowania}
+:   Kolejność, w której polecenia są wykonywane podczas uruchamiania programu.\index{przepływ sterowania}
 
 pseudolosowość
 :   Odnosi się do ciągu liczb, które wydają się być losowe, ale są generowane
-    przez deterministyczny program.
-\index{pseudolosowość}
+    przez deterministyczny program.\index{pseudolosowość}
 
 składanie
 :   Użycie wyrażenia jako części większego wyrażenia lub instrukcji jako części
-    większej instrukcji.
-\index{składanie}
+    większej instrukcji.\index{składanie}
 
 wartość zwracana
 :   Wynik działania funkcji. Jeżeli wywołanie funkcji zostanie użyte jako
-    wyrażenie, to wartość zwracana jest wartością tego wyrażenia.
-\index{wartość zwracana}
+    wyrażenie, to wartość zwracana jest wartością tego wyrażenia.\index{wartość zwracana}
 
 wywołanie funkcji
 :   Polecenie, które uruchamia funkcję. Składa się z nazwy funkcji, po której
-    następuje lista argumentów.
-\index{wywołanie funkcji}
-\index{funkcja, wywołanie}
+    następuje lista argumentów.\index{wywołanie funkcji}\index{funkcja, wywołanie}
 
 Ćwiczenia
 ---------

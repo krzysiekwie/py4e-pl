@@ -198,27 +198,19 @@ Słowniczek
 ----------
 
 API
-:   Interfejs programowania aplikacji. Umowa pomiędzy aplikacjami, która określa schematy interakcji pomiędzy dwoma komponentami tych aplikacji.
-\index{API}
+:   Interfejs programowania aplikacji. Umowa pomiędzy aplikacjami, która określa schematy interakcji pomiędzy dwoma komponentami tych aplikacji.\index{API}
 
 ElementTree
-:   Wbudowana biblioteka Pythona służąca do parsowania danych XML.
-\index{ElementTree}
+:   Wbudowana biblioteka Pythona służąca do parsowania danych XML.\index{ElementTree}
 
 JSON
-:   Notacja obiektowa JavaScript. Format, który pozwala na oznakowanie ustrukturyzowanych danych w oparciu o składnię obiektów JavaScript.
-\index{JSON}
-\index{JavaScript Object Notation}
+:   Notacja obiektowa JavaScript. Format, który pozwala na oznakowanie ustrukturyzowanych danych w oparciu o składnię obiektów JavaScript.\index{JSON}\index{JavaScript Object Notation}
 
 SOA
-:   Architektura usługowa. Sytuacja, w której aplikacja składa się z połączonych w sieci komponentów.
-\index{SOA}
-\index{architektura usługowa}
+:   Architektura usługowa. Sytuacja, w której aplikacja składa się z połączonych w sieci komponentów.\index{SOA}\index{architektura usługowa}
 
 XML
-:   Rozszerzalny język znaczników. Format, który pozwala na oznakowanie danych strukturalnych.
-\index{XML}
-\index{eXtensible Markup Language}
+:   Rozszerzalny język znaczników. Format, który pozwala na oznakowanie danych strukturalnych.\index{XML}\index{eXtensible Markup Language}
 
 Aplikacja nr 1: usługa sieciowa OpenStreetMap do geokodowania
 -------------------------------------------------------------
