@@ -23,6 +23,7 @@ mod/*
 media/video
 media/audio
 py4e-private
+a-*.png
 
 geodata.sqlite
 content.sqlite
