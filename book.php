@@ -16,7 +16,7 @@
             <li class="menu-text">
                 do druku (PDF): <a href="translations/PL/py4e-pl-a4-latest.pdf" target="_blank">A4 kolor</a>, <a href="translations/PL/py4e-pl-print-latest.pdf" target="_blank">7 × 10 " kolor</a>, <a href="translations/PL/py4e-pl-print-bw-latest.pdf" target="_blank">7 × 10 " czarno-biały</a>
             </li>
-            <li class="menu-text"><a href="https://github.com/andre-wojtowicz/py4e-pl" target="_blank">Kod źródłowy książki na GitHubie</a> (zmiany w repozytorium powodują automatyczne przebudowanie ww. formatów na tej stronie)</li>
+            <li class="menu-text"><a href="https://github.com/andre-wojtowicz/py4e-pl" target="_blank">Kod źródłowy książki na GitHubie</a> (zmiany w repozytorium powodują automatyczne przebudowanie ww. plików)</li>
         </ul>
         <p>Współtwórcy: <a href="https://github.com/andre-wojtowicz" target="_blank">Andrzej Wójtowicz</a></p>
     </li>

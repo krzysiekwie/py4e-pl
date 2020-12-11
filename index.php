@@ -21,7 +21,7 @@ Jeśli prowadzisz zajęcia z Pythona i chcesz wykorzystać udostępnione tutaj m
 </ul>
 <?php } else { ?>
 <p>
-Witaj na stronie, na której znajdują się materiały kursowe związane z bezpłatną książką <a href="book.php">Python dla wszystkich</a>. Umieszczone tutaj materiały i zadania pomogą w uzyskaniu certyfikatu w ramach <a href="https://www.coursera.org/specializations/python" target="_blank">specjalizacji w serwisie Coursera "Python for Everybody"</a>, <a href="https://www.edx.org/bio/charles-severance" target="_blank">dwóch kursów tematycznych "Python for Everybody" na edX</a> lub <a href="https://www.futurelearn.com/courses/programming-for-everybody-python" target="_blank">dwóch kursów "Python for Everybody" na FutureLearn</a>.
+Witaj na stronie, na której znajdują się materiały kursowe związane z <a href="book.php"><b>bezpłatną książką "Python dla wszystkich"</b></a>. Umieszczone tutaj materiały i zadania pomogą w uzyskaniu certyfikatu w ramach <a href="https://www.coursera.org/specializations/python" target="_blank">specjalizacji w serwisie Coursera "Python for Everybody"</a>, <a href="https://www.edx.org/bio/charles-severance" target="_blank">dwóch kursów tematycznych "Python for Everybody" na edX</a> lub <a href="https://www.futurelearn.com/courses/programming-for-everybody-python" target="_blank">dwóch kursów "Python for Everybody" na FutureLearn</a>.
 </p>
 <p>
 Możesz korzystać z tej strony na wiele różnych sposobów:
