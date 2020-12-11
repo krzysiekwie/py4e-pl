@@ -1,8 +1,6 @@
 <?php include("top.php"); ?>
 <?php include("nav.php");?>
-<!-- paper-start -->
-
-<!-- paper-end -->
+<!-- paper -->
 <h2>Python dla wszystkich</h2>
 <p>
     Celem książki jest wprowadzenie do tematyki programowania. Szczególny nacisk położono na wykorzystanie Pythona do rozwiązywania podstawowych problemów związanych z danymi, które mogą pojawić się w codziennej pracy.
