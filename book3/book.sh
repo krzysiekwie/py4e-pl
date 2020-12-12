@@ -2,22 +2,24 @@
 
 # EPUB and MOBI versions
 
-cat epub-metadata.txt  <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) 0*.mkd 1*.mkd AA*.mkd AB*.mkd | grep -v '^%' | python2 pre-html.py | python2 verbatim.py | pandoc --default-image-extension=svg --css=stylesheet.css -o x.epub
+# cat epub-metadata.txt  <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) 0*.mkd 1*.mkd AA*.mkd AB*.mkd | grep -v '^%' | python2 pre-html.py | python2 verbatim.py | pandoc --default-image-extension=svg --css=stylesheet.css -o x.epub
 
-# make the mobi if it works (add verbose for debugging)
-if hash ebook-convert 2>/dev/null; then
-    ebook-convert x.epub x.mobi
-    echo "mobi generated"
-else
-    echo "mobi not generated - please install calibre"
-fi
+# # make the mobi if it works (add verbose for debugging)
+# if hash ebook-convert 2>/dev/null; then
+#     ebook-convert x.epub x.mobi
+#     echo "mobi generated"
+# else
+#     echo "mobi not generated - please install calibre"
+# fi
 
 
 # cleanup
 
 rm tmp-1.* tmp-2.* tmp-3.* tmp-4.* *.tmp *.aux 2> /dev/null
+rm ../images/*-eps-converted-to.pdf 2> /dev/null
+rm ../photos/*-eps-converted-to.pdf 2> /dev/null
 
-# PDF print color version
+# # PDF print color version
 
 pandoc <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) -o tmp-1.prefacex.tex
 sed < tmp-1.prefacex.tex 's/section{/section*{/' > tmp-1.preface.tex
@@ -42,7 +44,7 @@ pdflatex -shell-escape tmp-1.tex # first, TOC
 pdflatex -shell-escape tmp-1.tex # second, add TOC
 mv tmp-1.pdf x-1.pdf
 
-# PDF print A4
+# # PDF print A4
 
 pandoc <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) -o tmp-2.prefacex.tex
 sed < tmp-2.prefacex.tex 's/section{/section*{/' > tmp-2.preface.tex
@@ -75,7 +77,7 @@ mv tmp-2.pdf x-2.pdf
 pandoc <(sed "s/^Copyright 2009– /Copyright 2009–$(date +%Y) /" A0-preface.mkd) -o tmp-3.prefacex.tex
 sed < tmp-3.prefacex.tex 's/section{/section*{/' > tmp-3.preface.tex
 
-cat [0-9]*.mkd | python2 verbatim.py | tee tmp-3.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V pdfversionprint -V fontsize:10pt -V documentclass:book -V lang:pl-PL -V langbabel:polish -V "author:Dr Charles R. Severance" -V "title:Python dla wszystkich" -V "subtitle:Odkrywanie danych z Python 3" -V colorlinks:false -V citecolor:black -V urlcolor:black -V linkcolor:black -V numbersections --highlight-style=monochrome  -V typeinclude_t3 --template=template.latex --syntax-definition=sql.xml -o tmp-3.tex
+cat [0-9]*.mkd | python2 verbatim.py | tee tmp-3.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V pdfversionprint -V fontsize:10pt -V documentclass:book -V lang:pl-PL -V langbabel:polish -V "author:Dr Charles R. Severance" -V "title:Python dla wszystkich" -V "subtitle:Odkrywanie danych z Python 3" -V colorlinks:false -V citecolor:black -V urlcolor:black -V linkcolor:black -V numbersections --highlight-style=monochrome -V typeinclude_t3 --template=template.latex --syntax-definition=sql.xml -o tmp-3.tex
 pandoc [A-Z][A-Z]*.mkd -o tmp-3.app.tex
 
 sed < tmp-3.app.tex -e 's/subsubsection{/xyzzy{/' -e 's/subsection{/plugh{/' -e 's/section{/chapter{/' -e 's/xyzzy{/subsection{/' -e 's/plugh{/section{/'  > tmp-3.appendix.tex
@@ -94,6 +96,17 @@ perl -0777 -i -pe "s/\\\\href\\{(.+?)\\}\\{(.+?)\\}/\\\\href{\1}{\\\\nolinkurl{\
 pdflatex -shell-escape tmp-3.tex # first, TOC
 pdflatex -shell-escape tmp-3.tex # second, add TOC
 mv tmp-3.pdf x-3.pdf
+
+gs -o x-3-cmyk.pdf \
+    -sDEVICE=pdfwrite \
+    -dOverrideICC \
+    -sProcessColorModel=DeviceCMYK \
+    -sColorConversionStrategy=CMYK \
+    -sColorConversionStrategyForImages=CMYK \
+     x-3.pdf
+
+#pdfjam --outfile x-3.pdf --papersize '{7in,10in}' x-3-cmyk.pdf
+mv x-3-cmyk.pdf x-3.pdf
 
 # PDF electronic A4
 
@@ -126,4 +139,5 @@ mv tmp-4.pdf x-4.pdf
 # cleanup
 
 rm ../images/*-eps-converted-to.pdf
+rm ../photos/*-eps-converted-to.pdf
 rm tmp-1.* tmp-2.* tmp-3.* tmp-4.*
