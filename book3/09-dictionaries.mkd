@@ -349,7 +349,7 @@ Moduł `string` dostarcza gotowe sekwencje znaków, które reprezentują np. lic
 '0123456789'
 ~~~~
 
-Metoda `maketrans()` z pustymi ciągami znaków `fromstr` i `tostr` utworzy nam słownik, w którym będziemy informację o tym na co ma być zamieniony dany znak (a w zasadzie jego reprezentacja liczbowa). Możemy zauważyć, że za każdym razem chcemy dokonać zamiany na `None`, czyli usunąć dany znak:
+Metoda `maketrans()` z pustymi ciągami znaków `fromstr` i `tostr` utworzy nam słownik, w którym będziemy mieli informację o tym na co ma być zamieniony dany znak (a w zasadzie jego reprezentacja liczbowa). Możemy zauważyć, że za każdym razem chcemy dokonać zamiany na `None`, czyli usunąć dany znak:
 
 ~~~~ {.python}
 >>> str.maketrans('', '', string.digits)
@@ -375,7 +375,7 @@ Dokonujemy następujących zmian w naszym programie:
 
 Częścią uczenia się "Sztuki Pythona" lub "Myślenia po pythonowemu" jest uświadomienie sobie, że Python często ma wbudowane rozwiązania dla wielu prostych problemów związanych z analizą danych. Z czasem zobaczysz wystarczająco dużo kodu przykładowego i przeczytasz wystarczająco dużo dokumentacji, tak aby wiedzieć, gdzie szukać, by sprawdzić, czy ktoś już nie napisał czegoś, co znacznie ułatwi Ci pracę.
 
-Poniżej znajduje się skrócony wynik działania programu na pliku `romeo-full.txt`, który jest dostępny pod adresem <https://py4e.pl/code3/romeo.txt>:
+Poniżej znajduje się skrócony wynik działania programu na pliku `romeo-full.txt`, który jest dostępny pod adresem <https://py4e.pl/code3/romeo-full.txt>:
 
 ~~~~
 Podaj nazwę pliku: romeo-full.txt
@@ -386,7 +386,7 @@ a': 24, 'orchard': 2, 'light': 5, 'lovers': 2, 'romeo': 40,
 'it': 22, 'leans': 1, 'canst': 1, 'having': 1, ...}
 ~~~~
 
-Przeglądanie powyższego wyniku nadal jest niewygodne i choć możemy użyć Pythona, by dał nam dokładnie to, czego chcemy, to żeby to zrobić, musimy najpierw poznać *krotki*. Wrócimy do tego przykładu, kiedy to się stanie.
+Przeglądanie powyższego wyniku nadal jest niewygodne i choć możemy użyć Pythona, by dał nam dokładnie to, czego chcemy, to żeby to zrobić, musimy najpierw poznać *krotki*. Wrócimy do tego przykładu w kolejnym rozdziale.
 
 Debugowanie
 -----------
