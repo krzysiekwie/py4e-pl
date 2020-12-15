@@ -58,7 +58,7 @@ Pliki tekstowe i linie
 
 \index{plik tekstowy}
 
-Plik tekstowy może być uważany za sekwencję linii, podobnie jak ciąg znaków w Pythonie może być uważany za sekwencję liter, liczb i symboli. Na przykład poniżej znajduje się fragment pliku tekstowego, który rejestruje aktywność pocztową różnych osób w zespole rozwijającym projekt otwartego oprogramowania:
+Plik tekstowy może być uważany za sekwencję linii, podobnie jak ciąg znaków w Pythonie może być uważany za sekwencję liter, liczb i symboli. Na przykład poniżej znajduje się fragment pliku tekstowego, który rejestruje aktywność mailową różnych osób w zespole rozwijającym projekt otwartego oprogramowania:
 
 ~~~~
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
@@ -79,7 +79,7 @@ a skrócona wersja pliku, pod adresem:
 
 <https://py4e.pl/code3/mbox-short.txt>
 
-Pliki te są w standardowym formacie pliku zawierającego wiele wiadomości pocztowych. Wiersze rozpoczynające się od "From " oddzielają wiadomości, a wiersze rozpoczynające się od "From:" są częścią wiadomości. Więcej informacji na temat formatu *mbox* można znaleźć na stronie <https://pl.wikipedia.org/wiki/Mbox>.
+Pliki te są w standardowym formacie pliku tekstowego, który zawiera wiele wiadomości e-mail. Wiersze rozpoczynające się od "From " oddzielają wiadomości, a wiersze rozpoczynające się od "From:" są częścią wiadomości. Więcej informacji na temat formatu Mbox można znaleźć na stronie <https://pl.wikipedia.org/wiki/Mbox>.
 
 Aby podzielić plik na linie, istnieje specjalny znak, który reprezentuje "koniec linii", zwany nomen omen znakiem *końca linii*.
 

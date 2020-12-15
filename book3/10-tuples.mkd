@@ -264,26 +264,20 @@ Słowniki i krotki
 \index{metoda!items}
 \index{para klucz-wartość}
 
-Słowniki posiadają metodę o nazwie `items()`, która zwraca listę krotek, gdzie każda krotka jest parą klucz-wartość:
+Słowniki posiadają metodę o nazwie `items()`, która zwraca zbiór krotek, gdzie każda krotka jest parą klucz-wartość. Domyślnie zwracany przez tę metodę obiekt jest typu `dict_items`, ale możemy go spokojnie zamienić na listę, dzięki czemu będziemy mieli dostęp do metod związanych z listami:
 
 ~~~~ {.python .trinket}
->>> d = {'a':10, 'b':1, 'c':22}
+>>> d = {'c': 22, 'a': 10, 'b': 1}
 >>> t = list(d.items())
 >>> print(t)
-[('b', 1), ('a', 10), ('c', 22)]
+[('c', 22), ('a', 10), ('b', 1)]
 ~~~~
-
-Jak mogłeś się spodziewać po słowniku, powyższe pary nie są w żadnej konkretnej kolejności.
 
 Ponieważ jednak lista krotek jest listą, a krotki są porównywalne, to możemy teraz posortować listę krotek. Konwertowanie słownika na listę krotek jest dla nas sposobem na wyciągnięcie zawartości słownika posortowanego po kluczach:
 
 ~~~~ {.python}
->>> d = {'a':10, 'b':1, 'c':22}
->>> t = list(d.items())
->>> t
-[('b', 1), ('a', 10), ('c', 22)]
 >>> t.sort()
->>> t
+>>> print(t)
 [('a', 10), ('b', 1), ('c', 22)]
 ~~~~
 
@@ -298,38 +292,37 @@ Wielokrotne przypisanie w słownikach
 Używając razem `items()`, przypisania krotki oraz `for`, możesz zobaczyć ciekawy schemat kodu do przechodzenia po kluczach i wartościach słownika w jednej pętli:
 
 ~~~~ {.python}
-for key, val in list(d.items()):
+d = {'c': 22, 'a': 10, 'b': 1}
+for key, val in d.items():
     print(val, key)
 ~~~~
 
-Powyższa pętla ma dwie *zmienne iteracyjne*, ponieważ `items()` zwraca listę krotek, a `key, val` jest przypisaniem krotki, które kolejno iteruje przez każdą z par klucz-wartość w słowniku.
+Powyższa pętla ma dwie *zmienne iteracyjne*, ponieważ `d.items()` zwraca zbiór krotek, a `key, val` jest przypisaniem krotki, które kolejno iteruje przez każdą z par klucz-wartość w słowniku.
 
-W każdej kolejnej iteracji pętli zarówno `key`, jak i `val` posuwają się naprzód do kolejnej pary klucz-wartość w słowniku (nadal w kolejności haszy).
+W każdej kolejnej iteracji pętli zarówno `key`, jak i `val` posuwają się naprzód do kolejnej pary klucz-wartość w słowniku.
 
 Wynik tej pętli jest następujący:
 
 ~~~~
-10 a
 22 c
+10 a
 1 b
 ~~~~
-
-I ponownie mamy tutaj kolejności kluczy po haszach (tzn. bez żadnej konkretnej kolejności).
 
 Jeżeli połączymy te dwie techniki, możemy wypisać zawartość słownika posortowaną po *wartościach* zapisanych w każdej parze klucz-wartość.
 
 Aby to zrobić, najpierw sporządzamy listę krotek, gdzie każda krotka to `(value, key)`. Metoda `items()` zwróci nam listę `(key, value)` krotek, ale tym razem chcemy sortować według wartości, a nie klucza. Po skonstruowaniu listy z parami klucz-wartość, możemy łatwo posortować listę w odwrotnej kolejności i wypisać nową, posortowaną listę.
 
 ~~~~ {.python}
->>> d = {'a':10, 'b':1, 'c':22}
->>> l = list()
->>> for key, val in d.items() :
-...     l.append( (val, key) )
+>>> d = {'a': 10, 'c': 22, 'b': 1}
+>>> t = list()
+>>> for key, val in d.items():
+...     t.append( (val, key) )
 ...
->>> l
+>>> t
 [(10, 'a'), (22, 'c'), (1, 'b')]
->>> l.sort(reverse=True)
->>> l
+>>> t.sort(reverse=True)
+>>> t
 [(22, 'c'), (10, 'a'), (1, 'b')]
 >>>
 ~~~~
@@ -493,9 +486,9 @@ struktura danych
 
 #### Ćwiczenie 1
 
-Przepisz swój poprzedni program zliczający wysłane wiadomości mailowe w następujący sposób: wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy mailowe. Za pomocą słownika zapisz liczbę wysłanych wiadomości od każdej osoby.
+Przepisz swój poprzedni program zliczający wysłane wiadomości mailowe w następujący sposób. Wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy mailowe. Za pomocą słownika dla każdej osoby zapisz liczbę wysłanych przez nią wiadomości.
 
-Po przeczytaniu wszystkich danych wypisz osobę, która wysłała najwięcej wiadomości, tworząc ze słownika listę krotek w postaci (liczba, adres e-mail). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej zmian.
+Po przeczytaniu wszystkich danych utwórz ze słownika listę krotek w postaci *(liczba, adres e-mail)*. Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która wysłała najwięcej wiadomości.
 
 Przykładowa linia:
 

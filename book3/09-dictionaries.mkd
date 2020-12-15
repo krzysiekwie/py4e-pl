@@ -44,26 +44,26 @@ Powyższa linia tworzy element, który mapuje klucz `'one'` do wartości `'uno'`
 {'one': 'uno'}
 ~~~~
 
-Widoczny powyżej format wyjściowy jest również formatem wejściowym. Na przykład możesz utworzyć nowy słownik z trzema elementami. Ale jeśli wypiszesz zawartość `eng2sp`, możesz być zaskoczony:
+Widoczny powyżej format wyjściowy jest również formatem wejściowym. Na przykład możesz utworzyć nowy słownik z trzema elementami:
 
 ~~~~ {.python}
 >>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
 >>> print(eng2sp)
-{'one': 'uno', 'three': 'tres', 'two': 'dos'}
+{'one': 'uno', 'two': 'dos', 'three': 'tres'}
 ~~~~
 
-Kolejność par klucz-wartość nie jest taka sama. W rzeczywistości, jeśli wpiszesz ten sam przykład na swoim komputerze, możesz uzyskać inny wynik. Ogólnie rzecz biorąc, kolejność pozycji w słowniku jest nieprzewidywalna.
+W Pythonie od wersji 3.6 kolejność par klucz-wartość jest zgodna kolejnością ich wstawienia do słownika (w poprzednich wersjach Pythona kolejność pozycji była nieprzewidywalna).
 
 \index{wyszukiwanie}
 
-Jednak nie jest to problem, ponieważ elementy słownika nigdy nie są indeksowane za pomocą liczb całkowitych. Zamiast tego używasz kluczy do szukania odpowiadających im wartości:
+Pomimo tej nowej własności, tradycyjnie do wyszukiwania elementów słownika używamy kluczy:
 
 ~~~~ {.python}
 >>> print(eng2sp['two'])
 'dos'
 ~~~~
 
-Klucz `'two'` zawsze mapuje się do wartości `'dos'`, więc kolejność elementów nie ma znaczenia.
+Klucz `'two'` zawsze mapuje się do wartości `'dos'`.
 
 Jeśli klucza nie ma w słowniku, otrzymasz wyjątek:
 
@@ -169,10 +169,10 @@ Pętla `for` przechodzi po ciągu znaków. Za każdym razem gdy przechodzimy prz
 Oto wynik programu:
 
 ~~~~
-{'a': 1, 'b': 1, 'o': 2, 'n': 1, 's': 2, 'r': 2, 'u': 2, 't': 1}
+{'b': 1, 'r': 2, 'o': 2, 'n': 1, 't': 1, 's': 2, 'a': 1, 'u': 2}
 ~~~~
 
-Histogram wskazuje, że litery "a" i "b" pojawiają się raz; "o" pojawia się dwa razy, i tak dalej.
+Histogram wskazuje, że np. litery "a" i "b" pojawiają się raz; "o" pojawia się dwa razy itd.
 
 \index{get, metoda}
 \index{metoda!get}
@@ -193,7 +193,7 @@ Możemy użyć `get()` do bardziej zwięzłego napisania naszej pętli z histogr
 word = 'brontosaurus'
 d = dict()
 for c in word:
-    d[c] = d.get(c,0) + 1
+    d[c] = d.get(c, 0) + 1
 print(d)
 ~~~~
 
@@ -233,16 +233,16 @@ Połączenie dwóch zagnieżdżonych pętli zapewnia, że będziemy zliczać ka�
 
 W naszej instrukcji `else` używamy zwięzłej alternatywy dla inkrementacji zmiennej. `counts[word] += 1` jest odpowiednikiem `counts[word] = counts[word] + 1`. Każdej z tych metod można użyć do zmiany wartości zmiennej o dowolną pożądaną wielkość. Podobne alternatywy istnieją dla `-=`, `*=` i `/=`.
 
-Kiedy uruchamiamy program, widzimy surowy zrzut wszystkich zliczeń w nieposortowanej kolejności tablicy haszującej. (Plik `romeo.txt` jest dostępny pod adresem <https://py4e.pl/code3/romeo.txt>).
+Kiedy uruchomimy program, zobaczymy surowy zrzut wszystkich zliczeń w tablicy haszującej w kolejności wstawiania nowych słów. Poniżej widzimy uruchomienie programu na pliku `romeo.txt`, który jest dostępny pod adresem <https://py4e.pl/code3/romeo.txt>.
 
 ~~~~
 Podaj nazwę pliku: romeo.txt
-{'and': 3, 'envious': 1, 'already': 1, 'fair': 1,
-'is': 3, 'through': 1, 'pale': 1, 'yonder': 1,
-'what': 1, 'sun': 2, 'Who': 1, 'But': 1, 'moon': 1,
-'window': 1, 'sick': 1, 'east': 1, 'breaks': 1,
-'grief': 1, 'with': 1, 'light': 1, 'It': 1, 'Arise': 1,
-'kill': 1, 'the': 3, 'soft': 1, 'Juliet': 1}
+{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 
+ 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 
+ 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 
+ 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 
+ 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 
+ 'grief': 1}
 ~~~~
 
 Trochę niewygodne jest przeglądanie słownika w celu znalezienia najczęściej używanych słów i ich wystąpień, więc musimy dodać trochę więcej kodu Pythona, tak aby uzyskać wynik, które będzie bardziej pomocny.
@@ -257,7 +257,7 @@ Pętle i słowniki
 Jeśli używasz słownika jako sekwencji w instrukcji `for`, pętla przechodzi wtedy przez klucze słownika. Poniższa pętla wyświetla każdy klucz i odpowiadającą mu wartość:
 
 ~~~~ {.python}
-counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100 }
 for key in counts:
     print(key, counts[key])
 ~~~~
@@ -265,19 +265,17 @@ for key in counts:
 Oto jak wygląda wynik działania programu:
 
 ~~~~
-jan 100
 chuck 1
 annie 42
+jan 100
 ~~~~
-
-Tak jak poprzednio, klucze nie są w żadnej konkretnej kolejności.
 
 \index{idiom}
 
 Możemy użyć tego schematu do zaimplementowania różnych idiomów pętli, które opisaliśmy wcześniej. Na przykład, jeśli chcielibyśmy znaleźć wszystkie wpisy w słowniku o wartości powyżej dziesięciu, moglibyśmy napisać następujący kod:
 
 ~~~~ {.python}
-counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100 }
 for key in counts:
     if counts[key] > 10 :
         print(key, counts[key])
@@ -286,8 +284,8 @@ for key in counts:
 Pętla `for` iteruje przez *klucze* słownika, więc dla każdego klucza musimy użyć operatora indeksu w celu pobrania odpowiadającej mu *wartości*. Poniżej mamy wynik działania programu:
 
 ~~~~
-jan 100
 annie 42
+jan 100
 ~~~~
 
 Widzimy teraz tylko te elementy, które mają wartość powyżej 10.
@@ -298,7 +296,7 @@ Widzimy teraz tylko te elementy, które mają wartość powyżej 10.
 Jeżeli chcesz wyświetlić klucze w porządku alfabetycznym, to – korzystając z metody `keys()` dostępnej w obiektach słownikowych – sporządzasz listę kluczy występujących w słowniku, a następnie sortujesz ją i przechodzisz w pętli po tej posortowanej liście, przeglądając każdy klucz i wyświetlając pary klucz-wartość w posortowanej kolejności, tak jak pokazano poniżej:
 
 ~~~~ {.python}
-counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100 }
 lst = list(counts.keys())
 print(lst)
 lst.sort()
@@ -309,7 +307,7 @@ for key in lst:
 Oto jak wygląda wynik programu:
 
 ~~~~
-['jan', 'chuck', 'annie']
+['chuck', 'annie', 'jan']
 annie 42
 chuck 1
 jan 100
@@ -335,13 +333,13 @@ Ponieważ funkcja `split()` szuka spacji i traktuje słowa jako tokeny oddzielon
 
 Również ze względu na to, że plik ma tekst pisany dużymi literami, traktowalibyśmy "who" i "Who" jako różne słowa o różnej liczności.
 
-Oba te problemy możemy rozwiązać za pomocą metod związanych z obiektami ciągów znaków: `lower()`, `punctuation()` i `translate()`. Metoda `translate()` jest najbardziej wyrafinowaną z tych metod. Oto dokumentacja dla tej metody:
+Oba te problemy możemy rozwiązać za pomocą metod związanych z obiektami ciągów znaków, tj. `lower()`, `maketrans()` i `translate()`. Metoda `translate()` jest najbardziej wyrafinowaną z tych metod. Oto dokumentacja dla tej metody:
 
 `line.translate(str.maketrans(fromstr, tostr, deletestr))`
 
 *Zmienia znaki w `fromstr` na znak na tej samej pozycji w `tostr` i usuwa wszystkie znaki, które są w `deletestr`. Znaki z `fromstr` i `tostr` mogą być pustymi ciągami znaków, a parametr `deletestr` może zostać pominięty.*
 
-Moduł `string` dostarcza gotowe sekwencje znaków, które reprezentują np. liczby lub litery. 
+Moduł `string` dostarcza gotowe sekwencje znaków, które reprezentują np. liczby lub litery. Przykładowo, w `string.digits` znajdziemy ciąg znaków zwierający liczby: 
 
 ~~~~ {.python}
 >>> import string
@@ -349,7 +347,7 @@ Moduł `string` dostarcza gotowe sekwencje znaków, które reprezentują np. lic
 '0123456789'
 ~~~~
 
-Metoda `maketrans()` z pustymi ciągami znaków `fromstr` i `tostr` utworzy nam słownik, w którym będziemy mieli informację o tym na co ma być zamieniony dany znak (a w zasadzie jego reprezentacja liczbowa). Możemy zauważyć, że za każdym razem chcemy dokonać zamiany na `None`, czyli usunąć dany znak:
+Metoda `maketrans()` z pustymi ciągami znaków `fromstr` i `tostr` utworzy nam słownik, w którym będziemy mieli informację o tym na co ma być zamieniony dany znak (a w zasadzie jego reprezentacja liczbowa). Możemy zauważyć, że za każdym razem chcemy dokonać zamiany na `None`, co oznacza, że chcemy usunąć dany znak:
 
 ~~~~ {.python}
 >>> str.maketrans('', '', string.digits)
@@ -375,15 +373,14 @@ Dokonujemy następujących zmian w naszym programie:
 
 Częścią uczenia się "Sztuki Pythona" lub "Myślenia po pythonowemu" jest uświadomienie sobie, że Python często ma wbudowane rozwiązania dla wielu prostych problemów związanych z analizą danych. Z czasem zobaczysz wystarczająco dużo kodu przykładowego i przeczytasz wystarczająco dużo dokumentacji, tak aby wiedzieć, gdzie szukać, by sprawdzić, czy ktoś już nie napisał czegoś, co znacznie ułatwi Ci pracę.
 
-Poniżej znajduje się skrócony wynik działania programu na pliku `romeo-full.txt`, który jest dostępny pod adresem <https://py4e.pl/code3/romeo-full.txt>:
+Poniżej znajduje się skrócony wynik działania programu na pliku `romeo-full.txt`, który jest dostępny pod adresem <https://py4e.pl/code3/romeo-full.txt>.
 
 ~~~~
 Podaj nazwę pliku: romeo-full.txt
-{'swearst': 1, 'all': 6, 'afeard': 1, 'leave': 2, 'these': 2,
-'kinsmen': 2, 'what': 11, 'thinkst': 1, 'love': 24, 'cloak': 1,
-a': 24, 'orchard': 2, 'light': 5, 'lovers': 2, 'romeo': 40,
-'maiden': 1, 'whiteupturned': 1, 'juliet': 32, 'gentleman': 1,
-'it': 22, 'leans': 1, 'canst': 1, 'having': 1, ...}
+{'romeo': 40, 'and': 42, 'juliet': 32, 'act': 1, '2': 2, 
+ 'scene': 2, 'ii': 1, 'capulets': 1, 'orchard': 2, 
+ 'enter': 1, 'he': 5, 'jests': 1, 'at': 9, 'scars': 1, 
+ 'that': 30, 'never': 2, 'felt': 1, 'a': 24, ...}
 ~~~~
 
 Przeglądanie powyższego wyniku nadal jest niewygodne i choć możemy użyć Pythona, by dał nam dokładnie to, czego chcemy, to żeby to zrobić, musimy najpierw poznać *krotki*. Wrócimy do tego przykładu w kolejnym rozdziale.
@@ -458,7 +455,7 @@ wyszukiwanie
 
 #### Ćwiczenie 2
 
-Napisz program, który skategoryzowałby każdą wiadomość pocztową według dni tygodnia. Aby to zrobić, poszukaj wierszy rozpoczynających się od "From", a następnie poszukaj trzeciego słowa i zachowaj bieżące zliczenia dla każdego dnia. Na koniec programu wyświetl zawartość swojego słownika (kolejność nie ma znaczenia).
+Napisz program, który skategoryzowałby każdą wiadomość mailową według dni tygodnia. Aby to zrobić, poszukaj wierszy rozpoczynających się od "From", a następnie poszukaj trzeciego słowa i zachowaj bieżące zliczenia dla każdego dnia. Na koniec programu wyświetl zawartość swojego słownika (kolejność nie ma znaczenia).
 
 Przykładowa linia:
 
@@ -475,21 +472,20 @@ Podaj nazwę pliku: mbox-short.txt
 
 #### Ćwiczenie 3
 
-Napisz program, który odczytuje dane z dziennika skrzynki pocztowej i tworzy histogram przy użyciu słownika, by zliczyć, ile wiadomości przyszło z każdego adresu e-mail, a na koniec wyświetla ten słownik.
+Napisz program, który odczytuje dane z pliku w formacie Mbox i przy pomocy słownika tworzy histogram. Chcemy zliczyć, ile wiadomości przyszło z każdego adresu e-mail. Jako wynik działania programu ma zostać wyświetlony utworzony słownik.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
-{'gopal.ramasammycook@gmail.com': 1, 'louis@media.berkeley.edu': 3,
-'cwen@iupui.edu': 5, 'antranig@caret.cam.ac.uk': 1,
-'rjlowe@iupui.edu': 2, 'gsilver@umich.edu': 3,
-'david.horwitz@uct.ac.za': 4, 'wagnermr@iupui.edu': 1,
-'zqian@umich.edu': 4, 'stephen.marquard@uct.ac.za': 2,
-'ray@media.berkeley.edu': 1}
+{'stephen.marquard@uct.ac.za': 2, 'louis@media.berkeley.edu': 3, 
+ 'zqian@umich.edu': 4, 'rjlowe@iupui.edu': 2, 'cwen@iupui.edu': 5, 
+ 'gsilver@umich.edu': 3, 'wagnermr@iupui.edu': 1, 
+ 'antranig@caret.cam.ac.uk': 1, 'gopal.ramasammycook@gmail.com': 1, 
+ 'david.horwitz@uct.ac.za': 4, 'ray@media.berkeley.edu': 1}
 ~~~~
 
 #### Ćwiczenie 4
 
-Do powyższego programu dodaj kod, tak by dowiedzieć się, kto wysłał najwięcej e-maili. Po przeczytaniu wszystkich danych i utworzeniu słownika, przeszukaj tej osoby za pomocą pętli wyszukującej największą wartość (patrz: rozdział 5, sekcja "Pętle typu maksimum i minimum"). Na koniec wyświetl informację dotyczącą adresu mailowego i liczbie wysłanych wiadomości.
+Do powyższego programu dodaj kod, tak by dowiedzieć się, kto wysłał najwięcej e-maili. Po przeczytaniu wszystkich danych i utworzeniu słownika, przeszukaj tej osoby za pomocą pętli wyszukującej największą wartość (patrz: rozdział 5, sekcja "Pętle typu maksimum i minimum"). Na koniec programu wyświetl informację dotyczącą adresu mailowego i liczbie wysłanych wiadomości.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
@@ -505,6 +501,6 @@ Napisz program zapamiętujący nazwę domeny, z której została wysłana wiadom
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
-{'media.berkeley.edu': 4, 'uct.ac.za': 6, 'umich.edu': 7,
-'gmail.com': 1, 'caret.cam.ac.uk': 1, 'iupui.edu': 8}
+{'uct.ac.za': 6, 'media.berkeley.edu': 4, 'umich.edu': 7, 
+ 'iupui.edu': 8, 'caret.cam.ac.uk': 1, 'gmail.com': 1}
 ~~~~
