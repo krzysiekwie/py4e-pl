@@ -164,8 +164,7 @@ Druga pętla przechodzi przez listę krotek i tworzy listę wyrazów według ich
 Wynik działania programu jest następujący:
 
 ~~~~
-['yonder', 'window', 'breaks', 'light', 'what',
-'soft', 'but', 'in']
+['yonder', 'window', 'breaks', 'light', 'what', 'soft', 'but', 'in']
 ~~~~
 
 Oczywiście linia ta, gdy zostanie przekształcona w listę Pythona i posortowana w porządku malejącym według długości słów, traci swój poetycki urok.
