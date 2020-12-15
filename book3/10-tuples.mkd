@@ -102,7 +102,7 @@ Ale jeśli spróbujesz zmodyfikować jeden z elementów krotki, to otrzymasz bł
 
 ~~~~ {.python}
 >>> t[0] = 'A'
-TypeError: object doesn't support item assignment
+TypeError: object doesn’t support item assignment
 ~~~~
 
 Nie możesz modyfikować elementów krotki, ale możesz zastąpić jedną krotkę inną krotką:
@@ -494,14 +494,19 @@ struktura danych
 
 #### Ćwiczenie 1
 
-Przepisz swój poprzedni program w następujący sposób: wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy. Policz liczbę wiadomości od każdej osoby za pomocą słownika.
+Przepisz swój poprzedni program zliczający wysłane wiadomości mailowe w następujący sposób: wczytaj i przetwórz linie zaczynające się od "From" oraz wyciągnij z nich adresy mailowe. Za pomocą słownika zapisz liczbę wysłanych wiadomości od każdej osoby.
 
-Po przeczytaniu wszystkich danych wypisz osobę, która zrobiła najwięcej zmian, tworząc ze słownika listę krotek (liczba, email). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej zmian.
+Po przeczytaniu wszystkich danych wypisz osobę, która wysłała najwięcej wiadomości, tworząc ze słownika listę krotek w postaci (liczba, adres e-mail). Następnie posortuj listę w odwrotnej kolejności i wypisz osobę, która zrobiła najwięcej zmian.
+
+Przykładowa linia:
 
 ~~~~
-Przykładowa linia:
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+~~~~
 
+Przykładowe uruchomienia:
+
+~~~~
 Podaj nazwę pliku: mbox-short.txt
 cwen@iupui.edu 5
 

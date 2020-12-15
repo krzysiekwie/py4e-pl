@@ -341,15 +341,30 @@ Oba te problemy możemy rozwiązać za pomocą metod związanych z obiektami ci�
 
 *Zmienia znaki w `fromstr` na znak na tej samej pozycji w `tostr` i usuwa wszystkie znaki, które są w `deletestr`. Znaki z `fromstr` i `tostr` mogą być pustymi ciągami znaków, a parametr `deletestr` może zostać pominięty.*
 
-Nie będziemy określać parametru `tostr`, ale użyjemy parametru `deletestr` do usunięcia wszystkich znaków interpunkcyjnych. Pozwolimy nawet Pythonowi wskazać nam listę znaków, które uważa za "interpunkcję":
+Moduł `string` dostarcza gotowe sekwencje znaków, które reprezentują np. liczby lub litery. 
 
 ~~~~ {.python}
 >>> import string
+>>> string.digits
+'0123456789'
+~~~~
+
+Metoda `maketrans()` z pustymi ciągami znaków `fromstr` i `tostr` utworzy nam słownik, w którym będziemy informację o tym na co ma być zamieniony dany znak (a w zasadzie jego reprezentacja liczbowa). Możemy zauważyć, że za każdym razem chcemy dokonać zamiany na `None`, czyli usunąć dany znak:
+
+~~~~ {.python}
+>>> str.maketrans('', '', string.digits)
+{48: None, 49: None, 50: None, 51: None, 52: None, 
+ 53: None, 54: None, 55: None, 56: None, 57: None}
+~~~~
+
+Taki utworzony słownik możemy potem wykorzystać w metodzie `translate()` do efektywnego usunięcia znaków.
+
+Wracając do naszego programu, nie będziemy określać parametru `fromstr` i `tostr` (będą pustymi ciągami znaków), ale użyjemy parametru `deletestr` do usunięcia wszystkich znaków interpunkcyjnych. Pozwolimy nawet Pythonowi wskazać nam sekwencję znaków, które uważa za "interpunkcję":
+
+~~~~ {.python}
 >>> string.punctuation
 '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 ~~~~
-
-Parametry używane przez `translate()` były inne w Pythonie 2.0.
 
 Dokonujemy następujących zmian w naszym programie:
 
@@ -360,7 +375,7 @@ Dokonujemy następujących zmian w naszym programie:
 
 Częścią uczenia się "Sztuki Pythona" lub "Myślenia po pythonowemu" jest uświadomienie sobie, że Python często ma wbudowane rozwiązania dla wielu prostych problemów związanych z analizą danych. Z czasem zobaczysz wystarczająco dużo kodu przykładowego i przeczytasz wystarczająco dużo dokumentacji, tak aby wiedzieć, gdzie szukać, by sprawdzić, czy ktoś już nie napisał czegoś, co znacznie ułatwi Ci pracę.
 
-Poniżej znajduje się skrócona wersja wyniku programu:
+Poniżej znajduje się skrócony wynik działania programu na pliku `romeo-full.txt`, który jest dostępny pod adresem <https://py4e.pl/code3/romeo.txt>:
 
 ~~~~
 Podaj nazwę pliku: romeo-full.txt
@@ -474,7 +489,7 @@ Podaj nazwę pliku: mbox-short.txt
 
 #### Ćwiczenie 4
 
-Do powyższego programu dodaj kod, tak by dowiedzieć się, kto otrzymał najwięcej e-maili. Po przeczytaniu wszystkich danych i utworzeniu słownika przeszukaj go za pomocą pętli wyszukującej największą wartość (patrz: Rozdział 5. Pętle typu maksimum i minimum), tak by dowiedzieć się, kto ma najwięcej wiadomości. Na koniec wyświetl informację o tym, ile wiadomości ma dana osoba.
+Do powyższego programu dodaj kod, tak by dowiedzieć się, kto wysłał najwięcej e-maili. Po przeczytaniu wszystkich danych i utworzeniu słownika, przeszukaj tej osoby za pomocą pętli wyszukującej największą wartość (patrz: rozdział 5, sekcja "Pętle typu maksimum i minimum"). Na koniec wyświetl informację dotyczącą adresu mailowego i liczbie wysłanych wiadomości.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
