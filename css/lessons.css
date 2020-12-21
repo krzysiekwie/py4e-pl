@@ -3,6 +3,7 @@
 .tsugi-lessons-module-videos {
     list-style:none;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .tsugi-lessons-module-videos::before {
@@ -27,6 +28,7 @@
 .tsugi-lessons-module-slides {
     list-style:none;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .tsugi-lessons-module-slides::before {
@@ -56,6 +58,7 @@
 .tsugi-lessons-module-references {
     list-style:none;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .tsugi-lessons-module-references::before {
@@ -77,6 +80,7 @@
 .tsugi-lessons-module-ltis {
     list-style:none;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .tsugi-lessons-module-ltis::before {

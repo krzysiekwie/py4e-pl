@@ -653,6 +653,10 @@
         {
             "title" : "Counting Word Frequency using a Dictionary",
             "youtube" : "lLbyEYjU55A"
+        },
+        {
+            "title" : "Fun: Sesame Street - The Count",
+            "youtube" : "EHJ9uYx5L58"
         }
     ],
     "references" : [
@@ -663,10 +667,6 @@
         {
             "title" : "Rozdział 9: Słowniki [PDF]",
             "href" : "https://py4e.pl/translations/PL/09-py4e-pl.pdf"
-        },
-        {
-            "title" : "Fun: Sesame Street - The Count",
-            "href" : "https://www.youtube.com/watch?v=EHJ9uYx5L58"
         }
     ],
     "lti" : [
@@ -805,14 +805,6 @@
         {
             "title" : "Rozdział 12: Programy sieciowe [PDF]",
             "href" : "https://py4e.pl/translations/PL/12-py4e-pl.pdf"
-        },
-        {
-            "title" : "ASCII Coding and Binary",
-            "href" : "https://www.youtube.com/watch?v=H4l42nbYmrU&t=308s"
-        },
-        {
-            "title" : "Characters, Symbols and the Unicode Miracle - Computerphile",
-            "href" : "https://www.youtube.com/watch?v=MijmeoH9LT4&t=385s"
         }
     ],
 
@@ -852,6 +844,14 @@
         {
             "title" : "Worked Example: BeautifulSoup",
             "youtube" : "mhaHWiSPxxE"
+        },
+        {
+            "title" : "ASCII Coding and Binary (from 5:08)",
+            "youtube" : "H4l42nbYmrU"
+        },
+        {
+            "title" : "Characters, Symbols and the Unicode Miracle - Computerphile (from 6:25)",
+            "youtube" : "MijmeoH9LT4"
         }
     ],
     "lti" : [
