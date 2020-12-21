@@ -104,6 +104,7 @@ $actual_url = dataUrl('known_by_'.$actual_names[0].'.html');
 ?>
 <p>
 <b>Przechodzenie po linkach</b>
+</p>
 <p>
 W poniższym zadaniu napiszesz program, który poszerza możliwości programu
 <a href="https://py4e.pl/code3/urllinks.py" target="_blank">https://py4e.pl/code3/urllinks.py</a>.
@@ -119,9 +120,11 @@ Odpowiedzią jest ostatnie imię, które odnalazłeś.
 <br/>
 Sekwencja imion:
 <?php
+    echo("<code>");
     foreach($sample_names as $name) {
         echo($name.' ');
     }
+    echo("</code>");
     echo("<br/>\n");
 ?>
 Ostatnie imię w sekwencji: <?= $sample_last ?><br/>
@@ -159,20 +162,18 @@ Pobieram: <?= dataUrl('known_by_Mhairade.html')."\n"; ?>
 Pobieram: <?= dataUrl('known_by_Butchi.html')."\n"; ?>
 Pobieram: <?= dataUrl('known_by_Anayah.html')."\n"; ?>
 </pre>
-Rozwiązaniem zadania jest "Anayah".
+Rozwiązaniem zadania jest <code>Anayah</code>.
 </p>
 <?php httpsWarning($sample_url); ?>
 <p><b>Rozwiązanie zadania</b>
 <form method="post">
 Umieść poniżej ostatnie pobrane imię oraz kod programu:<br/>
-Imię: <input type="text" size="20" name="name">
-(imię zaczyna się na literę <?= substr($actual_last,0,1) ?>)
-<input type="submit" value="Wyślij rozwiązanie"><br/>
+Imię (zaczyna się na literę <?= substr($actual_last,0,1) ?>): <input type="text" size="20" name="name"> <input style="margin-left: 10px;" type="submit" value="Wyślij rozwiązanie"><br/>
 <?php
 if ( $USER->instructor ) {
-    echo("<b>Wskazówki dla instruktora:</b> Jeśli chcesz sprawdzić kod kursanta, wprowadź '42,Viki' z imieniem od którego kursant ma rozpocząć działanie.<br/>");
+    echo("<b>Wskazówki dla instruktora:</b> Jeśli chcesz sprawdzić kod kursanta, wprowadź <code>42,Viki</code> z imieniem od którego kursant ma rozpocząć działanie.<br/>");
 }
 ?>
 Kod programu:<br/>
-<textarea rows="20" style="width: 90%" name="code"></textarea><br/>
+<textarea rows="20" style="width: 90%; font-family: monospace" name="code"></textarea><br/>
 </form>

@@ -108,5 +108,5 @@ Suma: <input type="text" size="20" name="sum">
 (kończy się cyframi <?= $sum%100 ?>)
 <input type="submit" value="Wyślij rozwiązanie"><br/>
 Kod Pythona:<br/>
-<textarea rows="20" style="width: 90%" name="code"></textarea><br/>
+<textarea rows="20" style="width: 90%; font-family: monospace" name="code"></textarea><br/>
 </form>

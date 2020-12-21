@@ -83,7 +83,10 @@ instructor:  <?= $code ?>
 
 
 -->
+<p>
 <b>Wyodrębnianie liczb z HTMLa przy użyciu BeautifulSoup</b>
+</p>
+<p>
 W poniższym zadaniu napiszesz program w Pythonie podobny do
 <a href="https://py4e.pl/code3/urllink2.py" target="_blank">https://py4e.pl/code3/urllink2.py</a>.
 
@@ -153,10 +156,10 @@ przez kursanta wartość, dzięki czemu przełączysz się na jego widok i zobac
 przesłany przez niego kod.
 </p>
 <p>
-Wprowadź 'code:0' aby powrócić do Twojego widoku.
+Wprowadź <code>code:0</code> aby powrócić do Twojego widoku.
 </p>
 <?php } ?>
 <input type="submit" value="Wyślij rozwiązanie"><br/>
 Kod programu:<br/>
-<textarea rows="20" style="width: 90%" name="code"></textarea><br/>
+<textarea rows="20" style="width: 90%; font-family: monospace" name="code"></textarea><br/>
 </form>

@@ -86,7 +86,7 @@ Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i wprowadź pon
 <p>
 Aplikacja będzie miała za zadanie odczytać dane dotyczące listy uczestników kursów
 zapisanej w pliku JSON, przeparsować plik, a następnie utworzyć
-bazę danych SQLite zawierającą tabele User, Course i Member uzupełnione odpowiednimi danymi.
+bazę danych SQLite zawierającą tabele <code>User</code>, <code>Course</code> i <code>Member</code> uzupełnione odpowiednimi danymi.
 </p>
 <p>
 Możesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu

@@ -68,6 +68,7 @@ if ( $dueDate->message ) {
 <p>
 <b>Używanie API GeoJSON</b>
 </p>
+<p>
 W poniższym zadaniu napiszesz program podobny do
 <a href="https://py4e.pl/code3/geojson.py" target="_blank">https://py4e.pl/code3/geojson.py</a>.
 Program będzie prosił o podanie lokalizacji, połączy się z usługą sieciową zawierającą dane Google Maps, 
@@ -102,7 +103,7 @@ wyniki korzystając z adresów API <code>geojson</code> i <code>json</code>, wi�
 <p><b>Dane testowe i przykładowe uruchomienie</b></p>
 <p>
 Możesz sprawdzić czy Twój program działa poprawnie podając lokalizację
- "<?= $sample_location ?>", której <code>place_id</code> wynosi "<?= $sample_place ?>".
+ "<?= $sample_location ?>", której <code>place_id</code> wynosi <code><?= $sample_place ?></code>.
 <pre>
 Podaj lokalizację: <?= $sample_location . "\n" ?>
 Pobieranie: http://...
@@ -119,7 +120,7 @@ Uruchom swój program aby uzyskać <code>place_id</code> dla poniższej lokaliza
 Upewnij się, że wprowadziłeś nazwę i wielkość liter dokładnie takie same jak powyżej.
 Umieść <code>place_id</code> i kod rozwiązania poniżej.<br>
 Wskazówka: Pierwsze siedem znaków <code>place_id</code>
-to "<?= substr($actual_place,0,7) ?> ..."<br/>
+to <code><?= substr($actual_place,0,7) ?>...</code><br/>
 </p>
 <p>
 Upewnij się, że pobierasz dane przy pomocy adresu URL podanego powyżej, a nie
@@ -127,8 +128,8 @@ przy pomocy zwykłego Google API. Twój program powinien działać również z p
 ale uzyskiwane <code>place_id</code> może być różne od tego, które jest wykorzystywane w tym zadaniu.
 </p>
 <form method="post">
-place_id: <input type="text" size="40" name="place_id">
+<code>place_id</code>: <input type="text" size="40" name="place_id">
 <input type="submit" value="Wyślij rozwiązanie"><br/>
 Kod programu:<br/>
-<textarea rows="20" style="width: 90%" name="code"></textarea><br/>
+<textarea rows="20" style="width: 90%; font-family: monospace" name="code"></textarea><br/>
 </form>
