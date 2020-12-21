@@ -98,37 +98,31 @@ Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i wprowadź pon
 <p>
 Jeśli nie masz jeszcze zainstalowanej aplikacji SQLite Browser, to możesz ją ściągnąć z
 <a href="https://sqlitebrowser.org/" target="_blank">
-https://sqlitebrowser.org/</a>.
+https://sqlitebrowser.org/</a>.</p>
 <p>
 Następnie utwórz bazę danych SQLite lub użyj jakiejś istniejącej bazy i utwórz
-w niej tabelę o nazwie "Ages":
-
-<pre>
-CREATE TABLE Ages
+w niej tabelę o nazwie <code>Ages</code>:
+</p>
+<pre class="sql"><code>CREATE TABLE Ages
 ( 
    name VARCHAR(128), 
    age  INTEGER
-);
-</pre>
+);</code></pre>
 <p>
 Następnie upewnij się, że tabela jest pusta, tj. usuń poprzednio wstawione
 wiersze, a następnie umieść w tabeli tylko i wyłącznie poniższe wiersze:
-<pre>
-<?php
+<pre class="sql"><code><?php
 echo("DELETE FROM Ages;\n");
 foreach($database as $row) {
    echo("INSERT INTO Ages (name, age) VALUES ('".$row[1]."', ".$row[2].");\n");
 }
-?>
-</pre>
+?></code></pre>
 Po wstawieniu do tabeli powyższych wierszy, uruchom poniższe polecenie SQL:
-<pre>
-SELECT hex(name || age) AS X 
+<pre class="sql">SELECT hex(name || age) AS X 
 FROM   Ages
-ORDER BY X;
-</pre>
+ORDER BY X;</code></pre>
 Znajdź <b>pierwszy</b> wynikowy wiersz i jako odpowiedź do zadania wprowadź ciąg
-znaków, który wygląda mniej więcej jak <b>53656C696E613333</b>.
+znaków, który wygląda mniej więcej jak <code>53656C696E613333</code>.
 </p>
 <p>
 <b>Uwaga:</b> Zadanie musi być wykonane przy użyciu SQLite. W szczególności powyższe polecenie

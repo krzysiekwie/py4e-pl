@@ -3,8 +3,8 @@
 $EXERCISES =
 Array(
 "hello" => Array (
-"qtext" => "Napisz program, który korzysta z funkcji <b>print()</b> by 
-wyświetlić 'witaj świecie', tak jak pokazano w sekcji 'Oczekiwany wynik'.",
+"qtext" => "Napisz program, który korzysta z funkcji <code>print()</code>, tak by 
+wyświetlić tekst <code>witaj świecie</code>, tak jak pokazano w sekcji <b>Oczekiwany wynik</b>.",
 "desired" => "witaj świecie",
 "code" => '# poniższy kod prawie działa
 prinq("witaj świecie")',
@@ -44,11 +44,11 @@ print("Howdy")',
 )),
 
 "2.3" => Array(
-"qtext" => "<b>2.3</b> Napisz program, który będzie prosił użytkownika o podanie
+"qtext" => "<b>2.3.</b> Napisz program, który będzie prosił użytkownika o podanie
 liczby godzin oraz stawkę za godzinę i używając danych wejściowych obliczy 
 stosowne wynagrodzenie. Do przetestowania programu wykorzystaj następujące 
 wartości: 35 godzin, 2.75 za godzinę (wynagrodzenie powinno wynosić 96.25). 
-Powinieneś użyć <b>input()</b> aby odczytać ciąg znaków oraz <b>float()</b> aby
+Powinieneś użyć <code>input()</code> aby odczytać ciąg znaków oraz <code>float()</code> aby
 przekonwertować go na liczbę. Nie musisz martwić się o sprawdzanie błędów lub 
 niepoprawne dane wprowadzane przez użytkownika.",
 "desired" => "Wynagrodzenie: 96.25",
@@ -66,7 +66,7 @@ hrs = input("Podaj liczbę godzin: ")',
 
 
 "3.1" => Array(
-"qtext" => "<b>3.1</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin. Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10.50 za godzinę (wynagrodzenie powinno wynosić 498.75). Powinieneś użyć <b>input()</b> aby odczytać wprowadzane dane oraz <b>float()</b>, aby przekonwertować wprowadzony ciąg znaków na liczbę. Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
+"qtext" => "<b>3.1.</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin. Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10.50 za godzinę (wynagrodzenie powinno wynosić 498.75). Powinieneś użyć <code>input()</code> (aby odczytać wprowadzane dane) oraz <code>float()</code> (aby przekonwertować wprowadzony ciąg znaków na liczbę). Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
 ",
 "desired" => "498.75",
 "desired2" => "Wynagrodzenie: 498.75",
@@ -82,14 +82,14 @@ h = float(hrs)',
 "!498" => "Musisz obliczyć wynagrodzenie.")),
 
 "3.3" => Array(
-"qtext" => "<b>3.3</b> Napisz program, który poprosi użytkownika o wartość pomiędzy 0.0 a 1.0. Jeśli wartość jest poza zakresem, wypisz komunikat o błędzie. Jeśli wartość jest między 0.0 a 1.0, wypisz ocenę, korzystając z poniższej tabeli:<br/>
-Wartość   Ocena<br/>
->= 0.9     5,0<br/>
->= 0.8     4,5<br/>
->= 0.7     4,0<br/>
->= 0.6     3,5<br/>
->= 0.5     3,0<br/>
- < 0.5     2,0<br/>
+"qtext" => "<b>3.3.</b> Napisz program, który poprosi użytkownika o wartość pomiędzy 0.0 a 1.0. Jeśli wartość jest poza zakresem, wypisz komunikat o błędzie. Jeśli wartość jest między 0.0 a 1.0, wypisz ocenę, korzystając z poniższej tabeli:
+<pre>Wartość   Ocena
+>= 0.9     5,0
+>= 0.8     4,5
+>= 0.7     4,0
+>= 0.6     3,5
+>= 0.5     3,0
+ < 0.5     2,0</pre>
 Jeśli użytkownik wprowadzi wartość spoza zakresu, wypisz odpowiedni komunikat o błędzie i zakończ działanie programu.
 Do przetestowania działania wprowadź wartość 0.75.
 ",
@@ -104,10 +104,10 @@ Do przetestowania działania wprowadź wartość 0.75.
 ),
 
 "4.6" => Array(
-"qtext" => "<b>4.6</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin.
-Umieść logikę obliczenia wynagrodzenia w funkcji o nazwie <b>computepay()</b>, a następnie użyj tej funkcji. Funkcja powinna zwrócić wartość.
-Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10.50 za godzinę (wynagrodzenie powinno wynosić 498.75). Powinieneś użyć <b>input()</b> aby odczytać wprowadzane dane oraz <b>float()</b>, aby przekonwertować wprowadzony ciąg znaków na liczbę. Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
-Nie nazywaj swojej zmiennej sum ani nie używaj funkcji sum().
+"qtext" => "<b>4.6.</b> Napisz program, który poprosi użytkownika o podanie liczby godzin oraz stawkę za godzinę pracy, a następnie używając danych wejściowych program obliczy wynagrodzenie. Zapłać normalną stawkę godzinową za maksymalnie 40 godzin i 1,5-krotność stawki godzinowej za wszystkie godziny przepracowane powyżej 40 godzin.
+Umieść logikę obliczenia wynagrodzenia w funkcji o nazwie <code>computepay()</code>, a następnie użyj tej funkcji. Funkcja powinna zwrócić wartość.
+Do przetestowania programu wykorzystaj dane wejściowe: 45 godzin, stawka 10.50 za godzinę (wynagrodzenie powinno wynosić 498.75). Powinieneś użyć <code>input()</code> (aby odczytać wprowadzane dane) oraz <code>float()</code> (aby przekonwertować wprowadzony ciąg znaków na liczbę). Nie przejmuj się sprawdzaniem błędów przy wprowadzaniu danych przez użytkownika - załóż, że użytkownik wpisuje liczby prawidłowo.
+Nie nazywaj swojej zmiennej sum ani nie używaj funkcji <code>sum()</code>.
 ",
 "desired" => "Wynagrodzenie: 498.75",
 "code" => 'def computepay(h,r):
@@ -131,7 +131,7 @@ print("Wynagrodzenie:", p)',
 ),
 
 "5.2" => Array(
-"qtext" => "<b>5.2</b> Napisz program, który odczytuje liczby całkowite tak długo, aż użytkownik wprowadzi \"gotowe\". Po wpisaniu \"gotowe\" wypisz największą i najmniejszą z wprowadzonych liczb. Jeśli użytkownik wprowadzi coś innego niż liczbę, obsłuż to przy pomocy try/catch, wypisz odpowiedni komunikat i zignoruj wprowadzoną wartość. Wprowadź 7, 2, bob, 10 i 4 i dopasuj swój wynik do oczekiwanego wyniku.
+"qtext" => "<b>5.2.</b> Napisz program, który odczytuje liczby całkowite tak długo, aż użytkownik wprowadzi <code>gotowe</code>. Po wpisaniu <code>gotowe</code> wypisz największą i najmniejszą z wprowadzonych liczb. Jeśli użytkownik wprowadzi coś innego niż liczbę, obsłuż to przy pomocy <code>try</code>/<code>catch</code>, wypisz odpowiedni komunikat i zignoruj wprowadzoną wartość. Wprowadź kolejno 7, 2, bob, 10 i 4 i dopasuj swój wynik do oczekiwanego wyniku.
 ",
 "desired" => "Nieprawidłowe wejście
 Największa: 10
@@ -158,7 +158,7 @@ print("Największa:", largest)',
 ),
 
 "6.5" => Array(
-"qtext" => "<b>6.5</b> Napisz kod wykorzystujący funkcję find() i wycinki ciągów znaków (patrz: sekcja 6.10. w książce), tak aby wyodrębnić liczbę znajdującą się na końcu poniższego wiersza. Przekonwertuj wyodrębnioną wartość na liczbę zmiennoprzecinkową i wypisz ją.",
+"qtext" => "<b>6.5.</b> Napisz kod wykorzystujący funkcję <code>find()</code> i wycinki ciągów znaków (patrz: sekcja \"Parsowanie ciągów znaków\" w rozdziale 6), tak aby wyodrębnić liczbę znajdującą się na końcu poniższego wiersza. Przekonwertuj wyodrębnioną wartość na liczbę zmiennoprzecinkową i wypisz ją.",
 "desired" => "0.8475",
 "code" => 'text = "X-DSPAM-Confidence: 0.8475"',
 "checks" => Array(
@@ -233,15 +233,15 @@ print(text.upper())
 ),
 
 "7.2" => Array(
-"qtext" => '<b>7.2</b> Napisz program proszący o podanie nazwy pliku, a następnie otwórz ten plik i przeszukaj go w celu znalezienia linii podobnych do poniższej:
+"qtext" => '<b>7.2.</b> Napisz program proszący o podanie nazwy pliku, a następnie otwórz ten plik i przeszukaj go w celu znalezienia linii podobnych do poniższej:
 <pre>
 X-DSPAM-Confidence: 0.8475
 </pre>
-Zliczaj te linie i wyodrębnij z nich wartości zmiennoprzecinkowe, oblicz średnią z tych wartości i wypisz ten wynik. W swoim rozwiązaniu nie używaj funkcji sum() ani zmiennej o nazwie sum.
+Zliczaj te linie i wyodrębnij z nich wartości zmiennoprzecinkowe, oblicz średnią z tych wartości i wypisz ten wynik. W swoim rozwiązaniu nie używaj funkcji <code>sum()</code> ani zmiennej o nazwie <code>sum</code>.
 <p>
 Plik testowy możesz pobrać z adresu
 <a href="https://py4e.pl/code3/mbox-short.txt" target="_blank">
-https://py4e.pl/code3/mbox-short.txt</a>. Podczas testowania swojego programu wpisz <b>mbox-short.txt</b> jako nazwę pliku.
+https://py4e.pl/code3/mbox-short.txt</a>. Podczas testowania swojego programu wpisz <code>mbox-short.txt</code> jako nazwę pliku.
 </p>',
 "desired" => "Średni poziom pewności spamu: 0.750718518519",
 "code" => '# Użyj mbox-short.txt jako nazwy pliku
@@ -274,7 +274,7 @@ print("Średni poziom pewności spamu:", tot/count)
 ),
 
 "8.4" => Array(
-"qtext" => '<b>8.4</b> Otwórz plik <b>romeo.txt</b> i odczytaj go wiersz po wierszu. Każdą linię podziel na listę słów, używając metody split(). Program powinien zbudować listę słów. Dla każdego słowa w każdym wierszu sprawdź, czy słowo jest już na liście, a jeśli nie, to dołącz je do listy. Po zakończeniu programu posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
+"qtext" => '<b>8.4.</b> Otwórz plik <code>romeo.txt</code> i odczytaj go wiersz po wierszu. Każdą linię podziel na listę słów, używając metody <code>split()</code>. Program powinien zbudować listę słów. Dla każdego słowa w każdym wierszu sprawdź, czy słowo jest już na liście, a jeśli nie, to dołącz je do listy. Po zakończeniu programu posortuj i wypisz wynikowe słowa w kolejności alfabetycznej.
 <p>
 Plik testowy możesz pobrać z adresu
 <a href="https://py4e.pl/code3/romeo.txt" target="_blank">
@@ -311,13 +311,13 @@ print(lst)
 ),
 
 "8.5" => Array(
-"qtext" => "<b>8.5</b> Otwórz plik <b>mbox-short.txt</b> i odczytaj go linia po linii. Gdy trafisz na linię zaczynającą się od 'From ', tak jak poniżej:
+"qtext" => "<b>8.5.</b> Otwórz plik <code>mbox-short.txt</code> i odczytaj go linia po linii. Gdy trafisz na linię zaczynającą się od <code>'From '</code>, tak jak poniżej:
 <pre>
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 </pre>
-to przeparsuj taką linię przy pomocy metody split() i wypisz drugi wyraz z tej linii (i.e. cały adres mailowy osoby, która wysłała wiadomość). Pod koniec działania programu wypisz liczbę wystąpień tego rodzaju linii.
+to przeparsuj taką linię przy pomocy metody <code>split()</code> i wypisz drugi wyraz z tej linii (t.j. cały adres mailowy osoby, która wysłała wiadomość). Pod koniec działania programu wypisz liczbę wystąpień tego rodzaju linii.
 <p>
-<b>Wskazówka:</b> upewnij się, że nie uwzględniasz linii, które zaczynają się od 'From:'.
+<b>Wskazówka:</b> upewnij się, że nie uwzględniasz linii, które zaczynają się od <code>'From:'</code>.
 </p>".
 '<p>
 Plik testowy możesz pobrać z adresu
@@ -380,7 +380,7 @@ print("Mamy", count, "linii w pliku, w których From jest pierwszym wyrazem")
 ),
 
 "9.4" => Array(
-"qtext" => "<b>9.4</b> Napisz program, który odczyta zawartość pliku <b>mbox-short.txt</b> i wskaże kto wysłał największą liczbę wiadomości e-mail. Program wyszukuje wiersze zaczynające się od 'From ' i wykorzystuje drugie wyrazy z tych wierszy jako osoby, które wysłały wiadomości. Program tworzy słownik, który odwzorowuje adres e-mail nadawcy na liczbę jego wystąpień w pliku. Po utworzeniu słownika, program przeczesuje słownik przy użyciu pętli typu maksymalnej w celu znalezieniu osoby, która wystąpiła najwięcej razy.",
+"qtext" => "<b>9.4.</b> Napisz program, który odczyta zawartość pliku <code>mbox-short.txt</code> i wskaże kto wysłał największą liczbę wiadomości e-mail. Program wyszukuje wiersze zaczynające się od <code>'From '</code> i wykorzystuje drugie wyrazy z tych wierszy jako osoby, które wysłały wiadomości. Program tworzy słownik, który odwzorowuje adres e-mail nadawcy na liczbę jego wystąpień w pliku. Po utworzeniu słownika, program przeczesuje słownik przy użyciu pętli typu maksymalnej w celu znalezieniu osoby, która wystąpiła najwięcej razy.",
 "desired" => "cwen@iupui.edu 5",
 "code" => 'name = input("Podaj nazwę pliku: ")
 if len(name) < 1 : name = "mbox-short.txt"
@@ -415,7 +415,7 @@ print(bigname, bigcount)
 ),
 
 "10.2" => Array(
-"qtext" => "<b>10.2</b> Napisz program, który odczytuje zawartość pliku <b>mbox-short.txt</b> i analizując każdą wiadomość zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z linii \"From \", odszukując ciąg znaków związany z czasem, a następnie dzieląc ten napis na części za pomocą znaku dwukropka. 
+"qtext" => "<b>10.2.</b> Napisz program, który odczytuje zawartość pliku <code>mbox-short.txt</code> i analizując każdą wiadomość zlicza rozkład godzin w ciągu dnia. Możesz wyciągnąć godzinę z linii <code>From </code>, odszukując ciąg znaków związany z czasem, a następnie dzieląc ten napis na części za pomocą znaku dwukropka. 
 <pre>
 From stephen.marquard@uct.ac.za Sat Jan  5 <b>09</b>:14:16 2008
 </pre>

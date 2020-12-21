@@ -62,7 +62,7 @@ if ( $dueDate->message ) {
 W poniższym zadaniu napiszesz program podobny do
 <a href="https://py4e.pl/code3/json2.py" target="_blank">https://py4e.pl/code3/json2.py</a>.
 
-Program będzie prosił o adres URL, odczytywał dane JSON z podanego adresu URL przy użyciu <b>urllib</b>, przeparsuje dane,
+Program będzie prosił o adres URL, odczytywał dane JSON z podanego adresu URL przy użyciu <code>urllib</code>, przeparsuje dane,
 wyodrębni liczbę komentarzy w danych JSONie oraz obliczy ich sumę.
 </p>
 <p>
@@ -79,8 +79,7 @@ Nie musisz zapisywać tych plików w swoim katalogu, ponieważ Twój program odc
 <b>Format danych</b>
 <p>
 Dane w formacie JSON składają się z wielu imion i liczb komentarzy, które wyglądają w następujący sposób:
-<pre>
-{
+<pre class="json"><code>{
   comments: [
     {
       name: "Matthias"
@@ -92,8 +91,7 @@ Dane w formacie JSON składają się z wielu imion i liczb komentarzy, które wy
     }
     ...
   ]
-}
-</pre>
+}</code></pre>
 <p>
 Przykładowy kod, który pokazuje jak przeparsować JSONa i wyodrębnić listę, dostępny jest w pliku <a href="http://www.py4e.com/code3/json2.py" target="_blank">json2.py</a>. Być może przyda się kod <a href="http://www.py4e.com/code3/geoxml.py" target="_blank">geoxml.py</a>, w którym możesz podejrzeć jak poprosić użytkownika o adres URL i w jaki sposób pobrać dane z podanego adresu URL.
 </p>

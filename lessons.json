@@ -282,7 +282,7 @@
     ],
     "lti" : [
         {
-            "title" : "Program: Ćwiczenie 2.3",
+            "title" : "Program: Ćwiczenie 2.3.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_02_03",
             "custom" : [
@@ -335,7 +335,7 @@
     ],
     "lti" : [ 
         {
-            "title" : "Program: Ćwiczenie 3.1",
+            "title" : "Program: Ćwiczenie 3.1.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_03_01",
             "custom" : [
@@ -346,7 +346,7 @@
             ]
         },
         {
-            "title" : "Program: Ćwiczenie 3.3",
+            "title" : "Program: Ćwiczenie 3.3.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_03_03",
             "custom" : [
@@ -395,7 +395,7 @@
     ],
     "lti" : [
         {
-            "title" : "Program: Ćwiczenie 4.6",
+            "title" : "Program: Ćwiczenie 4.6.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_04_06",
             "custom" : [
@@ -452,7 +452,7 @@
     ],
     "lti" : [
         {
-            "title" : "Program: Ćwiczenie 5.2",
+            "title" : "Program: Ćwiczenie 5.2.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_05_02",
             "custom" : [
@@ -501,7 +501,7 @@
     ],
     "lti" : [
         {
-            "title" : "Program: Ćwiczenie 6.5",
+            "title" : "Program: Ćwiczenie 6.5.",
             "resource_link_id": "pythonauto_06_05",
             "launch" : "tools/pythonauto/",
             "custom" : [
@@ -550,7 +550,7 @@
     ],
     "lti" : [
         {
-            "title" : "Program: Ćwiczenie 7.2",
+            "title" : "Program: Ćwiczenie 7.2.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_07_02",
             "custom" : [
@@ -603,7 +603,7 @@
     ],
     "lti" : [
         {
-            "title" : "Program: Ćwiczenie 8.4",
+            "title" : "Program: Ćwiczenie 8.4.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_08_04",
             "custom" : [
@@ -614,7 +614,7 @@
             ]
         },
         {
-            "title" : "Program: Ćwiczenie 8.5",
+            "title" : "Program: Ćwiczenie 8.5.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_08_05",
             "custom" : [
@@ -671,7 +671,7 @@
     ],
     "lti" : [
         {
-            "title" : "Program: Ćwiczenie 9.4",
+            "title" : "Program: Ćwiczenie 9.4.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_09_04",
             "custom" : [
@@ -721,7 +721,7 @@
     ],
     "lti" : [
         {
-            "title" : "Program: Ćwiczenie 10.2",
+            "title" : "Program: Ćwiczenie 10.2.",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_10_02",
             "custom" : [

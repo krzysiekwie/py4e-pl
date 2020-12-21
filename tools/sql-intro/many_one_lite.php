@@ -147,11 +147,11 @@ if ( $dueDate->message ) {
 <form name="myform" enctype="multipart/form-data" method="post" >
 Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i prześlij poniżej plik z bazą SQLite3: <br/>
 <input name="database" type="file"> 
-(Plik musi mieć rozszerzenie .sqlite)<br/>
+(Plik musi mieć rozszerzenie <code>.sqlite</code>)<br/>
 <input type="submit" value="Wyślij rozwiązanie">
 <p>
-Nie musisz eksportować ani konwertować bazy - po prostu wyślij utworzony przez Twój program plik <b>.sqlite</b>.
-Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <b>connect()</b>.
+Nie musisz eksportować ani konwertować bazy - po prostu wyślij utworzony przez Twój program plik <code>.sqlite</code>.
+Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <code>connect()</code>.
 </p>
 </form>
 </p>
@@ -159,8 +159,7 @@ Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <b>connec
 <p>
 Aplikacja będzie miała za zadanie odczytać wyeksportowany plik iTunes w formacie XML,
 a następnie będzie musiała utworzyć poprawnie znormalizowaną bazę danych o następującej strukturze:
-<pre>
-CREATE TABLE Artist
+<pre class="sql"><code>CREATE TABLE Artist
 (
     id   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name TEXT UNIQUE
@@ -188,8 +187,7 @@ CREATE TABLE Track
     len       INTEGER, 
     rating    INTEGER, 
     count     INTEGER
-);
-</pre>
+);</code></pre>
 </p>
 <p>
 Jeśli będziesz uruchamiać swój program kilka razy lub będziesz używać różnych plików wejściowych,
@@ -198,14 +196,13 @@ to pamiętaj aby za każdym razem wyczyścić swoją bazę danych.
 Możesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu zawartego w 
 <a href="https://py4e.pl/code3/tracks.zip" target="_blank">
 https://py4e.pl/code3/tracks.zip</a>.  
-Plik .zip zawiera również plik <b>Library.xml</b>, który jest używany do oceniania poprawności przesyłanych rozwiązań.
+Plik <code>.zip</code> zawiera również plik <code>Library.xml</code>, który jest używany do oceniania poprawności przesyłanych rozwiązań.
 Możesz wyeksportować swoje własne utwory z iTunes i utworzyć bazę, ale w celach
-zaliczeniowych tego zadania użyj pliku <b>Library.xml</b>, który jest w pliku .zip.
+zaliczeniowych tego zadania użyj pliku <code>Library.xml</code>, który jest w pliku </code>.zip</code>.
 </p>
 <p>
 Podczas oceny poprawności Twojego rozwiązania, na przesłanej przez Ciebie bazie danych zostanie wywołane poniższe zapytanie SQL, tak aby porównać otrzymane wyniki ze spodziewanymi wynikami:
-<pre>
-SELECT Track.title,
+<pre class="sql"><code>SELECT Track.title,
        Artist.name,
        Album.title,
        Genre.name 
@@ -213,18 +210,17 @@ FROM   Track JOIN Genre JOIN Album JOIN Artist
        ON Track.genre_id = Genre.ID 
           AND Track.album_id = Album.id 
           AND Album.artist_id = Artist.id
-ORDER BY Artist.name LIMIT 3;
-</pre>
+ORDER BY Artist.name LIMIT 3;</code></pre>
 Spodziewany wynik zapytania na Twojej bazie danych jest następujący (tutaj wyświetlamy to jako prostą tabelę HTML z nagłówkiem):
 <table border="2">
 <tr>
-<th>Track</th><th>Artist</th><th>Album</th><th>Genre</th>
+<th style="padding: 6px;">Track</th><th style="padding: 6px;">Artist</th><th style="padding: 6px;">Album</th><th style="padding: 6px;">Genre</th>
 </tr>
 <?php
 foreach($answer as $ans) {
     echo("<tr>");
     foreach($ans as $i => $txt ) {
-        echo("<td>".htmlentities($txt)."</td>");
+        echo("<td style='padding: 6px;'>".htmlentities($txt)."</td>");
     }
     echo("</tr>\n");
 }

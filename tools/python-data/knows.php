@@ -107,14 +107,14 @@ $actual_url = dataUrl('known_by_'.$actual_names[0].'.html');
 <p>
 W poniższym zadaniu napiszesz program, który poszerza możliwości programu
 <a href="https://py4e.pl/code3/urllinks.py" target="_blank">https://py4e.pl/code3/urllinks.py</a>.
-Program będzie używał modułu <b>urllib</b> do odczytania kodu HTML z poniższych plików, wyodrębni wartości "href" ze znaczników hiperłączy, przeskanuje dane w poszukiwaniu znacznika na określonej pozycji listy, przejdzie do kolejnej strony i powtórzy cały proces podaną liczbę razy, a na końcu wyświetli ostatnie znalezione imię.
+Program będzie używał modułu <code>urllib</code> do odczytania kodu HTML z poniższych plików, wyodrębni wartości <code>href</code> ze znaczników hiperłączy, przeskanuje dane w poszukiwaniu znacznika na określonej pozycji listy, przejdzie do kolejnej strony i powtórzy cały proces podaną liczbę razy, a na końcu wyświetli ostatnie znalezione imię.
 </p>
 <p>
 Dostępne są dwa pliki. Pierwszy z nich to przykładowy plik, dla którego podano również wynikowe imię, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
 <ul>
 <li> Dane przykładowe: Rozpocznij od
 <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a> <br/>
-Pierwsze imię znajduje się w adresie URL między "known_by_" a ".html". Pod wskazanym adresem URL znajdź na liście link na pozycji <b><?= $sample_pos+1 ?></b>. Przejdź dalej po tym linku. Powtórz cały proces <b><?= $sample_pages ?></b> razy. 
+Pierwsze imię znajduje się w adresie URL między <code>known_by_</code> a <code>.html</code>. Pod wskazanym adresem URL znajdź na liście link na pozycji <b><?= $sample_pos+1 ?></b>. Przejdź dalej po tym linku. Powtórz cały proces <b><?= $sample_pages ?></b> razy. 
 Odpowiedzią jest ostatnie imię, które odnalazłeś.
 <br/>
 Sekwencja imion:
@@ -127,7 +127,7 @@ Sekwencja imion:
 Ostatnie imię w sekwencji: <?= $sample_last ?><br/>
 </li>
 <li> Dane do zadania: Rozpocznij od <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a> <br/>
-Pierwsze imię znajduje się w adresie URL między "known_by_" a ".html". Pod wskazanym adresem URL znajdź na liście link na pozycji <b><?= $actual_pos+1 ?></b>. Przejdź dalej po tym linku. Powtórz cały proces <b><?= $actual_pages ?></b> razy.
+Pierwsze imię znajduje się w adresie URL między <code>known_by_</code> a <code>.html</code>. Pod wskazanym adresem URL znajdź na liście link na pozycji <b><?= $actual_pos+1 ?></b>. Przejdź dalej po tym linku. Powtórz cały proces <b><?= $actual_pages ?></b> razy.
 Odpowiedzią jest ostatnie imię, które odnalazłeś.<br/>
 Wskazówka: Pierwszą literą imienia z ostatniej strony do przetworzenia jest: <?= substr($actual_last,0,1) ?><br/>
 <?php

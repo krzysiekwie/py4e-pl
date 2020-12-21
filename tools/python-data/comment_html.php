@@ -87,7 +87,7 @@ instructor:  <?= $code ?>
 W poniższym zadaniu napiszesz program w Pythonie podobny do
 <a href="https://py4e.pl/code3/urllink2.py" target="_blank">https://py4e.pl/code3/urllink2.py</a>.
 
-Program będzie używał modułu <b>urllib</b> do odczytania HTMLa z plików umieszczonych poniżej, przeparsuje dane,
+Program będzie używał modułu <code>urllib</code> do odczytania HTMLa z plików umieszczonych poniżej, przeparsuje dane,
 wyodrębni liczby oraz obliczy ich sumę.
 </p>
 <p>
@@ -115,13 +115,12 @@ Plik jest tabelą składającą się imion i liczb komentarzy. Możesz zignorowa
 &lt;tr>&lt;td>Kenzie&lt;/td>&lt;td>&lt;span class="comments">88&lt;/span>&lt;/td>&lt;/tr>
 &lt;tr>&lt;td>Hubert&lt;/td>&lt;td>&lt;span class="comments">87&lt;/span>&lt;/td>&lt;/tr>
 </pre>
-Musisz znaleźć w pliku wszystkie tagi &lt;span&gt;, wyciągnąć z nich liczby i na końcu je zsumować.
+Musisz znaleźć w pliku wszystkie znaczniki <code>&lt;span&gt;</code>, wyciągnąć z nich liczby i na końcu je zsumować.
 <p>
 Spójrz na udostępniony
 <a href="http://py4e.pl/code3/urllink2.py" target="_blank">przykładowy kod</a>.
 Pokazuje on jak znaleźć wszystkie znaczniki danego typu, jak przejść w pętli po znacznikach i jak wyodrębnić z nich różne elementy.
-<pre>
-...
+<pre class="python"><code>...
 # Pobierz wszystkie znaczniki hiperłączy
 tags = soup('a')
 for tag in tags:
@@ -129,9 +128,8 @@ for tag in tags:
     print('TAG:', tag)
     print('URL:', tag.get('href', None))
     print('Contents:', tag.contents[0])
-    print('Attrs:', tag.attrs)
-</pre>
-Musisz dostosować kod w taki sposób, aby wyszukiwał znaczniki <b>span</b>, wyciągał z nich zawartość tekstową, którą przekonwertuje potem na liczby całkowite, a na końcu je wszystkie doda.
+    print('Attrs:', tag.attrs)</code></pre>
+Musisz dostosować kod w taki sposób, aby wyszukiwał znaczniki <code>&lt;span&gt;</code>, wyciągał z nich zawartość tekstową, którą przekonwertuje potem na liczby całkowite, a na końcu je wszystkie doda.
 </p>
 <p><b>Przykładowe uruchomienie</b>
 <p>
@@ -150,7 +148,7 @@ Suma: <input type="text" size="20" name="sum">
 <?php if ( $USER->instructor ) { ?>
 <p style="color:green">Jeśli chcesz przejść w tryb danego kursanta, to poproś 
 go o wyświetlenie kodu źródłowego tej strony i znalezienie w komentarzach 
-wartości "code". Następnie w polu dotyczącym sumy wprowadź "code:" i znalezioną
+wartości <code>code</code>. Następnie w polu dotyczącym sumy wprowadź <code>code:</code> i znalezioną
 przez kursanta wartość, dzięki czemu przełączysz się na jego widok i zobaczysz 
 przesłany przez niego kod.
 </p>

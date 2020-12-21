@@ -111,7 +111,7 @@ Liczby mogą pojawić się w dowolnym miejscu wiersza. W każdym wierszu liczby 
 </p>
 <b>Przetwarzanie danych</b>
 <p>
-Podstawowy szkic rozwiązania tego problemu to: odczytanie pliku, wyszukanie liczb całkowitych za pomocą funkcji <b>re.findall()</b> i wyrażenia regularnego <b>'[0-9]+'</b>, a następnie przekonwertowanie wyodrębnionych ciągów znaków na liczby całkowite i ich zsumowanie.
+Podstawowy szkic rozwiązania tego problemu to: odczytanie pliku, wyszukanie liczb całkowitych za pomocą funkcji <code>re.findall()</code> i wyrażenia regularnego <code>[0-9]+</code>, a następnie przekonwertowanie wyodrębnionych ciągów znaków na liczby całkowite i ich zsumowanie.
 </p>
 <p>
 <?php httpsWarning($sample_url); ?>
@@ -127,9 +127,7 @@ Kod programu:<br/>
 <b>Opcjonalnie: po prostu dla zabawy</b>
 <p>
 Istnieje wiele różnych sposobów rozwiązania tego problemu. Chociaż generalnie nie zalecamy pisania możliwie najbardziej zwartego kodu, dla niektórych osób może to być ciekawe ćwiczenie. Oto schemat dwuwierszowej wersji rozwiązania tego zadania, używająca listy składanej:
-<pre>
-import re
-print( sum( [ ****** *** * in **********('[0-9]+',**************************.read()) ] ) )
-</pre>
-Dopóki nie wykonasz zadania, nie trać zbyt dużo czasu na szukanie najkrótszego rozwiązania. Listy składane zostały omówione w rozdziale 10, a metoda <b>read()</b> została omówiona w rozdziale 7.
+<pre class="python"><code>import re
+print( sum( [ ****** *** * in **********('[0-9]+',**************************.read()) ] ) )</code></pre>
+Dopóki nie wykonasz zadania, nie trać zbyt dużo czasu na szukanie najkrótszego rozwiązania. Listy składane zostały omówione w rozdziale 10, a metoda <code>read()</code> została omówiona w rozdziale 7.
 </p>
