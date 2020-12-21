@@ -70,7 +70,7 @@ Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w
 <li> Dane przykładowe: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a>
 (Suma wynosi <?= $sum_sample ?>) </li>
 <li> Dane do zadania: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a>
-(Suma kończy się cyframi <?= $sum%100 ?>)<br/> </li>
+(Suma kończy się cyframi <?= sprintf('%02d', $sum%100); ?>)<br/> </li>
 </ul>
 Nie musisz zapisywać tych plików w swoim katalogu, ponieważ Twój program odczyta dane bezpośrednio z adresu URL.
 <b>Uwaga</b>: każdy kursant ma oddzielny plik danych do zadania, więc do analizy używaj tylko własnego pliku danych.
@@ -104,9 +104,8 @@ Suma: 2...
 <p><b>Rozwiązanie zadania</b></p>
 <form method="post">
 Wprowadź poniżej sumę z danych do zadania oraz kod Pythona:<br/>
-Suma: <input type="text" size="20" name="sum">
-(kończy się cyframi <?= $sum%100 ?>)
-<input type="submit" value="Wyślij rozwiązanie"><br/>
+Suma (kończy się cyframi <?= sprintf('%02d', $sum%100); ?>): <input type="text" size="20" name="sum">
+<input style="margin-left: 10px;" type="submit" value="Wyślij rozwiązanie"><br/>
 Kod Pythona:<br/>
 <textarea rows="20" style="width: 90%; font-family: monospace" name="code"></textarea><br/>
 </form>

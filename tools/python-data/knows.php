@@ -127,7 +127,7 @@ Sekwencja imion:
     echo("</code>");
     echo("<br/>\n");
 ?>
-Ostatnie imię w sekwencji: <?= $sample_last ?><br/>
+Ostatnie imię w sekwencji: <code><?= $sample_last ?></code><br/>
 </li>
 <li> Dane do zadania: Rozpocznij od <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a> <br/>
 Pierwsze imię znajduje się w adresie URL między <code>known_by_</code> a <code>.html</code>. Pod wskazanym adresem URL znajdź na liście link na pozycji <b><?= $actual_pos+1 ?></b>. Przejdź dalej po tym linku. Powtórz cały proces <b><?= $actual_pages ?></b> razy.
