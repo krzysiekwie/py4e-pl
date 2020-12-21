@@ -42,3 +42,4 @@ sed -i 's~{{text}}~{{{text}}}~g' templates.php
 sed -i 's~<p><input type="checkbox"~<p style="margin-left: 18px;"><input style="margin-left: -18px;" type="checkbox"~' templates.php
 sed -i 's~<p><input type="radio"~<p style="margin-left: 18px;"><input style="margin-left: -18px;" type="radio"~' templates.php
 sed -i 's~<input type="radio"~<input style="margin-left: -18px;" type="radio"~' templates.php
+sed -i 's~<li>~<li style="border-bottom: 1px solid #cccbcb;margin-bottom: 10px;">~' templates.php
