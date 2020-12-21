@@ -123,7 +123,7 @@ print("Wynagrodzenie:", p)',
 "!10.5" => "Musisz poprosić użytkownika o wprowadzenie danych.",
 "if" => "Powinieneś użyć instrukcji if, tak aby zdecydować czy wykonać obliczenia dotyczące godzin nadliczbowych.",
 "float" => "Powinieneś użyć funkcji wbudowanej float() aby przekonwertować ciąg znaków na liczbę zmiennoprzecinkową.",
-"def" => "Musisz użyć funkcji o nazwie computepay do wykonania obliczeń.",
+"def" => "Musisz użyć funkcji o nazwie computepay() do wykonania obliczeń.",
 "!sum(" => "Nie nazywaj swojej zmiennej sum ani nie używaj funkcji sum().",
 "return" => "Musisz użyć instrukcji return, tak aby przekazać obliczone wynagrodzenie do głównego kodu.",
 "computepay" => "Musisz użyć funkcji o nazwie computepay do wykonania obliczeń.",
@@ -131,8 +131,14 @@ print("Wynagrodzenie:", p)',
 ),
 
 "5.2" => Array(
-"qtext" => "<b>5.2.</b> Napisz program, który odczytuje liczby całkowite tak długo, aż użytkownik wprowadzi <code>gotowe</code>. Po wpisaniu <code>gotowe</code> wypisz największą i najmniejszą z wprowadzonych liczb. Jeśli użytkownik wprowadzi coś innego niż liczbę, obsłuż to przy pomocy <code>try</code>/<code>catch</code>, wypisz odpowiedni komunikat i zignoruj wprowadzoną wartość. Wprowadź kolejno 7, 2, bob, 10 i 4 i dopasuj swój wynik do oczekiwanego wyniku.
-",
+"qtext" => "<b>5.2.</b> Napisz program, który odczytuje liczby całkowite tak długo, aż użytkownik wprowadzi <code>gotowe</code>. Po wpisaniu <code>gotowe</code> wypisz największą i najmniejszą z wprowadzonych liczb. Jeśli użytkownik wprowadzi coś innego niż liczbę, obsłuż to przy pomocy <code>try</code>/<code>catch</code>, wypisz odpowiedni komunikat i zignoruj wprowadzoną wartość. Podczas uruchomienia wprowadź kolejno:
+<pre>7
+2
+bob
+10
+4
+gotowe</pre>
+Dopasuj swój wynik do oczekiwanego wyniku.",
 "desired" => "Nieprawidłowe wejście
 Największa: 10
 Najmniejsza: 2",
