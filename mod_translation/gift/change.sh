@@ -26,3 +26,5 @@ while read line; do
     fi
     mv index.php.tmp index.php
 done < index.php.sed
+
+sed -i "s~\$('#quiz').append(template(question));~\$('#quiz').append(template(question));\ndocument.querySelectorAll('pre code').forEach((block) => { hljs.highlightBlock(block); });~" index.php
