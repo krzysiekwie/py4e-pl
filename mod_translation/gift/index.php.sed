@@ -17,5 +17,3 @@ Your current grade on this assignment is:;Twój aktualny wynik za to zadanie to:
 'Edit Quiz';'Edytuj quiz'
 'The number of tries allowed for this quiz.  Leave blank or set to 1 for a single try.';'Liczba dozwolonych podejść do tego quizu. Aby umożliwić tylko jedno podejście, pozostaw puste pole lub wpisz 1.'
 'The number of seconds between retries.  Leave blank or set to zero to allow immediate retries.';'Liczba sekund pomiędzy kolejnym podejście do quizu. Aby od razu można było ponownie podejść do quizu, pozostaw puste pole lub wpisz 0.'
-<form method="post">;<form method="post" style="margin-bottom: 20px;">
-<input type="submit";<input type="submit" class="btn btn-default" style="margin-left: 15px;"

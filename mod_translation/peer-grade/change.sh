@@ -31,6 +31,8 @@ while read line; do
     mv index.php.tmp index.php
 done < index.php.sed
 
+sed -i 's~<div style="border: 1px solid black">~<div>~' index.php
+
 cp peer_util.php.orig peer_util.php
 
 while read line; do

@@ -27,4 +27,7 @@ while read line; do
     mv index.php.tmp index.php
 done < index.php.sed
 
+sed -i 's~<form method="post">~<form method="post" style="margin-bottom: 20px;">~' index.php
+sed -i 's~<input type="submit"~<input type="submit" class="btn btn-default" style="margin-left: 15px;"~' index.php
+
 sed -i "s~\$('#quiz').append(template(question));~\$('#quiz').append(template(question));\ndocument.querySelectorAll('pre code').forEach((block) => { hljs.highlightBlock(block); });~" index.php
