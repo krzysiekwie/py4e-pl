@@ -2,10 +2,11 @@
      
 .tsugi-lessons-module-videos {
     list-style:none;
+    margin-top: 10px;
 }
 
 .tsugi-lessons-module-videos::before {
-    background-image: url('icons/videos.png');
+    background-image: url('icons/n_videos.png');
     background-size: 2em 2em;
     display: inline-block;
     width: 2em;
@@ -25,10 +26,11 @@
 
 .tsugi-lessons-module-slides {
     list-style:none;
+    margin-top: 10px;
 }
 
 .tsugi-lessons-module-slides::before {
-    background-image: url('icons/slides.png');
+    background-image: url('icons/n_slides.png');
     background-size: 2em 2em;
     display: inline-block;
     width: 2em;
@@ -53,10 +55,11 @@
 
 .tsugi-lessons-module-references {
     list-style:none;
+    margin-top: 10px;
 }
 
 .tsugi-lessons-module-references::before {
-    background-image: url('icons/references.png');
+    background-image: url('icons/n_references.png');
     background-size: 2em 2em;
     display: inline-block;
     width: 2em;
@@ -69,6 +72,22 @@
 .tsugi-lessons-module-reference a::before{
         font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f15c";
         padding-right: 3px;
+}
+
+.tsugi-lessons-module-ltis {
+    list-style:none;
+    margin-top: 10px;
+}
+
+.tsugi-lessons-module-ltis::before {
+    background-image: url('icons/n_ltis.png');
+    background-size: 2em 2em;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    content:"";
+    margin-right: 3px;
+    vertical-align: middle;
 }
 
 .tsugi-lessons-module-lti {
