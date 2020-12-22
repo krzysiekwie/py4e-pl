@@ -51,36 +51,36 @@
 </p>
 <h3 id="sklep-microsoft">Sklep Microsoft</h3>
 <p>Na pasku zadań klikamy na ikonę Windowsa:</p>
-<p><img src="screenshots/windows/store-start.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-start.png" /></p>
 <p>Po kliknięciu pojawi się lista programów dostępna w Menu Start:</p>
-<p><img src="screenshots/windows/store-menu.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-menu.png" /></p>
 <p>
     Wpisujemy <code>Microsoft Store</code>. Nie trzeba nigdzie klikać aby wybrać miejsce do wpisywania – zobaczymy, że po podaniu pierwszej litery automatycznie pojawi się nowe okno i będziemy wprowadzali tekst w jego dolnej części. Gdy
     pojawi się aplikacja <code>Microsoft Store</code>, to na nią klikamy aby ją uruchomić:
 </p>
-<p><img src="screenshots/windows/store-launch.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-launch.png" /></p>
 <p>
     Po uruchomieniu aplikacji, wyszukujemy w Sklepie aplikacje po słowie <code>python</code>. Możemy poczekać aż pojawi się krótka lista dostępnych aplikacji lub możemy zatwierdzić klawiszem <code>&lt;Enter&gt;</code> nasze wyszukiwanie. W
     obu przypadkach wybieramy najnowszego Pythona (w momencie tworzenia tej strony najnowszą wersją był Python 3.9, jednak bardzo możliwe, że teraz jest już dostępna nowsza wersja i taką też należałoby zainstalować):
 </p>
-<p><img src="screenshots/windows/store-search-1.png" /></p>
-<p><img src="screenshots/windows/store-search-2.png" /></p>
-<p><img src="screenshots/windows/store-search-3.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-search-1.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-search-2.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-search-3.png" /></p>
 <p>Po wyświetleniu się strony informacyjnej, klikamy na przycisk <code>Pobierz</code>:</p>
-<p><img src="screenshots/windows/store-download.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-download.png" /></p>
 <p><em>Uwaga</em>: jeżeli pojawi nam się okno z prośbą o zalogowanie, to możemy je zamknąć.</p>
 <p>Czekamy na pobranie i zainstalowanie plików:</p>
-<p><img src="screenshots/windows/store-install.png" /></p>
-<p><img src="screenshots/windows/store-installed.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-install.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-installed.png" /></p>
 <p>Następnie zamykamy aplikację <code>Microsoft Store</code>:</p>
-<p><img src="screenshots/windows/store-close.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/store-close.png" /></p>
 <h3 id="strona-python.org">Strona python.org</h3>
 <p>
     Jeżeli nie możemy zainstalować Pythona przez Sklep Microsoftu, to możemy alternatywnie pobrać plik instalatora ze strony internetowej projektu Python. Wchodzimy na stronę
     <a href="https://www.python.org" class="uri">https://www.python.org</a> i w menu <code>Downloads</code> klikamy na przycisk w sekcji <code>Download for Windows</code> (w momencie tworzenia tej strony najnowszą wersją był Python 3.9.1,
     jednak bardzo możliwe, że teraz jest już dostępna nowsza wersja i taką też należałoby zainstalować):
 </p>
-<p><img src="screenshots/windows/website-download.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/website-download.png" /></p>
 <p>
     <strong>Uwaga</strong>: jeżeli zamierzamy pracować na systemach wcześniejszych niż Windows 10 (np. Windows 7 lub Windows XP), to należy pobrać odpowiedni instalator ze strony
     <a href="https://www.python.org/downloads/windows/" class="uri">https://www.python.org/downloads/windows/</a>. Najnowsze wydania Pythona 3 nie obsługują starszych wersji systemu Windows, dlatego też konieczny jest wybór ostatniej wersji
@@ -88,80 +88,80 @@
     na systemie Windows XP (w obu przypadkach na dole stron są linki do instalatorów, które posiadają w nazwie słowa "Windows" oraz "installer"). Poszczególne kroki instalacji mogą się różnić od tych opisanych poniżej.
 </p>
 <p>Po pobraniu pliku uruchamiamy instalator Pythona:</p>
-<p><img src="screenshots/windows/website-installer.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/website-installer.png" /></p>
 <p>W nowym oknie instalatora Pythona:</p>
 <ol type="1">
     <li>zaznaczamy opcję <code>☑ Add Python 3.9 to PATH</code>,</li>
     <li>wybieramy <code>Customize installation</code>.</li>
 </ol>
-<p><img src="screenshots/windows/wizard-1.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/wizard-1.png" /></p>
 <p>
     Jeżeli nie chcemy instalować Pythona dla wszystkich użytkowników naszego komputera albo nie posiadamy praw administratora systemu, to w kolejnym oknie odznaczamy opcję <code>☐ for all users (requires elevation)</code>. Następnie klikamy
     na <code>Next</code>:
 </p>
-<p><img src="screenshots/windows/wizard-2.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/wizard-2.png" /></p>
 <p>W kolejnym oknie klikamy na <code>Install</code>:</p>
-<p><img src="screenshots/windows/wizard-3.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/wizard-3.png" /></p>
 <p>Czekamy na zakończenie procesu instalacji Pythona:</p>
-<p><img src="screenshots/windows/wizard-4.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/wizard-4.png" /></p>
 <p>
     Po instalacji, w ostatnim oknie mamy jeszcze możliwość wyłączenia limitu długości ścieżki plików i katalogów. Z punktu widzenia uruchamiania skryptów Pythona jest to dla nas przydatna opcja, więc jeśli mamy uprawnienia administratora,
     to klikamy na <code>Disable path length limit</code>. Następnie klikamy na <code>Close</code>.
 </p>
-<p><img src="screenshots/windows/wizard-5.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/wizard-5.png" /></p>
 <h2 id="instalacja-edytora-tekstu-atom">Instalacja edytora tekstu Atom</h2>
 <p>
     Nasze skrypty Pythona będziemy tworzyli w edytorze tekstowym. Zasadniczo może być to dowolny edytor tekstowy lub nawet zintegrowane środowisko programistyczne (IDE). Jest wiele dostępnych opcji, natomiast do początkowej nauki wystarczy
     nam edytor Atom (instalacja nie wymaga praw administratora).
 </p>
 <p>Wchodzimy na stronę <a href="https://atom.io" class="uri">https://atom.io</a> i pobieramy instalator:</p>
-<p><img src="screenshots/windows/atom-download.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-download.png" /></p>
 <p>Po pobraniu pliku uruchamiamy instalator Atoma:</p>
-<p><img src="screenshots/windows/atom-installer.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-installer.png" /></p>
 <p>Proces instalacji odbywa się automatycznie, nie wymaga od nas żadnej interakcji:</p>
-<p><img src="screenshots/windows/atom-installing.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-installing.png" /></p>
 <p>Po zakończonej instalacji Atom automatycznie się uruchomi. Na początku skonfigurujemy kilka podstawowych opcji. W pierwszym oknie możemy zaznaczyć, że Atom ma domyślne otwierać linki zaczynające się od <code>atom://</code>:</p>
-<p><img src="screenshots/windows/atom-config-uri.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-config-uri.png" /></p>
 <p>W głównej części programu kolejno:</p>
 <ol type="1">
     <li>odznaczamy <code>☐ Show Welcome Guide when opening Atom</code>,</li>
     <li>zamykamy kartę <code>Welcome</code>,</li>
     <li>zamykamy kartę <code>Welcome Guide</code>.</li>
 </ol>
-<p><img src="screenshots/windows/atom-config-welcome.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-config-welcome.png" /></p>
 <p>Następnie wyłączamy telemetrię:</p>
-<p><img src="screenshots/windows/atom-config-telemetry.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-config-telemetry.png" /></p>
 <p>
     Teraz możemy ustawić katalog, w którym będą znajdowały się nasze skrypty. Np. na Pulpicie możemy utworzyć katalog <code>skrypty</code>, a następnie w Atomie klikamy na <code>Add folders</code> i wybieramy utworzony przed chwilą katalog:
 </p>
-<p><img src="screenshots/windows/atom-config-add-folder.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-config-add-folder.png" /></p>
 <p>Po ustawieniu katalogu możemy zaważyć, że wyświetlił się od w pasku tytułowym aplikacji oraz w lewym menu:</p>
-<p><img src="screenshots/windows/atom-folder.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-folder.png" /></p>
 <h3 id="prosty-skrypt-pythona">Prosty skrypt Pythona</h3>
 <p>Utworzymy teraz nasz pierwszy skrypt. Wybieramy w menu <code>File &gt; New File</code>:</p>
-<p><img src="screenshots/windows/atom-new-file.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-new-file.png" /></p>
 <p>W głównej części ekranu pojawi się miejsce na wpisanie kodu skryptu. Utwórzmy najprostszy skrypt o treści <code>print(123)</code>:</p>
-<p><img src="screenshots/windows/atom-code-added.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-code-added.png" /></p>
 <p>Zapiszmy teraz nasz skrypt. Wybieramy w menu <code>File &gt; Save</code>:</p>
-<p><img src="screenshots/windows/atom-save-file.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-save-file.png" /></p>
 <p>Skrypty Pythona mają rozszerzenie <code>.py</code>, zatem zapiszemy skrypt jako plik <code>hello.py</code>. Zauważmy, że nasz skrypt zostanie automatycznie zapisany w utworzonym przez nas katalogu:</p>
-<p><img src="screenshots/windows/atom-hello.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-hello.png" /></p>
 <p>
     Po zapisaniu skryptu, w lewym menu pojawi się nasz plik, a w głównej części ekranu karta zmieni tytuł na podaną przez nas nazwę pliku. Co więcej, dzięki temu, że zapisaliśmy plik jako skrypt Pythona, Atom może zastosować kolorowanie
     składni kodu, dzięki czemu kod staje się czytelniejszy:
 </p>
-<p><img src="screenshots/windows/atom-file-saved.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-file-saved.png" /></p>
 <p>Jeżeli będziemy chcieli uruchomić później edytor Atom, to możemy go uruchomić przez Menu Start lub przez skrót na Pulpicie, który utworzył instalator programu:</p>
-<p><img src="screenshots/windows/atom-run.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/atom-run.png" /></p>
 <h2 id="włączenie-wyświetlania-rozszerzeń-plików">Włączenie wyświetlania rozszerzeń plików</h2>
 <p>Otwórzmy w systemowym Eksploratorze plików katalog, w którym znajduje się nasz skrypt <code>hello.py</code>.</p>
-<p><img src="screenshots/windows/explorer-1.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/explorer-1.png" /></p>
 <p>
     Domyślnie Windows nie wyświetla rozszerzeń plików, przez co rozpoznanie plików o tej samej nazwie, ale o różnych rozszerzeniach, może być kłopotliwe. Ponadto zmiana rozszerzenia istniejącego już pliku nie jest taka oczywista
     (teoretycznie moglibyśmy mieć taką potrzebę gdybyśmy popełnili literówkę w nazwie rozszerzenia skryptu Pythona, przez co Atom nie byłby w stanie poprawnie rozpoznać pliku).
 </p>
 <p>W Eksploratorze wybieramy kartę <code>Widok</code>, a następnie zaznaczamy <code>☑ Rozszerzenia nazw plików</code>. Teraz zauważymy, że wyświetlana jest już pełna nazwa pliku <code>hello.py</code>:</p>
-<p><img src="screenshots/windows/explorer-2.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/explorer-2.png" /></p>
 <h2 id="wiersz-poleceń">Wiersz poleceń</h2>
 <p>
     Będziemy uruchamiali Pythona poprzez klasyczny wiersz poleceń dostępny w systemie Windows. Mogą pojawić się wątpliwości czy nie lepiej byłoby uruchamiać Pythona bezpośrednio z Menu Start albo poprzez podwójne kliknięcie na skrypcie z
@@ -181,17 +181,17 @@
 </ol>
 <h3 id="uruchomienie-wiersza-poleceń">Uruchomienie wiersza poleceń</h3>
 <p>Na pasku zadań klikamy na ikonę Windowsa:</p>
-<p><img src="screenshots/windows/cmd-start.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/cmd-start.png" /></p>
 <p>Po kliknięciu pojawi się lista programów dostępna w Menu Start:</p>
-<p><img src="screenshots/windows/cmd-menu.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/cmd-menu.png" /></p>
 <p>
     Wpisujemy <code>Wiersz polecenia</code> (ew. jeśli działamy na angielskiej wersji systemu, to wpisujemy <code>Command prompt</code>). Nie trzeba nigdzie klikać aby wybrać miejsce do wpisywania – zobaczymy, że po podaniu pierwszej litery
     automatycznie pojawi się nowe okno i będziemy wprowadzali tekst w jego dolnej części. Gdy pojawi się aplikacja <code>Wiersz polecenia</code>, to na nią klikamy aby ją uruchomić:
 </p>
-<p><img src="screenshots/windows/cmd-launch.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/cmd-launch.png" /></p>
 <p><em>Uwaga</em>: innym sposobem na uruchomienie wiersza poleceń jest wciśnięcie klawiszy <code>&lt;Windows+R&gt;</code>, wpisanie w nowym oknie <code>cmd.exe</code> i wybranie <code>OK</code>.</p>
 <p>Po uruchomieniu zobaczymy czarne okno programu wiersza poleceń, które będzie zawierało komunikat podobny do <code>C:\Users\nazwa_użytkownika&gt;</code> lub <code>C:\Windows\System32&gt;</code>:</p>
-<p><img src="screenshots/windows/cmd-opened.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/cmd-opened.png" /></p>
 <h4 id="ustawienie-katalogu-roboczego">Ustawienie katalogu roboczego</h4>
 <p>Tak jak w Eksploratorze plików możemy chodzić po katalogach, tak samo w wierszu poleceń możemy zmieniać katalogi, w których obecnie jesteśmy.</p>
 <p>
@@ -216,14 +216,14 @@ Windows 10 z OneDrive:   C:\Users\User\OneDrive</code></pre>
     Chcemy ustawić katalog roboczy na taki, w którym znajdują się nasze skrypty Pythona. Najprostszym sposobem na ustalenie ścieżki do tego katalogu jest wejście do katalogu poprzez Eksplorator plików, wyświetlenie właściwości jakiegoś
     skryptu i spojrzenie na miejsce lokalizacji. W poniższym przykładzie jest to <code>C:\Users\User\Desktop\skrypty</code>:
 </p>
-<p><img src="screenshots/windows/file-properties-1.png" /></p>
-<p><img src="screenshots/windows/file-properties-2.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/file-properties-1.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/file-properties-2.png" /></p>
 <p>Aby zmienić katalog roboczy wiersza poleceń, posłużymy się komendą <code>cd</code> (z ang. <em>change directory</em>). Z polecenia korzystamy podając nazwę lub pełną ścieżkę katalog, do którego chcemy się dostać.</p>
 <p>
     W poniższym przykładzie możemy zobaczyć w jaki sposób zmieniliśmy katalog roboczy z <code>C:\Windows\System32</code> na <code>C:\Users\User\Desktop\skrypty</code>. Dla ułatwienia możemy wyświetlić obok siebie wiersz poleceń oraz okno
     właściwości pliku, z którego weźmiemy docelową ścieżkę katalogu. Po zmianie katalogu możemy zamknąć okno właściwości pliku:
 </p>
-<p><img src="screenshots/windows/cmd-working-dir-change.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/cmd-working-dir-change.png" /></p>
 <h4 id="kilka-wskazówek">Kilka wskazówek</h4>
 <ol type="1">
     <li>
@@ -257,7 +257,7 @@ Windows 10 z OneDrive:   C:\Users\User\OneDrive</code></pre>
     Poniżej widzimy uruchomienie skryptu <code>hello.py</code>, który znajduje się w katalogu <code>C:\Users\User\Desktop\skrypty</code> (katalog roboczy został odpowiednio wcześniej ustawiony przy pomocy polecenia <code>cd</code>). Po
     uruchomieniu Pythona widzimy wynik działania skryptu, a następnie kontrola wraca z powrotem do wiersza poleceń:
 </p>
-<p><img src="screenshots/windows/python-run-script.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/python-run-script.png" /></p>
 <p>
     W wierszu poleceń możesz użyć klawisza strzałki <strong>w górę</strong> <code>&lt;↑&gt;</code>, tak aby przewijać poprzednie polecenia, a potem nacisnąć klawisz <code>&lt;Enter&gt;</code> aby ponownie je wykonać. Jest to szczególnie
     przydatne jeśli zmieniamy zawartość skryptu i chcemy go szybko ponownie uruchomić w celu przetestowania dokonanych zmian.
@@ -269,7 +269,7 @@ Windows 10 z OneDrive:   C:\Users\User\OneDrive</code></pre>
     internetowej, to najprawdopodobniej zadziała tylko druga wersja, ale jest to zależne od konkretnego systemu, więc warto sprawdzić obie metody.
 </p>
 <p>Po uruchomieniu interpretera zobaczymy znak zachęty w postaci jodełki <code>&gt;&gt;&gt;</code>. Możemy wydać polecenie <code>print(123)</code> i zatwierdzić je klawiszem <code>&lt;Enter&gt;</code>:</p>
-<p><img src="screenshots/windows/python-run-interpreter.png" /></p>
+<p><img style="max-width: 100%;" src="screenshots/windows/python-run-interpreter.png" /></p>
 <p>
     Aby zakończyć działanie interpretera Pythona, wydajemy polecenie <code>quit()</code>. Pod Windowsem, alternatywnie zamiast tego polecenia, możemy wcisnąć kombinację klawiszy <code>&lt;Ctrl+Z&gt;</code>, a potem
     <code>&lt;Enter&gt;</code>. W ostateczności możemy po prostu zamknąć okno wiersza poleceń.
