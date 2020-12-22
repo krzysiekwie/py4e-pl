@@ -1,6 +1,18 @@
 <?php include("top.php"); ?>
 <?php include("nav.php"); ?>
 
+<style>
+[id]::before {
+  content: '';
+  display: block;
+  height:      75px;
+  margin-top: -75px;
+  visibility: hidden;
+  position: relative; 
+  z-index: -1;
+}
+</style>
+
 <h1 id="python-3-na-systemie-windows">Python 3 na systemie Windows</h1>
 
 <nav id="TOC">
