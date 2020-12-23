@@ -208,13 +208,13 @@
 <p>Tak jak w Eksploratorze plików możemy chodzić po katalogach, tak samo w wierszu poleceń możemy zmieniać katalogi, w których obecnie jesteśmy.</p>
 <p>
     Po uruchomieniu wiersza poleceń najczęściej będziemy się znajdowali w naszym <strong>katalogu domowym</strong>. Ścieżka do katalogu domowego zależy od wersji systemu Windows. W każdym z poniższych przykładów, zamiast
-    <code>User</code> powinna być nazwa konta, na którym jesteś obecnie zalogowany:
+    <code>csev</code> powinna być nazwa konta, na którym jesteś obecnie zalogowany:
 </p>
-<pre class="plaintext"><code>Windows XP:              C:\Documents and Settings\User
-Windows Vista:           C:\Users\User
-Windows 7:               C:\Users\User
-Windows 10:              C:\Users\User
-Windows 10 z OneDrive:   C:\Users\User\OneDrive</code></pre>
+<pre class="plaintext"><code>Windows XP:              C:\Documents and Settings\csev
+Windows Vista:           C:\Users\csev
+Windows 7:               C:\Users\csev
+Windows 10:              C:\Users\csev
+Windows 10 z OneDrive:   C:\Users\csev\OneDrive</code></pre>
 <p>Jak widać powyżej, w systemie Windows 10 czasami włączona jest usługa OneDrive i wszystkie pliki użytkownika są automatycznie synchronizowane do chmury Microsoftu, przez co ścieżka do katalogu domowego jest nieco inna.</p>
 <p>
     W wierszu poleceń znajduje się informacja o tym gdzie obecnie się znajdujesz w hierarchii katalogów na dysku twardym. Informacja o tym zwykle wyświetlana jest przed tzw. <em>znakiem zachęty</em>. Katalog, w którym obecnie się
@@ -226,13 +226,13 @@ Windows 10 z OneDrive:   C:\Users\User\OneDrive</code></pre>
 <pre class="plaintext"><code>C:\Windows\System32&gt;</code></pre>
 <p>
     Chcemy ustawić katalog roboczy na taki, w którym znajdują się nasze skrypty Pythona. Najprostszym sposobem na ustalenie ścieżki do tego katalogu jest wejście do katalogu poprzez Eksplorator plików, wyświetlenie właściwości jakiegoś
-    skryptu i spojrzenie na miejsce lokalizacji. W poniższym przykładzie jest to <code>C:\Users\User\Desktop\skrypty</code>:
+    skryptu i spojrzenie na miejsce lokalizacji. W poniższym przykładzie jest to <code>C:\Users\csev\Desktop\skrypty</code>:
 </p>
 <p><img style="max-width: 100%;" src="screenshots/windows/file-properties-1.png" /></p>
 <p><img style="max-width: 100%;" src="screenshots/windows/file-properties-2.png" /></p>
 <p>Aby zmienić katalog roboczy wiersza poleceń, posłużymy się komendą <code>cd</code> (z ang. <em>change directory</em>). Z polecenia korzystamy podając nazwę lub pełną ścieżkę katalog, do którego chcemy się dostać.</p>
 <p>
-    W poniższym przykładzie możemy zobaczyć w jaki sposób zmieniliśmy katalog roboczy z <code>C:\Windows\System32</code> na <code>C:\Users\User\Desktop\skrypty</code>. Dla ułatwienia możemy wyświetlić obok siebie wiersz poleceń oraz okno
+    W poniższym przykładzie możemy zobaczyć w jaki sposób zmieniliśmy katalog roboczy z <code>C:\Windows\System32</code> na <code>C:\Users\csev\Desktop\skrypty</code>. Dla ułatwienia możemy wyświetlić obok siebie wiersz poleceń oraz okno
     właściwości pliku, z którego weźmiemy docelową ścieżkę katalogu. Po zmianie katalogu możemy zamknąć okno właściwości pliku:
 </p>
 <p><img style="max-width: 100%;" src="screenshots/windows/cmd-working-dir-change.png" /></p>
@@ -266,7 +266,7 @@ Windows 10 z OneDrive:   C:\Users\User\OneDrive</code></pre>
     tylko druga wersja, ale jest to zależne od konkretnego systemu, więc warto sprawdzić obie metody.
 </p>
 <p>
-    Poniżej widzimy uruchomienie skryptu <code>hello.py</code>, który znajduje się w katalogu <code>C:\Users\User\Desktop\skrypty</code> (katalog roboczy został odpowiednio wcześniej ustawiony przy pomocy polecenia <code>cd</code>). Po
+    Poniżej widzimy uruchomienie skryptu <code>hello.py</code>, który znajduje się w katalogu <code>C:\Users\csev\Desktop\skrypty</code> (katalog roboczy został odpowiednio wcześniej ustawiony przy pomocy polecenia <code>cd</code>). Po
     uruchomieniu Pythona widzimy wynik działania skryptu, a następnie kontrola wraca z powrotem do wiersza poleceń:
 </p>
 <p><img style="max-width: 100%;" src="screenshots/windows/python-run-script.png" /></p>
