@@ -50,6 +50,7 @@
     <li>uruchamianie interpretera i skryptów Pythona z poziomu wiersza poleceń.</li>
 </ul>
 <p>Materiały dotyczą systemu Windows 10, jednak w większości przypadków mają również zastosowanie przy wcześniejszych wersjach systemu Windows.</p>
+<p>Na YouTube znajduje się <a href="https://www.youtube.com/watch?v=uZbaYeYGYRQ">krótki film</a> pokazujący jak zainstalować Pythona i edytor Atom oraz jak przygotować i uruchomić pierwszy skrypt Pythona.</p>
 <h2 id="instalacja-pythona">Instalacja Pythona</h2>
 <p>Każda stosunkowo aktualna wersja Pythona wystarczy do ukończenia tego kursu. Jeżeli posiadasz już na swoim komputerze Pythona w wersji 3.x, to nie ma konieczności instalacji jego najnowszej wersji.</p>
 <p>Pythona można zainstalować na kilka sposobów. Tutaj opiszemy dwa główne podejścia, tj. poprzez:</p>
