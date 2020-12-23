@@ -275,13 +275,13 @@ Windows 10 z OneDrive:   C:\Users\csev\OneDrive</code></pre>
     W wierszu poleceń możesz użyć klawisza strzałki <strong>w górę</strong> <code>&lt;↑&gt;</code>, tak aby przewijać poprzednie polecenia, a potem nacisnąć klawisz <code>&lt;Enter&gt;</code> aby ponownie je wykonać. Jest to szczególnie
     przydatne jeśli zmieniamy zawartość skryptu i chcemy go szybko ponownie uruchomić w celu przetestowania dokonanych zmian.
 </p>
-<p>Jeśli lubisz mieć porządek na ekranie, możesz wyczyścić bufor poprzednich komend oraz ekran wydając w wierszu poleceń komendę <code>cls</code>.</p>
+<p>Jeśli lubisz mieć porządek na ekranie, możesz wyczyścić ekran wydając w wierszu poleceń komendę <code>cls</code>.</p>
 <h3 id="uruchomienie-sesji-interaktywnej-pythona">Uruchomienie sesji interaktywnej Pythona</h3>
 <p>
     Pythona możemy również poznawać poprzez interaktywny interpreter. Aby go uruchomić, w wierszu poleceń wydajemy komendę <code>python3</code> lub <code>python</code>. Jeśli instalowaliśmy Pythona przez instalator pobrany ze strony
     internetowej, to najprawdopodobniej zadziała tylko druga wersja, ale jest to zależne od konkretnego systemu, więc warto sprawdzić obie metody.
 </p>
-<p>Po uruchomieniu interpretera zobaczymy znak zachęty w postaci jodełki <code>&gt;&gt;&gt;</code>. Możemy wydać polecenie <code>print(123)</code> i zatwierdzić je klawiszem <code>&lt;Enter&gt;</code>:</p>
+<p>Po uruchomieniu interpretera zobaczymy znak zachęty w postaci jodełki <code>&gt;&gt;&gt;</code>. Możemy wydać polecenie <code>print('witaj')</code> i zatwierdzić je klawiszem <code>&lt;Enter&gt;</code>:</p>
 <p><img style="max-width: 100%;" src="screenshots/windows/python-run-interpreter.png" /></p>
 <p>
     Aby zakończyć działanie interpretera Pythona, wydajemy polecenie <code>quit()</code>. Pod Windowsem, alternatywnie zamiast tego polecenia, możemy wcisnąć kombinację klawiszy <code>&lt;Ctrl+Z&gt;</code>, a potem
