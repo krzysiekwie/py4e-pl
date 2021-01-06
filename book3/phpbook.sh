@@ -30,4 +30,11 @@ for fn in [0-9]*.mkd; do
     i=$i+1
 done
 
+sed -i 's~alt="Klasa i dwa obiekty"~alt="Klasa i dwa obiekty" style="width: 50%"~' ../html3/14-objects.php
+sed -i 's~alt="Związki między tabelami"~alt="Związki między tabelami" style="width: 50%"~' ../html3/15-database.php
+sed -i 's~alt="Łączenie tabel przy pomocy JOIN"~alt="Łączenie tabel przy pomocy JOIN" style="width: 50%"~' ../html3/15-database.php
+sed -i 's~alt="Mapa OpenStreetMap"~alt="Mapa OpenStreetMap" style="width: 50%"~' ../html3/16-viz.php
+sed -i 's~alt="Chmura wyrazów z listy mailingowej deweloperów projektu Sakai"~alt="Chmura wyrazów z listy mailingowej deweloperów projektu Sakai" style="width: 50%"~' ../html3/16-viz.php
+sed -i 's~alt="Aktywność mailowa w projekcie Sakai z podziałem na organizacje"~alt="Aktywność mailowa w projekcie Sakai z podziałem na organizacje" style="width: 75%"~' ../html3/16-viz.php
+
 rm tmp.*

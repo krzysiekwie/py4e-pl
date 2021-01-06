@@ -57,21 +57,21 @@ if ( $dueDate->message ) {
 }
 ?>
 <p>
-<b>Wydobywanie danych z JSONa</b>
+<b>Wyodrębnianie danych z JSONa</b>
 <p>
-W poniższym zadaniu napiszesz program w Pythonie podobny do
+W poniższym zadaniu napiszesz program podobny do
 <a href="https://py4e.pl/code3/json2.py" target="_blank">https://py4e.pl/code3/json2.py</a>.
 
-Program będzie prosił o adres URL, odczytywał dane JSON z podanego adresu URL przy użyciu <b>urllib</b>, przeparsuje dane,
+Program będzie prosił o adres URL, odczytywał dane JSON z podanego adresu URL przy użyciu <code>urllib</code>, przeparsuje dane,
 wyodrębni liczbę komentarzy w danych JSONie oraz obliczy ich sumę.
 </p>
 <p>
-Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w którym podajemy również wynikową sumę, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
+Dostępne są dwa pliki. Pierwszy z nich to przykładowy plik, dla którego podano również wynikową sumę, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
 <ul>
 <li> Dane przykładowe: <a href="<?= deHttps($sample_url) ?>" target="_blank"><?= deHttps($sample_url) ?></a>
 (Suma wynosi <?= $sum_sample ?>) </li>
-<li> Actual data: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a>
-(Suma kończy się cyframi <?= $sum%100 ?>)<br/> </li>
+<li> Dane do zadania: <a href="<?= deHttps($actual_url) ?>" target="_blank"><?= deHttps($actual_url) ?></a>
+(Suma kończy się cyframi <?= sprintf('%02d', $sum%100); ?>)<br/> </li>
 </ul>
 Nie musisz zapisywać tych plików w swoim katalogu, ponieważ Twój program odczyta dane bezpośrednio z adresu URL.
 <b>Uwaga</b>: każdy kursant ma oddzielny plik danych do zadania, więc do analizy używaj tylko własnego pliku danych.
@@ -79,8 +79,7 @@ Nie musisz zapisywać tych plików w swoim katalogu, ponieważ Twój program odc
 <b>Format danych</b>
 <p>
 Dane w formacie JSON składają się z wielu imion i liczb komentarzy, które wyglądają w następujący sposób:
-<pre>
-{
+<pre class="json"><code>{
   comments: [
     {
       name: "Matthias"
@@ -92,10 +91,9 @@ Dane w formacie JSON składają się z wielu imion i liczb komentarzy, które wy
     }
     ...
   ]
-}
-</pre>
+}</code></pre>
 <p>
-Przykładowy kod pokazujący jak przeparsować JSONa i wyodrębnić listę dostępny jest w pliku <a href="http://www.py4e.com/code3/json2.py" target="_blank">json2.py</a>. Być może będziesz chciał również porównać kod <a href="http://www.py4e.com/code3/geoxml.py" target="_blank">geoxml.py</a> aby zobaczyć jak poprosić użytkownika o adres URL i w jaki sposób pobrać dane z podanego adresu URL.
+Przykładowy kod, który pokazuje jak przeparsować JSONa i wyodrębnić listę, dostępny jest w pliku <a href="http://www.py4e.com/code3/json2.py" target="_blank">json2.py</a>. Być może przyda się kod <a href="http://www.py4e.com/code3/geoxml.py" target="_blank">geoxml.py</a>, w którym możesz podejrzeć jak poprosić użytkownika o adres URL i w jaki sposób pobrać dane z podanego adresu URL.
 </p>
 <p><b>Przykładowe uruchomienie</b></p>
 <pre>
@@ -108,11 +106,10 @@ Suma: 2...
 <?php httpsWarning($sample_url); ?>
 <p><b>Rozwiązanie zadania</b>
 <form method="post">
-Wprowadź poniżej sumę z danych do zadania oraz kod Pythona:<br/>
-Suma: <input type="text" size="20" name="sum">
-(kończy się cyframi <?= $sum%100 ?>)
-<input type="submit" value="Wyślij rozwiązanie"><br/>
-Kod Pythona:<br/>
-<textarea rows="20" style="width: 90%" name="code"></textarea><br/>
+Wprowadź poniżej sumę z danych do zadania oraz kod programu:<br/>
+Suma (kończy się cyframi <?= sprintf('%02d', $sum%100); ?>): <input type="text" size="20" name="sum">
+<input style="margin-left: 10px;" type="submit" value="Wyślij rozwiązanie"><br/>
+Kod programu:<br/>
+<textarea rows="20" style="width: 90%; font-family: monospace" name="code"></textarea><br/>
 </form>
 

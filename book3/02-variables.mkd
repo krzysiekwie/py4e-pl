@@ -9,10 +9,9 @@ Wartości i typy
 \index{typ}
 \index{ciąg znaków}
 \index{napis}
-\index{łańcuch znaków}
+\index{lzancuch znakow@łańcuch znaków}
 
-*Wartość* jest jedną z podstawowych rzeczy, z którymi program pracuje, takich 
-jak litera czy cyfra. Wartości, które widzieliśmy do tej pory, to np. 6 i "Witaj
+*Wartość* jest jedną z podstawowych rzeczy, z którymi pracuje program. Wartości, takie jak litery czy cyfry, które widzieliśmy do tej pory, to np. 6 i "Witaj
 świecie!".
 
 Wartości te należą do różnych *typów*: 6 jest liczbą całkowitą, a "Witaj
@@ -36,7 +35,7 @@ Funkcja `print()`, poza wyświetlaniem tekstu, działa również w przypadku lic
 4
 ~~~~
 
-Jeśli nie jesteś pewien jaki typ ma dana wartość, interpreter może Ci to
+Jeśli nie jesteś pewien, jaki typ ma dana wartość, interpreter może Ci to
 podpowiedzieć:
 
 ~~~~ {.python .trinket height="160"}
@@ -151,7 +150,7 @@ Nazwy zmiennych i słowa kluczowe
 \index{słowo kluczowe}
 
 Programiści zazwyczaj wybierają dla swoich zmiennych nazwy, które są sensowne i
-opisują do czego dana zmienna jest używana.
+opisują, do czego dana zmienna jest używana.
 
 Nazwy zmiennych mogą być dowolnie długie. Mogą zawierać zarówno litery, jak i
 cyfry, ale nie mogą zaczynać się od cyfry. Użycie dużych liter jest poprawne,
@@ -166,7 +165,7 @@ nazwach zawierających wiele słów, takich jak `moje_imie` lub
 podkreślenia, ale generalnie unikamy tego, chyba że piszemy kod biblioteki, która 
 docelowo będzie używana przez inne osoby.
 
-\index{znak podkreślenia}
+\index{znak!podkreślenia}
 
 Jeśli nadasz zmiennej niepoprawną nazwę, otrzymasz błąd składniowy:
 
@@ -186,7 +185,7 @@ Okazuje się, że `class` jest jednym ze *słów kluczowych* Pythona. Interprete
 używa słów kluczowych do rozpoznania struktury programu, przez co nie można ich
 używać jako nazw zmiennych.
 
-\index{słowo kluczowe}
+\index{słowo kluczowe}
 
 Python ma zarezerwowanych 35 słów kluczowych:
 
@@ -211,7 +210,7 @@ Instrukcje
 Widzieliśmy ich dwa rodzaje: `print()` jako wyrażenie oraz przypisanie.
 
 \index{instrukcja}
-\index{tryb interaktywny}
+\index{tryb interaktywny}
 \index{tryb skryptowy}
 
 Gdy w trybie interaktywnym wpiszesz jakąś instrukcję, to interpreter ją wykona i
@@ -246,9 +245,14 @@ Operatory i operandy
 \index{operand}
 \index{wyrażenie}
 
-*Operatory* są specjalnymi symbolami, które reprezentują obliczenia takie jak
+*Operatory* są specjalnymi symbolami, które reprezentują obliczenia, takie jak
 dodawanie i mnożenie. Wartości, na których operator jest stosowany, są nazywane
-*operandami*.
+*operandami*. Przygotujmy dwie zmienne:
+
+~~~~ {.python}
+hour = 3
+minute = 40
+~~~~
 
 Operatory `+`, `-`, `*`, `/` i `**` wykonują odpowiednio dodawanie, odejmowanie,
 mnożenie, dzielenie i potęgowanie, jak w poniższych przykładach:
@@ -262,8 +266,8 @@ minute/60
 (5+9)*(15-7)
 ~~~~
 
-Jeśli pisałeś programy w Pythonie 2.x, to musisz wiedzieć, że w Pythonie 3.x 
-nastąpiła zmiana w operatorze dzielenia. W Pythonie 3.x wynik takiego dzielenia
+Jeśli pisałeś programy w Pythonie 2, to musisz wiedzieć, że w Pythonie 3 
+nastąpiła zmiana w operatorze dzielenia. W Pythonie 3 wynik takiego dzielenia
 jest wynikiem zmiennoprzecinkowym:
 
 ~~~~ {.python .trinket height="160"}
@@ -272,7 +276,7 @@ jest wynikiem zmiennoprzecinkowym:
 0.9833333333333333
 ~~~~
 
-Operator dzielenia w Pythonie 2.x dzieliłby dwie liczby całkowite i obcinałby
+Operator dzielenia w Pythonie 2 dzieliłby dwie liczby całkowite i obcinałby
 wynik do liczby całkowitej:
 
 ~~~~ {.python}
@@ -281,7 +285,7 @@ wynik do liczby całkowitej:
 0
 ~~~~
 
-Aby uzyskać taki sam wynik w Pythonie 3.0, należy użyć dzielenia
+Aby uzyskać taki sam wynik w Pythonie 3, należy użyć dzielenia
 całkowitoliczbowego `//`, zaokrąglającego w dół:
 
 ~~~~ {.python .trinket  height="160"}
@@ -290,20 +294,20 @@ całkowitoliczbowego `//`, zaokrąglającego w dół:
 0
 ~~~~
 
-W Pythonie 3.x dzielenie liczb całkowitych działa tak jakbyś wprowadził
+W Pythonie 3 dzielenie liczb całkowitych działa tak, jakbyś wprowadził
 wyrażenie na kalkulatorze.
 
-\index{Python 3.x}
-\index{Python 2.x}
+\index{Python 3}
+\index{Python 2}
 \index{zmiennoprzecinkowe, dzielenie}
-\index{dzielenie!zmiennoprzecinkowe}
+\index{dzielenie zmiennoprzecinkowe}
 
 Wyrażenia
 ---------
 
 *Wyrażenie* jest kombinacją wartości, zmiennych i operatorów. Wartość sama w
 sobie jest uważana za wyrażenie, podobnie jak zmienna, a więc wszystkie poniższe
-są poprawnymi wyrażeniami (przy założeniu, że zmiennej `x` przypisano wcześniej
+przykłady są poprawnymi wyrażeniami (przy założeniu, że zmiennej `x` przypisano wcześniej
 jakąś wartość):
 
 \index{wyrażenie}
@@ -324,12 +328,12 @@ Jeśli wpiszesz wyrażenie w trybie interaktywnym, interpreter dokona jego
 2
 ~~~~
 
-Natomiast w skrypcie wyrażenie samo w sobie nic nie robi! Jest to powszechne
-źródło dezorientacji wśród początkujących.
+Natomiast w skrypcie wyrażenie samo w sobie nic nie robi! Dla początkujących 
+to częsty powód konsternacji. 
 
 #### Ćwiczenie 1
 
-Wpisz następujące stwierdzenia w interpreterze Pythona, tak aby
+Wpisz następujące wyrażenia w interpreterze Pythona, tak aby
 zobaczyć co one robią:
 
 ~~~~ {.python}
@@ -371,7 +375,7 @@ przydatnym sposobem na zapamiętanie tych reguł:
     prawej. Tak więc wyrażenie `5-3-1` to 1, a nie 3, ponieważ `5-3` jest
     wyliczane najpierw, a potem `1` jest odejmowane od 2.
 
-W razie wątpliwości, zawsze umieszczaj nawiasy w swoich wyrażenia, tak aby
+W razie wątpliwości zawsze umieszczaj nawiasy w swoich wyrażeniach, tak aby
 upewnić się, że obliczenia zostały wykonane w zamierzonej kolejności.
 
 Operator modulo
@@ -381,7 +385,7 @@ Operator modulo
 \index{operator!modulo}
 
 *Operator modulo* działa na liczbach całkowitych i zwraca resztę po podzieleniu
-pierwszego operanda przez drugi. W Pythonie operator modulo jest znakiem
+pierwszego operandu przez drugi. W Pythonie operator modulo jest znakiem
 procentu (`%`). Składnia jest taka sama jak w przypadku innych operatorów:
 
 ~~~~ {.python .trinket height="240"}
@@ -395,15 +399,15 @@ procentu (`%`). Składnia jest taka sama jak w przypadku innych operatorów:
 
 Tak więc 7 podzielone przez 3 to 2 z resztą 1.
 
-Operator modulo okazuje się być zaskakująco użyteczny. Na przykład, możesz 
-sprawdzić czy jedna liczba jest podzielna przez drugą: jeśli `x % y` wynos
+Operator modulo okazuje się być zaskakująco użyteczny. Na przykład możesz 
+sprawdzić, czy jedna liczba jest podzielna przez drugą: jeśli `x % y` wynos
 zero, to `x` jest podzielne przez `y`.
 
 \index{podzielność}
 
 Możesz również wyodrębnić ostatnią cyfrę po prawej stronie cyfry z liczby.
-Na przykład, `x % 10` zwraca ostatnią cyfrę po prawej stronie z `x` (w systemie
-dziesiętnym). Podobnie, `x % 100` zwraca dwie ostatnie cyfry.
+Na przykład `x % 10` zwraca ostatnią cyfrę po prawej stronie z `x` (w systemie
+dziesiętnym). Podobnie `x % 100` zwraca dwie ostatnie cyfry.
 
 Operacje na ciągach znaków
 --------------------------
@@ -413,14 +417,14 @@ Operacje na ciągach znaków
 
 Operator `+` działa z ciągami znaków, ale nie jest to dodawanie w sensie
 matematycznym. Zamiast tego wykonuje on *konkatenację*, co oznacza łączenie
-łańcuchów znaków poprzez złączenie ich końców. Na przykład:
+łańcuchów znaków poprzez złączenie ich. Na przykład:
 
 \index{konkatenacja}
 
 ~~~~ {.python}
 >>> first = 10
 >>> second = 15
->>> print(first+second)
+>>> print(first + second)
 25
 >>> first = '100'
 >>> second = '150'
@@ -446,14 +450,13 @@ Proszenie użytkownika o wprowadzenie danych
 
 Czasami chcielibyśmy ustawić wartość zmiennej poprzez pobranie tej wartości od
 użytkownika za pomocą jego klawiatury. Python udostępnia wbudowaną funkcję o
-nazwie `input`, która pobiera dane z klawiatury^[W Pythonie 2.0 funkcja ta 
-nazywa się `raw_input`.]. Kiedy funkcja ta jest wywoływana, program zatrzymuje
-się i czeka, aż użytkownik coś wpisze. Gdy użytkownik naciśnie przycisk `Return`
-lub `Enter`, program wznawia działanie, a `input` zwraca to, co użytkownik
+nazwie `input()`, która pobiera dane z klawiatury^[W Pythonie 2 funkcja ta 
+nazywa się `raw_input()`.]. Kiedy funkcja ta jest wywoływana, program zatrzymuje
+się i czeka, aż użytkownik coś wpisze. Gdy użytkownik naciśnie klawisz `<Enter>`, program wznawia działanie, a `input()` zwraca to, co użytkownik
 wpisał jako ciąg znaków.
 
 
-\index{Python 2.0}
+\index{Python 2}
 
 ~~~~ {.python}
 >>> inp = input()
@@ -462,12 +465,12 @@ Jakieś bzdury
 Jakieś bzdury
 ~~~~
 
-Przed otrzymaniem danych wejściowych od użytkownika, dobrze jest wyświetlić
+Przed otrzymaniem danych wejściowych od użytkownika dobrze jest wyświetlić
 komunikat informujący użytkownika o tym, co należy wprowadzić. Możesz przekazać
-ciąg znaków do `input`, który zostanie wyświetlony użytkownikowi przed
+ciąg znaków do `input()`, który zostanie wyświetlony użytkownikowi przed
 wstrzymaniem działania na czas wprowadzania danych:
 
-\index{znak zachęty}
+\index{znak!zachęty}
 
 ~~~~ {.python}
 >>> name = input('Jak masz na imię?\n')
@@ -477,15 +480,14 @@ Chuck
 Chuck
 ~~~~
 
-Sekwencja `\n` na końcu komunikatu reprezentuje *nową linię*, która jest
-specjalnym znakiem, który powoduje przerwanie aktualnej linii. Dlatego dane
+Sekwencja `\n` na końcu komunikatu reprezentuje *nową linię*, specjalny znak, który powoduje przejście do nowej linii. Dlatego dane
 wprowadzane przez użytkownika znajdują się pod komunikatem.
 
 \index{nowa linia}
-\index{znak końca linii}
+\index{znak!końca linii}
 
 Jeśli oczekujesz od użytkownika wprowadzenia liczby całkowitej, możesz spróbować
-przekonwertować zwracaną wartość na `int` używając funkcji `int()`:
+przekonwertować zwracaną wartość na `int`, używając funkcji `int()`:
 
 ~~~~ {.python}
 >>> prompt = 'Jaka jest prędkość lotu jaskółki bez obciążenia?\n'
@@ -508,7 +510,7 @@ Jakiej jaskółki? Afrykańskiej czy europejskiej?
 ValueError: invalid literal for int() with base 10:
 ~~~~
 
-Zobaczymy później jak poradzić sobie z tego typu błędami.
+Zobaczymy później, jak poradzić sobie z tego typu błędami.
 
 \index{ValueError}
 \index{wyjątek!ValueError}
@@ -520,14 +522,14 @@ Komentarze
 
 W miarę jak programy stają się coraz większe i bardziej skomplikowane, stają się
 również coraz trudniejsze do odczytania. Formalne języki są skomplikowane i
-często trudno jest spojrzeć na kawałek kodu i zrozumieć co on robi lub dlaczego
-to robi.
+często trudno jest spojrzeć na kawałek kodu i zrozumieć, co lub dlaczego on robi.
 
-Z tego powodu dobrym pomysłem jest dodawanie do programów notatek wyjaśniających
+Z tego powodu dobrym pomysłem jest dodawanie do programów notatek wyjaśniających,
 co robi program, pisanych w języku naturalnym. Te notatki nazywane są
 *komentarzami*, a w Pythonie zaczynają się od symbolu `#`:
 
 ~~~~ {.python}
+minute = 30
 # oblicza procent godziny, która upłynęła
 percentage = (minute * 100) / 60
 ~~~~
@@ -571,10 +573,10 @@ Wybór mnemonicznych nazw zmiennych
 
 Tak długo, jak stosujesz się do prostych zasad nazewnictwa zmiennych i unikasz
 zastrzeżonych słów, masz duży wybór przy nadawaniu nazw swoim zmiennym. Na
-początku wybór ten czasami może być dezorientujący zarówno podczas czytania
-kodu programu, jak i pisania własnych programów. Na przykład, następujące trzy
-programy są identyczne pod względem tego co robią, ale są bardzo różne gdy je
-czytasz i starasz się je zrozumieć.
+początku może to utrudniać zarówno czytanie, jak i pisanie 
+kodu programu. Na przykład następujące trzy
+programy są identyczne pod względem tego, co robią, ale bardzo różne, gdy je
+czytasz i starasz się zrozumieć.
 
 ~~~~ {.python}
 a = 35.0
@@ -597,22 +599,22 @@ x1q3p9afd = x1q3z9ahd * x1q3z9afd
 print(x1q3p9afd)
 ~~~~
 
-Interpreter Pythona widzi wszystkie trzy te programy jako *dokładnie takie same*,
+Interpreter Pythona widzi wszystkie trzy programy jako *dokładnie takie same*,
 ale ludzie widzą i rozumieją te programy zupełnie inaczej. Ludzie najszybciej
 zrozumieją *zamiary* drugiego programu, ponieważ programista wybrał nazwy
-zmiennych, które odzwierciedlają jego intencje dotyczące tego, jakie dane będą
+zmiennych, które odzwierciedlają jego intencje dotyczące danych, które będą
 przechowywane w każdej z nich.
 
 Te mądrze wybrane nazwy zmiennych nazywamy "mnemonicznymi nazwami zmiennych".
 Słowo *mnemonika* oznacza "zespół sposobów ułatwiających zapamiętywanie nowego
 materiału"^[<https://sjp.pwn.pl/sjp/mnemotechnika;2568165.html>]. Wybieramy
-mnemoniczne nazwy zmiennych aby pomóc nam przypomnieć sobie, po co stworzyliśmy
+mnemoniczne nazwy zmiennych, aby pomóc sobie przypomnieć, po co stworzyliśmy
 daną zmienną.
 
-Podczas gdy to wszystko brzmi świetnie i bardzo dobrym pomysłem jest używanie
-mnemonicznych nazw zmiennych, to mnemoniczne nazwy zmiennych mogą przeszkadzać
+Mimo że to wszystko brzmi świetnie i bardzo dobrym pomysłem jest używanie
+mnemonicznych nazw zmiennych, to mogą one przeszkadzać
 początkującemu programiście w analizowaniu i rozumieniu kodu. Dzieje się tak
-dlatego, że początkujący programiści nie zapamiętali jeszcze zastrzeżonych słów
+dlatego, że początkujący nie zapamiętali jeszcze zastrzeżonych słów
 (jest ich tylko 33) i czasami zmienne o nazwach zbyt opisowych zaczynają
 wyglądać jak część języka, a nie jak dobrze dobrane nazwy zmiennych.
 
@@ -625,9 +627,9 @@ for word in words:
     print(word)
 ~~~~
 
-Co tu się dzieje? Które z tokenów (for, word, in, itp.) są słowami
+Co tu się dzieje? Które z tokenów (`for`, `word`, `in` itp.) są słowami
 zastrzeżonymi, a które są tylko nazwami zmiennych? Czy Python rozumie zapis
-"words" na poziomie fundamentalnym? Początkujący programiści mają problem z
+`words` na poziomie fundamentalnym? Początkujący programiści mają problem z
 oddzieleniem tych części kodu, które *muszą* być takie same jak w tym
 przykładzie, od tych, które po prostu są wyborem dokonywanym przez programistę.
 
@@ -645,10 +647,10 @@ zrozumiałe, że Python nie ma podstawowego pojęcia o pizzy i jej kawałkach or
 o tym, że pizza składa się z zestawu jednego lub więcej kawałków.
 
 Ale jeśli nasz program naprawdę zajmuje się czytaniem danych i szukaniem słów w
-danych, `pizza` i `slice` to bardzo niemonmoniczne nazwy zmiennych. Wybranie ich
+danych, `pizza` i `slice` to bardzo niemnemoniczne nazwy zmiennych. Wybranie ich
 jako nazw zmiennych odwraca uwagę od znaczenia programu.
 
-Dość szybko zapamiętasz najczęstsze zastrzeżone słowa i zaczniesz widzieć 
+Dość szybko zapamiętasz najczęstsze zastrzeżone słowa i zaczniesz widzieć, 
 jak Cię atakują:
 
 <pre>
@@ -657,11 +659,11 @@ jak Cię atakują:
 </pre>
 
 Części kodu, które są zdefiniowane przez Pythona (`for`, `in`, `print` i `:`) 
-są tutaj pogrubione, a zmienne wybrane przez programistę (`word` i `words`) nie 
-są pogrubione. Wiele edytorów tekstu jest świadomych składni Pythona i inaczej
-pokoloruje zastrzeżone słowa, tak aby dać ci wskazówki jak oddzielić zmienne od
+są tutaj pogrubione, a zmienne wybrane przez programistę (`word` i `words`) – nie.
+Wiele edytorów tekstu jest świadomych składni Pythona i inaczej
+pokoloruje zastrzeżone słowa, tak aby pomóc ci odróżnić zmienne od
 zastrzeżonych słów. Po pewnym czasie zaczniesz biegle czytać kod Pythona i
-będziesz szybko określać co jest zmienną, a co słowem zastrzeżonym.^[Dodatkowo
+będziesz szybko określać, co jest zmienną, a co słowem zastrzeżonym.^[Dodatkowo
 warto zwrócić uwagę, że zgodnie z przyjętą konwencją programistyczną nazwy
 zmiennych oraz komentarze powinny być w języku angielskim. Podczas realizacji
 tego kursu nie ma to większego znaczenia, gdyż tutaj programy piszemy dla siebie,
@@ -687,7 +689,7 @@ bez operatora:
 SyntaxError: invalid syntax
 ~~~~
 
-W przypadku błędów składniowych, komunikaty o błędach nie są zbyt pomocne.
+W przypadku błędów składniowych komunikaty o błędach nie są zbyt pomocne.
 Najczęstszym komunikatem jest `SyntaxError: invalid syntax`. Czasem jednak
 można trafić na bardziej pomocny komunikat o błędzie składniowym
 
@@ -709,9 +711,8 @@ liczby zaczynają się od `0o`.
 \index{wyjątek}
 \index{błąd!czasu wykonania}
 
-Błąd wykonania (ang. *runtime error*), który jest najprawdopodobniejszy
-do popełnienia przez Ciebie, to "użycie przed definicją", co oznacza próbę
-użycia zmiennej przed przypisaniem wartości. Może się to zdarzyć wtedy, gdy
+Błąd wykonania (ang. *runtime error*), który może Ci się zdarzać najczęściej, to "użycie przed definicją", co oznacza próbę
+użycia zmiennej przed przypisaniem wartości. Może do tego dojść, gdy
 błędnie wpiszesz nazwę zmiennej:
 
 ~~~~ {.python}
@@ -727,16 +728,21 @@ tym samym co `latex`.
 \index{wielkość liter, nazwy zmiennych}
 \index{błąd!semantyczny}
 
-W tym momencie, najbardziej prawdopodobną przyczyną błędu semantycznego jest
-kolejność operacji. Na przykład, aby obliczyć $1/2\pi$, można pokusić się o
-napisanie:
+W tym momencie najbardziej prawdopodobną przyczyną błędu semantycznego jest
+kolejność operacji. Przygotujmy zmienną `pi`:
+
+~~~~ {.python}
+>>> pi = 3.14
+~~~~
+
+Na przykład, aby obliczyć $1/2\pi$, można pokusić się o napisanie:
 
 ~~~~ {.python}
 >>> 1.0 / 2.0 * pi
 ~~~~
 
 Ale dzielenie wykonuje się pierwsze, więc dostałbyś w rezultacie $\pi / 2$, a to
-nie to samo! Nie ma możliwości by Python wiedział co chciałeś napisać, więc w
+nie to samo! Nie ma możliwości, by Python wiedział, co chciałeś napisać, więc w
 tym przypadku nie dostaniesz komunikatu o błędzie; po prostu dostaniesz złą
 odpowiedź.
 
@@ -746,103 +752,78 @@ Słowniczek
 ----------
 
 ciąg znaków
-:   Typ danych `str`, który reprezentuje sekwencje znaków; inaczej napis lub łańcuch znaków.
-\index{ciąg znaków}
-\index{napis}
-\index{łańcuch znaków}
+:   Typ danych `str`, który reprezentuje sekwencje znaków; inaczej napis lub łańcuch znaków.\index{ciąg znaków}\index{napis}\index{lzancuch znakow@łańcuch znaków}
 
 ewaluacja
 :   Uproszczenie wyrażenia poprzez wykonanie operacji w celu uzyskania
-    pojedynczej wartości; inaczej wartościowanie.
-\index{ewaluacja}
-\index{wartościowanie}
+    pojedynczej wartości; inaczej wartościowanie.\index{ewaluacja}\index{wartościowanie}
 
 instrukcja
-:   Część kodu, która reprezentuje polecenie lub akcję. Jak dotąd, polecenia,
-    które widzieliśmy, to przypisania i wyrażenie print.
-\index{instrukcja}
+:   Część kodu, która reprezentuje polecenie lub akcję. Jak dotąd polecenia,
+    które widzieliśmy, to przypisania i wyrażenie `print()`.\index{instrukcja}
 
 kolejność wykonywania działań
 :   Zbiór zasad regulujących kolejność ewaluacji wyrażeń obejmujących wiele
-    operatorów i operandów.
-\index{zasady pierwszeństwa}
-\index{kolejność wykonywania działań}
+    operatorów i operandów.\index{zasady pierwszeństwa}\index{kolejność wykonywania działań}
 
 komentarz
 :   Informacja w programie, która jest przeznaczona dla innych programistów (lub
-    osób czytających kod źródłowy) i nie ma wpływu na wykonanie programu.
-\index{komentarz}
+    osób czytających kod źródłowy) i nie ma wpływu na wykonanie programu.\index{komentarz}
 
 konkatenacja
-:   Połączenie dwóch ciągów znaków.
-\index{konkatenacja}
+:   Połączenie dwóch ciągów znaków.\index{konkatenacja}
 
 liczba całkowita
-:   Typ danych `int`, który reprezentuje liczby całkowite.
-\index{liczba całkowita}
+:   Typ danych `int`, który reprezentuje liczby całkowite.\index{liczba całkowita}
 
 liczba zmiennoprzecinkowa
-:   Typ danych `float`, który reprezentuje liczby z częściami ułamkowymi.
-\index{liczba zmiennoprzecinkowa}
+:   Typ danych `float`, który reprezentuje liczby z częściami ułamkowymi.\index{liczba zmiennoprzecinkowa}
 
 mnemonika
-:   Pomoc pamięciowa. Często nadajemy zmiennym nazwy mnemoniczne, tak aby pomóc
-    nam zapamiętać co jest przechowywane w zmiennej. 
-\index{mnemonika}
-\index{mnemoniczne nazwy zmiennych}
+:   Pomoc pamięciowa. Często nadajemy zmiennym nazwy mnemoniczne, tak aby łatwiej zapamiętać, co jest przechowywane w zmiennej.\index{mnemonika}\index{mnemoniczne nazwy zmiennych}
 
 operand
-:   Jedna z wartości, na której działa operator.
-\index{operand}
+:   Jedna z wartości, na której działa operator.\index{operand}
 
 operator
 :   Specjalny symbol, który reprezentuje proste obliczenie, np. takie jak
-    dodawanie, mnożenie lub konkatenację ciągów.
-\index{operator}
+    dodawanie, mnożenie lub konkatenację ciągów.\index{operator}
 
 operator modulo
 :   Operator oznaczony znakiem procentu (`%`), który działa na liczbach
-    całkowitych i zwraca resztę gdy jedna liczba jest dzielona przez drugą. 
-\index{modulo, operator}
-\index{operator!modulo}
+    całkowitych i zwraca resztę, gdy jedna liczba jest dzielona przez drugą.\index{modulo, operator}\index{operator!modulo}
 
 przypisanie
-:   Instrukcja, która przypisuje wartość zmiennej.
-\index{przypisanie}
+:   Instrukcja, która przypisuje wartość zmiennej.\index{przypisanie}
 
 słowo kluczowe
 :   Zastrzeżone słowo, które jest używane przez kompilator/interpreter do
-    przetwarzania programu; nie można używać słów kluczowych np. takich jak `if`,
-    `def` i `while` jako nazw zmiennych. 
-\index{słowo kluczowe}
+    przetwarzania programu; nie można używać słów kluczowych, np. takich jak `if`,
+    `def` i `while` jako nazw zmiennych.\index{słowo kluczowe}
 
 typ
 :   Kategoria wartości. Typy, które widzieliśmy do tej pory, to liczby całkowite
     (typ `int`), liczby zmiennoprzecinkowe (typ `float`) oraz ciągi znaków (typ
-    `str`).
-\index{typ}
+    `str`).\index{typ}
 
 wartość
 :   Jedna z podstawowych jednostek danych, takich jak liczba lub ciąg znaków,
-    którą operuje program.
-\index{wartość}
+    którą operuje program.\index{wartość}
 
 wyrażenie
 :   Kombinacja zmiennych, operatorów i wartości, która reprezentuje pojedynczą
-    wartość wyniku. 
-\index{wyrażenie}
+    wartość wyniku.\index{wyrażenie}
 
 zmienna
-:   Nazwa, która odnosi się do wartości.
-\index{zmienna}
+:   Nazwa, która odnosi się do wartości.\index{zmienna}
 
 Ćwiczenia
 ---------
 
 #### Ćwiczenie 2
 
-Napisz program, który wykorzystuje funkcję `input` do 
-poproszenia użytkownika o jego imię, a następnie przywita go używając jego
+Napisz program, który wykorzystuje funkcję `input()` do 
+poproszenia użytkownika o jego imię, a następnie przywita go, używając jego
 imienia.
 
 ~~~~
@@ -863,7 +844,7 @@ Wynagrodzenie: 1121.25
 
 Na razie nie będziemy się martwić o to, by nasze wynagrodzenie miało dokładnie
 dwie cyfry po przecinku. Jeśli chcesz, możesz pobawić się wbudowaną funkcją
-Pythona `round`, tak aby prawidłowo zaokrąglić wynagrodzenie do dwóch miejsc po
+Pythona `round()`, tak aby prawidłowo zaokrąglić wynagrodzenie do dwóch miejsc po
 przecinku.
 
 #### Ćwiczenie 4

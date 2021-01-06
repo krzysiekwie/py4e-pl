@@ -1,4 +1,5 @@
 .DS_Store
+.vscode
 book3/.chinese
 config.php
 *.swp
@@ -11,6 +12,8 @@ code3/*.zip
 book3/x.pdf
 book3/x-1.pdf
 book3/x-2.pdf
+book3/x-3.pdf
+book3/x-4.pdf
 book3/x.epub
 book3/x.mobi
 unit2/testtmp
@@ -20,6 +23,7 @@ mod/*
 media/video
 media/audio
 py4e-private
+a-*.png
 
 geodata.sqlite
 content.sqlite

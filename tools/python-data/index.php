@@ -18,13 +18,13 @@ if ( SettingsForm::handleSettingsPost() ) {
 
 // All the assignments we support
 $assignments = array(
-    'regex_sum.php' => 'Sum with a Regular Expression',
-    'http_headers.php' => 'Exploring HyperText Transport Protocol',
-    'comment_html.php' => 'Sum comment data from HTML',
-    'knows.php' => 'Follow links in a series of web pages.',
-    'comment_xml.php' => 'Sum comment data from XML',
-    'comment_json.php' => 'Sum comment data from JSON',
-    'geo_json.php' => 'Retrieve GEO data from a JSON API'
+    'regex_sum.php' => 'Sumowanie przy użyciu wyrażeń regularnych',
+    'http_headers.php' => 'Sprawdzanie nagłówków HTTP',
+    'comment_html.php' => 'Sumowanie liczby komentarzy z HTMLa',
+    'knows.php' => 'Przechodzenie po linkach na stronach internetowych.',
+    'comment_xml.php' => 'Sumowanie liczby komentarzy z XMLa',
+    'comment_json.php' => 'Sumowanie liczby komentarzy z JSONa',
+    'geo_json.php' => 'Pobieranie danych geograficznych z JSONa przy pomocy API'
 );
 
 $oldsettings = Settings::linkGetAll();
@@ -50,11 +50,11 @@ if ( count($_POST) > 0 && $assn && isset($assignments[$assn]) ) {
 $menu = false;
 if ( $LAUNCH->link && $LAUNCH->user && $LAUNCH->user->instructor ) {
     $menu = new \Tsugi\UI\MenuSet();
-    $menu->addLeft('Student Data', 'grades.php');
+    $menu->addLeft('Dane kursantów', 'grades.php');
     if ( $CFG->launchactivity ) {
-        $menu->addRight(__('Launches'), 'analytics');
+        $menu->addRight(__('Uruchomienia'), 'analytics');
     }
-    $menu->addRight(__('Settings'), '#', /* push */ false, SettingsForm::attr());
+    $menu->addRight(__('Konfiguracja'), '#', /* push */ false, SettingsForm::attr());
 }
 
 // View
@@ -64,7 +64,7 @@ $OUTPUT->topNav($menu);
 
 // Settings dialog
 SettingsForm::start();
-SettingsForm::select("exercise", __('Please select an assignment'),$assignments);
+SettingsForm::select("exercise", __('Wybierz zadanie'),$assignments);
 SettingsForm::dueDate();
 SettingsForm::done();
 SettingsForm::end();
@@ -77,9 +77,9 @@ if ( $assn && isset($assignments[$assn]) ) {
     require($assn);
 } else {
     if ( $USER->instructor ) {
-        echo("<p>Please use settings to select an assignment for this tool.</p>\n");
+        echo("<p>Skonfiguruj aktywność aby wybrać zadanie.</p>\n");
     } else {
-        echo("<p>This tool needs to be configured - please see your instructor.</p>\n");
+        echo("<p>Aktywność wymaga skonfigurowania. Skontaktuj się ze swoim instruktorem.</p>\n");
     }
 }
         

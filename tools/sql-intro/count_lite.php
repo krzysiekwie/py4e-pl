@@ -140,33 +140,31 @@ if ( $dueDate->message ) {
 <form name="myform" enctype="multipart/form-data" method="post" >
 Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i prześlij poniżej plik z bazą SQLite3:<br/>
 <input name="database" type="file"> 
-(Plik musi mieć rozszerzenie .sqlite)<br/>
-Wskazówka: The top organizational count is <?= $answer['iupui.edu'] ?>.<br/>
+(Plik musi mieć rozszerzenie <code>.sqlite</code>)<br/>
+Wskazówka: największa liczba wysłanych e-maili przez organizację wynosi <?= $answer['iupui.edu'] ?>.<br/>
 <input type="submit" value="Wyślij rozwiązanie">
 <p>
-Nie musisz eksportować ani konwertować bazy - po prostu wyślij utworzony przez Twój program plik <b>.sqlite</b>.
-Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <b>connect()</b>.
+Nie musisz eksportować ani konwertować bazy - po prostu wyślij utworzony przez Twój program plik <code>.sqlite</code>.
+Przejrzyj przykładowy kod aby zobaczyć w jaki sposób użyć funkcji <code>connect()</code>.
 </p>
 </form>
 </p>
 <h1>Zliczanie organizacji</h1>
 <p>
-Aplikacja będzie odczytywała dane mailowe (plik <b>mbox.txt</b>) i zliczy ile każda 
+Aplikacja będzie odczytywała dane mailowe (plik <code>mbox.txt</code>) i zliczy ile każda 
 organizacja wysłała wiadomości mailowych (tzn. każda część domenowa adresu e-mail
 będzie traktowana jako organizacja). Dane będą przechowywane w bazie danych 
 o poniższym schemacie:
-<pre>
-CREATE TABLE Counts
+<pre class="sql"><code>CREATE TABLE Counts
 (
     org   TEXT,
     count INTEGER
-);
-</pre>
-Po uruchomieniu programu na pliku <b>mbox.txt</b>, jako rozwiązanie wgraj tutaj wynikową bazą danę. 
+);</code></pre>
+Po uruchomieniu programu na pliku <code>mbox.txt</code>, jako rozwiązanie wgraj tutaj wynikową bazą danę. 
 </p>
 <p>
-Jeśli będzie uruchamiał program kilka razy lub jeśli będziesz używał różnych plików wejściowych,
-to pamiętaj aby za każdym razem wyczyścić bazę danych.
+Jeśli będziesz uruchamiać swój program kilka razy lub będziesz używać różnych plików wejściowych,
+to pamiętaj aby za każdym razem wyczyścić swoją bazę danych.
 <p>
 
 Możesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu <a href="https://py4e.pl/code3/emaildb.py" target="_blank">
@@ -177,8 +175,8 @@ Dane do tego zdania dostępne są w pliku <a href="https://py4e.pl/code3/mbox.tx
 https://py4e.pl/code3/mbox.txt</a>.
 </p>
 <p>
-Ponieważ przykładowy kod podczas odczytywania każdego rekordu w pętli używa instrukcji <b>UPDATE</b> i przekazuje wyniki do bazy danych, przetworzenie wszystkich danych może zająć nawet kilka minut. Metoda <b>commit()</b> powoduje, że nowe dane są zapisywane na dysku za każdym wywołaniem tej metody.
+Przykładowy kod w pętli podczas odczytywania każdego rekordu używa instrukcji <code>UPDATE</code> i przekazuje wyniki do bazy danych. W związku z tym przetworzenie wszystkich danych może zająć nawet kilka minut. Metoda <code>commit()</code> powoduje, że nowe dane są zapisywane na dysku za każdym razem gdy zostanie wywołana ta metoda.
 </p>
 <p>
-Program można znacznie przyspieszyć przenosząc poza pętlę operację <b>commit()</b>. W każdym programie bazodanowym istnieje równowaga między liczbą wykonywanych operacji zapisywania danych a troską o to aby nie utracić wyników operacji, które nie zostały jeszcze zapisane.
+Program można znacznie przyspieszyć przenosząc poza pętlę operację <code>commit()</code>. W każdym programie bazodanowym istnieje równowaga między liczbą wykonywanych operacji zapisywania danych a troską o to aby nie utracić wyników operacji, które nie zostały jeszcze zapisane.
 </p>

@@ -17,7 +17,7 @@ Możesz myśleć o słowniku jako o mapowaniu pomiędzy zestawem indeksów (któ
 
 Jako przykład zbudujemy słownik, który mapuje słowa angielskie na hiszpańskie, więc klucze i wartości będą ciągami znaków.
 
-Funkcja `dict` tworzy nowy słownik bez żadnych elementów. Ponieważ `dict` jest nazwą wbudowanej funkcji, powinieneś unikać używania jej jako nazwy zmiennej.
+Funkcja `dict()` tworzy nowy słownik bez żadnych elementów. Ponieważ `dict()` jest nazwą wbudowanej funkcji, powinieneś unikać używania jej jako nazwy zmiennej.
 
 \index{dict, funkcja}
 \index{funkcja!dict}
@@ -37,33 +37,33 @@ Nawiasy klamrowe, `{}`, reprezentują pusty słownik. Aby dodać elementy do sł
 >>> eng2sp['one'] = 'uno'
 ~~~~
 
-Powyższa linia tworzy element, który mapuje klucz `'one'` do wartości "uno". Jeśli ponownie wyświetlimy słownik, to zobaczymy parę klucz-wartość z dwukropkiem pomiędzy kluczem a wartością:
+Powyższa linia tworzy element, który mapuje klucz `'one'` do wartości `'uno'`. Jeśli ponownie wyświetlimy słownik, to zobaczymy parę klucz-wartość z dwukropkiem pomiędzy kluczem a wartością:
 
 ~~~~ {.python}
 >>> print(eng2sp)
 {'one': 'uno'}
 ~~~~
 
-Widoczny powyżej format wyjściowy jest również formatem wejściowym. Na przykład, możesz utworzyć nowy słownik z trzema elementami. Ale jeśli wydrukujesz `eng2sp`, możesz być zaskoczony:
+Widoczny powyżej format wyjściowy jest również formatem wejściowym. Na przykład możesz utworzyć nowy słownik z trzema elementami:
 
 ~~~~ {.python}
 >>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
 >>> print(eng2sp)
-{'one': 'uno', 'three': 'tres', 'two': 'dos'}
+{'one': 'uno', 'two': 'dos', 'three': 'tres'}
 ~~~~
 
-Kolejność par klucz-wartość nie jest taka sama. W rzeczywistości, jeśli wpiszesz ten sam przykład na swoim komputerze, możesz uzyskać inny wynik. Ogólnie rzecz biorąc, kolejność pozycji w słowniku jest nieprzewidywalna.
+W Pythonie od wersji 3.6 kolejność par klucz-wartość jest zgodna kolejnością ich wstawienia do słownika (w poprzednich wersjach Pythona kolejność pozycji była nieprzewidywalna).
 
 \index{wyszukiwanie}
 
-Jednak nie jest to problem, ponieważ elementy słownika nigdy nie są indeksowane za pomocą liczb całkowitych. Zamiast tego używasz kluczy do szukania odpowiadających im wartości:
+Pomimo tej nowej własności, tradycyjnie do wyszukiwania elementów słownika używamy kluczy:
 
 ~~~~ {.python}
 >>> print(eng2sp['two'])
 'dos'
 ~~~~
 
-Klucz `'two'` zawsze mapuje się do wartości "dos", więc kolejność elementów nie ma znaczenia.
+Klucz `'two'` zawsze mapuje się do wartości `'dos'`.
 
 Jeśli klucza nie ma w słowniku, otrzymasz wyjątek:
 
@@ -75,7 +75,7 @@ Jeśli klucza nie ma w słowniku, otrzymasz wyjątek:
 KeyError: 'four'
 ~~~~
 
-Funkcja `len` działa również na słownikach i zwraca liczbę par klucz-wartość:
+Funkcja `len()` działa również na słownikach i zwraca liczbę par klucz-wartość:
 
 \index{len, funkcja}
 \index{funkcja!len}
@@ -99,7 +99,7 @@ True
 False
 ~~~~
 
-Aby sprawdzić, czy coś pojawia się w słowniku jako wartość, możesz użyć metody `values`, która zwraca wartości jako typ, który może być skonwertowany na listę, a następnie użyć operatora `in`:
+Aby sprawdzić, czy coś pojawia się w słowniku jako wartość, możesz użyć metody `values()`, zwracającą wartości jako typ, który może być skonwertowany na listę, a następnie użyć operatora `in`:
 
 \index{values, metoda}
 \index{metoda!values}
@@ -110,30 +110,30 @@ Aby sprawdzić, czy coś pojawia się w słowniku jako wartość, możesz użyć
 True
 ~~~~
 
-Operator `in` używa różnych algorytmów dla list i słowników. W przypadku list, używa algorytmu wyszukiwania liniowego. Gdy lista staje się dłuższa, czas wyszukiwania wydłuża się bezpośrednio proporcjonalnie do jej długości. W przypadku słowników Python używa algorytmu zwanego *tablicą mieszającą* lub *tablicą z haszowaniem*, który ma niezwykłą właściwość: operator `in` zajmuje mniej więcej tyle samo czasu, niezależnie od tego, ile pozycji jest w słowniku. Nie będę tłumaczył, dlaczego funkcje haszujące są tak magiczne, ale możesz przeczytać o tym więcej na stronie <https://pl.wikipedia.org/wiki/Tablica_mieszająca>.
+Operator `in` używa różnych algorytmów dla list i słowników. W przypadku list, używa algorytmu wyszukiwania liniowego. Gdy lista staje się dłuższa, czas wyszukiwania wydłuża się wprost proporcjonalnie do jej długości. W przypadku słowników Python używa algorytmu zwanego *tablicą mieszającą* lub *tablicą z haszowaniem*, który ma niezwykłą właściwość: operator `in` zajmuje mniej więcej tyle samo czasu, niezależnie od tego, ile pozycji jest w słowniku. Nie będę tłumaczył, dlaczego funkcje haszujące są tak magiczne, ale możesz przeczytać o tym więcej na stronie [https://pl.wikipedia.org/wiki/Tablica_mieszająca](https://pl.wikipedia.org/wiki/Tablica_mieszaj%C4%85ca).
 
 \index{tablica z haszowaniem}
 \index{tablica mieszająca}
 \index{funkcja haszująca}
-\index{zbiór!przynależność}
+\index{zbiór, przynależność}
 \index{przynależność!zbiór}
 
 #### Ćwiczenie 1
 
 Pobierz kopię pliku <https://py4e.pl/code3/words.txt>
 
-Napisz program, który odczytuje słowa z *words.txt* i przechowuje je jako klucze w słowniku. Nie ma znaczenia, jakie będą wartości w słowniku. Następnie możesz użyć operatora `in` jako szybkiego sposobu na sprawdzenie, czy dany wyraz znajduje się w słowniku.
+Napisz program, który odczytuje słowa z `words.txt` i przechowuje je jako klucze w słowniku. Nie ma znaczenia, jakie będą wartości w słowniku. Następnie możesz użyć operatora `in` jako szybkiego sposobu na sprawdzenie, czy dany wyraz znajduje się w słowniku.
 
 Słownik jako zbiór liczników
 ----------------------------
 
 \index{licznik}
 
-Załóżmy, że otrzymałeś ciąg znaków zawierający angielski wyraz i chcesz policzyć ile razy każda litera się w nim pojawiła. Możesz to zrobić na kilka sposobów:
+Załóżmy, że otrzymałeś ciąg znaków zawierający angielski wyraz i chcesz policzyć, ile razy każda litera się w nim pojawiła. Możesz to zrobić na kilka sposobów:
 
 1.  Mógłbyś utworzyć 26 zmiennych, po jednej dla każdej litery alfabetu. Następnie mógłbyś przejść po napisie i dla każdego znaku zwiększyć odpowiedni licznik, prawdopodobnie używając połączonych wyrażeń warunkowych.
 
-2.  Mógłbyś utworzyć listę z 26 elementami. Następnie mógłbyś przekonwertować każdy znak na liczbę (używając wbudowanej funkcji `ord`), użyć liczby jako indeksu do listy i zwiększyć odpowiedni licznik.
+2.  Mógłbyś utworzyć listę z 26 elementami. Następnie mógłbyś przekonwertować każdy znak na liczbę (używając wbudowanej funkcji `ord()`), użyć liczby jako indeksu do listy i zwiększyć odpowiedni licznik.
 
 3.  Mógłbyś utworzyć słownik, w którym znaki byłyby kluczami, a liczniki odpowiednimi wartościami. Za pierwszym razem, gdy natrafisz na znak, dodasz element do słownika. Następnie zwiększałbyś wartość istniejącej wartości.
 
@@ -141,7 +141,7 @@ Każda z tych opcji wykonuje to samo obliczenie, ale każda z nich implementuje 
 
 \index{implementacja}
 
-*Implementacja* to sposób przeprowadzenia obliczeń; niektóre implementacje są lepsze od innych. Na przykład, zaletą implementacji poprzez słownik jest to, że nie musimy z góry wiedzieć, które litery pojawiają się w ciągu znaków i musimy tylko zrobić miejsce na te, które faktycznie się pojawiają.
+*Implementacja* to sposób przeprowadzenia obliczeń; niektóre implementacje są lepsze od innych. Na przykład zaletą implementacji poprzez słownik jest to, że nie musimy z góry wiedzieć, które litery pojawiają się w ciągu znaków, i musimy tylko zrobić miejsce na te, które faktycznie się pojawiają.
 
 Oto jak może wyglądać kod:
 
@@ -169,15 +169,15 @@ Pętla `for` przechodzi po ciągu znaków. Za każdym razem gdy przechodzimy prz
 Oto wynik programu:
 
 ~~~~
-{'a': 1, 'b': 1, 'o': 2, 'n': 1, 's': 2, 'r': 2, 'u': 2, 't': 1}
+{'b': 1, 'r': 2, 'o': 2, 'n': 1, 't': 1, 's': 2, 'a': 1, 'u': 2}
 ~~~~
 
-Histogram wskazuje, że litery "a" i "b" pojawiają się raz; "o" pojawia się dwa razy, i tak dalej.
+Histogram wskazuje, że np. litery "a" i "b" pojawiają się raz; "o" pojawia się dwa razy itd.
 
 \index{get, metoda}
 \index{metoda!get}
 
-Słowniki posiadają metodę `get`, która przyjmuje klucz i domyślną wartość. Jeśli klucz pojawia się w słowniku, `get` zwraca odpowiednią wartość; w przeciwnym razie zwraca wartość domyślną. Na przykład:
+Słowniki posiadają metodę `get()`, która przyjmuje klucz i domyślną wartość. Jeśli klucz pojawia się w słowniku, `get()` zwraca odpowiednią wartość; w przeciwnym razie zwraca wartość domyślną. Na przykład:
 
 ~~~~ {.python .trinket}
 >>> counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
@@ -187,24 +187,24 @@ Słowniki posiadają metodę `get`, która przyjmuje klucz i domyślną wartoś�
 0
 ~~~~
 
-Możemy użyć `get` do bardziej zwięzłego napisania naszej pętli z histogramem. Ponieważ metoda `get` automatycznie zajmuje się przypadkiem gdy danego klucza nie ma w słowniku, możemy zredukować cztery linie do jednej i wyeliminować instrukcję `if`.
+Możemy użyć `get()` do bardziej zwięzłego napisania naszej pętli z histogramem. Ponieważ metoda `get()` automatycznie zajmuje się przypadkiem, gdy danego klucza nie ma w słowniku, możemy zredukować cztery linie do jednej i wyeliminować instrukcję `if`.
 
 ~~~~ {.python}
 word = 'brontosaurus'
 d = dict()
 for c in word:
-    d[c] = d.get(c,0) + 1
+    d[c] = d.get(c, 0) + 1
 print(d)
 ~~~~
 
-Użycie metody `get` do uproszczenia tej pętli zliczania kończy się bardzo często używanym "idiomem" w Pythonie i będziemy go używać wiele razy w pozostałej części książki. Powinieneś poświęcić chwilę na porównanie pętli przy użyciu instrukcji `if` i operatora `in` z pętlą przy użyciu metody `get`. Robią dokładnie to samo, ale drugi sposób jest bardziej zwięzły.
+Użycie metody `get()` do uproszczenia tej pętli zliczania kończy się bardzo często używanym "idiomem" w Pythonie i będziemy go używać wiele razy w pozostałej części książki. Powinieneś poświęcić chwilę na porównanie pętli przy użyciu instrukcji `if` i operatora `in` z pętlą przy użyciu metody `get()`. Robią dokładnie to samo, ale drugi sposób jest bardziej zwięzły.
 
 \index{idiom}
 
 Słowniki i pliki
 ----------------
 
-Jednym z częstych zastosowań słownika jest zliczanie występowania słów w pliku zawierającego jakiś tekst. Zacznijmy od bardzo prostego pliku zawierającego słowa wzięte z książki *Romeo i Julia* (użyjemy tekstu w wersji angielskiej).
+Jednym z częstych zastosowań słownika jest zliczanie występowania słów w pliku zawierającym jakiś tekst. Zacznijmy od bardzo prostego pliku zawierającego słowa wzięte z dramatu *Romeo i Julia* (użyjemy tekstu w wersji angielskiej).
 
 Do pierwszego zestawu przykładów wykorzystamy skróconą i uproszczoną wersję tekstu bez interpunkcji. Później będziemy pracować z tekstem zawierającym interpunkcję.
 
@@ -213,14 +213,14 @@ Do pierwszego zestawu przykładów wykorzystamy skróconą i uproszczoną wersj�
     Arise fair sun and kill the envious moon
     Who is already sick and pale with grief
 
-Napiszemy w Pythonie program, które odczyta wiersze pliku, rozbijemy każdy wiersz na listę słów, a następnie przejdziemy w pętli przez każde słowo zawarte w linii i za pomocą słownika policzymy występienie każdego słowa.
+Napiszemy w Pythonie program, który odczyta wiersze pliku, rozbijemy każdy wiersz na listę słów, a następnie przejdziemy w pętli przez każde słowo zawarte w linii i za pomocą słownika policzymy wystąpienia każdego słowa.
 
 \index{zagnieżdżone pętle}
 \index{pętla!zagnieżdżona}
 
-Za chwilę zobaczysz, że mamy dwie pętle `for`. Pętla zewnętrzna odczytuje wiersze pliku, a pętla wewnętrzna iteruje przez każde ze słów w danym wierszu. Jest to przykład schematu zwanego *pętlą zagnieżdżoną*, ponieważ jedna z pętli jest pętlą *zewnętrzną*, a druga pętlą *wewnętrzną*.
+Za chwilę zobaczysz, że mamy dwie pętle `for`. Pętla zewnętrzna odczytuje wiersze pliku, a pętla wewnętrzna iteruje przez każde ze słów w danym wierszu. Jest to przykład schematu zwanego *pętlą zagnieżdżoną*, ponieważ jedna z pętli jest pętlą *zewnętrzną*, a druga – pętlą *wewnętrzną*.
 
-Pętla wewnętrzna wykonuje wszystkie swoje iteracje za każdym razem gdy pętla zewnętrzna wykonuje jedną iterację. W związku z tym myślimy o pętli wewnętrznej jako iterującej "szybciej", a o pętli zewnętrznej jako iterującej wolniej.
+Pętla wewnętrzna wykonuje wszystkie swoje iteracje za każdym razem, gdy pętla zewnętrzna wykonuje jedną iterację. W związku z tym myślimy o pętli wewnętrznej jako iterującej "szybciej", a o pętli zewnętrznej jako iterującej wolniej.
 
 \index{Romeo i Julia}
 
@@ -233,17 +233,16 @@ Połączenie dwóch zagnieżdżonych pętli zapewnia, że będziemy zliczać ka�
 
 W naszej instrukcji `else` używamy zwięzłej alternatywy dla inkrementacji zmiennej. `counts[word] += 1` jest odpowiednikiem `counts[word] = counts[word] + 1`. Każdej z tych metod można użyć do zmiany wartości zmiennej o dowolną pożądaną wielkość. Podobne alternatywy istnieją dla `-=`, `*=` i `/=`.
 
-Kiedy uruchamiamy program, widzimy surowy zrzut wszystkich zliczeń w nieposortowanej kolejności tablicy haszującej. (Plik *romeo.txt* jest dostępny pod adresem <https://py4e.pl/code3/romeo.txt>).
+Kiedy uruchomimy program, zobaczymy surowy zrzut wszystkich zliczeń w tablicy haszującej w kolejności wstawiania nowych słów. Poniżej widzimy uruchomienie programu na pliku `romeo.txt`, który jest dostępny pod adresem <https://py4e.pl/code3/romeo.txt>.
 
 ~~~~
-python count1.py
 Podaj nazwę pliku: romeo.txt
-{'and': 3, 'envious': 1, 'already': 1, 'fair': 1,
-'is': 3, 'through': 1, 'pale': 1, 'yonder': 1,
-'what': 1, 'sun': 2, 'Who': 1, 'But': 1, 'moon': 1,
-'window': 1, 'sick': 1, 'east': 1, 'breaks': 1,
-'grief': 1, 'with': 1, 'light': 1, 'It': 1, 'Arise': 1,
-'kill': 1, 'the': 3, 'soft': 1, 'Juliet': 1}
+{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 
+ 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 
+ 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 
+ 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 
+ 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 
+ 'grief': 1}
 ~~~~
 
 Trochę niewygodne jest przeglądanie słownika w celu znalezienia najczęściej używanych słów i ich wystąpień, więc musimy dodać trochę więcej kodu Pythona, tak aby uzyskać wynik, które będzie bardziej pomocny.
@@ -258,7 +257,7 @@ Pętle i słowniki
 Jeśli używasz słownika jako sekwencji w instrukcji `for`, pętla przechodzi wtedy przez klucze słownika. Poniższa pętla wyświetla każdy klucz i odpowiadającą mu wartość:
 
 ~~~~ {.python}
-counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100 }
 for key in counts:
     print(key, counts[key])
 ~~~~
@@ -266,29 +265,27 @@ for key in counts:
 Oto jak wygląda wynik działania programu:
 
 ~~~~
-jan 100
 chuck 1
 annie 42
+jan 100
 ~~~~
-
-Tak jak poprzednio, klucze nie są w żadnej konkretnej kolejności.
 
 \index{idiom}
 
 Możemy użyć tego schematu do zaimplementowania różnych idiomów pętli, które opisaliśmy wcześniej. Na przykład, jeśli chcielibyśmy znaleźć wszystkie wpisy w słowniku o wartości powyżej dziesięciu, moglibyśmy napisać następujący kod:
 
 ~~~~ {.python}
-counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100 }
 for key in counts:
     if counts[key] > 10 :
         print(key, counts[key])
 ~~~~
 
-Pętla `for` iteruje przez *klucze* słownika, więc dla każdego klucza musimy użyć operatora indeksu w celu pobrania odpowiedającej mu *wartości*. Poniżej mamy wynik działania programu:
+Pętla `for` iteruje przez *klucze* słownika, więc dla każdego klucza musimy użyć operatora indeksu w celu pobrania odpowiadającej mu *wartości*. Poniżej mamy wynik działania programu:
 
 ~~~~
-jan 100
 annie 42
+jan 100
 ~~~~
 
 Widzimy teraz tylko te elementy, które mają wartość powyżej 10.
@@ -296,10 +293,10 @@ Widzimy teraz tylko te elementy, które mają wartość powyżej 10.
 \index{keys, metoda}
 \index{metoda!keys}
 
-Jeżeli chcesz wyświetlić klucze w porządku alfabetycznym, to korzystając z metody `keys` dostępnej w obiektach słownikowych sporządzasz listę kluczy występujących w słowniku, a następnie sortujesz tę listę i przechodzisz w pętli po tej posortowanej liście, przeglądając każdy klucz i wyświetlając pary klucz-wartość w posortowanej kolejności, tak jak pokazano poniżej:
+Jeżeli chcesz wyświetlić klucze w porządku alfabetycznym, to – korzystając z metody `keys()` dostępnej w obiektach słownikowych – sporządzasz listę kluczy występujących w słowniku, a następnie sortujesz ją i przechodzisz w pętli po tej posortowanej liście, przeglądając każdy klucz i wyświetlając pary klucz-wartość w posortowanej kolejności, tak jak pokazano poniżej:
 
 ~~~~ {.python}
-counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100 }
 lst = list(counts.keys())
 print(lst)
 lst.sort()
@@ -310,20 +307,20 @@ for key in lst:
 Oto jak wygląda wynik programu:
 
 ~~~~
-['jan', 'chuck', 'annie']
+['chuck', 'annie', 'jan']
 annie 42
 chuck 1
 jan 100
 ~~~~
 
-Najpierw widzisz listę kluczy w nieposortowanej kolejności, które otrzymujemy z metody `keys`. Następnie widzimy uporządkowane pary klucz-wartość, wyświetlane w pętli `for`.
+Najpierw widzisz listę kluczy w nieposortowanej kolejności, które otrzymujemy z metody `keys()`. Następnie widzimy uporządkowane pary klucz-wartość, wyświetlane w pętli `for`.
 
 Zaawansowane parsowanie tekstu
 -------------------------------
 
 \index{Romeo i Julia}
 
-W powyższym przykładzie, używając pliku *romeo.txt*, uczyniliśmy ten plik tak prostym, jak to tylko możliwe, usuwając ręcznie całą interpunkcję. Rzeczywisty tekst ma dużo interpunkcji, tak jak to pokazano poniżej.
+W powyższym przykładzie, używając pliku `romeo.txt`, uprościliśmy go tak bardzo, jak to tylko możliwe, usuwając ręcznie całą interpunkcję. Rzeczywisty tekst ma dużo interpunkcji, tak jak to pokazano poniżej.
 
 ~~~~
 But, soft! what light through yonder window breaks?
@@ -332,25 +329,40 @@ Arise, fair sun, and kill the envious moon,
 Who is already sick and pale with grief,
 ~~~~
 
-Ponieważ funkcja `split` szuka spacji i traktuje słowa jako tokeny oddzielone spacjami, traktowalibyśmy słowa "soft!" i "soft" jako *różne* słówa i dla każdego z nich tworzylibyśmy osobny wpis w słowniku.
+Ponieważ funkcja `split()` szuka spacji i traktuje słowa jako tokeny oddzielone spacjami, traktowalibyśmy słowa "soft!" i "soft" jako *różne* słówa i dla każdego z nich tworzylibyśmy osobny wpis w słowniku.
 
 Również ze względu na to, że plik ma tekst pisany dużymi literami, traktowalibyśmy "who" i "Who" jako różne słowa o różnej liczności.
 
-Oba te problemy możemy rozwiązać za pomocą metod związanych z obiektami ciągów znaków: `lower`, `punctuation` i `translate`. Metoda `translate` jest najbardziej wyrafinowaną z tych metod. Oto dokumentacja dla tej metody:
+Oba te problemy możemy rozwiązać za pomocą metod związanych z obiektami ciągów znaków, tj. `lower()`, `maketrans()` i `translate()`. Metoda `translate()` jest najbardziej wyrafinowaną z tych metod. Oto dokumentacja dla tej metody:
 
 `line.translate(str.maketrans(fromstr, tostr, deletestr))`
 
 *Zmienia znaki w `fromstr` na znak na tej samej pozycji w `tostr` i usuwa wszystkie znaki, które są w `deletestr`. Znaki z `fromstr` i `tostr` mogą być pustymi ciągami znaków, a parametr `deletestr` może zostać pominięty.*
 
-Nie będziemy określać parametru `tostr`, ale użyjemy parametru `deletestr` do usunięcia wszystkich znaków interpunkcyjnych. Pozwolimy nawet Pythonowi wskazać nam listę znaków, które uważa za "interpunkcję":
+Moduł `string` dostarcza gotowe sekwencje znaków, które reprezentują np. liczby lub litery. Przykładowo, w `string.digits` znajdziemy ciąg znaków zwierający liczby: 
 
 ~~~~ {.python}
 >>> import string
+>>> string.digits
+'0123456789'
+~~~~
+
+Metoda `maketrans()` z pustymi ciągami znaków `fromstr` i `tostr` utworzy nam słownik, w którym będziemy mieli informację o tym na co ma być zamieniony dany znak (a w zasadzie jego reprezentacja liczbowa). Możemy zauważyć, że za każdym razem chcemy dokonać zamiany na `None`, co oznacza, że chcemy usunąć dany znak:
+
+~~~~ {.python}
+>>> str.maketrans('', '', string.digits)
+{48: None, 49: None, 50: None, 51: None, 52: None, 
+ 53: None, 54: None, 55: None, 56: None, 57: None}
+~~~~
+
+Taki utworzony słownik możemy potem wykorzystać w metodzie `translate()` do efektywnego usunięcia znaków.
+
+Wracając do naszego programu, nie będziemy określać parametru `fromstr` i `tostr` (będą pustymi ciągami znaków), ale użyjemy parametru `deletestr` do usunięcia wszystkich znaków interpunkcyjnych. Pozwolimy nawet Pythonowi wskazać nam sekwencję znaków, które uważa za "interpunkcję":
+
+~~~~ {.python}
 >>> string.punctuation
 '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 ~~~~
-
-Parametry używane przez `translate` były inne w Pythonie 2.0.
 
 Dokonujemy następujących zmian w naszym programie:
 
@@ -359,106 +371,91 @@ Dokonujemy następujących zmian w naszym programie:
 ../code3/romeo-full.txt
 \end{trinketfiles}
 
-Częścią uczenia się "Sztuki Pythona" lub "Myślenia po pythonowemu" jest uświadomienie sobie, że Python często ma wbudowane rozwiązania dla wielu prostych problemów związanych z analizą danych. Z czasem zobaczysz wystarczająco dużo kodu przykładowego i przeczytasz wystarczająco dużo dokumentacji, tak aby wiedzieć gdzie szukać by sprawdzić czy ktoś już nie napisał czegoś co znacznie ułatwi Ci pracę.
+Częścią uczenia się "Sztuki Pythona" lub "Myślenia po pythonowemu" jest uświadomienie sobie, że Python często ma wbudowane rozwiązania dla wielu prostych problemów związanych z analizą danych. Z czasem zobaczysz wystarczająco dużo kodu przykładowego i przeczytasz wystarczająco dużo dokumentacji, tak aby wiedzieć, gdzie szukać, by sprawdzić, czy ktoś już nie napisał czegoś, co znacznie ułatwi Ci pracę.
 
-Poniżej znajduje się skrócona wersja wyniku programu:
+Poniżej znajduje się skrócony wynik działania programu na pliku `romeo-full.txt`, który jest dostępny pod adresem <https://py4e.pl/code3/romeo-full.txt>.
 
 ~~~~
 Podaj nazwę pliku: romeo-full.txt
-{'swearst': 1, 'all': 6, 'afeard': 1, 'leave': 2, 'these': 2,
-'kinsmen': 2, 'what': 11, 'thinkst': 1, 'love': 24, 'cloak': 1,
-a': 24, 'orchard': 2, 'light': 5, 'lovers': 2, 'romeo': 40,
-'maiden': 1, 'whiteupturned': 1, 'juliet': 32, 'gentleman': 1,
-'it': 22, 'leans': 1, 'canst': 1, 'having': 1, ...}
+{'romeo': 40, 'and': 42, 'juliet': 32, 'act': 1, '2': 2, 
+ 'scene': 2, 'ii': 1, 'capulets': 1, 'orchard': 2, 
+ 'enter': 1, 'he': 5, 'jests': 1, 'at': 9, 'scars': 1, 
+ 'that': 30, 'never': 2, 'felt': 1, 'a': 24, ...}
 ~~~~
 
-Przeglądanie powyższego wyniku nadal jest niewygodne i choć możemy użyć Pythona by dał nam dokładnie to czego szukamy, ale żeby to zrobić musimy najpierw się dowiedzieć o *krotkach*. Wrócimy do tego przykładu gdy dowiemy się o krotkach.
+Przeglądanie powyższego wyniku nadal jest niewygodne i choć możemy użyć Pythona, by dał nam dokładnie to, czego chcemy, to żeby to zrobić, musimy najpierw poznać *krotki*. Wrócimy do tego przykładu w kolejnym rozdziale.
 
 Debugowanie
 -----------
 
 \index{debugowanie}
+\index{sprawdzenie poczytalności}
+\index{sprawdzenie spójności}
 
-Podczas pracy z większymi zbiorami danych, debugowanie poprzez wyświetlanie i ręczne sprawdzanie danych może okazać się niewygodne. Oto kilka sugestii dotyczących debugowania dużych zbiorów danych:
+Podczas pracy z większymi zbiorami danych debugowanie poprzez wyświetlanie i ręczne sprawdzanie danych może okazać się niewygodne. Oto kilka sugestii dotyczących debugowania dużych zbiorów danych:
 
 Stopniowe redukowanie danych wejściowych
-:   Jeśli to możliwe, zmniejsz rozmiar zbioru danych. Na przykład, jeśli program odczytuje plik tekstowy, zacznij od pierwszych 10 linii lub od najmniejszego przykładu, jaki możesz znaleźć. Możesz albo edytować same pliki, albo (lepiej) zmodyfikować program tak, by czytał tylko pierwsze `n` linii.
+:   Jeśli to możliwe, zmniejsz rozmiar zbioru danych. Na przykład, jeśli program odczytuje plik tekstowy, zacznij od pierwszych 10 linii lub od najmniejszego możliwego fragmentu. Możesz albo edytować same pliki, albo (lepiej) zmodyfikować program tak, by czytał tylko pierwsze `n` linii.
 
     Jeśli jest jakiś błąd, możesz zredukować `n` do najmniejszej wartości, która generuje błąd, a następnie zwiększać tę wartość stopniowo, w międzyczasie znajdując i poprawiając błędy.
 
 Sprawdź podsumowania i typy
-:   Zamiast wyświetlać i sprawdzać cały zbiór danych, zastanów się nad wyświetlaniem podsumowań danych: na przykład, liczbę pozycji w słowniku lub sumę liczb.
+:   Zamiast wyświetlać i sprawdzać cały zbiór danych, spróbuj wyświetlić podsumowanie danych: na przykład liczbę pozycji w słowniku lub sumę liczb.
 
-    Częstą przyczyną błędów czasu wykonania jest wartość, która nie jest właściwego typu. Do debugowania tego typu błędów często wystarczy wydrukować typ wartości.
-
-\index{sprawdzenie poczytalności}
-\index{sprawdzenie spójności}
+    Często błędy czasu wykonania powoduje wartość, która nie jest właściwego typu. Do debugowania tego typu błędów często wystarczy wydrukować typ wartości.
 
 Napisz mechanizm do samokontroli
-:   Czasami możesz napisać kod do automatycznego sprawdzania błędów. Na przykład, jeśli obliczasz średnią z listy liczb, możesz sprawdzić, czy wynik nie jest większy od największego elementu na liście lub mniejszy od najmniejszego. Nazywa się to "sprawdzaniem poczytalności" (ang. sanity check), ponieważ wykrywa ono wyniki, które są "zupełnie nielogiczne".
+:   Czasami warto napisać kod do automatycznego sprawdzania błędów. Na przykład, jeśli obliczasz średnią z listy liczb, możesz sprawdzić, czy wynik nie jest większy od największego elementu na liście lub mniejszy od najmniejszego. Nazywa się to "sprawdzaniem poczytalności" (ang. *sanity check*), ponieważ wykrywa wyniki, które są "zupełnie nielogiczne".
 
-    Inny rodzaj sprawdzenia porównuje wyniki dwóch różnych obliczeń, tak aby sprawdzić czy są one spójne. Nazywa się to "sprawdzaniem spójności" (ang. consistency check).
+    Inny rodzaj sprawdzenia porównuje wyniki dwóch różnych obliczeń, tak aby sprawdzić czy są one spójne. Nazywa się to "sprawdzaniem spójności" (ang. *consistency check*).
 
 Ładne wyświetlenie wyniku
 :   Czytelne sformatowanie wyników debugowania może ułatwić wykrycie błędu.
 
-Ponownie, czas spędzony na budowaniu dodatkowych rusztowań w Twoim programie może skrócić czas, który spędzasz na debugowaniu.
+Pamiętaj, że czas spędzony na budowaniu dodatkowych zabezpieczeń w Twoim programie może skrócić czas, który spędzisz na debugowaniu.
 
 Słowniczek
 ----------
 
 element słownika
-:   Inna nazwa dla pary klucz-wartość.
-\index{element!słownik}
+:   Inna nazwa dla pary klucz-wartość.\index{element!słownik}
 
 funkcja haszująca
-:   Funkcja używana przez tablice mieszające do obliczania lokalizacji dla danego klucza.
-\index{funkcja haszująca}
+:   Funkcja używana przez tablice mieszające do obliczania lokalizacji dla danego klucza.\index{funkcja haszująca}
 
 histogram
-:   Zbiór liczników.
-\index{histogram}
+:   Zbiór liczników.\index{histogram}
 
 implementacja
-:   Sposób przeprowadzenia obliczeń.
-\index{implementacja}
+:   Sposób przeprowadzenia obliczeń.\index{implementacja}
 
 klucz
-:   Obiekt, który pojawia się w słowniku jako pierwsza część pary klucz-wartość.
-\index{klucz}
+:   Obiekt, który pojawia się w słowniku jako pierwsza część pary klucz-wartość.\index{klucz}
 
 para klucz-wartość
-:   Reprezentacja mapowania z klucza do wartości.
-\index{para klucz-wartość}
+:   Reprezentacja mapowania z klucza do wartości.\index{para klucz-wartość}
 
 pętle zagnieżdżone
-:   Kiedy istnieje jedna lub więcej pętli "wewnątrz" innej pętli. Pętla wewnętrzna wykonuje się do końca za każdym razem, gdy pętla zewnętrzna iteruje się raz.
-\index{zagnieżdżone pętle}
-\index{pętla!zagnieżdżona}
+:   Kiedy istnieje jedna lub więcej pętli "wewnątrz" innej pętli. Pętla wewnętrzna wykonuje się do końca za każdym razem, gdy pętla zewnętrzna iteruje się raz.\index{zagnieżdżone pętle}\index{pętla!zagnieżdżona}
 
 słownik
-:   Mapowanie z zestawu kluczy do odpowiadających im wartości.
-\index{słownik}
+:   Mapowanie z zestawu kluczy do odpowiadających im wartości.\index{słownik}
 
 tablica mieszająca
-:   Algorytm używany do implementacji słowników Pythona; inaczej tablica z haszowaniem.
-\index{tablica z haszowaniem}
-\index{tablica mieszająca}
+:   Algorytm używany do implementacji słowników Pythona; inaczej tablica z haszowaniem.\index{tablica z haszowaniem}\index{tablica mieszająca}
 
 wartość
-:   Obiekt, który pojawia się w słowniku jako druga część pary klucz-wartość. Jest to bardziej szczegółowe określenie niż nasze poprzednie użycia słowa "wartość".
-\index{wartość}
+:   Obiekt, który pojawia się w słowniku jako druga część pary klucz-wartość. Jest to bardziej szczegółowe określenie niż nasze poprzednie użycie słowa "wartość".\index{wartość}
 
 wyszukiwanie
-:   Operacja słownikowa, która dla podanego klucza znajduje odpowiadającą mu wartość.
-\index{wyszukiwanie}
+:   Operacja słownikowa, która dla podanego klucza znajduje odpowiadającą mu wartość.\index{wyszukiwanie}
 
 Ćwiczenia
 ---------
 
 #### Ćwiczenie 2
 
-Napisz program, który skategoryzowałby każdą wiadomość pocztową względem czasu wykonania rewizji w projekcie. Aby to zrobić, poszukaj wierszy rozpoczynający się od "From", a następnie poszukaj trzeciego słowa i zachowaj bieżące zliczenia dla każdego dnia tygodnia. Na koniec programu wyświetl zawartość swojego słownika (kolejność nie ma znaczenia).
+Napisz program, który skategoryzowałby każdą wiadomość mailową według dni tygodnia. Aby to zrobić, poszukaj wierszy rozpoczynających się od "From", a następnie poszukaj trzeciego słowa i zachowaj bieżące zliczenia dla każdego dnia. Na koniec programu wyświetl zawartość swojego słownika (kolejność nie ma znaczenia).
 
 Przykładowa linia:
 
@@ -475,21 +472,20 @@ Podaj nazwę pliku: mbox-short.txt
 
 #### Ćwiczenie 3
 
-Napisz program, który odczytuje dane z dziennika skrzynki pocztowej, tworzy histogram przy użyciu słownika by zliczyć ile wiadomości przyszło z każdego adresu e-mail, a pod koniec wyświetla ten słownik.
+Napisz program, który odczytuje dane z pliku w formacie Mbox i przy pomocy słownika tworzy histogram. Chcemy zliczyć, ile wiadomości przyszło z każdego adresu e-mail. Jako wynik działania programu ma zostać wyświetlony utworzony słownik.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
-{'gopal.ramasammycook@gmail.com': 1, 'louis@media.berkeley.edu': 3,
-'cwen@iupui.edu': 5, 'antranig@caret.cam.ac.uk': 1,
-'rjlowe@iupui.edu': 2, 'gsilver@umich.edu': 3,
-'david.horwitz@uct.ac.za': 4, 'wagnermr@iupui.edu': 1,
-'zqian@umich.edu': 4, 'stephen.marquard@uct.ac.za': 2,
-'ray@media.berkeley.edu': 1}
+{'stephen.marquard@uct.ac.za': 2, 'louis@media.berkeley.edu': 3, 
+ 'zqian@umich.edu': 4, 'rjlowe@iupui.edu': 2, 'cwen@iupui.edu': 5, 
+ 'gsilver@umich.edu': 3, 'wagnermr@iupui.edu': 1, 
+ 'antranig@caret.cam.ac.uk': 1, 'gopal.ramasammycook@gmail.com': 1, 
+ 'david.horwitz@uct.ac.za': 4, 'ray@media.berkeley.edu': 1}
 ~~~~
 
 #### Ćwiczenie 4
 
-Do powyższego programu dodaj kod, tak by dowiedzieć się kto otrzymał najwięcej e-maili. Po przeczytaniu wszystkich danych i utworzeniu słownika, przeszukaj słownik za pomocą pętli wyszukującej największą wartość (patrz: Rozdział 5. Pętle typu maksimum i minimum), tak by dowiedzieć się kto ma najwięcej wiadomości, a na koniec wyświetl informację o tym ile wiadomości ma dana osoba.
+Do powyższego programu dodaj kod, tak by dowiedzieć się, kto wysłał najwięcej e-maili. Po przeczytaniu wszystkich danych i utworzeniu słownika, przeszukaj tej osoby za pomocą pętli wyszukującej największą wartość (patrz: rozdział 5, sekcja "Pętle typu maksimum i minimum"). Na koniec programu wyświetl informację dotyczącą adresu mailowego i liczbie wysłanych wiadomości.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
@@ -501,10 +497,10 @@ zqian@umich.edu 195
 
 #### Ćwiczenie 5
 
-Napisz program, który zapamiętuje nazwę domeny, z której została wysłana wiadomość (zamiast informacji od kogo pochodziła wiadomość, tzn. całego adresu e-mail). Na koniec programu wyświetl zawartość swojego słownika.
+Napisz program zapamiętujący nazwę domeny, z której została wysłana wiadomość (zamiast informacji, od kogo pochodziła wiadomość, tzn. całego adresu e-mail). Na koniec programu wyświetl zawartość słownika.
 
 ~~~~
 Podaj nazwę pliku: mbox-short.txt
-{'media.berkeley.edu': 4, 'uct.ac.za': 6, 'umich.edu': 7,
-'gmail.com': 1, 'caret.cam.ac.uk': 1, 'iupui.edu': 8}
+{'uct.ac.za': 6, 'media.berkeley.edu': 4, 'umich.edu': 7, 
+ 'iupui.edu': 8, 'caret.cam.ac.uk': 1, 'gmail.com': 1}
 ~~~~

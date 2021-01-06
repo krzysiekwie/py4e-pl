@@ -66,8 +66,9 @@ unset($_SESSION['postdata']);
 ?>
 <p>
 <b>Eksploracja protokołu HTTP</b>
+</p>
 <p>
-Będziesz musiał pobrać następujący dokument za pomocą protokołu HTTP w taki sposób, tak abyś mógł sprawdzić nagłówki odpowiedzi HTTP.
+W poniższym zadaniu będziesz musiał pobrać następujący dokument za pomocą protokołu HTTP w taki sposób, abyś mógł sprawdzić nagłówki odpowiedzi HTTP.
 <ul>
 <li><a href="<?= $getUrl ?>" target="_blank"><?= $getUrl ?></a></li>
 </ul>
@@ -99,12 +100,13 @@ W każdym z poniższych pól wprowadź wartość nagłówka, a następnie naciś
         echo("<br/>\n");
     } 
 ?>
-<input type="submit" value="Wyślij rozwiązanie">
+<input style="margin-top: 10px;" type="submit" value="Wyślij rozwiązanie">
 </form>
 </p>
 <?php
 if ( $USER->instructor ) {
 echo("\n<hr/>");
+echo("\n<b>Wskazówki dla instruktora:</b><br>\n");
 echo("\n<pre>\n");
 echo("Uzyskane informacje:\n");
 print_r($headers);

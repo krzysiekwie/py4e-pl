@@ -537,7 +537,7 @@ if ( isset($LINK->title) ) {
         mechanizm sprawdzarkowy nadal sprawdzi kod źródłowy, tak aby upewnić się,
         że zaimplementowałeś zadanie przy użyciu oczekiwanych technik z danego 
         rozdziału książki. Komunikaty zwrotne wyświetlane przez system mogą
-        również pomóc kursantom mającym problemy, będąc wskazówkami mówicy 
+        również pomóc kursantom mającym problemy, będąc wskazówkami mówiącymi 
         czego potencjalnie może brakować w ich kodzie.
         </p>
         <p>
@@ -576,9 +576,9 @@ if ( $dueDate->message ) {
 <form id="forminput">
 <?php
     if ( $EX !== false ) {
-         echo('<button onclick="runit()" class="btn btn-primary" type="button">Sprawdź kod</button>'."\n");
+         echo('<button onclick="runit()" class="btn btn-primary" style="margin-left: 5px;" type="button">Sprawdź kod</button>'."\n");
     } else {
-        echo('<button onclick="runit()" class="btn btn-warning" type="button">Uruchom Pythona</button>'."\n");
+        echo('<button onclick="runit()" class="btn btn-warning" style="margin-left: 5px;" type="button">Uruchom Pythona</button>'."\n");
     }
     if ( strlen($CODE) > 0 ) {
         echo('<button onclick="resetcode()" class="btn btn-default" type="button">Zresetuj kod</button> ');
@@ -607,13 +607,13 @@ if ( $OLDCODE !== false ) {
 </div>
 <div id="outputs">
 <div id="left">
-<b>Twój wynik</b>
+<b style="margin-left: 5px;">Twój wynik</b>
 <pre id="output" class="inputarea"></pre>
 </pre>
 </div>
 <?php if ( $EX !== false ) { ?>
 <div id="right">
-<b>Oczekiwany wynik</b>
+<b style="margin-left: 5px;">Oczekiwany wynik</b>
 <pre id="desired" class="inputarea"><?php echo($DESIRED); echo("\n"); ?></pre>
 <span id="desired2" style="display:none"><?php echo($DESIRED2); echo("\n"); ?></span>
 </div>

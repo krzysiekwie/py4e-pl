@@ -86,13 +86,13 @@ Aby otrzymać punkty za to zadanie, wykonaj poniższe instrukcje i wprowadź pon
 <p>
 Aplikacja będzie miała za zadanie odczytać dane dotyczące listy uczestników kursów
 zapisanej w pliku JSON, przeparsować plik, a następnie utworzyć
-bazę danych SQLite zawierającą tabele User, Course i Member uzupełnione odpowiednimi danymi.
+bazę danych SQLite zawierającą tabele <code>User</code>, <code>Course</code> i <code>Member</code> uzupełnione odpowiednimi danymi.
 </p>
 <p>
 Możesz rozpocząć prace nad rozwiązaniem zaczynając od analizy i modyfikacji programu
 <a href="https://py4e.pl/code3/roster/roster.py" target="_blank">
 http://py4e.pl/code3/roster/roster.py</a>. Kod jest niekompletny i musisz
-go zmodyfikować w ten sposób aby przechowywał kolumnę <b>role</b> w tabeli <b>Member</b>.
+go zmodyfikować w ten sposób aby przechowywał kolumnę <code>role</code> w tabeli <code>Member</code>.
 </p>
 <p>
 Każdy kursant pracuje na osobnym pliku z danymi. Ściągnij 
@@ -102,11 +102,9 @@ Każdy kursant pracuje na osobnym pliku z danymi. Ściągnij
 <p>
 Gdy dokonasz niezbędnych zmian w Twoim programie i będzie on w stanie poprawnie
 odczytać dane JSON, uruchom poniższe zapytanie SQL:
-<pre>
-SELECT hex(User.name || Course.title || Member.role ) AS X
+<pre class="sql"><code>SELECT hex(User.name || Course.title || Member.role ) AS X
 FROM   User JOIN Member JOIN Course 
        ON User.id = Member.user_id AND Member.course_id = Course.id
-ORDER BY X;
-</pre>
-Znajdź <b>pierwszy</b> wynikowy wiersz i jako odpowiedź wprowadź długi napis, który wygląda mniej więcej jak <b>53656C696E613333</b>.
+ORDER BY X;</code></pre>
+Znajdź <b>pierwszy</b> wynikowy wiersz i jako odpowiedź wprowadź długi napis, który wygląda mniej więcej jak <code>53656C696E613333</code>.
 </p>

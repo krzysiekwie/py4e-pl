@@ -53,11 +53,10 @@ x is not y           # x nie jest tym samym co y
 Choć te operacje są pewnie Ci znane, symbole Pythona różnią się od symboli 
 matematycznych dla tych samych operacji. Częstym błędem jest użycie pojedynczego
 znaku równości (`=`) zamiast znaku podwójnej równości (`==`). Pamiętaj, że `=`
-jest operatorem przypisania, a `==` jest operatorem porównania. Nie ma czegoś
-takiego jak `=<` lub `=>`.
+jest operatorem przypisania, a `==` jest operatorem porównania. Nie ma znaków takich jak `=<` lub `=>`.
 
 \index{porównanie, operator}
-\index{operator!porówania}
+\index{operator!porównania}
 
 Operatory logiczne
 ------------------
@@ -67,21 +66,21 @@ Operatory logiczne
 
 Istnieją trzy *operatory logiczne*: `and`,
 `or` i `not`. Semantyka (znaczenie) tych operatorów jest podobna do ich
-znaczenia w języku angielskim. Na przykład,
+znaczenia w języku angielskim. Na przykład wyrażenie
 
 `x > 0 and x < 10`
 
-jest prawdziwe tylko wtedy, gdy `x` jest większe niż 0 *i* mniejsze niż 10.
+jest prawdziwe tylko wtedy, gdy wartość zmiennej `x` jest większa niż 0 *i* mniejsza niż 10.
 
 \index{operator!and}
 \index{operator!or}
 \index{operator!not}
 
-`n%2 == 0 or n%3 == 0` jest prawdziwe, jeśli *którykolwiek* z tych warunków 
-jest prawdziwy, to znaczy, jeśli liczba jest podzielna przez 2 *lub* 3.
+Wyrażenie `n%2 == 0 or n%3 == 0` jest prawdziwe, jeśli *którykolwiek* z tych warunków 
+jest prawdziwy, tzn. jeśli liczba jest podzielna przez 2 *lub* 3.
 
 Operator `not` neguje wyrażenie logiczne, więc `not (x > y)` jest prawdziwe, 
-jeśli `x > y` jest fałszywe, tzn. jeśli `x` jest mniejsze lub równe `y`.
+jeśli `x > y` jest fałszywe, tzn. jeśli wartość `x` jest mniejsza lub równa `y`.
 
 Ściślej mówiąc, operandy operatorów logicznych powinny być wyrażeniami 
 logicznymi, ale Python nie jest tutaj bardzo restrykcyjny. Każda dodatnia 
@@ -93,7 +92,7 @@ True
 ~~~~
 
 Ta elastyczność może być użyteczna, ale istnieją pewne niuanse, które mogą być 
-mylące. Być może będziesz chciał ich unikać, dopóki nie będziesz pewien, że 
+mylące. Lepiej ich unikać, dopóki nie będziesz pewien, że 
 wiesz, co robisz.
 
 Instrukcja warunkowa
@@ -108,7 +107,7 @@ Instrukcja warunkowa
 \index{wykonanie warunkowe}
 
 Aby napisać użyteczny program, prawie zawsze potrzebujemy możliwości sprawdzenia
-pewnych warunków i odpowiedniej zmiany zachowania programu. *Instrukcje
+pewnych warunków i dostosowania do nich zachowania programu. *Instrukcje
 warunkowe* dają nam tę możliwość. Najprostszą formą jest instrukcja `if`:
 
 ~~~~ {.python}
@@ -117,13 +116,13 @@ if x > 0 :
 ~~~~
 
 Wyrażenie logiczne po instrukcji `if` jest nazywane *warunkiem*. Kończymy
-wyrażenie `if` znakiem dwukropka (:), a linia (linie) po wyrażeniu `if` są
+wyrażenie `if` znakiem dwukropka (:), a linia lub linie po wyrażeniu `if` są
 wcięte.
 
 ![Logika instrukcji if](height=1.5in@../images/if)
 
-Jeśli warunek logiczny jest prawdziwy, to wykonywane jest wcięcie wyrażenia.
-Jeśli warunek logiczny jest fałszywy, to wcięcie wyrażenia jest pomijane.
+Jeśli warunek logiczny jest prawdziwy, to wykonywane jest wyrażenie we wcięciu.
+Jeśli warunek logiczny jest fałszywy, to wyrażenie we wcięciu jest pomijane.
 
 \index{warunek}
 \index{złożona, instrukcja}
@@ -139,7 +138,7 @@ nazywane są *instrukcjami złożonymi*, ponieważ rozciągają się na więcej 
 jedną linię.
 
 Nie ma ograniczenia co do liczby instrukcji, które mogą pojawić się w ciele
-instrukcji `if`, ale musi być co najmniej jedno. Od czasu do czasu warto mieć
+instrukcji `if`, ale musi być co najmniej jedno. Czasami warto przygotować 
 ciało `if` bez instrukcji (zazwyczaj jako miejsce na kod, którego jeszcze nie
 napisałeś). W takim przypadku możesz użyć `pass`, który nie robi nic.
 
@@ -199,7 +198,7 @@ else :
 ~~~~
 
 Jeśli reszta z dzielenia `x` przez 2 jest równa 0, to wiemy, że zmienna `x` jest
-parzysta, a program wyświetla stosowny komunikat. Jeśli warunek jest fałszywy, to wykonywany jest drugi zestaw poleceń.
+parzysta, i program wyświetli stosowny komunikat. Jeśli warunek jest fałszywy, to wykonywany jest drugi zestaw poleceń.
 
 ![Logika if-else](height=1.5in@../images/if-else)
 
@@ -212,11 +211,11 @@ są gałęziami w przepływie wykonania programu.
 Warunki powiązane
 -----------------
 
-\index{powiązanie, warunki}
+\index{powiązane, warunki}
 \index{warunki!powiązane}
 
-Czasami istnieje więcej niż dwie możliwości i potrzebujemy więcej niż dwóch
-gałęzi. Jednym ze sposobów na wyrażenie takich obliczeń jest *warunek
+Czasami mamy więcej niż dwie możliwości i potrzebujemy więcej niż dwóch
+gałęzi. Jednym ze sposobów na wyrażenie takiej sytuacji jest *warunek
 powiązany*:
 
 ~~~~ {.python}
@@ -228,8 +227,8 @@ else:
     print('x i y są równe')
 ~~~~
 
-`elif` jest skrótem od "else if". Ponownie, dokładnie jedna gałąź zostanie
-wykonana.
+`elif` jest skrótem od *else if*. Tutaj również wykonana zostanie 
+dokładnie jedna gałąź.
 
 ![Logika if-elif](height=2.0in@../images/elif)
 
@@ -244,7 +243,7 @@ wymagane).
 if choice == 'a':
     print('Zła odpowiedź')
 elif choice == 'b':
-    print('Dobra odpoiwedź')
+    print('Dobra odpowiedź')
 elif choice == 'c':
     print('Blisko, ale źle')
 ~~~~
@@ -255,14 +254,14 @@ odpowiadająca mu gałąź, a instrukcja jest kończona. Nawet jeśli więcej ni
 jeden warunek jest prawdziwy, to tylko pierwszy z tych prawdziwych wykonuje
 swoją gałąź kodu.
 
-Warunki zagnieżdzone
+Warunki zagnieżdżone
 --------------------
 
 \index{zagnieżdżone, warunki}
 \index{warunki!zagnieżdżone}
 
-Jeden warunek może być również zagnieżdżony w innym. Mogliśmy tak napisać
-przykład z trzema gałęziami:
+Jeden warunek może być również zagnieżdżony w innym. Mogliśmy zapisać
+przykład z trzema gałęziami w ten sposób:
 
 ~~~~ {.python}
 if x == y:
@@ -286,7 +285,7 @@ jednak *zagnieżdżone instrukcje warunkowe* bardzo szybko stają się trudne do
 odczytania. Ogólnie rzecz biorąc, jeśli możesz, to ich unikaj.
 
 Operatory logiczne często są sposobem na uproszczenie zagnieżdżonych instrukcji
-warunkowych. Na przykład, możemy przepisać następujący kod za pomocą jednego
+warunkowych. Na przykład możemy przepisać następujący kod za pomocą jednego
 warunku:
 
 ~~~~ {.python}
@@ -295,7 +294,7 @@ if 0 < x:
         print('x jest jednocyfrową dodatnią liczbą.')
 ~~~~
 
-Instrukcja `print` jest wykonywana tylko wtedy, gdy spełnimy oba warunki, więc
+Funkcja `print()` jest wywoływana tylko wtedy, gdy spełnimy oba warunki, więc
 możemy uzyskać ten sam efekt z operatorem `and`:
 
 ~~~~ {.python}
@@ -303,10 +302,10 @@ if 0 < x and x < 10:
     print('x jest jednocyfrową dodatnią liczbą.')
 ~~~~
 
-Łapanie wyjątków przy użyciu try i except
------------------------------------------
+Łapanie wyjątków przy użyciu `try` i `except`
+---------------------------------------------
 
-Wcześniej widzieliśmy fragment kodu, w którym używaliśmy funkcji `input` i `int`
+Wcześniej widzieliśmy fragment kodu, w którym używaliśmy funkcji `input()` i `int()`
 do odczytania i przetworzenia liczby całkowitej wprowadzonej przez użytkownika.
 Widzieliśmy też, jak takie podejście może być zdradzieckie:
 
@@ -326,7 +325,7 @@ następnej instrukcji.
 
 Jeżeli jednak umieścisz ten kod w skrypcie Pythona i wystąpi błąd, to Twój
 skrypt natychmiast się zatrzyma w miejscu pojawienia się błędu, wyświetlając
-przy tym informacje z mechanizmu *traceback*, który pozwala zobaczyć kolejne
+przy tym informacje z mechanizmu *traceback*, pozwalającego zobaczyć kolejne
 wywołania funkcji, które ostatecznie doprowadziły do wystąpienia błędu. Po
 wystąpieniu błędu skrypt nie wykona kolejnych instrukcji.
 
@@ -336,7 +335,7 @@ Oto przykładowy program do konwersji temperatury Fahrenheita na temperaturę
 Celsjusza:
 
 \index{fahrenheit}
-\index{celsius}
+\index{celsjusz}
 \index{konwersja temperatury}
 \index{temperatura, konwersja}
 
@@ -346,13 +345,11 @@ Jeśli uruchomimy ten kod i podamy mu błędne dane wejściowe, to program po
 prostu zakończy się niepowodzeniem z niemiłym komunikatem o błędzie:
 
 ~~~~
-python fahren.py
 Podaj temperaturę w skali Fahrenheita: 72
 22.22222222222222
 ~~~~
 
 ~~~~
-python fahren.py
 Podaj temperaturę w skali Fahrenheita: fred
 Traceback (most recent call last):
   File "fahren.py", line 2, in <module>
@@ -364,7 +361,7 @@ W Pythonie jest wbudowana warunkowa struktura wykonania poleceń, która obsług
 tego typu oczekiwane i nieoczekiwane błędy, zwana "try / except". Idea `try` i
 `except` polega na tym, że wiesz, iż pewna sekwencja instrukcji może sprawić
 problem i chcesz dodać kilka poleceń do wykonania w przypadku wystąpienia błędu.
-Te dodatkowe polecenia (blok "except") są ignorowane gdy nie ma błędu.
+Te dodatkowe polecenia (blok "except") są ignorowane, gdy nie ma błędu.
 
 Możesz myśleć o `try` i `except` w Pythonie jako o "polisie ubezpieczeniowej"
 na sekwencję poleceń.
@@ -379,21 +376,19 @@ w bloku `try`, Python wyskakuje z bloku `try` i wykonuje sekwencję instrukcji
 w bloku `except`.
 
 ~~~~
-python fahren2.py
 Podaj temperaturę w skali Fahrenheita: 72
 22.22222222222222
 ~~~~
 
 ~~~~
-python fahren2.py
 Podaj temperaturę w skali Fahrenheita: fred
 Musisz wprowadzić liczbę
 ~~~~
 
 Obsługa wyjątku z instrukcją `try` nazywana jest *łapaniem* wyjątku. W tym
-przykładzie, klauzula `except` wypisuje komunikat o błędzie. Ogólnie rzecz
+przykładzie klauzula `except` wypisuje komunikat o błędzie. Ogólnie rzecz
 biorąc, złapanie wyjątku daje Ci szansę naprawienia problemu, spróbowania
-ponownie, albo przynajmniej zgrabnego zakończenia programu.
+ponownie albo przynajmniej zgrabnego zakończenia programu.
 
 Minimalna ewaluacja wyrażeń logicznych
 --------------------------------------
@@ -404,19 +399,18 @@ Minimalna ewaluacja wyrażeń logicznych
 Gdy Python przetwarza wyrażenie logiczne takie jak `x >= 2 and (x/y) > 2`,
 ewaluuje je od lewej do prawej strony. Ze względu na definicję `and`, jeśli
 `x` jest mniejsze niż 2, wyrażenie `x >= 2` zostanie ewaluowane do `False`,
-a więc całe wyrażenie zostanie ewaluowane do `False` niezależnie od tego,
+a więc całe wyrażenie zostanie ewaluowane do `False`, niezależnie od tego
 czy `(x/y) > 2` zostanie ewaluowane do `True` czy `False`.
 
-Gdy Python wykryje, że nic już nie zyska ewaluując pozostałą część wyrażenia
-logicznego, przerywa jego ewaluację i nie wykonuje obliczeń w pozostałej części
-wyrażenia logicznego. Gdy ocena wyrażenia logicznego zostaje zatrzymana,
-ponieważ ogólna wartość jest już znana, nazywa się to *minimalną ewaluacją*.
+Gdy Python wykryje, że nic już nie zyska dzięki ewaluacji pozostałej część wyrażenia
+logicznego, przerywa jego ewaluację i nie wykonuje dalszych obliczeń. Zatrzymanie oceny wyrażenia logicznego,
+ponieważ ogólna wartość jest już znana, nazywa się *minimalną ewaluacją*.
 
 \index{strażnik, wzorzec}
 \index{wzorzec!strażnik}
 
-Specyfika działania minimalnej ewaluacji ma konsekwencję w sprytnej technice
-zwanej *wzorcem strażnika*. Przeanalizujmy następującą sekwencję kodu w
+Konsekwencją specyfiki działania minimalnej ewaluacji jest sprytna technika
+zwana *wzorcem strażnika*. Przeanalizujmy następującą sekwencję kodu w
 interpreterze Pythona:
 
 ~~~~ {.python}
@@ -483,9 +477,8 @@ Mechanizm *traceback* w Pythonie pojawia się w przypadku wystąpienia błędu;
 zawiera on wiele informacji, ale czasem może być przytłaczający. Najbardziej
 użyteczne są zazwyczaj informacje o tym:
 
--   jaki to był błąd,
-
--   gdzie ten błąd wystąpił.
+* jaki to był błąd,
+* gdzie ten błąd wystąpił.
 
 Błędy składniowe są zazwyczaj łatwe do znalezienia, ale jest kilka podstępnych
 przypadków. Błędy związane z tzw. białymi znakami^[Należą do nich spacje, znaki
@@ -510,83 +503,60 @@ rzecz biorąc, komunikaty o błędach wskazują, gdzie problem został wykryty, 
 rzeczywisty błąd może być w kodzie gdzieś wcześniej, czasami w poprzedniej
 linii.
 
-Ogólnie rzecz biorąc, komunikaty o błędach informują o tym, gdzie wykryto
+Ogólnie komunikaty o błędach informują o tym, gdzie wykryto
 problem, ale często nie tam, gdzie został on popełniony.
 
 Słowniczek
 ----------
 
 ciało instrukcji
-:   Sekwencja instrukcji zawarta w złożonej instrukcji.
-\index{ciało!instrukcji}
-\index{instrukcja!ciało}
+:   Sekwencja instrukcji zawarta w złożonej instrukcji.\index{ciało!instrukcji}\index{instrukcja!ciało}
 
 gałąź
 :   Jedna z alternatywnych sekwencji instrukcji występujących w instrukcji
-    warunkowej.
-\index{gałąź}
+    warunkowej.\index{gałąź}
 
 instrukcja warunkowa
-:   Instrukcja, które kontroluje przepływ wykonywania programu w zależności od
-    pewnego warunku.
-\index{warunkowa, instrukcja}
-\index{instrukcja!warunkowa}
+:   Instrukcja, która kontroluje przepływ wykonywania programu w zależności od
+    pewnego warunku.\index{warunkowa, instrukcja}\index{instrukcja!warunkowa}
 
 instrukcja złożona
 :   Instrukcja składająca się z nagłówka i ciała. Nagłówek kończy się
-    dwukropkiem (:). Ciało jest wcięte w stosunku do nagłówka.
-\index{złożona, instrukcja}
-\index{instrukcja!złożona}
+    dwukropkiem (:). Ciało jest wcięte w stosunku do nagłówka.\index{złożona, instrukcja}\index{instrukcja!złożona}
 
 minimalna ewaluacja
 :   Kiedy Python jest w trakcie ewaluacji złożonego wyrażenia logicznego i
     przerywa dalszą ewaluację, ponieważ Python zna końcową wartość wyrażenia
-    bez potrzeby ewaluacji pozostałej reszty wyrażenia.
-\index{minimalna ewaluacja}
-\index{ewaluacja, minimalna}
+    bez potrzeby ewaluacji reszty wyrażenia.\index{minimalna ewaluacja}\index{ewaluacja, minimalna}
 
 operator logiczny
 :   Jeden z operatorów, który łączy wyrażenia logiczne:
-    `and`, `or` lub `not`.
-\index{operator!logiczny}
-\index{logiczny, operator}
+    `and`, `or` lub `not`.\index{operator!logiczny}\index{logiczny, operator}
 
 operator porównania
 :   Jeden z następujących operatorów, który porównuje swoje operandy: `==`,
-    `!=`, `>`, `<`, `>=` i `<=`.
-\index{porównanie, operator}
-\index{operator!porówania}
+    `!=`, `>`, `<`, `>=` i `<=`.\index{porównanie, operator}\index{operator!porównania}
 
 traceback
-:   Lista funkcji, które są wykonywane; pojawia się, gdy wystąpi wyjątek.
-\index{traceback}
+:   Lista funkcji, które są wykonywane; pojawia się, gdy wystąpi wyjątek.\index{traceback}
 
 warunek
 :   Wyrażenie logiczne w instrukcji warunkowej określające która gałąź jest
-    wykonywana.
-\index{warunek}
+    wykonywana.\index{warunek}
 
 warunki powiązane
-:   Wyrażenie warunkowe z serią alternatywnych gałęzi.
-\index{powiązane, warunki}
-\index{warunki!powiązane}
+:   Wyrażenie warunkowe z serią alternatywnych gałęzi.\index{powiązane, warunki}\index{warunki!powiązane}
 
 warunki zagnieżdżone
-:   Instrukcja warunkowa, które pojawia się w jednej z gałęzi innej instrukcji
-    warunkowej.
-\index{zagnieżdżone, warunki}
-\index{warunki!zagnieżdżone}
+:   Instrukcja warunkowa, która pojawia się w jednej z gałęzi innej instrukcji
+    warunkowej.\index{zagnieżdżone, warunki}\index{warunki!zagnieżdżone}
 
 wyrażenie logiczne
-:   Wyrażenie o wartości `True` lub `False`.
-\index{wyrażenie!logiczne}
-\index{logiczne, wyrażenie}
+:   Wyrażenie o wartości `True` lub `False`.\index{wyrażenie!logiczne}\index{logiczne, wyrażenie}
 
 wzorzec strażnika
 :   Miejsce, w którym konstruujemy wyrażenie logiczne z dodatkowymi
-    porównaniami, tak aby skorzystać z działania minimalnej ewaluacji.
-\index{strażnik, wzorzec}
-\index{wzorzec!strażnik}
+    porównaniami, tak aby skorzystać z działania minimalnej ewaluacji.\index{strażnik, wzorzec}\index{wzorzec!strażnik}
 
 Ćwiczenia
 ---------
@@ -606,8 +576,8 @@ Wynagrodzenie: 475.0
 
 #### Ćwiczenie 2
 
-Przepisz ponownie swój program płacowy używając `try` i `except`,
-tak aby elegancko obsługiwał on nie-numeryczne dane wejściowe, wyświetlając w
+Przepisz ponownie swój program płacowy, używając `try` i `except`,
+tak aby elegancko obsługiwał on nienumeryczne dane wejściowe, wyświetlając w
 takim przypadku wiadomość i kończąc swoje działanie. Poniżej znajdują się wyniki
 dwóch uruchomień programu:
 

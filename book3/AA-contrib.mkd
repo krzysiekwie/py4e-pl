@@ -7,7 +7,8 @@ Wsparcie i współpraca nad książką
 Lista współtwórców "Python dla wszystkich"
 ------------------------------------------
 
-Andrzej Wójtowicz
+Andrzej Wójtowicz,
+Agata i Krzysztof Wierzbiccy
 
 Szczegóły dotyczące poszczególnego wkładu w tworzenie książki możesz znaleźć na stronie:
 
@@ -32,17 +33,16 @@ Alistair Walsh,
 Erica Brody,
 Jih-Sheng Huang,
 Louis Luangkesorn,
-oraz
 Michael Fudge
 
-Szczegóły dotyczące poszczególnego wkładu w tworzenie książki możesz znaleźć na stronie:
+Szczegóły dotyczące indywidualnego wkładu w tworzenie książki możesz znaleźć na stronie:
 
 <https://github.com/csev/py4e/graphs/contributors>
 
 Lista współtwórców "Python for Informatics" 
 -------------------------------------------
 
-Bruce Shields w zakresie pierwszy wersji roboczych, Sarah Hegge, Steven Cherry,
+Bruce Shields w zakresie pierwszych wersji roboczych, Sarah Hegge, Steven Cherry,
 Sarah Kathleen Barbarow, Andrea Parker, Radaphat Chongthammakun, Megan
 Hixon, Kirby Urner, Sarah Kathleen Barbrow, Katie Kujala, Noah Botimer,
 Emily Alinder, Mark Thompson-Kular, James Perry, Eric Hofer, Eytan Adar,
@@ -59,36 +59,36 @@ Przedmowa do "Think Python"
 
 (Allen B. Downey)
 
-W styczniu 1999 roku przygotowywałem się do prowadzenia wstępnych zajęć z programowania w języku Java. Miałem te zajęcia trzy razy i byłem sfrustrowany. Wskaźnik braku zaliczenia przedmiotu był zbyt wysoki i nawet dla studentów, którym się udało zdać, ogólny poziom uzyskanych wyników był zbyt niski.
+W styczniu 1999 roku przygotowywałem się do prowadzenia wstępnych zajęć z programowania w języku Java. Miałem te zajęcia trzy razy i byłem sfrustrowany. Wskaźnik braku zaliczenia przedmiotu był zbyt wysoki i nawet wśród studentów, którym się udało zdać, ogólny poziom uzyskanych wyników był zbyt niski.
 
-Jednym z problemów, które widziałem, były książki. Były one zbyt grube, zawierały za dużo zbędnych szczegółów na temat Javy i nie zawierały wystarczająco dużo wskazówek na temat programowania wysokopoziomowego. Na dodatek wszystkie cierpiały z powodu efektu zapadni: zaczynały się łatwo, postępowały stopniowo, a potem gdzieś około rozdziału 5 wszyscy wpadali na dno. Studenci dostawaliby nowy materiał za szybko i w zbyt dużych ilościach, a ja spędziłbym resztę semestru zbierając pozostałości.
+Jednym z oczywistych problemów były książki. Były one zbyt grube, zawierały za dużo zbędnych szczegółów na temat Javy, a za mało wskazówek na temat programowania wysokopoziomowego. Na dodatek wszystkie prowadziły tym samym szlakiem: zaczynały się łatwo, stopniowo trudność rosła, a potem gdzieś koło rozdziału 5 studenci wpadali jak w przerębel. Nowy materiał zasypywał ich lawiną – za szybko i w zbyt dużych ilościach – a ja spędziłbym resztę semestru, próbując ratować tych, którzy przeżyli.
 
 Dwa tygodnie przed pierwszym dniem zajęć postanowiłem napisać własną książkę. Moje cele były następujące:
 
--   Trzymać zwięzłość. Lepiej, żeby studenci przeczytali 10 stron, niż nie przeczytali 50.
+-   Zwięzłość. Lepiej, żeby studenci przeczytali 10 stron, niż nie przeczytali 50.
 
--   Uważać na słownictwo. Starałem się minimalizować specjalistyczny żargon i definiować każdy termin przy pierwszym użyciu.
+-   Uwaga na słownictwo. Starałem się minimalizować specjalistyczny żargon i definiować każdy termin przy pierwszym użyciu.
 
--   Budować stopniowo. Aby uniknąć efektu zapadni, brałem najtrudniejsze tematy i dzieliłem je na serię małych kroków.
+-   Budowa krok po kroku. Aby uniknąć lawiny, brałem najtrudniejsze tematy i dzieliłem je na serię małych kroków.
 
--   Skupić się na programowaniu, a nie na języku programowania. Włączyłem do książki minimalny użyteczny podzbiór języka Java i pominąłem resztę.
+-   Skupienie na programowaniu, a nie na języku programowania. Włączyłem do książki minimalny użyteczny podzbiór języka Java i pominąłem resztę.
 
-Potrzebowałem tytułu, więc kapryśnie wybrałem *How to Think Like a Computer Scientist*.
+Potrzebowałem tytułu, więc wybrałem pierwsze, co mi przyszło do głowy: *How to Think Like a Computer Scientist*.
 
-Moja pierwsza wersja książki była surowa, ale działała. Studenci czytali i zrozumieli temat na tyle, że podczas zajęć mogłem spędzać czas na analizie trudniejszych i ciekawych tematów oraz (co najważniejsze) pozwalając studentom ćwiczyć.
+Moja pierwsza wersja książki była surowa, ale działała. Studenci czytali i rozumieli temat na tyle, że podczas zajęć mogłem spędzać czas, analizując trudniejsze i ciekawe tematy oraz (co najważniejsze) pozwalając studentom ćwiczyć.
 
 Wydałem tę książkę na licencji GNU Free Documentation License, która pozwala jej użytkownikom ją kopiować, modyfikować i rozpowszechniać.
 
 \index{licencja GNU Free Documentation License}
 \index{Free Documentation License, GNU}
 
-A teraz najfajniejsza część tej historii. Jeff Elkner, nauczyciel z liceum w Virginii, włączył moją książkę do swojego programu nauczania i przetłumaczył ją na Pythona. Wysłał mi kopię swojego tłumaczenia, a ja doznałem niezwykłego doświadczenia w nauce Pythona, czytając moją własną książkę.
+A teraz najfajniejsza część tej historii. Jeff Elkner, nauczyciel z liceum w Virginii, włączył moją książkę do swojego programu nauczania i przetłumaczył ją na Pythona. Wysłał mi kopię swojego tłumaczenia, a ja doznałem niezwykłego doświadczenia, ucząc się Pythona z mojej własnej książki.
 
-Zrewidowaliśmy z Jeffem książkę, włączyliśmy do niej studium przypadku Chrisa Meyersa, a w 2001 roku wydaliśmy *How to Think Like a Computer Scientist: Learning with Python*, także na licencji GNU Free Documentation License. Już jako wydawnictwo Green Tea Press opublikowałem książkę i zacząłem ją sprzedawać w formie papierowej za pośrednictwem Amazon.com i księgarni uniwersyteckich. Inne książki z Green Tea Press są dostępne na stronie <https://greenteapress.com>.
+Poprawiliśmy z Jeffem książkę, włączyliśmy do niej studium przypadku Chrisa Meyersa, a w 2001 roku wydaliśmy *How to Think Like a Computer Scientist: Learning with Python*, także na licencji GNU Free Documentation License. Już jako wydawnictwo Green Tea Press opublikowałem książkę i zacząłem ją sprzedawać w formie papierowej za pośrednictwem Amazon.com i księgarni uniwersyteckich. Inne książki z Green Tea Press są dostępne na stronie <https://greenteapress.com>.
 
-W 2003 roku zacząłem uczyć w Olin College, gdzie po raz pierwszy musiałem uczyć Pythona. Kontrast w zestawieniu z Javą był uderzający. Studenci mieli mniej problemów, uczyli się więcej, pracowali nad bardziej interesującymi projektami i ogólnie mieli dużo więcej zabawy.
+W 2003 roku zacząłem uczyć w Olin College, gdzie po raz pierwszy prowadziłem kurs Pythona. Kontrast w zestawieniu z Javą był uderzający. Studenci mieli mniej problemów, uczyli się więcej, pracowali nad bardziej interesującymi projektami i ogólnie mieli dużo więcej zabawy.
 
-W ciągu ostatnich pięciu lat kontynuowałem rozwój książki, poprawiając przy tym błędy i niektóre przykłady oraz dodając nowe materiały, zwłaszcza w sekcji ćwiczeń. W 2008 roku rozpocząłem pracę nad dużą korektą – w tym samym czasie skontaktował się ze mną redaktor Cambridge University Press, który był zainteresowany wydaniem kolejnej edycji książki. Dobre wyczucie czasu!
+W ciągu ostatnich pięciu lat nadal rozwijałem książkę, poprawiając przy tym błędy i niektóre przykłady oraz dodając nowe materiały, zwłaszcza w sekcji ćwiczeń. W 2008 roku rozpocząłem pracę nad dużą korektą – w tym samym czasie skontaktował się ze mną redaktor Cambridge University Press, który był zainteresowany wydaniem kolejnej edycji książki. Dobre wyczucie czasu!
 
 Mam nadzieję, że praca z tą książką sprawi Ci przyjemność oraz pomoże Ci nauczyć się programować i myśleć, przynajmniej trochę, jak informatyk.
 
@@ -96,19 +96,19 @@ Mam nadzieję, że praca z tą książką sprawi Ci przyjemność oraz pomoże C
 
 (Allen B. Downey)
 
-Po pierwsze i najważniejsze, dziękuję Jeffowi Elknerowi, który przetłumaczył moją książkę z Javy na Pythona, co zapoczątkowało ten projekt i wprowadziło mnie w to, co okazało się być moim ulubionym językiem.
+Po pierwsze i najważniejsze, dziękuję Jeffowi Elknerowi, który przetłumaczył moją książkę z Javy na Pythona, co zapoczątkowało ten projekt i wprowadziło mnie w język, który okazał się być moim ulubionym.
 
 Dziękuję również Chrisowi Meyersowi, który przyczynił się do powstania kilku sekcji w *How to Think Like a Computer Scientist*.
 
-I dziękuję Fundacji Wolnego Oprogramowania za opracowanie GNU Free
-Documentation License, co pomogło mi w umożliwieniu współpracy z Jeffem i Chrisem.
+Dziękuję Fundacji Wolnego Oprogramowania za opracowanie GNU Free
+Documentation License, co umożliwiło mi współpracę z Jeffem i Chrisem.
 
 \index{licencja GNU Free Documentation License}
 \index{Free Documentation License, GNU}
 
 Dziękuję również redaktorom Lulu, którzy pracowali nad *How to Think Like a Computer Scientist*.
 
-Dziękuję wszystkim studentom, którzy pracowali z wcześniejszymi wersjami tej książki oraz wszystkim współtwórcom (wymienionym w załączniku), którzy przesłali poprawki i sugestie.
+Dziękuję wszystkim studentom, którzy pracowali z wcześniejszymi wersjami tej książki, oraz wszystkim współtwórcom (wymienionym w załączniku), którzy przesyłali poprawki i sugestie.
 
 Dziękuję również mojej żonie, Lisie, za jej pracę nad tą książką, oraz Green Tea Press i wszystkim innym.
 
@@ -125,9 +125,9 @@ Lista współtwórców "Think Python"
 
 (Allen B. Downey)
 
-W ciągu ostatnich kilku lat ponad 100 uważnych i skupionych czytelników przesłało sugestie i poprawki. Ich wkład i entuzjazm dla tego projektu był ogromną pomocą.
+W ciągu ostatnich kilku lat ponad 100 uważnych i skupionych czytelników przesyłało sugestie i poprawki. Ich wkład i entuzjazm był dla tego projektu ogromną pomocą.
 
-Szczegółowe informacje na temat charakteru każdego wkładu w rozwój książki można znaleźć w tekście "Think Python".
+Szczegółowe informacje na temat wkładu każdej z osób w rozwój książki można znaleźć w tekście "Think Python".
 
 Lloyd Hugh Allen, Yvon Boulianne, Fred Bremmer, Jonah Cohen, Michael
 Conlon, Benoit Girard, Courtney Gleason oraz Katherine Smith, Lee Harr,
@@ -138,7 +138,7 @@ Snydal, Ian Thomas, Keith Verheyden, Peter Winstanley, Chris Wrobel,
 Moshe Zadka, Christoph Zwerschke, James Mayer, Hayden McAfee, Angel
 Arnal, Tauhidul Hoque oraz Lex Berezhny, Dr. Michele Alzetta, Andy
 Mitchell, Kalin Harvey, Christopher P. Smith, David Hutchins, Gregor
-Lingl, Julie Peters, Florin Oprina, D. J. Webre, Ken, Ivo Wever, Curtis
+Lingl, Julie Peters, Florin Oprina, D. J. Webre, Ken, Ivo Wever, Curtis
 Yanko, Ben Logan, Jason Armstrong, Louis Cordier, Brian Cain, Rob Black,
 Jean-Philippe Rey z Ecole Centrale Paris, Jason Mader z George
 Washington University, Jan Gundtofte-Bruun, Abel David oraz

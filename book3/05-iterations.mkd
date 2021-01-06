@@ -18,7 +18,7 @@ x = x + 1
 
 Oznacza to "pobierz bieżącą wartość `x`, dodaj 1, a następnie zaktualizuj `x` o nową wartość".
 
-Jeśli próbujesz zaktualizować zmienną, która nie istnieje, otrzymasz błąd, ponieważ Python ewaluuje prawą stronę zanim przypisze wartość do `x`:
+Jeśli próbujesz zaktualizować zmienną, która nie istnieje, otrzymasz błąd, ponieważ Python ewaluuje prawą stronę, zanim przypisze wartość do `x`:
 
 ~~~~ {.python}
 >>> x = x + 1
@@ -48,9 +48,9 @@ Instrukcja `while`
 \index{pętla!while}
 \index{iteracja}
 
-Komputery są często używane do automatyzacji powtarzalnych zadań. Powtarzanie identycznych lub podobnych zadań bez popełniania błędów jest czymś, co komputery robią dobrze, a ludzie źle. Ponieważ iteracja często występuje w programach, Python oferuje kilka elementów, które ułatwiają z nimi pracę.
+Komputery są często używane do automatyzacji powtarzalnych zadań. Powtarzanie identycznych lub podobnych zadań bez popełniania błędów jest czymś, co komputery robią dobrze, a ludzie źle. Ponieważ iteracja często występuje w programach, Python oferuje kilka elementów, które ułatwiają pracę z nią.
 
-Jedną z form iteracji w Pythonie jest instrukcja `while`. Poniżej znajduje się prosty program, który odlicza od pięciu, a następnie wyświetla "Odpalamy!".^[Należy pamiętać, że kopiując kod do interaktywnej sesji interpretera Pythona, wcięty blok musi zakończyć się nową linią. W przeciwnym razie, w tym programie przy funkcji `print` zostanie zgłoszony błąd "SyntaxError".]
+Jedną z form iteracji w Pythonie jest instrukcja `while`. Poniżej znajduje się prosty program, który odlicza od pięciu, a następnie wyświetla "Odpalamy!".^[Kopiując kod do interaktywnej sesji interpretera Pythona, należy pamiętać, że wcięty blok musi zakończyć się nową linią. W przeciwnym razie, w tym programie przy funkcji `print()` zostanie zgłoszony błąd "SyntaxError".]
 
 ~~~~ {.python}
 n = 5
@@ -60,7 +60,7 @@ while n > 0:
 print('Odpalamy!')
 ~~~~
 
-Instrukcję `while` można przeczytać prawie tak jakby była zapisana w języku angielskim. Oznacza to: "Dopóki `n` jest większe od 0, wyświetl wartość `n`, a następnie zmniejsz wartość `n` o 1. Gdy dojdziesz do 0, opuść instrukcję `while` i wyświetl słowo `Odpalamy!`".
+Instrukcję `while` można przeczytać prawie tak, jakby była zapisana w języku angielskim. Oznacza to: "Dopóki `n` jest większe od 0, wyświetl wartość `n`, a następnie zmniejsz wartość `n` o 1. Gdy dojdziesz do 0, opuść instrukcję `while` i wyświetl słowo `Odpalamy!`".
 
 \index{przepływ sterowania}
 
@@ -77,12 +77,12 @@ Taki przepływ sterowania nazywany jest *pętlą*, ponieważ trzeci krok zapętl
 \index{ciało!pętli}
 \index{pętla!ciało}
 
-Ciało pętli powinno zmieniać wartość jednej lub więcej zmiennych, tak aby ostatecznie warunek stał się fałszywy i pętla się zakończyła. Zmienną, która zmienia się z każdym wykonaniem pętli i która kontroluje kiedy pętla się kończy, nazywamy *zmienną sterującą*. Jeśli nie ma zmiennej sterującej, pętla będzie powtarzać się w nieskończoność, powodując powstanie *nieskończonej pętli*.
+Ciało pętli powinno zmieniać wartość jednej lub więcej zmiennych, tak aby ostatecznie warunek stał się fałszywy i pętla się zakończyła. Zmienną, która zmienia się z każdym wykonaniem pętli i kontroluje, kiedy pętla się kończy, nazywamy *zmienną sterującą*. Jeśli nie ma zmiennej sterującej, pętla będzie się powtarzać w nieskończoność, powodując powstanie *nieskończonej pętli*.
 
 Nieskończone pętle
 ------------------
 
-Niekończącym się źródłem rozrywki dla programistów jest obserwacja, że wskazówki na szamponie "namydl, wypłucz, powtórz" są nieskończoną pętlą, ponieważ nie ma *zmiennej sterującej* mówiącej ile razy tę pętlę należy wykonać.
+Niekończącym się źródłem rozrywki dla programistów jest obserwacja, że wskazówki na szamponie "namydl, wypłucz, powtórz" są nieskończoną pętlą, ponieważ nie ma *zmiennej sterującej*, mówiącej ile razy tę pętlę należy wykonać.
 
 \index{nieskończona, pętla}
 \index{pętla!nieskończona}
@@ -104,15 +104,15 @@ while True:
 print('Zrobione!')
 ~~~~
 
-Jeśli popełnisz błąd i uruchomisz ten kod, szybko nauczysz się, jak zatrzymać wymykający się spod kontroli proces Pythona w Twoim systemie lub przypomnisz sobie gdzie znajduje się przycisk wyłączania komputera. Program ten będzie działał w nieskończoność lub aż do wyczerpania baterii, ponieważ wyrażenie logiczne na górze pętli jest zawsze prawdziwe z uwagi na fakt, że wyrażenie jest stałą wartością `True`.
+Jeśli popełnisz błąd i uruchomisz ten kod, szybko nauczysz się, jak zatrzymać wymykający się spod kontroli proces Pythona w Twoim systemie^[Można spróbować wcisnąć kombinację klawiszy `<Ctrl+C>`.] lub przypomnisz sobie, gdzie znajduje się przycisk wyłączania komputera. Program ten będzie działał w nieskończoność lub aż do wyczerpania baterii, ponieważ wyrażenie logiczne na górze pętli jest zawsze prawdziwe, bo jest stałą wartością `True`.
 
-Podczas gdy jest to patologiczna nieskończona pętla, możemy nadal używać tego schematu do budowania użytecznych pętli tak długo, jak starannie dodamy kod do ciała pętli, tak aby wyraźnie wyjść z niej używając polecenia `break` wtedy, gdy osiągniemy warunek wyjścia.
+Mimo że jest to dysfunkcyjna nieskończona pętla, możemy nadal używać tego schematu do budowania użytecznych pętli, o ile starannie dodamy kod do ciała pętli, tak aby wyraźnie wyjść z niej, używając polecenia `break` wtedy, gdy osiągniemy warunek wyjścia.
 
 Na przykład, załóżmy, że chcesz pobrać od użytkownika dane wejściowe, dopóki nie wpisze `zrobione`. Można by napisać taki program:
 
 \VerbatimInput{../code3/copytildone1.py}
 
-Warunkiem pętli jest `True`, co jest zawsze prawdą, więc pętla działa wielokrotnie, tak długo aż trafi w instrukcję `break`.
+Warunkiem pętli jest `True`, co jest zawsze prawdą, więc pętla działa wielokrotnie tak długo, aż trafi na instrukcję `break`.
 
 Program za każdym razem prosi użytkownika o dane wyświetlając nawias trójkątny. Jeśli użytkownik wpisze `zrobione`, to instrukcja `break` wyjdzie z pętli. W przeciwnym razie program powtórzy to, co użytkownik wpisał, i wróci na górę pętli. Oto przykładowe uruchomienie:
 
@@ -128,7 +128,7 @@ Zrobione!
 Taki sposób pisania pętli `while` jest dość częsty, ponieważ można sprawdzić warunek w dowolnym miejscu pętli (nie tylko na górze) i można wyrazić warunek stopu w sposób twierdzący ("stop, gdy to się stanie"), a nie w sposób zaprzeczający ("nie przestawaj, dopóki to się nie stanie.").
 
 Jeżeli chcemy natychmiast przerwać taką pętlę, to możemy wysłać sygnał do naszego
-programu poprzez kombinację klawiszy `Ctrl+C`.
+programu kombinacją klawiszy `<Ctrl+C>`.
 
 ~~~~
 $ python3 copytildone1.py
@@ -136,7 +136,7 @@ $ python3 copytildone1.py
 halo
 > nie wiem jak wyjść
 nie wiem jak wyjść
-> ^CTraceback (most recent call last):            # tutaj wciśnięto Ctrl+C
+> ^CTraceback (most recent call last):            # tutaj wciśnięto <Ctrl+C>
   File "copytildone1.py", line 2, in <module>
     line = input('> ')
 KeyboardInterrupt
@@ -150,7 +150,7 @@ Kończenie iteracji przy pomocy `continue`
 \index{continue, instrukcja}
 \index{instrukcja!continue}
 
-Czasami jesteś w iteracji pętli i chcesz zakończyć bieżącą iterację, tak aby natychmiast przejść do następnej iteracji. W tym przypadku możesz użyć instrukcji `continue`, tak aby przejść do następnej iteracji bez kończenia ciała pętli w bieżącej iteracji.
+Czasami jesteś w iteracji pętli i chcesz zakończyć bieżącą iterację, tak aby natychmiast przejść do następnej iteracji. W tym przypadku możesz użyć instrukcji `continue`, żeby przejść do następnej iteracji bez kończenia ciała pętli w bieżącej iteracji.
 
 Oto przykład pętli, która wyświetla na ekranie swoje dane wejściowe aż do momentu, gdy użytkownik wpisze "zrobione", ale traktuje linie, które zaczynają się od znaku haszu (#), jako linie, które nie mają być wyświetlane (coś w rodzaju komentarzy Pythona).
 
@@ -168,7 +168,7 @@ wyświetl to!
 Zrobione!
 ~~~~
 
-Wszystkie linie są ponownie wyświetlane na ekranie z wyjątkiem tej, która zaczyna się znakiem hasza, ponieważ kiedy wykonywana jest instrukcja `continue`, kończy to bieżącą iterację i przeskakuje z powrotem do instrukcji `while`, tak aby rozpocząć następną iterację, pomijając tym samym instrukcję `print`.
+Wszystkie linie są ponownie wyświetlane na ekranie z wyjątkiem tej, która zaczyna się znakiem haszu, ponieważ kiedy wykonywana jest instrukcja `continue`, kończy to bieżącą iterację i przeskakuje z powrotem do instrukcji `while`, tak aby rozpocząć następną iterację, pomijając tym samym funkcję `print()`.
 
 Definiowanie pętli przy użyciu `for` 
 --------------------------------------
@@ -178,41 +178,41 @@ Definiowanie pętli przy użyciu `for`
 \index{for, pętla}
 \index{pętla!for}
 
-Czasami chcemy przejść w pętli po *zbiorze* rzeczy, takich jak lista słów, wiersze w pliku lub lista liczb. Gdy mamy listę rzeczy do przeprocesowania w pętli, możemy skonstruować pętlę *określoną* używając instrukcji `for`. Nazywamy instrukcję `while` pętlą *nieokreśloną*, ponieważ po prostu zapętla się do momentu, gdy jakiś warunek przyjmie wartość `False`, podczas gdy pętla `for` zapętla się przez znany zestaw elementów, więc przechodzi przez tyle iteracji, ile jest elementów w zestawie.
+Czasami chcemy przejść w pętli po *zbiorze* rzeczy, takich jak lista słów, wiersze w pliku lub lista liczb. Gdy mamy listę rzeczy do przeprocesowania w pętli, możemy skonstruować pętlę *określoną*, używając instrukcji `for`. Nazywamy instrukcję `while` pętlą *nieokreśloną*, ponieważ po prostu zapętla się do momentu, gdy jakiś warunek przyjmie wartość `False`. Pętla `for` zapętla się przez znany zestaw elementów, więc przechodzi przez tyle iteracji, ile jest elementów w zestawie.
 
 Składnia pętli `for` jest podobna do pętli `while` w tym, że mamy instrukcję `for` i ciało pętli:
 
 ~~~~ {.python}
 friends = ['Józek', 'Gienek', 'Staszek']
 for friend in friends:
-    print('Szczęśliwego Nowego Roku:', friend)
+    print('Szczęśliwego Nowego Roku', friend)
 print('Zrobione!')
 ~~~~
 
-W terminologii Pythona, zmienna `friends` jest listą^[Przyjrzymy się listom bardziej szczegółowo w dalszych rozdziałach.] trzech ciągów znaków, a pętla `for` przechodzi przez listę i wykonuje ciało raz dla każdego z trzech ciągów znaków w liście, co w rezultacie produkuje takie dane wyjściowe:
+W terminologii Pythona zmienna `friends` jest listą^[Przyjrzymy się listom bardziej szczegółowo w dalszych rozdziałach.] trzech ciągów znaków, a pętla `for` przechodzi przez listę i wykonuje ciało raz dla każdego z trzech ciągów znaków w liście, co w rezultacie produkuje takie dane wyjściowe:
 
 ~~~~ {.python}
-Szczęśliwego Nowego Roku: Józek
-Szczęśliwego Nowego Roku: Gienek
-Szczęśliwego Nowego Roku: Staszek
+Szczęśliwego Nowego Roku Józek
+Szczęśliwego Nowego Roku Gienek
+Szczęśliwego Nowego Roku Staszek
 Zrobione!
 ~~~~
 
-Tłumaczenie tej pętli `for` na ludzki język nie jest tak bezpośrednie jak w przypadku `while`, ale jeśli myślisz o zmiennej friends jako o *zbiorze*, to idzie to tak: "Uruchom instrukcje w ciele pętli *for* raz dla każdego przyjaciela (friend) znajdującego się *w* (in) zbiorze przyjaciół (friends)".
+Tłumaczenie tej pętli `for` na ludzki język nie jest tak bezpośrednie jak w przypadku `while`, ale jeśli myślisz o zmiennej `friends` jako o *zbiorze*, to idzie to tak: "Uruchom instrukcje w ciele pętli `for` raz dla każdego przyjaciela (`friend`) znajdującego się *w* (`in`) zbiorze przyjaciół (`friends`)".
 
-Patrząc na pętlę `for`, słowa *for* i *in* są zastrzeżonymi słowami kluczowymi Pythona, a `friend` i `friends` są zmiennymi.
+Patrząc na poniższą pętlę, słowa `for` i `in` są zastrzeżonymi słowami kluczowymi Pythona, a `friend` i `friends` są zmiennymi.
 
 ~~~~ {.python}
 for friend in friends:
-    print('Szczęśliwego Nowego Roku:', friend)
+    print('Szczęśliwego Nowego Roku', friend)
 ~~~~
 
-W szczególności, `friend` jest *zmienną sterującą* dla pętli `for`. Zmienna `friend` zmienia się w każdej iteracji pętli i kontroluje kiedy pętla `for` zostanie zakończona. *Zmienna sterująca* przechodzi kolejno przez trzy ciągi znaków zapisane w zmiennej `friends`.
+A konkretnie `friend` jest *zmienną sterującą* dla pętli `for`. Zmienna `friend` zmienia się w każdej iteracji pętli i kontroluje, kiedy pętla `for` zostanie zakończona. *Zmienna sterująca* przechodzi kolejno przez trzy ciągi znaków zapisane w zmiennej `friends`.
 
 Schematy pętli
 --------------
 
-Często używamy pętli `for` lub `while` by przejść przez listę elementów lub przez zawartość pliku i szukamy czegoś takiego jak największa lub najmniejsza wartość w analizowanych danych.
+Często używamy pętli `for` lub `while`, by przejść przez listę elementów lub przez zawartość pliku i szukamy czegoś takiego jak największa lub najmniejsza wartość w analizowanych danych.
 
 Tego typu pętle są na ogół konstruowane przez:
 
@@ -238,11 +238,11 @@ print('Ile:', count)
 Powyższy program demonstruje inny schemat obliczeń zwany *licznikiem*.
 Przed rozpoczęciem pętli ustawiamy zmienną `count` na zero, a następnie piszemy pętlę `for`, tak aby przebiegała przez listę liczb. Nasza *zmienna sterująca* ma nazwę `itervar` i choć nie używamy `itervar` w pętli, to kontroluje ona pętlę i powoduje, że ciało pętli jest wykonywane raz dla każdej z wartości występującej na liście.
 
-W ciele pętli dodajemy 1 do bieżącej wartości `count` dla każdej z wartości z listy. Podczas wykonywania pętli, wartość `count` jest liczbą elementów, które widzieliśmy "do tej pory".
+W ciele pętli dodajemy 1 do bieżącej wartości `count` dla każdej wartości z listy. Podczas wykonywania pętli, wartość `count` jest liczbą elementów, które widzieliśmy "do tej pory".
 
-Po zakończeniu wykonywania pętli, wartość `count` jest liczbą wszystkich elementów. Łączna liczba elementów występujących na liście "wpada nam w ręce" na końcu pętli. Konstruujemy pętlę tak, aby mieć to, czego chcemy, gdy pętla się zakończy.
+Po zakończeniu wykonywania pętli wartość `count` jest liczbą wszystkich elementów. Łączna liczba elementów występujących na liście "wpada nam w ręce" na końcu pętli. Konstruujemy pętlę tak, aby mieć to, czego chcemy, gdy pętla się zakończy.
 
-Kolejna podobna pętla, która oblicza sumę liczb z danej listy, jest następująca:
+Oto kolejna podobna pętla, która oblicza sumę liczb z danej listy:
 
 ~~~~ {.python}
 total = 0
@@ -251,9 +251,9 @@ for itervar in [3, 41, 12, 9, 74, 15]:
 print('Suma:', total)
 ~~~~
 
-W powyższej pętli *używamy zmiennej sterującej*. Zamiast po prostu dodawać jeden do `count` jak w poprzedniej pętli, dodajemy rzeczywistą liczbę (3, 41, 12, itd.) do sumy bieżącej podczas każdej iteracji pętli. Jeśli myślisz o zmiennej `count`, to zawiera ona "bieżącą sumę wartości napotkanych do tej pory". Tak więc przed rozpoczęciem pętli zmienna `total` jest zerem, ponieważ nie widzieliśmy jeszcze żadnych wartości, podczas pętli `total` jest sumą bieżącą, a na końcu pętli `total` jest sumą wszystkich wartości z listy.
+W powyższej pętli używamy *zmiennej sterującej*. Zamiast po prostu dodawać jeden do `count` jak w poprzedniej pętli, dodajemy rzeczywistą liczbę (3, 41, 12 itd.) do sumy bieżącej podczas każdej iteracji pętli. Jeśli myślisz o zmiennej `count`, to zawiera ona "bieżącą sumę wartości napotkanych do tej pory". Tak więc przed rozpoczęciem pętli zmienna `total` jest zerem, ponieważ nie widzieliśmy jeszcze żadnych wartości; w trakcie działania pętli `total` jest sumą bieżącą, a na końcu pętli `total` jest sumą wszystkich wartości z listy.
 
-Podczas wykonywania pętli, `total` kumuluje sumę elementów; używana w ten sposób zmienna jest czasami nazywana *akumulatorem*.
+Podczas wykonywania pętli `total` kumuluje sumę elementów; używana w ten sposób zmienna jest czasami nazywana *akumulatorem*.
 
 \index{akumulator}
 
@@ -291,15 +291,15 @@ Pętla: 15 74
 Po: 74
 ~~~~
 
-Najlepiej myśleć o zmiennej `largest` jako o "największej wartości, którą do tej pory widzieliśmy". Przed pętlą, ustawiamy `largest` na stałą `None`. `None` jest specjalną stałą wartością, którą możemy przechowywać w zmiennej, tak by oznaczyć ją jako "pustą".
+Najlepiej myśleć o zmiennej `largest` jako o "największej wartości, którą do tej pory widzieliśmy". Przed pętlą ustawiamy `largest` na stałą `None`. `None` jest specjalną stałą wartością, którą możemy przechowywać w zmiennej, tak by oznaczyć ją jako "pustą".
 
-Przed rozpoczęciem pętli, największą wartością, jaką do tej pory widzieliśmy, jest `None`, ponieważ nie widzieliśmy jeszcze żadnych wartości. Podczas wykonywania pętli, jeśli `largest` to `None` to bierzemy pierwszą wartość, którą do tej pory widzieliśmy, jako największą. Możesz zobaczyć w pierwszej iteracji, że wartość `itervar` wynosi 3, ponieważ `largest` to `None`, więc natychmiast ustawiamy `largest` na 3.
+Przed rozpoczęciem pętli największą wartością, jaką do tej pory widzieliśmy, jest `None`, ponieważ nie widzieliśmy jeszcze żadnych wartości. Podczas wykonywania pętli, jeśli `largest` to `None`, bierzemy pierwszą wartość, którą do tej pory widzieliśmy, jako największą. Możesz zobaczyć w pierwszej iteracji, że wartość `itervar` wynosi 3, ponieważ `largest` to `None`, więc natychmiast ustawiamy `largest` na 3.
 
-Po pierwszej iteracji, `largest` nie jest już wartością `None`, więc druga część złożonego wyrażenia logicznego, która sprawdza `itervar > largest` wyzwala się tylko wtedy, gdy widzimy wartość, która jest większa niż "największa do tej pory". Gdy widzimy nową "jeszcze większą" wartość, bierzemy tę nową wartość za `largest`. Możesz zobaczyć na wyjściu programu, że `largest` zwiększa się z 3 do 41, a potem do 74.
+Po pierwszej iteracji `largest` nie jest już wartością `None`, więc druga część złożonego wyrażenia logicznego, która sprawdza `itervar > largest` wyzwala się tylko wtedy, gdy widzimy wartość, która jest większa niż "największa do tej pory". Gdy widzimy nową "jeszcze większą" wartość, bierzemy tę nową wartość i przypisujemy do `largest`. Możesz zobaczyć na wyjściu programu, że `largest` zwiększa się z 3 do 41, a potem do 74.
 
-Na końcu pętli, przeskanowaliśmy wszystkie wartości i zmienna `largest` zawiera teraz największą wartość z listy.
+Na końcu pętli przeskanowaliśmy wszystkie wartości i zmienna `largest` zawiera teraz największą wartość z listy.
 
-Aby obliczyć najmniejszą liczbę, kod jest bardzo podobny, ale z jedną małą zmianą:
+Kod do obliczenia najmniejszej liczby jest bardzo podobny, ale z jedną małą zmianą:
 
 ~~~~ {.python}
 smallest = None
@@ -311,9 +311,9 @@ for itervar in [3, 41, 12, 9, 74, 15]:
 print('Po:', smallest)
 ~~~~
 
-Ponownie, `smallest` oznacza "najmniejszą do tej pory" przed, podczas i po wykonaniu pętli. Gdy pętla zostanie zakończona, `smallest` zawiera najmniejszą wartość na liście.
+Podobnie jak wcześniej, `smallest` oznacza "najmniejszą do tej pory" przed, podczas i po wykonaniu pętli. Gdy pętla zostanie zakończona, `smallest` zawiera najmniejszą wartość na liście.
 
-I ponownie, tak jak w przypadku zliczaniu i sumowania, wbudowane funkcje `max()` i `min()` czynią zbędnym pisanie tego typu pętli.
+I tak samo, jak w przypadku zliczania i sumowania, wbudowane funkcje `max()` i `min()` czynią pisanie tego typu pętli zbędnym.
 
 Poniżej znajduje się prosta wersja wbudowanej w Pythona funkcji `min()`:
 
@@ -326,7 +326,7 @@ def min(values):
     return smallest
 ~~~~
 
-W powyższej wersji usunęliśmy wszystkie polecenia `print`, tak aby były równoważne z funkcją `min`, która jest już wbudowana w Pythona.
+W powyższej wersji usunęliśmy wszystkie polecenia `print()`, tak aby były równoważne z funkcją `min()`, która jest już wbudowana w Pythona.
 
 Debugowanie
 -----------
@@ -338,53 +338,44 @@ Kiedy zaczniesz pisać większe programy, być może będziesz spędzać więcej
 
 Jednym ze sposobów na skrócenie czasu debugowania jest "debugowanie przez dzielenie na części". Na przykład, jeśli w Twoim programie jest 100 linii i sprawdzasz je po kolei, zajmie to 100 kroków.
 
-Zamiast tego, spróbuj podzielić problem na pół. Spójrz na środek programu lub w jego pobliżu, tak aby sprawdzić jakąś wartość pośrednią. Dodaj instrukcję `print` (lub coś innego, co ma sprawdzalny efekt) i uruchom program.
+Zamiast tego spróbuj podzielić problem na pół. Spójrz na środek programu lub w jego pobliżu, tak aby sprawdzić jakąś wartość pośrednią. Dodaj funkcję `print()` (lub coś innego, co ma sprawdzalny efekt) i uruchom program.
 
 Jeśli sprawdzenie w środku programu jest nieprawidłowe, problem musi być w pierwszej połowie programu. Natomiast jeśli jest poprawne, to problem jest w drugiej połowie.
 
-Za każdym razem gdy wykonujesz taką kontrolę swojego programu, zmniejszasz o połowę liczbę linii, które musisz przeszukać. Po sześciu krokach (czyli znacznie mniej niż 100), sprowadza się to do jednej lub dwóch linijek kodu (przynajmniej w teorii).
+Za każdym razem, gdy wykonujesz taką kontrolę swojego programu, zmniejszasz o połowę liczbę linii, które musisz przeszukać. Po sześciu krokach (czyli znacznie mniej niż 100), sprowadza się to do jednej lub dwóch linijek kodu (przynajmniej w teorii).
 
-W praktyce nie zawsze jest jasne czym jest "środek programu" i nie zawsze można go sprawdzić. Nie ma sensu liczyć linii i znajdować dokładnego środka programu. Zamiast tego pomyśl o miejscach w programie, w których mogą wystąpić błędy i o miejscach, w których łatwo jest to sprawdzić. Następnie wybierz miejsce, w którym Twoim zdaniem szanse na występienie błędu przed lub po punkcie kontrolnym są mniej więcej takie same.
+W praktyce nie zawsze jest jasne, czym jest "środek programu" i nie zawsze można go sprawdzić. Nie ma sensu liczyć linii i znajdować dokładnego środka programu. Zamiast tego pomyśl o miejscach w programie, w których mogą wystąpić błędy i o miejscach, w których łatwo jest to sprawdzić. Następnie wybierz miejsce, w którym Twoim zdaniem szanse na wystąpienie błędu przed lub po punkcie kontrolnym są mniej więcej takie same.
 
 Słowniczek
 ----------
 
 akumulator
-:   Zmienna używana w pętli do sumowania lub akumulowania wyniku.
-\index{akumulator}
+:   Zmienna używana w pętli do sumowania lub akumulowania wyniku.\index{akumulator}
 
 dekrementacja
-:   Aktualizacja, która zmniejsza wartość zmiennej (najczęściej o jeden).
-\index{dekrementacja}
+:   Aktualizacja, która zmniejsza wartość zmiennej (najczęściej o jeden).\index{dekrementacja}
 
 inicjalizacja
-:   Przypisanie, które nadaje wartość początkową zmiennej, która później zostanie zaktualizowana.
-\index{inicjalizacja}
-\index{zmienna, inicjalizacja}
+:   Przypisanie nadające zmiennej wartość początkową, która później zostanie zaktualizowana.\index{inicjalizacja}\index{zmienna, inicjalizacja}
 
 inkrementacja
-:   Aktualizacja, która zwiększa wartość zmiennej (najczęściej o jeden).
-\index{inkrementacja}
+:   Aktualizacja, która zwiększa wartość zmiennej (najczęściej o jeden).\index{inkrementacja}
 
 iteracja
-:   Powtórne wykonanie zbioru instrukcji przy pomocy funkcji, która sama się wywołuje, lub przy pomocy pętli.
-\index{iteracja}
+:   Powtórne wykonanie zbioru instrukcji przy pomocy funkcji, która sama się wywołuje, lub przy pomocy pętli.\index{iteracja}
 
 licznik
-:   Zmienna używana w pętli do zliczania ile razy coś się wydarzyło. Inicjalizujemy licznik jako zero, a następnie zwiększamy go za każdym razem, gdy chcemy coś "zliczyć".
-\index{licznik}
+:   Zmienna używana w pętli do zliczania, ile razy coś się wydarzyło. Inicjalizujemy licznik jako zero, a następnie zwiększamy go za każdym razem, gdy chcemy coś "zliczyć".\index{licznik}
 
 pętla nieskończona
-:   Pętla, w której warunek kończący nie jest nigdy spełniony lub dla której nie ma warunku kończącego.
-\index{nieskończona, pętla}
-\index{pętla!nieskończona}
+:   Pętla, w której warunek kończący nie jest nigdy spełniony lub dla której nie ma warunku kończącego.\index{nieskończona, pętla}\index{pętla!nieskończona}
 
 Ćwiczenia
 ---------
 
 #### Ćwiczenie 1
 
-Napisz program, który odczytuje liczby tak długo, aż użytkownik wprowadzi "gotowe". Po wpisaniu "gotowe" wydrukuj sumę, ile wprowadzono liczb oraz średnią z tych liczb. Jeśli użytkownik wprowadzi coś innego niż liczba, wykryj jego błąd używając `try` i `except`, wypisz komunikat o błędzie oraz przejdź do następnej liczby.
+Napisz program, który odczytuje liczby tak długo, aż użytkownik wprowadzi "gotowe". Po wpisaniu "gotowe" wydrukuj sumę, ile wprowadzono liczb oraz średnią z tych liczb. Jeśli użytkownik wprowadzi coś innego niż liczba, wykryj jego błąd, używając `try` i `except`, wypisz komunikat o błędzie oraz przejdź do następnej liczby.
 
 ~~~~
 Wprowadź liczbę: 4

@@ -68,11 +68,12 @@ if ( $dueDate->message ) {
 <p>
 <b>Używanie API GeoJSON</b>
 </p>
-W poniższym zadaniu napiszesz program w Pythonie podobny do
+<p>
+W poniższym zadaniu napiszesz program podobny do
 <a href="https://py4e.pl/code3/geojson.py" target="_blank">https://py4e.pl/code3/geojson.py</a>.
-Program będzie prosił o podanie lokalizacji, połączy się z usługą sieciową Google Maps, 
-pobierze dane w formacie JSON, przeparsuje dane i wyświetli element <b>place_id</b>,
-który jest tekstowym identyfikatorem unikalnie identyfikującym jakieś miejsce.
+Program będzie prosił o podanie lokalizacji, połączy się z usługą sieciową zawierającą dane Google Maps, 
+pobierze dane w formacie JSON, przeparsuje dane i wyświetli element <code>place_id</code>,
+który jest tekstowym identyfikatorem identyfikującym jakieś miejsce.
 </p>
 <p>
 <b>Adresy API</b>
@@ -84,25 +85,25 @@ danych Google:
 <a href="<?= deHttps($api_url).'?' ?>" target="_blank"><?= deHttps($api_url) ?>?</a>
 </pre>
 API przyjmuje taki sam parametr (adresy) jak API Google.
-API nie posiada również limitów wywołać, zatem możesz je testować tyle razy ile chcesz.
+API nie posiada również limitów wywołań, zatem możesz je testować tyle razy ile chcesz.
 Jeśli wywołasz adres URL bez podanych parametrów, uzyskasz odpowiedź "No address...".
 </p>
 <p>
-Aby wywołać API musisz podać parametr <b>key=</b> oraz <b>address=</b> opisujący
+Aby wywołać API musisz podać parametr <code>key=</code> oraz <code>address=</code> opisujący
 poszukiwany adres. Oba parametry muszą być poprawnie zakodowane przy pomocy
-funkcji <b>urllib.parse.urlencode()</b>, tak jak to pokazano w programie
+funkcji <code>urllib.parse.urlencode()</code>, tak jak to pokazano w programie
 <a href="https://py4e.pl/code3/geojson.py" target="_blank">https://py4e.pl/code3/geojson.py</a>.
 </p>
 <p>
 Upewnij się, że Twój kod wykorzystuje podane wyżej adresy API. Uzyskasz <em>różne</em>
-wyniki korzystając z adresów API <b>geojson</b> i <b>json</b>, więc upewnij się,
+wyniki korzystając z adresów API <code>geojson</code> i <code>json</code>, więc upewnij się,
 że korzystasz z tych samych adresów API co mechanizm sprawdzarkowy tego zadania.
 <p>
 <?php httpsWarning($api_url); ?>
-<p><b>Dane testowe / Przykładowe uruchomienie</b></p>
+<p><b>Dane testowe i przykładowe uruchomienie</b></p>
 <p>
 Możesz sprawdzić czy Twój program działa poprawnie podając lokalizację
- "<?= $sample_location ?>", której <b>place_id</b> wynosi "<?= $sample_place ?>".
+ "<?= $sample_location ?>", której <code>place_id</code> wynosi <code><?= $sample_place ?></code>.
 <pre>
 Podaj lokalizację: <?= $sample_location . "\n" ?>
 Pobieranie: http://...
@@ -112,23 +113,23 @@ place_id: <?= $sample_place ?>
 </p>
 <p><b>Rozwiązanie zadania</b></p>
 <p>
-Uruchom swój program aby uzyskać <b>place_id</b> dla poniższej lokalizacji:
+Uruchom swój program aby uzyskać <code>place_id</code> dla poniższej lokalizacji:
 <pre>
 <?= $actual_location ?>
 </pre>
 Upewnij się, że wprowadziłeś nazwę i wielkość liter dokładnie takie same jak powyżej.
-Umieść <b>place_id</b> i kod rozwiązania poniżej.<br>
-Wskazówka: Pierwsze siedem znaków <b>place_id</b>
-to "<?= substr($actual_place,0,7) ?> ..."<br/>
+Umieść <code>place_id</code> i kod rozwiązania poniżej.<br>
+Wskazówka: Pierwsze siedem znaków <code>place_id</code>
+to <code><?= substr($actual_place,0,7) ?>...</code><br/>
 </p>
 <p>
 Upewnij się, że pobierasz dane przy pomocy adresu URL podanego powyżej, a nie
-przy pomocy zwykłego Google API. Twój program powinien działać również z Google API,
-ale uzyskiwane <b>place_id</b> może być różne od tego, które jest wykorzystywane w tym zadaniu.
+przy pomocy zwykłego Google API. Twój program powinien działać również z płatnego Google API,
+ale uzyskiwane <code>place_id</code> może być różne od tego, które jest wykorzystywane w tym zadaniu.
 </p>
 <form method="post">
-place_id: <input type="text" size="40" name="place_id">
+<code>place_id</code>: <input type="text" size="40" name="place_id">
 <input type="submit" value="Wyślij rozwiązanie"><br/>
-Kod Pythona:<br/>
-<textarea rows="20" style="width: 90%" name="code"></textarea><br/>
+Kod programu:<br/>
+<textarea rows="20" style="width: 90%; font-family: monospace" name="code"></textarea><br/>
 </form>

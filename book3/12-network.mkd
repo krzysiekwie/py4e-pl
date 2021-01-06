@@ -2,22 +2,22 @@
 Programy sieciowe
 =================
 
-Podczas gdy wiele przykładów w tej książce koncentruje się na odczytywaniu plików i wyszukiwaniu danych w tych plikach, istnieje wiele różnych źródeł informacji, jeśli wziąć pod uwagę internet.
+Mimo że wiele przykładów w tej książce koncentruje się na odczytywaniu plików i wyszukiwaniu w nich danych, istnieje wiele innych, zróżnicowanych źródeł informacji, jeśli wziąć pod uwagę internet.
 
-W tym rozdziale będziemy udawać, że jesteśmy przeglądarką internetową i będziemy wyszukiwać strony internetowe za pomocą protokołu HTTP (Hypertext Transfer Protocol, czyli protokół przesyłania dokumentów hipertekstowych). Następnie będziemy odczytywać dane ze stron internetowych oraz będziemy te dane przetwarzać.
+W tym rozdziale będziemy udawać, że jesteśmy przeglądarką internetową, i wyszukiwać strony internetowe za pomocą HTTP (Hypertext Transfer Protocol, czyli protokołu przesyłania dokumentów hipertekstowych). Następnie będziemy odczytywać dane ze stron internetowych oraz je przetwarzać.
 
 Hypertext Transfer Protocol – HTTP
 ----------------------------------
 
 \index{gniazdo}
 
-Protokół sieciowy, który napędza sieć internetową, jest w rzeczywistości dość prosty i ma wbudowane w Pythona wsparcie poprzez funkcję `socket`, która ułatwia w programie Pythona nawiązywanie połączeń sieciowych i pobieranie danych przez tzw. gniazda (lub z ang. sockety).
+Protokół sieciowy, który napędza internet, jest w rzeczywistości dość prosty. Python wspiera go poprzez wbudowaną funkcję `socket()`, która ułatwia nawiązywanie połączeń sieciowych i pobieranie danych przez tzw. gniazda (lub z ang. sockety).
 
-*Gniazdo* jest bardzo podobne do pliku, z tą różnicą, że jedno gniazdo zapewnia dwukierunkowe połączenie między dwoma programami. Przy pomocy tego samego gniazda możesz zarówno odczytywać dane, jak i wysyłać/zapisywać dane. Jeżeli wyślesz jakieś dane do gniazda, to zostaną one wysłane do aplikacji znajdującej się na drugim końcu tego gniazda. Jeżeli czytasz dane z gniazda, to otrzymujesz dane, które wysłała do Ciebie aplikacja po drugiej stronie.
+*Gniazdo* jest bardzo podobne do pliku, z tą różnicą, że jedno gniazdo zapewnia dwukierunkowe połączenie między dwoma programami. Przy pomocy tego samego gniazda możesz zarówno odczytywać dane, jak i wysyłać/zapisywać dane. Jeżeli wyślesz jakieś dane do gniazda, to zostaną one wysłane do aplikacji znajdującej się po drugiej stronie tego gniazda. Jeżeli czytasz z gniazda, to otrzymujesz dane, które wysłała do Ciebie aplikacja z drugiej strony.
 
-Ale jeżeli próbujesz odczytać z gniazda dane wtedy, gdy program na drugim końcu nie wysłał jeszcze żadnych danych, to po prostu siadasz i czekasz. Jeżeli programy na obu końcach gniazda po prostu czekają na jakieś dane, nie wysyłając niczego, to będą czekać bardzo długo, więc ważną częścią programów komunikujących się przez Internet jest posiadanie pewnego rodzaju protokołu.
+Ale jeżeli próbujesz odczytać z gniazda dane wtedy, gdy program na drugim końcu jeszcze żadnych nie wysłał, to po prostu czekasz. Jeżeli programy po obu stronach gniazda po prostu czekają na jakieś dane, nie wysyłając niczego, to będą czekać bardzo długo, więc ważną częścią programów komunikujących się przez internet jest posiadanie jakiegoś protokołu.
 
-Protokół jest zestawem precyzyjnych reguł, które określają kto zaczyna pierwszy krok, co ma zrobić, a następnie jakie są możliwe odpowiedzi na tę wiadomość, kto wysyła następną wiadomość itd. W pewnym sensie te dwie aplikacje na obu końcach gniazda wykonują taniec i upewniają się, że nie nadepną na siebie nawzajem.
+Protokół jest zestawem precyzyjnych reguł, które określają, kto robi pierwszy krok, jak to zrobić, a następnie jakie są możliwe odpowiedzi, kto wysyła kolejną wiadomość itd. W pewnym sensie te dwie aplikacje na obu końcach gniazda wykonują taniec i pilnują, żeby się nawzajem nie nadepnąć.
 
 Istnieje wiele dokumentów, które opisują protokoły sieciowe. Hypertext Transfer Protocol jest opisany w poniższym dokumencie:
 
@@ -25,28 +25,28 @@ Istnieje wiele dokumentów, które opisują protokoły sieciowe. Hypertext Trans
 
 \index{port}
 
-Jest to długi i skomplikowany 176-stronicowy dokument z dużą ilością szczegółów. Jeśli uważasz, że jest interesujący, przeczytaj go w całości. Ale jeśli rozejrzysz się po stronie nr 36 dokumentu RFC2616, to znajdziesz składnię dla żądania GET. Aby poprosić o dokument z serwera WWW, wykonujemy połączenie z serwerem `data.pr4e.org` na porcie 80, a następnie wysyłamy linię w postaci
+Jest to długi i skomplikowany 176-stronicowy dokument z dużą ilością szczegółów. Jeśli uważasz, że jest interesujący, przeczytaj go w całości. Ale jeśli przyjrzysz się stronie 36 dokumentu RFC2616, to znajdziesz składnię dla żądania GET. Aby poprosić o dokument z serwera WWW, wykonujemy połączenie z serwerem [data.pr4e.org](http://data.pr4e.org) na porcie 80, a następnie wysyłamy linię w postaci
 
 `GET http://data.pr4e.org/romeo.txt HTTP/1.0`
 
 gdzie drugim parametrem jest strona internetowa, o którą prosimy, a następnie wysyłamy pustą linię. Serwer internetowy odpowie na zapytanie pewnym nagłówkiem i pustym wierszem, po którym wyśle treść dokumentu.
 
-Natomiast czym jest port? Jest to liczba, który generalnie wskazuje, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.
+Czym natomiast jest port? Ogólnie rzeczy biorąc, jest to liczba wskazująca, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.
 
 Najprostsza przeglądarka internetowa na świecie
 -----------------------------------------------
 
 \index{gniazdo}
 
-Być może najprostszym sposobem na pokazanie, jak działa protokół HTTP, jest napisanie bardzo prostego programu, który nawiązuje połączenie z serwerem WWW i postępuje zgodnie z zasadami protokołu HTTP, tak by zażądać dokumentu i wyświetlić to, co serwer wysyłał z powrotem.
+Być może najprostszym sposobem na pokazanie, jak działa protokół HTTP, jest napisanie bardzo prostego programu, który nawiązuje połączenie z serwerem WWW i postępuje zgodnie z zasadami protokołu HTTP, żeby zażądać dokumentu i wyświetlić to, co serwer wysyłał z powrotem.
 
 \VerbatimInput{../code3/socket1.py}
 
-Najpierw program nawiązuje połączenie z serwerem na porcie 80 [data.pr4e.org](http://data.pr4e.org). Ponieważ nasz program pełni rolę "przeglądarki internetowej", protokół HTTP mówi, że musimy wysłać polecenie GET, a następnie pustą linię. `\r\n` oznacza EOL (ang. end of line, czyli koniec linii), a więc `\r\n\r\n` oznacza pustkę pomiędzy dwiema sekwencjami EOL. Jest to odpowiednik pustego wiersza.
+Najpierw program nawiązuje połączenie z serwerem [data.pr4e.org](http://data.pr4e.org) na porcie 80. Ponieważ nasz program pełni rolę "przeglądarki internetowej", protokół HTTP mówi, że musimy wysłać polecenie GET, a następnie pustą linię. `\r\n` oznacza EOL (ang. *end of line*, czyli koniec linii), a więc `\r\n\r\n` oznacza pustkę pomiędzy dwiema sekwencjami EOL. Jest to odpowiednik pustego wiersza.
 
 ![Połączenie przez gniazdo](height=2.0in@../images/socket)
 
-Gdy wyślemy ten pusty wiersz, to piszemy pętlę, która odbiera z gniazda dane w 512-znakowych kawałkach i drukuje te dane aż do momentu gdy nie będzie więcej danych do odczytania (tj. `recv()` zwróci pusty ciąg znaków).
+Gdy już wyślemy pusty wiersz, piszemy pętlę, która odbiera z gniazda dane w 512-znakowych kawałkach i drukuje je aż do momentu, gdy nie będzie więcej danych do odczytania (czyli `recv()` zwróci pusty ciąg znaków).
 
 Program generuje następujące wynik:
 
@@ -70,15 +70,15 @@ Arise fair sun and kill the envious moon
 Who is already sick and pale with grief
 ~~~~
 
-Wyjście zaczyna się od nagłówków, które serwer WWW wysyła w celu opisania dokumentu. Na przykład, nagłówek `Content-Type` wskazuje, że dokument jest zwykłym dokumentem tekstowym (`text/plain`).
+Wyjście zaczyna się od nagłówków, które serwer WWW wysyła w celu opisania dokumentu. Na przykład nagłówek `Content-Type` wskazuje, że dokument jest zwykłym dokumentem tekstowym (`text/plain`).
 
-Po wysłaniu przez serwer nagłówków, dodaje on pustą linię wskazującą koniec nagłówków, a następnie wysyła rzeczywiste dane zawarte w pliku *romeo.txt*.
+Po wysłaniu przez serwer nagłówków dodaje on pustą linię wskazującą koniec nagłówków, a następnie wysyła dane rzeczywiście zawarte w pliku `romeo.txt`.
 
-Powyższy przykład pokazuje jak przy pomocy gniazd wykonać niskopoziomowe połączenie sieciowe. Gniazda mogą być używane do komunikacji z serwerem WWW lub z serwerem pocztowym albo z wieloma innymi rodzajami serwerów. Wystarczy znaleźć dokument, który opisuje protokół, i napisać kod do wysłania i odbioru danych zgodnie z tym protokołem.
+Powyższy przykład pokazuje, jak przy pomocy gniazd wykonać niskopoziomowe połączenie sieciowe. Gniazda mogą być używane do komunikacji z serwerem WWW, z serwerem pocztowym albo z różnymi innymi rodzajami serwerów. Wystarczy znaleźć dokument, który opisuje protokół, i napisać kod do wysłania i odbioru danych zgodnie z tym protokołem.
 
-Ponieważ jednak najczęściej używanym przez nas protokołem jest protokół internetowy HTTP, Python posiada specjalną bibliotekę zaprojektowaną specjalnie do obsługi protokołu HTTP w celu pobierania dokumentów i danych umieszczonych w sieci.
+Ponieważ jednak najczęściej używanym przez nas protokołem jest protokół internetowy HTTP, Python posiada specjalną bibliotekę zaprojektowaną specjalnie do jego obsługi i pobierania dokumentów i danych umieszczonych w sieci.
 
-Jednym z wymogów korzystania z protokołu HTTP jest konieczność wysyłania i odbierania danych w postaci obiektów bajtowych, a nie ciągów znaków. W poprzednim przykładzie, metody `encode()` i `decode()` przekształcają odpowiednio ciągi znaków na obiekty bajtowe i obiekty bajtowe na ciągi znaków.
+Jednym z wymogów korzystania z protokołu HTTP jest konieczność wysyłania i odbierania danych w postaci obiektów bajtowych a nie ciągów znaków. W poprzednim przykładzie metody `encode()` i `decode()` przekształcają odpowiednio ciągi znaków na obiekty bajtowe i obiekty bajtowe na ciągi znaków.
 
 Następny przykład używa notacji `b''` do określenia, że zmienna powinna być przechowywana jako obiekt bajtowy. `encode()` i `b''` są równoważne, o ile nie używamy np. znaków diakrytycznych (generalnie użycie `encode()` jest bardziej uniwersalne).
 
@@ -93,17 +93,16 @@ Pobieranie obrazu przez HTTP
 ----------------------------
 
 \index{urllib!obraz}
-\index{obraz!jpg}
-\index{jpg}
+\index{obraz JPG}
+\index{JPG}
 
-W poprzednim przykładzie pobraliśmy zwykły plik tekstowy, który zawierał w pliku znaki końca linii i po prostu wyświetliliśmy te dane na ekranie w trakcie działania programu. Podobnego programu możemy użyć do odtworzenia obrazu za pomocą HTTP. Zamiast wyświetlać dane na ekranie w trakcie działania programu, zgromadzimy je w obiekcie bajtowym, usuniemy nagłówki, a następnie zapiszemy dane obrazu do pliku:
+W poprzednim przykładzie pobraliśmy zwykły plik tekstowy, który zawierał znaki końca linii i po prostu wyświetliliśmy te dane na ekranie w trakcie działania programu. Podobnego programu możemy użyć do odtworzenia obrazu za pomocą HTTP. Zamiast wyświetlać dane na ekranie w trakcie działania programu, zgromadzimy je w obiekcie bajtowym, usuniemy nagłówki, a następnie zapiszemy dane obrazu do pliku:
 
 \VerbatimInput{../code3/urljpeg.py}
 
-Po uruchomieniu programu, generuje on następujące wyjście:
+Po uruchomieniu programu generuje on następujące wyjście:
 
 ~~~~
-$ python urljpeg.py
 5120 5120
 5120 10240
 4240 14480
@@ -130,11 +129,11 @@ Connection: close
 Content-Type: image/jpeg
 ~~~~
 
-Widać, że dla tego adresu URL nagłówek `Content-Type` wskazuje, że treść dokumentu jest obrazem (`image/jpeg`). Gdy program zakończy pracę, możesz obejrzeć dane obrazu otwierając plik `stuff.jpg` w programie do przeglądania obrazów.
+Widać, że dla tego adresu URL nagłówek `Content-Type` wskazuje, że treść dokumentu jest obrazem (`image/jpeg`). Gdy program zakończy pracę, możesz obejrzeć dane obrazu, otwierając plik `stuff.jpg` w programie do przeglądania obrazów.
 
-W trakcie działania programu widać, że nie otrzymujemy 5120 znaków za każdym razem, gdy wywołujemy metodę `recv()`. Otrzymujemy tyle znaków, ile zostało wysłanych do nas przez serwer WWW w momencie wywołania `recv()`. W tym przykładzie, albo otrzymujemy od 3200 do 5120 znaków za każdym razem gdy żądamy danych.
+W trakcie działania programu widać, że nie otrzymujemy 5120 znaków za każdym razem, gdy wywołujemy metodę `recv()`. Otrzymujemy tyle znaków, ile zostało wysłanych do nas przez serwer WWW w momencie wywołania `recv()`. W tym przykładzie możemy otrzymać od 3200 do 5120 znaków za każdym razem, gdy żądamy danych.
 
-Twoje wyniki mogą być różne w zależności od szybkości Twojej sieci. Zauważ również, że przy ostatnim wywołaniu `recv()` otrzymujemy 3167 bajtów, co jest końcem strumienia, a przy następnym wywołaniu `recv()` otrzymujemy ciąg o zerowej długości, który mówi nam, że serwer wywołał `close()` na końcu gniazda i nie ma już więcej danych.
+W zależności od szybkości Twojej sieci te wartości mogą być jeszcze inne. Zauważ również, że przy ostatnim wywołaniu `recv()` otrzymujemy 3167 bajtów, czyli końcówkę strumienia, a przy następnym wywołaniu `recv()` otrzymujemy ciąg o zerowej długości, który mówi nam, że serwer wywołał `close()` po swojej stronie gniazda i nie przyjdzie już więcej danych.
 
 \index{time, moduł}
 \index{moduł!time}
@@ -143,7 +142,6 @@ Twoje wyniki mogą być różne w zależności od szybkości Twojej sieci. Zauwa
 Możemy spowolnić nasze kolejne wywołania `recv()` przez odkomentowanie wywołania `time.sleep()`. W ten sposób czekamy ćwierć sekundy po każdym wywołaniu, tak aby serwer mógł "wyprzedzić" nas i przesłać nam więcej danych, zanim ponownie wywołamy `recv()`. Z włączonym opóźnieniem program wykonuje się w następujący sposób:
 
 ~~~~
-$ python urljpeg.py
 5120 5120
 5120 10240
 5120 15360
@@ -167,24 +165,27 @@ Connection: close
 Content-Type: image/jpeg
 ~~~~
 
-Teraz, poza pierwszym i ostatnim wywołaniem `recv()`, otrzymujemy 5120 znaków za każdym razem gdy prosimy o nowe dane.
+Teraz, poza pierwszym i ostatnim wywołaniem `recv()`, otrzymujemy 5120 znaków za każdym razem, gdy prosimy o nowe dane.
 
-Istnieje bufor pomiędzy serwerem wykonującym żądania `send()` a naszą aplikacją wykonującą żądania `recv()`. Kiedy uruchamiamy program z założonym opóźnieniem, w pewnym momencie serwer może zapełnić bufor w gnieździe i być zmuszony do pauzy tak długo aż nasz program zacznie opróżniać bufor. Wstrzymanie aplikacji wysyłającej lub odbierającej w takiej sytuacji nazywane jest "kontrolą przepływu".
+Pomiędzy serwerem wykonującym żądania `send()` a naszą aplikacją wykonującą żądania `recv()` jest bufor. Kiedy uruchamiamy program z założonym opóźnieniem, w pewnym momencie serwer może zapełnić bufor w gnieździe i być zmuszony zaczekać, aż nasz program zacznie opróżniać bufor. Wstrzymanie aplikacji wysyłającej lub odbierającej w takiej sytuacji nazywane jest "kontrolą przepływu".
 
 \index{kontrola przepływu}
 
-Pobieranie stron internetowych przy pomocy `urllib`
----------------------------------------------------
+Pobieranie stron internetowych za pomocą `urllib`
+-------------------------------------------------
 
-Choć możemy ręcznie wysyłać i odbierać dane za pomocą protokołu HTTP przy użyciu biblioteki gniazd, istnieje  w Pythonie znacznie prostszy sposób na wykonanie tego zadania poprzez użycie biblioteki `urllib`.
+Choć możemy ręcznie wysyłać i odbierać dane za pomocą protokołu HTTP przy użyciu biblioteki gniazd, istnieje w Pythonie znacznie prostszy sposób na wykonanie tego zadania przy użyciu biblioteki `urllib`.
 
-Używając `urllib`, możesz traktować stronę internetową jak plik. Po prostu wskazujesz stronę internetową do pobrania, a `urllib` obsługuje wszystkie szczegóły dotyczące protokołu HTTP i nagłówka.
+\index{urllib!moduł}
+\index{moduł!urllib}
 
-Równoważny kod odczytujący z sieci plik *romeo.txt* przy użyciu `urllib` jest następujący:
+Kiedy używasz `urllib`, możesz traktować stronę internetową jak plik. Po prostu wskazujesz stronę internetową do pobrania, a `urllib` obsługuje wszystkie szczegóły dotyczące protokołu HTTP i nagłówka.
+
+Równoważny kod odczytujący z sieci plik `romeo.txt` przy użyciu `urllib` jest następujący:
 
 \VerbatimInput{../code3/urllib1.py}
 
-Po otwarciu strony internetowej za pomocą `urllib.urlopen`, możemy potraktować ją jak plik i odczytać ją za pomocą pętli `for`.
+Po otwarciu strony internetowej za pomocą `urllib.urlopen()` możemy potraktować ją jak plik i odczytać za pomocą pętli `for`.
 
 Po uruchomieniu programu widzimy tylko zawartość pliku. Nagłówki są nadal wysyłane przez serwer, ale kod `urllib` pochłania nagłówki i zwraca nam tylko dane.
 
@@ -199,22 +200,22 @@ Jako kolejny przykład możemy napisać program, który pobierze dane z `romeo.t
 
 \VerbatimInput{../code3/urlwords.py}
 
-Po otwarciu strony internetowej, możemy odczytać jej zawartość jak z lokalnego pliku.
+Po otwarciu strony internetowej możemy odczytać jej zawartość jak z lokalnego pliku.
 
 Odczytywanie plików binarnych za pomocą `urllib`
 ------------------------------------------------
 
-Czasami chcesz pobrać nietekstowy (lub binarny) plik, taki jak zdjęcie lub plik wideo. Dane w tych plikach na ogół nie są przydatne do wypisywania na ekranie, jednak za pomocą `urllib` możesz łatwo wykonać kopię pliku znajdującego się pod adresem URL do lokalnego pliku na dysku twardym.
+Czasami chcesz pobrać nietekstowy (lub binarny) plik, taki jak zdjęcie lub plik wideo. Dane w tych plikach na ogół nie są przydatne do wypisywania na ekranie, jednak za pomocą `urllib` możesz łatwo skopiować dane z pliku pod adresem URL do lokalnego pliku na dysku twardym.
 
 \index{plik binarny}
 
-Schemat postępowania polega na otwarciu adresu URL i użyciu `read` do pobrania całej zawartości dokumentu do zmiennej zawierającej ciąg znaków (`img`), a następnie zapisaniu tej informacji do pliku lokalnego:
+Schemat postępowania polega na otwarciu adresu URL i użyciu `read()` do pobrania całej zawartości dokumentu do zmiennej zawierającej ciąg znaków (`img`), a następnie zapisaniu tej informacji do pliku lokalnego:
 
 \VerbatimInput{../code3/curl1.py}
 
-Program ten odczytuje przez sieć wszystkie dane na raz i przechowuje je w zmiennej `img` w pamięci głównej komputera, a następnie otwiera plik `cover.jpg` i zapisuje dane na dysku. Argument `wb` w wywołaniu funkcji `open()` otwiera plik binarny tylko do zapisu. Program ten będzie działał, jeśli rozmiar pliku jest mniejszy niż rozmiar pamięci Twojego komputera.
+Program ten odczytuje przez sieć wszystkie dane na raz i przechowuje je w zmiennej `img` w pamięci głównej komputera, a później otwiera plik `cover.jpg` i zapisuje dane na dysku. Argument `wb` w wywołaniu funkcji `open()` otwiera plik binarny tylko do zapisu. Program ten będzie działał, jeśli rozmiar pliku jest mniejszy niż rozmiar pamięci Twojego komputera.
 
-Jeśli jednak jest to duży plik audio lub wideo, powyższy program może się zawiesić lub przynajmniej działać bardzo wolno w momencie gdy na Twoim komputerze zabraknie pamięci. Aby uniknąć wyczerpania pamięci, pobieramy dane w blokach (lub buforach), a następnie zapisujemy każdy blok na dysku przed pobraniem kolejnego bloku. W ten sposób program może odczytać plik o dowolnym rozmiarze bez zajmowania całej pamięci, którą posiadasz w komputerze.
+Jeśli jednak jest to duży plik audio lub wideo, powyższy program może się zawiesić lub przynajmniej działać bardzo wolno, kiedy na Twoim komputerze zabraknie pamięci. Aby uniknąć wyczerpania pamięci, pobieramy dane w blokach (lub buforach), a następnie zapisujemy każdy blok na dysku przed pobraniem kolejnego bloku. W ten sposób program może odczytać plik o dowolnym rozmiarze bez zajmowania całej pamięci, którą posiadasz w komputerze.
 
 \VerbatimInput{../code3/curl2.py}
 
@@ -223,7 +224,6 @@ W powyższym przykładzie odczytujemy jednocześnie tylko 100 000 znaków, a nas
 Program działa następująco:
 
 ~~~~
-python curl2.py
 Skopiowano 230210 znaków.
 ~~~~
 
@@ -232,18 +232,18 @@ Parsowanie HTMLa, roboty internetowe i web scraping
 
 \index{web scraping}
 \index{robot internetowy}
-\index{parsowanie HTML}
+\index{parsowanie!HTML}
 
-Jednym z częstych zastosowań `urllib` jest tzw. *web scraping* (dosł. wyskrobywanie danych z sieci). Mamy z nim do czynienia wtedy, gdy piszemy program, który udaje przeglądarkę internetową i pobiera strony, a następnie analizujemy dane zawarte na tych stronach w poszukiwaniu interesujących nas wzorców.
+Jednym z częstych zastosowań `urllib` jest tzw. *web scraping* (dosł. wyłuskiwanie danych z sieci). Mamy z nim do czynienia wtedy, gdy piszemy program, który udaje przeglądarkę internetową i pobiera strony, a następnie analizujemy dane zawarte na tych stronach w poszukiwaniu interesujących nas wzorców.
 
-Na przykład, wyszukiwarka taka jak Google, sprawdza kod źródłowy jednej strony internetowej, wyodrębnia linki do innych stron, a następnie pobiera te strony, wyodrębnia z nich linki itd. Używając tej techniki, Google poprzez swoje *roboty internetowe* indeksuje/przechodzi przez prawie wszystkie strony znajdujące się w sieci internetowej.
+Na przykład wyszukiwarka taka jak Google sprawdza kod źródłowy jednej strony internetowej, wyodrębnia linki do innych stron, a następnie pobiera te strony, wyodrębnia z nich linki itd. Używając tej techniki, Google poprzez swoje *roboty internetowe* indeksuje/przechodzi przez prawie wszystkie strony znajdujące się w sieci internetowej.
 
-Google wykorzystuje również informacje liczbie linków z innych stron do danej strony, jako jedną z miar tego jak "ważna" jest dana strona i jak wysoko powinna się ona znajdować w wynikach wyszukiwania.
+Google wykorzystuje również informacje o liczbie linków z innych stron do danej strony jako jedną z miar tego, jak "ważna" jest dana strona i jak wysoko powinna się ona znajdować w wynikach wyszukiwania.
 
 Parsowanie HTMLa przy użyciu wyrażeń regularnych
 ------------------------------------------------
 
-Jednym z prostych sposobów parsowania HTMLa jest użycie wyrażeń regularnych do wielokrotnego wyszukiwania i wyodrębnienia podciągów znaków, które pasują do konkretnego wzorca.
+Jednym z prostych sposobów parsowania HTMLa jest użycie wyrażeń regularnych do wielokrotnego wyszukiwania i wyodrębniania podciągów znaków, które pasują do konkretnego wzorca.
 
 Poniżej mamy prostą stronę internetową:
 
@@ -264,7 +264,7 @@ href="http[s]?://.+?"
 
 Nasze wyrażenie regularne szuka napisów, które zaczynają się od "href=\"http://" lub "href=\"https://", po których następuje jeden lub więcej znaków (`.+?`), po których następuje kolejny cudzysłów. Znak zapytania `?` za `[s]` wskazuje na szukanie łańcucha "http", po którym następuje zero lub jedno "s".
 
-Znak zapytania dodany do `.+?` wskazuje, że dopasowanie nie być wykonane w trybie "zachłannym". Takie dopasowanie próbuje znaleźć *najmniejszy* możliwy pasujący ciąg znaków, a z kolei zachłanne dopasowanie próbuje znaleźć *największy* możliwy pasujący ciąg znaków.
+Znak zapytania dodany do `.+?` wskazuje, że dopasowanie nie może być wykonane w trybie "zachłannym". Takie dopasowanie próbuje znaleźć *najmniejszy* możliwy pasujący ciąg znaków, a z kolei zachłanne dopasowanie próbuje znaleźć *największy* możliwy pasujący ciąg znaków.
 
 \index{zachłanny}
 \index{niezachłanny}
@@ -276,7 +276,7 @@ Do naszego wyrażenia regularnego dodajemy nawiasy, aby wskazać, którą częś
 
 \VerbatimInput{../code3/urlregex.py}
 
-Biblioteka `ssl` pozwala naszemu programowi na dostęp do stron internetowych, które ściśle wymuszają HTTPS. Metoda `read` zwraca kod źródłowy HTML jako obiekt bajtowy, zamiast zwracać obiekt typu HTTPResponse. Metoda `findall` daje nam listę wszystkich ciągów znaków, które pasują do naszego wyrażenia regularnego, zwracając tylko tekst linku zawarty pomiędzy cudzysłowami.
+Moduł `ssl` pozwala naszemu programowi na dostęp do stron internetowych, które ściśle wymuszają HTTPS. Metoda `read()` zwraca kod źródłowy HTML jako obiekt bajtowy, zamiast zwracać obiekt typu `HTTPResponse`. Metoda `findall()` daje nam listę wszystkich ciągów znaków, które pasują do naszego wyrażenia regularnego, zwracając tylko tekst linku zawarty pomiędzy cudzysłowami.
 
 Kiedy uruchomimy program i wprowadzimy adres URL, otrzymamy mniej więcej następujący wynik:
 
@@ -300,25 +300,25 @@ http://sphinx.pocoo.org/
 
 Wyrażenia regularne działają bardzo dobrze wtedy, gdy analizowany kod HTML jest dobrze sformatowany i przewidywalny. Niestety istnieje wiele "zepsutych" stron HTML, więc poleganie na rozwiązaniu opierającym się tylko na wyrażeniach regularnych może albo pominąć niektóre poprawne linki, albo skończyć się pozyskaniem niepoprawnych danych.
 
-Problem ten może zostać rozwiązany za pomocą solidnej i stabilnej biblioteki do parsowania HTMLa.
+Problem ten można rozwiązać za pomocą solidnej i stabilnej biblioteki do parsowania HTMLa.
 
-Parsowanie HTMLa przy użyciu BeautifulSoup
-------------------------------------------
+Parsowanie HTMLa przy użyciu `BeautifulSoup`
+--------------------------------------------
 
-\index{BeautifulSoup, biblioteka}
+\index{BeautifulSoup, moduł}
 
-Nawet jeśli HTML wygląda jak XML^[Format XML jest opisany w następnym rozdziale.] i niektóre strony faktycznie są starannie skonstruowane jako XML, to niestety większość stron HTML jest zazwyczaj popsuta w taki sposób, że parser XMLa odrzuca całą stronę HTML jako nieprawidłowo sformatowany dokument.
+Nawet jeśli HTML wygląda jak XML^[Format XML jest opisany w następnym rozdziale.] i niektóre strony faktycznie są starannie skonstruowane jako XML, to niestety większość stron HTML jest zazwyczaj popsuta do tego stopnia, że parser XMLa odrzuca całą stronę HTML jako nieprawidłowo sformatowany dokument.
 
 Istnieje wiele bibliotek Pythona, które mogą pomóc Ci w parsowaniu HTMLa i wyodrębnieniu danych ze stron. Każda z tych bibliotek ma swoje mocne i słabe strony, a Ty możesz wybrać jedną z nich w zależności od swoich potrzeb.
 
-Jako przykład, przetworzymy trochę danych HTML i wyodrębnimy linki za pomocą biblioteki *BeautifulSoup*. Biblioteka BeautifulSoup toleruje bardzo wadliwy kod HTML i nadal pozwala na łatwe wyodrębnienie potrzebnych danych. Możesz pobrać i zainstalować kod BeautifulSoup ze strony:
+Jako przykład przetworzymy trochę danych HTML i wyodrębnimy linki za pomocą biblioteki `BeautifulSoup`. Ta biblioteka toleruje bardzo wadliwy kod HTML i nadal pozwala na łatwe wyodrębnienie potrzebnych danych. Możesz pobrać i zainstalować kod `BeautifulSoup` ze strony:
 
 <https://pypi.org/project/beautifulsoup4/>
 
-Bibliotekę możemy zainstalować poprzez wiersz linii poleceń wydając komendę:
+Bibliotekę możemy zainstalować poprzez wiersz linii poleceń, wydając komendę:
 
 ~~~~
-pip3 install beautifulsoup4
+$ pip3 install beautifulsoup4
 ~~~~
 
 Bardziej szczegółowe informacje na temat instalacji bibliotek za pomocą narzędzia *Python Package Index* `pip` są dostępne na stronie internetowej:
@@ -327,13 +327,13 @@ Bardziej szczegółowe informacje na temat instalacji bibliotek za pomocą narz�
 
 Użyjemy `urllib` do odczytania strony, a następnie użyjemy `BeautifulSoup` do wyodrębnienia atrybutów `href` ze znacznika hiperłącza (`a`).
 
-\index{BeautifulSoup, biblioteka}
+\index{BeautifulSoup, moduł}
 \index{HTML}
-\index{parsowanie HTML}
+\index{parsowanie!HTML}
 
 \VerbatimInput{../code3/urllinks.py}
 
-Program pyta o adres internetowy, następnie otwiera stronę, odczytuje dane i przekazuje je do parsera BeautifulSoup, a następnie pobiera wszystkie znaczniki hiperłączy i dla każdego z nich wypisuje atrybut `href`.
+Program pyta o adres internetowy, po czym otwiera stronę, odczytuje dane i przekazuje je do parsera `BeautifulSoup`, a następnie pobiera wszystkie znaczniki hiperłączy i dla każdego z nich wypisuje atrybut `href`.
 
 Po uruchomieniu programu uzyskamy mniej więcej następujący wynik:
 
@@ -386,12 +386,11 @@ http://sphinx.pocoo.org/
 
 Tym razem lista jest o wiele dłuższa, ponieważ niektóre znaczniki hiperłączy są ścieżkami względnymi (np. "tutorial/index.html") lub odniesieniami wewnątrz strony (np. "#"), które nie zawierają "http://" lub "https://", co było wymogiem w naszym podejściu z wyrażeniem regularnym.
 
-Możesz również użyć BeautifulSoup do wyciągnięcia różnych elementów związanych ze znacznikiem HTML:
+Możesz również użyć `BeautifulSoup` do wyciągnięcia różnych elementów związanych ze znacznikiem HTML:
 
 \VerbatimInput{../code3/urllink2.py}
 
 ~~~~
-python urllink2.py
 Podaj link - http://www.dr-chuck.com/page1.htm
 TAG: <a href="http://www.dr-chuck.com/page2.htm">
 Second Page</a>
@@ -404,12 +403,12 @@ Attrs: [('href', 'http://www.dr-chuck.com/page2.htm')]
 
 <https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser>
 
-Powyższe przykłady są tylko namiastką możliwości jakie stoją za BeautifulSoup jeśli chodzi o parsowanie HTMLa.
+Powyższe przykłady są tylko namiastką możliwości, jakie daje `BeautifulSoup`, jeśli chodzi o parsowanie HTMLa.
 
 Dodatek dla użytkowników systemu Unix / Linux
 ---------------------------------------------
 
-Jeśli posiadasz komputer z systemem Linux, Unix lub macOS, prawdopodobnie posiadasz wbudowane w system komendy, które pobierają zarówno zwykły tekst, jak i pliki binarne za pomocą protokołów HTTP lub FTP (File Transfer Protocol, czyli protokół transferu plików). Jedną z tych komend jest `curl`:
+Jeśli posiadasz komputer z systemem Linux, Unix lub macOS, prawdopodobnie masz wbudowane w system komendy, które pobierają zarówno zwykły tekst, jak i pliki binarne za pomocą protokołów HTTP lub FTP (File Transfer Protocol, czyli protokół transferu plików). Jedną z tych komend jest `curl`:
 
 \index{curl}
 
@@ -417,7 +416,7 @@ Jeśli posiadasz komputer z systemem Linux, Unix lub macOS, prawdopodobnie posia
 $ curl -O https://www.py4e.com/cover.jpg
 ~~~~
 
-Polecenie `curl` jest skrótem od "copy URL" (z ang. skopiuj URL) i dlatego dwa wymienione wcześniej na <https://py4e.pl/code3> przykłady pobierania plików binarnych z `urllib` mają nazwy `curl1.py` i `curl2.py`, ponieważ implementują podobną funkcjonalność jak polecenie `curl`. Istnieje również przykładowy program `curl3.py`, który wykonuje to zadanie nieco efektywniej, na wypadek gdybyś rzeczywiście chciał użyć tego schematu w swoim programie.
+Polecenie `curl` jest skrótem od "copy URL" (z ang. skopiuj URL) i dwa wymienione wcześniej na <https://py4e.pl/code3> przykłady pobierania plików binarnych z `urllib` mają nazwy `curl1.py` i `curl2.py`, ponieważ implementują podobną funkcjonalność jak polecenie `curl`. Istnieje również przykładowy program `curl3.py`, który wykonuje to zadanie nieco efektywniej, na wypadek gdybyś rzeczywiście chciał użyć tego schematu w swoim programie.
 
 Drugim poleceniem, które działa bardzo podobnie, jest `wget`:
 
@@ -433,31 +432,26 @@ Słowniczek
 ----------
 
 BeautifulSoup
-:   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, które przeglądarki internetowe zazwyczaj ignorują. Biblioteka BeautifulSoup ma swoją stronę pod adresem <https://www.crummy.com/software/BeautifulSoup>.
-\index{BeautifulSoup, biblioteka}
+:   Biblioteka Pythona do przetwarzania dokumentów HTML i wyodrębniania danych z dokumentów HTML, która kompensuje większość niedoskonałości w kodzie HTML, zazwyczaj ignorowanych przez przeglądarki internetowe. Biblioteka `BeautifulSoup` ma swoją stronę pod adresem <https://www.crummy.com/software/BeautifulSoup>.\index{BeautifulSoup, moduł}
 
 gniazdo
-:   Połączenie sieciowe pomiędzy dwiema aplikacjami, w którym aplikacje mogą wysyłać i odbierać dane w obu kierunkach.
-\index{gniazdo}
+:   Połączenie sieciowe pomiędzy dwiema aplikacjami, w którym aplikacje mogą wysyłać i odbierać dane w obu kierunkach.\index{gniazdo}
 
 port
-:   Liczba, który generalnie wskazuje, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.
-\index{port}
+:   Liczba ogólnie wskazująca, z którą aplikacją kontaktujesz się podczas połączenia z serwerem. Dla przykładu, ruch internetowy zazwyczaj korzysta z portu 80 (HTTP) lub 443 (szyfrowany HTTP), podczas gdy ruch mailowy korzysta z portu 25.\index{port}
 
 robot internetowy
-:   Działanie wyszukiwarki internetowej polegające na pobieraniu strony, a następnie wszystkich stron, do których prowadzą linki z danej strony itd., aż do momentu, gdy mają prawie wszystkie strony w internecie, których używają do zbudowania swojego indeksu wyszukiwania.
-\index{robot internetowy}
+:   Działanie wyszukiwarek internetowych polegające na pobieraniu strony, a następnie wszystkich stron, do których prowadzą z niej linki itd., aż do momentu, gdy zgromadzą prawie wszystkie strony w internecie, których używają do zbudowania swojego indeksu wyszukiwania.\index{robot internetowy}
 
 web scraping
-:   Sytuacja w której program podszywa się pod przeglądarkę internetową, pobiera stronę i przegląda jej zawartość. Często programy podążają za linkami na jednej stronie, by znaleźć następną, dzięki czemu mogą przemierzyć duży zbiór stron lub serwisy społecznościowe.
-\index{web scraping}
+:   Sytuacja w której program podszywa się pod przeglądarkę internetową, pobiera stronę i przegląda jej zawartość. Często programy podążają za linkami na jednej stronie, by znaleźć następną, dzięki czemu mogą przemierzyć duże zbiory stron lub serwisy społecznościowe.\index{web scraping}
 
 Ćwiczenia
 ---------
 
 #### Ćwiczenie 1
 
-Zmień program używający gniazda `socket1.py` tak, aby poprosić użytkownika o podanie adresu URL i by mógł on przeczytać dowolną stronę internetową. Możesz użyć `split('/')` aby rozbić URL na części składowe, dzięki czemu łatwo wyodrębnisz nazwę hosta dla metody `connect`. Dodaj sprawdzanie błędów przy użyciu `try` i `except`, tak aby poradzić sobie z przypadkiem, w którym użytkownik wprowadzi nieprawidłowo sformatowany lub nieistniejący adres URL.
+Zmień program używający gniazda `socket1.py` tak, aby poprosić użytkownika o podanie adresu URL i by mógł on przeczytać dowolną stronę internetową. Możesz użyć `split('/')`, aby rozbić URL na części składowe, dzięki czemu łatwo wyodrębnisz nazwę hosta dla metody `connect()`. Dodaj sprawdzanie błędów przy użyciu `try` i `except`, aby poradzić sobie z przypadkiem, w którym użytkownik wprowadzi nieprawidłowo sformatowany lub nieistniejący adres URL.
 
 #### Ćwiczenie 2
 
@@ -465,12 +459,12 @@ Zmień swój program używający gniazda tak, by zliczał liczbę otrzymanych zn
 
 #### Ćwiczenie 3
 
-Użyj `urllib` aby powtórzyć poprzednie ćwiczenie dotyczące (1) pobrania dokumentu z adresu URL, (2) wyświetlenia do 3000 znaków, (3) zliczenia całkowitej liczby znaków w dokumencie. Nie martw się o nagłówki, po prostu pokaż pierwsze 3000 znaków dokumentu.
+Użyj `urllib`, aby powtórzyć poprzednie ćwiczenie dotyczące (1) pobrania dokumentu z adresu URL, (2) wyświetlenia do 3000 znaków, (3) zliczenia całkowitej liczby znaków w dokumencie. Nie martw się o nagłówki, po prostu pokaż pierwsze 3000 znaków dokumentu.
 
 #### Ćwiczenie 4
 
-Zmień program `urllinks.py` tak, by wyodrębnić i policzyć znaczniki akapitu (`p`) z pobranego dokumentu HTML i wyświetlić liczbę akapitów jako wynik programu. Nie wyświetlaj tekstu akapitu, a jedynie je zliczaj. Przetestuj swój program na kilku niewielkich stronach internetowych, jak również na kilku większych.
+Zmień program `urllinks.py` tak, by wyodrębnić i policzyć znaczniki akapitu (`p`) z pobranego dokumentu HTML i wyświetlić liczbę akapitów jako wynik programu. Nie wyświetlaj tekstu akapitów, a jedynie je zliczaj. Przetestuj swój program na kilku niewielkich stronach internetowych, jak również na kilku większych.
 
 #### Ćwiczenie 5
 
-(Zaawansowane) Zmień program używający gniazda tak, by wyświetlał dane dopiero po otrzymaniu nagłówków i pustej linii. Pamiętaj, że `recv` otrzymuje znaki (wszystkie, włączając w to znaki końca linii), a nie linie.
+(Zaawansowane) Zmień program używający gniazda tak, by wyświetlał dane dopiero po otrzymaniu nagłówków i pustej linii. Pamiętaj, że `recv()` otrzymuje znaki (wszystkie, włączając w to znaki końca linii), a nie linie.

@@ -7,7 +7,7 @@
 <!-- <div style="float: right; margin: 5px;"/><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=drchu02-20&marketplace=amazon&region=US&placement=1530051126&asins=1530051126&linkId=2ea6c883c6cf11f29568856139bad34b&show_border=true&link_opens_in_new_window=true"></iframe></div> -->
 <h2>Materiały – otwarte zasoby edukacyjne</h2>
 <p>
-Możesz używać/ponownie używać/remiksować/zachować materiały z tej wirtryny we własnych kursach. Prawie cały materiał umieszczony na tej stronie internetowej jest objęty licencją Creative Commons Uznanie autorstwa. Poniżej znajdują się linki do treści do pobrania, a także linki do innych materiałów tego kursu.
+Możesz używać/ponownie używać/remiksować/zapisać materiały z tej witryny we własnych kursach. Prawie cały materiał umieszczony na tej stronie internetowej jest objęty licencją Creative Commons Uznanie autorstwa. Poniżej znajdują się linki do treści do pobrania, a także linki do innych materiałów z tego kursu.
 </p>
 <ul>
     <li>Wykłady wideo
@@ -34,21 +34,19 @@ Możesz używać/ponownie używać/remiksować/zachować materiały z tej wirtry
         <a href="book.php">Darmowy podręcznik</a>
     </li>
     <li>
-        Cała zawartość kursu oraz oprogramowanie sprawdzarkowe dostępne są na
+        Cała zawartość kursu oraz system sprawdzarkowy zadań programistycznych jest dostępny na
         <a href="https://github.com/andre-wojtowicz/py4e-pl" target="_blank">
         GitHubie</a> na licencji Creative Commons lub Apache 2.0.
     </li>
 </ul>
 <p>
 Jeśli zamierzasz przetłumaczyć tę książkę lub materiały online na inny język, 
-umieściłem na repozytorium GitHuba <a href="https://github.com/csev/py4e/blob/master/TRANSLATION.md" target="_new">
+to na repozytorium GitHuba znajdują się <a href="https://github.com/csev/py4e/blob/master/TRANSLATION.md" target="_new">
 instrukcje dotyczące tego jak zabrać się za tłumaczenie</a>.
-Jeśli zaczyna tłumaczenie, skontaktuj się proszę ze mną aby skoordynować nasze działania.
+Jeśli zaczynasz tłumaczenie, skontaktuj się z autorem aby skoordynować działania.
 </p>
 <h2>Używanie tego kursu w Twoim systemie LMS</h2>
-<p>Ta strona wykorzystuje oprogramowanie <a href="https://www.tsugi.org/" target="_blank">Tsugi</a>
-do hostowania mechanizmów sprawdzarkowych oraz do dostarczania tego materiału,
-tak aby mógł być on łatwo zintegrowany z systemami typu Learning Management System
+<p>Ta strona wykorzystuje framework <a href="https://www.tsugi.org" target="_blank">Tsugi</a> do integracji z systemami typu Learning Management System i udostępnienia quizów i zadań programistycznych. Dzięki temu kurs można łatwo zintegrować z systemami LMS
 takimi jak <a href="https://www.sakaiproject.org/" target=_blank">Sakai</a>, Moodle, Canvas, Desire2Learn, Blackboard
 lub podobnymi.
 </p>

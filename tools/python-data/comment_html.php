@@ -83,15 +83,18 @@ instructor:  <?= $code ?>
 
 
 -->
-<b>Wydobywanie liczb z HTMLa przy użyciu BeautifulSoup</b>
+<p>
+<b>Wyodrębnianie liczb z HTMLa przy użyciu BeautifulSoup</b>
+</p>
+<p>
 W poniższym zadaniu napiszesz program w Pythonie podobny do
 <a href="https://py4e.pl/code3/urllink2.py" target="_blank">https://py4e.pl/code3/urllink2.py</a>.
 
-Program będzie używał modułu <b>urllib</b> do odczytania HTMLa z plików umieszczonych poniżej, przeparsuje dane,
+Program będzie używał modułu <code>urllib</code> do odczytania HTMLa z plików umieszczonych poniżej, przeparsuje dane,
 wyodrębni liczby oraz obliczy ich sumę.
 </p>
 <p>
-Udostępniamy dwa pliki do tego zadania. Pierwszy z nich to przykładowy plik, w którym podajemy również wynikową sumę, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
+Dostępne są dwa pliki. Pierwszy z nich to przykładowy plik, dla którego podana jest również wynikowa suma, a drugi plik to rzeczywiste dane, które musisz przetworzyć w ramach zadania.
 <?php
 if ( $override ) {
     echo('<p style="color:red">Znajdujesz się w trybie kursanta z kodem '.$code);
@@ -109,19 +112,18 @@ Nie musisz zapisywać tych plików w swoim katalogu, ponieważ Twój program odc
 </p>
 <b>Format danych</b>
 <p>
-Plik jest tabelą nazw i liczb komentarzy. Możesz zignorować większość danych w pliku z wyjątkiem wierszy takich jak:
+Plik jest tabelą składającą się imion i liczb komentarzy. Możesz zignorować większość danych w pliku z wyjątkiem wierszy takich jak:
 <pre>
 &lt;tr>&lt;td>Modu&lt;/td>&lt;td>&lt;span class="comments">90&lt;/span>&lt;/td>&lt;/tr>
 &lt;tr>&lt;td>Kenzie&lt;/td>&lt;td>&lt;span class="comments">88&lt;/span>&lt;/td>&lt;/tr>
 &lt;tr>&lt;td>Hubert&lt;/td>&lt;td>&lt;span class="comments">87&lt;/span>&lt;/td>&lt;/tr>
 </pre>
-Musisz znaleźć w pliku wszystkie tagi &lt;span&gt;, wyciągnąć z nich liczby i na końcu je zsumować.
+Musisz znaleźć w pliku wszystkie znaczniki <code>&lt;span&gt;</code>, wyciągnąć z nich liczby i na końcu je zsumować.
 <p>
 Spójrz na udostępniony
 <a href="http://py4e.pl/code3/urllink2.py" target="_blank">przykładowy kod</a>.
-Pokazuje on jak znaleźć wszystkie znaczniki danego typu, jak przejść w pętli po znacznikach i jak wyodrębić z nich różne elementy.
-<pre>
-...
+Pokazuje on jak znaleźć wszystkie znaczniki danego typu, jak przejść w pętli po znacznikach i jak wyodrębnić z nich różne elementy.
+<pre class="python"><code>...
 # Pobierz wszystkie znaczniki hiperłączy
 tags = soup('a')
 for tag in tags:
@@ -129,9 +131,8 @@ for tag in tags:
     print('TAG:', tag)
     print('URL:', tag.get('href', None))
     print('Contents:', tag.contents[0])
-    print('Attrs:', tag.attrs)
-</pre>
-Musisz dostosować ten kod tak, aby wyszukiwał znaczniki <b>span</b>, wyciągał z nich zawartość tekstową, którą przekonwertuje potem na liczby całkowite, a na końcu je wszystkie doda.
+    print('Attrs:', tag.attrs)</code></pre>
+Musisz dostosować kod w taki sposób, aby wyszukiwał znaczniki <code>&lt;span&gt;</code>, wyciągał z nich zawartość tekstową, którą przekonwertuje potem na liczby całkowite, a na końcu je wszystkie doda.
 </p>
 <p><b>Przykładowe uruchomienie</b>
 <p>
@@ -144,21 +145,21 @@ Suma: 2...
 
 <p><b>Rozwiązanie zadania</b>
 <form method="post">
-Wprowadź poniżej sumę z danych do zadania oraz kod Pythona:<br/>
+Wprowadź poniżej sumę z danych do zadania oraz kod programu:<br/>
 Suma: <input type="text" size="20" name="sum">
 (kończy się cyframi <?= $sum%100 ?>)
 <?php if ( $USER->instructor ) { ?>
 <p style="color:green">Jeśli chcesz przejść w tryb danego kursanta, to poproś 
 go o wyświetlenie kodu źródłowego tej strony i znalezienie w komentarzach 
-wartości "code". Następnie w polu dotyczącym sumy wprowadź "code:" i znalezioną
+wartości <code>code</code>. Następnie w polu dotyczącym sumy wprowadź <code>code:</code> i znalezioną
 przez kursanta wartość, dzięki czemu przełączysz się na jego widok i zobaczysz 
 przesłany przez niego kod.
 </p>
 <p>
-Wprowadź 'code:0' aby powrócić do Twojego widoku.
+Wprowadź <code>code:0</code> aby powrócić do Twojego widoku.
 </p>
 <?php } ?>
 <input type="submit" value="Wyślij rozwiązanie"><br/>
-Kod Pythona:<br/>
-<textarea rows="20" style="width: 90%" name="code"></textarea><br/>
+Kod programu:<br/>
+<textarea rows="20" style="width: 90%; font-family: monospace" name="code"></textarea><br/>
 </form>

@@ -15,12 +15,12 @@ if ( SettingsForm::handleSettingsPost() ) {
 
 // All the assignments we support
 $assignments = array(
-    'single_mysql.php' => 'Single Table MySQL (Users)',
-    'many_many_mysql.php' => 'Many-to-Many MySQL (Courses)',
-    'single_lite.php' => 'Single Table SQLITE (Users)',
-    'count_lite.php' => 'Email Counter SQLITE',
-    'many_one_lite.php' => 'Many-to-One SQLITE (Tracks)',
-    'many_many_lite.php' => 'Many-to-Many SQLITE (Courses)',
+    'single_lite.php' => 'SQLITE - pojedyncza tabela (Users)',
+    'count_lite.php' => 'SQLITE - zliczanie e-maili',
+    'many_one_lite.php' => 'SQLITE - związek jeden-do-wielu (tabela Tracks)',
+    'many_many_lite.php' => 'SQLITE - związek wiele-do-wielu (tabela Courses)'//,
+    //'single_mysql.php' => 'Single Table MySQL (tabela Users)',
+    //'many_many_mysql.php' => 'Many-to-Many MySQL (tabela Courses)',
 );
 
 $oldsettings = Settings::linkGetAll();
@@ -47,11 +47,11 @@ if ( count($_POST) > 0 && $assn && isset($assignments[$assn]) ) {
 $menu = false;
 if ( $LAUNCH->link && $LAUNCH->user && $LAUNCH->user->instructor ) {
     $menu = new \Tsugi\UI\MenuSet();
-    $menu->addLeft('Student Data', 'grades.php');
+    $menu->addLeft('Dane kursantów', 'grades.php');
     if ( $CFG->launchactivity ) {
-        $menu->addRight(__('Launches'), 'analytics');
+        $menu->addRight(__('Uruchomienia'), 'analytics');
     }
-    $menu->addRight(__('Settings'), '#', /* push */ false, SettingsForm::attr());
+    $menu->addRight(__('Konfiguracja'), '#', /* push */ false, SettingsForm::attr());
 }
 
 // View
@@ -61,7 +61,7 @@ $OUTPUT->topNav($menu);
 
 // Settings dialog
 SettingsForm::start();
-SettingsForm::select("exercise", __('Please select an assignment'),$assignments);
+SettingsForm::select("exercise", __('Wybierz zadanie'),$assignments);
 SettingsForm::dueDate();
 SettingsForm::done();
 SettingsForm::end();
@@ -74,9 +74,9 @@ if ( $assn && isset($assignments[$assn]) ) {
     include($assn);
 } else {
     if ( $USER->instructor ) {
-        echo("<p>Please use settings to select an assignment for this tool.</p>\n");
+        echo("<p>Skonfiguruj aktywność aby wybrać zadanie.</p>\n");
     } else {
-        echo("<p>This tool needs to be configured - please see your instructor.</p>\n");
+        echo("<p>Aktywność wymaga skonfigurowania. Skontaktuj się ze swoim instruktorem.</p>\n");
     }
 }
         

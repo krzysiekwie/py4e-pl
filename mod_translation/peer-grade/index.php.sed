@@ -1,4 +1,4 @@
-'File upload size exceeded, please re-upload a smaller file';'Przekroczono maksymalny rozmiar wgrywanych plików, proszę wgrać ponownie mniejszy plik'
+'File upload size exceeded, please re-upload a smaller file';'Przekroczono maksymalny rozmiar wgrywanych plików, wgraj ponownie mniejszy plik'
 'Cannot submit an assignment twice';'Nie możesz dwa razy wysłać zadania'
 'Problem with uploaded files - perhaps your files were too large';'Problem z przesyłanymi plikami - być może Twoje pliki były za duże'
 'Missing file, make sure to select all files before pressing submit';'Brakuje plików. Upewnij się, że zaznaczyłeś wszystkie pliki przed naciśnięciem przycisku wysyłania'
@@ -12,7 +12,7 @@
 'ContentItems must be valid JSON';'ContentItems musi być poprawnym JSONem'
 'Missing: '.$part->title;'Brakuje: '.$part->title
 'Assignment submitted';'Zadanie zostało wysłane'
-"Submission deleted.";"Zgłoszenie zostało usunięte.."
+"Submission deleted.";"Zgłoszenie zostało usunięte."
 'Cannot a grade that is not yours';'Nie można odnaleźć poprawnej oceny'
 "Flagged for the instructor to examine";"Oznaczono do sprawdzenia przez instruktora"
 "accessibility options for this assignment";"opcje dostępności dla tego zadania"
@@ -23,15 +23,15 @@ Click here for accessibility options for this assignment;Kliknij tutaj, aby uzys
 <br/>Sample solution:;<br/>Przykładowe rozwiązanie:
 This assignment is not yet configured;To zadanie nie zostało jeszcze skonfigurowane
 View Student Submissions;Zobacz zgłoszenia przesłane przez studentów
-Please Upload Your Submission:;Proszę przesłać swoje zgłoszenie:
-Please use PNG or JPG files '.$image_max_text.' max;Proszę wgrać plik PNG lub JPG o maksymalnym rozmiarze '.$image_max_text.'
-Please upload a PDF '.$pdf_max_text.' max;Proszę wgrać plik PDF o maksymalnym rozmiarze '.$pdf_max_text.'
+Please Upload Your Submission:;Załaduj pliki Twojego zgłoszenia:
+Please use PNG or JPG files '.$image_max_text.' max;Wgraj plik PNG lub JPG o maksymalnym rozmiarze '.$image_max_text.'
+Please upload a PDF '.$pdf_max_text.' max;Wgraj plik PDF o maksymalnym rozmiarze '.$pdf_max_text.'
 Unable to load key/secret for;Nie można załadować klucza/sekretu dla
 Select/Create Item;Wybierz/utwórz element
-Enter optional comments below;Wprowadź opcjonalne komentarze poniżej
+Enter optional comments below;Poniżej wprowadź opcjonalny komentarz:
 value="Submit";value="Wyślij"
 exitButton('Cancel');exitButton('Anuluj')
-Make sure each uploaded image file is smaller than 1M.  Total upload size limited to;Upewnij się, że każdy przesłany plik obrazu jest mniejszy niż 1M.  Całkowity rozmiar wgrywanego pliku jest ograniczony do
+Make sure each uploaded image file is smaller than 1M.  Total upload size limited to;Upewnij się, że każdy przesłany plik obrazu jest mniejszy niż 1M.  Całkowity rozmiar wgrywanych plików jest ograniczony do
 You have no more peers to grade.;Nie masz już więcej osób do ocenienia.
 Rate other students;Oceń innych kursantów
 Review other students;Zrecenzuj innych kursantów

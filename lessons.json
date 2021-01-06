@@ -1,6 +1,6 @@
 {
 "title": "Python dla wszystkich (PY4E-PL)",
-"description" : "Witaj na mojej stronie, na której nauczysz się Pythona, nawet jeśli nie masz doświadczenia w programowaniu.",
+"description" : "Witaj na stronie, na której nauczysz się Pythona, nawet jeśli nie masz doświadczenia w programowaniu.",
 "count": true,
 "required_modules": [
     "https://github.com/tsugitools/peer-grade"
@@ -125,19 +125,22 @@
     "anchor": "install",
     "icon" : "fa-bicycle",
     "description": "Pierwszym zadaniem jest przejście przez etapy instalacji oprogramowania, w tym instalację Pythona i edytora tekstu.",
-    "assignment" : "install.php",
     "references" : [
         {
             "title" : "Ustawienie środowiska w systemie Windows",
-            "href" : "software-win.php"
+            "href" : "https://py4e.pl/software-win.php"
         },
         {
             "title" : "Ustawienie środowiska w systemie macOS",
-            "href" : "software-mac.php"
+            "href" : "https://py4e.pl/software-mac.php"
+        },
+        {
+            "title" : "Ustawienie środowiska na platformie PythonAnywhere",
+            "href" : "https://py4e.pl/software-pyaw.php"
         }
     ],
     "lti" : {
-        "title": "Oceniane przez współuczestników kursu: Zrzuty ekranu pokazujące instalację Pythona",
+        "title": "Ocena przez współuczestników kursu: Zrzuty ekranu pokazujące instalację Pythona",
         "launch" : "mod/peer-grade/",
         "resource_link_id": "install",
         "custom" : [
@@ -146,17 +149,17 @@
                 "json": 
 
 {
-  "title":"Recenzja współuczestników kursu: zrzuty ekranu dokumentujące instalację i uruchomienia Pythona",
+  "title":"Ocena współuczestników kursu: Zrzuty ekranu pokazujące instalację i uruchomienia Pythona",
   "description":"Zainstaluj Pythona i programistyczny edytor tekstu oraz napisz program, który wypisuje jedną linię inną niż \"Witaj świecie!\", a następnie zrób dwa zrzuty ekranu i wgraj je poniżej. Powinieneś użyć wiersza poleceń do wykonania programu Pythona, który napisałeś w edytorze tekstowym. *Nie używaj* edytora IDLE Python Shell, interpretera Pythona (>>>), ani też skrótu w edytorze tekstu, który uruchamia kod. Później podczas kursu, gdy zaczniemy wczytywać pliki, będziemy musieli mieć możliwość uruchamiania programów z poszczególnych katalogów. Możesz obejrzeć filmy aby więcej się dowiedzieć na ten temat.",
   "grading":"Jest to stosunkowo proste zadanie. Celem jest po prostu pokazanie, że każdy kursant ma zainstalowanego Pythona na swoim komputerze stacjonarnym lub laptopie i może wykonać zrzuty ekranu. Aby pomóc kursantowi, który będzie recenzentem Twojego zadania, dodaj również komentarze.",
   "assignment":"https://py4e.pl/install",
   "parts":[
     {
-      "title":"Obraz edytowanego programu w edytorze tekstowym",
+      "title":"Obraz edytowanego programu w edytorze tekstowym:",
       "type":"image"
     },
     {
-      "title":"Obraz programu wykonywanego w wierszu poleceń lub terminalu",
+      "title":"Obraz programu wykonywanego w wierszu poleceń lub terminalu:",
       "type":"image"
     }
   ],
@@ -186,8 +189,12 @@
     "slides": "lectures3/Pythonlearn-01-Intro.pptx",
     "references" : [
         {
-            "title" : "Rozdział 1: Wstęp",
+            "title" : "Rozdział 1: Wstęp [HTML]",
             "href" : "https://py4e.pl/html3/01-intro.php"
+        },
+        {
+            "title" : "Rozdział 1: Wstęp [PDF]",
+            "href" : "https://py4e.pl/translations/PL/01-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -222,7 +229,7 @@
     ],
     "lti" : [
         {
-            "title" : "Automatyczna ocena: Prosty program \"Witaj świecie!\"",
+            "title" : "Program: \"Witaj świecie!\"",
             "launch" : "tools/pythonauto/",
             "resource_link_id": "pythonauto_01_hello",
             "custom" : [
@@ -247,8 +254,12 @@
     "slides": "lectures3/Pythonlearn-02-Expressions.pptx",
     "references" : [
         {
-            "title" : "Rozdział 2: Zmienne, wyrażenia i instrukcje",
+            "title" : "Rozdział 2: Zmienne, wyrażenia i instrukcje [HTML]",
             "href" : "https://py4e.pl/html3/02-variables.php"
+        },
+        {
+            "title" : "Rozdział 2: Zmienne, wyrażenia i instrukcje [PDF]",
+            "href" : "https://py4e.pl/translations/PL/02-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -269,17 +280,24 @@
             "youtube" : "DVmspDooG2c"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 2.3",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_02_03",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "2.3"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Program: Ćwiczenie 2.3.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_02_03",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "2.3"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Zmienne, wyrażenia i instrukcje",
+            "launch" : "mod/gift/?quiz=Py4Inf-02-Expressions.txt",
+            "resource_link_id" : "py4e_02_ex_quiz"
+        }
+    ]
 },
 {
     "title": "Wykonanie warunkowe",
@@ -289,8 +307,12 @@
     "slides": "lectures3/Pythonlearn-03-Conditional.pptx",
     "references" : [
         {
-            "title" : "Rozdział 3: Wykonanie warunkowe",
+            "title" : "Rozdział 3: Wykonanie warunkowe [HTML]",
             "href" : "https://py4e.pl/html3/03-conditional.php"
+        },
+        {
+            "title" : "Rozdział 3: Wykonanie warunkowe [PDF]",
+            "href" : "https://py4e.pl/translations/PL/03-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -312,28 +334,33 @@
         }
     ],
     "lti" : [ 
-    {
-        "title" : "Automatyczna ocena: Ćwiczenie 3.1",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_03_01",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "3.1"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Ćwiczenie 3.3",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_03_03",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "3.3"
-            }
-        ]
-    }
+        {
+            "title" : "Program: Ćwiczenie 3.1.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_03_01",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "3.1"
+                }
+            ]
+        },
+        {
+            "title" : "Program: Ćwiczenie 3.3.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_03_03",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "3.3"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Wykonanie warunkowe",
+            "launch" : "mod/gift/?quiz=Py4Inf-03-Conditional.txt",
+            "resource_link_id" : "py4e_03_if_quiz"
+        }
     ]
 },
 {
@@ -344,8 +371,12 @@
     "slides": "lectures3/Pythonlearn-04-Functions.pptx",
     "references" : [
         {
-            "title" : "Rozdział 4: Funkcje",
+            "title" : "Rozdział 4: Funkcje [HTML]",
             "href" : "https://py4e.pl/html3/04-functions.php"
+        },
+        {
+            "title" : "Rozdział 4: Funkcje [PDF]",
+            "href" : "https://py4e.pl/translations/PL/04-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -362,17 +393,24 @@
             "youtube" : "l93PhBUJ_S0"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 4.6",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_04_06",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "4.6"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Program: Ćwiczenie 4.6.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_04_06",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "4.6"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Funkcje",
+            "launch" : "mod/gift/?quiz=Py4Inf-04-Functions.txt",
+            "resource_link_id" : "py4e_04_def_quiz"
+        }
+    ]
 },
 {
     "title": "Pętle i iteracje",
@@ -382,8 +420,12 @@
     "slides": "lectures3/Pythonlearn-05-Iterations.pptx",
     "references" : [
         {
-            "title" : "Rozdział 5: Pętle i iteracje",
+            "title" : "Rozdział 5: Pętle i iteracje [HTML]",
             "href" : "https://py4e.pl/html3/05-iterations.php"
+        },
+        {
+            "title" : "Rozdział 5: Pętle i iteracje [PDF]",
+            "href" : "https://py4e.pl/translations/PL/05-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -408,17 +450,24 @@
             "youtube" : "R2GrfqRofZc"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 5.2",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_05_02",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "5.2"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Program: Ćwiczenie 5.2.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_05_02",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "5.2"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Pętle i iteracje",
+            "launch" : "mod/gift/?quiz=Py4Inf-05-Iterations.txt",
+            "resource_link_id" : "py4e_05_for_quiz"
+        }
+    ]
 },
 {
     "title": "Ciągi znaków",
@@ -428,8 +477,12 @@
     "slides": "lectures3/Pythonlearn-06-Strings.pptx",
     "references" : [
         {
-            "title" : "Rozdział 6: Ciągi znaków",
+            "title" : "Rozdział 6: Ciągi znaków [HTML]",
             "href" : "https://py4e.pl/html3/06-strings.php"
+        },
+        {
+            "title" : "Rozdział 6: Ciągi znaków [PDF]",
+            "href" : "https://py4e.pl/translations/PL/06-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -446,17 +499,24 @@
             "youtube" : "BGTxwsDI9KY"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 6.5",
-        "resource_link_id": "pythonauto_06_05",
-        "launch" : "tools/pythonauto/",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "6.5"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Program: Ćwiczenie 6.5.",
+            "resource_link_id": "pythonauto_06_05",
+            "launch" : "tools/pythonauto/",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "6.5"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Ciągi znaków",
+            "launch" : "mod/gift/?quiz=Py4Inf-06-Strings.txt",
+            "resource_link_id" : "py4e_06_str_quiz"
+        }
+    ]
 },
 {
     "title": "Pliki",
@@ -466,8 +526,12 @@
     "slides": "lectures3/Pythonlearn-07-Files.pptx",
     "references" : [
         {
-            "title" : "Rozdział 7: Pliki",
+            "title" : "Rozdział 7: Pliki [HTML]",
             "href" : "https://py4e.pl/html3/07-files.php"
+        },
+        {
+            "title" : "Rozdział 7: Pliki [PDF]",
+            "href" : "https://py4e.pl/translations/PL/07-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -484,17 +548,24 @@
             "youtube" : "MHZ4KnFZ7Y0"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 7.2",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_07_02",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "7.2"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Program: Ćwiczenie 7.2.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_07_02",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "7.2"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Pliki",
+            "launch" : "mod/gift/?quiz=Py4Inf-07-Files.txt",
+            "resource_link_id" : "py4e_07_files_quiz"
+        }
+    ]
 },
 {
     "title": "Listy",
@@ -504,8 +575,12 @@
     "slides": "lectures3/Pythonlearn-08-Lists.pptx",
     "references" : [
         {
-            "title" : "Rozdział 8: Listy",
+            "title" : "Rozdział 8: Listy [HTML]",
             "href" : "https://py4e.pl/html3/08-lists.php"
+        },
+        {
+            "title" : "Rozdział 8: Listy [PDF]",
+            "href" : "https://py4e.pl/translations/PL/08-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -527,28 +602,33 @@
         }
     ],
     "lti" : [
-    {
-        "title" : "Automatyczna ocena: Ćwiczenie 8.4",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_08_04",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "8.4"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Ćwiczenie 8.5",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_08_05",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "8.5"
-            }
-        ]
-    }
+        {
+            "title" : "Program: Ćwiczenie 8.4.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_08_04",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "8.4"
+                }
+            ]
+        },
+        {
+            "title" : "Program: Ćwiczenie 8.5.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_08_05",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "8.5"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Listy",
+            "launch" : "mod/gift/?quiz=Py4Inf-08-Lists.txt",
+            "resource_link_id" : "py4e_08_list_quiz"
+        }
     ]
 },
 {
@@ -573,29 +653,40 @@
         {
             "title" : "Counting Word Frequency using a Dictionary",
             "youtube" : "lLbyEYjU55A"
+        },
+        {
+            "title" : "Fun: Sesame Street - The Count",
+            "youtube" : "EHJ9uYx5L58"
         }
     ],
     "references" : [
         {
-            "title" : "Rozdział 9: Słowniki",
+            "title" : "Rozdział 9: Słowniki [HTML]",
             "href" : "https://py4e.pl/html3/09-dictionaries.php"
         },
         {
-            "title" : "Fun: Sesame Street - The Count",
-            "href" : "https://www.youtube.com/watch?v=EHJ9uYx5L58"
+            "title" : "Rozdział 9: Słowniki [PDF]",
+            "href" : "https://py4e.pl/translations/PL/09-py4e-pl.pdf"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 9.4",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_09_04",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "9.4"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Program: Ćwiczenie 9.4.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_09_04",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "9.4"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Słowniki",
+            "launch" : "mod/gift/?quiz=Py4Inf-09-Dictionaries.txt",
+            "resource_link_id" : "py4e_09_dict_quiz"
+        }
+    ]
 },
 {
     "title": "Krotki",
@@ -605,8 +696,12 @@
     "slides": "lectures3/Pythonlearn-10-Tuples.pptx",
     "references" : [
         {
-            "title" : "Rozdział 10: Krotki",
+            "title" : "Rozdział 10: Krotki [HTML]",
             "href" : "https://py4e.pl/html3/10-tuples.php"
+        },
+        {
+            "title" : "Rozdział 10: Krotki [PDF]",
+            "href" : "https://py4e.pl/translations/PL/10-py4e-pl.pdf"
         }
     ],
 
@@ -624,17 +719,24 @@
             "youtube" : "hMJpet-gtc0"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Ćwiczenie 10.2",
-        "launch" : "tools/pythonauto/",
-        "resource_link_id": "pythonauto_10_02",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "10.2"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Program: Ćwiczenie 10.2.",
+            "launch" : "tools/pythonauto/",
+            "resource_link_id": "pythonauto_10_02",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "10.2"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Krotki",
+            "launch" : "mod/gift/?quiz=Py4Inf-10-Tuples.txt",
+            "resource_link_id" : "py4e_10_tup_quiz"
+        }
+    ]
 },
 {
     "title": "Wyrażenia regularne",
@@ -658,25 +760,36 @@
     ],
     "references" : [
         {
-            "title" : "Rozdział 11: Wyrażenia regularne",
+            "title" : "Rozdział 11: Wyrażenia regularne [HTML]",
             "href" : "https://py4e.pl/html3/11-regex.php"
         },
         {
-            "title" : "Python Regular Expression Quick Guide",
-            "href" : "lectures3/Pythonlearn-11-Regex-Handout.txt"
+            "title" : "Rozdział 11: Wyrażenia regularne [PDF]",
+            "href" : "https://py4e.pl/translations/PL/11-py4e-pl.pdf"
+        },
+        {
+            "title" : "Krótki przewodnik po wyrażeniach regularnych w Pythonie",
+            "href" : "https://py4e.pl/lectures3/Pythonlearn-11-Regex-Handout.txt"
         }
     ],
-    "lti" : {
-        "title" : "Automatyczna ocena: Wyrażenia regularne",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_01_regex",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "regex_sum.php"
-            }
-        ]
-    }
+    "lti" : [
+        {
+            "title" : "Program: Wyrażenia regularne",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_01_regex",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "regex_sum.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Wyrażenia regularne",
+            "launch" : "mod/gift/?quiz=Py4Inf-11-Regex.txt",
+            "resource_link_id" : "py4e_11_reg_quiz"
+        }
+    ]
 },
 {
     "title": "Programy sieciowe",
@@ -686,16 +799,12 @@
     "slides": "lectures3/Pythonlearn-12-HTTP.pptx",
     "references" : [
         {
-            "title" : "Rozdział 12: Programy sieciowe",
+            "title" : "Rozdział 12: Programy sieciowe [HTML]",
             "href" : "https://py4e.pl/html3/12-network.php"
         },
         {
-            "title" : "ASCII Coding and Binary",
-            "href" : "https://www.youtube.com/watch?v=H4l42nbYmrU&t=308s"
-        },
-        {
-            "title" : "Characters, Symbols and the Unicode Miracle - Computerphile",
-            "href" : "https://www.youtube.com/watch?v=MijmeoH9LT4&t=385s"
+            "title" : "Rozdział 12: Programy sieciowe [PDF]",
+            "href" : "https://py4e.pl/translations/PL/12-py4e-pl.pdf"
         }
     ],
 
@@ -735,42 +844,55 @@
         {
             "title" : "Worked Example: BeautifulSoup",
             "youtube" : "mhaHWiSPxxE"
+        },
+        {
+            "title" : "ASCII Coding and Binary (from 5:08)",
+            "youtube" : "H4l42nbYmrU"
+        },
+        {
+            "title" : "Characters, Symbols and the Unicode Miracle - Computerphile (from 6:25)",
+            "youtube" : "MijmeoH9LT4"
         }
     ],
     "lti" : [
-    {
-        "title" : "Automatyczna ocena: Cykl żądanie-odpowiedź",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_02_rrc",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "http_headers.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Parsowanie danych HTML przy pomocy BeautifulSoup",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_03_html",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "comment_html.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Przechodzenie po linkach przy pomocy BeautifulSoup",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_04_links",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "knows.php"
-            }
-        ]
-    }
+        {
+            "title" : "Program: Cykl żądanie-odpowiedź",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_02_rrc",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "http_headers.php"
+                }
+            ]
+        },
+        {
+            "title" : "Program: Parsowanie danych HTML przy pomocy BeautifulSoup",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_03_html",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "comment_html.php"
+                }
+            ]
+        },
+        {
+            "title" : "Program: Przechodzenie po linkach przy pomocy BeautifulSoup",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_04_links",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "knows.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: HTTP",
+            "launch" : "mod/gift/?quiz=Py4Inf-12-HTTP.txt",
+            "resource_link_id" : "py4e_12_http_quiz"
+        }
     ]
 },
 {
@@ -781,8 +903,12 @@
     "slides": "lectures3/Pythonlearn-13-WebServices.pptx",
     "references" : [
         {
-            "title" : "Rozdział 13: Korzystanie z usług sieciowych",
+            "title" : "Rozdział 13: Korzystanie z usług sieciowych [HTML]",
             "href" : "https://py4e.pl/html3/13-web.php"
+        },
+        {
+            "title" : "Rozdział 13: Korzystanie z usług sieciowych [PDF]",
+            "href" : "https://py4e.pl/translations/PL/13-py4e-pl.pdf"
         }
     ],
 
@@ -841,39 +967,49 @@
         }
     ],
     "lti" : [
-    {
-        "title" : "Automatyczna ocena: Wydobywanie danych z XMLa",
-        "resource_link_id": "pythondata_05_xml",
-        "launch" : "tools/python-data/",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "comment_xml.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Wydobywanie danych z JSONa",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_06_json",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "comment_json.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Używanie API GeoJSON",
-        "launch" : "tools/python-data/",
-        "resource_link_id": "pythondata_07_geo",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "geo_json.php"
-            }
-        ]
-    }
+        {
+            "title" : "Program: Wyodrębnianie danych z XMLa",
+            "resource_link_id": "pythondata_05_xml",
+            "launch" : "tools/python-data/",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "comment_xml.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: XML",
+            "launch" : "mod/gift/?quiz=Py4Inf-13-WebServices-XML.txt",
+            "resource_link_id" : "py4e_13_xml_quiz"
+        },
+        {
+            "title" : "Program: Wyodrębnianie danych z JSONa",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_06_json",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "comment_json.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: JSON",
+            "launch" : "mod/gift/?quiz=Py4Inf-13-WebServices-JSON.txt",
+            "resource_link_id" : "py4e_13_json_quiz"
+        },
+        {
+            "title" : "Program: Używanie API GeoJSON",
+            "launch" : "tools/python-data/",
+            "resource_link_id": "pythondata_07_geo",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "geo_json.php"
+                }
+            ]
+        }
     ]
 },
 {
@@ -884,8 +1020,12 @@
     "slides": "lectures3/Pythonlearn-14-Objects.pptx",
     "references" : [
         {
-            "title" : "Rozdział 14: Programowanie obiektowe",
+            "title" : "Rozdział 14: Programowanie obiektowe [HTML]",
             "href" : "https://py4e.pl/html3/14-objects.php"
+        },
+        {
+            "title" : "Rozdział 14: Programowanie obiektowe [PDF]",
+            "href" : "https://py4e.pl/translations/PL/14-py4e-pl.pdf"
         }
     ],
     "videos" : [
@@ -909,8 +1049,8 @@
     "lti" : [
         {
             "title" : "Quiz: Programowanie obiektowe",
-            "launch" : "mod/gift/?quiz=16-Python-Objects.txt",
-            "resource_link_id" : "py4e_16_oo_quiz"
+            "launch" : "mod/gift/?quiz=Py4Inf-14-Objects.txt",
+            "resource_link_id" : "py4e_14_oo_quiz"
         }
     ]
 },
@@ -973,59 +1113,78 @@
     ],
     "references" : [
         {
-            "title" : "Rozdział 15: Bazy danych i SQL",
+            "title" : "Rozdział 15: Bazy danych i SQL [HTML]",
             "href" : "https://py4e.pl/html3/15-database.php"
         },
         {
-            "title" : "Python for Everybody Database Handout",
-            "href" : "lectures3/Pythonlearn-15-Database-Handout.txt"
+            "title" : "Rozdział 15: Bazy danych i SQL [PDF]",
+            "href" : "https://py4e.pl/translations/PL/15-py4e-pl.pdf"
+        },
+        {
+            "title" : "Materiały pomocnicze SQL",
+            "href" : "https://py4e.pl/lectures3/Pythonlearn-15-Database-Handout.txt"
         }
     ],
     "lti" : [
-    {
-        "title" : "Automatyczna ocena: Pojedyncza tabela SQL",
-        "launch" : "tools/sql-intro/",
-        "resource_link_id": "pythonsql_01_single",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "single_lite.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Zliczanie e-maili w bazie",
-        "launch" : "tools/sql-intro/",
-        "resource_link_id": "pythonsql_02_email",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "count_lite.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Baza z kilkoma tabelami – Utwory",
-        "launch" : "tools/sql-intro/",
-        "resource_link_id": "pythonsql_03_tracks",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "many_one_lite.php"
-            }
-        ]
-    },
-    {
-        "title" : "Automatyczna ocena: Wielu studentów na wielu kursach",
-        "launch" : "tools/sql-intro/",
-        "resource_link_id": "pythonsql_04_many",
-        "custom" : [
-            {
-                "key": "exercise",
-                "value": "many_many_lite.php"
-            }
-        ]
-    }
+        {
+            "title" : "Program: Zapytania SQL na pojedynczej tabeli",
+            "launch" : "tools/sql-intro/",
+            "resource_link_id": "pythonsql_01_single",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "single_lite.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: zapytania SQL na pojedynczej tabeli",
+            "launch" : "mod/gift/?quiz=Py4Inf-15-Database-Single.txt",
+            "resource_link_id" : "py4e_15_one_quiz"
+        },
+        {
+            "title" : "Program: Zliczanie e-maili",
+            "launch" : "tools/sql-intro/",
+            "resource_link_id": "pythonsql_02_email",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "count_lite.php"
+                }
+            ]
+        },
+        {
+            "title" : "Program: Baza z kilkoma tabelami – Utwory",
+            "launch" : "tools/sql-intro/",
+            "resource_link_id": "pythonsql_03_tracks",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "many_one_lite.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Modelowanie danych",
+            "launch" : "mod/gift/?quiz=Py4Inf-15-Database-Model.txt",
+            "resource_link_id" : "py4e_15_mod_quiz"
+        },
+        {
+            "title" : "Program: Wielu studentów na wielu kursach",
+            "launch" : "tools/sql-intro/",
+            "resource_link_id": "pythonsql_04_many",
+            "custom" : [
+                {
+                    "key": "exercise",
+                    "value": "many_many_lite.php"
+                }
+            ]
+        },
+        {
+            "title" : "Quiz: Wiele do wielu",
+            "launch" : "mod/gift/?quiz=Py4Inf-15-Database-Many.txt",
+            "resource_link_id" : "py4e_15_many_quiz"
+        }
     ]
 },
 {
@@ -1036,8 +1195,12 @@
     "slides": "lectures3/Pythonlearn-16-Data-Viz.pptx",
     "references" : [
         {
-            "title" : "Rozdział 16: Wizualizacja danych",
+            "title" : "Rozdział 16: Wizualizacja danych [HTML]",
             "href" : "https://py4e.pl/html3/16-viz.php"
+        },
+        {
+            "title" : "Rozdział 16: Wizualizacja danych [PDF]",
+            "href" : "https://py4e.pl/translations/PL/16-py4e-pl.pdf"
         }
     ],
     "videos" : [
